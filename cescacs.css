@@ -1,0 +1,333 @@
+/* CSS for cescacs to use with W3.CSS */
+body {
+  font-size: large;
+  padding-bottom: 3ex;
+}
+
+.left,
+.right {
+  float: left;
+  width: 30%;
+  /* The width is 30%, by default */
+}
+
+.main {
+  float: left;
+  width: 40%;
+  /* The width is 40%, by default */
+}
+
+.half {
+  float: left;
+  width: 50%;
+  /* The width is 50%, by default */
+}
+
+.third {
+  float: left;
+  width: 30%;
+  /* The width is 30%, by default */
+}
+
+.twothirds {
+  float: left;
+  width: 60%;
+  /* The width is 60%, by default */
+}
+
+.fifth {
+  float: left;
+  width: 20%;
+  /* The width is 20%, by default */
+}
+
+.third-rest {
+  float: left;
+  width: 40%;
+  /* The width is 30%, by default */
+}
+
+div.tright,
+div.tbigright,
+figure.tright,
+figure.tbigright {
+  clear: right;
+  float: right;
+  margin: 0.5em 0 1.3em 1.4em;
+}
+
+/* Use a media query to add a breakpoint at 400px: */
+@media screen and (max-width: 400px) {
+
+  div.tright,
+  figure.tright {
+    clear: both;
+    float: none;
+    margin: 0.5em 0 1.3em 1.4em;
+  }
+}
+
+/* Use a media query to add a breakpoint at 600px: */
+@media screen and (max-width: 600px) {
+
+  div.tbigright,
+  figure.tbigright {
+    clear: both;
+    float: none;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+}
+
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 800px) {
+
+  .left,
+  .main,
+  .right,
+  .third,
+  .twothirds,
+  .fifth,
+  .third-rest,
+  .half {
+    width: 100%;
+    /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+
+clipped1 {
+  width: 50%;
+  position: relative;
+}
+
+clipped1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  clip-path: inset(50% 0% 0% 0%);
+  pointer-events: none;
+}
+
+
+em {
+  font-weight: bolder;
+}
+
+th,
+td {
+  text-align: center;
+}
+
+dl dt {
+  font-style: italic;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+dl dd {
+  display: list-item;
+  list-style-type: circle;
+}
+
+aside {
+  display: block
+}
+
+h1,
+h2.title {
+  font-weight: bolder;
+  font-variant: small-caps;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+
+h1 + h2.subtitle,
+h2 + h3.subtitle,
+h3 + h4.subtitle,
+h4 + h5.subtitle,
+h5 + h6.subtitle {
+  margin-top:0 !important;
+  padding-top:0 !important;
+}
+
+h1.subtitled,
+h2.subtitled,
+h3.subtitled,
+h4.subtitled,
+h5.subtitled {
+  margin-bottom:0 !important;
+  padding-bottom:0 !important;
+}
+
+figure.fig200 {
+  width: 200px;
+  padding-left: 6px;
+  text-align: center;
+}
+
+img.lang {
+  display: inline;
+  width: 30px;
+}
+
+img.mainlogo {
+  width: 100%;
+  max-width: 600px;
+}
+
+img.fullwidth {
+  width: 100%
+}
+
+figure.captionTop {
+  display: table;
+  width: 100%;
+  margin: 0px 20px 20px 0px;
+}
+
+figcaption.captionTop {
+  display: table-caption;
+  caption-side: top;
+}
+
+ul.exemple {
+  padding: 0;
+}
+
+ul.exemple>li {
+  list-style-type: none;
+}
+
+ul.aclariment {
+  line-height: 1.8ex;
+}
+
+ul.aclariment>li {
+  list-style-type: none;
+  margin-top: 0.4ex;
+  margin-bottom: 1ex;
+}
+
+div.caixa-exemple-ctl-pgn {
+  padding: 0 1em;
+  margin: 0.25em;
+  white-space: pre-line;
+  line-height: 2ex;
+  background-color: blanchedalmond;
+}
+
+div.glossary-box {
+  border-style: solid;
+  border-width: 1px 0 0 0;
+  margin: 10px 20px 0 20px;
+  padding: 5px 5px 0 5px;
+}
+
+aside,
+div.note {
+  border: 1px solid WhiteSmoke;
+  background-color: rgba(200, 200, 255, 0.1);
+  font-size: 84%;
+  padding-left: 2em;
+  padding-right: 2em;
+  margin: 2em;
+}
+
+p.note {
+  font-size: 84%;
+  margin-left: 3em;
+  margin-right: 1.5em;
+}
+
+span.note {
+  font-size: 84%;
+}
+
+i.cescacs {
+  font-weight: bolder;
+}
+
+a.menubar {
+  height: 40px;
+}
+
+a.cite {
+  text-decoration: none;
+}
+
+a.cescacs {
+  text-decoration: none;
+  font-style: italic;
+}
+
+/* unvisited link */
+a.cite:link {
+  color: darkorange;
+}
+
+a.cescacs:link {
+  color: darkviolet;
+}
+
+/* visited link */
+a.cite:visited {
+  color: seagreen;
+}
+
+a.cescacs:visited {
+  color: darkolivegreen;
+}
+
+/* mouse over link */
+a.cite:hover {
+  color: hotpink;
+}
+
+a.cescacs:hover {
+  color: magenta;
+}
+
+/* selected link */
+a.cite:link:active,
+a.cite:visited:active {
+  color: blue;
+}
+
+a.cescacs:link:active,
+a.cescacs:visited:active {
+  color: blue;
+}
+
+.header2 {
+  font-size: 150%;
+  font-weight: bolder;
+}
+
+.header3 {
+  font-size: 135%;
+  font-weight: bolder;
+}
+
+.pieceIcon {
+  display: inline;
+  height: 3ex;
+}
+
+.thumbcaption {
+  border: 0;
+  line-height: 1.4em;
+  padding: 3px;
+  font-size: 74%;
+  margin: 0
+}
+
+.thanks {
+  color: darkgrey;
+  font-size: smaller;
+}

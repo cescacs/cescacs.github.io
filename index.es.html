@@ -1,0 +1,1121 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head  prefix="og: https://ogp.me/ns#">
+    <meta charset="UTF-8">
+    <link rel="alternate" hreflang="ca" href="index.html">
+    <link rel="alternate" hreflang="en" href="index.en.html">
+	<!-- description -->
+	<meta name="twitter:card" content="summary_large_image">
+    <title>C'escacs: Reglas</title>
+    <meta property="og:title" content="C'escacs">
+	<meta property="og:type" content="website" >
+    <meta property="og:locale" content="es-ES">
+    <meta name="description" property="og:description"
+        content="Ajedrez hexagonal de 169 hexcaques, con Dragón (Torre-Caballo), Pegasos (Alfil-Caballo), y Elefantes.">
+	<!-- public imgbb image -->
+	<!-- https://ibb.co/jHTDkqc -->
+	<!-- https://i.ibb.co/BwtB2vX/logo-rich.png -->
+	<meta name="image" property="og:image" content="https://i.ibb.co/BwtB2vX/logo-rich.png">
+	<meta name="twitter:image" content="https://i.ibb.co/BwtB2vX/logo-rich.png">
+    <meta name="author" content="Cesc Sasal i Lasaosa">
+	<!-- end description -->
+    <meta name="keywords"
+        content="C'escacs, Cescacs, ajedrez hexagonal, hexcaque, dragón, pegaso, elefante, cabalgada, peón esquivo, salto del rey">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="w3.css">
+	<link rel="stylesheet" type="text/css" href="w3-colors-win8.css">
+    <link rel="stylesheet" type="text/css" href="cescacs.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap">
+	<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple"> -->
+	<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nabla&display=swap"> -->
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/1efd89dd3e.js" crossorigin="anonymous"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHKYWCYH3N"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-CHKYWCYH3N');
+    </script>
+</head>
+
+<body>
+    <svg style="display:none">
+        <defs>
+            <symbol id="myDot" width="20" height="20" viewBox="0 0 4 4">
+                <circle cx="2" cy="2" r="2" style="opacity:0.2; fill:red" />
+            </symbol>
+            <g id="Hexcaquerpiece">
+                <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"
+                    style="fill:beige;stroke:darkgrey;stroke-width:1" />
+                <polygon points="100,174 50,87 -50,87 -100,174 -50,261 50,261"
+                    style="fill:lime;stroke:darkgrey;stroke-width:1" />
+                <polygon points="100,-174 50,-87 -50,-87 -100,-174 -50,-261 50,-261"
+                    style="fill:mediumpurple;stroke:darkgrey;stroke-width:1" />
+                <polygon points="250,87 200,0 100,0 50,87 100,174 200,174"
+                    style="fill:mediumpurple;stroke:darkgrey;stroke-width:1" />
+                <polygon points="250,-87 200,0 100,0 50,-87 100,-174 200,-174"
+                    style="fill:lime;stroke:darkgrey;stroke-width:1" />
+                <polygon points="-250,87 -200,0 -100,0 -50,87 -100,174 -200,174"
+                    style="fill:mediumpurple;stroke:darkgrey;stroke-width:1" />
+                <polygon points="-250,-87 -200,0 -100,0 -50,-87 -100,-174 -200,-174"
+                    style="fill:lime;stroke:darkgrey;stroke-width:1" />
+                <polygon points="250,261 200,174 100,174 50,261 100,348 200,348"
+                    style="fill:beige;stroke:darkgrey;stroke-width:1" />
+                <polygon points="-250,261 -200,174 -100,174 -50,261 -100,348 -200,348"
+                    style="fill:beige;stroke:darkgrey;stroke-width:1" />
+                <polygon points="250,-261 200,-174 100,-174 50,-261 100,-348 200,-348"
+                    style="fill:beige;stroke:darkgrey;stroke-width:1" />
+                <polygon points="-250,-261 -200,-174 -100,-174 -50,-261 -100,-348 -200,-348"
+                    style="fill:beige;stroke:darkgrey;stroke-width:1" />
+                <polygon points="400,0 350,-87 250,-87 200,-0 250,87 350,87"
+                    style="fill:beige;stroke:darkgrey;stroke-width:1" />
+                <polygon points="-400,0 -350,-87 -250,-87 -200,-0 -250,87 -350,87"
+                    style="fill:beige;stroke:darkgrey;stroke-width:1" />
+                <polygon points="400,174 350,87 250,87 200,174 250,261 350,261"
+                    style="fill:lime;stroke:darkgrey;stroke-width:1" />
+                <polygon points="400,-174 350,-87 250,-87 200,-174 250,-261 350,-261"
+                    style="fill:mediumpurple;stroke:darkgrey;stroke-width:1" />
+                <polygon points="-400,174 -350,87 -250,87 -200,174 -250,261 -350,261"
+                    style="fill:lime;stroke:darkgrey;stroke-width:1" />
+                <polygon points="-400,-174 -350,-87 -250,-87 -200,-174 -250,-261 -350,-261"
+                    style="fill:mediumpurple;stroke:darkgrey;stroke-width:1" />
+                <polygon points="100,348 50,261 -50,261 -100,348 -50,435 50,435"
+                    style="fill:mediumpurple;stroke:darkgrey;stroke-width:1" />
+                <polygon points="100,-348 50,-261 -50,-261 -100,-348 -50,-435 50,-435"
+                    style="fill:lime;stroke:darkgrey;stroke-width:1" />
+            </g>
+        </defs>
+    </svg>
+
+<header class="w3-center">
+    <div class="w3-container" style='background-image: url("img/lasaosa.PC310001.png"); background-size:240px'>
+		<div class="w3-container" style="padding:0;">
+            <nav class="w3-bar w3-black" style="margin:0;">
+				<a href="#" class="w3-bar-item w3-button w3-transparent"><i class="fa fa-home"></i></a>
+				<div class="w3-dropdown-hover">
+					<button class="w3-button">Más Regles</button>
+					<div class="w3-dropdown-content w3-bar-block w3-card-4">
+						<a href="es/castling.html" class="w3-bar-item w3-button w3-mobile menubar">Movimientos especiales del Rey</a>
+						<a href="es/notation.html" class="w3-bar-item w3-button w3-mobile menubar">Notación</a>
+					</div>
+				</div>
+				<a href="cescacs.typescript/cescacs.game.html" target="_blank" class="w3-bar-item w3-button w3-transparent"><i class='fas fa-chess'></i> play</a>
+				<div class="w3-dropdown-hover">
+					<button class="w3-button">Otros contenidos</button>
+					<div class="w3-dropdown-content w3-bar-block w3-card-4">
+						<a href="es/historical-milestones.html" class="w3-bar-item w3-button w3-mobile menubar">Referentes Históricos</a>
+						<a href="es/the-corner.html" class="w3-bar-item w3-button w3-mobile menubar">El Rincón</a>
+						<a href="es/glossary.html" class="w3-bar-item w3-button w3-mobile menubar">Glosario</a>
+						<a href="es/about.html" class="w3-bar-item w3-button w3-mobile menubar">Agradecimientos</a>
+					</div>
+				</div>
+				<div class="w3-dropdown-hover w3-right" style="position:absolute ;">
+					<button class="w3-button"><img src="img/esp.png" class="lang" alt="Español"></button>
+					<div class="w3-dropdown-content w3-bar-block w3-border" style="right:0;">
+                        <a href="index.html" class="w3-bar-item w3-button w3-mobile menubar" hreflang="ca"><img src="img/ca.png"
+                            class="lang" alt="Català"> Català</a>
+                        <a href="index.en.html" class="w3-bar-item w3-button w3-mobile menubar" hreflang="en"><img src="img/uk.png"
+                            class="lang" alt="English"> English</a>
+                    </div>
+				</div>
+
+            </nav>
+        </div>
+        <img src="img/logo.gif" alt="C'escacs" class="mainlogo" >
+		<!-- public imgbb image -->
+		<!-- https://i.ibb.co/Ycddy9p/logo.gif -->
+		<!-- https://ibb.co/x1ggfvJ -->
+    </div>
+    <div class="w3-container w3-opacity">
+		<!--  font-effect-shadow-multiple font-family: 'Bungee Spice', cursive; -->
+        <h1 class="w3-jumbo" style="font-family: 'Bungee Spice', cursive; color:#FFD700; margin-top:0;">Reglas</h1>
+	</div>
+    <div style="clear:both;"></div>
+</header>
+
+<main>
+    <div class="w3-container">
+        <p>Las reglas son muy parecidas a las del ajedrez ortodoxo, adaptando los movimientos al tablero hexagonal: el
+            <a href="es/glossary.html#Hexcaquer" class="cescacs" target="_blank">tablero de ajedrez hexteselado</a>.
+            También es cierto que hay algunas diferencias y piezas nuevas, pero este resumen sintetiza brevemente los
+            movimientos en el tablero hexagonal, las nuevas piezas, y otras diferencias específicas.</p>
+        <p>El <a href="es/historical-milestones.html#Escacshexagonals" class="cescacs" target="_blank"><em>ajedrez hexagonal</em>
+            fue inventado por Władysław Gliński</a> en 1936, aunque usa un tablero más pequeño y las reglas son algo diferentes
+            que las de <i class="cescacs">C'escacs</i>.
+            Fue muy popular en las décadas de 1970 y 1980 en el Reino Unido y en Polonia.
+        </p>
+    </div>
+    <!-- hexcaquer -->
+    <h2 class="w3-container w3-pale-green w3-center title">Posición inicial de las piezas</h2>
+    <div class="w3-container">
+        <p>El tablero forma un hexágono regular con ocho hexcaques en cada lado, y tiene tres colores diferentes:
+            <em>blanco</em>, <em>negro</em> y <em>color</em>, con el hexcaque central de color.</p>
+        <p><em>Rey y Dama blancos</em> se posicionan en <em>hexcaques blancos</em>, y <em>Rey y Dama negros</em> toman posiciones
+			en <em>hexcaques negros</em>. Los reyes se posicionan enfrentados, en la columna <i>G</i>:
+			el <em>Rey blanco en su derecha</em>, y el <em>Rey negro en su izquierda</em>.
+		</p>
+
+        <div class="w3-container left">
+            <h3 class="w3-container w3-pale-yellow w3-center">Las piezas</h3>
+            <ul class="w3-ul w3-border">
+				<li>27 piezas por jugador:</li>
+                <li>11 <a href="#Peo" class="cescacs">Peones
+                    <img src="img/alfaerie/wpawn.png" alt="Peón" class="pieceIcon"></a></li>
+                <li>4 <a href="#Elefant" class="cescacs">Elefantes
+                    <img src="img/alfaerie/welephant.png" alt="Elefante" class="pieceIcon"></a></li>
+                <li>3 <a href="#Alfil" class="cescacs">Alfiles
+                    <img src="img/alfaerie/wbishop.png" alt="Alfil" class="pieceIcon"></a></li>
+                <li>2 <a href="#Cavall" class="cescacs">Caballos
+                    <img src="img/alfaerie/wknight.png" alt="Caballo" class="pieceIcon"></a></li>
+                <li>2 <a href="#Pegas" class="cescacs">Pegasos
+                    <img src="img/alfaerie/wpegasus.png" alt="Pegaso" class="pieceIcon"></a></li>
+                <li>2 <a href="#Roc" class="cescacs">Roques (Torres)
+                    <img src="img/alfaerie/wrook.png" alt="Torre" class="pieceIcon"></a></li>
+                <li><a href="#Vibria" class="cescacs">Guiverno (Dragón)
+                    <img src="img/alfaerie/wdragon.png" alt="Dragón" class="pieceIcon"></a></li>
+                <li><a href="#Dama" class="cescacs">Dama
+                    <img src="img/alfaerie/wqueen.png" alt="Dama" class="pieceIcon"></a></li>
+                <li><a href="#Rei" class="cescacs">Rey
+                    <img src="img/alfaerie/wking.png" alt="Rey" class="pieceIcon"></a></li>
+            </ul>
+			<div class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+				Algunos idiomas mantienen el nombre del <i>elefante</i> para el alfil. En esos idiomas se usa el
+                <a href="es/glossary.html#Alabarder" class="cescacs" target="_blank"><i class="cescacs">Alabardero</i></a>
+                para denominar la pieza del <i class="cescacs">Elefante</i> de <i class="cescacs">C'escacs</i>.
+			</div>
+        </div>
+
+        <div class="w3-container main">
+            <img src="img/moves/ini.svg" alt="posición inicial de las piezas"
+                style="width:100%; min-width:250px; max-width:800px;">
+        </div>
+
+        <div class="w3-container right">
+
+            <h3 class="w3-container w3-pale-yellow w3-center">Valoración de las piezas</h3>
+            <table class="w3-table w3-border w3-bordered">
+                <tr>
+                    <th>Pieza</th>
+                    <th class="w3-center">Valor</th>
+                </tr>
+                <tr>
+                    <td><a href="#Peo" class="cescacs">Peón
+                        <img src="img/alfaerie/wpawn.png" alt="Peón" class="pieceIcon"></a>
+                    </td>
+                    <td style="text-align: center;">1</td>
+                </tr>
+                <tr>
+                    <td><a href="#Elefant" class="cescacs">Elefante
+                        <img src="img/alfaerie/welephant.png" alt="Elefante" class="pieceIcon"></a>
+                    </td>
+                    <td style="text-align: center;">2</td>
+                </tr>
+                <tr>
+                    <td><a href="#Alfil" class="cescacs">Alfil
+                        <img src="img/alfaerie/wbishop.png" alt="Alfil" class="pieceIcon"></a>
+                    </td>
+                    <td style="text-align: center;">3</td>
+                </tr>
+                <tr>
+                    <td><a href="#Cavall" class="cescacs">Caballo
+                        <img src="img/alfaerie/wknight.png" alt="Caballo" class="pieceIcon"></a>
+                    </td>
+                    <td style="text-align: center;">4</td>
+                </tr>
+                <tr>
+                    <td><a href="#Pegas" class="cescacs">Pegaso
+                        <img src="img/alfaerie/wpegasus.png" alt="Pegaso" class="pieceIcon"></a>
+                    </td>
+                    <td style="text-align: center;">8</td>
+                </tr>
+                <tr>
+                    <td><a href="#Roc" class="cescacs">Roque (Torre)
+                        <img src="img/alfaerie/wrook.png" alt="Torre" class="pieceIcon"></a>
+                    </td>
+                    <td style="text-align: center;">10</td>
+                </tr>
+                <tr>
+                    <td><a href="#Vibria" class="cescacs">Guiverno (Dragón)
+                        <img src="img/alfaerie/wdragon.png" alt="Dragón" class="pieceIcon"></a>
+                    </td>
+                    <td style="text-align: center;">15</td>
+                </tr>
+                <tr>
+                    <td><a href="#Dama" class="cescacs">Dama
+                        <img src="img/alfaerie/wqueen.png" alt="Dama" class="pieceIcon"></a>
+                    </td>
+                    <td style="text-align: center;">16</td>
+                </tr>
+            </table>
+			<div class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+				Se otorga un punto adicional cuando el jugador está en posesión de los tres alfiles.
+					En total, al inicio del juego, cada jugador cuenta con <em>104 puntos</em>: 51 de piezas mayores,
+					16 de piezas medianas, 18 de piezas menores y 19 de la tropa.
+			</div>
+        </div>
+
+        <div class="w3-container">
+            <h3 class="w3-container w3-pale-yellow w3-center">Primeras impresiones</h3>
+            <ul>
+				<li><p>Es un gran tablero con 169 hexcaques. Los hay de tres diferentes colores, y se requieren tres alfiles.</p>
+					<ul>
+				        <li>
+				            <p>La potencia del alfil disminuye notoriamente respecto del ajedrez ortodoxo.</p>
+				        </li>
+					</ul>
+				</li>
+				<li><p>Incorpora el <i class="cescacs">Guiverno</i> (<i>Dragón</i>), que combina los movimientos del <i class="cescacs">Roque</i>
+					y el <i class="cescacs">Caballo</i>, y dos <i class="cescacs">Pegasos</i>, que combinan los movimientos del
+					<i class="cescacs">Alfil</i> y el <i class="cescacs">Caballo</i>.</p>
+                    <aside class="note w3-panel w3-leftbar w3-sand w3-serif w3-small">
+						<p>Estas piezas, con otros nombres, ya se encontraban en el
+                            <a href="es/historical-milestones.html#EscacsCapablanca"
+                            class="cescacs" target="_blank"><i>ajedrez de Capablanca</i></a>.</p>
+					</aside>
+				</li>
+                <li>
+                    <p>Aumenta la movilidad de los peones, pero, aún así, su potencia disminuye respecto del ajedrez ortodoxo.</p>
+					<ul>
+						<li>
+							<p>La pérdida de potencia de los peones se debe a la ineficacia de las estructuras de peones en el
+								ajedrez hexagonal.</p>
+						</li>
+						<li>
+							<p>Se incorpora la pieza del <i class="cescacs">Elefante</i> para dar apoyo a las estructuras de peones.</p>
+						</li>
+					</ul>
+                    <aside class="note w3-panel w3-leftbar w3-sand w3-serif w3-small">
+                        <p>La solución en <i>C'escacs</i> para construir estructuras de peones es la incorporación de la
+                            pieza del <i class="cescacs">Elefante</i>, aunque la
+                            <a href="https://ca.wikipedia.org/wiki/Escacs_hexagonals#Escacs_Hexagonals_de_Gli%C5%84ski"
+                                target="_blank" class="cite">solución de Gliński</a> fue diferente (movimento de captura
+                            del peón en ortogonal).
+                        </p>
+                    </aside>
+                </li>
+                <li>
+                    <p>Inicialmente las piezas se encuentran protegidas,
+						con la excepción de los dos <i>Roques</i> y los dos <i>peones</i> de los flancos.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Moviments -->
+    <h2 class="w3-container w3-pale-green w3-center title">Movimientos: ortogonales, diagonales y de caballo</h2>
+    <!-- Fila i Línia -->
+    <div class="w3-container">
+        <!-- Fila -->
+        <div class="w3-container half">
+            <h3 id="Fila" class="w3-container w3-pale-yellow w3-center"><a href="es/glossary.html#Fila"
+                class="cescacs" target="_blank"><em>Fila</em>: dirección ortogonal</a>
+                <img src="img/alfaerie/wrook.png" alt="Torre" style="display: inline; height:3ex;"></h3>
+            <figure class="w3-center">
+                <svg viewBox="-410 -410 820 820">
+                    <g id="G001a" style="display: initial;">
+                        <use xlink:href="#Hexcaquerpiece" />
+                        <line x1="0" y1="300" x2="0" y2="-300"
+                            style="stroke:red;stroke-width:7;opacity:0.6" />
+                        <line x1="-250" y1="144" x2="250" y2="-144"
+                            style="stroke:red;stroke-width:7;opacity:0.6" />
+                        <line x1="-250" y1="-144" x2="250" y2="144"
+                            style="stroke:red;stroke-width:7;opacity:0.6" />
+                        <use xlink:href="#myDot" x="-10" y="-10" />
+                        <use xlink:href="#myDot" x="140" y="77" />
+                        <use xlink:href="#myDot" x="140" y="-97" />
+                        <use xlink:href="#myDot" x="-160" y="77" />
+                        <use xlink:href="#myDot" x="-160" y="-97" />
+                        <use xlink:href="#myDot" x="-10" y="164" />
+                        <use xlink:href="#myDot" x="-10" y="-184" />
+                        <use xlink:href="#myDot" x="290" y="164" />
+                        <use xlink:href="#myDot" x="290" y="-184" />
+                        <use xlink:href="#myDot" x="-310" y="164" />
+                        <use xlink:href="#myDot" x="-310" y="-184" />
+                        <use xlink:href="#myDot" x="-10" y="338" />
+                        <use xlink:href="#myDot" x="-10" y="-358" />
+                    </g>
+                </svg>
+                <figcaption class="thumbcaption">Dirección de las <em>filas</em> en un <i>tablero hexagonal</i>.
+                </figcaption>
+            </figure>
+			<p>Dos hexcaques adyacentes siempre serán de diferente color. Sucesivos hexcaques adyacentes por un lado forman una fila.</p>
+
+            <p>Cada hexcaque pertenece a <em>tres filas</em> diferentes:
+				una <em><i>fila longitudinal</i></em> (que denominaremos <i>columna</i>) i dos <em><i>filas oblicuas</i></em>.
+				En total hay <em>seis</em> <i>direcciones ortogonales</i> diferentes, dos direcciones en cada fila.
+            </p>
+            <p>Las direcciones ortogonales corresponden a las <em>direcciones del movimiento de las torres</em>.</p>
+        </div>
+        <!-- Linea -->
+        <div class="w3-container half">
+            <h3 id="Linia" class="w3-container w3-pale-yellow w3-center"><a href="es/glossary.html#Linia"
+                class="cescacs" target="_blank"><em>Línea</em>: dirección diagonal</a>
+                <img src="img/alfaerie/wbishop.png" alt="Alfil" style="display: inline; height:3ex;"></h3>
+            <figure class="w3-center">
+                <svg viewBox="-410 -410 820 820">
+                    <g id="G001b" style="display: initial;">
+                        <use xlink:href="#Hexcaquerpiece" />
+                        <line x1="400" y1="0" x2="-400" y2="0"
+                            style="stroke:red;stroke-width:7;opacity:0.6" />
+                        <line x1="200" y1="-348" x2="-200" y2="348"
+                            style="stroke:red;stroke-width:7;opacity:0.6" />
+                        <line x1="200" y1="348" x2="-200" y2="-348"
+                            style="stroke:red;stroke-width:7;opacity:0.6" />
+                        <use xlink:href="#myDot" x="-10" y="-10" />
+                        <use xlink:href="#myDot" x="140" y="251" />
+                        <use xlink:href="#myDot" x="140" y="-271" />
+                        <use xlink:href="#myDot" x="-160" y="-271" />
+                        <use xlink:href="#myDot" x="-160" y="251" />
+                        <use xlink:href="#myDot" x="-310" y="-10" />
+                        <use xlink:href="#myDot" x="290" y="-10" />
+                    </g>
+                </svg>
+                <figcaption class="thumbcaption">Dirección de las <em>líneas</em> en un <i>tablero hexagonal</i>.
+                </figcaption>
+            </figure>
+            <p>Todos <em>los hexcaques de una línea son del mismo color</em>,
+                pero a diferencia del tablero cuadrado, los vértices de los hexcaques de una línea no se tocan.
+            </p>
+            <div class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+                <p>Aunque los hexcaques de una línea no se toquen, están conectados por una línea;
+                    naturalmente, el movimiento no queda impedido por las piezas que pudiera haber a izquierda i derecha
+                    de la línea que conecta los hexcaques.</p>
+            </div>
+            <p>Las líneas atraviesan los hexcaques por el centro y dos de sus vértices.
+				Cada hexcaque lo atraviesan <em>tres líneas</em> diferentes:
+				dos <em><i>líneas oblícuas</i></em> y una <em><i>línea transversal</i></em>.
+                En total, desde un hexcaque hay <em>seis</em> direcciones diferentes, dos por cada línea.
+			<aside class="note w3-panel w3-leftbar w3-sand w3-serif w3-small">
+				<p>Los seis hexcaques de las esquinas únicamente pertenecen a dos líneas, aunque se considera
+					que los dos hexcaques de la columna central <i>F</i> pertenecen a líneas transversales
+					de un único hexcaque, formando uno la <i>línea cero</i> y el otro la <i>línea 28</i>.
+			</aside>
+            <p>Las direcciones diagonales correspoden a las <em>direcciones del movimento de los alfiles</em>;
+                hay tres colores diferentes, y se usan tres alfiles, uno para cada color.</p>
+        </div>
+    </div>
+    <!-- Movimientos de caballo -->
+    <div class="w3-container">
+        <!-- Simple -->
+        <div class="w3-container half">
+            <h3 id="Saltcavall" class="w3-container w3-pale-yellow w3-center"><a
+                 href="es/glossary.html#SaltCavall" class="cescacs" target="_blank">Salto de caballo
+                <img src="img/alfaerie/wknight.png" alt="Caballo" class="pieceIcon">
+                <img src="img/alfaerie/wpegasus.png" alt="Cavall" class="pieceIcon">
+                <img src="img/alfaerie/wdragon.png" alt="Cavall" class="pieceIcon"></a>
+            </h3>
+            <figure class="w3-center">
+                <img src="img/moves/knightmove.svg" alt="movimientos del caballo" class="fullwidth">
+                <figcaption class="thumbcaption">Saltos de caballo
+                </figcaption>
+            </figure>
+            <ul class="w3-ul w3-border">
+                <li>El salto de caballo consiste en la combinación de un movimento de una casilla en diagonal y
+                    otra en ortogonal;
+                    para cada dirección escogida en diagonal le corresponden dos direcciones posibles en ortogonal; en
+                    total existen doce movimientos posibles.
+                </li>
+                <li>El salto de caballo no puede impedirse situando una pieza en los hexcaques que se atraviesan;
+                    no se dice que se atraviesan, sino que se <q>salta</q>.</li>
+                <li>Siempre cambia el color del hexcaque destino respecto el color del hexcaque de origen.</li>
+                <li>El salto de caballo lo pueden hacer las piezas: <a href="Cavall" class="cescacs">Caballo</a>,
+                    <a href="Pegas" class="cescacs">Pegaso</a> y el <a href="Vibria" class="cescacs">Guiverno (Dragón)</a>.
+                </li>
+            </ul>
+        </div>
+        <!-- Cavalcada -->
+        <div class="w3-container half">
+            <h3 id="Cavalcada" class="w3-container w3-pale-yellow w3-center">Cabalgada <img
+                    src="img/alfaerie/wknight.png" alt="Caballo" class="pieceIcon"></h3>
+            <figure class="w3-center">
+                <img src="img/moves/ridemove.svg" alt="movimientos de cabalgada" class="fullwidth">
+                <figcaption class="thumbcaption">El movimento repetido del caballo se denomina cabalgada.
+                    Se muestran los hexcaques intermedios que han de estar libres para realizar el movimento.
+                </figcaption>
+            </figure>
+            <ul class="w3-ul w3-border">
+                <li>La cabalgada es un movimiento de <b>doble</b> salto de caballo (solo dos), sin captura.</li>
+                <li>El segundo salto es análogo al primero, en la misma dirección diagonal y la misma dirección ortogonal,
+					quedando así determinado por el salto inicial: desde cada posición de salto de caballo solo hay una posición posible
+                    a la que se llega cabalgando.</li>
+				<li>El hexcaque destino debe estar libre, ya que no se puede hacer una captura con este movimiento.</li>
+                <li>También el hexcaque del salto intermedio debe estar libre.</li>
+                <li>Siempre cambia el color del hexcaque destino respecto el color del hexcaque de origen.</li>
+                <li>El movimiento de <i>Cavalgada</i> se reserva únicamente para el <a href="Cavall" class="cescacs">Caballo</a>.</li>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <!-- Movimiento de las piezas -->
+    <h2 class="w3-container w3-pale-green w3-center title">Movimiento de las piezas</h2>
+    <div class="w3-container">
+        <ul class="w3-ul">
+            <!-- Torre -->
+            <li class="w3-container w3-card-4 w3-half">
+                <h3 id="Roc" class="w3-container">
+                    <a href="es/glossary.html#Roc" class="cescacs" target="_blank">Roque (Torre)
+                    <img src="img/alfaerie/wrook.png" alt="Torre" class="pieceIcon"></a>
+                </h3>
+                <p>Movimiento por las seis direcciones <em>ortogonales</em>, por las <em>filas</em>.</p>
+            </li>
+            <!-- Alfil -->
+            <li class="w3-container w3-card-4 w3-half">
+                <h3 id="Alfil" class="w3-container">
+                    <a href="es/glossary.html#Alfil" class="cescacs" target="_blank">Alfil
+                    <img src="img/alfaerie/wbishop.png" alt="Alfil" class="pieceIcon"></a>
+                </h3>
+                <p>Movimento por las seis direcciones <em>diagonales</em>, por las <em>lineas</em>.</p>
+                <p>Siempre se mantiene en su color; en el ajedrez hexagonal el alfil es una pieza debil,
+                    notablemente más debil que el caballo.</p>
+            </li>
+            <!-- Caballo -->
+            <li class="w3-container w3-card-4 w3-half">
+                <h3 id="Cavall" class="w3-container">
+                    <a href="es/glossary.html#Cavall" class="cescacs" target="_blank">Caballo
+                    <img src="img/alfaerie/wknight.png" alt="Caballo" class="pieceIcon"></a>
+                </h3>
+                <p>Se distinguen dos movimientos:</p>
+                <ul class="w3-ul">
+                    <li><em>Salto de caballo</em>, <a href="#Saltcavall" class="cescacs">como se ha
+                            descrito</a>; hay doce posibles.</li>
+                    <li><em>Cabalgada</em>, <a href="#Cavalcada" class="cescacs">como se ha descrito</a>:
+                        <ul class="w3-ul w3-border">
+                            <li>Se encadenan dos saltos de caballo iguales;
+                                hay doce movimientos posibles, uno pera cada movimiento de caballo.</li>
+                            <li>El hexcaque intermedio para el primer salto ha de estar libre.</li>
+                            <li><em>No es pueden capturar piezas</em> cuando se mueve cabalgando; el hexcaque final ha
+                                de
+                                estar libre.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>En total hay veinticuatro movimientos posibles para el caballo,
+                    però solo en los doce movimientos simples puede capturar. Siempre canbia el color del hexcaque
+                    destino respecto del color del hexcaque de origen,
+                    tanto en los movimientos sencillos, como en los movimientos dobles cabalgando.</p>
+                <aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+                    <p>El movimiento de cabalgada se ha incorporado porque el caballo, en un tablero hexagonal tan
+                        grande, perdia efectividad, debido a su pérdida de velocidad.</p>
+                </aside>
+            </li>
+            <!-- Pegaso -->
+            <li class="w3-container w3-card-4 w3-half">
+                <h3 id="Pegas" class="w3-container">
+                    <a href="es/glossary.html#Pegas" class="cescacs" target="_blank">Pegaso
+                    <img src="img/alfaerie/wpegasus.png" alt="Pegaso" class="pieceIcon"></a>
+                </h3>
+                <p>El caballo alado puede mover en <em>diagonal</em>, por las <em>líneas</em>,
+                    o hacer un <em>salto de caballo</em>.</p>
+                <p>No puede cabalgar (no tiene movimiento de cabalgada).</p>
+                <p>Combina los movimientos del alfil y el caballo (sin incluir la cabalgada).</p>
+                <aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+                    <p>En el <a href="es/historical-milestones.html#EscacsCapablanca"
+                    class="cescacs" target="_blank"><i>ajedrez de Capablanca</i></a> se denomina <i>arzobispo</i>
+                    <img src="img/alfaerie/wcardinal.png" style="display: inline; height:6ex;" alt="arzobispo"></p>
+                </aside>
+                <p>En el ajedrez hexagonal su potencia es menor a una torre, y se considera una <i>pieza mediana</i>,
+					superior a las <i>piezas menores</i>, pero sin alcanzar la potencia de las <i>piezas mayores</i>.</p>
+            </li>
+            <!-- Guiverno - Dragón -->
+            <li class="w3-container w3-card-4 w3-half">
+                <h3 id="Vibria" class="w3-container">
+                    <a href="es/glossary.html#Vibria" class="cescacs" target="_blank">Guiverno (Dragón)
+                    <img src="img/alfaerie/wdragon.png" alt="Dragón" class="pieceIcon"></a>
+                </h3>
+                <p>El dragón puede mover en <em>ortogonal</em>, por las <em>filas</em>, o hacer un <em>salto de caballo</em>.</p>
+                <p>No puede cabalgar (no tiene movimiento de cabalgada).</p>
+                <p>Combina los movimientos de la torre y el caballo (sin incluir la cabalgada).</p>
+                <aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+                    <p><p>En el <a href="es/historical-milestones.html#EscacsCapablanca"
+                        class="cescacs" target="_blank"><i>ajedrez de Capablanca</i></a> se denomina <i>Canciller</i>
+                        <img src="img/alfaerie/wchancellor.png" style="display: inline; height:6ex;" alt="canciller"></p>
+                </aside>
+                <p>Su potencia es similar a la dama.</p>
+            </li>
+            <!-- Dama -->
+            <li class="w3-container w3-card-4">
+                <h3 id="Dama" class="w3-container">
+                    <a href="es/glossary.html#Dama" class="cescacs" target="_blank">Dama
+                    <img src="img/alfaerie/wqueen.png" alt="Dama" class="pieceIcon"></a>
+                </h3>
+                <p>Movimiento en las seis direcciones <em>ortogonales</em> y en las seis <em>diagonales</em>;
+                    mueve tanto por las <em>filas</em> como por las <em>lineas</em>.</p>
+                <p>Combina los movimientos de la torre y el alfil.</p>
+            </li>
+            <!-- Elefante -->
+            <li class="w3-container w3-card-4">
+                <h3 id="Elefant" class="w3-container">
+                    <a href="es/glossary.html#Elefant" class="cescacs" target="_blank">Elefante
+                    <img src="img/alfaerie/welephant.png" alt="Elefante" class="pieceIcon"></a>
+                </h3>
+                <div>
+                    <div class="w3-container twothirds">
+						<div class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+							<p>En algunos idiomas, el <i class="cescacs">Elefante</i> es el nombre
+								que recibe el alfil; en estos idiomas se usa <i class="cescacs">Alabardero</i>
+								como nombre alternativo.</p>
+						</div>
+                        <p>El movimiento de los elefantes es como en los ajedreces orientales
+							(<i><a href="https://en.wikipedia.org/wiki/Sittuyin"
+                                    target="_blank" class="cite">Sittuyin</a></i>,
+							<i><a href="https://aseanchess.org/laws-of-asean-chess/"
+                                    target="_blank" class="cite">ASEAN-Chess</a></i>...): en las direcciones
+                            diagonales hacia adelante o hacia atrás, o bien avanzando uno o dos hexcaques;
+							en total seis hexcaques diferentes.</p>
+						<aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+							<p>En el ajedrez hexagonal se incorpora la opción de avanzar dos hexcaques hacia adelante.</p>
+							<p>La pieza del <i>elefante</i> en el <i><a href="https://en.wikipedia.org/wiki/Sittuyin"
+                                    target="_blank" class="cite">Sittuyin</a></i>, o el <i>general de plata</i> (<i>銀</i>) del
+                                <i><a href="https://ca.wikipedia.org/wiki/Sh%C5%8Dgi" target="_blank"
+                                    class="cite">Shogi</a></i>
+                                son piezas más potentes que el <i class="cescacs">Elefante</i> de <i class="cescacs">C'escacs</i>,
+                                principlamente debido a que casi no incrementa los movimientos cuando pasa al tablero hexagonal.</p>
+						</aside>
+                        <p>No puede mover en diagonal hacia los laterales, y ortogonalmente solo hacia adelante.
+                            En total son seis hexcaques; <em>los movimientos del elefante dibujan las cuatro patas y la
+                            trompa</em>.</p>
+                        <p>Es una pieza muy lenta, que permite construir estructuras consistentes de peones,
+                            y su potencia puede decirse que es considerablemente menor a la de un alfil,
+                            pero es cierto que es principalmente debido a su lentitud
+                            i poca maniobrabilidad; su función es dar soporte a los peones.</p>
+                    </div>
+                    <div class="w3-container w3-center third-rest">
+                        <figure>
+                            <img src="img/moves/elefantmove.svg" alt="Movimientos del elefante"
+                                class="fullwidth">
+                            <figcaption class="thumbcaption">Movimientos del elefante
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </li>
+            <!-- Peón -->
+            <li class="w3-container w3-card-4">
+                <h3 id="Peo" class="w3-container">
+                    <a href="es/glossary.html#Peo" class="cescacs" target="_blank">Peón
+                    <img src="img/alfaerie/wpawn.png" alt="Peón" class="pieceIcon"></a>
+                </h3>
+                <p>Los movimientos del peón son diferentes si captura o si hace un movimiento a un hexcaque vacío;
+                    además, existen movimientos especificos para algunas situaciones.</p>
+                <!-- Movimientos y capturas; Movimientos especiales -->
+                <div class="w3-container w3-center third-rest">
+                    <figure>
+                        <img src="img/moves/pawnmove.svg" alt="Movimientos del peón" class="fullwidth">
+                        <figcaption class="thumbcaption">Movimientos del peón
+                        </figcaption>
+                    </figure>
+                </div>
+                <!-- Movimientos -->
+                <div class="w3-container w3-card twothirds w3-margin-bottom">
+                    <h4 class="w3-container w3-text-purple"><img src="img/alfaerie/wpawn.png"
+                        alt="Peó" style="display: inline; vertical-align: baseline; height:2.5ex;">
+                        Movimentos sin captura
+                    </h4>
+                    <ul class="w3-ul w3-border w3-margin-bottom">
+                        <li>El peón puede mover hacia adelante uno o dos hexcaques (<i>movimiento doble</i>).
+                            El <i>movimiento doble</i> se puede realizar en cualquier hexcaque del tablero.
+                        </li>
+                        <li>El peón puede mover un hexcaque <em>ortogonalmente oblicuo</em>,
+                            hacia cualquiera de los <em>dos hexcaques adjacentes oblicuos hacia adelante</em> en 60º.
+                        </li>
+                        <li>En total tiene un máximo de <em>cuatro movimientos</em> sin captura,
+                            sin contar el posible movimiento inicial adicional.
+                        </li>
+                    </ul>
+                </div>
+                <!-- Capturas -->
+                <div class="w3-container w3-card twothirds w3-margin-bottom">
+                    <h4 class="w3-container w3-text-purple"><img src="img/alfaerie/wpawn.png"
+                        alt="Peó" style="display: inline; vertical-align: baseline; height:2.5ex;">Movimientos de captura
+                    </h4>
+                    <ul class="w3-ul w3-border w3-margin-bottom">
+                        <li>Para <em>capturar</em> el peón mueve en <em>diagonal</em> hacia cualquiera de los dos hexcaques
+                            delanteros, siguiendo las dos lineas de 30º, es decir, en los <em>dos hexcaques delanteros</em>
+                            del <em>mismo color</em> que el hexcaque en el que se encuentra.</li>
+                    </ul>
+                </div>
+                <!-- Movimientos especiales -->
+                <div class="w3-container" style="padding:0;">
+                    <!-- Movimiento inical -->
+                    <div class="w3-container half w3-card w3-margin-bottom">
+                        <h4 class="w3-container w3-text-purple subtitled"><img src="img/alfaerie/wpawn.png"
+                            alt="Peó" style="display: inline; vertical-align: baseline; height:2.5ex;">
+                            Movimientos especiales
+                        </h4>
+                        <h5 class="w3-container w3-text-pink subtitle">Movimiento inicial</h5>
+                        <ul class="w3-ul w3-border w3-margin-bottom">
+                            <li><p>En las <em>posiciones iniciales</em> los peones pueden hacer un <em>movimiento triple</em>
+                                hacia adelante por la columna, con <em>excepción</em> de la <em>columna central</em>
+                                (columna '<em>F</em>')
+                                y las <em>columnas de los flancos</em> (columna '<em>A</em>' y columna '<em>L</em>').</p>
+                            </li>
+                            <li><p>Un peón puede haber sido movido, pero mantenerse en uno de estos
+                                <em>ocho hexcaques iniciales</em>.
+                                En este caso mantendrá la capacidad de hacer el movimento triple.</p>
+                                <aside class="note w3-panel w3-leftbar w3-sand w3-serif w3-small">
+                                    <p>De este modo no hay que recordar si un peón ha sido movido.</p>
+                                </aside>
+                                <p>Es decir: para cada jugador hay <em>ocho posiciones</em>
+                                    desde las que un peón puede hacer un <em>movimiento triple</em>,
+                                    y tres peones que nunca podrán hacer un movimiento triple.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Promoción -->
+                    <div class="w3-container half w3-card w3-margin-bottom">
+                        <h4 class="w3-container w3-text-purple subtitled"><img src="img/alfaerie/wpawn.png"
+                            alt="Peó" style="display: inline; vertical-align: baseline; height:2.5ex;">
+                            Movimientos especiales
+                        </h4>
+                        <h5 class="w3-container w3-text-pink subtitle">Promoción</h5>
+                        <ul class="w3-ul w3-border w3-margin-bottom">
+                            <li><p>Cuando un peón llega a uno de los quince hexcaques del lado del oponente, promocionarà
+                                obligatoriamente, però <strong>la pieza a la cual promociona debe ser una
+                                    <a href="es/glossary.html#Peçarecuperable" target="_blank" class="cescacs">pieza
+                                        recuperable</a> previamente capturada</strong>.</p>
+                                <aside class="note w3-panel w3-leftbar w3-sand w3-serif w3-small">
+                                    <p>Se ha de considerar que la promoción es relativamente más sencilla en C'escacs
+                                        que en el ajedrez ortodoxo, y por eso se establece una pequeña limitación.</p>
+                                </aside>
+                            </li>
+                            <li>
+                                <p>Son <em><a href="es/glossary.html#Peçarecuperable" target="_blank" class="cescacs">piezas
+                                    recuperables</a></em>: <i>Dama</i>, <i>Víbria</i> (<i>Dragón</i>), <i>Roques</i>
+                                    (<i>Torres</i>), <i>Pegasos</i>, <i>Caballos</i> y <i>Alfiles</i>,
+                                    pero se tiene que considerar el <em>color del Alfil</em>,
+                                    pues no se pueden tener en juego dos <i>Alfiles</i> del mismo color;
+                                    solo es recuperable un <em><i>Alfil</i> del mismo color</em> que ha sido capturado.
+                                </p>
+                                <p>No son recuperables los <i>Elefantes</i>.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Promoció forçada -->
+                    <div class="w3-container w3-card w3-margin-bottom">
+                        <h4 class="w3-container w3-text-purple subtitled"><img src="img/alfaerie/wpawn.png"
+                            alt="Peó" style="display: inline; vertical-align: baseline; height:2.5ex;">
+                            Movimientos especiales
+                        </h4>
+                        <h5 class="w3-container w3-text-pink subtitle subtitled">Promoción forzada</h5>
+                        <h6 class="w3-container subtitle"><a href="es/glossary.html#Peoenesperapromocio" target="_blank"
+                            class="cescacs">Peón <i>en espera de promoción</i></a></h6>
+                        <ul class="w3-ul w3-border w3-margin-bottom">
+                            <li><p>Parece poco probable que no haya ninguna <a href="es/glossary.html#Peçarecuperable"
+                                 target="_blank" class="cescacs">pieza recuperable</a> capturada disponible para
+                                 promocionar un peón, pero si llegara el caso, el peón quedaría sin promoción,
+                                 con los movimientos limitados por su situación en el tablero, hasta que el oponente
+                                 capture una pieza válida para la promoción, o bien el mismo peón sea capturado.
+                                 Se dice que el <i>peón</i> queda <i><a href="es/glossary.html#Peoenesperapromocio"
+                                    target="_blank" class="cescacs">en espera de promoción</a></i>.
+                                </p>
+                                <p>En el turno del jugador con un <i><a href="es/glossary.html#Peoenesperapromocio"
+                                    target="_blank" class="cescacs">peón en espera de promoción</a></i>,
+                                    inmediatamente después de haber sido capturada de una de sus <i>piezas
+                                        recuperables</i> válida para la promoción, y si no se encuentra en
+                                    <a href="ca/glossary.html#Escac" class="cescacs" target="_blank">jaque</a>,
+                                    la jugada <em>obligatoriamente</em> consistirá en <em>promocionar</em>
+                                    el peón que había quedado <i><a href="es/glossary.html#Peoenesperapromocio"
+                                        target="_blank" class="cescacs">en espera de promoción</a></i>,
+                                    <em>sin hacer ningún otro movimiento</em>.
+                                </p>
+                                <p>En caso de encontrarse en situación de <a
+                                        href="es/glossary.html#Escac" class="cescacs" target="_blank">jaque</a>,
+                                    el movimento de <i>promoción</i> se tendrá que hecer en la primera jugada
+                                    en la que el jugador no se encuentre en situación de <a
+                                    href="ca/glossary.html#Escac" class="cescacs" target="_blank">jaque</a>,
+                                    sempre sin hacer ningún otro movimiento.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Capturas especiales -->
+                <div class="w3-container" style="padding:0;">
+                    <!-- En passant -->
+                    <div class="w3-container half w3-card w3-margin-bottom">
+                        <h4 class="w3-container w3-text-purple subtitled"><img src="img/alfaerie/wpawn.png"
+                            alt="Peó" style="display: inline; vertical-align: baseline; height:2.5ex;">
+                            Capturas especiales
+                        </h4>
+                        <h5 class="w3-container w3-text-pink subtitle">
+                            <a href="es/glossary.html#CapturaAlPas" class="cescacs" target="_blank">Captura
+                                al paso</a>
+                        </h5>
+                        <div style="display: flex; flex-wrap: wrap;">
+                            <figure>
+                                <div style="width:50%; max-width: 300px; float:left; border: 1px solid black; padding: 5px;">
+                                    <img src="img/moves/enpassant1.png" class="fullwidth"
+                                        alt="Captura al paso por la izquierda"
+                                        title="Captura al paso por la izquierda">
+                                </div>
+                                <div style="width:50%; max-width: 300px; float:left; border: 1px solid black; padding: 5px;">
+                                    <img src="img/moves/enpassant2.png" class="fullwidth"
+                                        alt="Captura al paso por la derecha"
+                                        title="Captura al paso por la derecha">
+                                </div>
+                                <figcaption class="thumbcaption" style="clear:both; text-align: center">Captura al paso
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <img id="pawnenpassant" src="img/moves/pawnenpassant0.svg" class="fullwidth"
+                                    alt=" El peón blanco lo captura ortogonalmente.">
+                                <figcaption class="thumbcaption" style="text-align: center">
+                                    <span id="pawnenpassant_caption">Posición inicial</span>
+                                    <div>
+                                        <script>
+                                            var enpassant_image = document.getElementById('pawnenpassant');
+                                            var enpassant_caption = document.getElementById('pawnenpassant_caption');
+                                            function enpassant0() {
+                                                enpassant_image.setAttribute('src', 'img/moves/pawnenpassant0.svg');
+                                                enpassant_image.setAttribute('title', "Posición inicial");
+                                                enpassant_caption.textContent = "Posición inicial";
+                                            }
+                                            function enpassant1() {
+                                                enpassant_image.setAttribute('src', 'img/moves/pawnenpassant1.svg');
+                                                enpassant_image.setAttribute('title', "Peón negro mueve doble");
+                                                enpassant_caption.textContent = "Peón negro mueve doble";
+                                            }
+                                            function enpassant2() {
+                                                enpassant_image.setAttribute('src', 'img/moves/pawnenpassant2.svg');
+                                                enpassant_image.setAttribute('title', "The white pawn can capture it");
+                                                enpassant_caption.textContent = "The white pawn can capture it";
+                                            }
+                                            function enpassant3() {
+                                                enpassant_image.setAttribute('src', 'img/moves/pawnenpassant3.svg');
+                                                enpassant_image.setAttribute('title', "Capturado al paso");
+                                                enpassant_caption.textContent = "Capturado al paso";
+                                            }
+                                        </script>
+                                        <div class="w3-bar w3-center">
+                                            <button class="w3-button w3-khaki" onclick="enpassant0()"> Inicio</button>
+                                            <button class="w3-button w3-khaki" onclick="enpassant1()"> Negro mueve</button>
+                                            <button class="w3-button w3-khaki" onclick="enpassant2()"> Blanco captura</button>
+                                            <button class="w3-button w3-khaki" onclick="enpassant3()"> Final</button>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="w3-container">
+                            <ul class="w3-ul w3-border">
+                                <li>Un peón que hace un movimiento <em>doble o triple</em> y atraviesa un hexcaque
+                                    en el que podria haber sido capturado por un peón del oponente, puede ser igualmente
+                                    capturado.
+                                    <aside class="note w3-panel w3-leftbar w3-sand w3-serif w3-small">
+                                        <p>El movimiento triple solo puede realizarse desde algunos hexcaques
+                                            iniciales,  pero el movimiento doble puede realizarse en cualquier posición,
+                                            y la captura al paso se aplica.
+                                        </p>
+                                    </aside>
+                                </li>
+                                <li>La captura al paso se ha de hacer inmediatamente después del movimiento doble o
+                                    triple.
+                                </li>
+                                <li>El peón que hace la captura queda posicionado en el hexcaque donde habria hecho una
+                                    captura normal,
+                                    y el peón del oponente retirado del juego, ignorando la posición a la que había
+                                    avanzado (uno o dos hexcaques más adelante).
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="w3-container half w3-card w3-margin-bottom">
+                        <h4 class="w3-container w3-text-purple subtitled"><img src="img/alfaerie/wpawn.png"
+                            alt="Peó" style="display: inline; vertical-align: baseline; height:2.5ex;">
+                            Capturas especiales
+                        </h4>
+                        <h5 id="CapturaPeoEsquiu" class="w3-container w3-text-pink subtitle">
+                            <a href="es/glossary.html#CapturaPeoEsquiu" class="cescacs" target="_blank">Captura
+                                del peón esquivo
+                            </a>
+                        </h5>
+                        <div style="display: flex; flex-wrap: wrap;">
+                            <figure >
+                                <div style="width:50%; max-width: 300px; float:left; border: 1px solid black; padding: 5px;">
+                                    <img src="img/moves/scornfp1.png" class="fullwidth"
+                                        alt="Captura del peón esquivo por la izquierda"
+                                        title="Captura del peón esquivo por la izquierda">
+                                </div>
+                                <div style="width:50%; max-width: 300px; float: left; border: 1px solid black; padding: 5px;">
+                                    <img src="img/moves/scornfp2.png" class="fullwidth"
+                                        alt="Captura del peón esquivo por la derecha"
+                                        title="Captura del peón esquivo por la derecha">
+                                </div>
+                                <figcaption class="thumbcaption" style="clear:both; text-align: center">Captura del peón esquivo
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <img id="pawnscornful" src="img/moves/pawnscornful0.svg" class="fullwidth"
+                                    alt=" El peón blanco lo captura ortogonalmente.">
+                                <figcaption class="thumbcaption" style="text-align: center"><span id="pawnscornful_caption">Posición inicial</span>
+                                    <div>
+                                        <script>
+                                            var scornful_image = document.getElementById('pawnscornful');
+                                            var scornful_caption = document.getElementById('pawnscornful_caption');
+                                            function scornful0() {
+                                                scornful_image.setAttribute('src', 'img/moves/pawnscornful0.svg');
+                                                scornful_image.setAttribute('title', "Posición inicial");
+                                                scornful_caption.textContent = "Posición inicial";
+                                            }
+                                            function scornful1() {
+                                                scornful_image.setAttribute('src', 'img/moves/pawnscornful1.svg');
+                                                scornful_image.setAttribute('title', "El peón negro esquiva el bloqueo");
+                                                scornful_caption.textContent = "El peón negro esquiva el bloqueo";
+                                            }
+                                            function scornful2() {
+                                                scornful_image.setAttribute('src', 'img/moves/pawnscornful2.svg');
+                                                scornful_image.setAttribute('title', "El peón blanco lo puede capturar");
+                                                scornful_caption.textContent = "El peón blanco lo puede capturar";
+                                            }
+                                            function scornful3() {
+                                                scornful_image.setAttribute('src', 'img/moves/pawnscornful3.svg');
+                                                scornful_image.setAttribute('title', "Captura en ortogonal");
+                                                scornful_caption.textContent = "Captura en ortogonal";
+                                            }
+                                        </script>
+                                        <div class="w3-bar w3-center">
+                                            <button class="w3-button w3-khaki" onclick="scornful0()"> Ini</button>
+                                            <button class="w3-button w3-khaki" onclick="scornful1()"> Black move</button>
+                                            <button class="w3-button w3-khaki" onclick="scornful2()"> White captures</button>
+                                            <button class="w3-button w3-khaki" onclick="scornful3()"> End</button>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="w3-container">
+                            <p>Cuando dos peones de bandos contrarios quedan enfrentados, no quedan retenidos,
+                                porque en <i>C'escacs</i> los peones pueden mover oblícuamente. Pero si un peón
+                                enfrentado con otro del oponente hace un movimiento oblicuo para esquivarlo,
+                                puede ser <em>capturado ortogonalmente</em> por el peón del oponente que ha esquivado.
+                            </p>
+                            <ol class="w3-ul w3-border w3-margin-bottom">
+                                <li>Cuando un <em>peón enfrentado con un peón del oponente</em>, en la misma columna
+                                    y hexcaques consecutivos, <em>hace un movimiento oblicuo esquivando al peón
+                                        del oponente</em>, puede ser capturado ortogonalmente.
+                                </li>
+                                <li>El movimiento de <em>captura se ha de hacer inmediatamente después</em> del
+                                    <a href="es/glossary.html#PeoEsquiu" class="cescacs" target="_blank">movimiento
+                                        esquivo del peón</a>.
+                                </li>
+                                <li>La captura se hace ortogonalmente, moviendo a la posición donde se encuentra el peón
+                                    del oponente. Es la unica captura con un movimiento ortogonal que puede hacer un peon.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <p>Se puede llegar a dar el caso de un peón que promociona haciendo un movimiento esquivo evitando
+                        el peón del oponente con quien estaba enfrentado. Este caso solo se puede dar en las columnas
+                        T, A, L, X, después de hacer un movimiento esquivo respectivamente desde las columnas A, B, K, L.
+                        La captura del peón esquivo también aplica en este caso,
+                        y se capturará la pieza a la que haya promocionado el peón.
+                    </p>
+                </div>
+            </li>
+            <!-- Rey -->
+            <li class="w3-container w3-card-4">
+                <h3 id="Rei" class="w3-container">
+                    <a href="es/glossary.html#Rei" class="cescacs" target="_blank">Rey
+                    <img src="img/alfaerie/wking.png" alt="Rey" class="pieceIcon"></a>
+                </h3>
+                <p>Puede mover un único hexcaque ortogonalmente o diagonalmente; en total doce movimientos posibles.</p>
+                <ul class="w3-ul w3-border">
+                    <li>No se puede hacer un movimiento que deje el rey amenazado (en jaque)</li>
+                    <li>Cuando está amenazado (en jaque) se ha de mover o mover otra pieza para evitar la amenaza.
+                    </li>
+                    <li>Si no existe un movimiento para evitar la amenaza, es jaque mate, y se ha perdido la partida.
+                    </li>
+                </ul>
+                <!-- Salto del Rey -->
+                <div class="w3-container w3-card w3-margin-bottom">
+                    <h4 class="w3-container w3-text-purple subtitled">
+                        <img src="img/alfaerie/wking.png" alt="King" style="display: inline; vertical-align: baseline; height:2.5ex;">
+                        <i>Salto del Rey</i>
+                    </h4>
+                    <h5 class="w3-container w3-text-pink subtitle">Movimiento inicial</h5>
+                    <div class="w3-container w3-center half">
+                        <figure>
+                            <img src="img/moves/kingsleap.png" alt="Salto del rey" title="Salto del rey"
+                                class="fullwidth">
+                            <figcaption class="thumbcaption">
+                                Los cinco hexcaques posibles, resultado del <i>Salto del Rey</i>.
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="w3-container half">
+                        <p>El <i>Rey</i> puede hacer un <em>único movimiento de caballo</em>:</p>
+                        <ul class="w3-ul w3-border">
+                            <li>Si el rey todavía no ha movido.</li>
+                            <li>Si el rey no se encuentra amenazado (en jaque).</li>
+                            <li>Se puede capturar una pieza del contrario con este movimiento.
+                                <ul>
+                                    <li>
+                                        La regla anterior impide capturar con el <i>Salto del Rey</i>
+                                        una pieza que amenaza el Rey (jaque).
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Enroc -->
+                <div class="w3-container w3-card w3-margin-bottom">
+                    <h4 class="w3-container w3-text-purple subtitled">
+                        <img src="img/alfaerie/wking.png" alt="King" style="display: inline; vertical-align: baseline; height:2.5ex;">
+                        El <i>Enroque</i>
+                    </h4>
+                    <h5 class="w3-container w3-text-pink subtitle">Movimiento inicial</h5>
+                    <p>En C'escacs existe el <i>Enroque</i>, pero no es un movimiento fundamental para desarrollar
+                        la estrategia, y es conveniente hacer las primeras partidas obviando esta regla, 
+                        como se detalla más abajo. Se pueden consultar las reglas del enroque en el
+                        <a href="es/castling.html" class="cescacs">apartado del <i>Enroque</i></a> de esta web.
+                    </p>
+                    <ul>
+                        <li style="border:0; padding:0">No se ha de confundir con el <i>Salto del Rey</i>.</li>
+                        <li style="border:0; padding:0">También es un movimento evasivo, pero permite incorporar
+                            defensa con la <i>Torre</i>.
+                        </li>
+                    </ul>
+                    <h5 class="w3-container w3-text-pink subtitled">Jugar sin <i>Enroque</i></h5>
+                    <h6 class="w3-container w3-text-teal subtitle">Recomendación para las primeras partidas</h6>
+
+                    <ul style="font-size:smaller">
+                        <li style="border:0; padding:0">Se recomienda jugar sin <i>Enroque</i> para iniciarse en el
+                            juego.
+                        </li>
+                        <li style="border:0; padding:0">Se ha de acordar antes de iniciar la partida.</li>
+                        <li style="border:0; padding:0">Si se juega sin <i>Enroque</i>, el <i>Salto del Rey</i> se
+                            mantiene,
+                            pero sin permitir al <i>Rey</i> realizar capturas con este movimento.
+                        </li>
+                    </ul>
+                    <br>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- Reglas -->
+    <h2 class="w3-container w3-pale-green w3-center title">Reglas</h2>
+    <div class="w3-container">
+        <!-- Taules -->
+        <div class="w3-container w3-card-4 half w3-margin-bottom">
+            <h3 class="w3-container w3-pale-yellow w3-center"><i>Tablas</i></h3>
+            <p>Las <em><a href="es/glossary.html#Taules" class="cescacs" target="_blank">tablas</a></em>,
+                o empate entre ambos contendientes, en un torneo representa 1 punto pera cada jugador,
+                y se producen:</p>
+            <ul>
+                <li>Por <a href="es/glossary.html#TaulesPactades" class="cescacs" target="_blank">acuerdo mutuo</a>
+                    entre los contendientes, o bien si los jugadores no tienen ningún peón y el
+                    <a href="es/glossary.html#MaterialInsuficient" class="cescacs" target="_blank">material
+                        es insuficiente</a> para conseguir hacer mate al oponente.
+                    <aside class="note w3-panel w3-leftbar w3-sand w3-serif">
+                        <p>Material mínimo: una pieza mediana y una menor, o una pieza mayor.
+                            En cualquier caso, si el material es insuficiente
+                            se acabarán agotando los movimientos.
+                        </p>
+                    </aside>
+                </li>
+                <li>Cuando la <a href="es/glossary.html#Repeticio" class="cescacs" target="_blank"><em>misma
+                        posición</em> se repite</a> <em>cinco veces</em>, no necesariamente consecutivas.
+                    El caso de <em><a href="es/glossary.html#EscacContinu" class="cescacs" target="_blank">jaque
+                        continuo</a></em> generalmente cae en este supuesto.
+                    <p class="w3-panel w3-serif">Un jugador puede exigir tablas si se repite
+                        <em>tres veces</em> la misma posición.
+                    </p>
+                </li>
+                <li>Por <a href="es/glossary.html#EsgotamentMoviments" class="cescacs" target="_blank">agotamiento
+                        de movimientos</a>: Después de <em>75 movimientos consecutivos</em> de cada jugador
+                    (setenta y cinco <a href="ca/glossary.html#Jugada" class="cescacs" target="_blank">jugadas</a>)
+                    sin ninguna captura ni movimiento de peón.
+                    <p class="w3-panel w3-serif">Un jugador puede exigir tablas si se dan
+                        <em>50 <a href="es/glossary.html#Jugada" class="cescacs" target="_blank">jugadas</a></em>
+                        consecutivas sin ninguna captura ni movimiento de peón.
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <!-- Ahogado y puntos competición -->
+        <div class="w3-container w3-card-4 half w3-margin-bottom">
+            <h3 class="w3-container w3-pale-yellow w3-center">Las tablas y la victoria por ahogado</h3>
+            <p>En <i>C'escacs</i> el ahogado es una <i>victoria por la mínima</i>. En competición:</p>
+            <ul class="w3-ul">
+                <li>La <em>victoria</em> otorga <em>3 puntos</em> para el vencedor.</li>
+                <li>Las <em>tablas</em> otorgan <em>1 punto para cada jugador</em>.</li>
+                <li>Si un jugador <em>ahoga el rey</em> del otro jugador obtendrá <em>2 puntos</em>,
+                    y el jugador con el <em>rey ahogado 1 punto</em>.</li>
+            </ul>
+            <p>Sin embargo, es muy extraño que se de el caso de ahogado en <i>C'escacs</i>.</p>
+        </div>
+        <!-- Reglas generales -->
+        <div class="w3-container w3-card-4 half w3-margin-bottom">
+            <h3 class="w3-container w3-pale-yellow w3-center">Reglas generales</h3>
+            <dl>
+                <dt><q>Pieza tocada, pieza movida</q></dt>
+                <dd>Si una pieza en juego se toca, se tiene que mover.</dd>
+                <dd>Un movimiento hecho no se puede rectificar una vez se ha dejado la pieza en el tablero,
+                    pero un <a href="es/glossary.html#MovimentIllegal" class="cescacs" target="_blank">movimiento
+                        inválido o ilegal</a> se ha de rectificar inmediatamente.
+                </dd>
+                <dt>Condiciones que hacen perder la partida a un jugador:</dt>
+                <dd>Desordena la posición de las piezas en juego del tablero.</dd>
+                <dd>No acepta retomar una partida interrumpida en un tiempo razonable.</dd>
+                <dd>Cuando se usa reloj y excede el tiempo.</dd>
+                <dd>Cuando no cumple un requerimiento legal del oponente.</dd>
+                <dd>Se niega a cumplir las reglas.</dd>
+            </dl>
+        </div>
+    </div>
+</main>
+<footer class="w3-container w3-purple w3-opacity">
+    <!-- juego on-line -->
+    <h2 class="w3-container w3-pale-green w3-center title">
+        <a href="cescacs.typescript/cescacs.game.html" target="_blank" class="cescacs">Probar el juego</a>
+    </h2>
+    <div class="w3-container" style="font-weight:300">
+        <p>En <a href="cescacs.typescript/cescacs.game.html" target="_blank" class="cescacs w3-text-yellow">este enlace</a>
+            hay un tablero con las fichas movibles que únicamente acepta los movimientos correctos. Permite guardar partidas,
+            recuperar partidas guardadas o cargar posiciones concretas; una herramienta pensada para probar el juego.
+        </p>
+        <p>No existe todavía ninguna opción donde la máquina haga movimientos, aunque se encuentra en desarrollo una versión
+            donde la máquina ofrece el movimiento que evalúa como el mejor, siempre limitado a la ejecución por el navegador,
+            usando la máquina cliente (sin servidor).
+        </p>
+    </div>
+    <!-- Tablero -->
+    <h2 class="w3-container w3-pale-green w3-center title">
+        <a href="img/cescacs.svg" target="_blank" class="cescacs">Tablero para imprimir</a>
+    </h2>
+    <div class="w3-container" style="font-weight:300">
+        <p>En <a href="img/cescacs.svg" target="_blank" class="cescacs w3-text-yellow">este enlace</a> hay un tablero en formato
+            <i>.SVG</i> para imprimirlo. Se
+            recomienda
+            imprimirlo en formato <i>DINA-1</i>, que puede hacerse dividiendolo en cuatro partes <i>DINA-3</i> para
+            poder plegarlo.
+            La medida plegada en cuatro partes es ligeramente inferior a DINA-3; por la proporción largo-ancho del
+            hexágono se pierde un poco de papel.</p>
+        <p>Imprimiendo en la mitad, en cuatro <i>DINA-4</i>, obtenemos un tablero para piezas miniatura,
+            con una medida de hexcaque de unos 2.4 cm.
+        </p>
+    </div>
+    <!-- Email -->
+    <h2 class="w3-container w3-pale-green w3-center title">
+        <img src="img/cescacs-email-image.gif" alt="cescacs" style="height:1em; display: inline-block;" >
+    </h2>
+</footer>
+</body>
+
+</html>

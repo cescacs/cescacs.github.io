@@ -1,0 +1,1122 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="alternate" hreflang="ca" href="../ca/castling.html" />
+	<link rel="alternate" hreflang="en" href="../en/castling.html" />
+	<!-- description -->
+	<meta name="twitter:card" content="summary_large_image">
+	<title>C'escacs: movimientos especiales del Rey y enroque</title>
+    <meta property="og:title" content="C'escacs: movimientos especiales del Rey">
+	<meta property="og:type" content="website" >
+    <meta property="og:locale" content="ca-ES">
+	<meta name="description" property="og:description"
+		content="Salto del Rey, Enroque y Enroque doble.">
+	<!-- public imgbb image -->
+	<!-- https://ibb.co/jHTDkqc -->
+	<!-- https://i.ibb.co/BwtB2vX/logo-rich.png -->
+	<meta name="image" property="og:image" content="https://i.ibb.co/BwtB2vX/logo-rich.png">
+	<meta name="twitter:image" content="https://i.ibb.co/BwtB2vX/logo-rich.png">
+    <meta name="author" content="Cesc Sasal i Lasaosa">
+	<!-- end description -->
+	<meta name="keywords"
+		content="C'escacs, Cescacs, Salto del Rei, Enroque, Enroque doble, Movimientos del Rey, Movimientos especiales">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../w3.css">
+	<link rel="stylesheet" type="text/css" href="../w3-colors-win8.css">
+	<link rel="stylesheet" type="text/css" href="../cescacs.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap">
+	<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple"> -->
+	<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nabla&display=swap"> -->
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/1efd89dd3e.js" crossorigin="anonymous"></script>
+
+	<!-- 10 image preload-->
+	<link rel="preload" as="image" href="../img/moves/king/kingsleapi.rk-min.png">
+	<link rel="preload" as="image" href="../img/moves/king/kingsleaph.rk-min.png">
+	<link rel="preload" as="image" href="../img/moves/king/kingsleaph.rq-min.png">
+	<link rel="preload" as="image" href="../img/moves/king/kingsleapf.rk-min.png">
+	<link rel="preload" as="image" href="../img/moves/king/kingsleapf.rq-min.png">
+	<link rel="preload" as="image" href="../img/moves/king/kingsleape.rk-min.png">
+	<link rel="preload" as="image" href="../img/moves/king/kingsleape.rq-min.png">
+	<link rel="preload" as="image" href="../img/moves/king/kingsleaph.both-min.png">
+	<link rel="preload" as="image" href="../img/moves/king/kingsleapf.both-min.png">
+	<link rel="preload" as="image" href="../img/moves/king/kingsleape.both-min.png">
+	<!-- 10 image preload-->
+	<link rel="preload" as="image" href="../img/moves/king/kingsleapd.rq-min.png">
+	<link rel="preload" as="image" href="../img/moves/king/castlingsik.1-min.png">
+	<link rel="preload" as="image" href="../img/moves/king/castlingsik.2-min.png">
+	<link rel="preload" as="image" href="../img/moves/king/castlingsik.3-min.png">
+	<link rel="preload" as="image" href="../img/moves/king/castlingsdq.1-min.png">
+	<link rel="preload" as="image" href="../img/moves/king/castlingsdq.2-min.png">
+	<link rel="preload" as="image" href="../img/moves/king/castlingshk.1-min.png">
+	<link rel="preload" as="image" href="../img/moves/king/castlingshk.2-min.png">
+	<link rel="preload" as="image" href="../img/moves/king/castlingshk.3-min.png">
+	<link rel="preload" as="image" href="../img/moves/king/castlingshk.4-min.png">
+	<!-- 10 image preload-->
+	<link rel="preload" as="image" href="../img/moves/king/castlingshq.1-min.png">
+	<link rel="preload" as="image" href="../img/moves/king/castlingshq.2-min.png">
+	<link rel="preload" as="image" href="../img/moves/king/castlingsfk.1-min.png">
+	<link rel="preload" as="image" href="../img/moves/king/castlingsfk.2-min.png">
+	<link rel="preload" as="image" href="../img/moves/king/castlingsfq.1-min.png">
+	<link rel="preload" as="image" href="../img/moves/king/castlingsfq.2-min.png">
+	<link rel="preload" as="image" href="../img/moves/king/castlingsek.1-min.png">
+	<link rel="preload" as="image" href="../img/moves/king/castlingsek.2-min.png">
+	<link rel="preload" as="image" href="../img/moves/king/castlingseq.1-min.png">
+	<link rel="preload" as="image" href="../img/moves/king/castlingseq.2-min.png">
+	<!-- 5 image preload- (the rest) -->
+	<link rel="preload" as="image" href="../img/moves/king/castlingdh.1-min.png">
+	<link rel="preload" as="image" href="../img/moves/king/castlingdh.2-min.png">
+	<link rel="preload" as="image" href="../img/moves/king/castlingdf.1-min.png">
+	<link rel="preload" as="image" href="../img/moves/king/castlingdf.2-min.png">
+	<link rel="preload" as="image" href="../img/moves/king/castlingde-min.png">
+
+	<title>C'escacs: movimientos especiales del Rey y el Enroque</title>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-CHKYWCYH3N"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-CHKYWCYH3N');
+	</script>
+</head>
+
+<body>
+	<header class="w3-center">
+		<div class="w3-container" style='background-image: url("../img/lasaosa.PC310001.png"); background-size:240px'>
+			<div class="w3-container" style="padding:0;">
+				<nav class="w3-bar w3-black" style="margin:0;">
+					<a href="../index.es.html" class="w3-bar-item w3-button w3-transparent"><i class="fa fa-home"></i></a>
+					<div class="w3-dropdown-hover">
+						<button class="w3-button">Más Reglas</button>
+						<div class="w3-dropdown-content w3-bar-block w3-card-4">
+							<a href="#" class="w3-bar-item w3-button w3-mobile menubar">Movimientos especiales del Rey</a>
+							<a href="notation.html" class="w3-bar-item w3-button w3-mobile menubar">Notación</a>
+						</div>
+					</div>
+					<a href="../cescacs.typescript/cescacs.game.html" target="_blank" class="w3-bar-item w3-button w3-transparent"><i class='fas fa-chess'></i> play</a>
+					<div class="w3-dropdown-hover">
+						<button class="w3-button">Otros contenidos</button>
+						<div class="w3-dropdown-content w3-bar-block w3-card-4">
+							<a href="historical-milestones.html" class="w3-bar-item w3-button w3-mobile menubar">Referentes históricos</a>
+							<a href="the-corner.html" class="w3-bar-item w3-button w3-mobile menubar">El Rincón</a>
+							<a href="glossary.html" class="w3-bar-item w3-button w3-mobile menubar">Glosario</a>
+							<a href="about.html" class="w3-bar-item w3-button w3-mobile menubar">Agradecimientos</a>
+						</div>
+					</div>
+					<div class="w3-dropdown-hover w3-right" style="position:absolute ;">
+						<button class="w3-button"><img src="../img/esp.png" class="lang" alt="Español"></button>
+						<div class="w3-dropdown-content w3-bar-block w3-border" style="right:0;">
+							<a href="../ca/castling.html" class="w3-bar-item w3-button w3-mobile menubar" hreflang="ca" lang="ca"><img
+									src="../img/ca.png" class="lang" alt="Català"> Català</a>
+							<a href="../en/castling.html" class="w3-bar-item w3-button w3-mobile menubar" hreflang="en" lang="en"><img
+									src="../img/uk.png" class="lang" alt="English"> English</a>
+						</div>
+					</div>
+				</nav>
+			</div>
+			<img src="../img/logo.gif" alt="C'escacs" class="mainlogo" >
+			<!-- public imgbb image -->
+			<!-- https://i.ibb.co/Ycddy9p/logo.gif -->
+			<!-- https://ibb.co/x1ggfvJ -->
+		</div>
+		<div class="w3-container w3-opacity">
+			<!--  font-effect-shadow-multiple font-family: 'Bungee Spice', cursive; -->
+			<h1 class="w3-jumbo" style="font-family: 'Bungee Spice', cursive; color:#FFD700; margin-top:0;">Movimientos especiales del <i>Rey</i></h1>
+		</div>
+		<div style="clear:both;"></div>
+	</header>
+	<main>
+	<div class="w3-container">
+		<p>En <i class="cescacs">C'escacs</i> el Rey puede realizar ciertos movimientos especiales cuando todavía no ha
+			movido, siempre que no se encuentre amenazado (<a href="glossary.html#Escac" class="cescacs">en jaque</a>).
+			Estos movimientos son principalmente evasivos, pero también deja opción para una captura, o avanzar
+			el posicionamiento de los <i>Roques</i>. Esta categoría incluye tres distintos movimientos:
+		</p>
+		<ul class="w3-ul">
+			<li><a href="glossary.html#SaltRei" class="cescacs">Salto del rey</a>:
+				El <i>Rey</i> puede hacer su primer movimiento mediante un <i>Salto de Caballo</i>, cuando no se
+				encuentra <i>en jaque</i>. En este <i>salto</i> el <i>Rey</i> puede capturar una pieza.
+			</li>
+			<li><a href="glossary.html#EnrocSimple" class="cescacs">Enroque Simple</a>:
+				Si no se captura ninguna pieza en el <i>Salto del Rey</i>, y el jugador todavía no ha movido el
+				<a href="glossary.html#Roc" class="cescacs">Roque</a>, puede mover también esta pieza simultáneamente
+				en el mismo movimiento, hasta un hexcaque ortogonalmente adyacente al hexcaque en el que el <i>Rey</i>
+				se posiciona.
+			</li>
+			<li><a href="glossary.html#EnrocDoble" class="cescacs">Enroque Doble</a>:
+				Todavía más, si el jugador tampoco ha movido todavía el otro
+				<a href="glossary.html#Roc" class="cescacs">Roque</a>, se pueden mover las tres piezas
+				simultaneamente en el mismo movimiento, dejando las tres piezas en hexcaques ortogonalmente adyacentes
+				entre ellas: cada <a href="glossary.html#Roc" class="cescacs">Roque</a> adyacente al <i>Rey</i>,
+				y también al otro <a href="glossary.html#Roc" class="cescacs">Roque</a>.
+			</li>
+		</ul>
+		<p>El movimiento de los <a href="glossary.html#Roc" class="cescacs">Roques</a> en el <i>enroque</i>
+			se ha de hacer siguiendo las reglas para el movimiento de esta pieza, un movimiento ortogonal, que no se
+			puede hacer si otras piezas se lo impiden, pero la posición final del <i>Rey</i> no impide el
+			movimiento de las torres en el enroque; se puede pensar que se mueven primero los <i>Roques</i> y
+			posteriormente se hace el movimiento del <i>Rey</i>.
+		</p>
+		<p>En la práctica, los jugadores generalmente realizarán primero el <i>Salto del Rey</i> y posteriormente
+			el movimiento de los <i>Roques</i>; es por ello que, cuando se juega sin reloj, si se quiere hacer el
+			<i>movimiento del enroque</i> se debe <em>prevenir al contrincante</em>.
+		</p>
+	</div>
+	<h2 class="w3-container w3-pale-green w3-center w3-opacity"><i>Salto del Rey</i></h2>
+	<!-- Salto del Rey-->
+	<div class="w3-container">
+		<p>El caso más sencillo es un movimento de <a href="glossary.html#SaltCavall" class="cescacs">Salto de
+				Caballo</a>
+			que el <i>Rey</i> puede hacer como primer movimiento, siempre que no se encuentre en <i>Jaque</i>.
+			Incluso se puede capturar una pieza del contrincante en este movimento de <i>Salto</i>.
+		</p>
+		<div class="w3-container half">
+			<div class="w3-container">
+				<p>El <i>Rey</i> puede hacer este movimiento, cuando:</p>
+				<ul class="w3-ul w3-border">
+					<li>Todavía <strong>no ha hecho ningún movimiento</strong> durante la partida.</li>
+					<li><strong>No está amenazado (<i>en jaque</i>)</strong>.</li>
+					<li>Por supuesto, <em>el <i>Rey</i> no puede acabar el movimiento en un <i>hexaque</i> amenazado</em>
+						por una pieza del oponente.</li>
+				</ul>
+			</div>
+			<figure>
+				<img src="../img/moves/kingsleap.png" alt="Salto del rey" title="Salto del rey" class="fullwidth" />
+			</figure>
+		</div>
+		<!-- Script salt del rei -->
+		<div class="w3-container half w3-card-4">
+			<figure class="captionTop">
+				<img id="leap_image" src="../img/moves/king/castling.base.both-min.png" alt=""
+					style="margin: 10px; width: 100%;" />
+				<figcaption class="thumbcaption captionTop" style="text-align: center;">
+					<div class="w3-bar w3-center">
+						<button class="w3-button w3-khaki" onclick="leap0()">Inicial</button>
+						<button class="w3-button w3-khaki" onclick="leapI()">Salto I</button>
+						<button class="w3-button w3-khaki" onclick="leapH()">Salto H</button>
+						<button class="w3-button w3-khaki" onclick="leapF()">Salto F</button>
+						<button class="w3-button w3-khaki" onclick="leapE()">Salto E</button>
+						<button class="w3-button w3-khaki" onclick="leapD()">Salto D</button>
+						<button class="w3-button w3-khaki" onclick="leap0()"> Inicial</button>
+					</div>
+					<div id="leap_caption" style="margin: 10px; font-weight: bold;">Posición inicial</div>
+					<div style="margin: 10px; font-size: smaller;"><b>Blanco:</b> <span id="leap_caption2">G1</span>
+					</div>
+					<div style="margin: 10px; font-size: smaller;"><b>Negro:</b> <span id="leap_caption3">G27</span>
+					</div>
+					<script>
+						var leap_image = document.getElementById('leap_image');
+						var leap_caption = document.getElementById('leap_caption');
+						var leap_caption2 = document.getElementById('leap_caption2');
+						var leap_caption3 = document.getElementById('leap_caption3');
+						function leap0() {
+							leap_image.setAttribute('src', '../img/moves/king/castling.base.both-min.png');
+							leap_image.setAttribute('title', "Posición inicial");
+							leap_caption.textContent = "Posición inicial";
+							leap_caption2.textContent = "G1";
+							leap_caption3.textContent = "G27";
+						}
+						function leapI() {
+							leap_image.setAttribute('src', '../img/moves/king/kingsleapi.rk-min.png');
+							leap_image.setAttribute('title', "Salto del Rey columna I");
+							leap_caption.textContent = "Salto del Rey columna I";
+							leap_caption2.textContent = "K-I5";
+							leap_caption3.textContent = "K-I23";
+						}
+						function leapH() {
+							leap_image.setAttribute('src', '../img/moves/king/kingsleaph.both-min.png');
+							leap_image.setAttribute('title', "Salto del Rey columna H");
+							leap_caption.textContent = "Salto del Rey columna H";
+							leap_caption2.textContent = "K-H6";
+							leap_caption3.textContent = "K-H22";
+						}
+						function leapF() {
+							leap_image.setAttribute('src', '../img/moves/king/kingsleapf.both-min.png');
+							leap_image.setAttribute('title', "Salto del Rey columna F");
+							leap_caption.textContent = "Salto del Rey columna F";
+							leap_caption2.textContent = "K-F6";
+							leap_caption3.textContent = "K-F22";
+						}
+						function leapE() {
+							leap_image.setAttribute('src', '../img/moves/king/kingsleape.both-min.png');
+							leap_image.setAttribute('title', "Salto del Rey columna E");
+							leap_caption.textContent = "Salto del Rey columna E";
+							leap_caption2.textContent = "K-E5";
+							leap_caption3.textContent = "K-E23";
+						}
+						function leapD() {
+							leap_image.setAttribute('src', '../img/moves/king/kingsleapd.rq-min.png');
+							leap_image.setAttribute('title', "Salto del Rey columna D");
+							leap_caption.textContent = "Salto del Rey columna D";
+							leap_caption2.textContent = "K-D2";
+							leap_caption3.textContent = "K-D26";
+						}
+					</script>
+				</figcaption>
+			</figure>
+		</div>
+		<!-- pàragraf final -->
+		<div class="w3-container">
+			<p>En este movimento, cuando se complen las condiciones anteriores, el <i>Rey</i> puede capturar
+				una pieza del oponente. No se podrá capturar una pieza con movimiento de caballo cuando lo pone
+				en <i>Jaque</i>, puesto que en esta situación de <i>jaque</i> al <i>Rey</i> para hacer el
+				movimiento.
+			</p>
+			<p>Existeixen cinco hexcaques posibles resultado del <i>Salto del Rey</i>, que se muestran en las dos
+				figuras anteriores. Los cinco posibles saltos posicionan al <i>Rey</i> en cinc columnas diferentes:
+				<strong><i>I</i></strong>, <strong><i>H</i></strong>, <strong><i>F</i></strong>,
+				<strong><i>E</i></strong> i <strong><i>D</i></strong>.
+				Es fácil recordar los nombres de las columnas, dado que coinciden, tanto
+				para el movimiento de las blancas, como para las negras. En concreto:
+			</p>
+			<ul>
+				<li>Para las blancas:
+					<i><b>I</b>5</i>, <i><b>H</b>6</i>, <i><b>F</b>6</i>, <i><b>E</b>5</i> i <i><b>D</b>2</i>.
+				</li>
+				<li>Para las negras:
+					<i><b>I</b>23</i>, <i><b>H</b>22</i>, <i><b>F</b>22</i>, <i><b>E</b>23</i> i <i><b>D</b>26</i>.
+				</li>
+			</ul>
+			<p>Si se suman las cinco posiciones del <i>Salto del Rey</i>, con los siete posibles desde la posición
+				inicial,
+				hay <strong>doce</strong> movimientos diferentes, que proporcionan al <i>Rey</i> gran movilidad
+				en su primer movimiento, siempre que no se encuentre en <i>jaque</i>.
+			</p>
+		</div>
+	</div>
+	<!-- ENROC   SIMPLE -->
+	<h2 class="w3-container w3-pale-green w3-center w3-opacity">Enroque simple</h2>
+	<div class="w3-container">
+		<div class="w3-container">
+			<p>Hay cinco posiciones resultado del <i>Salto del Rey</i>, posiciones en las que también se
+				definen los <a href="glossary.html#Enroc" class="cescacs">Enroques</a>, el único Movimento
+				que permite mover más de una pieza del jugador simultaneamente.
+			</p>
+			<p>En el enroque simple se mueve una <i>Torre</i>, de manera que, al hacer
+				simultaneamente el <i>Salto del Rey</i>, la <i>Torre</i> i el <i>Rey</i> quedan posicionados
+				en hexcaques adyacentes (<i>ortogonalmente adyacentes</i>).
+			</p>
+			<p>Se puede hacer este movimiento, cuando:</p>
+			<ul class="w3-ul w3-border">
+				<li>El <strong><i>Rey</i> todavía no ha hecho ningún movimiento</strong> durante la partida.</li>
+				<li>La <strong><i>Torre</i> todavía no ha hecho ningún movimiento</strong> durante la partida.</li>
+				<li>El <strong><i>Rey</i> no se encuentra amenazado (<i>en jaque</i>)</strong> en el momento de mover.
+				</li>
+				<li><strong>El movimento de la <i>Torre</i> se puede hacer</strong> con normalidad, sin ninguna pieza
+					impidiendo su camino.</li>
+				<li>Las posiciones finales del <i>Rey</i> y de la <i>Torre</i> están libres; <strong>no se puede hacer
+						simultaneamente una captura</strong>.</li>
+				<li>Por supuesto, el <i>Rey</i> no puede finalizar el movimiento en un <i>hexaque</i> amenazado por una
+					pieza del oponente.</li>
+				<li>Tampoco puede hacer el movimiento <em>si el <i>hexaque</i> de la posición final del rey está amenazado</em>,
+					aunque al hacer el movimiento la torre cobijase al rey.
+				</li>
+			</ul>
+		</div>
+		<div class="w3-container">
+			<!-- columna I -->
+			<div class="w3-container half w3-card-4">
+				<h3 class="w3-container w3-pale-yellow w3-center w3-opacity">Enroque en columna
+					<span class="w3-serif">I</span>
+				</h3>
+				<figure class="captionTop">
+					<img id="castleKRKI_image" src="../img/moves/king/castlingsbasek-min.png" alt=""
+						style="margin: 10px; width: 100%;" />
+					<figcaption class="thumbcaption captionTop" style="text-align: center;">
+						<div class="w3-center">
+							<button class="w3-bar-item w3-button w3-khaki" onclick="castleKRI0()"> Inicial</button>
+							<button class="w3-bar-item w3-button w3-khaki" onclick="castleKRIS()"> Salto I</button>
+							<button class="w3-bar-item w3-button w3-khaki" onclick="castleKRII()">KRK-II</button>
+							<button class="w3-bar-item w3-button w3-khaki" onclick="castleKRIK()">KRK-IK</button>
+							<button class="w3-bar-item w3-button w3-khaki" onclick="castleKRIH()">KRK-IH</button>
+						</div>
+						<div id="castleKRKI_caption" style="margin: 10px; font-weight: bold;">Posición inicial</div>
+						<div style="margin: 10px; font-size: smaller;"><b>Blanco:</b> <span
+								id="castleKRKI_caption2">G1</span></div>
+						<div style="margin: 10px; font-size: smaller;"><b>Negro:</b> <span
+								id="castleKRKI_caption3">G27</span></div>
+						<div style="margin: 10px; font-size: smaller;"><span style="visibility:hidden;">&nbsp;</span>
+						</div>
+						<script>
+							var castleKRKI_image = document.getElementById('castleKRKI_image');
+							var castleKRKI_caption = document.getElementById('castleKRKI_caption');
+							var castleKRKI_caption2 = document.getElementById('castleKRKI_caption2');
+							var castleKRKI_caption3 = document.getElementById('castleKRKI_caption3');
+							function castleKRI0() {
+								castleKRKI_image.setAttribute('src', '../img/moves/king/castlingsbasek-min.png');
+								castleKRKI_image.setAttribute('title', "Posición inicial");
+								castleKRKI_caption.textContent = "Posición inicial";
+								castleKRKI_caption2.textContent = "G1";
+								castleKRKI_caption3.textContent = "G27";
+							}
+							function castleKRIS() {
+								castleKRKI_image.setAttribute('src', '../img/moves/king/kingsleapi.rk-min.png');
+								castleKRKI_image.setAttribute('title', "Salto del Rey columna I");
+								castleKRKI_caption.textContent = "Salto del Rey columna I";
+								castleKRKI_caption2.textContent = "K-I5";
+								castleKRKI_caption3.textContent = "K-I23";
+							}
+							function castleKRII() {
+								castleKRKI_image.setAttribute('src', '../img/moves/king/castlingsik.1-min.png');
+								castleKRKI_image.setAttribute('title', "Enroque: KRK-II");
+								castleKRKI_caption.textContent = "Enroque: KRK-II";
+								castleKRKI_caption2.textContent = "K-I5, R-I7";
+								castleKRKI_caption3.textContent = "K-I23, R-I21";
+							}
+							function castleKRIK() {
+								castleKRKI_image.setAttribute('src', '../img/moves/king/castlingsik.2-min.png');
+								castleKRKI_image.setAttribute('title', "Enroque: KRK-IK");
+								castleKRKI_caption.textContent = "Enroque: KRK-IK";
+								castleKRKI_caption2.textContent = "K-I5, R-K4";
+								castleKRKI_caption3.textContent = "K-I23, R-K24";
+							}
+							function castleKRIH() {
+								castleKRKI_image.setAttribute('src', '../img/moves/king/castlingsik.3-min.png');
+								castleKRKI_image.setAttribute('title', "Enroque: KRK-IH");
+								castleKRKI_caption.textContent = "Enroque: KRK-IH";
+								castleKRKI_caption2.textContent = "K-I5, R-H4";
+								castleKRKI_caption3.textContent = "K-I23, R-H24";
+							}
+						</script>
+					</figcaption>
+				</figure>
+			</div>
+			<!-- columna D -->
+			<div class="w3-container half w3-card-4">
+				<h3 class="w3-container w3-pale-yellow w3-center w3-opacity">Enroque en columna
+					<span class="w3-serif">D</span>
+				</h3>
+				<figure class="captionTop">
+					<img id="castleKRDD_image" src="../img/moves/king/castlingsbaseq-min.png" alt=""
+						style="margin: 10px; width: 100%;" />
+					<figcaption class="thumbcaption captionTop" style="text-align: center;">
+						<div class="w3-bar w3-center">
+							<button class="w3-button w3-khaki" onclick="castleKRD0()"> Inicial</button>
+							<button class="w3-button w3-khaki" onclick="castleKRDS()"> Salto D</button>
+							<button class="w3-button w3-khaki" onclick="castleKRD1()">KRD-DD</button>
+							<button class="w3-button w3-khaki" onclick="castleKRD2()">KRD-DE</button>
+						</div>
+						<div id="castleKRDD_caption" style="margin: 10px; font-weight: bold;">Posición inicial</div>
+						<div style="margin: 10px; font-size: smaller;"><b>Blanco:</b> <span
+								id="castleKRDD_caption2">G1</span></div>
+						<div style="margin: 10px; font-size: smaller;"><b>Negro:</b> <span
+								id="castleKRDD_caption3">G27</span></div>
+						<div style="margin: 10px; font-size: smaller;"><span style="visibility:hidden;">&nbsp;</span>
+						</div>
+						<script>
+							var castleKRDD_image = document.getElementById('castleKRDD_image');
+							var castleKRDD_caption = document.getElementById('castleKRDD_caption');
+							var castleKRDD_caption2 = document.getElementById('castleKRDD_caption2');
+							var castleKRDD_caption3 = document.getElementById('castleKRDD_caption3');
+							function castleKRD0() {
+								castleKRDD_image.setAttribute('src', '../img/moves/king/castlingsbaseq-min.png');
+								castleKRDD_image.setAttribute('title', "Posición inicial");
+								castleKRDD_caption.textContent = "Posición inicial";
+								castleKRDD_caption2.textContent = "G1";
+								castleKRDD_caption3.textContent = "G27";
+							}
+							function castleKRDS() {
+								castleKRDD_image.setAttribute('src', '../img/moves/king/kingsleapd.rq-min.png');
+								castleKRDD_image.setAttribute('title', "Salto del Rey columna D");
+								castleKRDD_caption.textContent = "Salto del Rey columna D";
+								castleKRDD_caption2.textContent = "K-D2";
+								castleKRDD_caption3.textContent = "K-D26";
+							}
+							function castleKRD1() {
+								castleKRDD_image.setAttribute('src', '../img/moves/king/castlingsdq.1-min.png');
+								castleKRDD_image.setAttribute('title', "Enroque: KRD-DD");
+								castleKRDD_caption.textContent = "Enroque: KRD-DD";
+								castleKRDD_caption2.textContent = "K-D2, Rd-D4";
+								castleKRDD_caption3.textContent = "K-D26, Rd-D24";
+							}
+							function castleKRD2() {
+								castleKRDD_image.setAttribute('src', '../img/moves/king/castlingsdq.2-min.png');
+								castleKRDD_image.setAttribute('title', "Enroque: KRD-DE");
+								castleKRDD_caption.textContent = "Enroque: KRD-DE";
+								castleKRDD_caption2.textContent = "K-D2, Rd-E1";
+								castleKRDD_caption3.textContent = "K-D26, Rd-E27";
+							}
+						</script>
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+		<div class="w3-container">
+			<!-- columna H King -->
+			<div class="w3-container half w3-card-4">
+				<h3 class="w3-container w3-pale-yellow w3-center w3-opacity">Enroque en columna
+					<span class="w3-serif">H</span> <small><i>Torre</i> de <i>Rey</i></small>
+				</h3>
+				<figure class="captionTop">
+					<img id="castleKRKH_image" src="../img/moves/king/castlingsbasek-min.png" alt=""
+						style="margin: 10px; width: 100%;" />
+					<figcaption class="thumbcaption captionTop" style="text-align: center;">
+						<div class="w3-row w3-bar w3-center">
+							<button class="w3-button w3-khaki" style onclick="castleKRHK0()">Inicial</button>
+							<button class="w3-button w3-khaki" onclick="castleKRHKS()">Salto H</button>
+							<button class="w3-button w3-khaki" onclick="castleKRHK1()">KRK-HIO</button>
+							<button class="w3-button w3-khaki" onclick="castleKRHK2()">KRK-HIOO</button>
+							<button class="w3-button w3-khaki" onclick="castleKRHK3()">KRK-HH</button>
+							<button class="w3-button w3-khaki" onclick="castleKRHK4()">KRK-HG</button>
+						</div>
+						<div id="castleKRKH_caption" style="margin: 10px; font-weight: bold;">Posición inicial</div>
+						<div style="margin: 10px; font-size: smaller;"><b>Blanco:</b> <span
+								id="castleKRKH_caption2">G1</span></div>
+						<div style="margin: 10px; font-size: smaller;"><b>Negro:</b> <span
+								id="castleKRKH_caption3">G27</span></div>
+						<div style="margin: 10px; font-size: smaller;"><span id="KRKH_note"
+								style="visibility:hidden;">Observar requereix indicar moviment de la <i>Torre</i>, a més
+								de columna</span></div>
+						<script>
+							var castleKRKH_image = document.getElementById('castleKRKH_image');
+							var castleKRKH_caption = document.getElementById('castleKRKH_caption');
+							var castleKRKH_caption2 = document.getElementById('castleKRKH_caption2');
+							var KRKH_note = document.getElementById('KRKH_note');
+							function castleKRHK0() {
+								castleKRKH_image.setAttribute('src', '../img/moves/king/castlingsbasek-min.png');
+								castleKRKH_image.setAttribute('title', "Posición inicial");
+								castleKRKH_caption.textContent = "Posición inicial";
+								castleKRKH_caption2.textContent = "G1";
+								castleKRKH_caption3.textContent = "G27";
+								KRKH_note.style.visibility = 'hidden';
+							}
+							function castleKRHKS() {
+								castleKRKH_image.setAttribute('src', '../img/moves/king/kingsleaph.rk-min.png');
+								castleKRKH_image.setAttribute('title', "Salto del Rey columna H");
+								castleKRKH_caption.textContent = "Salto del Rey columna H";
+								castleKRKH_caption2.textContent = "K-H6";
+								castleKRKH_caption3.textContent = "K-H22";
+								KRKH_note.style.visibility = 'hidden';
+							}
+							function castleKRHK1() {
+								castleKRKH_image.setAttribute('src', '../img/moves/king/castlingshk.1-min.png');
+								castleKRKH_image.setAttribute('title', "Enroque: KRK-HIO");
+								castleKRKH_caption.textContent = "Enroque: KRK-HIO";
+								castleKRKH_caption2.textContent = "K-H6, R-I5";
+								castleKRKH_caption3.textContent = "K-H22, R-I23";
+								KRKH_note.style.visibility = 'visible';
+							}
+							function castleKRHK2() {
+								castleKRKH_image.setAttribute('src', '../img/moves/king/castlingshk.2-min.png');
+								castleKRKH_image.setAttribute('title', "Enroque: KRK-HIOO");
+								castleKRKH_caption.textContent = "Enroque: KRK-HIOO";
+								castleKRKH_caption2.textContent = "K-H6, R-I7";
+								castleKRKH_caption3.textContent = "K-H22, R-I21";
+								KRKH_note.style.visibility = 'visible';
+							}
+							function castleKRHK3() {
+								castleKRKH_image.setAttribute('src', '../img/moves/king/castlingshk.3-min.png');
+								castleKRKH_image.setAttribute('title', "Enroque: KRK-HH");
+								castleKRKH_caption.textContent = "Enroque: KRK-HH";
+								castleKRKH_caption2.textContent = "K-H6, R-H4";
+								castleKRKH_caption3.textContent = "K-H22, R-H24";
+								KRKH_note.style.visibility = 'hidden';
+							}
+							function castleKRHK4() {
+								castleKRKH_image.setAttribute('src', '../img/moves/king/castlingshk.4-min.png');
+								castleKRKH_image.setAttribute('title', "Enroque: KRK-HG");
+								castleKRKH_caption.textContent = "Enroque: KRK-HG";
+								castleKRKH_caption2.textContent = "K-H6, R-G5";
+								castleKRKH_caption3.textContent = "K-H22, R-G23";
+								KRKH_note.style.visibility = 'hidden';
+							}
+						</script>
+					</figcaption>
+				</figure>
+			</div>
+			<!-- columna H Queen -->
+			<div class="w3-container half w3-card-4">
+				<h3 class="w3-container w3-pale-yellow w3-center w3-opacity">Enroque en columna
+					<span class="w3-serif">H</span> <small><i>Torre</i> de <i>Dama</i></small>
+				</h3>
+				<figure class="captionTop">
+					<img id="castleKRDH_image" src="../img/moves/king/castlingsbaseq-min.png" alt=""
+						style="margin: 10px; width: 100%;" />
+					<figcaption class="thumbcaption captionTop" style="text-align: center;">
+						<div class="w3-bar w3-center">
+							<button class="w3-button w3-khaki" onclick="castleSHQ0()"> Inicial</button>
+							<button class="w3-button w3-khaki" onclick="castleSHQS()"> Salto H</button>
+							<button class="w3-button w3-khaki" onclick="castleSHQ1()">KRD-HH</button>
+							<button class="w3-button w3-khaki" onclick="castleSHQ2()">KRD-HG</button>
+						</div>
+						<div id="castleKRDH_caption" style="margin: 10px; font-weight: bold;">Posición inicial</div>
+						<div style="margin: 10px; font-size: smaller;"><b>Blanco:</b> <span
+								id="castleKRDH_caption2">G1</span></div>
+						<div style="margin: 10px; font-size: smaller;"><b>Negro:</b> <span
+								id="castleKRDH_caption3">G27</span></div>
+						<div style="margin: 10px; font-size: smaller;"><span style="visibility:hidden;">&nbsp;</span>
+						</div>
+						<script>
+							var castleKRDH_image = document.getElementById('castleKRDH_image');
+							var castleKRDH_caption = document.getElementById('castleKRDH_caption');
+							var castleKRDH_caption2 = document.getElementById('castleKRDH_caption2');
+							var castleKRDH_caption3 = document.getElementById('castleKRDH_caption3');
+							function castleSHQ0() {
+								castleKRDH_image.setAttribute('src', '../img/moves/king/castlingsbaseq-min.png');
+								castleKRDH_image.setAttribute('title', "Posición inicial");
+								castleKRDH_caption.textContent = "Posición inicial";
+								castleKRDH_caption2.textContent = "G1";
+								castleKRDH_caption3.textContent = "G27";
+							}
+							function castleSHQS() {
+								castleKRDH_image.setAttribute('src', '../img/moves/king/kingsleaph.rq-min.png');
+								castleKRDH_image.setAttribute('title', "Salto del Rey columna H");
+								castleKRDH_caption.textContent = "Salto del Rey columna H";
+								castleKRDH_caption2.textContent = "K-H6";
+								castleKRDH_caption3.textContent = "K-H22";
+							}
+							function castleSHQ1() {
+								castleKRDH_image.setAttribute('src', '../img/moves/king/castlingshq.1-min.png');
+								castleKRDH_image.setAttribute('title', "Enroque: KRD-HH");
+								castleKRDH_caption.textContent = "Enroque: KRD-HH";
+								castleKRDH_caption2.textContent = "K-H6, Rd-H8";
+								castleKRDH_caption3.textContent = "K-H22, Rd-H20";
+							}
+							function castleSHQ2() {
+								castleKRDH_image.setAttribute('src', '../img/moves/king/castlingshq.2-min.png');
+								castleKRDH_image.setAttribute('title', "Enroque: KRD-HG");
+								castleKRDH_caption.textContent = "Enroque: KRD-HG";
+								castleKRDH_caption2.textContent = "K-H6, Rd-G7";
+								castleKRDH_caption3.textContent = "K-H22, Rd-G21";
+							}
+						</script>
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+		<div class="w3-container">
+			<!-- columna F King -->
+			<div class="w3-container half w3-card-4">
+				<h3 class="w3-container w3-pale-yellow w3-center w3-opacity">Enroque en columna
+					<span class="w3-serif">F</span> <small><i>Torre</i> de <i>Rey</i></small>
+				</h3>
+				<figure class="captionTop">
+					<img id="castleKRKF_image" src="../img/moves/king/castlingsbasek-min.png" alt=""
+						style="margin: 10px; width: 100%;" />
+					<figcaption class="thumbcaption captionTop" style="text-align: center;">
+						<div class="w3-bar w3-center">
+							<button class="w3-button w3-khaki" onclick="castleKRKF0()"> Inicial</button>
+							<button class="w3-button w3-khaki" onclick="castleKRKFS()"> Salto F</button>
+							<button class="w3-button w3-khaki" onclick="castleKRKF1()">KRK-FG</button>
+							<button class="w3-button w3-khaki" onclick="castleKRKF2()">KRK-FE</button>
+						</div>
+						<div id="castleKRKF_caption" style="margin: 10px; font-weight: bold;">Posición inicial</div>
+						<div style="margin: 10px; font-size: smaller;"><b>Blanco:</b> <span
+								id="castleKRKF_caption2">G1</span></div>
+						<div style="margin: 10px; font-size: smaller;"><b>Negro:</b> <span
+								id="castleKRKF_caption3">G27</span></div>
+						<div style="margin: 10px; font-size: smaller;"><span style="visibility:hidden;">&nbsp;</span>
+						</div>
+						<script>
+							var castleKRKF_image = document.getElementById('castleKRKF_image');
+							var castleKRKF_caption = document.getElementById('castleKRKF_caption');
+							var castleKRKF_caption2 = document.getElementById('castleKRKF_caption2');
+							var castleKRKF_caption3 = document.getElementById('castleKRKF_caption3');
+							function castleKRKF0() {
+								castleKRKF_image.setAttribute('src', '../img/moves/king/castlingsbasek-min.png');
+								castleKRKF_image.setAttribute('title', "Posición inicial");
+								castleKRKF_caption.textContent = "Posición inicial";
+								castleKRKF_caption2.textContent = "G1";
+								castleKRKF_caption2.textContent = "G27";
+							}
+							function castleKRKFS() {
+								castleKRKF_image.setAttribute('src', '../img/moves/king/kingsleapf.rk-min.png');
+								castleKRKF_image.setAttribute('title', "Salto del Rey columna F");
+								castleKRKF_caption.textContent = "Salto del Rey columna F";
+								castleKRKF_caption2.textContent = "K-F6";
+								castleKRKF_caption3.textContent = "K-F22";
+							}
+							function castleKRKF1() {
+								castleKRKF_image.setAttribute('src', '../img/moves/king/castlingsfk.1-min.png');
+								castleKRKF_image.setAttribute('title', "Enroque: KRK-FG");
+								castleKRKF_caption.textContent = "Enroque: KRK-FG";
+								castleKRKF_caption2.textContent = "K-F6, R-G5";
+								castleKRKF_caption3.textContent = "K-F22, R-G23";
+							}
+							function castleKRKF2() {
+								castleKRKF_image.setAttribute('src', '../img/moves/king/castlingsfk.2-min.png');
+								castleKRKF_image.setAttribute('title', "Enroque: KRK-FE");
+								castleKRKF_caption.textContent = "Enroque: KRK-FE";
+								castleKRKF_caption2.textContent = "K-F6, R-E7";
+								castleKRKF_caption3.textContent = "K-F22, R-E21";
+							}
+						</script>
+					</figcaption>
+				</figure>
+			</div>
+			<!-- columna F Queen -->
+			<div class="w3-container half w3-card-4">
+				<h3 class="w3-container w3-pale-yellow w3-center w3-opacity">Enroque en columna
+					<span class="w3-serif">F</span> <small><i>Torre</i> de <i>Dama</i></small>
+				</h3>
+				<figure class="captionTop">
+					<img id="castleKRDF_image" src="../img/moves/king/castlingsbaseq-min.png" alt=""
+						style="margin: 10px; width: 100%;" />
+					<figcaption class="thumbcaption captionTop" style="text-align: center;">
+						<div class="w3-bar w3-center">
+							<button class="w3-button w3-khaki" onclick="castleKRDF0()"> Inicial</button>
+							<button class="w3-button w3-khaki" onclick="castleKRDFS()"> Salto F</button>
+							<button class="w3-button w3-khaki" onclick="castleKRDF1()">KRD-FG</button>
+							<button class="w3-button w3-khaki" onclick="castleKRDF2()">KRD-FE</button>
+						</div>
+						<div id="castleKRDF_caption" style="margin: 10px; font-weight: bold;">Posición inicial</div>
+						<div style="margin: 10px; font-size: smaller;"><b>Blanco:</b> <span
+								id="castleKRDF_caption2">G1</span></div>
+						<div style="margin: 10px; font-size: smaller;"><b>Negro:</b> <span
+								id="castleKRDF_caption3">G27</span></div>
+						<div style="margin: 10px; font-size: smaller;"><span style="visibility:hidden;">&nbsp;</span>
+						</div>
+						<script>
+							var castleKRDF_image = document.getElementById('castleKRDF_image');
+							var castleKRDF_caption = document.getElementById('castleKRDF_caption');
+							var castleKRDF_caption2 = document.getElementById('castleKRDF_caption2');
+							var castleKRDF_caption3 = document.getElementById('castleKRDF_caption3');
+							function castleKRDF0() {
+								castleKRDF_image.setAttribute('src', '../img/moves/king/castlingsbaseq-min.png');
+								castleKRDF_image.setAttribute('title', "Posición inicial");
+								castleKRDF_caption.textContent = "Posición inicial";
+								castleKRDF_caption2.textContent = "G1";
+								castleKRDF_caption3.textContent = "G27";
+							}
+							function castleKRDFS() {
+								castleKRDF_image.setAttribute('src', '../img/moves/king/kingsleapf.rq-min.png');
+								castleKRDF_image.setAttribute('title', "Salto del Rey columna F");
+								castleKRDF_caption.textContent = "Salto del Rey columna F";
+								castleKRDF_caption2.textContent = "K-F6";
+								castleKRDF_caption3.textContent = "K-F22";
+							}
+							function castleKRDF1() {
+								castleKRDF_image.setAttribute('src', '../img/moves/king/castlingsfq.1-min.png');
+								castleKRDF_image.setAttribute('title', "Enroque: KRD-FG");
+								castleKRDF_caption.textContent = "Enroque: KRD-FG";
+								castleKRDF_caption2.textContent = "K-F6, Rd-G7";
+								castleKRDF_caption3.textContent = "K-F22, Rd-G21";
+							}
+							function castleKRDF2() {
+								castleKRDF_image.setAttribute('src', '../img/moves/king/castlingsfq.2-min.png');
+								castleKRDF_image.setAttribute('title', "Enroque: KRD-FE");
+								castleKRDF_caption.textContent = "Enroque: KRD-FE";
+								castleKRDF_caption2.textContent = "K-F6, Rd-E5";
+								castleKRDF_caption3.textContent = "K-F22, Rd-E23";
+							}
+						</script>
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+		<div class="w3-container">
+			<!-- columna E King -->
+			<div class="w3-container half w3-card-4">
+				<h3 class="w3-container w3-pale-yellow w3-center w3-opacity">Enroque en columna
+					<span class="w3-serif">E</span> <small><i>Torre</i> de <i>Rey</i></small>
+				</h3>
+				<figure class="captionTop">
+					<img id="castleKRKE_image" src="../img/moves/king/castlingsbasek-min.png" alt=""
+						style="margin: 10px; width: 100%;" />
+					<figcaption class="thumbcaption captionTop" style="text-align: center;">
+						<div class="w3-bar w3-center">
+							<button class="w3-button w3-khaki" onclick="castleKRKE0()"> Inicial</button>
+							<button class="w3-button w3-khaki" onclick="castleKRKES()"> Salto E</button>
+							<button class="w3-button w3-khaki" onclick="castleKRKE1()">KRK-EF</button>
+							<button class="w3-button w3-khaki" onclick="castleKRKE2()">KRK-EE</button>
+						</div>
+						<div id="castleKRKE_caption" style="margin: 10px; font-weight: bold;">Posición inicial</div>
+						<div style="margin: 10px; font-size: smaller;"><b>Blanco:</b> <span
+								id="castleKRKE_caption2">G1</span></div>
+						<div style="margin: 10px; font-size: smaller;"><b>Negro:</b> <span
+								id="castleKRKE_caption3">G27</span></div>
+						<div><span style="visibility:hidden;">&nbsp;</span></div>
+						<script>
+							var castleKRKE_image = document.getElementById('castleKRKE_image');
+							var castleKRKE_caption = document.getElementById('castleKRKE_caption');
+							var castleKRKE_caption2 = document.getElementById('castleKRKE_caption2');
+							var castleKRKE_caption3 = document.getElementById('castleKRKE_caption3');
+							function castleKRKE0() {
+								castleKRKE_image.setAttribute('src', '../img/moves/king/castlingsbasek-min.png');
+								castleKRKE_image.setAttribute('title', "Posición inicial");
+								castleKRKE_caption.textContent = "Posición inicial";
+								castleKRKE_caption2.textContent = "G1";
+								castleKRKE_caption3.textContent = "G27";
+							}
+							function castleKRKES() {
+								castleKRKE_image.setAttribute('src', '../img/moves/king/kingsleape.rk-min.png');
+								castleKRKE_image.setAttribute('title', "Salto del Rey columna E");
+								castleKRKE_caption.textContent = "Salto del Rey columna E";
+								castleKRKE_caption2.textContent = "K-E5";
+								castleKRKE_caption3.textContent = "K-E23";
+							}
+							function castleKRKE1() {
+								castleKRKE_image.setAttribute('src', '../img/moves/king/castlingsek.1-min.png');
+								castleKRKE_image.setAttribute('title', "Enroque: KRK-EF");
+								castleKRKE_caption.textContent = "Enroque: KRK-EF";
+								castleKRKE_caption2.textContent = "K-E5, R-F6";
+								castleKRKE_caption3.textContent = "K-E23, R-F22";
+							}
+							function castleKRKE2() {
+								castleKRKE_image.setAttribute('src', '../img/moves/king/castlingsek.2-min.png');
+								castleKRKE_image.setAttribute('title', "Enroque: KRK-EE");
+								castleKRKE_caption.textContent = "Enroque: KRK-EE";
+								castleKRKE_caption2.textContent = "K-E5, R-E7";
+								castleKRKE_caption3.textContent = "K-E23, R-E21";
+							}
+						</script>
+					</figcaption>
+				</figure>
+			</div>
+			<!-- columna E Queen -->
+			<div class="w3-container half w3-card-4">
+				<h3 class="w3-container w3-pale-yellow w3-center w3-opacity">Enroque en columna
+					<span class="w3-serif">E</span> <small><i>Torre de Dama</i></small>
+				</h3>
+				<figure class="captionTop">
+					<img id="castleKRDE_image" src="../img/moves/king/castlingsbaseq-min.png" alt=""
+						style="margin: 10px; width: 100%;" />
+					<figcaption class="thumbcaption captionTop" style="text-align: center;">
+						<div class="w3-bar w3-center">
+							<button class="w3-button w3-khaki" onclick="castleKRDE0()"> Inicial</button>
+							<button class="w3-button w3-khaki" onclick="castleKRDES()"> Salto E</button>
+							<button class="w3-button w3-khaki" onclick="castleKRDE1()">KRD-EF</button>
+							<button class="w3-button w3-khaki" onclick="castleKRDE2()">KRD-ED</button>
+						</div>
+						<div id="castleKRDE_caption" style="margin: 10px; font-weight: bold;">Posición inicial</div>
+						<div style="margin: 10px; font-size: smaller;"><b>Blanco:</b> <span
+								id="castleKRDE_caption2">G1</span></div>
+						<div style="margin: 10px; font-size: smaller;"><b>Negro:</b> <span
+								id="castleKRDE_caption3">G27</span></div>
+						<div><span style="visibility:hidden;">&nbsp;</span></div>
+						<script>
+							var castleKRDE_image = document.getElementById('castleKRDE_image');
+							var castleKRDE_caption = document.getElementById('castleKRDE_caption');
+							var castleKRDE_caption2 = document.getElementById('castleKRDE_caption2');
+							var castleKRDE_caption3 = document.getElementById('castleKRDE_caption3');
+							function castleKRDE0() {
+								castleKRDE_image.setAttribute('src', '../img/moves/king/castlingsbaseq-min.png');
+								castleKRDE_image.setAttribute('title', "Posición inicial");
+								castleKRDE_caption.textContent = "Posición inicial";
+								castleKRDE_caption2.textContent = "G1";
+								castleKRDE_caption3.textContent = "G27";
+							}
+							function castleKRDES() {
+								castleKRDE_image.setAttribute('src', '../img/moves/king/kingsleape.rq-min.png');
+								castleKRDE_image.setAttribute('title', "Salto del Rey columna E");
+								castleKRDE_caption.textContent = "Salto del Rey columna E";
+								castleKRDE_caption2.textContent = "K-E5";
+								castleKRDE_caption3.textContent = "K-E23";
+							}
+							function castleKRDE1() {
+								castleKRDE_image.setAttribute('src', '../img/moves/king/castlingseq.1-min.png');
+								castleKRDE_image.setAttribute('title', "Enroque: KRD-EF");
+								castleKRDE_caption.textContent = "Enroque: KRD-EF";
+								castleKRDE_caption2.textContent = "K-E5, Rd-F6";
+								castleKRDE_caption3.textContent = "K-E23, Rd-F22";
+							}
+							function castleKRDE2() {
+								castleKRDE_image.setAttribute('src', '../img/moves/king/castlingseq.2-min.png');
+								castleKRDE_image.setAttribute('title', "Enroque: KRD-ED");
+								castleKRDE_caption.textContent = "Enroque Columna E Torre D4";
+								castleKRDE_caption2.textContent = "K-E5, Rd-D4";
+								castleKRDE_caption3.textContent = "K-E23, Rd-D24";
+							}
+						</script>
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+		<div class="w3-container">
+			<p>Hay tres movimientos posibles en la columna <strong>I</strong> con la <i>Torre de Rey</i>, y
+				dos en la columna <strong>D</strong> con la <i>Torre de Dama</i>; en la columna <strong>H</strong>
+				hay cuatro con la de <i>Rey</i> i dos amb la de <i>Dama</i>; finalmente, tanto en la columna
+				<strong>F</strong> como en la <strong>E</strong> hay dos con la de <i>Rey</i> y dos con la de
+				<i>Dama</i>. En total suman <strong>diecinueve</strong> combinaciones diferentes.
+			</p>
+		</div>
+	</div>
+
+	<!-- ENROQUE   DOBLE -->
+	<h2 class="w3-container w3-pale-green w3-center w3-opacity">Enroque doble</h2>
+	<div class="w3-container">
+		<div class="w3-container">
+			<p>Entre las cinco posiciones que pot alcanzar el <i>Rey</i> con su <i>Salto</i>, solo tres tienen
+				hexcaques ortogonalmente adjacentes alcanzables por ambos <i>Roques</i>: <em>H</em>, <em>F</em>
+				y <em>H</em>. En estos tres <i>Saltos del Rey</i> se permite un
+				<a href="glossary.html#EnrocDoble" class="cescacs">enroque doble</a>, un movimiento que
+				permite mover las tres piezas simultaneamente.
+			</p>
+			<p>En el enroque doble se mueven ambas <i>Torres</i> usando un movimiento legal,
+				es decir, un movimiento ortogonal no impedido por la actual posición de las piezas del tablero.
+				Ambas <i>Torres</i> han de quedar posicionadas en hexcaques ortogonalmente adyacentes, de tal
+				manera que, completando el movimiento con la incorporación del <i>Salto del Rey</i>, el
+				<i>Rey</i> queda posicionado en un hexcaque ortogonalmente adjacente a ambas <i>Torres</i>.
+				Al finalizar el movimiento, cada una de las tres piezas se encuentra en un hexcaque ortogonalmente
+				adyacente a las otras dos.
+			</p>
+			<p>Se puede hacer este movimiento, cuando:</p>
+			<ul class="w3-ul w3-border">
+				<li>El <strong><i>Rey</i> todavía no ha hecho ningún movimiento</strong> durante la partida.</li>
+				<li><strong>Ninguna de las <i>Torres</i> todavía no ha hecho ningún movimiento</strong> durante la
+					partida.
+				</li>
+				<li>El <strong><i>Rey</i> no se encuentra amenazado (<i>en jaque</i>)</strong> en el momento de
+					mover.
+				</li>
+				<li><strong>El movimiento de cada una de las <i>Torres</i> se puede hacer</strong> con normalidad,
+					sin ninguna pieza impidiéndoles su camino.
+				</li>
+				<li>Las posiciones finales del <i>Rey</i> i de las <i>Torres</i> están libres; <strong>no se puede hacer
+						simultaneamente una captura</strong>.
+				</li>
+				<li>Por supuesto, el <i>Rey</i> no pueded acabar el movimiento en un <i>hexaque</i> amenazado por
+					una pieza del oponente.
+				</li>
+				<li>Tampoco puede hacer el movimiento <em>si el <i>hexaque</i> de la posición final del rey está amenazado</em>,
+					aunque al hacer el movimiento una torre cobijase al rey.
+				</li>
+			</ul>
+		</div>
+		<!-- Doble columna H -->
+		<div class="w3-container half w3-card-4">
+			<h3 class="w3-container w3-pale-yellow w3-center w3-opacity">Enroque doble en columna
+				<span class="w3-serif">H</span>
+			</h3>
+			<!-- Script -->
+			<figure class="captionTop">
+				<img id="castleKRRH_image" src="../img/moves/king/castling.base.both-min.png" alt=""
+					style="margin: 10px; width: 100%;" />
+				<figcaption class="thumbcaption captionTop" style="text-align: center;">
+					<div class="w3-bar w3-center">
+						<button class="w3-button w3-khaki" onclick="castleKRRH0()">Inicial</button>
+						<button class="w3-button w3-khaki" onclick="castleKRRHS()">Salto H</button>
+						<button class="w3-button w3-khaki" onclick="castleKRRH1()">KRR-HIH</button>
+						<button class="w3-button w3-khaki" onclick="castleKRRH2()">KRR-HGG</button>
+					</div>
+					<div id="castleKRRH_caption" style="margin: 10px; font-weight: bold;">Posición inicial</div>
+					<div style="margin: 10px; font-size: smaller;"><b>Blanco:</b> <span
+							id="castleKRRH_caption2">G1</span></div>
+					<div style="margin: 10px; font-size: smaller;"><b>Negro:</b> <span
+							id="castleKRRH_caption3">G27</span></div>
+					<script>
+						var castleKRRH_image = document.getElementById('castleKRRH_image');
+						var castleKRRH_caption = document.getElementById('castleKRRH_caption');
+						var castleKRRH_caption2 = document.getElementById('castleKRRH_caption2');
+						function castleKRRH0() {
+							castleKRRH_image.setAttribute('src', '../img/moves/king/castling.base.both-min.png');
+							castleKRRH_image.setAttribute('title', "Posición inicial");
+							castleKRRH_caption.textContent = "Posición inicial";
+							castleKRRH_caption2.textContent = "G1";
+							castleKRRH_caption3.textContent = "G27";
+						}
+						function castleKRRHS() {
+							castleKRRH_image.setAttribute('src', '../img/moves/king/kingsleaph.both-min.png');
+							castleKRRH_image.setAttribute('title', "Salto del Rey columna H");
+							castleKRRH_caption.textContent = "Salto del Rey columna H";
+							castleKRRH_caption2.textContent = "K-H6";
+							castleKRRH_caption3.textContent = "K-H22";
+						}
+						function castleKRRH1() {
+							castleKRRH_image.setAttribute('src', '../img/moves/king/castlingdh.1-min.png');
+							castleKRRH_image.setAttribute('title', "Enroque Doble: KRR-HIH");
+							castleKRRH_caption.textContent = "Enroque Doble: KRR-HIH";
+							castleKRRH_caption2.textContent = "K-H6, R-I7, Rd-H8";
+							castleKRRH_caption3.textContent = "K-H22, R-I21, Rd-H20";
+						}
+						function castleKRRH2() {
+							castleKRRH_image.setAttribute('src', '../img/moves/king/castlingdh.2-min.png');
+							castleKRRH_image.setAttribute('title', "Enroque Doble: KRR-HGG");
+							castleKRRH_caption.textContent = "Enroque Doble: KRR-HGG";
+							castleKRRH_caption2.textContent = "K-H6, R-G5, Rd-G7";
+							castleKRRH_caption3.textContent = "K-H22, R-G23, Rd-G21";
+						}
+					</script>
+				</figcaption>
+			</figure>
+		</div>
+		<!-- Doble columna F -->
+		<div class="w3-container half w3-card-4">
+			<h3 class="w3-container w3-pale-yellow w3-center w3-opacity">Enroque doble en columna
+				<span class="w3-serif">F</span>
+			</h3>
+			<!-- Script -->
+			<figure class="captionTop">
+				<img id="castleKRRF_image" src="../img/moves/king/castling.base.both-min.png" alt=""
+					style="margin: 10px; width: 100%;" />
+				<figcaption class="thumbcaption captionTop" style="text-align: center;">
+					<div class="w3-bar w3-center">
+						<button class="w3-button w3-khaki" onclick="castleKRRF0()">Inicial</button>
+						<button class="w3-button w3-khaki" onclick="castleKRRFS()">Salto F</button>
+						<button class="w3-button w3-khaki" onclick="castleKRRF1()">KRR-FGG</button>
+						<button class="w3-button w3-khaki" onclick="castleKRRF2()">KRR-FEE</button>
+					</div>
+					<div id="castleKRRF_caption" style="margin: 10px; font-weight: bold;">Posición inicial</div>
+					<div style="margin: 10px; font-size: smaller;"><b>Blanco:</b> <span
+							id="castleKRRF_caption2">G1</span></div>
+					<div style="margin: 10px; font-size: smaller;"><b>Negro:</b> <span
+							id="castleKRRF_caption3">G27</span></div>
+					<script>
+						var castleKRRF_image = document.getElementById('castleKRRF_image');
+						var castleKRRF_caption = document.getElementById('castleKRRF_caption');
+						var castleKRRF_caption2 = document.getElementById('castleKRRF_caption2');
+						var castleKRRF_caption3 = document.getElementById('castleKRRF_caption3');
+						function castleKRRF0() {
+							castleKRRF_image.setAttribute('src', '../img/moves/king/castling.base.both-min.png');
+							castleKRRF_image.setAttribute('title', "Posición inicial");
+							castleKRRF_caption.textContent = "Posición inicial";
+							castleKRRF_caption2.textContent = "G1";
+							castleKRRF_caption3.textContent = "G27";
+						}
+						function castleKRRFS() {
+							castleKRRF_image.setAttribute('src', '../img/moves/king/kingsleapf.both-min.png');
+							castleKRRF_image.setAttribute('title', "Salto del Rey columna F");
+							castleKRRF_caption.textContent = "Salto del Rey columna F";
+							castleKRRF_caption2.textContent = "K-F6";
+							castleKRRF_caption3.textContent = "K-F22";
+						}
+						function castleKRRF1() {
+							castleKRRF_image.setAttribute('src', '../img/moves/king/castlingdf.1-min.png');
+							castleKRRF_image.setAttribute('title', "Enroque Doble: KRR-FGG");
+							castleKRRF_caption.textContent = "Enroque Doble: KRR-FGG";
+							castleKRRF_caption2.textContent = "K-F6, R-G5, Rd-G7";
+							castleKRRF_caption3.textContent = "K-F22, R-G23, Rd-G21";
+						}
+						function castleKRRF2() {
+							castleKRRF_image.setAttribute('src', '../img/moves/king/castlingdf.2-min.png');
+							castleKRRF_image.setAttribute('title', "Enroque Doble: KRR-FEE");
+							castleKRRF_caption.textContent = "Enroque Doble: KRR-FEE";
+							castleKRRF_caption2.textContent = "K-F6, R-E7, Rd-E5";
+							castleKRRF_caption3.textContent = "K-F22, R-E21, Rd-E23";
+						}
+					</script>
+				</figcaption>
+			</figure>
+		</div>
+		<!-- Doble columna E -->
+		<div class="w3-container half w3-card-4">
+			<h3 class="w3-container w3-pale-yellow w3-center w3-opacity">Enroque doble en columna
+				<span class="w3-serif">E</span>
+			</h3>
+			<!-- Script -->
+			<figure class="captionTop">
+				<img id="castleKRRE_image" src="../img/moves/king/castling.base.both-min.png" alt=""
+					style="margin: 10px; width: 100%;" />
+				<figcaption class="thumbcaption captionTop" style="text-align: center;">
+					<div class="w3-bar w3-center">
+						<button class="w3-button w3-khaki" onclick="castleKRRE0()">Inicial</button>
+						<button class="w3-button w3-khaki" onclick="castleKRRES()">Salto E</button>
+						<button class="w3-button w3-khaki" onclick="castleKRRE()">KRR-EEF</button>
+					</div>
+					<div id="castleKRRE_caption" style="margin: 10px; font-weight: bold;">Posición inicial</div>
+					<div style="margin: 10px; font-size: smaller;"><b>Blanco:</b> <span
+							id="castleKRRE_caption2">G1</span></div>
+					<div style="margin: 10px; font-size: smaller;"><b>Negro:</b> <span
+							id="castleKRRE_caption3">G27</span></div>
+					<script>
+						var castleKRRE_image = document.getElementById('castleKRRE_image');
+						var castleKRRE_caption = document.getElementById('castleKRRE_caption');
+						var castleKRRE_caption2 = document.getElementById('castleKRRE_caption2');
+						function castleKRRE0() {
+							castleKRRE_image.setAttribute('src', '../img/moves/king/castling.base.both-min.png');
+							castleKRRE_image.setAttribute('title', "Posición inicial");
+							castleKRRE_caption.textContent = "Posición inicial";
+							castleKRRE_caption2.textContent = "G1";
+							castleKRRE_caption3.textContent = "G27";
+						}
+						function castleKRRES() {
+							castleKRRE_image.setAttribute('src', '../img/moves/king/kingsleape.both-min.png');
+							castleKRRE_image.setAttribute('title', "Salto del Rey columna E");
+							castleKRRE_caption.textContent = "Salto del Rey columna E";
+							castleKRRE_caption2.textContent = "K-E5";
+							castleKRRE_caption3.textContent = "K-E23";
+						}
+						function castleKRRE() {
+							castleKRRE_image.setAttribute('src', '../img/moves/king/castlingde-min.png');
+							castleKRRE_image.setAttribute('title', "Enroque Doble: KRR-EEF");
+							castleKRRE_caption.textContent = "Enroque Doble: KRR-EEF";
+							castleKRRE_caption2.textContent = "K-E5, R-E7, Rd-F6";
+							castleKRRE_caption3.textContent = "K-E23, R-E21, Rd-F22";
+						}
+					</script>
+				</figcaption>
+			</figure>
+		</div>
+		<div class="w3-container half">
+			<p>Tal como se ha dicho, hay tres posibles posiciones para el <i>Rey</i>, sumando un total de
+				<strong>cinco</strong> diferentes movimientos de <i>enroque doble</i> posibles.
+			</p>
+		</div>
+	</div>
+	<div class="w3-container">
+		<h2 class="w3-container w3-pale-green w3-center w3-opacity">Recuento de movimientos del <i>Rey</i> en su
+			posición inicial</h2>
+		<ul class="w3-ul w3-border">
+			<li><strong>Siete</strong> movimientos.</li>
+			<li>
+				<h3 class="w3-container w3-pale-yellow w3-opacity">Movimientos especiales, si todavía no se ha movido,
+					y no està en jaque</h3>
+				<ul class="w3-ul w3-border">
+					<li><strong>Cinco</strong> <i>Saltos del Rey</i>.</li>
+					<li><strong>Once</strong> enroques con la <i>Torre de Rey</i>, siempre que no haya sido movida
+						anteriormente.</li>
+					<li><strong>Ocho</strong> enroques con la <i>Torre de Dama</i>, siempre que no haya sido movida
+						anteriormente.</li>
+					<li><strong>Cinco</strong> <i>enroques dobles</i>, siempre que no haya sido movida ninguna de las
+						dos <i>Torres</i>.
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<p>Por tanto, además de los <strong>siete</strong> movimientos naturales, incorpora un total de
+			<strong>cinco</strong> <i>Saltos del Rey</i>, sumando <strong>doce</strong> posiciones.
+			En las <i>cinco</i> posiciones de los <i>Saltos del Rey</i> se puede <strong><i>enrocar</i></strong>,
+			posicionando una o ambas <i>Torres</i> en <strong>veinticuatro</strong> combinaciones diferentes,
+			<strong>cinco</strong> de las cuales son <strong>enroques dobles</strong>.
+		</p>
+	</div>
+	</main>
+	<footer class="w3-container w3-purple w3-opacity">
+		<!-- juego on-line -->
+		<h2 class="w3-container w3-pale-green w3-center title">
+			<a href="../cescacs.typescript/cescacs.game.html" target="_blank" class="cescacs">Probar el juego</a>
+		</h2>
+		<div class="w3-container" style="font-weight:300">
+			<p>En <a href="../cescacs.typescript/cescacs.game.html" target="_blank" class="cescacs w3-text-yellow">este enlace</a>
+				hay un tablero con las fichas movibles que únicamente acepta los movimientos correctos. Permite guardar partidas,
+				recuperar partidas guardadas o cargar posiciones concretas; una herramienta pensada para probar el juego.
+			</p>
+			<p>No existe todavía ninguna opción donde la máquina haga movimientos, aunque se encuentra en desarrollo una versión
+				donde la máquina ofrece el movimiento que evalúa como el mejor, siempre limitado a la ejecución por el navegador,
+				usando la máquina cliente (sin servidor).
+			</p>
+		</div>
+		<!-- Tablero -->
+		<h2 class="w3-container w3-pale-green w3-center title">
+			<a href="../img/cescacs.svg" target="_blank" class="cescacs">Tablero para imprimir</a>
+		</h2>
+		<div class="w3-container" style="font-weight:300">
+			<p>En <a href="../img/cescacs.svg" target="_blank" class="cescacs w3-text-yellow">este enlace</a> hay un tablero en formato
+				<i>.SVG</i> para imprimirlo. Se
+				recomienda
+				imprimirlo en formato <i>DINA-1</i>, que puede hacerse dividiendolo en cuatro partes <i>DINA-3</i> para
+				poder plegarlo.
+				La medida plegada en cuatro partes es ligeramente inferior a DINA-3; por la proporción largo-ancho del
+				hexágono se pierde un poco de papel.</p>
+			<p>Imprimiendo en la mitad, en cuatro <i>DINA-4</i>, obtenemos un tablero para piezas miniatura,
+				con una medida de hexcaque de unos 2.4 cm.
+			</p>
+		</div>
+		<!-- Email -->
+		<h2 class="w3-container w3-pale-green w3-center title">
+			<img src="../img/cescacs-email-image.gif" alt="cescacs" style="height:1em; display: inline-block;" >
+		</h2>
+	</footer>
+</body>
+
+</html>

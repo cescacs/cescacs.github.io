@@ -1,0 +1,405 @@
+<!DOCTYPE HTML>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="C'escacs: Provar coordenades">
+    <meta name="keywords" content="C'escacs, Cescacs, escacs hexagonals, hexcaquer, hexcac, fila, línia, coordenades">
+    <meta name="author" content="Cesc Sasal i Lasaosa">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../w3.css">
+    <link rel="stylesheet" type="text/css" href="../cescacs.css">
+    <title>C'escacs: Provar coordenades</title>
+    <script>
+        'use strict';
+        var svgDocument;
+        window.onload = function () {
+            /* it doesn't work on HTML the file without http server */
+            var svgObject = document.getElementById("objboard");
+            svgDocument = svgObject.contentDocument;
+            // Make sure this code gets executed after the DOM is loaded.
+            document.querySelector("#coordenateInput").addEventListener("keyup", event => {
+                if (event.key !== "Enter") return; // Use `.key` instead.
+                document.querySelector("#tryItButton").click(); // Things you want to do.
+                event.preventDefault(); // No need to `return false;`.
+            });
+        };
+
+
+        var hexcac = undefined;
+
+        function tryIt() {
+            const resultPlace = document.getElementById("applyIt");
+            const resultPlaceTitle = document.getElementById("applyItTitle");
+            const inputPlace = document.getElementById("coordenateInput");
+            const moveControls = document.getElementById("moveControls");
+            resultPlace.innerHTML = "";
+            if (tryIt.svg !== undefined) {
+                onlyPositionCheck.checked = true;
+                resetMoves();
+                moveControls.style.display = "none";
+                tryIt.svg.classList.remove("selected");
+                tryIt.svg = undefined;
+            }
+            hexcac = Hexcac.parse(inputPlace.value);
+            if (hexcac !== undefined) {
+                resultPlaceTitle.style.display = "inline";
+                resultPlace.innerHTML = hexcac.toString();
+                console.log("SHOW")
+                moveControls.style.display = "block";
+                try {
+                    tryIt.svg = svgDocument.getElementById(hexcac.getId("HEX"));
+                    tryIt.svg.classList.add("selected");
+                }
+                catch (e) {
+                    resultPlaceTitle.style.display = "none";
+                    resultPlace.innerHTML = "ERROR: " + e;
+                }
+            }
+            else {
+                resultPlaceTitle.style.display = "none";
+                resultPlace.innerHTML = Hexcac.CoordParseErrorDescription(inputPlace.value);
+            }
+        }
+
+        function resetMoves() {
+            markDiagonalMoves(false);
+            markOrthogonalMoves(false);
+            markKnightMoves(false);
+            markKnightRides(false);
+        }
+
+        function markDiagonalMoves(markhexes = true, clear = true) {
+            if (markDiagonalMoves.svg === undefined) {
+                markDiagonalMoves.svg = new Set();
+            }
+            if (markhexes) {
+                if (clear) {
+                    markOrthogonalMoves(false);
+                    markKnightMoves(false);
+                    markKnightRides(false);
+                }
+                if (hexcac !== undefined) {
+                    let moveHexcac;
+                    for (let i = 0; i < 6; i++) {
+                        let p;
+                        let svgItem;
+                        let polygon;
+                        let svgDecorators;
+                        moveHexcac = hexcac.clone();
+                        while (moveHexcac.lineMove(i)) {
+                            p = document.getElementById("coord" + i);
+                            p.textContent += moveHexcac.toString() + ", ";
+                            svgItem = svgDocument.getElementById(moveHexcac.getId("HEX"));
+                            polygon = svgItem.getElementsByTagName("polygon");
+                            for (let j = 0; j < polygon.length; j++) {
+                                polygon.item(j).classList.add("highlight");
+                                markDiagonalMoves.svg.add(polygon.item(j));
+                            }
+                            svgDecorators = svgItem.getElementsByClassName("decoration");
+                            for (let j = 0; j < svgDecorators.length; j++) {
+                                svgDecorators.item(j).classList.add("highlight");
+                                markDiagonalMoves.svg.add(svgDecorators.item(j));
+                            }
+                            /*
+                            svgItem.classList.add("highlight");
+                            markDiagonalMoves.svg.add(svgItem);            
+                            */
+                        }
+                    }
+                }
+            }
+            else clearSet(markDiagonalMoves.svg);
+        }
+
+        function markOrthogonalMoves(markhexes = true, clear = true) {
+            if (markOrthogonalMoves.svg === undefined) {
+                markOrthogonalMoves.svg = new Set();
+            }
+            if (markhexes) {
+                if (clear) {
+                    markDiagonalMoves(false);
+                    markKnightMoves(false);
+                    markKnightRides(false);
+                }
+                if (hexcac !== undefined) {
+                    let moveHexcac;
+                    for (let i = 0; i < 6; i++) {
+                        let p;
+                        let svgItem;
+                        let polygon;
+                        let svgDecorators;
+                        moveHexcac = hexcac.clone();
+                        while (moveHexcac.fileMove(i)) {
+                            p = document.getElementById("coord" + i);
+                            p.textContent += moveHexcac.toString() + ", ";
+                            svgItem = svgDocument.getElementById(moveHexcac.getId("HEX"));
+                            polygon = svgItem.getElementsByTagName("polygon");
+                            for (let j = 0; j < polygon.length; j++) {
+                                polygon.item(j).classList.add("highlight");
+                                markOrthogonalMoves.svg.add(polygon.item(j));
+                            }
+                            svgDecorators = svgItem.getElementsByClassName("decoration");
+                            for (let j = 0; j < svgDecorators.length; j++) {
+                                svgDecorators.item(j).classList.add("highlight");
+                                markOrthogonalMoves.svg.add(svgDecorators.item(j));
+                            }
+                            /*
+                            svgItem.classList.add("highlight");
+                            markOrthogonalMoves.svg.add(svgItem);
+                            */
+                        }
+                    }
+                }
+            }
+            else clearSet(markOrthogonalMoves.svg);
+        }
+
+        function markDiagOrthogonalMoves(markhexes = true) {
+            if (markhexes) {
+                markKnightMoves(false);
+                markKnightRides(false);
+            }
+            markOrthogonalMoves(markhexes, false);
+            markDiagonalMoves(markhexes, false);
+        }
+
+        function markDiagKnightMoves(markhexes = true) {
+            if (markhexes) {
+                markOrthogonalMoves(false);
+                markKnightRides(false);
+            }
+            markDiagonalMoves(markhexes, false);
+            markKnightMoves(markhexes, false);
+        }
+
+        function markOrthoKnightMoves(markhexes = true) {
+            if (markhexes) {
+                markDiagonalMoves(false);
+                markKnightRides(false);
+            }
+            markOrthogonalMoves(markhexes, false);
+            markKnightMoves(markhexes, false);
+        }
+
+        function markKnightRidesAndMoves(markhexes = true) {
+            if (markhexes) {
+                markOrthogonalMoves(false);
+                markDiagonalMoves(false);
+            }
+            markKnightMoves(markhexes, false);
+            markKnightRides(markhexes, false);
+        }
+
+        function markKnightMoves(markhexes = true, clear = true) {
+            if (markKnightMoves.svg === undefined) {
+                markKnightMoves.svg = new Set();
+            }
+            if (markhexes) {
+                if (clear) {
+                    markDiagonalMoves(false);
+                    markOrthogonalMoves(false);
+                    markKnightRides(false);
+                }
+                if (hexcac !== undefined) {
+                    let moveHexcac;
+                    for (let i = 0; i < 12; i++) {
+                        let p;
+                        let svgItem;
+                        let polygon;
+                        let svgDecorators;
+                        moveHexcac = hexcac.clone();
+                        if (moveHexcac.knightMove(i)) {
+                            p = document.getElementById("coord" + i);
+                            p.textContent += moveHexcac.toString();
+                            svgItem = svgDocument.getElementById(moveHexcac.getId("HEX"));
+                            polygon = svgItem.getElementsByTagName("polygon");
+                            for (let j = 0; j < polygon.length; j++) {
+                                polygon.item(j).classList.add("highlight");
+                                markKnightMoves.svg.add(polygon.item(j));
+                            }
+                            svgDecorators = svgItem.getElementsByClassName("decoration");
+                            for (let j = 0; j < svgDecorators.length; j++) {
+                                svgDecorators.item(j).classList.add("highlight");
+                                markKnightMoves.svg.add(svgDecorators.item(j));
+                            }
+                            /*
+                            svgItem.classList.add("selected");
+                            markKnightMoves.svg.add(svgItem);
+                            */
+                        }
+                    }
+                }
+            }
+            else clearSet(markKnightMoves.svg);
+        }
+
+        function markKnightRides(markhexes = true, clear = true) {
+            if (markKnightRides.svg === undefined) {
+                markKnightRides.svg = new Set();
+            }
+            if (markhexes) {
+                if (clear) {
+                    markDiagonalMoves(false);
+                    markOrthogonalMoves(false);
+                    markKnightMoves(false);
+                }
+                if (hexcac !== undefined) {
+                    let moveHexcac;
+                    for (let i = 0; i < 12; i++) {
+                        let p;
+                        let svgItem;
+                        let polygon;
+                        let svgDecorators;
+                        moveHexcac = hexcac.clone();
+                        if (moveHexcac.knightRideMove(i)) {
+                            p = document.getElementById("coord" + i);
+                            if (p.textContent != '') p.textContent += ", "
+                            p.textContent += moveHexcac.toString();
+                            svgItem = svgDocument.getElementById(moveHexcac.getId("HEX"));
+                            polygon = svgItem.getElementsByTagName("polygon");
+                            for (let j = 0; j < polygon.length; j++) {
+                                polygon.item(j).classList.add("highlight");
+                                markKnightRides.svg.add(polygon.item(j));
+                            }
+                            svgDecorators = svgItem.getElementsByClassName("decoration");
+                            for (let j = 0; j < svgDecorators.length; j++) {
+                                svgDecorators.item(j).classList.add("highlight");
+                                markKnightRides.svg.add(svgDecorators.item(j));
+                            }
+                            /*
+                            svgItem.classList.add("selected");
+                            markKnightRides.svg.add(svgItem);
+                            */
+                        }
+                    }
+                }
+            }
+            else clearSet(markKnightRides.svg);
+        }
+
+        function clearSet(s) {
+            s.forEach(element => {
+                element.classList.remove("selected");
+                element.classList.remove("highlight");
+            });
+            s.clear();
+            for (let i = 0; i < 12; i++) {
+                document.getElementById("coord" + i).textContent = "";
+            }
+        }
+
+    </script>
+    <script src="../js/hexcac.js">
+    </script>
+</head>
+
+<body>
+    <div class="w3-container w3-center half">
+        <figure>
+            <object id="objboard" type="image/svg+xml" data="../img/cescacs_empty.svg" style="width:100%">
+            </object>
+        </figure>
+    </div>
+    <div class="w3-container w3-center half" style="vertical-align:middle;">
+        <div class="w3-row w3-section">
+            <div class="w3-col">
+                <small><span id="applyItTitle" style="display: none; font-size: smaller;">Visualització
+                        de la coordenada: </span><em><span id="applyIt"></span></em></small>
+            </div>
+        </div>
+        <div class="w3-row w3-section">
+            <div class="w3-col s6 m6 l6">
+                <div style="float:left;">
+                    <label style="width: 7em" for="coordenateInput">Coordenada:
+                    </label>
+                </div>
+                <input id="coordenateInput" type="text" minlength="2" maxlength="3" class="w3-input w3-border w3-col"
+                    style="width: 4em;">
+            </div>
+            <div class="w3-col s6 m6 l6">
+                <button type="button" id="tryItButton" class="w3-btn w3-green w3-round-xxlarge w3-margin"
+                    onclick="tryIt()"><small>Comprovar</small></button>
+            </div>
+        </div>
+        <div id="moveControls" class="w3-row" style="font-size:x-small; padding-left: 0; display: none;">
+            <div class="w3-col s2 m2 l1">
+                <label class="w3-panel" for="onlyPositionCheck">Position <input type="radio" name="radio" id="onlyPositionCheck"
+                        class="w3-radio" checked onchange="resetMoves()">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <div class="w3-col s2 m2 l1">
+                <label class="w3-panel" for="diagonalMovesCheck"><img src="../img/alfaerie/wbishop.png" alt="Diagonal"><input
+                        type="radio" name="radio" id="diagonalMovesCheck" class="w3-radio" onchange="markDiagonalMoves()">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <div class="w3-col s2 m2 l1">
+                <label class="w3-panel" for="orthogonalMovesCheck"><img src="../img/alfaerie/wrook.png" alt="Orthogonal"><input
+                        type="radio" name="radio" id="orthogonalMovesCheck" class="w3-radio" onchange="markOrthogonalMoves()">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <div class="w3-col s2 m2 l1">
+                <label class="w3-panel" for="diagorthogonalMovesCheck"><img src="../img/alfaerie/wqueen.png"
+                        alt="Diag & Orthogonal"><input type="radio" name="radio" id="diagorthogonalMovesCheck" class="w3-radio"
+                        onchange="markDiagOrthogonalMoves()">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <div class="w3-col s2 m2 l1">
+                <label class="w3-panel" for="diagKnightMovesCheck"><img src="../img/alfaerie/wpegasus.png"
+                        alt="Diag & Knight"><input type="radio" name="radio" id="diagKnightMovesCheck" class="w3-radio"
+                        onchange="markDiagKnightMoves()">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <div class="w3-col s2 m2 l1">
+                <label class="w3-panel" for="orthoKnightMovesCheck"><img src="../img/alfaerie/wdragon.png"
+                        alt="Orthogonal & Knight"><input type="radio" name="radio" id="orthoKnightMovesCheck" class="w3-radio"
+                        onchange="markOrthoKnightMoves()">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <div class="w3-col s3 m4 l2">
+                <label class="w3-panel" for="knightMovesCheck"><img src="../img/alfaerie/wknight.png" alt="Knight moves"><br>Move<br><input
+                        type="radio" name="radio" id="knightMovesCheck" class="w3-radio" onchange="markKnightMoves()">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <div class="w3-col s3 m4 l2">
+                <label class="w3-panel" for="knightRidesCheck"><img src="../img/alfaerie/wknight.png" alt="Knight rides"><br>Ride<br><input
+                        type="radio" name="radio" id="knightRidesCheck" class="w3-radio" onchange="markKnightRides()">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <div class="w3-col s3 m4 l2">
+                <label class="w3-panel" for="knightRidesAndMovesCheck"><img src="../img/alfaerie/wknight.png"
+                        alt="Knight rides & moves"><br>Both<br><input type="radio" name="radio" id="knightRidesAndMovesCheck"
+                        class="w3-radio" onchange="markKnightRidesAndMoves()">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+        </div>
+        <div class="w3-row w3-monospace" style="margin-bottom: 5ex;">
+            <div class="w3-col s12 m12 l12 w3-border" style="width:100%; font-size:small; padding-left: 16px; margin-bottom: 5ex;">
+                <p id="coord0"></p>
+                <p id="coord1"></p>
+                <p id="coord2"></p>
+                <p id="coord3"></p>
+                <p id="coord4"></p>
+                <p id="coord5"></p>
+                <p id="coord6"></p>
+                <p id="coord7"></p>
+                <p id="coord8"></p>
+                <p id="coord9"></p>
+                <p id="coord10"></p>
+                <p id="coord11"></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

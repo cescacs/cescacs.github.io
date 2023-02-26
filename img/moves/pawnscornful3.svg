@@ -1,0 +1,41 @@
+<svg  viewBox='0 0 5630 6500' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'>
+<title>Hexagonal board</title>
+<style>
+    #frame{fill:#D4D404; stroke-width:1; stroke:#D7D700;}
+    .black{fill:#000000; stroke-width:1; stroke:#D7D700;}
+    .white{fill:#FFFFFF; stroke-width:1; stroke:#D7D700;}
+    .color{fill:#FF00FF; stroke-width:1; stroke:#D7D700;}
+    .lbl{fill:#D7D700; font-size:70px}
+    .stitle{fill:#00FFFF; font-size:70px; font-weight:bold; stroke:#0000FF; stroke-width:2px;}
+    .title{fill:#00FFFF; font-size:120px; font-weight:bold; stroke:#0000FF; stroke-width:4px;}
+    .bigtitle{fill:#00FFFF; font-family:'Jazz LET',fantasy; font-size:140px; font-weight:bold; stroke:#0000FF; stroke-width:4px;}
+    .signature{fill:#0000FF; font-family:'Ink Free','Dancing Script',Pacifico,cursive; font-size:70px;}
+    .decoration{stroke-width:1; stroke:#D7D700;}
+</style>
+<g id='HEX' data-hexCellRadius='692.9854' transform='translate(435.4174 435) rotate(-90,2814.5826,3250)'><polygon points='6500.0,2815.0 4875.0,5629.5826 1625.0,5629.5826 0.0,2815.0 1625.0,0.4174 4875.0,0.4174' id='frame'/>
+<g id='HEXD2' data-centerX='2046.25' data-centerY='730.0438'><polygon points='2046.25,1423.0292 1446.1071,1076.5365 1446.1071,383.5511 2046.25,37.0585 2646.3929,383.5511 2646.3929,1076.5365' class='white'/></g>
+<g id='HEXD4' data-centerX='3250' data-centerY='730.0438'><polygon points='3250.0,1423.0292 2649.8571,1076.5365 2649.8571,383.5511 3250.0,37.0585 3850.1429,383.5511 3850.1429,1076.5365' class='color'/></g>
+<g id='HEXD6' data-centerX='4453.75' data-centerY='730.0438'><polygon points='4453.75,1423.0292 3853.6071,1076.5365 3853.6071,383.5511 4453.75,37.0585 5053.8929,383.5511 5053.8929,1076.5365' class='black'/></g>
+
+<g id='HEXE1' data-centerX='1444.375' data-centerY='1772.5219'><polygon points='1444.375,2465.5073 844.2321,2119.0146 844.2321,1426.0292 1444.375,1079.5365 2044.5179,1426.0292 2044.5179,2119.0146' class='color'/></g>
+<g id='HEXE3' data-centerX='2648.125' data-centerY='1772.5219'><polygon points='2648.125,2465.5073 2047.9821,2119.0146 2047.9821,1426.0292 2648.125,1079.5365 3248.2679,1426.0292 3248.2679,2119.0146' class='black'/></g>
+<g id='HEXE5' data-centerX='3851.875' data-centerY='1772.5219'><polygon points='3851.875,2465.5073 3251.7321,2119.0146 3251.7321,1426.0292 3851.875,1079.5365 4452.0179,1426.0292 4452.0179,2119.0146' class='white'/><image width = '1039.4781' height = '1039.4781' x = '3332.135960097241' y = '1252.782880291723' href = 'data:image/gif;base64,R0lGODlhMQAxAJH/AP///8DAwAAAAAAAACH5BAEAAAEALAAAAAAxADEAQAKYjI+py+0Po4RCgItvnRzVDGJb130hMJJOZZ1uxqryTNd2YGrCzbH6zpO0YMHV8JWysZbMpjNWjEqnkSRVkQNZr0fi1dMVAb+H7Pab1ZENae246HuFoLS23HVe6/f8vv8PWMbk15YnZYfyxhWmpleoiGZmCMcotvj0tCZJONf3uIc4yYPYOEXqRlkpRzdzepdYhymbGVhLUgAAOw==' transform = 'rotate(90 3851.875 1772.5219)' /></g>
+<g id='HEXE7' data-centerX='5055.625' data-centerY='1772.5219'><polygon points='5055.625,2465.5073 4455.4821,2119.0146 4455.4821,1426.0292 5055.625,1079.5365 5655.7679,1426.0292 5655.7679,2119.0146' class='color'/></g>
+
+<g id='HEXF0' data-centerX='842.5' data-centerY='2815'><polygon points='842.5,3507.9854 242.3571,3161.4927 242.3571,2468.5073 842.5,2122.0146 1442.6429,2468.5073 1442.6429,3161.4927' class='black'/></g>
+<g id='HEXF2' data-centerX='2046.25' data-centerY='2815'><polygon points='2046.25,3507.9854 1446.1071,3161.4927 1446.1071,2468.5073 2046.25,2122.0146 2646.3929,2468.5073 2646.3929,3161.4927' class='white'/></g>
+<g id='HEXF4' data-centerX='3250' data-centerY='2815'><polygon points='3250.0,3507.9854 2649.8571,3161.4927 2649.8571,2468.5073 3250.0,2122.0146 3850.1429,2468.5073 3850.1429,3161.4927' class='color'/></g>
+<g id='HEXF6' data-centerX='4453.75' data-centerY='2815'><polygon points='4453.75,3507.9854 3853.6071,3161.4927 3853.6071,2468.5073 4453.75,2122.0146 5053.8929,2468.5073 5053.8929,3161.4927' class='black'/></g>
+<g id='HEXF8' data-centerX='5657.5' data-centerY='2815'><polygon points='5657.5,3507.9854 5057.3571,3161.4927 5057.3571,2468.5073 5657.5,2122.0146 6257.6429,2468.5073 6257.6429,3161.4927' class='white'/></g>
+
+<g id='HEXG1' data-centerX='1444.375' data-centerY='3857.4781'><polygon points='1444.375,4550.4635 844.2321,4203.9708 844.2321,3510.9854 1444.375,3164.4927 2044.5179,3510.9854 2044.5179,4203.9708' class='color'/></g>
+<g id='HEXG3' data-centerX='2648.125' data-centerY='3857.4781'><polygon points='2648.125,4550.4635 2047.9821,4203.9708 2047.9821,3510.9854 2648.125,3164.4927 3248.2679,3510.9854 3248.2679,4203.9708' class='black'/></g>
+<g id='HEXG5' data-centerX='3851.875' data-centerY='3857.4781'><polygon points='3851.875,4550.4635 3251.7321,4203.9708 3251.7321,3510.9854 3851.875,3164.4927 4452.0179,3510.9854 4452.0179,4203.9708' class='white'/></g>
+<g id='HEXG7' data-centerX='5055.625' data-centerY='3857.4781'><polygon points='5055.625,4550.4635 4455.4821,4203.9708 4455.4821,3510.9854 5055.625,3164.4927 5655.7679,3510.9854 5655.7679,4203.9708' class='color'/></g>
+
+<g id='HEXH2' data-centerX='2046.25' data-centerY='4899.9562'><polygon points='2046.25,5592.9415 1446.1071,5246.4489 1446.1071,4553.4635 2046.25,4206.9708 2646.3929,4553.4635 2646.3929,5246.4489' class='white'/></g>
+<g id='HEXH4' data-centerX='3250' data-centerY='4899.9562'><polygon points='3250.0,5592.9415 2649.8571,5246.4489 2649.8571,4553.4635 3250.0,4206.9708 3850.1429,4553.4635 3850.1429,5246.4489' class='color'/></g>
+<g id='HEXH6' data-centerX='4453.75' data-centerY='4899.9562'><polygon points='4453.75,5592.9415 3853.6071,5246.4489 3853.6071,4553.4635 4453.75,4206.9708 5053.8929,4553.4635 5053.8929,5246.4489' class='black'/></g>
+
+</g>
+</svg>
