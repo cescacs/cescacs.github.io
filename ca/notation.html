@@ -609,11 +609,11 @@
 						<small><a href="glossary.html#Escac" class="cescacs" target="_blank"><i>Escac</i></a>.</small>
 						<ul class="aclariment">
 							<li><strong><code style="font-size:larger;">+^</code></strong>
-								<small><a href="glossary.html#EscacSaltCavall" class="cescacs" target="_blank"><i>Escac
-											immediat</i></a>, des d'un <i>hexcac</i> adjacent ortogonalment o diagonalment,
-									o bé a salt de cavall; El símbol és opcionalment alternatiu a l'indicador
-									d'<i>escac</i> per afegir informació. Indica que s'ha de moure el <i>Rei</i>
-									o capturar la peça que amenaça.</small>
+								<small><a href="glossary.html#EscacContacte" class="cescacs" target="_blank"><i>Escac
+											immediat</i> o <i>amb contacte</i></a>, des d'un <i>hexcac</i> adjacent
+									ortogonalment o diagonalment, o bé a salt de cavall;
+									El símbol és opcionalment alternatiu a l'indicador d'<i>escac</i> per afegir informació.
+									Indica que s'ha de moure el <i>Rei</i> o capturar la peça que amenaça.</small>
 
 							</li>
 							<li><strong><code style="font-size:larger;">++</code></strong>
@@ -626,9 +626,9 @@
 							<ul class="aclariment">
 								<li><small>Els indicadors <strong><code style="font-size:larger;">+^</code></strong> i
 									<strong><code style="font-size:larger;">++</code></strong> són progressivament pitjors
-									situacions d'escac, doncs a <i>l'escac immediat</i> queda l'alternativa de capturar la
-									peça que amenaça, però en un <i>escac doble</i> ja només queda l'alternativa de moure el
-									<i>Rei</i>.</small>
+									situacions d'escac, doncs a <i>l'escac amb contacte</i> o <i>immediat</i> queda
+									l'alternativa de capturar la peça que amenaça, però en un <i>escac doble</i> ja només
+									queda l'alternativa de moure el <i>Rei</i>.</small>
 								</li>
 							</ul>
 						</aside>
@@ -1590,10 +1590,10 @@
 								</p>
 							</div>
 						<div class="w3-container w3-rest" style="min-width:18em; margin: 0 0.4em;">
-							<p><small>Executant el programa per a un fitxer <i>file.ctl-pgn</i> obtenim un CTL-PGN quasi
+							<p><small>Executant-lo amb <i>sed</i> per a un fitxer <i>file.ctl-pgn</i> obtenim un CTL-PGN quasi
 								mínim, però encara inclourà variacions.</small>
 							</p>
-							<p><small>Podem canviar el nom <i>file.ctl-pgn</i> pel nom que volguem:</small>
+							<p><small>Podem canviar el nom <i>file.ctl-pgn</i> pel nom del fitxer que volguem tractar:</small>
 							</p>
 							<div id="noredefines" onclick="fnSelect(this.id)"
 								style="white-space:nowrap; height:2.5em; overflow-x:auto;">
@@ -1623,7 +1623,42 @@
 			</section>
 		</section>
 	</main>
-
+	<footer class="w3-container w3-purple w3-opacity">
+		<!-- Joc on-line -->
+		<h2 class="w3-container w3-pale-green w3-center title">
+			<a href="cescacs.typescript/cescacs.game.html" target="_blank" class="cescacs">Provar el joc</a>
+		</h2>
+		<div class="w3-container" style="font-weight:300">
+			<p>En <a href="cescacs.typescript/cescacs.game.html" target="_blank" class="cescacs w3-text-yellow">aquest enllaç</a> n'hi ha un tauler
+				amb les fitxes movibles que únicament accepta els moviments correctes. Permet desar partides, recuperar partides
+				desades o carregar posicions concretes; una eina pensada per provar el joc.
+			</p>
+			<p>No existeix encara cap opció on la màquina faci moviments, tot i que es troba en desenvolupament una versió on
+				la màquina ofereix el moviment que avalua com <i>el millor</i>, sempre limitat a l'execució pel navegador
+				(execució sense servidor).
+			</p>
+		</div>
+		<!-- Excaquer per imprimir -->
+		<h2 class="w3-container w3-pale-green w3-center title">
+			<a href="img/cescacs.svg" target="_blank" class="cescacs">Hexcaquer per imprimir</a>
+		</h2>
+		<div class="w3-container" style="font-weight:300">
+			<p>En <a href="img/cescacs.svg" target="_blank" class="cescacs w3-text-yellow">aquest enllaç</a> n'hi ha un hexcaquer
+				en format <i>.SVG</i> per a imprimir-lo.
+				Es recomana el format <i>DINA-1</i>, que pot fer-se imprimint-lo en quatre parts <i>DINA-3</i>,
+				per poder plegar-lo. Degut a la proporció llarg-ample de l'hexàgon, es perd una mica de paper,
+				que es pot retallar; Llavors, la mida d'un tauler imprés en quatre parts <i>DINA-3</i>,
+				una vegada plegat, és una mica inferior a <i>DINA-3</i>.
+			</p>
+			<p>Una altra opció és imprimir-ho en cuatro <i>DINA-4</i>, obtenim un hexcaquer per a peces més petites,
+				amb una mida d'hexcac d'uns 2.4 cm.
+			</p>
+		</div>
+		<!-- Email -->
+		<h2 class="w3-container w3-pale-green w3-center title">
+			<img src="../img/cescacs-email-image.gif" alt="cescacs" style="height:1em; display: inline-block;" >
+		</h2>
+	</footer>
 </body>
 
 </html>

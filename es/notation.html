@@ -103,7 +103,6 @@
 		</div>
 		<div style="clear:both;"></div>
 	</header>
-
 	<main class="w3-container">
 		<div class="w3-container">
 			<p>A diferencia del <i>ajedrez hexagonal de Gliński</i>, que se adapta a la notación algebraica del
@@ -612,10 +611,11 @@
 						<small><a href="glossary.html#Escac" class="cescacs" target="_blank"><i>Jaque</i></a>.</small>
 						<ul class="aclariment">
 							<li><strong><code style="font-size:larger;">+^</code></strong>
-								<small><a href="glossary.html#EscacSaltCavall" class="cescacs" target="_blank"><i>Jaque
-											a salto de caballo</i></a>; opcionalmente alternativo al indicador
-									de <i>jaque</i> para agregar información.</small>
-
+								<small><a href="glossary.html#EscacContacte" class="cescacs" target="_blank"><i>Jaque
+										inmediato</i> o <i>con contacto</i></a>, desde un hexcaque adyacente ortogonalmente
+									o diagonalmente, o bien a salto de caballo;
+									El símbolo es opcionalmente alternativo al indicador de <i>jaque</i> para añadir información.
+									Indica que se tiene que mover el <i>Rey</i> o capturar la pieza que amenaza.</small>
 							</li>
 							<li><strong><code style="font-size:larger;">++</code></strong>
 								<small><a href="glossary.html#EscacDoble" class="cescacs" target="_blank"><i>Jaque
@@ -626,9 +626,9 @@
 						<aside>
 							<small>Los indicadores <strong><code style="font-size:larger;">+^</code></strong> y
 								<strong><code style="font-size:larger;">++</code></strong> son progresivamente peores
-								situaciones de jaque, puesto que en el <i>jaque a salto de caballo</i> existe la
-								alternativa de capturar la pieza que amenaza, pero en un <i>jaque doble</i> ya solo
-								queda la alternativa de mover el <i>Rey</i>.</small>
+								situaciones de jaque, puesto que en el <i>jaque con contacto</i> o <i>inmediato</i>
+								existe la alternativa de capturar la pieza que amenaza, pero en un <i>jaque doble</i>
+								ya solo queda la alternativa de mover el <i>Rey</i>.</small>
 						</aside>
 					</li>
 					<li><strong><code style="font-size:larger;">#</code></strong>
@@ -1584,10 +1584,10 @@
 							</p>
 						</div>
 						<div class="w3-container w3-rest" style="min-width:18em; margin: 0 0.4em;">
-							<p><small>Executant el programa per a un fitxer <i>file.ctl-pgn</i> obtenim un CTL-PGN quasi
-									mínim, però encara inclourà variacions.</small>
+							<p><small>Executant-lo amb <i>sed</i> per a un fitxer <i>file.ctl-pgn</i> obtenim un CTL-PGN quasi
+								mínim, però encara inclourà variacions.</small>
 							</p>
-							<p><small>Podem canviar el nom <i>file.ctl-pgn</i> pel nom que volguem:</small>
+							<p><small>Podem canviar el nom <i>file.ctl-pgn</i> pel nom del fitxer que volguem tractar:</small>
 							</p>
 							<div id="noredefines" onclick="fnSelect(this.id)"
 								style="white-space:nowrap; height:2.5em; overflow-x:auto;">
@@ -1617,7 +1617,42 @@
 			</section>
 		</section>
 	</main>
-
+	<footer class="w3-container w3-purple w3-opacity">
+		<!-- juego on-line -->
+		<h2 class="w3-container w3-pale-green w3-center title">
+			<a href="../cescacs.typescript/cescacs.game.html" target="_blank" class="cescacs">Probar el juego</a>
+		</h2>
+		<div class="w3-container" style="font-weight:300">
+			<p>En <a href="../cescacs.typescript/cescacs.game.html" target="_blank" class="cescacs w3-text-yellow">este enlace</a>
+				hay un tablero con las fichas movibles que únicamente acepta los movimientos correctos. Permite guardar partidas,
+				recuperar partidas guardadas o cargar posiciones concretas; una herramienta pensada para probar el juego.
+			</p>
+			<p>No existe todavía ninguna opción donde la máquina haga movimientos, aunque se encuentra en desarrollo una versión
+				donde la máquina ofrece el movimiento que evalúa como el mejor, siempre limitado a la ejecución por el navegador,
+				usando la máquina cliente (sin servidor).
+			</p>
+		</div>
+		<!-- Tablero -->
+		<h2 class="w3-container w3-pale-green w3-center title">
+			<a href="../img/cescacs.svg" target="_blank" class="cescacs">Tablero para imprimir</a>
+		</h2>
+		<div class="w3-container" style="font-weight:300">
+			<p>En <a href="../img/cescacs.svg" target="_blank" class="cescacs w3-text-yellow">este enlace</a> hay un tablero en formato
+				<i>.SVG</i> para imprimirlo. Se
+				recomienda
+				imprimirlo en formato <i>DINA-1</i>, que puede hacerse dividiendolo en cuatro partes <i>DINA-3</i> para
+				poder plegarlo.
+				La medida plegada en cuatro partes es ligeramente inferior a DINA-3; por la proporción largo-ancho del
+				hexágono se pierde un poco de papel.</p>
+			<p>Imprimiendo en la mitad, en cuatro <i>DINA-4</i>, obtenemos un tablero para piezas miniatura,
+				con una medida de hexcaque de unos 2.4 cm.
+			</p>
+		</div>
+		<!-- Email -->
+		<h2 class="w3-container w3-pale-green w3-center title">
+			<img src="../img/cescacs-email-image.gif" alt="cescacs" style="height:1em; display: inline-block;" >
+		</h2>
+	</footer>
 </body>
 
 </html>

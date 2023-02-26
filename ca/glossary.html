@@ -1,52 +1,110 @@
 <!DOCTYPE HTML>
 <html lang="ca">
 
-<head prefix="og: https://ogp.me/ns#">
-	<meta charset="UTF-8">
-	<!-- CATALÀ -->
-	<link rel="alternate" hreflang="es" href="../es/glossary.html" />
-	<link rel="alternate" hreflang="en" href="../en/glossary.html" />
-	<meta name="description" content="Glossari de termes de C'escacs">
-	<meta name="keywords" content="C'escacs, Cescacs, Glossari">
-	<meta name="author" content="Cesc Sasal i Lasaosa">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="../w3.css">
-	<link rel="stylesheet" type="text/css" href="../w3-colors-win8.css">
-	<link rel="stylesheet" type="text/css" href="../cescacs.css">
-	<title>Glossari de C'escacs</title>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-CHKYWCYH3N"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-
-		gtag('config', 'G-CHKYWCYH3N');
-	</script>
+	<head>
+		<meta charset="UTF-8">
+		<!-- CATALÀ -->
+		<link rel="alternate" hreflang="es" href="../es/glossary.html" />
+		<link rel="alternate" hreflang="en" href="../en/glossary.html" />
+		<!-- description -->
+		<meta name="twitter:card" content="summary_large_image">
+		<title>C'escacs: Glossari</title>
+		<meta property="og:title" content="C'escacs: Glossari">
+		<meta property="og:type" content="website" >
+		<meta property="og:locale" content="ca-ES">
+		<meta name="description" property="og:description"
+			content="Glossari de termes de C'escacs.">
+		<!-- public imgbb image -->
+		<!-- https://ibb.co/jHTDkqc -->
+		<!-- https://i.ibb.co/BwtB2vX/logo-rich.png -->
+		<meta name="image" property="og:image" content="https://i.ibb.co/BwtB2vX/logo-rich.png">
+		<meta name="twitter:image" content="https://i.ibb.co/BwtB2vX/logo-rich.png">
+		<meta name="author" content="Cesc Sasal i Lasaosa">
+		<!-- end description -->
+		<meta name="keywords" content="C'escacs, Cescacs, Hexcaquer, Hexcac, CTL, Drac, Víbria, Pegàs, Elefant, peó esquiu">
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="../w3.css">
+		<link rel="stylesheet" type="text/css" href="../w3-colors-win8.css">
+		<link rel="stylesheet" type="text/css" href="../cescacs.css">
+	
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap">
+		<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple"> -->
+		<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nabla&display=swap"> -->
+	
+		<!-- Icons -->
+		<script src="https://kit.fontawesome.com/1efd89dd3e.js" crossorigin="anonymous"></script>
+	
+		<script>
+			function fnSelect(objId) {
+				if (window.getSelection) {
+					window.getSelection().removeAllRanges();
+					var range = document.createRange();
+					range.selectNode(document.getElementById(objId));
+					window.getSelection().addRange(range);
+				}
+			}
+		</script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-CHKYWCYH3N"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+	
+			gtag('config', 'G-CHKYWCYH3N');
+		</script>
 </head>
 
 <body>
-	<header class="w3-container w3-center">
-		<nav class="w3-bar w3-black">
-			<a href="../index.html" class="w3-bar-item w3-button w3-mobile menubar">Principal</a>
-			<a href="notation.html" class="w3-bar-item w3-button w3-mobile menubar">Notació</a>
-			<a href="castling.html" class="w3-bar-item w3-button w3-mobile menubar">Enroc</a>
-			<a href="historical-milestones.html" class="w3-bar-item w3-button w3-mobile menubar">Referents</a>
-			<a href="thanks.html" class="w3-bar-item w3-button w3-mobile menubar">Agraïments</a>
-			<a href="the-corner.html" class="w3-bar-item w3-button w3-mobile menubar">El Racó</a>
-		</nav>
-		<nav class="w3-bar w3-black">
-			<a href="../es/glossary.html" class="w3-bar-item w3-button w3-mobile menubar" lang="es"><img
-					src="../img/esp.png" class="lang" alt="Español"> Español</a>
-			<a href="../en/glossary.html" class="w3-bar-item w3-button w3-mobile menubar" lang="en"><img
-					src="../img/uk.png" class="lang" alt="English"> English</a>
-		</nav>
+	<header class="w3-center">
+		<div class="w3-container" style='background-image: url("../img/lasaosa.PC310001.png"); background-size:240px'>
+			<div class="w3-container" style="padding:0;">
+				<nav class="w3-bar w3-black" style="margin:0;">
+					<a href="../index.html" class="w3-bar-item w3-button w3-transparent"><i class="fa fa-home"></i></a>
+					<div class="w3-dropdown-hover">
+						<button class="w3-button">Més Regles</button>
+						<div class="w3-dropdown-content w3-bar-block w3-card-4">
+							<a href="castling.html" class="w3-bar-item w3-button w3-mobile menubar">Moviments especials del Rei</a>
+							<a href="notation.html" class="w3-bar-item w3-button w3-mobile menubar">Notació</a>
+						</div>
+					</div>
+					<a href="../cescacs.typescript/cescacs.game.html" target="_blank" class="w3-bar-item w3-button w3-transparent"><i class='fas fa-chess'></i> play</a>
+					<div class="w3-dropdown-hover">
+						<button class="w3-button">Altres continguts</button>
+						<div class="w3-dropdown-content w3-bar-block w3-card-4">
+							<a href="historical-milestones.html" class="w3-bar-item w3-button w3-mobile menubar">Referents històrics</a>
+							<a href="the-corner.html" class="w3-bar-item w3-button w3-mobile menubar">El Racó</a>
+							<a href="#" class="w3-bar-item w3-button w3-mobile menubar">Glossari</a>
+							<a href="about.html" class="w3-bar-item w3-button w3-mobile menubar">Agraïments</a>
+						</div>
+					</div>
+					<div class="w3-dropdown-hover w3-right" style="position:absolute ;">
+						<button class="w3-button"><img src="../img/ca.png" class="lang" alt="Català"></button>
+						<div class="w3-dropdown-content w3-bar-block w3-border" style="right:0;">
+							<a href="../es/glossary.html" class="w3-bar-item w3-button w3-mobile menubar" hreflang="es" lang="es"><img
+									src="../img/esp.png" class="lang" alt="Español"> Español</a>
+							<a href="../en/glossary.html" class="w3-bar-item w3-button w3-mobile menubar" hreflang="en" lang="en"><img
+									src="../img/uk.png" class="lang" alt="English"> English</a>
+						</div>
+					</div>
+				</nav>
+			</div>
+			<img src="../img/logo.gif" alt="C'escacs" class="mainlogo" >
+			<!-- public imgbb image -->
+			<!-- https://i.ibb.co/Ycddy9p/logo.gif -->
+			<!-- https://ibb.co/x1ggfvJ -->
+		</div>
+		<div class="w3-container w3-opacity">
+			<!--  font-effect-shadow-multiple font-family: 'Bungee Spice', cursive; -->
+			<h1 class="w3-jumbo" style="font-family: 'Bungee Spice', cursive; color:#FFD700; margin-top:0;">Glossari de C'escacs</h1>
+		</div>
+		<div style="clear:both;"></div>
 	</header>
 	<main class="w3-container">
-		<div class="w3-container w3-center w3-text-grey title">
-			<img src="../img/logo.gif" alt="C'escacs" class="mainlogo" />
-			<h1>Glossari de C'escacs</h1>
-		</div>
 		<dl>
 			<div class="w3-container glossary-box">
 				<dt id="Alabarder">Alabarder</dt>
@@ -2890,7 +2948,7 @@
 						<nav class="w3-bar w3-white">
 							<a href="#Xec" class="w3-button cescacs"><small>Sinònim</small> Xec</a>
 							<a href="#EscacDoble" class="w3-button cescacs">Escac doble</a>
-							<a href="#EscacSaltCavall" class="w3-button cescacs">Escac a <i>Salt de cavall</i></a>
+							<a href="#EscacContacte" class="w3-button cescacs">Escac <i>amb contacte</i></a>
 							<a href="#EscacDescoberta" class="w3-button cescacs">Escac a la descoberta</a>
 							<a href="#EscacContinu" class="w3-button cescacs">Escac continu</a>
 							<a href="#EscacMat" class="w3-button cescacs">Escac i mat</a>
@@ -3076,19 +3134,17 @@
 				</dd>
 			</div>
 			<div class="w3-container glossary-box">
-				<dt id="EscacSaltCavall">Escac a salt de cavall</dt>
+				<dt id="EscacContacte">Escac amb contacte</dt>
 				<dd>
-					<p><a href="#Escac" class="cescacs">Escac</a> que es produeix degut a la possibilitat de
-						<a href="#SaltCavall" class="cescacs">salt de cavall</a> d'una peça de l'oponent. És
-						significatiu, perquè el <i>Rei</i> no té oportinitat de cobrir-se; només queden les
+					<p><a href="#Escac" class="cescacs">Escac</a> que es produeix per una peça posicionada en
+						un hexcac contigu ortogonal o diagonalment, o bé a
+						<a href="#SaltCavall" class="cescacs">salt de cavall</a> de la posició del <i>Rei</i>.
+						És significatiu, perquè el <i>Rei</i> no té oportinitat de cobrir-se; només queden les
 						opcions de capturar la peça que amenaça, o moure el <i>Rei</i>.
 					</p>
 					<ul>
-						<li>Durant una partida, es pot informar al contrincant que l'<i>escac</i> és a
-							<i>salt de cavall</i>, quan el nivell de joc és de principiant.
-						</li>
-						<li>En la transcripció de partides és important fer-ho, per remarcar la situació i facilitar la
-							lectura per les persones.
+						<li>En la transcripció de partides és important indicar-ho, per remarcar la situació
+							i facilitar la lectura per les persones.
 						</li>
 					</ul>
 				</dd>
@@ -3116,12 +3172,12 @@
 					<h4>Traduccions</h4>
 					<div style="display:flex;">
 						<nav class="w3-bar w3-white">
-							<a href="../es/glossary.html#EscacSaltCavall"
+							<a href="../es/glossary.html#EscacContacte"
 								class="w3-bar-item w3-button w3-mobile menubar" lang="es"><img src="../img/esp.png"
-									class="lang" alt="Español"> Español – Jaque a salto de caballo</a>
-							<a href="../en/glossary.html#EscacSaltCavall"
+									class="lang" alt="Español"> Español – Jaque con contacto</a>
+							<a href="../en/glossary.html#EscacContacte"
 								class="w3-bar-item w3-button w3-mobile menubar" lang="en"><img src="../img/uk.png"
-									class="lang" alt="English"> English – Knight jump check</a>
+									class="lang" alt="English"> English – Check with contact</a>
 						</nav>
 					</div>
 				</dd>
@@ -7141,6 +7197,12 @@
 			</div>
 		</dl>
 	</main>
+	<footer class="w3-container w3-purple w3-opacity">
+		<!-- Email -->
+		<h2 class="w3-container w3-pale-green w3-center title">
+			<img src="../img/cescacs-email-image.gif" alt="cescacs" style="height:1em; display: inline-block;" >
+		</h2>
+	</footer>
 </body>
 
 </html>
