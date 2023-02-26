@@ -1,0 +1,3 @@
+[submodule "cescacs.typescript"]
+	path = cescacs.typescript
+	url = https://github.com/cescacs/cescacs.typescript.git
