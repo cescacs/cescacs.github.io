@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
 	<!-- CATALÀ -->
-    <!--
     <link rel="alternate" hreflang="es" href="../es/about.html" />
+    <!--
     <link rel="alternate" hreflang="en" href="../en/about.html" />
     -->
     <!-- favicon -->
@@ -17,12 +17,11 @@
 	<!-- description -->
 	<meta name="twitter:card" content="summary_large_image">
 	<title>C'escacs: sobre C'escacs</title>
-	<link rel="shortcut icon" href="favicon.png" type="image/png" />
 	<meta property="og:title" content="C'escacs: sobre C'escacs">
 	<meta property="og:type" content="website" >
 	<meta property="og:locale" content="ca-ES">
 	<meta name="description" property="og:description"
-		content="Breu història del desenvolupament i disseny de C'escacs.">
+		content="Breu història del disseny i evolució de C'escacs.">
 	<!-- public imgbb image -->
 	<!-- https://ibb.co/jHTDkqc -->
 	<!-- https://i.ibb.co/BwtB2vX/logo-rich.png -->
@@ -30,16 +29,17 @@
 	<meta name="twitter:image" content="https://i.ibb.co/BwtB2vX/logo-rich.png">
 	<meta name="author" content="Cesc Sasal i Lasaosa">
 	<!-- end description -->
-	<meta name="keywords" content="Cescacs, Escacs hexagonals">
+	<meta name="keywords" content="C'escacs, Cescacs, Escacs hexagonals">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../w3.css">
 	<link rel="stylesheet" type="text/css" href="../w3-colors-win8.css">
 	<link rel="stylesheet" type="text/css" href="../cescacs.css">
 
-	<link rel="preload" as="image" href="https://cescacs.orgfree.com/img/moves/king/Elephant.png">
+	<link rel="preload" as="image" href="../img/lasaosa.PC310001.png">
+	<link rel="preload" as="image" href="../img/logo.gif">
 
-	<!-- Fonts -->
+    <!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap">
@@ -119,8 +119,12 @@
             d'<a href="historical-milestones.html#Alphazero" class="cescacs">AlphaZero</a>, però en aquell
             moment la màquina encara no havia guanyat definitivament a <i>Kasparov</i>, i la discussió tenia
             més sentit; com a informàtic, les discussions llavors centrades en la <q>potència</q> de la màquina
-            no eren suficients, i els <q>heurístics</q> sovint requerien traspassar coneixements dels experts
-            als algorismes, un punt que comporta dificultats i deficiències.
+            no eren suficients, i fer servir <q>heurístics</q> sovint requereix traspassar coneixements dels
+            experts als algorismes, un punt que comporta dificultats i deficiències. Avui dia la màquina
+            adquireix aquests coneixements per aprenentatge, i justament jocs com els escacs han estat problemes
+            molt adequats per consolidar avenços en aquest camp; hauriem de ser conscients que també les
+            habilitats humanes s'han d'anar desenvolupant en tant les màquines incorporen avenços, i els jocs
+            són un camp molt adequat per desenvolupar certes habilitats.
         </p>
         <p>
             Començaren les idees per a <i class="cescacs">C'escacs</i> quan una petita investigació em va
@@ -150,11 +154,11 @@
             </p>
         </aside>
         <p>
-            Ja hi teniem la primera versió del joc i de la pàgina Web quan varem contactar amb
+            Ja hi teníem la primera versió del joc i de la pàgina Web quan vàrem contactar amb
             <em><a href="historical-milestones.html#EscacsMccooey" target="_blank" class="cite"><cite>Dave
                         McCooey</cite></a></em>, que va escoltar molt amablement les nostres idees. Els seus
             comentaris van ser de gran ajuda per a acabar de definir el disseny inicial de <cite>C'escacs</cite>,
-            particularment els <em>moviments dels peons</em>, que encara no s'havíen acabat de definir.
+            particularment els <em>moviments dels peons</em>, que encara no s'havien acabat de definir.
             Conseqüència d'aquestes converses per email el peó va quedar definit amb l'opció d'avançar
             pasos dobles, i triples en els <i>hexcacs</i> de sortida; molt més tard també es va incorporar
             la cavalcada pel cavall, una decisió difícil, però que clarament necessària per motius similars
@@ -165,71 +169,73 @@
             doncs havíem de madurar-los:
         </p>
         <ul>
-            <li>La peça del <a href="glossary.html#Princep" class="cescacs"><cite>Príncep</cite></a>, que feiem
-                servir a les primeres versions, ens advertí que que era una peça molt potent.
+            <li>La peça del <a href="glossary.html#Princep" class="cescacs"><cite>Príncep</cite></a>, que
+                fèiem servir a les primeres versions, ens advertí que que era una peça molt potent.
                 A més, en el tauler de 169 hexcacs resultava molt lenta. El seu diagnòstic era absolutament
-                encertat, i era el punt feble del joc. Encara no tenien alternativa, però la idea era reforçar la
-                potència dels peons, que no podien contruir cadenes sòlides. Veient que era una peça de poca
-                utilitat vam deixar de banda l'idea d'afegir alguna mena de
+                encertat, i era el punt feble del joc. Encara no tenien alternativa, però la necessitat era
+                reforçar la potència dels peons, que no podien construir cadenes sòlides. Veient que era una
+                peça de poca utilitat, quedà a banda l'idea d'afegir alguna mena de
                 <a href="glossary.html#Regalia" class="cescacs">Regalia</a>, com en els
                 <a href="historical-milestones.html#Xatranjalkabir" target="_blank" class="cite">escacs de Tamerlà</a>,
-                i varem començar a pensar en alternatives. Alguna prova varem fer afegint-li el moviment de cavall
-                (anomenant a la nova peça <i>Lleó</i>), però el cavall també patia d'un problema de velocitat,
-                i afegir més potència a la peça no era l'objectiu.
+                i vàrem començar a pensar en alternatives. També varem fer alguna prova afegint-li el moviment
+                de cavall, i anomenant a la nova peça <i>Lleó</i>, però el cavall també patia d'un problema de
+                velocitat; afegir més potència a la peça no era l'objectiu i la problemàtica amb els peons no
+                es resolia.
             </li>
             <li>També va criticar l'enroc, doncs ens va dir que no aportava res. En realitat aquesta crítica va fer
                 que més endavant s'incorporés també el <em><i>Salt del Rei</i></em>, origen de l'<i>enroc</i>,
                 tant en els escacs ortodoxes com en <i>C'escacs</i>, doncs la idea va sorgir de l'existència
                 històrica d'aquest moviment. Amb la incorporació del <em><i>Salt del Rei</i></em> fem una picada d'ull
-                a l'<em><a href="historical-milestones.html#Escacsvariantindia" class="cescacs">història dels
+                a la <em><a href="historical-milestones.html#Escacsvariantindia" class="cescacs">història dels
                         escacs</a></em>, incloent-hi la referència a
-                l'<a href="historical-milestones.html#LlibreDelsJocs" class="cescacs">antic Salt del Rei</a> dels escacs
-                europeus, i l'existència d'ambdòs moviments deixa més evident la funció principalment evasiva.
-                Efectivament, no tenia sentit obligar a un enroc, però el moviment de la <i>Torre</i>, en
+                l'<a href="historical-milestones.html#LlibreDelsJocs" class="cescacs">antic <i>Salt del Rei</i></a>
+                dels escacs europeus, i l'existència d'ambdós moviments deixa més evident la funció principalment
+                evasiva. Efectivament, no tenia sentit obligar a un enroc, però el moviment de la <i>Torre</i>, en
                 alguna ocasió, pot representar una defensa addicional. Junt amb el <em><i>Salt del Rei</i></em>
-                varem incorporar l'<em><i>enroc doble</i></em>, que permet a un jugador avançar moviments en una
-                posició defensiva, però també a un jugador amb un aventatge tàctic li podria arribar a permetre
-                un posicionament agressiu, connectant en un moviment totes dues <i>Torres</i> en una columna,
-                tot i que no és ni la seva funció ni l'objectiu d'afegir aquest moviment.
+                vàrem incorporar l'<em><i>enroc doble</i></em>, que permet a un jugador avançar moviments en una
+                posició defensiva, però també a un jugador amb un avantatge tàctic li podria arribar a permetre
+                un posicionament agressiu, connectant amb un moviment totes dues <i>Torres</i> en una columna,
+                tot i que no és ni la seva funció ni l'objectiu d'aquest moviment.
             </li>
         </ul>
         <p>
             L'<cite>Applet</cite> de <cite>Java</cite> va tenir èxit i se'm va sol·licitar repetidament incorporar un
-            motor que permetés partides contra la màquina; desgraciadament l'<cite>Applet</cite> només estava pensat
-            per a forçar els moviments vàlids i era necessari reescriure la programació, i tampoc teniem temps per
-            dedicar-hi al projecte.
+            motor que permetés jugar partides contra la màquina; desgraciadament l'<cite>Applet</cite> només estava
+            pensat per a forçar els moviments vàlids i era necessari reescriure la programació, i tampoc teníem temps
+            per dedicar-hi al projecte.
         </p>
         <p>
-            <em><cite>Dave McCooey</cite></em> va realitzar l'anàlisi de jugades finals a l'escaquer de 169 caselles,
-            confirmant que dos cavalls no poden fer mat a un rei solitari, i també l'anàlisi de jugades finals del
-            <em>Príncep</em>, peça que ara ja no s'usa a <cite>C'escacs</cite>.
+            <em><cite>Dave McCooey</cite></em> va realitzar l'anàlisi de jugades finals en l'escaquer de 169 caselles,
+            confirmant que <em>dos cavalls</em> no poden fer mat a un rei solitari, i també l'anàlisi de jugades
+            finals del <em><i>Príncep</i></em>, peça que en <cite>C'escacs</cite> ara ja s'ha descartat.
         </p>
-        <p>Una altra aportació va ser referent a la notació, cridant-nos l'atenció en el nom de les columnes,
-            sugerint-nos fer servir per les columnes centrals els mateixos noms de les columnes de <i>Gliński</i>,
-            ampliant les columnes a esquerra i dreta, però deixant la lletra <em><i>F</i></em> per a
+        <p>Una altra aportació de <em><cite>McCooey</cite></em> va ser referent a la notació, cridant-nos l'atenció sobre
+            el nom de les columnes, suggerint-nos fer servir per a les columnes centrals els mateixos noms de les columnes
+            de <i>Gliński</i>, ampliant les columnes a esquerra i dreta, però deixant la lletra <em><i>F</i></em> per a
             la columna central. Aquest punt el vaig trobar molt interessant, però la notació de <i>Gliński</i>
             és problemàtica, i vaig observar que numerant les línies i avançant la numeració per les columnes de
-            dos en dos la notació era molt coherent. Aquesta numeració surgí expontàniament, i investigant posteriorment
-            trobarem referències a aquest sistema de coordenades, obviament ja inventat, tot i que es fa servir molt poc,
-            excepte en àmbits tecnologics, donada la seva idonietat.
+            dos en dos la notació era molt més coherent. Aquesta notació sorgí espontàniament, i investigant posteriorment
+            trobàrem referències a aquest sistema de coordenades, òbviament ja inventat, tot i que es fa servir molt poc,
+            excepte en àmbits tecnològics, donada la seva idoneïtat.
         </p>
         <p>
             A l'any 2008 adquirí un <em><cite>Omega Chess</cite></em> (complicat d'aconseguir a Espanya). Aquesta
             variant dels escacs és interessant, i incorpora una peça anomenada <em><cite>Campió</cite></em>.
-            Varem fer algunes partides de <cite>C'escacs</cite> fent servir una adaptació hexagonal d'aquesta peça
+            Vàrem fer algunes partides de <cite>C'escacs</cite> fent servir una adaptació hexagonal d'aquesta peça
             en lloc del <em>Príncep</em>, però resultava enutjosa pels salts diagonals i, possiblement perquè no
-            érem molt versats a l'<cite>Omega Chess</cite>, ens era de poca utilitat. Varem fer algunes adaptacions
-            amb uns moviments més senzills que el <cite>Campió</cite>, quasi requisit per fer-la servir en partides
-            d'escacs hexagonals. Vam anomenar-la llavors <em><cite>Almogàver</cite></em>, però tampoc era la peça
-            que necessitava <i class="cite">C'escacs</i>.
+            érem molt versats a l'<cite>Omega Chess</cite>, ens era de poca utilitat. Fer algunes adaptacions per
+            obtenir uns moviments més senzills que el <cite>Campió</cite> resulta quasi un requisit per fer-la servir
+            en partides d'escacs hexagonals. Vam anomenar-la llavors <em><cite>Almogàver</cite></em>, però tampoc
+            era la peça que necessitava <i class="cite">C'escacs</i>.
         </p>
         <p>
             L'alternativa definitiva va arribar amb els
             <em><a href="historical-milestones.html#Elefant" class="cescacs"><i>Elefants</i></a></em>, just la peça
-            que voliem, i la varem agafar d'els escacs orientals (birmans) investigant en l'història dels escacs,
-            tot i que aquests escacs encara es fan servir avui dia. Aquesta peça permet la construcció de
-            <i>cadenes de peons</i>, que sempre havia estat el nostre objectiu (tot i que potser no sempre l'haviem
-            tingut clar). El nom d'<i>Elefant</i> presenta inconvenients en alguns idiomes,
+            que volíem, que vàrem adaptar d'els escacs orientals (birmans) investigant en l'història dels escacs, i tot
+            trobant que el <a href="https://en.wikipedia.org/wiki/Sittuyin" target="_blank" class="cite">Sittuyin</a>
+            encara es juga avui dia. Aquesta peça permet la construcció de <i>cadenes de peons</i>, que sempre havia
+            estat el nostre objectiu (tot i que potser no sempre l'havíem tingut clar).
+            El nom d'<i>Elefant</i> presenta inconvenients en alguns idiomes,
             destacadament en <i>Àrab</i> i en <i>Rus</i>, doncs s'anomena <i>Elefant</i> a l'<i>Alfil</i>, per motius
             històrics. En aquests idiomes el nom <strong><i>Alabarder</i></strong> ens ha semblat el més adequat i
             coherent.
@@ -237,20 +243,20 @@
         <p>
             El joc quedà finalment definit en 2018, tot i que no va ser publicat en el lloc web fins a 2022,
             una vegada exhaustivament provat, i confirmats tots els canvis; un altre canvi incorporat ha estat
-            la posició del <i>Drac</i>, ara definitivament anomenat <i>Víbria</i>, tot i que el nom de <i>Drac</i>
-            es segueix acceptant. Aquest canvi de posició fa que la peça no tingui debilitats en les obertures,
-            retarda la seva participació en el joc de manera positiva,  i desplaça en davant els <i>Alfils</i>,
-            dotant-los de més facilitat de moviment a l'inici del joc.
+            la posició del <cite>Drac</cite>, ara definitivament anomenat <cite>Víbria</cite>, tot i que el nom
+            de <i>Drac</i> es segueix acceptant. Aquest canvi de posició fa que la peça no tingui debilitats en
+            les obertures, retarda la seva participació en el joc de manera positiva,  i desplaça endavant els
+            <i>Alfils</i>, dotant-los de més facilitat de moviment a l'inici del joc.
         </p>
         <p>
             Referent a les <q>primeres aspiracions</q> de fer uns escacs <q>difícils</q> per a la màquina,
-            potser no té gaire sentit avuí dia, però sí podria ser una <q>nova manera</q> de jugar als escacs,
+            potser no té gaire sentit avui dia, però sí podria ser una <q>nova manera</q> de jugar als escacs,
             si la <q>ajuda</q> de la màquina és un factor més, i les persones dirigim l'estratègia de la màquina.
-            Això ja seria un joc practicament diferent dels escacs, on els jugadors asistits tindrien abilitats
-            diferents de les que pot tenir un jugador d'escacs d'avuí dia, i probablement
-            el joc de <i class="cescacs">C'escacs</i> no és encara suficientment complexe per a un desafiament
-            d'aquesta mena... però un tinc nou projecte d'una ampliació de <i>C'escacs</i> a un joc virtual,
-            que es jugaria només en ordinador. Dificilment en taulers reals, doncs requeririen vint hexcaquers
+            Això ja seria un joc pràcticament diferent dels escacs, on els jugadors assistits tindrien habilitats
+            diferents de les que pot tenir un jugador d'escacs d'avui dia, i probablement
+            el joc de <i class="cescacs">C'escacs</i> no és encara suficientment complex per a un desafiament
+            d'aquesta mena... però tinc un nou projecte d'una ampliació de <i>C'escacs</i> a un joc virtual,
+            que es jugaria només en ordinador. Difícilment en taulers reals, doncs es requeririen vint hexcaquers
             de <i>C'escacs</i>! (això són 3_380 hexcacs). Els amants dels jocs d'estratègia farien bé de recordar
             que els escacs són el rei.
         </p>
@@ -269,45 +275,66 @@
                 <a href="historical-milestones.html#EscacsMccooey" class="cescacs"><q
                         cite="http://www.chessvariants.com/hexagonal.dir/hexchess2.html">variant
                         d'escacs hexagonals</q></a>,
-                i d'un petit joc d'escacs hexagonals adecuat com a entreteniment de viatge o passatemps,
+                i d'un petit joc d'escacs hexagonals adequat com a entreteniment de viatge o passatemps,
                 <a href="historical-milestones.html#EscacsMccooey#MiniHexchess" class="cescacs">Mini
                     Hexchess</a>. <cite>McCooey</cite> es va interessar en el joc quan encara es trobava en
                 l'etapa de disseny. La seva variant d'escacs va inspirar els moviments dels peons de
-                <cite>C'escacs</cite>, la captura en diagonal quan ja coneixiem els escacs de Glinski.
-                Es pot dir que <cite>C'escacs</cite> va nèixer quan es va introduir el moviment doble i
+                <cite>C'escacs</cite>, la captura en diagonal quan ja coneixíem els escacs de Glinski.
+                Es pot dir que <cite>C'escacs</cite> va nàixer quan es va introduir el moviment doble i
                 triple dels peons a conseqüència d'alguns dels seus comentaris.
                 També va col·laborar calculant els finals per a un tauler hexagonal de 169 cel·les,
-                fins i tot els finals per al Príncep.
+                fins i tot els finals per al <i>Príncep</i>.
                 Moltes gràcies per tot.
             </li>
             <li>
                 La <strong>meva mare</strong> i <cite><strong>Josep Lluis Soler</strong></cite> per la
-                col·laborció en tasques de bricolatge per fer el joc de fitxes i la construcció dels escaquers.
+                col·laboració en tasques de bricolatge per fer el joc de fitxes i la construcció dels escaquers.
             </li>
             <li>També és de <strong><cite>Maria Angeles Lasaosa Gabarre</cite></strong>, la
                 <strong>meva mare</strong>, el dibuix de <i>La Pedrera</i> que decora la capçalera d'aquest
                 lloc web.
             </li>
             <li>
-                <cite>http://www.escaquejant.com</cite> un lloc web d'escacs en català força interessant,
-                Fou la primera que va enllaçar amb C'escacs... desgraciadament sembla que ja no està en línia.
-                Deixo l'enllaç com a referència, i per si es tornès a obrir, i el meu agraïment.
+                <cite>http://www.escaquejant.com</cite> <strong><cite>escaquejant</cite></strong>, un lloc web
+                d'escacs en català força interessant. Fou el primer que va enllaçar amb <i>C'escacs</i>...
+                desgraciadament sembla que ja no està en línia. Deixo l'enllaç com a referència, per si tornés
+                a obrir, i el meu agraïment.
             </li>
             <li>
-                <a href="http://www.chessvariants.org" class="cite" target="_blank">http://www.chessvariants.org</a>,
-                fou la referència més important quan m'inicí en el món de les variants d'escacs, un món molt
+                <a href="http://www.chessvariants.org" class="cite" target="_blank">http://www.chessvariants.org</a>
+                fou la referència més important quan m'inicií en el món de les variants d'escacs, un món molt
                 desconegut a Catalunya.
+				<ul>
+					<li>
+						També els
+						<strong><i><a href="https://www.chessvariants.com/graphics.dir/alfaerie/"
+										target="_blank" class="cite">Alfaerie Variant Chess Graphics</a></i></strong>
+						foren els primers símbols que vaig tenir per representar les diferents peces, ja des de
+						la primera versió del lloc web a <i>Geocities</i>.
+					</li>
+				</ul>
+            </li>
+			<li>
+				<cite><i>Vikipèdia</i></cite> i <cite><i>Wikimedia Commons</i></cite>, les grans fonts de material
+                documental general. Gràcies a tots els que les fan possibles.
+			</li>
+            <li>
+                A tots qui han tingut la paciència de jugar partides amb mi, que saben que no sóc un jugador molt bo,
+                i molt sovint m'han guanyat. Gràcies per totes les seves crítiques i aportacions que han fet durant
+                aquestes partides: amics, coneguts, companys de feina, i tots els desconeguts amb curiositat.
             </li>
             <li>
-                I a la resta de persones que han col·laborat d'una o altra forma a fer realitat aquest joc i difondre'l,
-                gràcies.
+                I a la resta de persones que han col·laborat d'una o altra manera a fer realitat aquest joc i difondre'l.
+                Contactes del lloc web d'<cite>Escaquejant</cite>, d'altres comunitats espanyoles, <i>Aragó</i>,
+                <i>Navarra</i> i <i>Galícia</i>, i també contactes més llunyans de <i>Mèxic</i>,
+                <i>Uruguai</i> i <i>Argentina</i>. Gràcies a tots.
             </li>
         </ul>
 
     </div>
 <footer>
     <div style="margin: 2em;">
-        <div style="text-align:right">Dedicat a les meves filles: <cite>Ada Sasal</cite> i <cite>Rut Sasal</cite></div>
+        <div style="text-align:right">Dedicat a les meves filles: <cite>Ada Sasal</cite> i <cite>Rut Mestre</cite></div>
         <div style="text-align:left">Barcelona, desembre de 2009, revissat en març de 2022</div>
         <div style="text-align:left">Cesc Sasal i Lasaosa</div>
         <div style="text-align:left">Contacte:<a class="cite"

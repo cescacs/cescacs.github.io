@@ -3,37 +3,106 @@
 
 <head>
 	<meta charset="UTF-8">
-	<!--
 	<link rel="alternate" hreflang="ca" href="../ca/glossary.html" />
+	<!--
 	<link rel="alternate" hreflang="en" href="../en/glossary.html" />
-	<meta name="description" content="C'escacs: Agradecimientos">
-	<meta name="keywords" content="C'escacs, Cescacs, Agradecimientos">
 	-->
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+	<!-- description -->
+	<meta name="twitter:card" content="summary_large_image">
+	<title>C'escacs: sobre C'escacs</title>
+	<meta property="og:title" content="C'escacs: sobre C'escacs">
+	<meta property="og:type" content="website" >
+	<meta property="og:locale" content="es-ES">
+	<meta name="description" property="og:description"
+		content="Breve historia del diseño y evolución de C'escacs.">
+	<!-- public imgbb image -->
+	<!-- https://ibb.co/jHTDkqc -->
+	<!-- https://i.ibb.co/BwtB2vX/logo-rich.png -->
+	<meta name="image" property="og:image" content="https://i.ibb.co/BwtB2vX/logo-rich.png">
+	<meta name="twitter:image" content="https://i.ibb.co/BwtB2vX/logo-rich.png">
 	<meta name="author" content="Cesc Sasal i Lasaosa">
+	<!-- end description -->
+	<meta name="keywords" content="C'escacs, Cescacs, Ajedrez hexagonal">
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../w3.css">
+	<link rel="stylesheet" type="text/css" href="../w3-colors-win8.css">
 	<link rel="stylesheet" type="text/css" href="../cescacs.css">
-	<title>C'escacs: Agraïments</title>
-	<meta http-equiv="refresh" content="5; URL=../working.html" />
+
+	<link rel="preload" as="image" href="../img/lasaosa.PC310001.png">
+	<link rel="preload" as="image" href="../img/logo.gif">
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap">
+	<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple"> -->
+	<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nabla&display=swap"> -->
+
+	<!-- Icons -->
+	<script src="https://kit.fontawesome.com/1efd89dd3e.js" crossorigin="anonymous"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHKYWCYH3N"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-CHKYWCYH3N');
+    </script>
 </head>
 
 <body>
-	<header class="w3-container w3-center">
-		<nav class="w3-bar w3-black">
-			<a href="../index.html" class="w3-bar-item w3-button w3-mobile menubar">Principal</a>
-			<a href="historical-milestones.html" class="w3-bar-item w3-button w3-mobile menubar">Referents</a>
-			<a href="the-corner.html" class="w3-bar-item w3-button w3-mobile menubar">El Racó</a>
-		</nav>
-		<h1 class="w3-container w3-text-grey title">
-			<img src="../img/logo.gif" alt="C'escacs" width="100%" style="max-width:600px;" />
-			<div>Agraïments</div>
-		</h1>
+	<header class="w3-center">
+		<div class="w3-container" style='background-image: url("../img/lasaosa.PC310001.png"); background-size:240px'>
+			<div class="w3-container" style="padding:0;">
+				<nav class="w3-bar w3-black" style="margin:0;">
+					<a href="../index.html" class="w3-bar-item w3-button w3-transparent"><i class="fa fa-home"></i></a>
+					<div class="w3-dropdown-hover">
+						<button class="w3-button">Más Reglas</button>
+						<div class="w3-dropdown-content w3-bar-block w3-card-4">
+							<a href="castling.html" class="w3-bar-item w3-button w3-mobile menubar">Movimentos especiales del Rey</a>
+							<a href="notation.html" class="w3-bar-item w3-button w3-mobile menubar">Notación</a>
+						</div>
+					</div>
+					<a href="../cescacs.typescript/cescacs.game.html" target="_blank" class="w3-bar-item w3-button w3-transparent"><i class='fas fa-chess'></i> play</a>
+					<div class="w3-dropdown-hover">
+						<button class="w3-button">Otros contenidos</button>
+						<div class="w3-dropdown-content w3-bar-block w3-card-4">
+							<a href="historical-milestones.html" class="w3-bar-item w3-button w3-mobile menubar">Referentes históricos</a>
+							<a href="the-corner.html" class="w3-bar-item w3-button w3-mobile menubar">El Rincón</a>
+							<a href="glossary.html" class="w3-bar-item w3-button w3-mobile menubar">Glosario</a>
+							<a href="#" class="w3-bar-item w3-button w3-mobile menubar">Sobre C'escacs</a>
+						</div>
+					</div>
+					<div class="w3-dropdown-hover w3-right" style="position:absolute ;">
+						<button class="w3-button"><img src="../img/esp.png" class="lang" alt="Español"></button>
+						<div class="w3-dropdown-content w3-bar-block w3-border" style="right:0;">
+							<a href="../ca/about.html" class="w3-bar-item w3-button w3-mobile menubar" hreflang="ca" lang="ca"><img
+									src="../img/ca.png" class="lang" alt="Català"> Català</a>
+							<a href="../en/about.html" class="w3-bar-item w3-button w3-mobile menubar" hreflang="en" lang="en"><img
+									src="../img/uk.png" class="lang" alt="English"> English</a>
+						</div>
+					</div>
+				</nav>
+			</div>
+			<img src="../img/logo.gif" alt="C'escacs" class="mainlogo" >
+			<!-- public imgbb image -->
+			<!-- https://i.ibb.co/Ycddy9p/logo.gif -->
+			<!-- https://ibb.co/x1ggfvJ -->
+		</div>
+		<div class="w3-container w3-opacity">
+			<!--  font-effect-shadow-multiple font-family: 'Bungee Spice', cursive; -->
+			<h1 class="w3-jumbo" style="font-family: 'Bungee Spice', cursive; color:#FFD700; margin-top:0;">C'escacs</h1>
+		</div>
 	</header>
-	<div class="w3-container">
-		<a href="https://www.youtube.com/watch?v=aVpIcqednBQ" target="_blank"><img src="../img/pigeonimpossible.gif"
-				alt="Pigeon impossible" style="width:189px" /></a>
-		<p>Disculpa, contenido todavía no disponible.</p>
-	</div>
 	<div class="w3-container">
 		<p>
 			Las primeras charlas empezaron con las partidas de <i>Kasparov</i> contra
@@ -45,13 +114,18 @@
 			como hacer el ajedrez más difícil para la máquina.
 		</p>
 		<p>
-			Bien, actualmente parecen unos orígenes con mucha ingenuidad en frente a las nuevas
+			Bien, actualmente parecen unos orígenes con mucha ingenuidad frente a las nuevas
 			técnicas como las de
 			<a href="historical-milestones.html#Alphazero" class="cescacs">AlphaZero</a>, pero en aquel
 			momento la máquina todavía no había ganado definitivamente a <i>Kasparov</i>, y la discusión
-			tenía más sentido; como informático, las discusiones entonces centradas en la <q>potencia</q>
-			de la máquina no eran suficientes, y los <q>heurísticos</q> a menudo requerían traspasar
+			tenía más sentido. Como informático, las discusiones entonces centradas en la <q>potencia</q>
+			de la máquina no eran suficientes, y usar <q>heurísticos</q> a menudo requiere traspasar
 			conocimientos de los expertos a los algoritmos, un punto que comporta dificultades y deficiencias.
+			Hoy en día la máquina adquiere estos conocimientos por aprendizaje, y justamente juegos como el
+			ajedrez han sido problemas muy adecuados para consolidar adelantos en este campo; tendríamos
+			que ser conscientes que también las habilidades humanas se tienen que ir desarrollando en tanto
+			las máquinas incorporen adelantos, y los juegos son un campo muy adecuado para desarrollar
+			ciertas habilidades.
 		</p>
 		<p>
 			Empezaron las ideas para <i class="cescacs">C'escacs</i> cuando una pequeña investigación me
@@ -82,7 +156,198 @@
 				aunque en realidad el problema era que la pieza no era la adecuada.
 			</p>
 		</aside>
+		<p>
+			Ya teníamos la primera versión del juego y de la página Web cuando contactamos con
+			<em><a href="historical-milestones.html#EscacsMccooey" target="_blank" class="cite"><cite>Dave
+				McCooey</cite></a></em>, que escuchó muy amablemente nuestras ideas. 
+				Sus comentarios fueron de gran ayuda para acabar de definir el diseño inicial de
+				<i class="cescacs">C'escacs</i> particularmente los <em>movimientos de los peones</em>, que
+				todavía no se habían acabado de definir. Consecuencia de estas conversaciones por email el peón
+				quedó definido con la opción de avanzar pasos dobles, y triples en los hexcacs de salida; mucho
+				más tarde también se incorporó la cabalgata por el caballo, una decisión difícil, pero que
+				claramente necesaria por motivos similares a los del movimiento de los peones.
+		</p>
+		<p>
+			<cite>McCooey</cite>> también nos criticó otros dos puntos, que no cambiamos inmediatamente,
+			pues teníamos que madurarlos:
+		</p>
+		<ul>
+			<li>
+				La pieza del <a href="glossary.html#Princep" class="cescacs"><cite>Príncipe</cite></a>,
+				que usábamos a las primeras versiones, nos advirtió que que era una pieza muy potente.
+				Además, en el tablero de 169 hexcaques resultaba muy lenta. 
+				Su diagnóstico era absolutamente acertado, y era el punto débil del juego.
+				Todavía no tenían alternativa, pero la idea era reforzar la potencia de los peones, que no podían
+				construir cadenas sólidas. Viendo que era una pieza de poca utilidad, dejamos a un lado la idea
+				de añadir algún tipo de <a href="glossary.html#Regalia" class="cescacs">Regalia</a>, como en el
+				<a href="historical-milestones.html#Xatranjalkabir" target="_blank" class="cite">ajedrez de Tamerlán</a>,
+				y empezamos a pensar en alternativas. También hicimos alguna prueba añadiéndole el movimiento de caballo
+				y denominando a la nueva pieza <i>León</i>, pero el caballo también sufría de un problema de velocidad;
+				añadir más potencia a la pieza no era el objetivo, y la problemática de los peones así no se solventaba.
+			</li>
+			<li>
+				También criticó el enroque, pues nos dijo que no aportaba nada. En realidad esta crítica hizo que más
+				adelante se incorporara también el <em><i>Salto del Rey</i></em>, origen del enroque, tanto en el ajedrez
+				ortodoxo como en <i>C'escacs</i>, pues la idea surgió de la existencia histórica de este movimiento.
+				Con la incorporación del <i>Salto del Rey</i> hacemos un guiño a la
+				<em><a href="historical-milestones.html#Escacsvariantindia" class="cescacs">historia del ajedrez</a></em>,
+				incluyendo la referencia al antiguo
+				<a href="historical-milestones.html#LlibreDelsJocs" class="cescacs">antiguo <i>Salto del Rey</i></a>
+				del ajedrez europeo, y la existencia de ambos movimientos deja más evidente la
+				función principalmente evasiva. Efectivamente, no tenía sentido obligar a un enroque, pero el movimiento
+				de la <i>Torre</i>, en alguna ocasión, puede representar una defensa adicional.
+				Junto con el <i>Salto del Rey</i> incorporamos el <em><i>enroque doble</i></em>, que permite a un jugador
+				avanzar movimientos en una posición defensiva, pero también a un jugador con una ventaja táctica le podría
+				llegar a permitir un posicionamiento agresivo, conectando con un movimiento ambas <i>Torres</i> en una
+				columna, a pesar de que no es ni su función ni el objetivo de este movimiento.
+			</li>
+		</ul>
+		<p>
+			El <cite>Applet</cite> de <cite>Java</cite> tuvo éxito y se me solicitó repetidamente incorporar un motor que
+			permitiera jugar partidas contra la máquina; desgraciadamente el <i>Applet</i> solo estaba pensado para forzar
+			los movimientos válidos y era necesario reescribir la programación, y tampoco teníamos tiempo para dedicar al
+			proyecto.
+		</p>
+		<p>
+			<em><cite>Dave McCooey</cite></em> realizó el análisis de jugadas finales en el tablero de 169 casillas,
+			confirmando que <em>dos caballos</em> no pueden hacer mate a un rey solitario, y también el análisis de jugadas
+			finales del <em><i>Príncipe</i></em>, pieza que en <cite>C'escacs</cite> ahora ya ha quedado descardada.
+		</p>
+		<p>
+			Otra aportación de <em><cite>McCooey</cite></em> fue en lo referente a la notación, llamándonos la atención
+			acerca del nombre de las columnas, sugiriéndonos usar para las columnas centrales los mismos nombres de las
+			columnas de <cite>Gliński</cite>, ampliando las columnas a izquierda y derecha, pero dejando la letra
+			<em><i>F</i></em> para la columna central. Este punto lo encontré muy interesante, pero la notación de
+			<i>Gliński</i> es problemática, y observé que numerando las líneas y avanzando la numeración por las columnas
+			de dos en dos la notación era mucho más coherente. Esta notación surgió espontáneamente, e investigando
+			posteriormente encontramos referencias en este sistema de coordenadas, obviamente ya inventado, a pesar
+			de que se usa muy poco, excepto en ámbitos tecnológicos, dada su idoneidad.
+		</p>
+		<p>En el año 2008 adquirí un <em><cite>Omega Chess</cite></em> (complicado de conseguir en España). Esta variante
+			del ajedrez es interesante, e incorpora una pieza llamada <em><cite>Campeón</cite></em>. 
+			Hicimos algunas partidas de <i>C'escacs</i> usando una adaptación hexagonal de esta pieza, en lugar del
+			<cite>Príncipe</cite>, pero resultaba engorrosa por los saltos diagonales y, posiblemente porque no éramos
+			muy versados a el <cite>Omega Chess</cite>, nos resultaba de muy poca utilidad. Hacer algunas adaptaciones
+			para obtener unos movimientos más sencillos que el <cite>Campeón</cite> resulta casi un requisito para usarla
+			en partidas de ajedrez hexagonal. La denominamos entonces <em><cite>Almogávar</cite></em>, pero tampoco era
+			la pieza que necesitaba <i class="cite">C'escacs</i>.
+		</p>
+		<p>
+			La alternativa definitiva llegó con los
+			<em><a href="historical-milestones.html#Elefant" class="cescacs"><i>Elefantes</i></a></em>,
+			justo la pieza que queríamos, que adaptamos del ajedrez oriental (birmano) investigando en la historia del
+			ajedrez, y encontrando que el
+			<a href="https://es.wikipedia.org/wiki/Ajedrez_birmano" target="_blank" class="cite">Sittuyin</a> todavía
+			se juega hoy en día. El nombre de <i>Elefante</i> presenta inconvenientes en algunos idiomas, destacadamente
+			en Árabe y en Ruso, pues se denomina <i>Elefante</i> al <i>Alfil</i>, por motivos históricos. En estos
+			idiomas el nombre <strong><i>Alabardero</i></strong> nos ha parecido el más adecuado y coherente.
+		</p>
+		<p>
+			El juego quedó finalmente definido en 2018, a pesar de que no fue publicado en el sitio web hasta 2022,
+			una vez exhaustivamente probado, y confirmados todos los cambios; otro cambio incorporado ha sido la
+			posición del <cite>Dragón</cite>, ahora definitivamente denominado <cite>Guiverno</cite>, a pesar de que el
+			nombre de <i>Dragón</i> se sigue aceptando. Este cambio de posición hace que la pieza no tenga debilidades
+			en las aperturas, retrasa su participación en el juego de manera positiva, y desplaza adelante los
+			<i>Alfiles</i>, dotándolos de más facilidad de movimiento al inicio del juego.
+		</p>
+		<p>
+			En lo referente a las <q>primeras aspiraciones</q> de hacer un ajedrez <q>difícil</q> para la máquina,
+			quizás no tiene mucho sentido hoy en día, pero sí podría ser una <q>nueva manera</q> de jugar al ajedrez,
+			si la <q>ayuda</q> de la máquina es un factor más, y las personas dirigimos la estrategia de la máquina.
+			Esto ya sería un juego prácticamente diferente al ajedrez, donde los jugadores asistidos tendrían habilidades
+			diferentes de las que puede tener un ajedrecista de hoy en día, y probablemente el juego de
+			<i class="cite">C'escacs</i> no es todavía suficientemente complejo para un desafío de este tipo...
+			pero tengo un nuevo proyecto de una ampliación de <i>C'escacs</i> a un juego virtual, que se jugaría solo
+			en ordenador. Difícilmente en tableros reales, pues se requerirían veinte tableros de <i>C'escacs</i>!
+			(esto son 3_380 hexcaques). Los amantes de los juegos de estrategia harían bien de recordar que
+			el ajedrez es el rey.
+		</p>
 	</div>
+    <div class="w3-container">
+        <h2 class="w3-container w3-pale-green w3-center w3-text-grey w3-xxlarge title">Agradecimientos</h2>
+        <ul>
+			<li>
+				<strong><cite>Jaume Farràs</cite></strong>, las tertulias de bar sobre una nueva variante de ajedrez,
+				por ser el principal instigador del juego, todas las partidas que hemos jugado... algunas de ellas
+				interminables, y otras muchas aportaciones.
+			</li>
+			<li>
+				<strong><cite>Dave McCooey</cite></strong>, inventor de una popular
+				<a href="historical-milestones.html#EscacsMccooey" class="cescacs"><q
+					cite="http://www.chessvariants.com/hexagonal.dir/hexchess2.html">variante de ajedrez hexagonal</q></a>,
+				y de un jueguito de ajedrez hexagonal adecuado como entretenimiento de viaje o pasatiempo,
+				<a href="historical-milestones.html#EscacsMccooey#MiniHexchess" class="cescacs">Mini
+                    Hexchess</a>. <cite>McCooey</cite> se interesó en el juego cuando todavía se encontraba en la etapa de
+				diseño. Su variante de ajedrez inspiró los movimientos de los peones de <i>C'escacs</i>, la captura en
+				diagonal cuando ya coneíamos el <i>ajedrez de Glinski</i>. Se puede decir que <i>C'escacs</i> nació
+				cuando se introdujo el movimiento doble y triple de los peones a consecuencia de algunos de sus
+				comentarios. También colaboró calculando los finales para un tablero hexagonal de 169 celdas, incluso
+				los finales para el <i>Príncipe</i>. Muchas gracias por todo.
+			</li>
+			<li>
+				<em>Mi madre</em> y <strong><cite>Josep Lluis Soler</cite></strong> por la colaboración en tareas de
+				bricolaje para hacer el juego de fichas y la construcción de los tableros.
+			</li>
+			<li>
+				También es de <strong><cite>Maria Angeles Lasaosa Gabarre</cite></strong>, <em>mi madre</em>, el dibujo de
+				<i>La Pedrera</i> que decora la cabecera de este sitio web.
+			</li>
+			<li>
+				<cite>http://www.escaquejant.com</cite> <strong><cite>escaquejant</cite></strong>, un sitio web de
+				ajedrez en catalán bastante interesante. Fue el primero que enlazó con <i>C'escacs</i>...
+				desgraciadamente parece que ya no está en línea. Dejo el enlace como referencia,
+				por si volviera a abrir, y mi agradecimiento.
+			</li>
+			<li>
+				<a href="http://www.chessvariants.org" class="cite" target="_blank">http://www.chessvariants.org</a>
+				fue la referencia más importante cuando me inicié en el mundo de las variantes del ajedrez,
+				un mundo muy desconocido en Cataluña.
+				<ul>
+					<li>
+						También los
+						<strong><i><a href="https://www.chessvariants.com/graphics.dir/alfaerie/"
+										target="_blank" class="cite">Alfaerie Variant Chess Graphics</a></i></strong>
+						fueron los primeros símbolos que tuve para representar las diferentes piezas, ya desde
+						la primera versión del sitio web en <i>Geocities</i>.
+					</li>
+				</ul>
+			</li>
+			<li>
+				<cite><i>Wikipedia</i></cite> y <cite><i>Wikimedia Commons</i></cite>, las grandes fuentes de material
+                documental general. Gracias a todos los que las hacen posibles.
+			</li>
+			<li>
+				A todos quienes han tenido la paciencia de jugar partidas conmigo, que saben que no soy muy buen jugador,
+				y muy a menudo me han ganado. Gracias por todas sus críticas y aportaciones que han hecho durante estas
+				partidas: amigos, conocidos, compañeros de trabajo, y todos los desconocidos con curiosidad.
+			</li>
+			<li>
+				Y al resto de personas que han colaborado de una u otra manera a hacer realidad este juego y difundirlo.
+				Contactos del sitio web de <cite>Escaquejant</cite>, de otras comunidades españolas, <i>Aragón</i>,
+				<i>Navarra</i> y <i>Galícia</i>, y también contactos más lejanos de <i>México</i>,
+				<i>Uruguay</i> y <i>Argentina</i>. Gracias a todos.
+			</li>
+		</ul>
+	</div>
+<footer>
+	<div style="margin: 2em;">
+		<div style="text-align:right">Dedicado a mis hijas: <cite>Ada Sasal</cite> y <cite>Rut Mestre</cite></div>
+		<div style="text-align:left">Barcelona, diciembre de 2009, revisado en marzo de 2022</div>
+		<div style="text-align:left">Cesc Sasal i Lasaosa</div>
+		<div style="text-align:left">Contacto:<a class="cite"
+				href="javascript:location='mailto:\u0063\u0065\u0073\u0063\u0061\u0063\u0073\u0040\u0079\u0061\u0068\u006f\u006f\u002e\u0063\u006f\u006d';void 0">
+				<script
+					type="text/javascript">document.write('\u0063\u0065\u0073\u0063\u0061\u0063\u0073\u0040\u0079\u0061\u0068\u006f\u006f\u002e\u0063\u006f\u006d')</script>
+			</a>
+		</div>
+	</div>
+	<div class="w3-container w3-purple w3-opacity" style="margin-top: 2em;">
+		<!-- Email -->
+		<h2 class="w3-container w3-pale-green w3-center title">
+			<img src="../img/cescacs-email-image.gif" alt="cescacs" style="height:1em; display: inline-block;">
+		</h2>
+	</div>
+</footer>
 </body>
 
 </html>
