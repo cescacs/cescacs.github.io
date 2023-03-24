@@ -171,6 +171,12 @@ figure.fig200 {
   text-align: center;
 }
 
+figure.fig400 {
+  width: 400px;
+  padding-left: 6px;
+  text-align: center;
+}
+
 img.lang {
   display: inline;
   width: 30px;

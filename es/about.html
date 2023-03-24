@@ -3,10 +3,9 @@
 
 <head>
 	<meta charset="UTF-8">
-	<link rel="alternate" hreflang="ca" href="../ca/glossary.html" />
-	<!--
-	<link rel="alternate" hreflang="en" href="../en/glossary.html" />
-	-->
+	<!-- ESPAÑOL -->
+	<link rel="alternate" hreflang="ca" href="../ca/about.html" />
+	<link rel="alternate" hreflang="en" href="../en/about.html" />
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -100,7 +99,9 @@
 		</div>
 		<div class="w3-container w3-opacity">
 			<!--  font-effect-shadow-multiple font-family: 'Bungee Spice', cursive; -->
-			<h1 class="w3-jumbo" style="font-family: 'Bungee Spice', cursive; color:#FFD700; margin-top:0;">C'escacs</h1>
+			<h1 class="w3-jumbo" style="font-family: 'Bungee Spice', cursive; color:#FFD700; margin-top:0;">
+				Sobre C'escacs
+			</h1>
 		</div>
 	</header>
 	<div class="w3-container">
@@ -129,31 +130,31 @@
 		</p>
 		<p>
 			Empezaron las ideas para <i class="cescacs">C'escacs</i> cuando una pequeña investigación me
-			llevó al <q>descubrimiento</q> del <i>ajedrez hexagonal de <cite>Glinski</cite></i>, y las
+			llevó al <q>descubrimiento</q> del <i>ajedrez hexagonal de <cite>Gliński</cite></i>, y las
 			primeras pruebas las hicimos con un tablero de cartón que construí. Así empezaron nuestros
 			primeros pasos por el mundo del <cite>ajedrez hexagonal</cite>. La geometría hexagonal
 			aumentaba el espacio de búsqueda significativa, y todavía se podía aumentar más haciendo
 			un tablero más grande... y si algunas piezas incorporaban más movimientos también ayudaría;
-			ya conocíamos el <em>ajedrez de Capablanca</em>, y las piezas del
+			ya conocíamos el <em>ajedrez de <cite>Capablanca</cite></em>, y las piezas del
             <a href="historical-milestones.html#Canceller" class="cite"><em>Canciller</em></a>
             y el <a href="historical-milestones.html#Arquebisbe" class="cite"><em>Arzobispo</em></a>.
 		</p>
 		<p>
-			En el año 2007 se materializaron las ideas en un tablero de cartón, y empezamos las primeras
-			partidas con una versión primitiva de <cite>C'escacs</cite>, que inicialmente usaba una pieza
-			denominada <a href="glossary.html#Princep" class="cescacs"><cite>Príncipe</cite></a>, con los
-			mismos movimientos que el rey, pero sin <i>regalía</i>. Por esta primera versión existió un
+			Finalmente, en el año 2007, se materializaron las charlas e ideas en un tablero de cartón,
+			y empezamos las primeras partidas con una versión primitiva de <cite>C'escacs</cite>, que
+			inicialmente usaba una pieza denominada
+			<a href="glossary.html#Princep" class="cescacs"><cite>Príncipe</cite></a>, con los
+			mismos movimientos que el rey, pero sin <i>regalía</i>. Para esta primera versión existió un
 			programa en un <cite>Applet</cite> <cite>Java</cite> para probar los movimientos, guardar y
 			visualizar las partidas desde una página web en <i>Geocities</i> (servicio que <em>Yahoo!</em>
-			cerró) donde estaban las reglas publicadas.
+			cerró), lugar donde también estaban publicadas las reglas.
 		</p>
 		<aside>
 			<p>A pesar de que el nombre del <a href="glossary.html#Pegas" target="_blank" class="cite">Pegaso</a>
 				y del <a href="glossary.html#Drac" target="_blank" class="cite">Dragón</a> habían sido
 				cuidadosamente elegidos, nos dimos cuenta que el nombre de
 				<a href="glossary.html#Princep" class="cescacs"><cite>Príncipe</cite></a> era inadecuado
-				sin la <i>regalía</i>, y en todo caso el nombre tendría que haber sido <q><i>infante</i></q>>... 
-				aunque en realidad el problema era que la pieza no era la adecuada.
+				sin la <i>regalía</i>...  aunque en realidad el problema era que la pieza no era la adecuada.
 			</p>
 		</aside>
 		<p>
@@ -178,8 +179,8 @@
 				Además, en el tablero de 169 hexcaques resultaba muy lenta. 
 				Su diagnóstico era absolutamente acertado, y era el punto débil del juego.
 				Todavía no tenían alternativa, pero la idea era reforzar la potencia de los peones, que no podían
-				construir cadenas sólidas. Viendo que era una pieza de poca utilidad, dejamos a un lado la idea
-				de añadir algún tipo de <a href="glossary.html#Regalia" class="cescacs">Regalia</a>, como en el
+				construir cadenas sólidas. Viendo que era una pieza de poca utilidad, dejamos a un lado la idea original
+				de añadir algún tipo de <a href="glossary.html#Regalia" class="cescacs">Regalía</a>, como en el
 				<a href="historical-milestones.html#Xatranjalkabir" target="_blank" class="cite">ajedrez de Tamerlán</a>,
 				y empezamos a pensar en alternativas. También hicimos alguna prueba añadiéndole el movimiento de caballo
 				y denominando a la nueva pieza <i>León</i>, pero el caballo también sufría de un problema de velocidad;
@@ -209,9 +210,10 @@
 			proyecto.
 		</p>
 		<p>
-			<em><cite>Dave McCooey</cite></em> realizó el análisis de jugadas finales en el tablero de 169 casillas,
-			confirmando que <em>dos caballos</em> no pueden hacer mate a un rey solitario, y también el análisis de jugadas
-			finales del <em><i>Príncipe</i></em>, pieza que en <cite>C'escacs</cite> ahora ya ha quedado descardada.
+			<em><cite>Dave McCooey</cite></em> realizó el <em><i>análisis de jugadas finales</i></em> en el tablero de
+			169 casillas, confirmando que <em>dos caballos</em> no pueden hacer mate a un rey solitario, y también el
+			<i>análisis de jugadas finales</i> del <em><i>Príncipe</i></em>, pieza que en <cite>C'escacs</cite> ahora
+			ya ha quedado descardada.
 		</p>
 		<p>
 			Otra aportación de <em><cite>McCooey</cite></em> fue en lo referente a la notación, llamándonos la atención
@@ -279,7 +281,7 @@
 				<a href="historical-milestones.html#MiniHexchess" class="cescacs">Mini
                     Hexchess</a>. <cite>McCooey</cite> se interesó en el juego cuando todavía se encontraba en la etapa de
 				diseño. Su variante de ajedrez inspiró los movimientos de los peones de <i>C'escacs</i>, la captura en
-				diagonal cuando ya coneíamos el <i>ajedrez de Glinski</i>. Se puede decir que <i>C'escacs</i> nació
+				diagonal cuando ya coneíamos el <i>ajedrez de Gliński</i>. Se puede decir que <i>C'escacs</i> nació
 				cuando se introdujo el movimiento doble y triple de los peones a consecuencia de algunos de sus
 				comentarios. También colaboró calculando los finales para un tablero hexagonal de 169 celdas, incluso
 				los finales para el <i>Príncipe</i>. Muchas gracias por todo.

@@ -3,10 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-	<!--
-	<link rel="alternate" hreflang="ca" href="../ca/glossary.html" />
-	<link rel="alternate" hreflang="en" href="../en/glossary.html" />
-	-->
+	<!-- ENGLISH -->
+	<link rel="alternate" hreflang="ca" href="../ca/about.html" />
+	<link rel="alternate" hreflang="es" href="../es/about.html" />
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -117,6 +116,221 @@
 			Choose an other language; then you can use some authomatic translation service.
 		</p>
 	</div>
-   
-</body>
+	<div class="w3-container">
+		<p>The first talks began around <i>Kasparov</i>'s games against
+			<a href="historical-milestones.html#DeepBlue" class="cescacs">Deep Blue</a>
+			in 1996, and after long talks with Jaume Farràs in the 
+			<a href="http://maps.google.es/maps?source=ig&hl=ca&q=moi%C3%A0,+barcelona&lr=&ie=UTF8&hq=&hnear=Moi%C3%A0,+Barcelona,+Catalunya&z=12"
+			class="cite" target="_blank">Barcelona town of Moià</a>,
+			explaining to him the technique of computers to play chess, since I am a computer scientist.
+			Debates began to turn to how to make chess more difficult for the machine.
+		</p>
+		<p>Well, nowadays they seem like naive origins in the face of new techniques like those of
+			<a href="historical-milestones.html#Alphazero" class="cescacs">AlphaZero</a>, but at that time
+			the machine had not yet definitively beaten <i>Kasparov</i>, and the discussion made more sense.
+		</p>
+		<p>As a computer scientist, discussions then focused on machine <q>power</q> were not enough, and using
+			<q>heuristics</q> often requires transferring knowledge from experts to algorithms, a point that brings
+			difficulties and shortcomings. Nowadays, the machine acquires this knowledge by learning, and games such
+			as chess have been very suitable problems to consolidate advances in this field; we should be aware that
+			human skills also have to be developed as machines incorporate advances, and games are a very suitable
+			field to develop certain skills.
+		</p>
+		<p>The ideas for <i class="cescacs">C'escacs</i> began when a little research led me to the <q>discovery</q>
+			of <i><cite>Gliński</cite>'s hexagonal chess</i>, and the first tries were made with a cardboard hexagonal
+			board that I built. Thus began our first steps into the world of hexagonal chess. The hexagonal geometry
+			increased the search space significantly, and could be further increased by making a larger board...
+			and if some pieces incorporated more moves it would also help; We already knew <em><cite>Capablanca</cite>'s
+				chess</em>, and the <a href="historical-milestones.html#Canceller" class="cite"><em>Chancellor</em></a>'s
+			and <a href="historical-milestones.html#Arquebisbe" class="cite"><em>Archbishop</em></a>'s pieces.
+		</p>
+		<p>Finally, in 2007, the talks and ideas materialised on a cardboard board, and we started the first games with
+			a primitive version of <i class="cescacs">C'escacs</i>, which initially used a piece called
+			<a href="glossary.html#Princep" class="cescacs"><cite>Prince</cite></a>, with the same moves as the king,
+			but without royalty. For this first version there was a program in a <cite>Java</cite> <cite>Applet</cite>
+			to test the moves, save and visualise the games from a web page in <i>Geocities</i> (a service that
+			<em>Yahoo!</em> closed down), where there were also published the rules.
+		</p>
+		<aside>
+			<p>Although the name of the <a href="glossary.html#Pegas" target="_blank" class="cite">Pegasus</a> and
+				the <a href="glossary.html#Drac" target="_blank" class="cite">Dragon</a> had been carefully chosen,
+				we realised that the name <a href="glossary.html#Princep" class="cescacs"><cite>Prince</cite></a>
+				was inadequate without the royalty... although in fact the problem
+				was that the piece was not the right one.
+			</p>
+		</aside>
+		<p>We already had the first version of the game and the website when we contacted
+			<em><a href="historical-milestones.html#EscacsMccooey" target="_blank" class="cite"><cite>Dave
+				McCooey</cite></a></em>, who very kindly listened to our ideas. His comments were of great
+			help in finalising the initial design of <i class="cescacs">C'escacs</i>, particularly the pawn moves,
+			which had not yet been defined.
+			As a result of these email conversations the <i>pawn</i> was defined with the option to advance <i>double</i>
+			and <i>triple</i> steps in the starting hexes; much later the <i>knight ride</i> was also incorporated,
+			a difficult decision, but clearly necessary for similar reasons to those of the pawn movement.
+		</p>
+		<p><cite>McCooey</cite> also criticised us on two other points, which we did not change immediately, as we had
+			to mature them:
+		</p>
+		<ul>
+			<li>The <a href="glossary.html#Princep" class="cescacs"><cite>Prince</cite></a>'s piece, which we used
+				in the early versions, warned us that it was a very powerful piece. Moreover, on the 169 hexes board
+				it was very slow. His diagnosis was absolutely right, and it was the weak point of the game. They
+				still had no alternative, but the idea was to strengthen the power of the pawns, which could not
+				build solid chains. Seeing that it was a piece of little use, we put aside the original idea of adding
+				some kind of <a href="glossary.html#Regalia" class="cescacs">royalty</a>, as in
+				<a href="historical-milestones.html#Xatranjalkabir" target="_blank" class="cite">Tamerlane's chess</a>,
+				and began to think of alternatives. We also did some testing by adding the knight move and naming the
+				new piece <i>Lion</i>, but the knight also suffered from a speed problem; adding more power to the
+				piece was not the aim, and the <i>pawn</i> problem was not solved.
+			</li>
+			<li>He also criticised castling, saying that it contributed nothing. In fact this criticism later led
+				to the incorporation of the <i>King's Leap</i>, the origin of castling, both in orthodox chess and
+				in <i class="cescacs">C'escacs</i>, as the idea arose from the historical existence of this move.
+				With the addition of the <i>King's Leap</i> we make a nod to the
+				<em><a href="historical-milestones.html#Escacsvariantindia" class="cescacs">history of chess</a></em>,
+				including the reference to the
+				<a href="historical-milestones.html#LlibreDelsJocs" class="cescacs"><i>old King's Leap</i></a> of
+				European chess, and the existence of both moves makes the mainly evasive function more evident.
+
+				There was no point in forcing a castling, indeed, but the <i>Rook</i>'s move can, on occasion,
+				represent an additional defence.
+
+				Together with the <i>King's Leap</i> we incorporate the <em><i>double castling</i></em>, which allows
+				a player to advance moves in a defensive position, but also allows a player with a tactical advantage
+				to take an aggressive position, connecting with one move both <i>Rooks</i> on a column, although it
+				is neither its function nor the objective of this move.
+			</li>
+		</ul>
+		<p>The <cite>Java</cite> <cite>Applet</cite> was successful and I was repeatedly asked to incorporate an
+			engine that would allow games to be played against the machine; unfortunately the <i>Applet</i> was
+			only intended to force valid moves and the programming had to be rewritten, and we had no time to
+			devote to the project.
+		</p>
+		<p><em><cite>Dave McCooey</cite></em> carried out the <em><i>endgame analysis</i></em> on the 169-hexes board,
+			confirming that <em>two knights</em> cannot mate a lone king, and also the <i>endgame analysis</i> of the
+			<em><i>Prince</i></em>, a piece that has now been discarded in <i class="cescacs">C'escacs</i>.
+		</p>
+		<p><cite>McCooey</cite>'s other contribution was with regard to notation, drawing our attention to the naming
+			of the columns, suggesting that we use for the central columns the same names as <cite>Gliński</cite>'s
+			columns, extending the columns left and right, but leaving the letter <em><i>F</i></em> for the central
+			column. I found this point very interesting, but <cite>Gliński</cite>'s notation is problematic, and I
+			observed that by numbering the lines and advancing the numbering through the columns two by two the
+			notation was much more coherent. This notation arose spontaneously, and on further research we found
+			references in this coordinate system, obviously already invented, although it is rarely used, except in
+			technological fields, given its suitability.
+		</p>
+		<p>In 2008 I acquired an <em><cite>Omega Chess</cite></em> (difficult to get in Spain). This chess variant is
+			interesting, and incorporates a piece called <em><cite>Champion</cite></em>.
+			We played a few games of <i class="cescacs">C'escacs</i> using a hexagonal adaptation of this piece,
+			instead of the <cite>Prince</cite>, but it was cumbersome because of the diagonal jumps and, possibly
+			because we were not well versed in <cite>Omega Chess</cite>, it was of little use to us.
+			Making some adaptations to obtain simpler moves than the <cite>Champion</cite> is almost a requirement
+			to use it in hexagonal chess games. We then called it <em><cite>Almogavar</cite></em>, but it was not the
+			piece that <i class="cescacs">C'escacs</i> needed either.
+		</p>
+		<p>The ultimate alternative came with
+			<em><a href="historical-milestones.html#Elefant" class="cescacs"><i>Elephants</i></a></em>, just the piece
+			we wanted, which we adapted from
+			Eastern (Burmese) chess by researching the history of chess, and finding that
+			<a href="https://en.wikipedia.org/wiki/Sittuyin" target="_blank" class="cite">Sittuyin</a> is still
+			played today. The name <i>Elephant</i> has drawbacks in some languages, notably Arabic and Russian,
+			as the <i>Bishop</i> is called <i>Elephant</i>, for historical reasons. In these languages the name
+			<i>Halberdier</i> seems to us to be the most appropriate and consistent.
+		</p>
+		<p>The game was finally defined in 2018, although it was not published on the website until 2022, once all
+			the changes had been thoroughly tested and confirmed; another change incorporated was the position of
+			the <cite>Dragon</cite>, now definitely called <cite>Wyvern</cite>, although the name <i>Dragon</i>
+			is still accepted. This change of position means that the piece has no weaknesses in the openings, delays
+			its participation in the game in a positive way, and moves the Bishops forward, giving them more ease
+			of movement at the start of the game.
+		</p>
+		<p>As for the <q>early aspirations</q> of making chess <q>difficult</q> for the machine, perhaps it does not
+			make much sense today, but it could be a <q>new way</q> to play chess, if the machine <q>help</q> is a
+			factor, and people direct the machine's strategy. This would already be a practically different game
+			from chess, where the assisted players would have different skills than a chess player of today, and
+			probably the game of <i class="cescacs">C'escacs</i> is not yet complex enough for such a challenge...
+			But I have a new project of an extension of <i class="cescacs">C'escacs</i> to a virtual game, to be
+			played only on computer. Hardly on real boards, as it would require twenty C'escacs boards (that's
+			3_380 hexes). Lovers of strategy games would do well to remember that chess is king.
+		</p>
+	</div>
+    <div class="w3-container">
+        <h2 class="w3-container w3-pale-green w3-center w3-text-grey w3-xxlarge title">
+			Acknowledgements
+		</h2>
+        <ul>
+			<li><strong><cite>Jaume Farràs</cite></strong> the bar chats about a new chess variant, for being
+				the main instigator of the game, all the games we have played... some of them endless, and many
+				other contributions.
+			</li>
+			<li><strong><cite>Dave McCooey</cite></strong> inventor of a popular
+				<a href="historical-milestones.html#EscacsMccooey" class="cescacs"><q
+					cite="http://www.chessvariants.com/hexagonal.dir/hexchess2.html">hexagonal chess variant</q></a>,
+				 and of a little hexagonal chess game suitable for travel entertainment or pastime,
+				 the <a href="historical-milestones.html#MiniHexchess" class="cescacs">Mini Hexchess</a>.
+				 <cite>McCooey</cite> became interested in the game while it was still in the design stage.
+				 His chess variant inspired the pawn moves of <i class="cescacs">C'escacs</i>, the diagonal
+				 capture when we already knew <cite>Gliński</cite>'s chess. It can be said that
+				 <i class="cescacs">C'escacs</i> was born when the double and triple pawn moves were introduced
+				 as a result of some of his comments. He also collaborated by calculating the endgames for a
+				 169-cell hexagonal board, including the endgames for the <i>Prince</i>.
+				 Many thanks for everything.
+			</li>
+			<li><em>My mother</em> and <strong><cite>Josep Lluis Soler</cite></strong> for their collaboration in
+				<i>DIY</i> tasks to make the set of pieces and the construction of the boards.
+			</li>
+			<li>Also by <strong><cite>Maria Angeles Lasaosa Gabarre</cite></strong>, <em>my mother</em>, is
+				the drawing of <i>La Pedrera</i> that decorates the header of this website. I have associated this
+				drawing with the game ever since I incorporated it into a wooden box in which I used to keep the
+				chessmen.
+			</li>
+			<li><cite>http://www.escaquejant.com</cite> <strong><cite>Escaquejant</cite></strong> a rather
+				interesting chess website in Catalan. It was the first one that linked to
+				<i class="cescacs">C'escacs</i>... unfortunately it seems that it is no longer online.
+				I leave the link as a reference, in case it reopens, and my thanks.
+			</li>
+			<li><a href="http://www.chessvariants.org" class="cite" target="_blank">http://www.chessvariants.org</a>
+				was the most important reference when I started in the world of chess variants, a very unknown
+				world in Catalonia.
+				<ul>
+					<li>Also the <strong><i><a href="https://www.chessvariants.com/graphics.dir/alfaerie/"
+						target="_blank" class="cite">Alfaerie Variant Chess Graphics</a></i></strong> were the
+						first symbols I had to represent the different pieces, already from the first version
+						of the Geocities website.
+					</li>
+				</ul>
+			</li>
+			<li><cite><i>Wikipedia</i></cite> and <cite><i>Wikimedia Commons</i></cite>
+				the great sources of general documentary material. Thanks to all who make them possible.
+			</li>
+			<li>To all those who have had the patience to play games with me, who know that I'm not a very good player,
+				and very often have beaten me. Thanks for all your criticisms and contributions during these games:
+				friends, acquaintances, co-workers, and all those curious strangers.
+			</li>
+			<li>And to the rest of the people who have collaborated in one way or another to make this game a reality
+				and to spread it. Contacts from the website Escaquejant, also from other Spanish communities, Aragón,
+				Navarra and Galicia, and also more distant contacts from Mexico, Uruguay and Argentina. Thanks a lot
+				to all of you.
+			</li>
+		</ul>
+	</div>
+	<footer>
+		<div style="margin: 2em;">
+			<div style="text-align:right">Dedicated to my daughters: <cite>Ada Sasal</cite> and <cite>Rut Mestre</cite></div>
+			<div style="text-align:left">Barcelona, December 2009, revised March 2022</div>
+			<div style="text-align:left">Cesc Sasal i Lasaosa</div>
+			<div style="text-align:left">Contact:<a class="cite"
+					href="javascript:location='mailto:\u0063\u0065\u0073\u0063\u0061\u0063\u0073\u0040\u0079\u0061\u0068\u006f\u006f\u002e\u0063\u006f\u006d';void 0">
+					<script>document.write('\u0063\u0065\u0073\u0063\u0061\u0063\u0073\u0040\u0079\u0061\u0068\u006f\u006f\u002e\u0063\u006f\u006d')</script>
+				</a>
+			</div>
+		</div>
+		<div class="w3-container w3-purple w3-opacity" style="margin-top: 2em;">
+			<!-- Email -->
+			<h2 class="w3-container w3-pale-green w3-center title">
+				<img src="../img/cescacs-email-image.gif" alt="cescacs" style="height:1em; display: inline-block;">
+			</h2>
+		</div>
+	</footer>
+	</body>
 </html>

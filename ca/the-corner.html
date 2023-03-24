@@ -1,0 +1,998 @@
+<!DOCTYPE HTML>
+<html lang="ca">
+
+<head>
+	<meta charset="UTF-8">
+	<!-- CATALÀ -->
+	<!-- 
+	<link rel="alternate" hreflang="es" href="../es/the-corner.html" />
+	<link rel="alternate" hreflang="en" href="../en/the-corner.html" />
+	-->
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+	<!-- description -->
+	<meta name="twitter:card" content="summary_large_image">
+	<title>C'escacs: El Racó</title>
+	<meta property="og:title" content="C'escacs: El Racó">
+	<meta property="og:type" content="website" >
+	<meta property="og:locale" content="ca-ES">
+	<meta name="description" property="og:description"
+		content="Altres continguts relacionats amb C'escacs.">
+	<!-- public imgbb image -->
+	<!-- https://ibb.co/jHTDkqc -->
+	<!-- https://i.ibb.co/BwtB2vX/logo-rich.png -->
+	<meta name="image" property="og:image" content="https://i.ibb.co/BwtB2vX/logo-rich.png">
+	<meta name="twitter:image" content="https://i.ibb.co/BwtB2vX/logo-rich.png">
+	<meta name="author" content="Cesc Sasal i Lasaosa">
+	<!-- end description -->
+	<meta name="keywords" content="C'escacs, Cescacs, Escacs hexagonals">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../w3.css">
+	<link rel="stylesheet" type="text/css" href="../w3-colors-win8.css">
+	<link rel="stylesheet" type="text/css" href="../cescacs.css">
+
+	<link rel="preload" as="image" href="../img/lasaosa.PC310001.png">
+	<link rel="preload" as="image" href="../img/logo.gif">
+
+    <!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap">
+	<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple"> -->
+	<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nabla&display=swap"> -->
+
+	<!-- Icons -->
+	<script src="https://kit.fontawesome.com/1efd89dd3e.js" crossorigin="anonymous"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHKYWCYH3N"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-CHKYWCYH3N');
+    </script>
+</head>
+
+<body>
+	<header class="w3-center">
+		<div class="w3-container" style='background-image: url("../img/lasaosa.PC310001.png"); background-size:240px'>
+			<div class="w3-container" style="padding:0;">
+				<nav class="w3-bar w3-black" style="margin:0;">
+					<a href="../index.html" class="w3-bar-item w3-button w3-transparent"><i class="fa fa-home"></i></a>
+					<div class="w3-dropdown-hover">
+						<button class="w3-button">Més Regles</button>
+						<div class="w3-dropdown-content w3-bar-block w3-card-4">
+							<a href="castling.html" class="w3-bar-item w3-button w3-mobile menubar">Moviments especials del Rei</a>
+							<a href="notation.html" class="w3-bar-item w3-button w3-mobile menubar">Notació</a>
+						</div>
+					</div>
+					<a href="../cescacs.typescript/cescacs.game.html" target="_blank" class="w3-bar-item w3-button w3-transparent"><i class='fas fa-chess'></i> play</a>
+					<div class="w3-dropdown-hover">
+						<button class="w3-button">Altres continguts</button>
+						<div class="w3-dropdown-content w3-bar-block w3-card-4">
+							<a href="historical-milestones.html" class="w3-bar-item w3-button w3-mobile menubar">Referents històrics</a>
+							<a href="#" class="w3-bar-item w3-button w3-mobile menubar">El Racó</a>
+							<a href="glossary.html" class="w3-bar-item w3-button w3-mobile menubar">Glossari</a>
+							<a href="about.html" class="w3-bar-item w3-button w3-mobile menubar">Sobre C'escacs</a>
+						</div>
+					</div>
+					<div class="w3-dropdown-hover w3-right" style="position:absolute ;">
+						<button class="w3-button"><img src="../img/ca.png" class="lang" alt="Català"></button>
+						<div class="w3-dropdown-content w3-bar-block w3-border" style="right:0;">
+							<a href="../es/the-corner.html" class="w3-bar-item w3-button w3-mobile menubar" hreflang="es" lang="es"><img
+									src="../img/esp.png" class="lang" alt="Español"> Español</a>
+							<a href="../en/the-corner.html" class="w3-bar-item w3-button w3-mobile menubar" hreflang="en" lang="en"><img
+									src="../img/uk.png" class="lang" alt="English"> English</a>
+						</div>
+					</div>
+				</nav>
+			</div>
+			<img src="../img/logo.gif" alt="C'escacs" class="mainlogo" >
+			<!-- public imgbb image -->
+			<!-- https://i.ibb.co/Ycddy9p/logo.gif -->
+			<!-- https://ibb.co/x1ggfvJ -->
+		</div>
+		<div class="w3-container w3-opacity">
+			<!--  font-effect-shadow-multiple font-family: 'Bungee Spice', cursive; -->
+			<h1 class="w3-jumbo" style="font-family: 'Bungee Spice', cursive; color:#FFD700; margin-top:0;">
+                El Raco de C'escacs
+            </h1>
+			<h1 style="text-align: center;">Recull de continguts diversos</h1>
+		</div>
+	</header>
+	<main>
+	<!-- Repositori Github -->
+	<article>
+		<h2 class="w3-container w3-center w3-pale-green header2">Repositori <i>Github</i></h2>
+		Aquest lloc web, i tot el seu contingut es troba publicat a
+		<a href="https://github.com/cescacs/cescacs.github.io" target="_blank"
+			class="cite">https://github.com/cescacs/cescacs.github.io</a>.
+		També trobarem el repositori
+		<a href="https://github.com/cescacs/cescacs.typescript" target="_blank"
+			class="cite">https://github.com/cescacs/cescacs.typescript</a>
+		amb la programació de les regles del joc en typescript; és cert que aquest repositori té
+		alguna dependència de fitxers del repositori principal, però de poca importància, com ara
+		alguns fitxers css.
+	</article>
+	<!-- Excaquer per imprimir -->
+	<article class="w3-container">
+		<h2  class="w3-container w3-center w3-pale-green header2">Hexcaquer per imprimir</h2>
+		<figure class="third">
+			<img src="../img/cescacs.svg" alt="One of my sets" style="width:100%">
+		</figure>
+		<p>En <a href="../img/cescacs.svg" target="_blank" class="cescacs">aquest enllaç</a> n'hi ha un hexcaquer en
+			format <i>.SVG</i> per a imprimir-lo.
+			Es recomana imprimir-ho en format <i>DINA-1</i>, que pot fer-se dividint-lo en <strong>quatre parts</strong>
+			<i>DINA-3</i>, per poder plegar-lo.
+			Les DINA-3 es poden retallar deprés d'imprimir, doncs per la proporció llarg-ample de l'hexàgon,
+			es perd una mica de paper; la mida final resultant és en realitat inferior a <i>DINA-1</i>.
+		</p>
+		<p>Imprimint en la mitad, en cuatro <i>DINA-4</i>, obtenim un hexcaquer per a peces miniatura,
+			molt justa, però una mida encara suficient per jugar una partida dues persones: una mida d'hexcac
+			d'uns 2.4 cm que requereix fitxes petites.
+			També es pot imprimir aquest hexcaquer petit en una alternativa equivalent: imprimir en
+			dues parts <i>DINA-3</i>, com es veu en la foto.
+			Potser és la millor alternativa per a un tauler petit plegable.
+		</p>
+	</article>
+	<!-- Fotos de peces, escaquer -->
+	<article class="w3-container">
+		<h2  class="w3-container w3-center w3-pale-green header2">Exemple de peces i tauler</h2>
+		<figure class="third-rest" style="margin:0">
+			<img src="../img/IMG_20220331_Hexcaquer-min.jpg" alt="One of my sets" style="width:100%">
+			<figcaption style="padding-right:0.5em; padding-left:0.5em">
+				Un hexcaquer en una mida <i>manegable</i> (2xDIN-A3),
+				amb el joc de fitxes que es veuen en l'altre imatge en la capsa.
+				<p>En aquesta foto, com a <i>Drac</i> i <i>Elefants</i>,
+					he fet servir unes peces de bronze comprades a Xina
+					(el <i>Drac</i> en realitat és un incensiari), però m'agraden
+					més que la figura de <i>Posidó</i> i els <i>Atles</i>.
+					Això sí, els <i>Pegasus</i> dels
+					<span class="w3-small">
+						<a href="https://www.marinakisbros.com/" target="_blank" class="cite"> Germans Marinakis</a>
+					</span> són genials!
+				</p>
+			</figcaption>
+		</figure>
+		<figure class="third" style="margin:0">
+			<img src="../img/IMG_20201220_Set-min.jpg" alt="One of my sets" style="width:100%">
+			<figcaption style="padding-right:0.5em; padding-left:0.5em">
+				Aquestes fitxes s'han adquirit per correu als
+				<span class="w3-small">
+					<a href="https://www.marinakisbros.com/" target="_blank" class="cite"> Germans Marinakis</a>
+				</span>, de <i>Grècia</i>.
+			</figcaption>
+		</figure>
+		<figure class="third" style="margin:0">
+			<img src="../img/fitxes.jpg" alt="One of my sets" style="width:100%">
+			<figcaption style="padding-right:0.5em; padding-left:0.5em">
+				Aquestes peces de fusta foren les primeres que vaig fer servir.
+				Són per a un hexcaquer més gran, de mida normal,
+				fetes ajuntant troços d'altres peces,
+				i els <i>Elefants</i>, marcant peons amb una moneda d'un cèntim.
+			</figcaption>
+		</figure>
+		<div class="twothirds" style="padding-left: 0.5em;">
+			<p>La capsa l'he feta per incloure-hi només les fitxes addicionals. Per a cada jugador:
+			</p>
+			<ul>
+				<li>Un Drac; en la foto, Posidó.</li>
+				<li>Dos Pegasus.</li>
+				<li>Quatre Elefants; en la foto, Atles.</li>
+				<li>Tres Peons.</li>
+				<li>Un Alfil.</li>
+			</ul>
+			<p>
+			</p>
+		</div>
+		<!-- Enllaç peces gregues -->
+		<div class="w3-container">
+			Les figures dels <a href="https://www.marinakisbros.com/" target="_blank" class="cite"> Germans
+				Marinakis</a> són part d'el meus <i class="cescacs">C'escacs</i> de metall de petita mida.
+			Desgraciadament ha canviat el portal de pagament, i ara només veig jocs d'escacs sencers, però abans
+			podies comprar per correu peces per separat, per complementar un joc sencer d'escacs ortodoxes amb
+			les peces necessàries per fer un joc de <i class="cescacs">C'escacs</i>. Tampoc tenien cap peça en
+			forma d'elefant, en realitat un classic dels escacs, tot i haver estat <i>Pèrsia</i> la porta d'entrada a
+			Occident dels escacs, i un dels històrics enemics dels <i>grecs</i>, fent que fins i tot <i>Alexandre</i>
+			n'hi fes servir, d'elefants.
+		</div>
+	</article>
+	<!-- Mini Hexchess -->
+	<article class="w3-container">
+		<h2  class="w3-container w3-center w3-pale-green header2"><a href="../other/minihexchess.svg" target="_blank"
+				class="cite">Mini Hexchess</a></h2>
+		<figure class="half">
+			<img src="../img/mini.h-min.png" alt="Mini Hexchess" class="fullwidth">
+		</figure>
+		<p>Els <a href="https://www.chessvariants.com/hexagonal.dir/minihex.html" target="_blank" class="cite">Mini
+				Hexchess</a> són uns escacs hexagonals miniatura, en un <i>hexcaquer</i> de 37 <i>hexcacs</i>,
+			dissenyats per <cite>Dave McCooey</cite>. Són un gran passatemps, i una manera alternativa d'introduir-se en
+			els <cite>Hexcacs Hexagonals</cite>, diferent i més frivola a l'alternativa de jugar una partida als escacs
+			de <cite>Gliński</cite>, o la variant de <cite>McCooey</cite>.
+		</p>
+		<p>
+			<a href="../other/minihexchess.svg" target="_blank" class="cite">Aquí podem obtenir un hexcaquer per
+				jugar</a>,
+			i les <a href="../other/minihexchess.pdf" target="_blank" class="cite">regles en català, anglès i
+				castellà</a>. El material
+			és mínim, només nou peces per a cada jugador, doncs només fa servir cinc <i>Peons</i>, una <i>Torre</i>,
+			un <i>Cavall</i>, un <i>Alfil</i> i el <i>Rei</i>. No es fa servir la <i>Dama</i>, i es juga només amb un
+			<i>Alfil</i>.
+		</p>
+	</article>
+	<!-- Hexagonal Grids -->
+	<article class="w3-container">
+		<h2 class="w3-container w3-center w3-pale-green header2">Hexcaquers i coordenades</h2>
+		<p>Els <a href="historical-milestones.html#Escacshexagonals" class="cescacs">escacs hexagonals</a>
+			van tenir uns inicis incerts: <i>Thomas Hanmer Croughton</i> en 1853,
+			<i>Hexagònia</i> en 1864, <i>Lord Baskerville</i> en 1929... però finalment <em>Władysław Gliński</em>
+			en 1936 inventà els escacs hexagonals, perfectament jugables.
+		</p>
+
+		<p>Els hexcaquers, i en general, els taulers de joc fets d'hexàgons, han estat una curiositat matemàtica des de
+			la seva introducció en el món dels jocs, destacant <a href="https://en.wikipedia.org/wiki/Hex_(board_game)"
+				target="_blank" class="cite">Hex</a>, joc inventat pel matemàtic danès <cite>Piet Hein</cite> en 1942.
+			En 1950 <cite>Claude Shannon</cite> construí una màquina analògica que jugava a <cite>Hex</cite>
+			raonablement. Més tard, el joc va ser comentat per <cite>Martin Gardner</cite> en la seva columna del
+			<cite>Scientific American</cite>.
+		</p>
+		<p>El món dels taulers hexagonals està descrit en el lloc web
+			<a href="https://www.redblobgames.com/grids/hexagons/" target="_blank" class="cite">Heagonal Grids</a>,
+			de <cite>Red Blob Games</cite>. Aquí trobarem algorismes per implementar jocs en taulers hexagonals, els
+			<a href="https://www.redblobgames.com/grids/hexagons/#coordinates" target="_blank" class="cite">sistemes
+				de Coordenades</a>, on podem trobar descrit el sistema que fa servir <i class="cescacs">C'escacs</i>,
+			que ell anomena <cite>Doubled coordinates</cite>. No parla en concret dels escacs hexagonals; els escacs de
+			<cite>Gliński</cite> i <cite>McCooey</cite> fan servir un sistema de coordenades que podriem anomenar
+			<i>axial doble</i>, doncs fan servir un sistema de coordenades axial diferent en cada meitat de l'hexcaquer.
+		</p>
+		<p>També trobarem en el lloc web de <cite>Red Blob Games</cite> un
+			<a href="https://www.redblobgames.com/grids/hexagons/implementation.html" target="_blank"
+				class="cite">apartat per a programadors, referent a l'implementació</a>.
+		</p>
+	</article>
+	<!-- Estimacions de finals per Dave McCooey -->
+	<article class="w3-container">
+		<h2 class="w3-container w3-center w3-pale-green header2">Estimacions de finals per Dave McCooey</h2>
+		<h3 class="w3-container w3-pale-yellow w3-center">Finals de joc en hexcaquers de 91 casillas (Gliński/McCooey)
+		</h3>
+		Els finals dels escacs hexagonals han estat estudiats en profunditat per Dave McCooey i els resultats s'apliquen
+		tant als escacs de Gliński com al de McCooey.
+
+		<ul class="w3-ul">
+			<li><strong>El <i>Rei</i> i una <i>Torre</i></strong> poden fer escac mat a un <i>Rei solitari</i>.</li>
+			<li>El <i>Rei</i> i dos <i>Cavalls</i> poden fer escac mat a un <i>Rei solitari</i>.</li>
+			<li>El <i>Rei</i>, un <i>Cavall</i> i un <i>Alfil</i> no poden fer mat a un <i>Rei solitari</i>, excepte en
+				comptades i molt rares posicions (0.5%).</li>
+			<li>El <i>Rei</i> i dos <i>Alfils</i> no poden fer escac mati a un <i>Rei solitari</i>, excepte en comptades
+				i molt rares posicions (0.17 %).</li>
+			<li><strong>El <i>Rei</i> i una <i>Torre</i></strong> vencen un <i>Rei</i> i un <i>Alfil</i> (sense excepció).</li>
+			<li><strong>El <i>Rei</i> i una <i>Torre</i></strong> vencen un <i>Rei</i> i un <i>Cavall</i> (excepte un petit nombre de
+				casos (0.0019 %) en què es produeix taules per escac perpetu).</li>
+			<li><strong>El <i>Rei</i> i la <i>Dama</i></strong> <strong>no</strong> vencen un
+				<strong><i>Rei</i> i una <i>Torre</i></strong>: 4.3 % de les posicions són
+				taules per escac perpetu, i un 37.2 % són taules (no s'assoleix el mat).</li>
+		</ul>
+
+		<h3 class="w3-container w3-pale-green w3-center header2 w3-text-grey">Ampliació per a finals de joc
+			en hexcaquers de 169 hexcacs (C'escacs)</h3>
+		En general els resultats en hexcaquers de 91 hexcacs són extrapolables als hexcaquers de 169 hexcacs, pero amb
+		una notable excepció:
+		<ul class="w3-ul">
+			<li class="w3-panel w3-red">El <i>Rei</i> i dos <i>Cavalls</i> <b>no</b> poden fer escac mat
+				 a un <i>Rei</i> solitari.
+				 <span style="font-size: small;">Però sí el poden fer en els hexcaquers amb 91 hexcacs
+					de Gliński i McCooey.</span>
+			</li>
+		</ul>
+		<h4 class="w3-container w3-pale-yellow w3-center">Per a les peces incorporades a C'escacs (<i>Drac</i>,
+			<i>Pegàs</i>)
+		</h4>
+		<ul class="w3-ul">
+			<li>El <i>Drac</i> i la <i>Dama</i> tenen aproximadament la mateixa potència.
+				La <i>Dama</i> és preferible contra el <i>Pegàs</i>, però el <i>Drac</i> és molt millor contra la
+				<i>Torre</i>.
+			</li>
+			<li><strong>El <i>Rei</i> amb un <i>Pegàs</i> i un <i>Cavall</i></strong> poden fer mat a un <i>Rei solitari</i>.</li>
+			<li><strong>El <i>Rei</i> amb un <i>Pegàs</i> i un <i>Alfil</i></strong> poden fer mat a un <i>Rei solitari</i>.</li>
+			<li><strong>El <i>Rei</i> i una <i>Dama</i></strong> vencen un <i>Rei</i> i un <i>Pegàs</i>.</li>
+			<li>El <i>Rei</i> amb un peó contra un <i>Rei</i> solitari resultarà en la coronació del peó, si el
+				<i>Rei</i> és prou a prop com per defensar-lo (no cal l'oposició).
+			</li>
+		</ul>
+	</article>
+	<!-- joc javascript -->
+	<article class="w3-container">
+		<h2  class="w3-container w3-center w3-pale-green header2">
+			<a href="../cescacs.typescript/cescacs.game.html" target="_blank" class="w3-bar-item w3-button w3-transparent"><i class='fas fa-chess'></i>
+			<i>C'escacs</i> en javascript per jugar</a></h2>
+		<p>
+			L'apartat més important era <q>recuperar</q> el que en el seu moment va haver en un <i>Applet</i> de <i>Java</i>
+			fet servir tecnologies més modernes, sempre amb execució en el client, sense dependència de servidor.
+		</p>
+		<p>
+			Principalment permet l'enregistrament de partides, tot i que actualment encara no compta amb un emmagatzematge
+			en línia, però es poden descarregar, tant com a posició, o detallant tots els moviments de la partida.
+			Aquestes partides descarregades posteriorment es poden carregar; aquestes funcionalitats són les mateixes
+			que tenia inicialment el <i>Applet</i> <i>Java</i>.
+		</p>
+		<p>
+			Els plans de futur consisteixen en incorporar un <i>WebAssembly</i> desenvolupat en <i>Rust</i>
+			per aportar una poda d'arbre <i>minimax</i> amb una <i>proposta de millor jugada</i> per part de
+			<i>la màquina</i>, però sense participar un servidor aquesta opció clàssica és la màxima opció abastable
+			de manera senzilla, i la participació de tècniques d'<i>IA</i> queda de moment fora de l'horitzó
+			d'implementacions immediates.
+		</p>
+
+		<h3 class="w3-container w3-pale-yellow w3-center">Variant Grand <i>C'escacs</i> incorporada</h3>
+		<p>El joc permet triar la que es denomina <i>variant <q>Grand C'escacs</q></i>, i fins i tot, <i>en broma</i>
+			es fa servir el nom <q><i>Grand Hunigcamb Chess</i></q>. No és una variant gaire provada, i probablement
+			requereix perfeccionament, però incorpora alguns canvis interessants:
+		</p>
+		<ul class="w3-ul">
+			<li>Es fan servir <strong>quatre cavalls</strong>, en comptes de dos.</li>
+			<li>Les posicions de les <strong>torres es desplacen</strong> una columna més cap als flancs.
+				Això té afectacions:
+				<ul>
+					<li>Les posicions d'enroc canvïen, i són més limitades;
+						l'enroc doble només es dona saltant el <i>Rei</i> a la columna <i>F</i>.
+					</li>
+					<li>
+						Les posicions inicials dels peons en les columnes <i>B</i> i <i>I</i> canvia, passant
+						a estar més avançada, però conserva l'opció de moviment triple.
+					</li>
+					<li>
+						Els peons de les columes <i>A</i> i <i>L</i> ara incorporen moviment triple.
+					</li>
+				</ul>
+			</li>
+			<li>S'afegeixen peons en les columnes <i>P</i>, <i>T</i>, <i>X</i>, <i>Z</i>. <strong>Totes les columnes
+				tenen ara un peó</strong>, sumant un total de quinze per a cada jugador.
+			</li>
+			<li>S'incorporen <strong>quatre <i>Almogàvers</i></strong> (també s'accepta el nom d'<i>arquers</i>):
+				<ul>
+					<li>Mouen sempre dos hexcacs ortogonalment; no poden moure només un.</li>
+					<li>Capturen diagonalment en qualsevol direcció.</li>
+				</ul>
+			</li>
+			<li>La <strong>captura al pas</strong> s'amplia:
+				<ul>
+					<li>Ja no es limita a peons, sinò que <strong>s'amplia a <i>Peons</i>, <i>Almogàvers</i>
+						i <i>Elefants</i></strong>; qualsevol d'aquestes peces pot fer una captura al pas, i
+						totes elles poden ser capturades quan fan moviments ortogonals dobles o triples.
+					</li>
+					<li>Els <i>Elefants</i> poden capturar-se al pas quan fan un moviment doble endavant.</li>
+					<li>Els <i>Almogàvers</i> són particularment sensibles a la captura al pas, doncs
+						sempre es desplacen amb moviment ortogonal doble; poden ser capturats al pas en
+						qualsevol dels sis sentits d'aquest moviment.
+					</li>
+				</ul>
+			</li>
+			<li>La <strong>captura del peó esquiu</strong> també té una ampliació: quan un peó es troba enfrontat
+				amb un peó de l'oponent en la mateixa columna i hexcacs consecutius fa una captura, aquest
+				<strong>moviment de captura des d'una posició emfrontada amb un altre peó també es considera
+					un <q>moviment esquiu</q></strong>, i el peó amb qui es trobava enfrontat el pot capturar
+				ortogonalment; observar que, en aquest cas el peó captura ortogonalment, però a més a més
+				la captura és cap a enrera, un cas encara més excepcional.
+			</li>
+			<li>Totes les peces es troben ara defensades a l'inici, sense cap excepció.
+			</li>
+		</ul>
+		<p>No es poden considerar aquestes regles com a <q>definitives</q>, doncs aquesta variant del joc no ha estat
+			encara prou pensada i provada, i encara menys la disposició inicial de les peces, molt improvissada;
+			senzillament és un camp de proves per a algunes regles i la peça de l'<i>Almogàver</i>.
+			He de comentar que l'ampliació de la captura al pas per a incorporar els <i>Elefants</i> sembla una
+			regla interessant.
+		</p>
+	</article>
+	<!-- TODO Pàgines escacs de Gliński -->
+	<div class="w3-container">
+
+	</div>
+	<!-- De minimax amb alfa-beta a Montecarlo amb xarxes neuronals -->
+	<article class="w3-container" id="computerChess">
+		<h2 class="w3-container w3-center w3-pale-green header2">De <i>Minimax</i> amb <i>Alfa-Beta</i> a <i>Montecarlo</i> amb
+			xarxes neuronals</h2>
+		<h3 class="w3-container w3-pale-yellow w3-center">
+			<a href="https://ca.wikipedia.org/wiki/Minimax" class="cite" target="_blank">Minimax</a></h3>
+		<p>Típicament, per a jugar a escacs, els ordinadors han fet servir el <a href="https://ca.wikipedia.org/wiki/Minimax"
+				class="cite" target="_blank">teorema de <i>Minimax</i></a> de <cite>John von Neumann</cite>.
+			Aquest teorema s'aplica per a jocs d'imformació perfecta entre dos adversaris, amb suma zero, establint
+			que <q>n'hi ha una estratègia que permet a tots dos jugadors minimitzar la pèrdua màxima esperada.</q>
+			El jugador juga, doncs, amb l'estratègia que resulta en la minimització de la seva màxima pèrdua,
+			considerant totes les respostes possibles del jugador adversari i la pèrdua màxima que pot comportar.
+		</p>
+		<p>Si fos possible estudiar tot l'arbre de jugades, és a dir, totes les possibles jugades futures, es podria determinar
+			una estratègia guanyadora; en la pràctica això és impossible. Va ser <cite>Claude Shannon</cite> en el seu text
+			sobre escacs de 1950 <q>Programming a Computer for Playing Chess</q> qui proposà limitar la profunditat de la recerca
+			en l'arbre de possibilitats, determinant llavors el seu valor mitjançant una funció heurística.
+		</p>
+		<h4 class="w3-container w3-pale-yellow w3-center">La funció d'avaluació: heurístic</h4>
+		<p>L'algorisme requereix, doncs, l'ús d'un <strong>heurístic</strong>, una funció d'avaluació d'una posició,
+			una vegada s'ha fet l'exploració de les diferents jugades possibles, de manera que es pugui determinar quina
+			és la millor. L'heurístic més evident consisteix en considerar el valor de les fitxes de cada jugador, però
+			incorporar conceptes de posició en l'heurístic no és senzill, i requereix traspassar els coneixements
+			d'un expert.
+		</p>
+		<figure class="tbigright"
+			style="clear:none; padding-top: 6px; padding-bottom: 10px;text-align:center;">
+			<img src="../img/minimax-focused-neural-networks.1.png" alt="Minimax error propagated" class="fullwidth">
+			<figcaption class="thumbcaption">La profunditat de cerca és un límit de visibilitat que s'<q>intenta</q>
+				sobrepassar amb un heurístic, però els errors en aquesta estimació es propaguen cap amunt. En l'imatge
+				d'<a href="https://www.researchgate.net/publication/2456229_Evolving_Neural_Networks_to_Focus_Minimax_Search?enrichId=rgreq-9096915d6009998d6ceeb07ea9a0dec7-XXX&enrichSource=Y292ZXJQYWdlOzI0NTYyMjk7QVM6OTcyMjAzOTczNzE0MDdAMTQwMDE5MDU1Nzk1MQ%3D%3D&el=1_x_3&_esc=publicationCoverPdf"
+					class="cite" target="_blank">Evolving Neural Networks to Focus Minimax Search</a> es visualitza l'efecte
+				horitzó provocat per la profunditat de búsqueda, i com l'error provocat per l'aplicació de l'heurístic es
+				propaga. En l'imatge els quadrats fan càlcul del valor màxim, i cercles el mínim.
+			</figcaption>
+		</figure>
+		<p>El gran problema de l'algorisme <i>minimax</i> és la seva dependència de l'heurístic, doncs el valor d'aquest
+			heurístic té un factor d'error que es propaga cap amunt, i pot comportar errors en el resultat final de
+			l'algorisme.
+		</p>
+		<p>Aquest <strong><i>heurístic</i> és doncs una funció fonamental en l'avaluació <cite>minimax</cite></strong>,
+			i és difícil establir una funció que no deixi descuidat algún punt; la correcció d'aquests defectes de l'heurístic
+			s'aconsegueix fent un anàlisi amb una profunditat més gran, intentant obtenir una valoració més certera.
+		</p>
+		<h4 class="w3-container w3-pale-yellow w3-center"><a href="https://en.wikipedia.org/wiki/Quiescence_search"
+				class="cite" target="_blank">Quiescència</a></h4>
+		<p>A més, aquesta <strong>funció d'avaluació</strong> (<i>heurístic</i>) és difícil de determinar en situacions poc
+			estables, en <i>situacions d'escac</i> o situacions on existeix una amenaça a una peça. Aquest concepte
+			d'estabilitat es denomina <strong><i><a href="https://en.wikipedia.org/wiki/Quiescence_search"
+				class="cite" target="_blank">quiescència</a></i></strong>, i l'algorisme explora en major profunditat fins
+			trobar un estat que compleix la <i>quiescència</i>, per poder avaluar correctament l'heurístic.
+		</p>
+		<h4 class="w3-container w3-pale-yellow w3-center">Extensió de la búsqueda</h4>
+		<p>Per a certes jugades <i>interessants</i> es pot extendre la búsqueda en més profunditat; és un concepte una mica
+			diferent de la <i>quiescència</i>, però de vegades la pot remplaçar, doncs la funció de l'extensió per a la
+			<i>quiescència</i> és trobar una posició avaluable, sense amenaces que puguin desvirturar el resultat de
+			l'heurístic, però l'extensió de la búsqueda pretèn analitzar en profunditat una posició que sembla interessant.
+			Aquesta tècnica es va fer servir ampliament en <i>Deep Blue</i>, però actualment n'hi ha més interés en retallar
+			les jugades poc interessants que en extèndre l'anàlisi de les interessants.
+		</p>
+		<p>L'extensió de búsqueda es pot fer servir per analitzar situacions de: <i>escac</i>, situació amb
+			<i>pocs moviments possibles</i>, <i>seguretat del rei crítica</i>, <i>peons que coronen</i> o es troben aprop
+			de fer-ho, anàlisi per a  <i>amenaces detectades</i> (generalment amb la tècnica del <i>moviment null</i>,
+			que es detalla més endavant)...
+		</p>
+		<h4 class="w3-container w3-pale-yellow w3-center">Cost de l'algorisme</h4>
+		<p>El <i>cost</i> de l'algorisme és O(<i>b</i><sup><i>d</i></sup>), sent <i>b</i> el <i>factor de ramificació</i>,
+			quantes jugades diferents possibles es poden fer en promig, i <i>d</i> la profunditat d'exploració, és a dir,
+			quants nivells en davant s'exploren. Es escacs el valor per a <i>b</i> és lleugerament superior a 30, de vegades
+			estimat fins i tot com a 36; explorant quatre nivells ja es requereixen més d'un milió i mig d'avaluacions, en
+			cinc nivells més de 60 milions, i en sis nivells més de 2_100 milions.
+		</p>
+		<p>El factor de ramificació <i>b</i> per a <i class="cescacs">C'escacs</i> és quatre vegades superior als escacs,
+			aproximadament 144, fent que quatre nivells d'exploració comportin més de 400 milions d'avaluacions, en comptes
+			d'un milió i mig. L'increment en el nombre d'avaluacions és degut a diversos factors: un escaquer més gran,
+			més fitxes per a cada jugador i moviments addicionals deguts a la geometria hexagonal. En termes de profunditat
+			d'exploració, comporta el cost d'un nivell i mig addicional comparat amb els escacs ortodoxos; és a dir, que per
+			a explorar 5 nivells es requereix avaluar gairebé 62_000 milions de nodes.
+		</p>
+		<h4 class="w3-container w3-pale-yellow w3-center">Les taules de transposició</h4>
+		<p>La gran quantitat de moviments que s'han d'analitzar comporta que es donin <i>repeticions</i> degudes a
+			l'execució de moviments en diferent ordre; aquest fenòmen és en realitat força freqüent
+			<span class="note">només cal que recordem que s'han d'analitzar tots els moviments possibles, i per a cada
+				moviment possible, tots els moviments possibles, i així successivament</span>
+			degut a la transposició de l'ordre en què es realitzen els moviments.
+			La <strong>repetició de posicions</strong> és fins i tot un problema, particularment en l'anàlisi de finals,
+			quan queden poques fitxes en joc, doncs l'ànalisi de moviments podria acabar analitzant un cicle de les mateixes
+			posicions si no es detecta la repetició que tanca el cicle.
+		</p>
+		<p>Aquesta tècnica també es fa servir per aplicar la <a href="glossary.html#Repeticio"
+				class="cescacs" target="_blank">regla de repetició de posició</a>, que permet a un jugador exigir
+			<i>taules si la mateixa posició es repeteix tres vegades</i>, i en qualsevol cas seran taules quan
+			una <i>mateixa posició es repeteix cinc vegades</i>.
+		</p>
+		<p>Les posicions ja valorades s'emmagatzemen, i a més de la valoració per no haver de repetir els càlculs, es pot
+			afegir informació com la millor jugada seleccionada, la profunditat on s'ha estudiat la posició... formant
+			les <a href="https://www.chessprogramming.org/Transposition_Table" class="cite" target="_blank">taules de
+				transposició</a>. Aquestes taules s'emmagatzemen com a <i>taules hash</i>, que fan servir una clau,
+			generalment un número de 64 bits <span class="note">en realitat 64 bits encara és un número massa gran per a
+			indexar la taula, i com a índex es fa servir una reducció d'aquest valor, mòdul una potència de dos</span>,
+			que es calcula com a un valor únic o <i>signatura</i> associada a la posició, típicament fent servir
+			tècniques com les fórmules de
+			<a href="https://www.chessprogramming.org/Zobrist_Hashing" class="cite" target="_blank">Zobrist</a>,
+			què faciliten la seva manipulació amb operacions <cite>xor</cite>.
+		</p>
+		<h4 class="w3-container w3-pale-yellow w3-center">Profundidad iterativa i control del temps</h4>
+		<p>El gran problema és que la búsqueda <i>minimax</i> és una búsqueda en profunditat, és a dir, que s'explora una
+			branca fins la profunditat establerta, abans de començar a explorar una altra branca. Aquesta estratègia
+			resulta funesta quan el programa ha de tenir control del temps, doncs és molt difícil estimar el temps que
+			pot costar l'anàlisi només fixant la profunditat, i si s'interromp l'anàlisi poden quedar encara alternatives
+			importants per explorar.
+		</p>
+		<p>La <i>profundidad iterativa</i> crida repetidament a una rutina de cerca augmentant la profunditat, fins a
+			aconseguir el valor desitjat. Per a això, es realitza repetidament una cerca, augmentant la profunditat de
+			manera incremental. D'aquesta manera sempre tindrem una estimació d'un bon moviment per a l'última profunditat
+			aconseguida, i en cas que s'acabi el temps sempre tindrem assegurada una acció a realitzar.
+			Aquest algorisme és possible gràcies a les <i>taules de transposició</i>, que permeten recuperar els càlculs
+			previs, tot i que s'ha de considerar que, sent un algorisme exponencial, el cost de tornar a avaluar un nivell
+			es <i>petit</i> en comparació amb el cost de l'avaluació del següent nivell <small>si el nivell de
+				<i>ramificació</i> <code>b</code> fos només de 2, el cost seria equiparable, el cost del següent nivell
+			serà <code>b-1</code> vegades el cost de tots els càlculs fets fins llavors, i el valor tant com <code>b</code>
+			creix, un valor que ja hem aproximat en 36 pels escacs, o 144 per a <i class="cescacs">C'escacs</i></small>.
+		</p>
+		<p>Els avantatges addicionals són també importants, característiques que una mica més endavant comprovarem que són
+			de gran importància:
+		</p>
+		<ul>
+			<li>Permet millorar l'ordenació dels moviments, detectant la variació principal, doncs s'han avaluat
+				les posicions en cada nivell; el cost d'aquesta avaluació és un cost addicional que s'amortitza amb aquest
+				benefici.
+			</li>
+			<li>Permet la creació de taules de transposició al menor nivell de profunditat, així com ajustar el valor
+				d'heurístics dinàmics, dos punts a tenir molt en consideració.
+			</li>
+			<li>El valor <i>minimax</i> obtingut en el nivell inferior es pot fer servir per a la tècnica de les
+				<a href="https://www.chessprogramming.org/Aspiration_Windows" class="cite" target="_blank">finestres
+					d'aspiració</a>, definint la <a href="https://www.chessprogramming.org/Window"
+					class="cite" target="_blank">finestra de búsqueda</a> a aquests valors.
+			</li>
+			<li>Quan en una profunditat menor es troba una solució amb el valor <i>màxim</i>, és a dir, un mat, no es
+				requereix buscar a més profunditat.
+			</li>
+		</ul>
+		<h4 class="w3-container w3-pale-yellow w3-center"><a href="https://en.wikipedia.org/wiki/Negamax" class="cite"
+				target="_blank">Negamax</a></h4>
+		<p>Sovint les referències, en comptes de referir-se a <i>minimax</i>, es refereixen a
+			<a href="https://en.wikipedia.org/wiki/Negamax" class="cite" target="_blank">negamax</a>, que senzillament és
+			una simplificació de <i>minimax</i> considerant que és un joc de suma zero per a dos jugadors; aquest algorisme
+			fa servir valoracions positives per a les jugades un jugador i negatives per les jugades de l'oponent. En la
+			pràctica és una implementació de <i>minimax</i>.
+		</p>
+		<h3 class="w3-container w3-pale-yellow w3-center">
+			<a href="https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning" class="cite" target="_blank">Poda alfa-beta</a></h3>
+		<p>La <a href="https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning" class="cite" target="_blank">poda alfa-beta</a>
+			és un algorisme de cerca que busca <strong>disminuir el nombre de nodes que són avaluats per l'algorisme
+			<cite>minimax</cite></strong> en el seu arbre de cerca. 
+			Deixa d'avaluar una jugada quan s'ha trobat almenys una possibilitat que demostri que la jugada és pitjor que una
+			jugada examinada anteriorment. No és necessari continuar avaluant aquestes jugades. Quan s'aplica a un arbre minimax
+			estàndard, <strong>retorna la mateixa jugada que el minimax, però elimina les branques que no poden influir en la
+			decisió final</strong>. Això comporta un gran estalvi en la quantitat de càlculs necessaris.
+		</p>
+		<p>L'algorisme sembla que ha estat <q>reinventat</q> diverses vegades: 
+			<cite>Arthur Samuel</cite> tenia una versió primerenca per a una simulació de dames; posteriorment
+			Richards, Timothy Hart, Michael Levin i Daniel Edwards varen fer servir conceptes de l'algorisme
+			<cite>alfa-beta</cite> de manera independent en els EUA, i també <cite>McCarthy</cite> va proposar idees
+			similars durant el taller de Dartmouth en 1956 i el va suggerir a un grup dels seus estudiants.
+			Finalment, <b><a href="https://en.wikipedia.org/wiki/Alexander_Brudno"
+				class="cite" target="_blank"><cite>Alexander Brudno</cite></a></b>, informàtic rus, va concebre
+			l'algorisme <cite>alfa-beta</cite> de manera independent i va publicar la descripció, funcionament i resultats
+			en <b>1963</b>. Tot i les aproximacions prèvies, fou <cite>Alexander Brudno</cite> qui va presentar formalitzada
+			i justificada la idea sencera, que <cite>Donald Knuth</cite> i <cite>Ronald W. Moore</cite> varen refinar en 1975.
+		</p>
+		<h4 class="w3-container w3-pale-yellow w3-center">Millora del cost de l'algorisme <cite>minimax</cite></h4>
+		<p>L'efectivitat de l'esporgada té una gran <strong>dependència de l'ordre en què s'avaluen les diferents opcions
+			(jugades)</strong>, de manera que si l'ordre és incorrecte pot arribar a donar-se el cas de no tenir cap benefici,
+			però per a un ordre òptim, avaluant la millor jugada primer, el benefici és radical, permetent l'avaluació del doble
+			de profunditat; és a dir, un cost de <code>O(<i>b</i><sup><i>d</i>/2</sup>)</code>. La reducció és dràstica, i
+			considerant els escacs amb un factor de ramificació de 36 es pot arribar a reduir el cost d'exploració per a
+			quatre nivells només a 3_000 nodes, en comptes de milió i mig, una reducció del 99.8%.
+		</p>
+		<aside>
+			<p>Estimació de la complexitat òptima dels escacs ortodoxos amb <cite>alfa-beta</cite>:&nbsp;
+				<code>36<sup><i>d</i>/2</sup> = 6<sup><i>d</i>/2</sup>·6<sup><i>d</i>/2</sup> = 6<sup><i>d</i></sup></code>
+			</p>
+			<p>Estimació de la complexitat òptima de <cite class="cescacs">C'escacs</cite> amb <cite>alfa-beta</cite>:&nbsp;
+				<code>144<sup><i>d</i>/2</sup> = 12<sup><i>d</i>/2</sup>·12<sup><i>d</i>/2</sup> = 12<sup><i>d</i></sup></code>.
+				La complexitat és <code>2<sup><i>d</i></sup></code> vegades superior als escacs ortodoxos.
+			</p>
+		</aside>
+		<h4 class="w3-container w3-pale-yellow w3-center">Heurístics d'ordenació de les jugades</h4>
+		<p>Per obtenir uns resultats òptims en <strong>l'algorisme <cite>alfa-beta</cite>, es requereix un nou <i>heurístic</i>:
+			l'ordenació de les jugades</strong>, considerant primer les més favorables.
+		</p>
+		<p>L'efectivitat de l'algorisme <i>alpha-beta</i>, que pot resultar dràstica, depèn de l'efectivitat d'aquest
+			<i>heurístic</i>, d'una primera estimació de quina és la millor jugada, que es confirmarà amb l'exploració
+			<cite>minimax</cite>. Aquest <i>heurístic</i> té una afectació directa en el rendiment de l'algorisme,
+			i, per tant, de la profunditat amb què és possible fer l'anàlisi, però
+			un error en l'ordenació pot arribar a eliminar l'aventatge de la poda <i>alpha-beta</i>, resultant una
+			exploració <cite>minimax</cite> sense cap optimització.			
+		</p>
+		<p>Es fa servir una <strong>ordenació dinàmica</strong>, on l'ordenació dels nodes no avaluats es canvia quan
+			s'avaluen els nodes anteriors i obtenim noves informacions per millorar l'heurístic d'ordenació.
+			Sense incloure-hi les situacions d'<i>escac</i>, l'ordenació tindrà en consideració:
+		</p>
+		<ol>
+			<li>S'ha de considerar l'últim moviment de l'adversari; verificar si segueix la variació principal estimada.
+			</li>
+			<li>Si el moviment de l'adversari no ha estat la predicció de la variació principal:
+				<ul>
+					<li>Considerar si la peça moguda pot ser capturada.</li>
+					<li>Considerar igualment el moviment ja estudiat com la variació principal, si encara és vàlid.</li>
+				</ul> 
+			</li>
+			<li>Les <i>amenaces</i>: una peça amenaçada sense defença, o amenaçada per una peça d'igual
+				o inferior valor.
+				<ul>
+					<li>Si existeix una captura de la peça que amenaça, i l'avaluació estàtica de l'intercanvi és favorable.</li>
+					<li>Moviments per evitar aquesta amenaça: moure la peça o cobrir l'amenaça.</li>
+					<li>Provocar una amenaça major al contrincant.</li>
+				</ul>
+				<ul class="w3-ul note">
+					<li><small>Observar que ignorar l'amenaça fent un <i>sacrifici</i> serà un cas fora del comú,
+						que, en general, sempre seran per seguir una línia guanyadora ja estudiada com a línia principal,
+						o una variació de la línia principal.</small>
+					</li>
+				</ul>
+			</li>
+			<li>Les captures s'han de pendre en consideració fent servir una
+				<a href="https://www.chessprogramming.org/Static_Exchange_Evaluation"
+					class="cite" target="_blank">avaluació estàtica d'intercanvi</a> per estimar si s'han de considerar.
+				<ul>
+					<li>No es fa l'avaluació d'una posició on existeix una captura. Si
+						l'<a href="https://www.chessprogramming.org/Static_Exchange_Evaluation"
+							class="cite" target="_blank">avaluació estàtica d'intercanvi</a> determina que s'ha de
+						prendre en consideració, s'aprofundeix fent servir la
+						<a href="https://en.wikipedia.org/wiki/Quiescence_search" class="cite" target="_blank">búsqueda
+							de quiescència
+						</a>.
+					</li>
+				</ul>
+			</li>
+			<li>
+				L'<strong><a href="https://en.wikipedia.org/wiki/Killer_heuristic"
+					class="cite" target="_blank">heurística de l'assassí (<i lang="en">killer heuristic</i>)</a></strong>,
+				que consisteix en considerar quan s'explora l'arbre de joc que una jugada que era una bona jugada en una posició,
+				és probable que ho segueixi sent en una posició alternativa.
+				<ul>
+					<li><strong><a href="https://www.chessprogramming.org/Mate_Killers"
+									class="cite" target="_blank">assassins de mat</a></strong> diferència jugades que produeixen
+						un tall en la búsqueda degut a que un dels jugadors assoleix el mat.
+					</li>
+				</ul>
+			</li>
+			<li>
+				L'<strong><a href="https://www.chessprogramming.org/Countermove_Heuristic"
+					class="cite" target="_blank">heurística del moviment de resposta</a></strong>, que considera que si
+				existeix un moviment de resposta per a un moviment, sempre que la resposta encara sigui vàlida, molt
+				probablement serà la millor resposta indistintament que s'hagin fet moviments entremitjos.
+			</li>
+			<li>
+				L'<strong><a href="https://www.chessprogramming.org/Last_Best_Reply"
+					class="cite" target="_blank">heurística de l'última millor resposta
+					(LBR, <i lang="en">Last Best Reply</i>)</a></strong>, bàsicament la mateixa idea que l'<i>heurística del
+						moviment resposta</i>, amb subtils diferències d'implementació.
+					<span class="note">S'ha de fer constar, en ambdós heurístics, que moltes vegades aquestes heurístiques
+						funcionen com a resposta al moviment d'una peça a una posició, indistíntament de la seva
+						posició d'origen.</span>
+			</li>
+			<li>
+				L'<strong><a href="https://www.chessprogramming.org/History_Heuristic"
+					class="cite" target="_blank">Heurística de l'història</a></strong>, que fa una ordenació dinàmica dels
+				moviments considerant el nombre de talls causats per un moviment determinat, independentment de la posició
+				en la qual s'hagi realitzat aquest moviment.
+			</li>
+		</ol>
+		<h4 class="w3-container w3-pale-yellow w3-center">Heurístics de poda en davant</h4>
+		<p>La poda <i>alpha-beta</i> estableix que alguns nodes no requereixen ser avaluats, doncs no són opcions a
+			considerar, però sempre, la creença en aquest fet, depèn de l'heurístic d'avaluació. A més, trobar
+			eficientment els nodes que no requereixen avaluació depèn de la correcta ordenació, avaluant primer els
+			nodes més significatius, que tenen les jugades millors.
+		</p>
+		<p>La poda <i>alpha-beta</i>, encara que la seva eficiència depén d'un heurístic d'ordenació, no és un heurístic,
+			és un algorisme que permet la simplificació de branques que no aportan informació. Les podes en davant són
+			heurístics que permeten descartar nodes sense motius plenament justificats, només per certes <q>creences</q>.
+			Veiem tècniques que són indicadors de branques de búsqueda que no aportaran nova informació, i poden
+			deixar de considerar-se:
+		</p>
+		<ul>
+			<li><p>Generació d'un <strong><a href="https://www.chessprogramming.org/Null_Move" class="cite"
+						target="_blank">moviment buit</a></strong>, és a dir, un canvi de torn sense cap moviment.
+					Tot i no ser una acció vàlida en el joc, en el motor de cerca resulta d'utilitat;
+					es fa servir en el node arrel amb una cerca limitada en profunditat.
+				</p>
+				<ul>
+					<li><strong>Permet establir ràpidament un primer límit inferior (<i>beta</i>)
+						 per a la finestra de búsqueda</strong>.
+					</li>
+					<li>També permet detectar <i>moviments assassins</i> i <i>captures</i> de l'adversari que
+						<i>refuten</i> aquest moviment buit.
+					</li>
+				</ul>
+				<p>Aquesta tècnica es basa en el fet que, en escacs, <strong>no moure condueix a una situació
+					pitjor que fer una jugada <i>correcta</i></strong>, excepte en comptades excepcions, denominades
+					<i>Zugzwang</i>. Aquestes situacions de <i>Zugzwang</i> són extranyes, encara més extranyes en
+					<i class="cescacs">C'escacs</i> que en els escacs ortodoxos, malgrat es donen amb més freqüència
+					en la part final del joc, quan queden poques fitxes.
+				</p>
+				<ul>
+					<li>El problema és detectar les situacions de <i>Zugzwang</i>, i per fer-ho existeix la tècnica
+						del doble moviment buit; un segon moviment buit restaura la situació de joc anterior al primer
+						moviment buit, és a dir, la situació arrel inicial, però ara en una situació de búsqueda més
+						limitada en profunditat.
+					</li>
+					<li>En el mig joc l'anàlisi del <i>doble moviment buit</i> resulta massa costòs, i el <i>Zugzwang</i>
+						una situació molt extranya, però sí és convenient tenir-ho en consideració en l'etapa final
+						del joc, quan el <i>Zugzwang</i> és més freqüent.
+					</li>
+				</ul>
+			</li>
+			<li><p><strong><a href="https://www.chessprogramming.org/Futility_Pruning"
+						class="cite" target="_blank">Podes d'inutilitat</a></strong>: Aquesta poda es basa en el valor
+					d'<i>alpha</i>, estimant quan una branca no té potencial d'obtenir un valor suficientment alt. A més, permet
+					fer un càlcul incremental de l'heurístic d'avaluació: Com es coneix el valor d'<i>alpha</i> que s'ha d'obtenir
+					per tenir en consideració la branca, es pot avaluar primer els trets que més afecten al valor final, com les
+					fitxes de cada jugador, i algunes condicions posicionals més subtils i costoses d'avaluar no es requereix que
+					siguin avaluades si el valor no arriba a mínim significatiu, sumant-hi amb un marge màxim.
+				</p>
+				<p>Típicament aquesta poda es fa en els nivells més inferiors de la búsqueda, podant només un nivell, però
+					els programes més actuals opten per incrementar el número de nivells afectats per la poda en els moviments
+					que ha s'han considerat com a menys favorables, és a dir, posicionats al final de l'ordenació.
+				</p>
+				<ul>
+					<li><strong>Podes delta</strong>: En la <a href="https://en.wikipedia.org/wiki/Quiescence_search"
+							class="cite" target="_blank">búsqueda de quiescència</a>, les
+						<a href="https://www.chessprogramming.org/Delta_Pruning" class="cite" target="_blank">podes delta</a>
+						fan servir les <a href="https://www.chessprogramming.org/Static_Exchange_Evaluation"
+							class="cite" target="_blank">avaluacions estàtiques d'intercanvi</a> per descartar una
+						jugada si el benefici estimat de l'intercanvi més un petit marge encara és insuficient per prendre
+						en consideració el node. És molt semblant a les <i>podes d'inutilitat</i>, però en el context
+						de la búsqueda de la <i>quiescència</i>.
+					</li>
+				</ul>
+			</li>
+			<li><p><strong><a href="https://www.chessprogramming.org/Late_Move_Reductions"
+						class="cite" target="_blank">Reducció del moviment tardà</a></strong>: Descartar els moviments menys
+					prometidors, és a dir, els que són al final de l'ordenació. En realitat no es tracta de descartar-los
+					del tot, encara que algunes versions modernes basades en xarxes neuronals
+					<small>(<quote>Evolving Neural Networks to Focus Minimax Search</quote> 1994, <cite>David Moriarty</cite>)</small>
+					sí fan directament una reducció dels nodes a considerar, però la tècnica a què ens referim
+					només fa una reducció en el nivell d'exploració d'aquests nodes <i>poc prometidors</i>.
+				</p>
+				<p>Com que normalment aquests nodes no produeixen bons resultats, no tindran potencial d'incrementar
+					α i es podria reduir el temps que s'ocupa a explorar aquests nodes. Això és
+					oposat a la poda de moviment buit que tracta de trobar valors que superin el límit
+					de β.
+				</p>
+				<p>Es realitza una cerca de finestra mínima per cada moviment poc prometedor, pel fet que només
+					es desitja comprovar si el moviment pot
+					superar el límit inferior α. Per a realitzar aquesta cerca es fa ús d'una reducció en
+					la profunditat de cerca. Si l'avaluació torna una valor inferior a α indica que el
+					moviment serà pobre i no valdrà la pena invertir més temps determinant el seu valor. Si la
+					cerca torna un valor superior a α, indica que existeix alguna cosa interessant en la posició, i s'ha
+					de realitzar la cerca amb els límits reals de la finestra de cerca i utilitzar la
+					profunditat regular.
+				</p>
+				<p>El mateix que en les <i>podes d'inutilitat</i>, en les <i>reduccions dels moviments tardans</i>
+					és convenient fer servir un càlcul dinàmic de l'heurístic d'avaluació. Els programes actualment
+					fan servir profunditats de poda més grans en tant els moviments han quedat ordenats per a ser
+					considerats més tardanament, combinant-les amb finestres mínimes de cerca.
+				</p>
+				<p>Tot i que aquesta poda en un inici es limitava a una poda de l'últim nivell, sense cap altra reducció
+					de profunditat, s'ha anat incrementant el seu ús en tant s'ha verificat la seva efectivitat,
+					particularment quan es fa servir conjuntament amb tècniques d'ordenació dinàmiques.
+				</p>
+			</li>
+		</ul>
+		<h3 class="w3-container w3-pale-yellow w3-center">Llibres d'obertures i finals</h3>
+		<p>Els punts més febles dels algorismes <i>minimax</i> són les obertures i els finals, envers dels bons resultats en
+			el joc mig. Es dona el cas que obertures i els finals són punts ja ampliament estudiats per la teoria dels escacs.
+			Les obertures permeten una correcta distibució inicial que difícilment es pot aconseguir amb l'estudi del joc a
+			curt termini, i és per això que els programes d'escacs compten amb un llibre d'obertures.
+		</p>
+		<p>Anàlogament, els finals comporten dificultats per la profunditat d'anàlisi que requereixen; les <i>taules de
+			transposició</i> combinades amb les consideracions de simetria de l'escaquer són fonamentals per a un anàlisi que
+			pot requerir una gran profunditat d'exploració, doncs, malgrat que el nombre de ramificació sigui més limitat que
+			en la fase mitja del joc, un anàlisi amb gran profunditat d'exploració encara és una opció inabastable sense
+			aquestes eines. Tot i això, el càlcul de finals és molt costòs i les
+			<a href="https://en.wikipedia.org/wiki/Endgame_tablebase" class="cite" target="_blank">bases de taules (tablebase)
+				de finals de joc</a> permeten tenir els moviments òptims precalculats. Iniciades per <cite>Thomas
+				Ströhlein</cite> en 1970 amb els finals KQK, KRK, KPK, KQKR, KRKB i KRKN. <cite>Ken Thompson</cite> i altres
+			les van completar per a tots els finals de quatre i cinc peces, amb els casos particulars  KBBKN, KQPKQ i KRPKR.
+			En 2005 s'havien completat <strong>tots els finals</strong> amb fins a sis peces,
+			<strong>en 2018 amb set peces</strong> (els dos reis i cinc altres peces), i actualment, en 2023, encara es
+			treballa per obtenir tots els finals amb vuit peces.
+		</p>
+		<h3 class="w3-container w3-pale-yellow w3-center">Millores a minimax i alfa-beta</h3>
+		<p>L'algorisme <cite>minimax</cite> amb la <cite>poda alfa-beta</cite> és l'algorisme que s'ha fet servir per als
+			programes d'escac d'ordinador des dels anys 70 del segle XX fins ja entrat el segle XXI. Els programes van anar
+			incorporant característiques, com la búsqueda de la <i>quiescència</i> o la confirmació de <i>jugades
+			prometerdores</i>, incrementant la profunditat de búsqueda en alguns punts, les
+			<strong><i>taules de transposició</i></strong>, que emmagatzemen posicions ja estudiades per no tornar-les a
+			considerar, els llibres d'obertures, les bases de taules de finals... També la <cite>poda alfa-beta</cite> ha
+			incorporat millores, pràcticament totes fonamentades en les tècniques
+			d'<strong>estretament de la <a href="https://www.chessprogramming.org/Window"
+				class="cite" target="_blank"><i>finestra de búsqueda</i></a></strong>, fixant un valor per a alfa-beta,
+			en comptes de calcular-ho, de manera que tots els nodes amb una avaluació dins d'aquesta finestra <i>alfa-beta</i>
+			establerta no són avaluats. El cas més senzill és la <a href="https://www.chessprogramming.org/Aspiration_Windows"
+				class="cite" target="_blank">búsqueda por aspiració</a>, on es treu partit de la
+			<cite>profunditat iterativa</cite> per obtenir una estimació dels valors <i>alpha</i> i <i>beta</i>. Tot i que
+			és una tècnica fonamentada en heurístics, no afecta el resultat final, doncs quan el valor no es troba en la
+			finestra estimada detectarem l'error, i ens veurem obligats a tornar a avaluar per obtenir els valors correctes.
+			Les <a href="https://www.chessprogramming.org/Null_Window" class="cite" target="_blank">finestres nul·les</a>
+			són una tècnica semblant, però en aquest cas no es deixa marge entre els valors <i>alpha</i> i <i>beta</i>,
+			quan estimem que el moviment no generarà alteracions d'aquests valors, amb l'intenció de detectar els casos que
+			no compleixin les nostres estimacions. Aquesta tècnica es feia servir tant per anàlisis de <i>quiescència</i>,
+			o per la <i>poda dels moviments tardans</i>, però finalment ha evolucionat en el <i>PVS</i> i finalment en
+			el <i>MTD(f)</i>.
+		</p>
+		<p>La <strong>PVS: <a href="https://en.wikipedia.org/wiki/Principal_variation_search"
+				class="cite" target="_blank"><i lang="en">Principal variation search (NegaScout)</i></a></strong>
+			estableix una jugada com a millor jugada, i mira de demostrar que la resta de jugades no són millors fent
+			la búsqueda de les altres jugades amb una <a href="https://www.chessprogramming.org/Null_Window"
+				class="cite" target="_blank">finestra nul·la</a>; la dependència de l'heurístic d'ordenació de les
+			jugades esdevé encara més fonamental, doncs una incorrecta ordenació resulta en la penalització del cost
+			final de l'algorisme.
+		</p>
+		<aside>
+			També podem llegir referent a <i>PVS (<span lang="en">Principal Variation Search</span>)</i> en
+				<a href="https://www.chessprogramming.org/Principal_Variation_Search"
+					class="cite" target="_blank">https://www.chessprogramming.org/Principal_Variation_Search</a>.
+		</aside>
+		<p><i>PVS</i> es va fer servir des de la seva aparició en l'any 1980, fins l'aparició de
+			<strong><a href="https://en.wikipedia.org/wiki/MTD(f)" class="cite" target="_blank"><abbr
+				title="Memory-enhanced Test Driver with value f">MTD(f)</abbr>,
+				<i>Memory-enhanced Test Driver with value f</i></a></strong> en l'any 1994.
+			Aquest nou algorisme fa servir tota la búsqueda amb una
+			<a href="https://www.chessprogramming.org/Null_Window" class="cite" target="_blank">finestra nul·la</a> o
+			molt estreta, partint d'una estimació inicial del valor;
+			la finestra <cite>alfa-beta</cite> s'estableix en una petita variació d'aquesta estimació final i,
+			considerant que la finestra de búsqueda és molt estreta, moltes branques no requereixen avaluació. Si l'algorisme
+			retorna un valor fora de la finestra establerta s'ha de tornar a fer l'avaluació ampliant la finestra; els nodes ja
+			avaluats es troben a una <i>taula de transposició</i>, per evitar haver de tornar a fer la seva exploració.
+		</p>
+		<p>Actualment el millor programa per a jugar a escacs amb aquest enfocament d'algorisme clàssic (<i>minimax</i> amb
+			heurístics i algorismes de desbroçament) és el programa Open Source <a href="https://stockfishchess.org/"
+				class="cite" target="_blank">Stockfish</a>, que, en el moment de revissar aquest text ja es troba en la
+			versió 15.1. La versió <strong><i>Stockfish 8</i></strong> va ser derrotada en desembre de 2017.
+			Havia arribat l'era de la cerca de Montecarlo i les xarxes neuronals en els escacs, i era el final dels
+			tan patits heurístics i desbroçaments alfa-beta.
+		</p>
+		<h3 class="w3-container w3-pale-yellow w3-center">
+			<a href="https://en.wikipedia.org/wiki/Monte_Carlo_tree_search"
+				class="cite" target="_blank">Búsqueda de Montecarlo</a>
+		</h3>
+		<p>Les tècniques <i>minimax</i> requereixen un <i>heurístic</i> d'avaluació, i les tècniques <i>alfa-beta</i> un
+			<i>haurístic</i> addicional d'ordenació; les tècniques de millora de la poda <i>alfa-beta</i> requereixen a
+			més a més un <i>oracle</i> que faci una estimació del valor de l'heurístic d'avaluació que s'obtindrà per poder
+			estretar la finestra... El problema és que els heurístics són <i>estimacions</i> que intenten formular el
+			coneixement expert, però són difícils d'establir, a més a més considerant que la manera de veure el problema
+			un expert, generalment molt adaptable a diferents situacions, no sempre coincideix amb els requeriments, molt
+			fixes d'un algorisme; resumint: un algorisme amb fortes dependències d'un heurístic té grans debilitats.
+		</p>
+		<p>L'enfocament més <q>conservador</q> podria ser incorporar un sistema d'aprenentatge per a aquest heurístic, per
+			a provar d'obtenir-ho empíricament, però un joc es resistia a l'enfocament <i>minimax</i> durant anys; aquest joc
+			era el <strong><a href="https://ca.wikipedia.org/wiki/Go" class="cite" target="_blank"><i>Go</i></a></strong>,
+			que té un <i>factor de ramificació</i> molt alt, de l'ordre d'entre 150 i 250 moviments diferents possibles per a
+			cada jugador, degut al seu tauler quadrat amb 19 caselles per costat, fent un total de 361 caselles, més del doble
+			en caselles que <i class="cescacs">C'escacs</i>. 
+		</p>
+		<p>
+			El mètode de <a href="https://ca.wikipedia.org/wiki/Arbre_de_cerca_Monte_Carlo" class="cite" target="_blank">cerca
+				de Montecarlo</a> consisteix en fer servir un mostreig al·leatori, per a casos on no és possible una altra tècnica.
+			i data dels anys 1940. Però va ser en 1987 que <cite>Bruce Abramson</cite> va combinar la búsqueda <cite>minimax</cite>
+			amb continuacions aleatòries fins el final de la partida, en comptes de fer servir una funció heurística d'avaluació.
+			
+		</p>
+		<p>Aquestes tècniques varen ser també molt útils per millorar els
+			algorismes de demostració automàtica de teoremes, una altra aportació de la teoria de jocs a altres branques que
+			es poden considerar <q>més serioses</q>, de la mateixa manera que <i>minimax</i> s'ha generalitzat al camp de la
+			presa de decisions.
+		</p>
+		<p><cite>B. Brügmann</cite> va fer servir l'algorisme per resoldre el problema del joc del <i>Go</i> en 1992.
+			No va ser fins a 2006 que <cite>Rémi Coulom</cite> va descriure l'aplicació del mètode de Montecarlo a la búsqueda
+			d'arbres de joc, i el va anomenar com a <a href="https://ca.wikipedia.org/wiki/Arbre_de_cerca_Monte_Carlo"
+				class="cite" target="_blank">cerca de Montecarlo</a>.
+			<cite>L. Kocsis</cite> i <cite>Cs. Szepesvári</cite> desenvoluparen l'algorisme <i>UCT</i> (<i>Upper Confidence
+				bounds applied to Trees</i>).
+		</p>
+		<p><cite>Deepmind</cite>, adquirida per <cite>Google</cite> en 2014, en 2015 presentà <cite>AlphaGo</cite>, el primer
+			programa que derrota un humà al <i>Go</i> en nivell campionat, i en març de 2016 es declarà campió.
+		</p>
+		<p>L'algorisme consta de quatre fases:
+		</p>
+		<ul>
+			<li><strong>Selecció</strong>: Es parteix de l'arrel <i>R</i> i es van seleccionant successivament nodes fills fins
+				a arribar a un node fulla <i>L</i>.
+				<ul class="w3-ul">
+					<li><small><em style="font-weight:bolder;">L'arrel és l'estat actual del joc</em> i
+					<em style="font-weight:bolder;">una fulla és qualsevol node que tingui un fill potencial del qual encara
+						no s'ha iniciat cap simulació</em> (<i>playout</i>).</small>
+					</li>
+				</ul>
+			</li>
+			<li><strong>Expansió</strong>: Tret que <i>L</i> acabi la partida de manera decisiva (victòria/pèrdua/empati),
+				crea un (o més) nodes fills i tria el node <i>C</i> d'un d'ells. Els nodes fills són qualsevol moviment
+				vàlid des de la posició de joc definida per <i>L</i>.
+			</li>
+			<li><strong>Simulació</strong>: Completa una jugada aleatòria des del node <i>C</i>. Aquest pas també es denomina
+				a vegades <i>playout</i> o <i>rollout</i>. Una <i>playout</i> pot ser tan simple com triar moviments aleatoris
+				uniformes fins que es decideixi la partida (per exemple, en escacs, la partida es guanya, es perd o s'empata).
+			</li>
+			<li><strong>Retropropagació</strong>: Utilitza el resultat del <i>playout</i> per a actualitzar la informació en
+				els nodes del camí de <i>C</i> a <i>R</i>.
+			</li>
+		</ul>
+		<p>El gran aventatge d'aquest algorisme és que <strong>no existeix cap dependència d'heurístics</strong>, tot i que
+			es poden fer servir sesgant el comportament aleatori per mirar de millorar-ho. L'inconvenient més gran és que
+			requereix una gran potència de càlcul per a l'entrenament de la xarxa neuronal; per a decrementar la potència
+			de càlcul requerida inicialment es pot començar amb un comportament inicial fonamentat en heurístics, i fer servir
+			la xarxa neuronal únicament per a l'aprenentatge d'un nivell superior de coneixement del joc; preferiblement aquests
+			heurístics hauran de ser senzills i efectius, per evitar sobrecostos i biaixos.
+		</p>
+		<h3>Deepmind: AlphaZero i MuZero</h3>
+		<figure class="tright fig400" style="clear:none; padding-top: 6px; padding-bottom: 10px;">
+			<img src="../img/AlphaGo_to_MuZero.jpg" alt="d'AlphaGo a MuZero" style="width:100%">
+			<figcaption>d'AlphaGo a MuZero</figcaption>
+		</figure>
+		<p><i>AlphaGo</i> fou el primer programa de jugar a <i>Go</i> a nivell de mestre, aconseguint el títol de campió del
+			món en 2016. El programa incorporava coneixement específic per a la incorporació d'heurístics, i havia <q>aprés</q>
+			amb una gran base de dades existent amb partides.
+		</p>
+		<p>L'experiència d'<i>AlphaGo</i> es va aprofitar per construir <i>AlphaGo Zero</i>, que ara només
+			tenia coneixement de les regles del joc, sense cap altre mena d'heurístic ni coneixement específic del joc. El
+			programa havia <q>aprés</q> jugant partides simulades contra ell mateix, fent servir una tècnica
+			d'<a href="https://ca.wikipedia.org/wiki/Aprenentatge_per_refor%C3%A7" class="cite" target="_blank">aprenentatge
+				per reforç</a>.
+		</p>
+		<p><i>AlphaGo Zero</i> es va generalitzar a <strong>AlphaZero</strong>, que era capaç de jugar a diferents jocs:
+			els <i>escacs</i> i el <i>Shogi</i>, a més del <i>Go</i>, tot només incorporant les regles del joc.
+			Aquest programa aviat va guanyar al millor programa que feia servir les tèniques <i>minimax</i> tradicionals,
+			amb <i>poda alfa-beta</i> i moltes altres tècniques que s'havien desenvolupat al llarg dels anys, però totes
+			elles fortament fonamentades en l'existència d'<i>heurístics</i>.
+		</p>
+		<p>Aquest programa fa servir una <i>cerca de Montecarlo</i> incorporant aprenentatge del joc per reforç per a
+			programar una xarxa neuronal d'aproximadament vuitanta nivells, sumant un total de centenars de milers de
+			nodes (<q>neurones</q>).
+		</p>
+		<p>Podem veure com algunes de les tècniques d'escacs
+			d'<a href="https://thezugzwangblog.com/alphazero-mejores-jugadas-ajedrez/"
+				class="cite" target="_blank">AlphaZero</a> han sorprés fins i tot els grans experts dels escacs, doncs
+			els moviments, no tan <q>limitats</q> pels <i>heurístics</i> que s'exigeixen als programes d'escacs, sovint
+			són inesperats i sorprenents. En el <a href="https://thezugzwangblog.com/alphazero-mejores-jugadas-ajedrez/"
+				class="cite" target="_blank">blog zugzwang</a> podem veure quatre exemples comentats d'aquest desafiament.
+			També podem veure comentada una partida d'un posterior
+			<a href="https://www.youtube.com/watch?v=jJq3327g5gY"
+					class="cite" target="_blank">desafiament en desembre de 2018</a>, d'una versió renovada
+			d'<i>AlphaZero</i> contra la mateixa versió <i>Stockfish 8</i>, tot i ja existir la versió 10 del programa.
+º 		</p>
+		<p>És cert que, tot i que inicialment <i>AlphaZero</i> va derrotar el millor programa del moment,
+			<i>Stockfish 8</i>, es critica el desequilibri en el maquinari que han fet servir les dues parts.
+			<i>Stockfish</i> incorpora millores en les seves successives versions, en el moment d'escriure
+			aquest text, la versió 15.1. També <i>AlphaZero</i> ha incorporat millores; la versió
+			d'<i>alpha-zero</i> actual és la 16, però una versió d'un codi que ja no pertany a <i>Deepmind Google</i>,
+			sinó <i>reproduccions</i> implementades per tercers, però ens permet veure algunes partides més,
+			doncs la versió de <i>Deepmind</i> ha deixat d'estar accessible:
+		</p>
+		<ul class="w3-ul">
+			<li>Una partida de juliol de 2022:
+				<a href="https://youtu.be/3nmCHW73-ec" class="cite" target="_blank">Stockfish 15
+					(3880) Vs Alphazero (3872) 2022 new Game</a>
+			</li>
+			<li>Una partida de setembre de 2022 on es justifica l'origen del codi <cite>alpha-zero</cite>,
+				sense vinculació amb <i>DeepMind Google</i>:
+				<a href="https://www.youtube.com/watch?v=hrL_BGiUBWU&list=RDCMUC1_ubEMHUjm8M5ujzv_g8BQ&index=4"
+					class="cite" target="_blank">Better than Alphazero: 4000 Elo Performance of Alfazero
+					 vs Stockfish 15</a>.
+			</li>
+			<li>Una partida de 2023:
+			<a href="https://youtu.be/3Zqldgqa3Vk" class="cite" target="_blank">New AlphaZero (4050 Elo) Played Perfect
+				Chess Against Stockfish 15.1</a>
+			</li>
+		</ul>
+		<p>En 2019 DeepMind publicà un nou artícle on detalla
+			<a href="https://en.wikipedia.org/wiki/MuZero" class="cite" target="_blank">MuZero</a>, un nou algorisme capaç
+			de generalitzar <i>AlphaZero</i>, per a jugar a jocs de taula i jocs <i>Atari</i> (<i>Arcade</i>) sense
+			conèixer les regles o representacions del joc; el programa <i>MuZero</i> fa servir tres xarxes neuronals, en
+			comptes d'una sola, i no ha millorat a <i>AlphaZero</i>, però l'ha igualat sense tenir informació del joc.
+			Com s'ha comentat, la versió d'<i>AlphaZero</i> ja no és mantinguda per <i>Deepmind Google</i>, però s'han
+			desenvolupat clons des de la informació que es va publicar.
+		</p>
+	</article>
+	</main>
+	<footer class="w3-container w3-purple w3-opacity">
+		<!-- Email -->
+		<h2 class="w3-container w3-pale-green w3-center title">
+			<img src="../img/cescacs-email-image.gif" alt="cescacs" style="height:1em; display: inline-block;" >
+		</h2>
+	</footer>
+</body>
+
+</html>
