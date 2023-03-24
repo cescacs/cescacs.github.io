@@ -576,13 +576,25 @@
 			quatre nivells només a 3_000 nodes, en comptes de milió i mig, una reducció del 99.8%.
 		</p>
 		<aside>
-			<p>Estimació de la complexitat òptima dels escacs ortodoxos amb <cite>alfa-beta</cite>:&nbsp;
-				<code>36<sup><i>d</i>/2</sup> = 6<sup><i>d</i>/2</sup>·6<sup><i>d</i>/2</sup> = 6<sup><i>d</i></sup></code>
-			</p>
-			<p>Estimació de la complexitat òptima de <cite class="cescacs">C'escacs</cite> amb <cite>alfa-beta</cite>:&nbsp;
-				<code>144<sup><i>d</i>/2</sup> = 12<sup><i>d</i>/2</sup>·12<sup><i>d</i>/2</sup> = 12<sup><i>d</i></sup></code>.
-				La complexitat és <code>2<sup><i>d</i></sup></code> vegades superior als escacs ortodoxos.
-			</p>
+			<h5 class="w3-container w3-pale-blue w3-center">La importància d'una ordenació correcta</h4>
+			<p>Cas perfecta ordenació, poda <cite>alfa-beta</cite> màximitzada:</p>
+			<ul>
+				<li>Estimació de la complexitat òptima dels escacs ortodoxos amb poda <cite>alfa-beta</cite>:&nbsp;
+					<code>36<sup><i>d</i>/2</sup> = 6<sup><i>d</i>/2</sup>·6<sup><i>d</i>/2</sup> = 6<sup><i>d</i></sup></code>
+				</li>
+				<li>Estimació de la complexitat òptima de <cite class="cescacs">C'escacs</cite> amb poda <cite>alfa-beta</cite>:&nbsp;
+					<code>144<sup><i>d</i>/2</sup> = 12<sup><i>d</i>/2</sup>·12<sup><i>d</i>/2</sup> = 12<sup><i>d</i></sup></code>.
+					La complexitat és <code>2<sup><i>d</i></sup></code> vegades superior als escacs ortodoxos.
+				</li>
+			</ul>
+			<p>Cas pitjor ordenació, sense efectivitat poda <i>alpha-beta</i>:</p>
+			<ul>
+				<li>Estimació de la complexitat dels escacs ortodoxos:&nbsp; <code>36<sup><i>d</i></sup></code>
+				</li>
+				<li>Estimació de la complexitat de <cite class="cescacs">C'escacs</cite>:&nbsp; <code>144<sup><i>d</i></sup></code>.
+					La complexitat és <code>4<sup><i>d</i></sup></code> vegades superior als escacs ortodoxos.
+				</li>
+			</ul>
 		</aside>
 		<h4 class="w3-container w3-pale-yellow w3-center">Heurístics d'ordenació de les jugades</h4>
 		<p>Per obtenir uns resultats òptims en <strong>l'algorisme <cite>alfa-beta</cite>, es requereix un nou <i>heurístic</i>:
@@ -911,11 +923,14 @@
 			</li>
 		</ul>
 		<p>El gran aventatge d'aquest algorisme és que <strong>no existeix cap dependència d'heurístics</strong>, tot i que
-			es poden fer servir sesgant el comportament aleatori per mirar de millorar-ho. L'inconvenient més gran és que
-			requereix una gran potència de càlcul per a l'entrenament de la xarxa neuronal; per a decrementar la potència
-			de càlcul requerida inicialment es pot començar amb un comportament inicial fonamentat en heurístics, i fer servir
-			la xarxa neuronal únicament per a l'aprenentatge d'un nivell superior de coneixement del joc; preferiblement aquests
-			heurístics hauran de ser senzills i efectius, per evitar sobrecostos i biaixos.
+			es poden fer servir sesgant el comportament aleatori per mirar de millorar-ho.
+		</p>
+		<p>L'inconvenient més gran és que
+			<strong>requereix una gran potència de càlcul per a l'entrenament de la xarxa neuronal</strong>.
+			Per a decrementar la potència de càlcul requerida per a l'entrenament es pot començar amb un comportament inicial
+			fonamentat en heurístics, i fer servir la xarxa neuronal únicament per a l'aprenentatge d'un nivell superior de
+			coneixement del joc. Preferiblement aquests heurístics hauran de ser senzills i efectius, per evitar
+			sobrecostos i biaixos.
 		</p>
 		<h3>Deepmind: AlphaZero i MuZero</h3>
 		<figure class="tright fig400" style="clear:none; padding-top: 6px; padding-bottom: 10px;">
