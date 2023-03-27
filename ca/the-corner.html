@@ -21,7 +21,7 @@
 	<meta property="og:type" content="website" >
 	<meta property="og:locale" content="ca-ES">
 	<meta name="description" property="og:description"
-		content="Altres continguts relacionats amb C'escacs.">
+		content="Altres continguts relacionats amb C'escacs i els escacs hexagonals.">
 	<!-- public imgbb image -->
 	<!-- https://ibb.co/jHTDkqc -->
 	<!-- https://i.ibb.co/BwtB2vX/logo-rich.png -->
@@ -29,7 +29,7 @@
 	<meta name="twitter:image" content="https://i.ibb.co/BwtB2vX/logo-rich.png">
 	<meta name="author" content="Cesc Sasal i Lasaosa">
 	<!-- end description -->
-	<meta name="keywords" content="C'escacs, Cescacs, Escacs hexagonals">
+	<meta name="keywords" content="C'escacs, Cescacs, Escacs hexagonals, El racó de C'escacs">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../w3.css">
@@ -213,9 +213,9 @@
 		</figure>
 		<p>Els <a href="https://www.chessvariants.com/hexagonal.dir/minihex.html" target="_blank" class="cite">Mini
 				Hexchess</a> són uns escacs hexagonals miniatura, en un <i>hexcaquer</i> de 37 <i>hexcacs</i>,
-			dissenyats per <cite>Dave McCooey</cite>. Són un gran passatemps, i una manera alternativa d'introduir-se en
+			dissenyats per <b>Dave McCooey</b>. Són un gran passatemps, i una manera alternativa d'introduir-se en
 			els <cite>Hexcacs Hexagonals</cite>, diferent i més frivola a l'alternativa de jugar una partida als escacs
-			de <cite>Gliński</cite>, o la variant de <cite>McCooey</cite>.
+			de <b>Gliński</b>, o la variant de <b>McCooey</b>.
 		</p>
 		<p>
 			<a href="../other/minihexchess.svg" target="_blank" class="cite">Aquí podem obtenir un hexcaquer per
@@ -238,18 +238,18 @@
 
 		<p>Els hexcaquers, i en general, els taulers de joc fets d'hexàgons, han estat una curiositat matemàtica des de
 			la seva introducció en el món dels jocs, destacant <a href="https://en.wikipedia.org/wiki/Hex_(board_game)"
-				target="_blank" class="cite">Hex</a>, joc inventat pel matemàtic danès <cite>Piet Hein</cite> en 1942.
-			En 1950 <cite>Claude Shannon</cite> construí una màquina analògica que jugava a <cite>Hex</cite>
-			raonablement. Més tard, el joc va ser comentat per <cite>Martin Gardner</cite> en la seva columna del
+				target="_blank" class="cite">Hex</a>, joc inventat pel matemàtic danès <b>Piet Hein</b> en 1942.
+			En 1950 <b>Claude Shannon</b> construí una màquina analògica que jugava a <cite>Hex</cite>
+			raonablement. Més tard, el joc va ser comentat per <b>Martin Gardner</b> en la seva columna del
 			<cite>Scientific American</cite>.
 		</p>
 		<p>El món dels taulers hexagonals està descrit en el lloc web
-			<a href="https://www.redblobgames.com/grids/hexagons/" target="_blank" class="cite">Heagonal Grids</a>,
+			<a href="https://www.redblobgames.com/grids/hexagons/" target="_blank" class="cite">Hexagonal Grids</a>,
 			de <cite>Red Blob Games</cite>. Aquí trobarem algorismes per implementar jocs en taulers hexagonals, els
 			<a href="https://www.redblobgames.com/grids/hexagons/#coordinates" target="_blank" class="cite">sistemes
 				de Coordenades</a>, on podem trobar descrit el sistema que fa servir <i class="cescacs">C'escacs</i>,
-			que ell anomena <cite>Doubled coordinates</cite>. No parla en concret dels escacs hexagonals; els escacs de
-			<cite>Gliński</cite> i <cite>McCooey</cite> fan servir un sistema de coordenades que podriem anomenar
+			que ell anomena <cite>Doubled coordinates</cite>. No parla en concret dels escacs hexagonals; els <cite>escacs
+			de Gliński</cite> i els <cite>escacs de McCooey</cite> fan servir un sistema de coordenades que podriem anomenar
 			<i>axial doble</i>, doncs fan servir un sistema de coordenades axial diferent en cada meitat de l'hexcaquer.
 		</p>
 		<p>També trobarem en el lloc web de <cite>Red Blob Games</cite> un
@@ -258,8 +258,8 @@
 		</p>
 	</article>
 	<!-- Estimacions de finals per Dave McCooey -->
-	<article class="w3-container">
-		<h2 class="w3-container w3-center w3-pale-green header2">Estimacions de finals per Dave McCooey</h2>
+	<article id="finals" class="w3-container">
+		<h2 class="w3-container w3-center w3-pale-green header2">Còmput de finals, per Dave McCooey</h2>
 		<h3 class="w3-container w3-pale-yellow w3-center">Finals de joc en hexcaquers de 91 casillas (Gliński/McCooey)
 		</h3>
 		Els finals dels escacs hexagonals han estat estudiats en profunditat per Dave McCooey i els resultats s'apliquen
@@ -285,7 +285,7 @@
 		En general els resultats en hexcaquers de 91 hexcacs són extrapolables als hexcaquers de 169 hexcacs, pero amb
 		una notable excepció:
 		<ul class="w3-ul">
-			<li class="w3-panel w3-red">El <i>Rei</i> i dos <i>Cavalls</i> <b>no</b> poden fer escac mat
+			<li class="w3-panel" style="background-color: #FFA07A;">El <i>Rei</i> i dos <i>Cavalls</i> <b>no</b> poden fer escac mat
 				 a un <i>Rei</i> solitari.
 				 <span style="font-size: small;">Però sí el poden fer en els hexcaquers amb 91 hexcacs
 					de Gliński i McCooey.</span>
@@ -395,21 +395,21 @@
 	<div class="w3-container">
 
 	</div>
-	<!-- De minimax amb alfa-beta a Montecarlo amb xarxes neuronals -->
+	<!-- De minimax amb alfa-beta a cerca de Montecarlo amb xarxes neuronals -->
 	<article class="w3-container" id="computerChess">
-		<h2 class="w3-container w3-center w3-pale-green header2">De <i>Minimax</i> amb <i>Alfa-Beta</i> a <i>Montecarlo</i> amb
-			xarxes neuronals</h2>
+		<h2 class="w3-container w3-center w3-pale-green header2">De <i>Minimax</i> amb desbroçament <i>Alfa-Beta</i>
+			a la cerca de <i>Montecarlo</i> amb xarxes neuronals</h2>
 		<h3 class="w3-container w3-pale-yellow w3-center">
 			<a href="https://ca.wikipedia.org/wiki/Minimax" class="cite" target="_blank">Minimax</a></h3>
 		<p>Típicament, per a jugar a escacs, els ordinadors han fet servir el <a href="https://ca.wikipedia.org/wiki/Minimax"
-				class="cite" target="_blank">teorema de <i>Minimax</i></a> de <cite>John von Neumann</cite>.
+				class="cite" target="_blank">teorema de <i>Minimax</i></a> de <b>John von Neumann</b>.
 			Aquest teorema s'aplica per a jocs d'imformació perfecta entre dos adversaris, amb suma zero, establint
 			que <q>n'hi ha una estratègia que permet a tots dos jugadors minimitzar la pèrdua màxima esperada.</q>
 			El jugador juga, doncs, amb l'estratègia que resulta en la minimització de la seva màxima pèrdua,
 			considerant totes les respostes possibles del jugador adversari i la pèrdua màxima que pot comportar.
 		</p>
 		<p>Si fos possible estudiar tot l'arbre de jugades, és a dir, totes les possibles jugades futures, es podria determinar
-			una estratègia guanyadora; en la pràctica això és impossible. Va ser <cite>Claude Shannon</cite> en el seu text
+			una estratègia guanyadora; en la pràctica això és impossible. Va ser <b>Claude Shannon</b> en el seu text
 			sobre escacs de 1950 <q>Programming a Computer for Playing Chess</q> qui proposà limitar la profunditat de la recerca
 			en l'arbre de possibilitats, determinant llavors el seu valor mitjançant una funció heurística.
 		</p>
@@ -557,15 +557,15 @@
 			decisió final</strong>. Això comporta un gran estalvi en la quantitat de càlculs necessaris.
 		</p>
 		<p>L'algorisme sembla que ha estat <q>reinventat</q> diverses vegades: 
-			<cite>Arthur Samuel</cite> tenia una versió primerenca per a una simulació de dames; posteriorment
+			<b>Arthur Samuel</b> tenia una versió primerenca per a una simulació de dames; posteriorment
 			Richards, Timothy Hart, Michael Levin i Daniel Edwards varen fer servir conceptes de l'algorisme
-			<cite>alfa-beta</cite> de manera independent en els EUA, i també <cite>McCarthy</cite> va proposar idees
+			<cite>alfa-beta</cite> de manera independent en els EUA, i també <b>McCarthy</b> va proposar idees
 			similars durant el taller de Dartmouth en 1956 i el va suggerir a un grup dels seus estudiants.
 			Finalment, <b><a href="https://en.wikipedia.org/wiki/Alexander_Brudno"
-				class="cite" target="_blank"><cite>Alexander Brudno</cite></a></b>, informàtic rus, va concebre
+				class="cite" target="_blank"><b>Alexander Brudno</b></a></b>, informàtic rus, va concebre
 			l'algorisme <cite>alfa-beta</cite> de manera independent i va publicar la descripció, funcionament i resultats
-			en <b>1963</b>. Tot i les aproximacions prèvies, fou <cite>Alexander Brudno</cite> qui va presentar formalitzada
-			i justificada la idea sencera, que <cite>Donald Knuth</cite> i <cite>Ronald W. Moore</cite> varen refinar en 1975.
+			en <b>1963</b>. Tot i les aproximacions prèvies, fou <b>Alexander Brudno</b> qui va presentar formalitzada
+			i justificada la idea sencera, que <b>Donald Knuth</b> i <b>Ronald W. Moore</b> varen refinar en 1975.
 		</p>
 		<h4 class="w3-container w3-pale-yellow w3-center">Millora del cost de l'algorisme <cite>minimax</cite></h4>
 		<p>L'efectivitat de l'esporgada té una gran <strong>dependència de l'ordre en què s'avaluen les diferents opcions
@@ -576,7 +576,7 @@
 			quatre nivells només a 3_000 nodes, en comptes de milió i mig, una reducció del 99.8%.
 		</p>
 		<aside>
-			<h5 class="w3-container w3-pale-blue w3-center">La importància d'una ordenació correcta</h4>
+			<h5 class="w3-container w3-pale-blue w3-center">La importància d'una ordenació correcta</h5>
 			<p>Cas perfecta ordenació, poda <cite>alfa-beta</cite> màximitzada:</p>
 			<ul>
 				<li>Estimació de la complexitat òptima dels escacs ortodoxos amb poda <cite>alfa-beta</cite>:&nbsp;
@@ -754,7 +754,7 @@
 						class="cite" target="_blank">Reducció del moviment tardà</a></strong>: Descartar els moviments menys
 					prometidors, és a dir, els que són al final de l'ordenació. En realitat no es tracta de descartar-los
 					del tot, encara que algunes versions modernes basades en xarxes neuronals
-					<small>(<quote>Evolving Neural Networks to Focus Minimax Search</quote> 1994, <cite>David Moriarty</cite>)</small>
+					<small>(<cite>Evolving Neural Networks to Focus Minimax Search</cite>, 1994, <b>David Moriarty</b>)</small>
 					sí fan directament una reducció dels nodes a considerar, però la tècnica a què ens referim
 					només fa una reducció en el nivell d'exploració d'aquests nodes <i>poc prometidors</i>.
 				</p>
@@ -795,8 +795,8 @@
 			en la fase mitja del joc, un anàlisi amb gran profunditat d'exploració encara és una opció inabastable sense
 			aquestes eines. Tot i això, el càlcul de finals és molt costòs i les
 			<a href="https://en.wikipedia.org/wiki/Endgame_tablebase" class="cite" target="_blank">bases de taules (tablebase)
-				de finals de joc</a> permeten tenir els moviments òptims precalculats. Iniciades per <cite>Thomas
-				Ströhlein</cite> en 1970 amb els finals KQK, KRK, KPK, KQKR, KRKB i KRKN. <cite>Ken Thompson</cite> i altres
+				de finals de joc</a> permeten tenir els moviments òptims precalculats. Iniciades per <b>Thomas
+				Ströhlein</b> en 1970 amb els finals KQK, KRK, KPK, KQKR, KRKB i KRKN. <cite>Ken Thompson</cite> i altres
 			les van completar per a tots els finals de quatre i cinc peces, amb els casos particulars  KBBKN, KQPKQ i KRPKR.
 			En 2005 s'havien completat <strong>tots els finals</strong> amb fins a sis peces,
 			<strong>en 2018 amb set peces</strong> (els dos reis i cinc altres peces), i actualment, en 2023, encara es
@@ -879,7 +879,7 @@
 		<p>
 			El mètode de <a href="https://ca.wikipedia.org/wiki/Arbre_de_cerca_Monte_Carlo" class="cite" target="_blank">cerca
 				de Montecarlo</a> consisteix en fer servir un mostreig al·leatori, per a casos on no és possible una altra tècnica.
-			i data dels anys 1940. Però va ser en 1987 que <cite>Bruce Abramson</cite> va combinar la búsqueda <cite>minimax</cite>
+			i data dels anys 1940. Però va ser en 1987 que <b>Bruce Abramson</b> va combinar la búsqueda <cite>minimax</cite>
 			amb continuacions aleatòries fins el final de la partida, en comptes de fer servir una funció heurística d'avaluació.
 			
 		</p>
@@ -888,11 +888,11 @@
 			es poden considerar <q>més serioses</q>, de la mateixa manera que <i>minimax</i> s'ha generalitzat al camp de la
 			presa de decisions.
 		</p>
-		<p><cite>B. Brügmann</cite> va fer servir l'algorisme per resoldre el problema del joc del <i>Go</i> en 1992.
-			No va ser fins a 2006 que <cite>Rémi Coulom</cite> va descriure l'aplicació del mètode de Montecarlo a la búsqueda
+		<p><b>B. Brügmann</b> va fer servir l'algorisme per resoldre el problema del joc del <i>Go</i> en 1992.
+			No va ser fins a 2006 que <b>Rémi Coulom</b> va descriure l'aplicació del mètode de Montecarlo a la búsqueda
 			d'arbres de joc, i el va anomenar com a <a href="https://ca.wikipedia.org/wiki/Arbre_de_cerca_Monte_Carlo"
 				class="cite" target="_blank">cerca de Montecarlo</a>.
-			<cite>L. Kocsis</cite> i <cite>Cs. Szepesvári</cite> desenvoluparen l'algorisme <i>UCT</i> (<i>Upper Confidence
+			<b>L. Kocsis</b> i <b>Cs. Szepesvári</b> desenvoluparen l'algorisme <i>UCT</i> (<i>Upper Confidence
 				bounds applied to Trees</i>).
 		</p>
 		<p><cite>Deepmind</cite>, adquirida per <cite>Google</cite> en 2014, en 2015 presentà <cite>AlphaGo</cite>, el primer
@@ -1000,6 +1000,56 @@
 			Com s'ha comentat, la versió d'<i>AlphaZero</i> ja no és mantinguda per <i>Deepmind Google</i>, però s'han
 			desenvolupat clons des de la informació que es va publicar.
 		</p>
+		<h3>Algunes referències addicionals</h3>
+		<ol>
+			<li><cite>How Computers Play Chess</cite>,
+				1990,  D.N.L. Levy, Monty Newborn.
+				Ed W.H.Freeman & Co Ltd.
+			</li>
+			<li><cite><a href="https://www.chessprogramming.org/Main_Page"
+					class="cite" target="_blank">Chess Programming Wiki</a></cite>
+			</li>
+			<li><cite>Desarrollo de un motor de ajedrez. Algoritmos y heurísticas
+				para la reducción del espacio de búsqueda.</cite>
+				Bachelor Thesis. Omar Edgardo, L. S. 2010
+			</li>
+			<li><cite><a href="https://stockfishchess.org/" class="cite"
+				 target="_blank">https://stockfishchess.org/</a></cite>
+			</li>
+			<li><cite><a href="https://thezugzwangblog.com/stockfish/" class="cite"
+				target="_blank">Stockfish: configuración, descarga y secretos</a></cite>
+			</li>
+			<li><cite><a href="https://thezugzwangblog.com/stockfish-15-1-nueva-version-todavia-mas-fuerte/"
+				class="cite" target="_blank">Stockfish 15.1: nueva versión todavía más fuerte</a></cite>
+			</li>
+			<li><cite><a href="https://thezugzwangblog.com/alphazero-mejores-jugadas-ajedrez/" class="cite"
+				target="_blank">AlphaZero: Analizamos sus mejores jugadas de ajedrez en el match contra Stockfish</a></cite>
+			</li>
+			<li><cite><a href="https://philippmuens.com/minimax-and-mcts" class="cite"
+				target="_blank">Minimax and Monte Carlo Tree Search</a></cite>
+			</li>
+			<li><cite><a href="https://en.wikipedia.org/wiki/Monte_Carlo_tree_search" class="cite"
+				target="_blank">Wikipedia: Monte Carlo tree search</a></cite>
+			</li>
+			<li><cite><a href="https://towardsdatascience.com/monte-carlo-tree-search-an-introduction-503d8c04e168"
+				class="cite" target="_blank">Monte Carlo Tree Search: An Introduction</a></cite>
+			</li>
+			<li><cite><a href="https://towardsdatascience.com/alphazero-chess-how-it-works-what-sets-it-apart-and-what-it-can-tell-us-4ab3d2d08867" class="cite"
+				target="_blank">AlphaZero Chess: How It Works, What Sets It Apart, and What It Can Tell Us</a></cite>
+			</li>
+			<li><cite><a href="https://web.stanford.edu/~surag/posts/alphazero.html" class="cite"
+				target="_blank">A Simple Alpha(Go) Zero Tutorial</a></cite>
+			</li>
+			<li><cite><a href="https://medium.com/applied-data-science/how-to-build-your-own-muzero-in-python-f77d5718061a"
+				class="cite" target="_blank">MuZero: The Walkthrough (Part 1/3)</a></cite>
+			</li>
+			<li><cite><a href="https://medium.com/applied-data-science/how-to-build-your-own-deepmind-muzero-in-python-part-2-3-f99dad7a7ad"
+				class="cite" target="_blank">MuZero: The Walkthrough (Part 2/3)</a></cite>
+			</li>
+			<li><cite><a href="https://medium.com/applied-data-science/how-to-build-your-own-deepmind-muzero-in-python-part-3-3-ccea6b03538b"
+				class="cite" target="_blank">MuZero: The Walkthrough (Part 3/3)</a></cite>
+			</li>
+		</ol>
 	</article>
 	</main>
 	<footer class="w3-container w3-purple w3-opacity">

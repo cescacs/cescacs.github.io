@@ -1,46 +1,312 @@
 <!DOCTYPE HTML>
-<html lang="ca">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
+	<!-- ENGLISH -->
 	<!--
 	<link rel="alternate" hreflang="ca" href="../ca/glossary.html" />
 	<link rel="alternate" hreflang="es" href="../es/glossary.html" />
 	-->
-	<meta name="description" content="C'escacs: The Corner">
-	<meta name="keywords" content="C'escacs, Cescacs, C'escacs' Corner">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+	<!-- description -->
+	<meta name="twitter:card" content="summary_large_image">
+	<title>C'escacs: The Corner</title>
+	<meta property="og:title" content="C'escacs: The Corner">
+	<meta property="og:type" content="website" >
+	<meta property="og:locale" content="ca-ES">
+	<meta name="description" property="og:description"
+		content="Other contents related to C'escacs and hexagonal chess.">
+	<!-- public imgbb image -->
+	<!-- https://ibb.co/jHTDkqc -->
+	<!-- https://i.ibb.co/BwtB2vX/logo-rich.png -->
+	<meta name="image" property="og:image" content="https://i.ibb.co/BwtB2vX/logo-rich.png">
+	<meta name="twitter:image" content="https://i.ibb.co/BwtB2vX/logo-rich.png">
 	<meta name="author" content="Cesc Sasal i Lasaosa">
+	<!-- end description -->
+	<meta name="keywords" content="C'escacs, Cescacs, Hexagonal chess, C'escacs' Corner">
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../w3.css">
+	<link rel="stylesheet" type="text/css" href="../w3-colors-win8.css">
 	<link rel="stylesheet" type="text/css" href="../cescacs.css">
-	<title>C'escacs: The Corner</title>
-	<meta http-equiv="refresh" content="5; URL=../working.html" />
+
+	<link rel="preload" as="image" href="../img/lasaosa.PC310001.png">
+	<link rel="preload" as="image" href="../img/logo.gif">
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap">
+	<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple"> -->
+	<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nabla&display=swap"> -->
+
+	<!-- Icons -->
+	<script src="https://kit.fontawesome.com/1efd89dd3e.js" crossorigin="anonymous"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHKYWCYH3N"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-CHKYWCYH3N');
+    </script>
+
+	<!-- <meta http-equiv="refresh" content="5; URL=../working.html" /> -->
 </head>
 
 <body>
-	<header class="w3-container w3-center">
-		<nav class="w3-bar w3-black">
-			<a href="../index.html" class="w3-bar-item w3-button w3-mobile menubar">Principal</a>
-			<a href="historical-milestones.html" class="w3-bar-item w3-button w3-mobile menubar">Referents</a>
-			<a href="thanks.html" class="w3-bar-item w3-button w3-mobile menubar">Agraïments</a>
-		</nav>
-		<nav class="w3-bar w3-black">
-			<a href="../ca/the-corner.html" class="w3-bar-item w3-button w3-mobile menubar" lang="ca"><img src="../img/ca.png" class="lang"
-				alt="Català"> Català</a>
-			<a href="../es/the-corner.html" class="w3-bar-item w3-button w3-mobile menubar" lang="es"><img src="../img/esp.png" class="lang"
-				alt="Español"> Español</a>
-		</nav>
-		<h1 class="w3-container w3-text-grey title">
-			<img src="../img/logo.gif" alt="C'escacs" width="100%" style="max-width:600px;" />
-			<div>C'escacs' Corner</div><!-- C'escacs' corner -->
-		</h1>
-		<h1 style="text-align: center;">Several contents compilation</h1>
+	<header class="w3-center">
+		<div class="w3-container" style='background-image: url("../img/lasaosa.PC310001.png"); background-size:240px'>
+			<div class="w3-container" style="padding:0;">
+				<nav class="w3-bar w3-black" style="margin:0;">
+					<a href="../index.en.html" class="w3-bar-item w3-button w3-transparent"><i class="fa fa-home"></i></a>
+					<div class="w3-dropdown-hover">
+						<button class="w3-button">More Rules</button>
+						<div class="w3-dropdown-content w3-bar-block w3-card-4">
+							<a href="castling.html" class="w3-bar-item w3-button w3-mobile menubar">Special gaits of the King</a>
+							<a href="notation.html" class="w3-bar-item w3-button w3-mobile menubar">Notation</a>
+						</div>
+					</div>
+					<a href="../cescacs.typescript/cescacs.game.html" target="_blank" class="w3-bar-item w3-button w3-transparent"><i class='fas fa-chess'></i> play</a>
+					<div class="w3-dropdown-hover">
+						<button class="w3-button">Other contents</button>
+						<div class="w3-dropdown-content w3-bar-block w3-card-4">
+							<a href="historical-milestones.html" class="w3-bar-item w3-button w3-mobile menubar">Historical milestones</a>
+							<a href="#" class="w3-bar-item w3-button w3-mobile menubar">C'escacs corner</a>
+							<a href="glossary.html" class="w3-bar-item w3-button w3-mobile menubar">Glossary</a>
+							<a href="about.html" class="w3-bar-item w3-button w3-mobile menubar">About C'escacs</a>
+						</div>
+					</div>
+					<div class="w3-dropdown-hover w3-right" style="position:absolute ;">
+						<button class="w3-button"><img src="../img/ca.png" class="lang" alt="Català"></button>
+						<div class="w3-dropdown-content w3-bar-block w3-border" style="right:0;">
+							<a href="../ca/the-corner.html" class="w3-bar-item w3-button w3-mobile menubar" hreflang="ca" lang="ca"><img
+								src="../img/ca.png" class="lang" alt="Català"> Català</a>
+						<a href="../es/the-corner.html" class="w3-bar-item w3-button w3-mobile menubar" hreflang="es" lang="es"><img
+									src="../img/esp.png" class="lang" alt="Español"> Español</a>
+						</div>
+					</div>
+				</nav>
+			</div>
+			<img src="../img/logo.gif" alt="C'escacs" class="mainlogo" >
+		</div>
+		<div class="w3-container w3-opacity">
+			<!--  font-effect-shadow-multiple font-family: 'Bungee Spice', cursive; -->
+			<h1 class="w3-jumbo" style="font-family: 'Bungee Spice', cursive; color:#FFD700; margin-top:0;">
+                C'escacs' Corner
+            </h1>
+			<h1 style="text-align: center;">Several contents compilation</h1>
+		</div>
 	</header>
 
+	<main>
+		<div class="w3-container">
+			<img src="../img/pigeonimpossible.gif" alt="" style="float:left; margin:2em">
+			<p>Sorry, this page is not yet translated.<br>
+			Anyway, main links and media content are available.</p>
+		</div>
+	
+	<!-- Repositori Github -->
+	<article>
+		<h2 class="w3-container w3-center w3-pale-green header2"><i>Github</i> repository</h2>
+		<ul>
+			<li><a href="https://github.com/cescacs/cescacs.github.io" target="_blank"
+				class="cite">https://github.com/cescacs/cescacs.github.io</a>
+			</li>
+			<li><a href="https://github.com/cescacs/cescacs.typescript" target="_blank"
+				class="cite">https://github.com/cescacs/cescacs.typescript</a>
+			</li>
+		</ul>
+	</article>
+	<!-- Excaquer per imprimir -->
+	<article class="w3-container">
+		<h2  class="w3-container w3-center w3-pale-green header2">Hexagonal board for printing</h2>
+		<figure class="third">
+			<img src="../img/cescacs.svg" alt="One of my sets" style="width:100%">
+		</figure>
+		<p><a href="../img/cescacs.svg" target="_blank" class="cescacs">Hexagonal board to print</a>.
+		</p>
+	</article>
+	<!-- Fotos de peces, escaquer -->
+	<article class="w3-container">
+		<h2  class="w3-container w3-center w3-pale-green header2">Some hexagonal boards and special pieces</h2>
+		<figure class="third-rest" style="margin:0">
+			<img src="../img/IMG_20220331_Hexcaquer-min.jpg" alt="One of my sets" style="width:100%">
+			<figcaption style="padding-right:0.5em; padding-left:0.5em">(2xDIN-A3).
+				<p><i>Dragon</i> and <i>Elephants</i> pieces from China.
+				</p>
+			</figcaption>
+		</figure>
+		<figure class="third" style="margin:0">
+			<img src="../img/IMG_20201220_Set-min.jpg" alt="One of my sets" style="width:100%">
+			<figcaption style="padding-right:0.5em; padding-left:0.5em">
+				<i>Atles</i> (used as <i>elephants</i>), 
+				<i>Poseidon</i> (used as <i>Wyvern</i>) and <i>Pegasus</i> pieces from<br>
+				<span class="w3-small">
+					<a href="https://www.marinakisbros.com/" target="_blank" class="cite">Marinakis Brothers</a>
+				</span>
+		</figcaption>
+		</figure>
+		<figure class="third" style="margin:0">
+			<img src="../img/fitxes.jpg" alt="One of my sets" style="width:100%">
+			<figcaption style="padding-right:0.5em; padding-left:0.5em">
+				Wood hand made pieces, made from other chess pieces.
+			</figcaption>
+		</figure>
+	</article>
+	<!-- Mini Hexchess -->
+	<article class="w3-container">
+		<h2  class="w3-container w3-center w3-pale-green header2"><a href="../other/minihexchess.svg" target="_blank"
+				class="cite">Mini Hexchess</a></h2>
+		<figure class="half">
+			<img src="../img/mini.h-min.png" alt="Mini Hexchess" class="fullwidth">
+		</figure>
+		<p><b>Dave McCooey</b> <a href="https://www.chessvariants.com/hexagonal.dir/minihex.html" target="_blank" class="cite">Mini
+				Hexchess</a>.
+		</p>
+		<ul>
+			<li><a href="../other/minihexchess.svg" target="_blank" class="cite">Board to print</a>.
+			</li>
+			<li><a href="../other/minihexchess.pdf" target="_blank" class="cite">Rules (english, español and  català).</a>.
+			</li>
+		</ul>
+	</article>
+	<!-- Hexagonal Grids -->
+	<article class="w3-container">
+		<h2 class="w3-container w3-center w3-pale-green header2">Hexagonal Grids</h2>
+		<ul>
+			<li><a href="https://www.redblobgames.com/grids/hexagons/" target="_blank" class="cite">Hexagonal Grids</a>.
+			</li>
+			<li><a href="https://www.redblobgames.com/grids/hexagons/#coordinates" target="_blank" class="cite">Hexagonal
+				Coordinate Systems</a>.
+			</li>
+			<li><a href="https://www.redblobgames.com/grids/hexagons/implementation.html" target="_blank"
+				class="cite">Programmer implementation references</a>.
+			</li>
+		</ul>
+	</article>
+	<article id="finals" class="w3-container">
+		<h2 class="w3-container w3-center w3-pale-green header2">Endgames analysis, by Dave McCooey</h2>
+	</article>
+
+	<!-- joc javascript -->
+	<article class="w3-container">
+		<h2  class="w3-container w3-center w3-pale-green header2">
+			<a href="../cescacs.typescript/cescacs.game.html" target="_blank" class="w3-bar-item w3-button w3-transparent"><i class='fas fa-chess'></i>
+			Playing <i>C'escacs</i> with javascript</a></h2>
+		<p>There is a <i>javascript</i> <a href="../cescacs.typescript/cescacs.game.html"
+			target="_blank" class="cescacs w3-transparent"><i class='fas fa-chess'></i>
+			<i>C'escacs</i> game display</a>.
+			It does only display moves on the screen, allowing only valid moves. It is also a place for
+			saving and loading the game moves.
+		</p>
+	</article>
+	<!-- TODO Pàgines escacs de Gliński -->
 	<div class="w3-container">
-		<img src="../img/pigeonimpossible.gif" alt=""/>
-		<p>Sorry, it's not yet translated.</p>
+
 	</div>
+	<!-- From alpha-beta to Montecarlo search using neural networks -->
+	<article class="w3-container" id="computerChess">
+		<h2 class="w3-container w3-center w3-pale-green header2">From <i>Minimax</i> using <i>Alfa-Beta</i> pruning
+			to <i>Montecarlo</i> search with neural networks</h2>
+		<div class="w3-container">
+			<img src="../img/pigeonimpossible.gif" alt="" style="float:left; margin:2em">
+			<p>Sorry, this article is not yet translated.</p>
+		</div>
+		<h3>Deepmind: AlphaZero i MuZero</h3>
+		<figure class="tright fig400" style="clear:none; padding-top: 6px; padding-bottom: 10px;">
+			<img src="../img/AlphaGo_to_MuZero.jpg" alt="d'AlphaGo a MuZero" style="width:100%">
+			<figcaption>From AlphaGo to MuZero</figcaption>
+		</figure>
+		<p>Some <i>AlphaZero</i> against <i>Stockfish</i> matches:</p>
+		<ul>
+			<li><a href="https://thezugzwangblog.com/alphazero-mejores-jugadas-ajedrez/"
+				class="cite" target="_blank">AlphaZero vs Stockfish match selection</a> (spanish comments)</li>
+			<li><a href="https://thezugzwangblog.com/alphazero-mejores-jugadas-ajedrez/"
+				class="cite" target="_blank">blog zugzwang</a> (spanish comments)</li>
+			<li><a href="https://www.youtube.com/watch?v=jJq3327g5gY"
+				class="cite" target="_blank">December 2018 match</a> (spanish comments)</li>
+			<li>July 2022:
+				<a href="https://youtu.be/3nmCHW73-ec" class="cite" target="_blank">Stockfish 15
+					(3880) Vs Alphazero (3872) 2022 new Game</a>
+			</li>
+			<li>Setember 2022: Includes explanation about <i>DeepMind Google</i> bindings with the new <cite>alpha-zero</cite> code:
+				<a href="https://www.youtube.com/watch?v=hrL_BGiUBWU&list=RDCMUC1_ubEMHUjm8M5ujzv_g8BQ&index=4"
+					class="cite" target="_blank">Better than Alphazero: 4000 Elo Performance of Alfazero
+						vs Stockfish 15</a>.
+			</li>
+			<li>2023:
+			<a href="https://youtu.be/3Zqldgqa3Vk" class="cite" target="_blank">New AlphaZero (4050 Elo) Played Perfect
+				Chess Against Stockfish 15.1</a>
+			</li>
+		</ul>
+		<h3>Some other references</h3>
+		<ol>
+			<li><cite>How Computers Play Chess</cite>,
+				1990,  D.N.L. Levy, Monty Newborn.
+				Ed W.H.Freeman & Co Ltd.
+			</li>
+			<li><cite><a href="https://www.chessprogramming.org/Main_Page"
+				class="cite" target="_blank">Chess Programming Wiki</a></cite>
+			</li>
+			<li><cite>Desarrollo de un motor de ajedrez. Algoritmos y heurísticas
+				para la reducción del espacio de búsqueda.</cite>
+				Bachelor Thesis. Omar Edgardo, L. S. 2010
+			</li>
+			<li><cite><a href="https://stockfishchess.org/" class="cite"
+				 target="_blank">https://stockfishchess.org/</a></cite>
+			</li>
+			<li><cite><a href="https://thezugzwangblog.com/stockfish/" class="cite"
+				target="_blank">Stockfish: configuración, descarga y secretos</a></cite>
+			</li>
+			<li><cite><a href="https://thezugzwangblog.com/stockfish-15-1-nueva-version-todavia-mas-fuerte/"
+				class="cite" target="_blank">Stockfish 15.1: nueva versión todavía más fuerte</a></cite>
+			</li>
+			<li><cite><a href="https://thezugzwangblog.com/alphazero-mejores-jugadas-ajedrez/" class="cite"
+				target="_blank">AlphaZero: Analizamos sus mejores jugadas de ajedrez en el match contra Stockfish</a></cite>
+			</li>
+			<li><cite><a href="https://philippmuens.com/minimax-and-mcts" class="cite"
+				target="_blank">Minimax and Monte Carlo Tree Search</a></cite>
+			</li>
+			<li><cite><a href="https://en.wikipedia.org/wiki/Monte_Carlo_tree_search" class="cite"
+				target="_blank">Wikipedia: Monte Carlo tree search</a></cite>
+			</li>
+			<li><cite><a href="https://towardsdatascience.com/monte-carlo-tree-search-an-introduction-503d8c04e168"
+				class="cite" target="_blank">Monte Carlo Tree Search: An Introduction</a></cite>
+			</li>
+			<li><cite><a href="https://towardsdatascience.com/alphazero-chess-how-it-works-what-sets-it-apart-and-what-it-can-tell-us-4ab3d2d08867" class="cite"
+				target="_blank">AlphaZero Chess: How It Works, What Sets It Apart, and What It Can Tell Us</a></cite>
+			</li>
+			<li><cite><a href="https://web.stanford.edu/~surag/posts/alphazero.html" class="cite"
+				target="_blank">A Simple Alpha(Go) Zero Tutorial</a></cite>
+			</li>
+			<li><cite><a href="https://medium.com/applied-data-science/how-to-build-your-own-muzero-in-python-f77d5718061a"
+				class="cite" target="_blank">MuZero: The Walkthrough (Part 1/3)</a></cite>
+			</li>
+			<li><cite><a href="https://medium.com/applied-data-science/how-to-build-your-own-deepmind-muzero-in-python-part-2-3-f99dad7a7ad"
+				class="cite" target="_blank">MuZero: The Walkthrough (Part 2/3)</a></cite>
+			</li>
+			<li><cite><a href="https://medium.com/applied-data-science/how-to-build-your-own-deepmind-muzero-in-python-part-3-3-ccea6b03538b"
+				class="cite" target="_blank">MuZero: The Walkthrough (Part 3/3)</a></cite>
+			</li>
+		</ol>
+	</article>
+</main>
+<footer class="w3-container w3-purple w3-opacity">
+	<!-- Email -->
+	<h2 class="w3-container w3-pale-green w3-center title">
+		<img src="../img/cescacs-email-image.gif" alt="cescacs" style="height:1em; display: inline-block;" >
+	</h2>
+</footer>
 </body>
 
 </html>
