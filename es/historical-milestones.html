@@ -122,12 +122,6 @@
 			<i>C'escacs</i>, acompañándolos con algunos datos históricos adicionales, cuando menos, interesantes.
 		</p>
 	</div>
-	<div class="w3-container">
-		<a href="https://www.youtube.com/watch?v=aVpIcqednBQ"
-			target="_blank"><img src="../img/pigeonimpossible.gif"
-			alt="Pigeon impossible" style="width:189px" /></a>
-		<p>Disculpa, todavía no se ha traducido por completo.</p>
-	</div>
 	<!-- Ajedrez primitivo -->
 	<div class="w3-container">
 		<h2 id="Escacsprimitius" class="w3-container w3-pale-green w3-center w3-text-grey w3-xxlarge title">Ajedrez primitivo</h2>
@@ -2660,7 +2654,33 @@
 					onclick="document.getElementById('G001b').style.display = 'none';document.getElementById('G001a').style.display = 'initial';"
 					>Orientación Plana</button>
 			</figure>
-
+			<p>En el ajedrez hexagonal todas las piezas incrementan su movilidad y potencia de captura en 1/2,
+				excepto los <i>alfiles</i> y los <i>peones</i>, que no se incrementan, sino que decrementan, con
+				la excepción de <i class="cescacs">C'escacs</i>, que incrementa la movilidad de los <i>peones</i>,
+				aunque no los movimientos de captura. La orientación puntiaguda de los hexcquesas
+				(<a href="https://www.redblobgames.com/grids/hexagons/#diagram-spacing" target="_blank"
+					class="cite" lang="en" hreflang="en">pointy topped</a>) no deja
+					<a href="glossary.html#Columna" class="cescacs" target="_blank">columnas verticales</a>,
+				sino filas horizontales y 
+				<a href="glossary.html#Linia" class="cescacs" target="_blank">líneas verticales</a>.
+				Los <i>peones</i> no pueden avanzar en línea recta por una columna, pero esto permite
+				incrementar la movilidad de los peones a dos direcciones, el doble.
+			</p>
+			<p>La captura queda también generalmente definida por los dos hexcaques en
+				<i><a href="glossary.html#MovimentDiagonal" class="cescacs">movimiento diagonal</a>
+				oblicuamente adelante</i>, es decir, los hexcaques del mismo color
+				de la siguiente fila horizontal. Así el número de movimientos de captura no queda incrementado,
+				pero los cuatro movimientos dejan el peón en la siguiente fila horizontal, definiendo el
+				movimiento de los peones muy convenientemente similar al ajedrez ortodoxo, y la doble movilidad
+				podríamos decir que equilibra el hecho de que no se incrementen los movimientos de captura.
+			</p>
+			<p>Inicialmente <i>De Vasa</i> definió tres posiciones de captura para los peones, incrementando
+				también los movimientos de captura en 1/2, incluyendo el hexcaque definido por el
+				<i>movimiento diagonal adelante en frente</i>, avanzando así dos filas horizontales en la captura.
+				Pero este movimiento lo tuvo que eliminar en una revisión posterior del juego, porque hacía que los
+				peones fueran excesivamente potentes, además de la asimetría que introducía por el avance de dos
+				posiciones en este movimiento, en vez de una.
+			</p>
 
 			<div class="w3-container">
 				<h4 id="EscacsDaVasa" class="w3-container w3-pale-yellow w3-center header3"><i>Da Vasa</i></h4>
@@ -2674,6 +2694,16 @@
 					<figcaption class="thumbcaption">Configuración inicial de las piezas en la variante de Da Vasa.
 					</figcaption>
 				</figure>
+				<p>La variante de <i>Helge E. da Vasa</i> data de 1953, y se publicó por primera vez en el
+					libro <cite>Joseph Boyer's Nouveaux Jeux d'Echecs Non-orthodoxes</cite> (<i>Paris, 1954</i>).
+					La <em><a href="https://en.wikipedia.org/wiki/Hexagonal_chess#De_Vasa's_hexagonal_chess"
+						target="_blank" class="cite">variante de <i>Da Vasa</i></a></em> consideró cambiar la
+					orientación de los hexcaques en consideración a la movilidad de los <i>peones</i>, y por
+					eso usa un damero en forma de rombo. Este ajedrez permite un movimiento inicial doble de
+					los <i>peones</i>, y por tanto capturas al paso, usando nueve peones, justo el mismo
+					número que en el <cite>Ajedrez Hexagonal</cite> (<i>Gliński</i>). Esta versión, dada su
+					orientación en filas horizontales, también permite el enroque.
+				</p>
 			</div>
 
 			<div class="w3-container">
@@ -2688,6 +2718,35 @@
 					<figcaption class="thumbcaption">Configuración inicial de las piezas en la variante de Brusky.
 					</figcaption>
 				</figure>
+				<p><i>Yakov Brusky</i> en 1966 introduce pequeños cambios, pero fundamentalmente manteniendo las
+					ideas de <i>Da Vasa</i>. En la variante de Brusky:
+				</p>
+				<ul>
+					<li>El tablero es un hexágono irregular.</li>
+					<li>Cada jugador dispone de <b>diez peones</b> (uno más que en la variante de <i>Da Vasa</i>),
+						situados en la fila posterior a las figuras.
+					</li>
+					<li>Se permite el movimiento de captura en frente del peón, avanzándolo así hasta la
+						segunda fila, pero solo para el primer movimiento del peón, cuando todavía no se ha movido.
+						<ul>
+							<li>Esto era en realidad un acertado compromiso entre la primera versión de la variante
+								de <i>Da Vasa</i> y su versión definitiva del juego.
+							</li>
+						</ul>
+					</li>
+					<li>Introduce una regla de <i>bloqueo de un peón</i> por un peón del oponente: un <i>peón</i>
+						queda bloqueado si un peón del oponente impide uno de los dos movimientos, quedando así
+						el otro movimiento invalidado.
+						<ul>
+							<li>Esta regla parece un poco artificial y forzada; probablemente la regla de
+								<i>C'escacs</i> de la <a href="glossary.html#CapturaPeoEsquiu"
+									class="cescacs" target="_blank">captura del peón esquivo</a> se podría
+								adaptar a la orientación puntiaguda de los hexcaques, cambiando esta regla
+								de <i>Brusky</i>.
+							</li>
+						</ul>
+					</li>
+				</ul>
 			</div>
 
 			<div class="w3-container">
@@ -2701,6 +2760,25 @@
 					<figcaption class="thumbcaption">Configuración inicial de las piezas en el Grand Hexachess.
 					</figcaption>
 				</figure>
+				<p><i>Derick Peterson</i> publicó las reglas para el
+					<em><a href="https://www.chessvariants.com/hexagonal.dir/grandhexachess.html"						
+						class="cite" target="_blank">Grand Hexachess</a></em> en 1997, también con una clara
+					influencia de la variante de <i>Da Vasa</i>. Ahora nos encontramos con un damero en un
+					hexágono regular con siete hexcaques en cada lado, sumando un total de 127 hexcaques.
+				</p>
+				<p>La gran ventaja es la introducción de un hexágono regular como tablero, pero olvida todas
+					las mejoras de <i>Brusky</i> y no permite el movimiento doble inicial de los
+					<i>peones</i>, ahora once por jugador que se encuentran más adelantados, pero a la
+					la misma distancia de los peones del oponente que en la variante de <i>da Vasa</i>.
+				</p>
+				<p>Se introducen las nuevas piezas del <i>Visir</i>
+					(<a href="glossary.html#Pegas" class="cescacs" target="_blank">Pegaso</a>
+					de <i class="cescacs">C'escacs</i>), la <i>Máquina de Guerra</i>
+					(<a href="glossary.html#Drac" class="cescacs" target="_blank">Dragón</a> de
+					<i class="cescacs">C'escacs</i>) y el <i>Duque</i>, que combina todos los movimientos:
+					seis ortogonales, seis diagonales y doce como el caballo
+					(es decir, sumando los movimientos del <i>Rey</i> y los del <i>Caballo</i>).
+				</p>
 			</div>
 
 		</div>
@@ -2725,7 +2803,49 @@
 					</small>
 				</figcaption>
 			</figure>
+			<p>Existen también algunas variantes para tres jugadores que claman ser <q>ajedreces hexagonales</q>.
+				Pero, además de recordar que el término no se tendría que usar de manera tan burda, la
+				intervención de la <i>diplomacia</i> entre los jugadores hace que nos refiramos a otro tipo de
+				juego, y quizás la clasificación como <q>ajedrez</q> es comparable con el
+				<b><a href="#Xaturaji" class="cite">Chaturaji</a></b>, donde aún con la participación del azar,
+				pues se juega con dados, los cuatro jugadores juegan por parejas, equilibrando así la
+				intervención de la diplomacia. En mi opinión, no pueden calificarse de <q>ajedrez</q> juegos
+				para más de dos jugadores, a pesar de que hayan sido inspirados en el ajedrez.
+			</p>
+			<p>Un caso que recientemente tuvo cierta popularidad, fue el <cite>Ajedrez de Jacek Filek</cite>.
+				<i>Filek</i>, de nacionalidad polaca, ha comercializado dos versiones de tablero para su
+				<q>ajedrez para tres jugadores</q>.
+			</p>
 
+			<p>Existen en China varios juegos multijugador derivados del ajedrez:</p>
+			<ul>
+				<li><q>Qiguo Xiangqi</q> (七國象棋),
+					<a href="https://en.wikipedia.org/wiki/Game_of_the_Seven_Kingdoms"
+							target="_blank" class="cite"><q>El juego de los Siete Reinos</q></a>,
+					un juego para siete jugadores inspirado en el ajedrez, a pesar de que también pueden jugar
+					menos jugadores. En este juego, pedir ayuda a uno de los contrincantes que no sea parte de
+					la propia alianza, requiere que el jugador se tome un vaso de licor. El juego data del
+					siglo XI, y fue diseñado por el ministro imperial e historiador <i>Sima Guang</i> para
+					recordar los <q><a href="https://ca.wikipedia.org/wiki/Set_regnes_combatents"						
+						class="cite" target="_blank">Siete reinos combatientes</a></q> (<i>403–221 AC</i>).
+				</li>
+				<li><q>Sanguo Qi</q> (三國棋),
+					<q><a href="https://en.wikipedia.org/wiki/Game_of_the_Three_Kingdoms"
+						class="cite" target="_blank">El juego de los Tres Reinos</a></q>,
+						es para tres jugadores y fue diseñado para recordar el periodo de los
+						<q><a href="https://es.wikipedia.org/wiki/Tres_Reinos"
+							class="cite" target="_blank">Tres Reinos</a></q> (<i>221–264</i>).
+				</li>
+				<li><q>Sanyou Qi</q> (三友棋),
+					<q><a href="https://en.wikipedia.org/wiki/Game_of_the_Three_Friends"
+						class="cite" target="_blank">El juego de los Tres Amigos</a></q> es una variante del
+						anterior, y muy similar. 
+				</li>
+			</ul>
+			<p>Los dos últimos, a pesar de no estar teselados con hexágonos, el tablero tiene forma hexagonal
+				para repartirlo convenientemente entre los tres jugadores, de manera parecida al de
+				<i>Jacek Filek</i>.
+			</p>
 			<div class="w3-container">
 				<!-- Ajedrez de las cuatro estacions -->
 				<h4 id="EscacsQuatreEstacions" class="w3-container w3-pale-yellow w3-center header3">Ajedrez
@@ -2737,12 +2857,36 @@
 						<div class="thanks">via Wikimedia Commons</div>
 					</figcaption>
 				</figure>
+				<p>El Ajedrez de las cuatro estaciones (<cite>Acedrex de los quatros tiempos</cite>) es un
+					ajedrez para cuatro jugadores, descrito en
+					<cite><a href="#LlibreDelsJocs" class="cescacs">El Libro de los Juegos</a></cite>, de
+					<i>Alfonso X de Castilla</i>. Los jugadores tienen que ir derrotando a los otros, retirándose
+					entonces sus fichas, hasta quedar un ganador. También se podía jugar asistido con dados, de
+					manera parecida al <a href="#Xaturaji" class="cescacs">Chaturaji</a>.
+				</p>
 			</div>
 
 			<!-- Pasapiezas -->
 			<div class="w3-container">
 				<h4 id="Passapeces" class="w3-container w3-pale-yellow w3-center header3">Pasapiezas</h4>
 				<a href="https://es.wikipedia.org/wiki/Pasapiezas" class="cite" target="_blank">Pasapiezas</a>
+				<p>Esta variante es particularmente popular, pues permite una entretenida partida de ajedrez
+					por parejas, para cuatro jugadores. Se juega en dos tableros, y las piezas capturadas por
+					tu compañero en el otro tablero, las puedes incorporar en tu juego en lugar de mover una
+					pieza, siempre sin hacer mate al incorporar la nueva pieza.
+				</p>
+				<p>Se permite comentar las jugadas entre los jugadores del mismo equipo, y generalmente se
+					juega con reloj (dos relojes, uno para cada tablero), en partidas relámpago o rápidas,
+					donde los peones no promocionan, y se retiran del tablero cuando llegan a la octava fila.
+					Puede haber variantes del juego, pero el más frecuente cuando se juegan partidas relámpago
+					es que ganar en uno de los dos tableros comporta la victoria para la pareja de jugadores,
+					y se acaba el juego.
+				</p>
+				<p>Probablemente, entre el ajedrez multijugador, es la variante que se mantiene más cerca del
+					ajedrez, pues en las variantes multijugador siempre participa un componente de
+					<i>Diplomacia</i>, que en la variante del pasapiezas queda bajo control; el pasapiezas es
+					posiblemente la variante multijugador que más preserva el espíritu del ajedrez.
+				</p>
 			</div>
 
 			<!-- Diplomat -->
@@ -2759,10 +2903,70 @@
 						<br /><br />Disposición inicial de las piezas en <i>Diplomat</i>.
 					</figcaption>
 				</figure>
+				<p><a href="http://www.fishka.spb.ru/artickles/igroteka/diplomat/36.htm" hreflang="ru"
+					class="cite" target="_blank">Diplomat</a> (<b>Valeriy Trubitsyn</b>, 1997), es una
+					variación de <a href="#Hexofen" class="cescacs">Hexofen</a>, un ajedrez que se juega
+					en un damero hexagonal de 91 hexcaques, para convertirlo en un juego para tres jugadores.
+					La extraña numeración del tablero ahora sí tiene sentido, y parece de utilidad. Cada uno
+					de los tres jugadores incorpora: <i>Rey</i>, <i>Dama</i>, cuatro <i>Torres</i>, tres
+					<i>Caballos</i>, tres <i>Alfiles</i>, pero solo ocho <i>peones</i> (<i>Hexofen</i> usa once).
+					En total sesenta piezas, veinte de cada jugador, en un tablero de 91 hexcaques.
+				</p>
+				<p>La posició inicial de tots tres jugadors és simètrica fent servir la notació de
+					<i>Trubitsyn</i>:
+				</p>
+				<ul>
+					<li><strong>Blanco</strong>:
+						K-a55, Q-a54, R-a35, R-a53, R-a42, R-a52, N-a34, N-a33, N-a32, B-a45, B-a44, B-a43.
+						Peons: a25, a24, a23, a22, a21, a31, a41, a51.
+					</li>
+					<li><strong>Negro</strong>:
+						K-c55, Q-c54, R-c35, R-c53, R-c42, R-c52, N-c34, N-c33, N-c32, B-c45, B-c44, B-c43.
+						Peons: c25, c24, c23, c22, c21, c31, c41, c51.
+					</li>
+					<li><strong>Color</strong>:
+						K-e55, Q-e54, R-e35, R-e53, R-e42, R-e52, N-e34, N-e33, N-e32, B-e45, B-e44, B-e43.
+						Peons: e25, e24, e23, e22, e21, e31, e41, e51.
+					</li>
+				</ul>
+				<p>Los <i>peones</i> ahora incorporan los <b>tres 
+					<a href="glossary.html#Movimentortogonal" class="cite" target="_blank">movimientos ortogonales</a>
+					adelante</b>, y
+					<b>cuatro movimientos de captura en
+					<a href="glossary.html#Movimentdiagonal" class="cite" target="_blank">movimiento diagonal</a></b>,
+					dos adelante y dos laterales. El primer movimiento de los peones se permite que sea doble, y la
+					<a href="glossary.html#Promocio" class="cescacs" target="_blank">promoción</a> se da en los
+					<strong>cuatro hexcaques de los dos vértices rivales</strong>: 45, 44, 55, 54; en total,
+					ocho diferentes hexcaques de promoción para cada jugador.					
+				</p>
+				<p>En <i>Diplomat</i> el objetivo de hacer <q>mate</q> a los reyes de los oponentes, y se establecen
+					los diferentes resultados posibles:
+				</p>
+				<ul>
+					<li>0.66 puntos para cada jugador, cuando los tres hacen tables globalmente.</li>
+					<li>1 punto para los dos jugadors que hacen tablas, pero han ganado en alianza
+						al tercer jugador.</li>
+					<li>0.66 puntos para el jugador que hace tablas con el que ha dado mate al tercer
+						jugador.</li>
+					<li>1.33 puntos para el jugador que hace tablas después de dar mate al tercer
+						jugador.</li>
+					<li>2 puntos cuando un jugador gana a los otros dos.</li>
+				</ul>
+				<p>Una vez derrotado un jugador, las piezas quedan inmóviles en los lugares donde habían quedado,
+					pero el juego deja también abierta la variante donde las piezas del jugador derrotado, excepto
+					el <i>Rey</i> quedan propiedad del jugador ganador, como lo hace el
+					<a href="https://en.wikipedia.org/wiki/Game_of_the_Three_Kingdoms"
+						class="cite" target="_blank">Sanguo Qi (三國棋)</a>.
+				</p>
+				<p>Existirá un problema para determinar si el primer jugador que pierde ha sido derrotado solo
+					por uno de los jugadores o por los dos, tanto para repartir los puntos, como para tomar posesión
+					de sus piezas si se juega con esta regla. Los pactos diplomáticos son parte del juego, y pueden
+					establecerse estrategias comunes pasándose los jugadores papeles con notas: <q>correos diplomáticos</q>
+					con diferentes grados de alianza (duración). Quizás estas notas pueden usarse como prueba de alianza
+					para resolver las casuísticas de conflicto al derrotar al tercer jugador
+				</p>
 			</div>
-
 		</div>
-
 	</div>
 
 	<!-- Otras variantes del ajedrez -->
@@ -2779,15 +2983,59 @@
 						alt="Posició inicial d'Omega Chess" class="fullwidth"></a>
 				<figcaption class="thumbcaption">Posición inicial de Omega Chess</figcaption>
 			</figure>
+
+			<p>En el año 2008 adquirí un
+				<a href="https://en.wikipedia.org/wiki/Omega_Chess" target="_blank" class="cite">Omega Chess</a>,
+				una variante comercial de ajedrez (entonces difícil de conseguir en España) que se juega en un
+				tablero de 10x10 y cuatro escaques adicionales en las esquinas. Incorpora dos nuevas piezas: el
+				<i>Hechicero</i>> y el <i>Campeón</i>.
+			</p>
+			<p>Es una variante aconsejable, si alguien tiene interés por las variantes de ajedrez que introducen
+				nuevas piezas, a pesar de que es preferible iniciarse con el
+				<a href="#EscacsCapablanca" class="cescacs">Ajedrez de Capablanca</a>, pero, si tenemos el tablero,
+				<i>Omega Chess</i> es otra opción interesante, si no nos atrevemos con el
+				<cite>ajedrez de Gliński</cite>, que tiene el inconveniente de requerir un tablero hexagonal.			
+			</p>
+			<p>Se muestran un par de juegos reales en el
+				<a href="https://omegachess.com/" target="_blank" class="cite">sitio web</a>, entre ellos una
+				<a href="https://en.wikipedia.org/wiki/Omega_Chess#GM_Alex_Sherzer_vs._GM_Judit_Polg%C3%A1r"
+						target="_blank" class="cite">partida de Judit Polgár</a>, cuando participó en un
+				torneo de demostración de <i>Omega Chess</i>.
+			</p>
+			<p id="DePrincepAElefant" class="note">He citado <i>Omega Chess</i> principalmente porque en
+				<i class="cescacs">C'escacs</i> se hizo un intento de adaptar la pieza del <i>Campeón</i>
+				al tablero hexagonal, pero los resultados no fueron satisfactorios para el objetivo que
+				se perseguía, definiendo finalmente los <i>elefantes</i>.
+			</p>
 		</div>
 
 		<!-- Escacs d'Alícia' -->
 		<div class="w3-container">
 			<h3 id="Alícia" class="w3-container w3-pale-green w3-center w3-text-grey">Ajedrez de Alicia</h3>
+			<p>Este ajedrez, inventados por <a href="https://en.wikipedia.org/wiki/V._R._Parton" class="cite"
+				target="_blank"><b>V.R. Parton</b></a>, inventor de múltiples variantes del ajedrez, muchas
+				de ellas muy interesantes, y a menudo inspiradas en las historias de <b>Lewis Carroll</b>.
+				La variante del <a href="https://es.wikipedia.org/wiki/Ajedrez_de_Alicia"
+				target="_blank" class="cite">Ajedrez de Alícia</a> es muy popular, pues hace que el juego
+				se encuentre lleno de sorpresas y errores divertidos.
+			</p>
 		</div>
 
 		<div class="w3-container">
 			<h3 id="3DChess" class="w3-container w3-pale-green w3-center w3-text-grey">Ajedrez tridimensional</h3>
+
+			<p>Esta categoría se <i>inauguró</i> ya en 1851 con el <cite>Kubikschach</cite> (<cite>ajedrez cúbico</cite>).
+				En 1907 <i>Ferdinand Maack</i> lo perfeccionó, inventando los <b><cite>Raumschach</cite></b>, el
+				<i>ajedrez espacial alemán</i>.	
+			</p>
+			<p>Posteriormente ha habido múltiples propuestas de
+				<a href="https://es.wikipedia.org/wiki/Ajedrez_tridimensional"
+					target="_blank" class="cite">ajedrez tridimensional</a>,
+				como el <q>Ajedrez de la Era Galáctica</q> de <b>Isaac Asimov</b>, citado en las novelas
+				<cite lang="en">A Perfect Fit</cite> y <cite lang="en">Pebble in the Sky</cite>.
+				Incluso se han propuesto juegos de ajedrez de dimensiones más altas,
+				pero el ajedrez con más de dos dimensiones no ha sido una variante de éxito.				
+			</p>
 
 			<!-- Dragonchess -->
 			<div class="w3-container">
@@ -2805,6 +3053,20 @@
 						</div>
 					</div>
 				</figure>
+				<p>Bien, si queremos un ajedrez de fantasía, quizás porque queremos hacer realidad el término
+					<q>ajedrez de fantàstico</q>, quizás porque somos fanáticos de los conocidos juegos
+					<a href="https://es.wikipedia.org/wiki/Dungeons_%26_Dragons" target="_blank" class="cite"><abbr
+						title="Dungeons &amp; Dragons">D&amp;D</abbr> (Dungeons &amp; Dragons,
+						<q>Dragones y Mazmorras</q>)</a>, o quizás porque desde <i>Star Trek</i> hemos pensado
+					que era una buena idea esto del ajedrez en tres dimensiones, entonces
+					<cite><a href="https://en.wikipedia.org/wiki/Dragonchess"
+						target="_blank" class="cite">Dragonchess</a></cite>
+					es realmente un ajedrez fantástico interesante. Se juega con figuras de fantasía, en un
+					tablero de tres dimensiones: cielo, tierra e inframundo. Es un ajedrez diseñado por el mismo
+					<b>Gary Gygax</b>, diseñador del juego de rol <i>D&amp;D</i>, y las reglas las podemos
+					encontrar a las <a href="https://www.chessvariants.com/3d.dir/dragonchess.html" target="_blank"
+					class="cite">Chess Variant Pages</a>.
+				</p>
 			</div>
 
 			<div class="w3-container">
@@ -2812,13 +3074,40 @@
 				<figure class="tbigright" style="clear:none; width:250px; text-align: center">
 					<img alt="StarTrek" src="../img/star-trek-ajedrez-tridimensional.png" class="fullwidth">
 				</figure>
+				<p>Si hablamos de ajedrez tridimensional, ràpidamente se pensará en el
+					<q>ajedrez de <i>Star Trek</i></q>. En realidad la importancia de esta variante es,
+					sobre todo, por su fama debida a la aparición en la serie, y el juego es sencillamente
+					una reproducción de aquello que allá se ve (meramente era <i>atrezzo</i>). Las
+					instrucciones para construir el tablero se publicaron en el <q>Star Fleet Technical Manual</q>,
+					y más tarde aparecieron las reglas. Las reglas impresas se pueden adquirir en el sitio web de
+					<i>Andrew Bartmess</i>, donde también se puede consultar la versión resumida. Este ajedrez,
+					por la popularidad de su imagen, incluso se puede encontrar comercialmente.
+				</p>
 			</div>
 
 			<div class="w3-container">
 				<h4 id="GeometriaImpossible" class="w3-container w3-pale-yellow w3-center w3-text-grey">Geometría
 					Imposible</h4>
+				<p>Este tipo de juego tridimensional con asistencia de ordenador a los jugadores, pero con un
+					verdadero tablero, también lo discutimos en las conversaciones de diseño de
+					<i class="cescacs">C'escacs</i>, y quizás el juego asistido puede llegar a ser
+					una modalidad de futuro.
+				</p>
+				<p>Pero la inteligencia artificial ha avanzado mucho desde estas conversaciones donde hablábamos
+					de la dualidad hombre-máquina, usando la máquina como herramienta en igualdad de condiciones
+					para ambos jugadores; actualmente, la superioridad de la máquina deja poco espacio al jugador
+					humano, pero seguro que se inventarán juegos en esta línea, a pesar de que muy probablemente
+					tendremos que olvidar el tablero físico y jugar virtualmente.
+				</p>
+				<p>En este sentido hemos hablado de un juego en un <i>tablero imposible</i>, para jugar
+					virtualmente: un <i>icohexaedro</i> (polígono de 26 caras) <q><i>regular</i></q> de caras
+					hexagonales, formado por veintiséis tableros hexagonales de 169 casillas cada uno:
+					un ajedrez con 4_394 hexcaques!
+					Es un polígono imposible, pues no se puede hacer un poliedro con hexágonos regulares,
+					pero esto no hace más que hacer el juego más interesante, muy parecido a incorporar más
+					dimensiones, y el número de combinaciones es absolutamente impensable.
+				</p>
 			</div>
-
 		</div>
 
 		<div class="w3-container">
