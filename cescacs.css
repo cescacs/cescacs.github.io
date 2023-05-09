@@ -56,6 +56,19 @@ figure.tbigright {
   margin: 0.5em 0 1.3em 1.4em;
 }
 
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-item-left {
+  flex: 50%;
+}
+
+.flex-item-right {
+  flex: 50%;
+}
+
 /* Use a media query to add a breakpoint at 400px: */
 @media screen and (max-width: 400px) {
 
@@ -95,6 +108,9 @@ figure.tbigright {
   .half {
     width: 100%;
     /* The width is 100%, when the viewport is 800px or smaller */
+  }
+  .flex-item-right, .flex-item-left {
+    flex: 100%;
   }
 }
 
