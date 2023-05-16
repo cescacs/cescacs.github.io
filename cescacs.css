@@ -65,6 +65,10 @@ figure.tbigright {
   flex: 50%;
 }
 
+.flex-item-third {
+  flex: 33%;
+}
+
 .flex-item-right {
   flex: 50%;
 }
