@@ -340,6 +340,15 @@ a.cescacs:visited:active {
   font-weight: bolder;
 }
 
+.header4 {
+  font-size: 120%;
+  font-weight: bolder;
+}
+
+.header5 {
+  font-size: 110%;
+  font-weight: bolder;
+}
 .pieceIcon {
   display: inline;
   height: 3ex;
