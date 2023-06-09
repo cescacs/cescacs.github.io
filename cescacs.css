@@ -189,6 +189,13 @@ h5.subtitled {
   padding-bottom:0 !important;
 }
 
+p:before {
+  content: "";
+  width: 12em;
+  display: block;
+  overflow: hidden;
+}
+
 figure.fig200 {
   width: 200px;
   padding-left: 6px;
