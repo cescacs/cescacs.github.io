@@ -49,6 +49,16 @@
 
 	<!-- Icons -->
 	<script src="https://kit.fontawesome.com/1efd89dd3e.js" crossorigin="anonymous"></script>
+
+    <!-- Google translate -->
+    <script>
+        function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en',
+                                               includedLanguages: 'es,ca,oc, gl,fr,co,it,pt,ia,eo,en,gd,ga,de,nl,eu,el,ar,fa,ru,bg,mn,hi,th,ms,id,sw,af,ja,ko,zh',
+                                               layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 	
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-CHKYWCYH3N"></script>
@@ -96,6 +106,12 @@
 							<a href="../es/historical-milestones.html" class="w3-bar-item w3-button w3-mobile menubar"
 								hreflang="es" lang="es"><img src="../img/esp.png" class="lang" alt="Español">
 								Español</a>
+							<div style="width:12em; display:inline-block;">
+								<div style="width:32px; float: left;text-align: right; vertical-align: middle;">
+									<i class='fab fa-google' style='font-size:16px;color:blue'></i>
+								</div>
+								<div id="google_translate_element" style="display: inline-block;"></div>
+							</div>
 						</div>
 					</div>
 				</nav>
@@ -1253,7 +1269,7 @@
 								<div class="w3-container">
 									<h4 class="w3-container w3-deep-purple w3-center w3-text-light-grey w3-opacity
 												w3-large title header4">The trade</h4>
-									<details>
+									<details open>
 										<summary class="w3-pale-yellow header5 w3-text-grey">
 											Secció: <i>Martin Jad Mansson</i> ens ofereix un excel·lent
 											<a href="https://easyzoom.com/imageaccess/ec482e04c2b240d4969c14156bb6836f" class="cite"
@@ -1409,6 +1425,7 @@
 					    </ul>
 					</section>
 				</details>
+				<hr class="w3-pale-green" style="height:30px;">
 
 				<!-- Western archaeological objects -->
 				<section class="w3-container">
@@ -1489,7 +1506,7 @@
 								period are of Islamic origin, and in Spain even Mozarabic (Christian
 								dominated) from the peninsula.
 							</p>
-							<details class="w3-card" style="margin:1em; padding: 1em">
+							<details open class="w3-card" style="margin:1em; padding: 1em">
 								<summary class="w3-pale-yellow header4 w3-text-grey">Section:
 									Islamic <b>abstract symbolic pieces</b>
 								</summary>

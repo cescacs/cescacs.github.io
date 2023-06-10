@@ -80,6 +80,16 @@
 	<link rel="preload" as="image" href="../img/moves/king/castlingdf.2-min.png">
 	<link rel="preload" as="image" href="../img/moves/king/castlingde-min.png">
 
+    <!-- Google translate -->
+    <script>
+        function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en',
+                                               includedLanguages: 'es,ca,oc, gl,fr,co,it,pt,ia,eo,en,gd,ga,de,nl,eu,el,ar,fa,ru,bg,mn,hi,th,ms,id,sw,af,ja,ko,zh',
+                                               layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-CHKYWCYH3N"></script>
 	<script>
@@ -121,6 +131,12 @@
 								class="lang" alt="Català"> Català</a>
 							<a href="../es/castling.html" class="w3-bar-item w3-button w3-mobile menubar" hreflang="es"><img src="../img/esp.png"
 								class="lang" alt="Español"> Español</a>
+							<div style="width:12em; display:inline-block;">
+								<div style="width:32px; float: left;text-align: right; vertical-align: middle;">
+									<i class='fab fa-google' style='font-size:16px;color:blue'></i>
+								</div>
+								<div id="google_translate_element" style="display: inline-block;"></div>
+							</div>
 						</div>
 					</div>
 	
@@ -227,36 +243,36 @@
 						}
 						function leapI() {
 							leap_image.setAttribute('src', '../img/moves/king/kingsleapi.rk-min.png');
-							leap_image.setAttribute('title', "King's Leap I column");
-							leap_caption.textContent = "King's Leap I column";
+							leap_image.setAttribute('title', "King's Leap to I column");
+							leap_caption.textContent = "King's Leap to I column";
 							leap_caption2.textContent = "K-I5";
 							leap_caption3.textContent = "K-I23";
 						}
 						function leapH() {
 							leap_image.setAttribute('src', '../img/moves/king/kingsleaph.both-min.png');
-							leap_image.setAttribute('title', "King's Leap H column");
-							leap_caption.textContent = "King's Leap H column";
+							leap_image.setAttribute('title', "King's Leap to H column");
+							leap_caption.textContent = "King's Leap to H column";
 							leap_caption2.textContent = "K-H6";
 							leap_caption3.textContent = "K-H22";
 						}
 						function leapF() {
 							leap_image.setAttribute('src', '../img/moves/king/kingsleapf.both-min.png');
-							leap_image.setAttribute('title', "King's Leap F column");
-							leap_caption.textContent = "King's Leap F column";
+							leap_image.setAttribute('title', "King's Leap to F column");
+							leap_caption.textContent = "King's Leap to F column";
 							leap_caption2.textContent = "K-F6";
 							leap_caption3.textContent = "K-F22";
 						}
 						function leapE() {
 							leap_image.setAttribute('src', '../img/moves/king/kingsleape.both-min.png');
-							leap_image.setAttribute('title', "King's Leap E column");
-							leap_caption.textContent = "King's Leap E column";
+							leap_image.setAttribute('title', "King's Leap to E column");
+							leap_caption.textContent = "King's Leap to E column";
 							leap_caption2.textContent = "K-E5";
 							leap_caption3.textContent = "K-E23";
 						}
 						function leapD() {
 							leap_image.setAttribute('src', '../img/moves/king/kingsleapd.rq-min.png');
-							leap_image.setAttribute('title', "King's Leap D column");
-							leap_caption.textContent = "King's Leap D column";
+							leap_image.setAttribute('title', "King's Leap to D column");
+							leap_caption.textContent = "King's Leap to D column";
 							leap_caption2.textContent = "K-D2";
 							leap_caption3.textContent = "K-D26";
 						}
@@ -359,8 +375,8 @@
 							}
 							function castleKRIS() {
 								castleKRKI_image.setAttribute('src', '../img/moves/king/kingsleapi.rk-min.png');
-								castleKRKI_image.setAttribute('title', "King's Leap I column");
-								castleKRKI_caption.textContent = "King's Leap I column";
+								castleKRKI_image.setAttribute('title', "King's Leap to I column");
+								castleKRKI_caption.textContent = "King's Leap to I column";
 								castleKRKI_caption2.textContent = "K-I5";
 								castleKRKI_caption3.textContent = "K-I23";
 							}
@@ -425,8 +441,8 @@
 							}
 							function castleKRDS() {
 								castleKRDD_image.setAttribute('src', '../img/moves/king/kingsleapd.rq-min.png');
-								castleKRDD_image.setAttribute('title', "King's Leap D column");
-								castleKRDD_caption.textContent = "King's Leap D column";
+								castleKRDD_image.setAttribute('title', "King's Leap to D column");
+								castleKRDD_caption.textContent = "King's Leap to D column";
 								castleKRDD_caption2.textContent = "K-D2";
 								castleKRDD_caption3.textContent = "K-D26";
 							}
@@ -490,8 +506,8 @@
 							}
 							function castleKRHKS() {
 								castleKRKH_image.setAttribute('src', '../img/moves/king/kingsleaph.rk-min.png');
-								castleKRKH_image.setAttribute('title', "King's Leap H column");
-								castleKRKH_caption.textContent = "King's Leap H column";
+								castleKRKH_image.setAttribute('title', "King's Leap to H column");
+								castleKRKH_caption.textContent = "King's Leap to H column";
 								castleKRKH_caption2.textContent = "K-H6";
 								castleKRKH_caption3.textContent = "K-H22";
 								KRKH_note.style.visibility = 'hidden';
@@ -568,8 +584,8 @@
 							}
 							function castleSHQS() {
 								castleKRDH_image.setAttribute('src', '../img/moves/king/kingsleaph.rq-min.png');
-								castleKRDH_image.setAttribute('title', "King's Leap H column");
-								castleKRDH_caption.textContent = "King's Leap H column";
+								castleKRDH_image.setAttribute('title', "King's Leap to H column");
+								castleKRDH_caption.textContent = "King's Leap to H column";
 								castleKRDH_caption2.textContent = "K-H6";
 								castleKRDH_caption3.textContent = "K-H22";
 							}
@@ -629,8 +645,8 @@
 							}
 							function castleKRKFS() {
 								castleKRKF_image.setAttribute('src', '../img/moves/king/kingsleapf.rk-min.png');
-								castleKRKF_image.setAttribute('title', "King's Leap F column");
-								castleKRKF_caption.textContent = "King's Leap F column";
+								castleKRKF_image.setAttribute('title', "King's Leap to F column");
+								castleKRKF_caption.textContent = "King's Leap to F column";
 								castleKRKF_caption2.textContent = "K-F6";
 								castleKRKF_caption3.textContent = "K-F22";
 							}
@@ -688,8 +704,8 @@
 							}
 							function castleKRDFS() {
 								castleKRDF_image.setAttribute('src', '../img/moves/king/kingsleapf.rq-min.png');
-								castleKRDF_image.setAttribute('title', "King's Leap F column");
-								castleKRDF_caption.textContent = "King's Leap F column";
+								castleKRDF_image.setAttribute('title', "King's Leap to F column");
+								castleKRDF_caption.textContent = "King's Leap to F column";
 								castleKRDF_caption2.textContent = "K-F6";
 								castleKRDF_caption3.textContent = "K-F22";
 							}
@@ -748,8 +764,8 @@
 							}
 							function castleKRKES() {
 								castleKRKE_image.setAttribute('src', '../img/moves/king/kingsleape.rk-min.png');
-								castleKRKE_image.setAttribute('title', "King's Leap E column");
-								castleKRKE_caption.textContent = "King's Leap E column";
+								castleKRKE_image.setAttribute('title', "King's Leap to E column");
+								castleKRKE_caption.textContent = "King's Leap to E column";
 								castleKRKE_caption2.textContent = "K-E5";
 								castleKRKE_caption3.textContent = "K-E23";
 							}
@@ -806,8 +822,8 @@
 							}
 							function castleKRDES() {
 								castleKRDE_image.setAttribute('src', '../img/moves/king/kingsleape.rq-min.png');
-								castleKRDE_image.setAttribute('title', "King's Leap E column");
-								castleKRDE_caption.textContent = "King's Leap E column";
+								castleKRDE_image.setAttribute('title', "King's Leap to E column");
+								castleKRDE_caption.textContent = "King's Leap to E column";
 								castleKRDE_caption2.textContent = "K-E5";
 								castleKRDE_caption3.textContent = "K-E23";
 							}
@@ -908,8 +924,8 @@
 						}
 						function castleKRRHS() {
 							castleKRRH_image.setAttribute('src', '../img/moves/king/kingsleaph.both-min.png');
-							castleKRRH_image.setAttribute('title', "King's Leap H column");
-							castleKRRH_caption.textContent = "King's Leap H column";
+							castleKRRH_image.setAttribute('title', "King's Leap to H column");
+							castleKRRH_caption.textContent = "King's Leap to H column";
 							castleKRRH_caption2.textContent = "K-H6";
 							castleKRRH_caption3.textContent = "K-H22";
 						}
@@ -945,7 +961,7 @@
 						<button class="w3-button w3-khaki" onclick="castleKRRF0()">Initial</button>
 						<button class="w3-button w3-khaki" onclick="castleKRRFS()">F Leap</button>
 						<button class="w3-button w3-khaki" onclick="castleKRRF1()">KRR-FGG</button>
-						<button class="w3-button w3-khaki" onclick="castleKRRF2()">KRR-FEE</button>
+						<button class="w3-button w3-khaki" onclick="castleKRRF2()"><span class="notranslate">KRR-FEE</span></button>
 					</div>
 					<div id="castleKRRF_caption" style="margin: 10px; font-weight: bold;">Initial position</div>
 					<div style="margin: 10px; font-size: smaller;"><b>White:</b> <span
@@ -966,8 +982,8 @@
 						}
 						function castleKRRFS() {
 							castleKRRF_image.setAttribute('src', '../img/moves/king/kingsleapf.both-min.png');
-							castleKRRF_image.setAttribute('title', "King's Leap F column");
-							castleKRRF_caption.textContent = "King's Leap F column";
+							castleKRRF_image.setAttribute('title', "King's Leap to F column");
+							castleKRRF_caption.textContent = "King's Leap to F column";
 							castleKRRF_caption2.textContent = "K-F6";
 							castleKRRF_caption3.textContent = "K-F22";
 						}
@@ -1022,8 +1038,8 @@
 						}
 						function castleKRRES() {
 							castleKRRE_image.setAttribute('src', '../img/moves/king/kingsleape.both-min.png');
-							castleKRRE_image.setAttribute('title', "King's Leap E column");
-							castleKRRE_caption.textContent = "King's Leap E column";
+							castleKRRE_image.setAttribute('title', "King's Leap to E column");
+							castleKRRE_caption.textContent = "King's Leap to E column";
 							castleKRRE_caption2.textContent = "K-E5";
 							castleKRRE_caption3.textContent = "K-E23";
 						}

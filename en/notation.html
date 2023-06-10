@@ -39,6 +39,16 @@
     <!-- Icons -->
     <script src="https://kit.fontawesome.com/1efd89dd3e.js" crossorigin="anonymous"></script>
 
+    <!-- Google translate -->
+    <script>
+        function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en',
+                                               includedLanguages: 'es,ca,oc, gl,fr,co,it,pt,ia,eo,en,gd,ga,de,nl,eu,el,ar,fa,ru,bg,mn,hi,th,ms,id,sw,af,ja,ko,zh',
+                                               layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 	<script>
 		function fnSelect(objId) {
 			if (window.getSelection) {
@@ -90,6 +100,12 @@
 								class="lang" alt="Català"> Català</a>
 							<a href="../es/notation.html" class="w3-bar-item w3-button w3-mobile menubar" hreflang="es"><img src="../img/esp.png"
 								class="lang" alt="Español"> Español</a>
+							<div style="width:12em; display:inline-block;">
+								<div style="width:32px; float: left;text-align: right; vertical-align: middle;">
+									<i class='fab fa-google' style='font-size:16px;color:blue'></i>
+								</div>
+								<div id="google_translate_element" style="display: inline-block;"></div>
+							</div>
 						</div>
 					</div>
 	
