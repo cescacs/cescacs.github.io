@@ -138,6 +138,9 @@ clipped1::before {
   pointer-events: none;
 }
 
+details summary { 
+  cursor: pointer;
+}
 
 em {
   font-weight: bolder;
