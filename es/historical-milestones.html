@@ -835,8 +835,8 @@
 					el <i>Gaja</i> (<i>Elefante</i>) mueve como el actual <i>roque</i> (<i>torre</i>),
 					representando la pieza más potente.
 				</p>
-				<div style="display: flex;">
-					<div style="margin:0.5em; padding:0.5em; border:1px solid black;">
+				<div style="display:flex;flex-wrap:wrap">
+					<div style="flex:1;margin:0.5em; padding:0.5em; border:1px solid black;">
 						<p>La pieza a mover se determinaba con un dado largo de cuatro caras:
 						</p>
 						<ol style="list-style-type: decimal;">
@@ -850,7 +850,7 @@
 							al valor uno, y el seis equivalente al cuatro.
 						</small></p>
 					</div>
-					<div style="margin:0.5em; padding:0.5em; border:1px solid black;">
+					<div style="flex:1;margin:0.5em; padding:0.5em; border:1px solid black;">
 						<p>La valoración de las piezas era:</p>
 						<ul>
 							<li><i>Pedàti</i> (<i>Peón</i>): 1</li>
@@ -861,18 +861,119 @@
 						</ul>
 					</div>
 				</div>
-				<p>El objetivo no es el Rajá enemigo, que es una pieza más del tablero, sino hacer puntos capturando
-					piezas; la excepción es la regla que da la partida ganada al jugador que captura los <i>Rajás</i>
-					de los otros tres jugadores, obteniendo los puntos equivalentes a las tres armadas enteras, 54
-					puntos, puesto que cada armada está valorada en 18 puntos.
+				<p>Mientras <i>Chaturanga</i> significaría "cuatro armadas": infantería, caballería, carros y elefantes,
+					<i>Chaturaji</i> quiere decir cuatro rajás, una forma de decir <q>cuatro jugadores</q>. El ajedrez
+					con más de dos jugadores tiene tendencia a degenerar, perdiendo el componente estratégico para
+					prevalecer la diplomacia entre los jugadores, desequilibrando el juego. Pero recordamos que el
+					<i>Chaturaji</i> es un juego con un gran componente de azar, y, además, en el <i>Chaturaji</i>
+					parece que los jugadores forman dos parejas, jugando una pareja contra la otra. En cualquier caso,
+					puede ser un juego inspirado en el ajedrez y con ciertas conexiones, pero no puede considerarse un
+					ajedrez, como podríamos decir del <i>Chaturanga</i> u otras variantes que citaremos aquí.
 				</p>
-				<p>Los juegos con más de dos jugadores tienen tendencia a degenerar, perdiendo el componente estratégico
-					para prevalecer la diplomacia entre los jugadores, desequilibrando el juego. Pero recordamos que el
-					<i>Chaturaji</i> es un juego con un gran componente de azar, y, además, en el <i>Chaturaji</i> parece
-					que los jugadores forman dos parejas, jugando una pareja hacia la otra. En cualquier caso, puede ser
-					un juego inspirado en el ajedrez y con ciertas conexiones, pero no pueden considerarse un ajedrez,
-					como podríamos decir del <i>Chaturanga</i> u otras variantes que citaremos aquí.
-				</p>
+				<!-- TODO -->
+				<section class="w3-container">
+					<h4 style="display: flex;" class="w3-container w3-deep-purple w3-center w3-text-light-grey
+						w3-opacity w3-large title header4">Reglas del Chaturaji</h4>
+					<p>El objetivo no es el Rajá enemigo, que es una pieza más del tablero, sino hacer puntos capturando
+						piezas; la excepción es la regla que da la partida ganada al jugador que captura los <i>Rajás</i>
+						de los otros tres jugadores, obteniendo los puntos equivalentes a las tres armadas enteras, 54
+						puntos, puesto que cada armada está valorada en 18 puntos. Esta victoria se denomina
+						<i>Chaturaji</i>.
+					</p>
+					<p>El orden de los turnos de los jugadores es en el sentido de las agujas del reloj, y los
+						jugadores enfrentados son aliados. Cada jugador mueve dos piezas en cada turno lanzando un
+						dado dos veces o lanzando dos dados simultáneamente. Cuando ambos dados indican el mismo tipo
+						de pieza, se puede mover la misma pieza dos veces, o si se dispone de dos piezas de ese tipo,
+						se pueden mover dos piezas diferentes de ese tipo. Si el movimiento de la pieza indicada por
+						el dado es imposible, o, si el jugador no quiere moverla, ya que el jugador no está obligado
+						a mover, entonces se pierde el turno completo.
+					</p>
+					<div class="note">
+						<p>Hay que tener en cuenta que cuando se juega con dos dados y se da el caso en la segunda tirada,
+							el primer movimiento ya se había hecho, y no se deshace; por lo tanto, es diferente jugar con
+							un dado o con dos. También hay que tener en cuenta que las piezas aliadas pueden ser capturadas,
+							pero no las propias.</p>
+					</div>
+					<p>La partida termina cuando no quedan fichas en juego de los jugadores contrarios, pero también puede
+						terminar cuando todos los jugadores están de acuerdo en poner fin a la partida. Al final de la
+						partida, se cuentan los puntos. Otras reglas:</p>
+					<dl>
+						<dt>Shatpada (seis pasos): promoción de peones</dt>
+						<dd>Si se dan las condiciones, un peón que alcance la última casilla promocionará al tipo de
+							pieza que estaría colocado en esa columna en la disposición inicial (de tu propia columna
+							o de la columna de tu aliado).</dd>
+						<dd>Cuando un peón alcanza la última fila pero no puede promocionar, permanece como peón en la
+							casilla de la última fila. En cuanto pueda promocionar, el peón se convierte en la pieza
+							correspondiente. Mientras tanto, el peón puede ser capturado.</dd>
+						<dd>Cuando un jugador todavía posee tres o cuatro peones no puede promocionar peones.</dd>
+						<dd>Cuando un jugador tiene uno o dos peones, puede promocionar a
+							<i>Caballo</i> o <i>Elefante</i>.</dd>
+						<dd>Sólo cuando un jugador posee un peón y el <i>Rajá</i>, y como máximo el <i>Barco</i>,
+							pero ninguna pieza más, puede promocionar a <i>Barco</i>, o a un segundo <i>Rajá</i>.</dd>
+						<dd>Como excepción, un jugador sin <i>Rajá</i> siempre puede promocionar a <i>Rajá</i> cuando
+							un peón alcanza la última fila de la columna de un <i>Rajá</i>.</dd>
+		
+						<dt>Vrihannauka: Triunfo del barco</dt>
+						<dd>Cuando un <i>Barco</i> se mueve de tal manera que se forma un cuadrado de 2×2 lleno de
+							barcos, captura los tres barcos de los otros jugadores.</dd>
+
+						<dt>Captura del <i>Rajah</i></dt>
+						<dd>Si un jugador pierde su <i>Rajá</i> no puede mover ninguna pieza, excepto peones.
+							Sus piezas permanecen en el tablero y pueden ser tomadas.
+							<ul>
+								<li>El compañero puede elegir intercambiar <i>Rajás</i> y rescatarlo sustituyéndolo.</li>
+								<li>Los peones de un jugador que ha perdido su <i>Rajá</i> no pueden capturar un
+									<i>Rajá</i>.</li>
+								<li>Al capturar un <i>Rajá</i> enemigo, si el <i>Rajá</i> del compañero ha sido capturado
+									por ese ejército enemigo, se le puede exigir el cambio de <i>Rajás</i>, y entonces
+									ambos <i>Rajás</i> vuelven a su posición inicial, o a una adyacente si está ocupada.</li>
+								<li>En caso contrario, el jugador que capture al último <i>Rajá</i> enemigo, si el <i>Rajá</i>
+									de su compañero también ha sido capturado, tomará el control del ejército aliado para
+									derrotar a los enemigos congelados utilizando ambos ejércitos.</li>
+							</ul>
+						</dd>
+
+						<dt>Sinhasana</dt>
+						<dd>Quien mueve un <i>Rajá</i> para entrar en la casilla original de otro <i>Rajá</i> se dice que
+							ha ganado una <i>sinhasana</i>. Si un jugador gana una <i>sinhasana</i> en el trono del
+							jugador aliado (jugador cuyas piezas están enfrente), ambos aliados toman el control de ambos
+							ejércitos. Las reglas de la <i>sinhasana</i> en un trono enemigo están relacionadas con las
+							apuestas.</dd>
+
+						<dt>Cacacashta</dt>
+						<dd>Cuando un <i>Rajá</i> se queda sin su ejército no es ni una victoria ni una derrota.</dd>
+					</dl>
+					<p>Era un juego con apuestas, y algunas de las reglas eran complicadas, no las conocemos bien e incluso
+						puede que tuvieran versiones en distintos lugares. En cualquier caso, podemos utilizar algunas reglas
+						adaptadas para jugar con puntos:</p>
+					<ul>
+						<li><b>Recuento de puntos</b>: Las parejas pueden mantenerse o cambiarse a lo largo de una serie de
+							partidas diferentes, conservando los puntos obtenidos por cada jugador, pero debe tenerse en
+							cuenta que una serie típica de partidas sería una serie de cuatro partidas, sin cambiar de pareja.
+						</li>
+						<li><b>Recuento de puntos en caso de <i>cacacashta</i></b>: La situación de <i>cacacashta</i> (Rajá
+							solitario) significa que nadie cuenta los puntos de las piezas capturadas a ese ejército
+							(jugador) durante esa partida, es como un empate con ese jugador; el <i>Rajá</i> es retirado del
+							tablero y las piezas son devueltas al jugador (no cuentan), quien también devuelve cualquier
+							pieza que hubiera capturado (tampoco cuentan). Nótese que el aliado puede forzar la situación
+							capturando la última pieza aliada.
+						</li>
+						<li><b><i>Sinhasana</i> en un trono enemigo</b>: Obtener un <i>sinhasana</i> en un trono enemigo
+							duplica el valor de su Rajá (10 puntos) si se captura mientras el trono permanece ocupado, pero
+							capturar al <i>Rajá</i> enemigo en su trono obteniendo un <i>sinhasana</i>, es decir, capturar
+							al <i>Rajá</i> enemigo en su posición inicial con el <i>Rajá</i> propio, es aún más valioso, y
+							cuadruplica su valor (20 puntos). Observar que si rescatan el <i>Rajá</i> de cualquier manera,
+							con el <i>Rajá</i> rescatado se pierden las ventajas del <i>sinhasana</i>; no es el caso en la
+							promoción de un peón, pues en ese caso se nombra un nuevo <i>Rajá</i>.
+						</li>
+						<li><b>Fin de partida por captura de <i>Rajá</i></b>: Cuando ambos <i>Rajás</i> enemigos han sido
+							capturados y también todos sus peones, y por lo tanto ambos ejércitos enemigos están
+							definitivamente congelados, el número de turnos finales puede ser limitado, por ejemplo a cinco
+							turnos, es decir diez movimientos para cada jugador restante; esta regla es para evitar un final
+							interminable.
+						</li>
+					</ul>
+				</section>
 			</section>
 
 			<!-- Chatrang -->
@@ -1029,7 +1130,18 @@
 						importancia de los barcos para esta cultura, aunque se ha de señalar que el tipo de
 						barco no se refiere a un <i>drakkar</i> vikingo, sino a una embarcación eslava.
 					</p>
-				</section>
+					<p>En el imperio romano de Oriente el ajedrez se denominó <q><i>zaquitrion</i></q>.
+						La evidencia filológica ha establecido, al parecer de manera segura, la procedencia
+						del nombre <q><i>zaquitrion</i></q> como una helenización del persa <i>Chatrang</i>
+						y no del árabe <i>Shatranj</i>. Este origen persa de la palabra puede permitir fechar
+						el conocimiento del juego en Bizancio probablemente con anteriorioridad al año 661 EC,
+						fecha en la que los invasores impusieron la lengua árabe a sus súbditos en todo el
+						imperio Omeya. A pesar de que el persa medio demostró ser muy duradero, si se hubiese
+						dado en una fecha posterior, por ejemplo, si fuese ya en la dinastía Abbásida (750 EC),
+						lo natural seria observar una procedencia del árabe, particularmente considerando que
+						los árabes rápidamente se apropiaron del juego, y la importancia que le dieron al ajedrez.
+					</p>
+			</section>
 			</section>
 
 			<!-- Shatranj -->
@@ -1587,55 +1699,8 @@
 							class="cite" target="_blank">trascrito y comentado por la FEDA</a>.
 					</p>
 
-					<!-- Zaquitrion -->
-					<section>
-						<h4 id="Zaquitrion"
-							class="w3-container w3-pale-yellow w3-center header3 w3-text-grey w3-opacity">
-							Zaquitrion: El ajedrez en el imperio romano de Oriente</h4>
-						<p>El ajedrez se denominó <i>Zaquitrion</i> en el imperio romano de Oriente,
-							nombre que la evidencia filológica ha establecido, al parecer de manera segura,
-							como una helenización del persa <i>Chatrang</i> y no del árabe <i>Shatranj</i>.
-							Este origen persa de la palabra puede permitir fechar el conocimiento del juego
-							en Bizancio probablemente con anteriorioridad al 661 EC, fecha en la que en Persia
-							los invasores impusieron el árabe como lengua a sus súbditos en todo el imperio
-							Omeya; a pesar de que el persa medio demostró ser muy duradero, los árabes
-							rápidamente se apropiaron del juego, y si se hubiese dado en una fecha posterior
-							a la dinastía Abbásida (750 EC) lo natural seria observar una procedencia del árabe.
-						</p>
-						<p>Desgraciadamente no existen constancias fechadas de la presencia del ajedrez en el
-							imperio romano de Oriente, que, además, a veces se confunde con el
-							<a href="#EscacsCirculars" class="cite">ajedrez circular</a>, pues parece que esta
-							variante tuvo particular aceptación en Bizancio, pero se añade la dificultad para
-							determinar la variante a la que se refieren las pocas fuentes existentes.
-						</p>
-						<p><i>Ibn al-Jatib</i> (siglo XIV) documenta la creación del ajedrez circular, según
-							explica, por un manuscrito del año 618 encontrado en Estambul, en el cual se
-							describe un ajedrez redondo circular denominado, <i>Rumi</i>, y atribuye su
-							invención a <i>Abu Ali Ibn Rashiq al-Murci</i>.
-
-							El término <q>Rūm</q> proviene de la palabra
-							que los árabes usaban para designar los territorios del Imperio Romano. Es el
-							<q><i>Xatranj ar-Rumiya</i></q> (ajedrez bizantino), o
-							<q><i>Xatranj al-Muddawara</i></q> (ajedrez circular).
-						</p>
-						<p>Los documentos en la Biblioteca Británica y en otros lugares sugieren que el ajedrez
-							circular se jugó en Persia ya en el siglo X EC, y otras referencias se encuentran
-							en la India, Persia y más tarde, Europa. Debe destacarse que el
-							<a href="#LlibreDelsJocs" class="cite"><q>Libro del ajedrez, dados y tablas</q>
-								de <i>Alfonso X</i></a>, escrito en el siglo XIII, no recoge el ajedrez circular,
-							y se puede deducir que al menos en aquel momento carecía totalmente de relevancia,
-							ni en Europa, ni para los eruditos árabes, que fueron la fuente principal del
-							manuscrito de <i>Alfonso X</i>.
-						</p>
-						<p>La presencia del ajedrez en el Imperio romano de oriente sabemos que es anterior
-							a <i>Alejo I Comneno</i> (1048 - 1118), quien sabemos, de manera documentada,
-							que era aficionado, pero desgraciadamente no hay referencias anteriores fechadas
-							y confiables.
-						</p>
-					</section>
-
 					<!-- Poema de Winchester -->
-					<section>
+					<section class="w3-container">
 						<h4 id="Winchester"
 							class="w3-container w3-pale-yellow w3-center header3 w3-text-grey w3-opacity">Poema
 							de Winchester</h4>
@@ -1660,6 +1725,66 @@
 							vejez y sabiduria.
 						</p>
 					</section>
+
+					<!-- Zaquitrion -->
+					<section class="w3-container">
+						<h4 id="Zaquitrion"
+							class="w3-container w3-pale-yellow w3-center header3 w3-text-grey w3-opacity">
+							Zaquitrion: El ajedrez en el imperio romano de Oriente</h4>
+						<p>El ajedrez se denominó <i>Zaquitrion</i> en el imperio romano de Oriente,
+							una helenización del persa <i>Chatrang</i> y no del árabe <i>Shatranj</i>,
+							datando el conocimiento del juego en Bizancio aproximadamente en el siglo VII,
+							con anteriorioridad al año 700 EC.
+						</p>
+						<p>Desgraciadamente no existen constancias fechadas de la presencia del ajedrez en el
+							imperio romano de Oriente, que, además, a veces se confunde con el
+							<a href="#EscacsCirculars" class="cite">ajedrez circular</a>, pues parece que esta
+							variante tuvo particular aceptación en Bizancio, pero se añade la dificultad para
+							determinar la variante a la que se refieren las pocas fuentes existentes.
+						</p>
+						<p><i>Ibn al-Jatib</i> (siglo XIV) documenta la creación del ajedrez circular, según
+							explica, por un manuscrito del año 618 encontrado en Estambul, en el cual se
+							describe un ajedrez redondo circular denominado, <i>Rumi</i>, y atribuye su
+							invención a <i>Abu Ali Ibn Rashiq al-Murci</i>.
+
+							El término <q>Rūm</q> proviene de la palabra
+							que los árabes usaban para designar los territorios del Imperio Romano. Es el
+							<q><i>Xatranj ar-Rumiya</i></q> (ajedrez bizantino), o
+							<q><i>Xatranj al-Muddawara</i></q> (ajedrez circular).
+						</p>
+						<p>Los documentos en la Biblioteca Británica y en otros lugares sugieren que el ajedrez
+							circular se jugó en Persia ya en el siglo X EC, y otras referencias se encuentran
+							en la India, y más tarde, en Europa. Debe destacarse que el
+							<a href="#LlibreDelsJocs" class="cite"><q>Libro del ajedrez, dados y tablas</q>
+								de <i>Alfonso X</i></a>, escrito en el siglo XIII, no recoge el ajedrez circular,
+							y se puede deducir que al menos en aquel momento carecía totalmente de relevancia,
+							ni en Europa, ni para los eruditos árabes, que fueron la fuente principal del
+							manuscrito de <i>Alfonso X</i>.
+						</p>
+						<p>La presencia del ajedrez en el Imperio romano de oriente sabemos que es anterior
+							a <i>Alejo I Comneno</i> (1048 - 1118), quien sabemos, de manera documentada,
+							que era aficionado, pero desgraciadamente no hay referencias anteriores fechadas
+							y confiables.
+						</p>
+						<section class="w3-container">
+							<h5 id="EscacsCirculars" class="w3-container w3-pale-yellow w3-center">Escacs
+									circulars: Al-Muddawara</h5>
+							<figure class="tbigright fig200">
+								<img src="../img/Al-Muddawara.png" class="fullwidth"
+									alt="Al-Muddawara (Zaquitrion)">
+								<figcaption class="thumbcaption">Al-Muddawara (Zaquitrion).
+									<div class="thanks">Image: Dogface, CC BY-SA 3.0,
+										via Wikimedia Commons</div>
+								</figcaption>
+							</figure>
+							<p>Se tiene que entender el ajedrez circular sencillamente como un <a href="#Xatranj"
+									class="cite">Shatranj</a> que se juega en un damero circular. Los árabes los
+								denominaron <q><i>Shatranj ar-Rumiya</i></q> (ajedrez bizantino) o
+								<q><i>Shatranj al-Muddawara</i></q> (ajedrez circular).
+							</p>
+						</section>
+					</section>
+
 				</section>
 
 				<!-- Ajedrez del mensajero -->

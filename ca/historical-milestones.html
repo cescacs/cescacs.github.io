@@ -126,10 +126,9 @@
 	<main>
 		<div class="w3-container">
 			<p>Aquest apartat no vol ser, ni de lluny, un relat de la història dels escacs, quedant fora, per exemple,
-				les
-				variants més orientals que personalment desconec. La intenció és deixar constància de tots els referents
-				històrics que, d'una o una altra manera, han tingut alguna mena d'influència en el disseny de
-				<i>C'escacs</i>, acompanyant-los amb algunes dades històriques addicionals, si més no, interessants.
+				les variants més orientals que personalment desconec. La intenció és deixar constància de tots els
+				referents històrics que, d'una o una altra manera, han tingut alguna mena d'influència en el disseny
+				de <i>C'escacs</i>, acompanyant-los amb algunes dades històriques addicionals, si més no, interessants.
 			</p>
 		</div>
 
@@ -922,8 +921,8 @@
 					<i>Xaturanga</i>,
 					i probable origen d'aquest, avui dia hom accepta que és a l'inversa.
 				</p>
-				<div style="display: flex;">
-					<div style="margin:0.5em; padding:0.5em; border:1px solid black;">
+				<div style="display:flex;flex-wrap:wrap">
+					<div style="flex:1;margin:0.5em; padding:0.5em; border:1px solid black;">
 						<p>La peça a moure es determinava amb un dau llarg de quatre cares:
 						</p>
 						<ol style="list-style-type: decimal;">
@@ -937,7 +936,7 @@
 							al valor u, i el sis equivalent al quatre.
 						</small></p>
 					</div>
-					<div style="margin:0.5em; padding:0.5em; border:1px solid black;">
+					<div style="flex:1;margin:0.5em; padding:0.5em; border:1px solid black;">
 						<p>La valoració de les peces era:</p>
 						<ul>
 							<li><i>Pedàti</i> (<i>Peó</i>): 1</li>
@@ -948,21 +947,14 @@
 						</ul>
 					</div>
 				</div>
-				<p>L'objectiu no és el <i>Rajà</i> enemic, que és una peça més del tauler, sinó fer punts capturant
-					peces; l'excepció és la regla que dona la partida guanyada al jugador que captura els <i>Rajàs</i>
-					dels altres tres jugadors, obtenint els punts equivalents a les tres armades senceres, 54 punts,
-					doncs cada armada està valorada en 18 punts.
-				</p>
 				<p>Mentre <i>Xaturanga</i> significaria <q>quatre armades</q>: infanteria, cavalleria, carros i
-					elefants,
-					<i>Xaturaji</i> vol dir <i>quatre rajàs</i>, una forma de dir <q>quatre jugadors</q>. Els jocs amb
-					més
-					de dos jugadors tenen tendència a degenerar, perdent el component estratègic per prevaldre la
-					<i>diplomàcia</i> entre els jugadors, desequilibrant el joc. Però recordem que el <i>Xaturaji</i> és
-					un joc amb un gran component d'atzar, i, a més a més, en el <i>Xaturaji</i> sembla que els jugadors
-					formen dues parelles, jugant una parella vers l'altra. En qualsevol cas, pot ser un joc inspirat en
-					els escacs i amb certes connexions, però no poden considerar-se <i>uns escacs</i>, com podriem dir
-					del <i>Xaturanga</i> o d'altres variants que citarem aquí.
+					elefants, <i>Xaturaji</i> vol dir <i>quatre rajàs</i>, una forma de dir <q>quatre jugadors</q>.
+					Els escacs amb més de dos jugadors tenen tendència a degenerar, perdent el component estratègic
+					per prevaldre la <i>diplomàcia</i> entre els jugadors, desequilibrant el joc. Però recordem que
+					el <i>Xaturaji</i> és un joc amb un gran component d'atzar, i, a més a més, en el <i>Xaturaji</i>
+					sembla que els jugadors formen dues parelles, jugant una parella vers l'altra. En qualsevol cas,
+					pot ser un joc inspirat en els escacs i amb certes connexions, però no poden considerar-se
+					<i>uns escacs</i>, com podriem dir del <i>Xaturanga</i> o d'altres variants que citarem aquí.
 				</p>
 				<p>Una peça curiosa que incorpora el <i>Xaturaji</i> és el <i>Nauca</i> (<i>Vaixell</i>), que mou
 					(<i>salta</i>) dos quadrats en qualsevol direcció en diagonal; això limita les caselles on pot
@@ -974,6 +966,106 @@
 					pren el nom de <i>Vaixell</i>, reservant el nom de <i>Gaja</i> per una peça que mou igual que la
 					<i>Torre</i> dels nostres moderns escacs occidentals.
 				</p>
+				<section class="w3-container">
+					<h4 style="display: flex;" class="w3-container w3-deep-purple w3-center w3-text-light-grey
+						w3-opacity w3-large title header4">Regles del chaturaji</h4>
+					<p>L'objectiu no és el <i>Rajà</i> enemic, que és una peça més del tauler, sinó fer punts capturant
+						peces; l'excepció és la regla que dona la partida guanyada al jugador que captura els <i>Rajàs</i>
+						dels altres tres jugadors, obtenint els punts equivalents a les tres armades senceres, 54 punts,
+						doncs cada armada està valorada en 18 punts.
+					</p>
+					<p>L'ordre dels torns dels jugadors és en el sentit de les agulles del rellotge, i els jugadors
+						enfrontats són aliats. Cada jugador mou dues peces en cada torn llançant un dau dues vegades
+						o llançant dos daus simultàniament. Quan tots dos daus indiquen el mateix tipus de peça, es
+						pot moure la mateixa peça dues vegades, o si es disposa de dues peces d'aquest tipus, es poden
+						moure dues peces diferents d'aquest tipus. Si el moviment de la peça indicada pel dau és
+						impossible, o, si el jugador no vol moure-la, ja que el jugador no està obligat a moure, llavors
+						es perd el torn complet.
+					</p>
+					<div class="note">
+						<p>Cal tenir en compte que quan es juga amb dos daus i es dona el cas en la segona tirada, el
+							primer moviment ja s'havia fet, i no es desfà; per tant, és diferent jugar amb un dau o amb
+							dos. També cal tenir en compte que les peces aliades poden ser capturades, però no les pròpies.
+						</p>
+					</div>
+					<p>La partida acaba quan no queden fitxes en joc dels jugadors contraris, però també pot acabar quan
+						tots els jugadors estan d'acord a posar fi a la partida. Al final de la partida, es compten els
+						punts. Altres regles:</p>
+					<dl>
+						<dt>Shatpada (sis passes): promoció de peons</dt>
+						<dd>Si es donen les condicions, un peó que aconsegueixi arribar a l'última casella promocionaria
+							al tipus de peça que estaria col·locat en aquesta columna en la disposició inicial (de la teva
+							pròpia columna o de la columna del teu aliat).</dd>
+						<dd>Quan un peó arriba a l'última fila però no pot promocionar, roman com a peó en la casella de
+							l'última fila. Quan pugui promocionar, el peó es converteix en la peça corresponent.
+							Mentrestant, el peó pot ser pres.</dd>
+						<dd>Quan un jugador encara posseeix tres o quatre peons no pot promocionar peons.</dd>
+						<dd>Quan un jugador té un o dos peons, pot promocionar a
+							<i>Cavall</i> o <i>Elefant</i>.</dd>
+						<dd>Només quan un jugador posseeix un peó i el <i>Rajà</i>, i com a màxim el <i>Vaixell</i>,
+							però cap altra peça, pot promocionar a <i>Vaixell</i>, o a un segon <i>Rajà</i>.</dd>
+						<dd>Com a excepció, un jugador sense <i>Rajà</i> sempre pot promocionar a <i>Rajà</i> quan un
+							peó aconsegueix l'última fila de la columna d'un <i>Rajà</i>.</dd>
+		
+						<dt>Vrihannauka: Triomf del vaixell</dt>
+						<dd>Quan un <i>Vaixell</i> es mou de tal manera que es forma un quadrat de 2×2 ple de vaixells,
+							captura els tres vaixells dels altres jugadors.</dd>
+
+						<dt>Captura del <i>Rajah</i></dt>
+						<dd>Si un jugador perd el seu <i>Rajà</i> no pot moure cap peça, excepte peons. Les seves peces
+							romanen en el tauler i poden ser preses.
+							<ul>
+								<li>El company pot triar intercanviar <i>Rajàs</i> i rescatar-lo substituint-lo.</li>
+								<li>Els peons d'un jugador que ha perdut el seu <i>Rajà</i> no poden capturar un
+									<i>Rajà</i>.</li>
+								<li>En capturar un Rajà enemic, si el <i>Rajà</i> del company ha estat capturat per
+									aquest exèrcit enemic, se li pot exigir el canvi de <i>Rajàs</i>, i llavors tots
+									dos <i>Rajàs</i> tornen a la seva posició inicial, o a una adjacent si està ocupada.</li>
+								<li>En cas contrari, el jugador que capturi a l'últim <i>Rajà</i> enemic, si el <i>Rajà</i>
+									del seu company també ha estat capturat, prendrà el control de l'exèrcit aliat per a
+									derrotar als enemics congelats utilitzant tots dos exèrcits.</li>
+							</ul>
+						</dd>
+
+						<dt>Sinhasana</dt>
+						<dd>Qui mou un <i>Rajà</i> per a entrar en la casella original d'un altre <i>Rajà</i> es diu
+							que ha guanyat una <i>sinhasana</i>. Si un jugador guanya una <i>sinhasana</i> en el tron
+							del jugador aliat (jugador les peces del qual estan enfronti), tots dos aliats prenen el
+							control de tots dos exèrcits. Les regles de la <i>sinhasana</i> en un tron enemic estan
+							relacionades amb les apostes.</dd>
+
+						<dt>Cacacashta</dt>
+						<dd>Quan un <i>Rajá</i> es queda sense el seu exèrcit no és ni una victòria ni una derrota.</dd>
+					</dl>
+					<p>Era un joc amb apostes, i algunes de les regles eren complicades, no les coneixem bé i fins
+						i tot pot ser que tinguessin versions en diferents llocs. En qualsevol cas, podem utilitzar
+						algunes regles adaptades per a jugar amb punts:
+					</p>
+					<ul>
+						<li><b>Recompte de punts</b>: Les parelles poden mantenir-se o canviar-se al llarg d'una sèrie
+							de partides diferents, conservant els punts obtinguts per cada jugador, però ha de tenir-se
+							en compte que una sèrie típica de partides seria una sèrie de quatre partides, sense canviar
+							de parella.</li>
+						<li><b>Recompte de punts en cas de <i>cacacashta</i></b>: La situació de <i>cacacashta</i>
+							(Rajà solitari) significa que ningú compta els punts de les peces capturades a aquest exèrcit
+							(jugador) durant aquesta partida, és com un empat amb aquest jugador; el Rajà és retirat del
+							tauler i les peces són retornades al jugador (no compten), qui també retorna qualsevol peça
+							que hagués capturat (tampoc compten). Noti's que l'aliat pot forçar la situació capturant
+							l'última peça aliada.</li>
+						<li><b><i>Sinhasana</i> en un tron enemic</b>: Obtenir un <i>sinhasana</i> en un tron enemic
+							duplica el valor del seu <i>Rajà</i> (10 punts) si es captura mentre el tron roman ocupat, però
+							capturar al <i>Rajà</i> enemic en el seu tron obtenint un <i>sinhasana</i>, és a dir, capturar
+							al <i>Rajà</i> enemic en la seva posició inicial amb el <i>Rajà</i> propi, és encara més valuós,
+							i quadruplica el seu valor (20 punts). Observar que si rescaten el <i>Rajá</i> de qualsevol
+							manera, amb el <i>Rajá</i> rescatat es perden els avantatges del <i>sinhasana</i>; no és el
+							cas en la promoció d'un peó, doncs en aquest cas es nomena un nou <i>Rajá</i>.
+						</li>
+						<li><b>Fi de partida per captura de <i>Rajà</i></b>: Quan tots dos <i>Rajàs</i> enemics han estat
+							capturats i també tots els seus peons, i per tant tots dos exèrcits enemics estan definitivament
+							congelats, el nombre de torns finals pot ser limitat, per exemple a cinc torns, és a dir deu
+							moviments per a cada jugador restant; aquesta regla és per a evitar un final interminable.</li>
+					</ul>
+				</section>
 
 			</section>
 
@@ -1141,6 +1233,18 @@
 						justificar-se per la influència <i>varega</i> i la importància dels vaixells per a aquesta cultura,
 						tot i que s'ha d'assenyalar que el tipus de vaixell no es refereix a un <i>drakar</i> viking, sinó
 						a una embarcació eslava.
+					</p>
+					<p>En l'imperi romà d'Orient anomenaren <q><i>zaquitrion</i></q> als escacs.
+						L'evidència filològica ha establert, pel que sembla de manera segura, la
+						procedència del nom <q><i>zaquitrion</i></q> com a una hel·lenització del persa
+						<i>Txatrang</i>, i no de l'àrab <i>Xatranj</i>. Aquest origen persa de la paraula
+						pot permetre datar el coneixement del joc a Bizanci probablement anterior a l'any
+						661 EC, data en què a Pèrsia els invasors van imposar l'àrab com a llengua primera
+						dels seus súbdits en tot l'imperi Omeia. Tot i que el persa mitjà va demostrar ser
+						molt durador, per a una data posterior, per exemple, si fos ja en la dinastia
+						Abbàssida (750 EC), el natural seria observar una procedència de l'àrab,
+						particularment considerant que els àrabs ràpidament es van apropiar del joc, i la
+						importància que li donaren al joc dels escacs.
 					</p>
 				</section>
 			</section>
@@ -2112,7 +2216,7 @@
 					</p>
 
 					<!-- Hipòtesi catalana -->
-					<section class="w3-card">
+					<section class="w3-container w3-card">
 						<h4 id="HipotesiCatalana" class="w3-container w3-pale-yellow w3-center header3
 							w3-text-grey w3-opacity">Hipòtesi catalana</h4>
 
@@ -2166,7 +2270,7 @@
 					</section>
 
 					<!-- Poema de Winchester -->
-					<section>
+					<section class="w3-container">
 						<h4 id="Winchester" class="w3-container w3-pale-yellow w3-center header3
 							w3-text-grey w3-opacity">Poema de Winchester</h4>
 						<p>Poema de 36 línies escrites en llatí i entitolat
@@ -2206,91 +2310,94 @@
 				</section>
 
 				<!-- Zaquitrion -->
-				<section>
+				<section class="w3-container">
 					<h3 id="Zaquitrion" class="w3-container w3-pale-green w3-center header2
 							w3-text-grey w3-opacity">Zaquitrion: Els escacs a l'imperi romà d'Orient</h3>
-					<p>Els escacs els anomenaren <i>Zaquitrion</i> en l'imperi romà d'Orient,
-						nom que l'evidència filològica ha establert, pel que sembla de manera segura,
-						com a una hel·lenització del persa <i>Txatrang</i> i no de l'àrab <i>Xatranj</i>.
-						Aquest origen persa de la paraula pot permetre datar el coneixement del joc a
-						Bizanci probablement anterior a l'any 661 EC, data en què a Pèrsia els invasors
-						van imposar l'àrab com a llengua primera dels seus súbdits en tot l'imperi Omeia;
-						tot i que el persa mitjà va demostrar ser molt durador, els àrabs ràpidament es
-						van apropiar del joc, i per a una data posterior a la dinastia Abbàssida (750 EC)
-						el natural seria observar una procedència de l'àrab.
+					<p>Els escacs els anomenaren <i>Zaquitrion</i> en l'imperi romà d'Orient, una
+						hel·lenització del persa <i>Txatrang</i> i no de l'àrab <i>Xatranj</i>, datant
+						el coneixement del joc d'escacs en Bizanci aproximadament en el segle VII,
+						anterior a l'any 700 EC.
 					</p>
 					<p>Desgraciadament no existeixen constàncies datades de la presència dels escacs
 						en l'imperi romà d'Orient, que, a més, de vegades es confon amb els
 						<a href="#EscacsCirculars" class="cite">escacs circulars</a>, doncs sembla que
-						aquesta variant tingué particular acceptació a Bizanci, però s'afegeix la
-						dificultat per determinar la variant a què es refereixen les poques fonts
+						aquesta variant tingué particular acceptació a Bizanci, i s'afegeix així la
+						dificultat de determinar la variant a què es refereixen les poques fonts
 						existents.
 					</p>
-					<p><i>Ibn al-Jatib</i>, poeta, escriptor, historiador, filòsof i polític granadí
-						que visqué en el segle XIV, amb família d'origen iemení que arribà a Al-Andalus
-						en el segle IX, documenta la creació dels escacs circulars, que segons ell es
-						recull a un manuscrit de l'any 618 trobat a Istanbul, en el qual es descriuen
-						uns escacs rodons, circulars, anomenats, <i>Rumi</i>, l'invenció dels quals
-						atribueix a <i>Abu Ali Ibn Rashiq al-Murci</i>.
-
-						El terme <q>Rūm</q> prové de la paraula que els àrabs
-						empraven per a designar els territoris de l'Imperi Romà. Són els
-						<q><i>Xatranj ar-Rumiya</i></q> (escacs bizantins), o
-						<q><i>Xatranj al-Muddawara</i></q> (escacs circulars).
+					<p>De qualsevol manera, la presència dels escacs en l'Imperi romà d'Orient sabem
+						que és anterior a <i>Aleix I Comnè</i> (1048- 1118), doncs la seva filla
+						<i>Anna Comnè</i>, en la gran obra històrica
+						<a href="https://ca.wikipedia.org/wiki/Alex%C3%ADada" class="cite"
+							target="_blank">La Alexíada</a>, documenta que n'era aficionat, però
+						desgraciadament no n'hi ha referències anteriors datades i confiables.
 					</p>
-					<p>Els documents a la Biblioteca Britànica i en altres llocs suggereixen que els
-						escacs circulars es va jugar a Pèrsia ja en el segle X EC, i altres referències
-						es troben a l'Índia, Pèrsia i més tard, Europa. Ha de destacar-se que el
-						<a href="#LlibreDelsJocs" class="cite"><q>Llibre dels escacs, daus i taules</q>
-							d'Alfons X</a>, escrit en el segle XIII, no recull els escacs circulars, i es
-						pot deduir que llavors almenys no tenia rellevància, ni a Europa, ni per als
-						erudits àrabs, que van ser la font principal del manuscrit d'<i>Alfons X</i>.
-					</p>
-					<p>La presència dels escacs en l'Imperi romà d'orient sabem que és anterior a
-						<i>Aleix I Comnè</i> (1048- 1118), doncs la seva filla <i>Anna Comnè</i>, en
-						la gran obra històrica <a href="https://ca.wikipedia.org/wiki/Alex%C3%ADada"
-							class="cite" target="_blank">La Alexíada</a>, documenta que n'era
-						aficionat, però desgraciadament no n'hi ha referències anteriors datades i
-						confiables.
-					</p>
-					<!-- TODO (apartat escacs circulars)
-					<p>Tot i ser cert l'interés a Pèrsia per les matemàtiques, la geometria i
-						l'astronomia, els seus interessos també s'enfocaven cap a qüestions
-						més esotèriques, per exemple l'astrologia, que ja tenia tradició a
-						Mesopotàmia des de l'antiguetat. Els <q><i>escacs celestials</i></q>
-						(<i>al-Falakîya Shatranj</i>) probablement són els mateixos que, sense
-						gaires modificacions, aparegueren en el tractat d'Alfons X amb el nom
-						d'<q><i>Escaques</i></q>, i semblen tenir origen en Pèrsia. Malgrat no
-						ser uns escacs, doncs jugaven set persones fent servir daus, podrien
-						haver tingut relació amb la <q>posterior</q> creació dels
-						<q><i>escacs circulars</i></q> (<i>al-Muddawara</i>), també anomenats
-						<q><i>escacs bizantins</i></q> (<i>ar-Rûmîya</i>) <small>la data de la
-						creació dels <i>ar-Rûmîya</i> és desconeguda, i la especulació com a
-						<q>posterior</q> es fonamenta en no existir cap referència fins a dates
-						tardanes.</small>.
-					</p>
-					<p>També en Bizanci l'astrologia era una matèria de gran interés, per la
-						gran tradició que tenia en l'Egipte helenístic. Malgrat les prohibicions
-						de l'esglèsia catòlica ortodoxa foren fortes en l'època de l'arribada
-						del <i>Shatranj</i>, el mateix <i>Shatranj</i> no patia prohibicions
-						religioses en els seus inicis. El tauler circular en el
-						<i>al-Falakîya Shatranj</i> tenia representacions astrològiques;
-						aplicat al <i>Shatranj</i> s'obtenia un joc molt més àgil.
-						<small>Cal deixar clar al lector que el <i>ar-Rûmîya Shatranj</i>
-						consistia en 64 caselles, organitzades en quatre cercles concèntrics
-						amb 16 caselles cadascú, en tant que el <i>al-Falakîya Shatranj</i>
-						distribuia el tauler en set cercles, un per jugador, amb dotze
-						caselles cadascú.</small>
-					</p>
-					-->
-					<section>
-						<h4 id="EscacsCirculars" class="w3-container w3-pale-yellow w3-center header3
-							w3-text-grey w3-opacity">Escacs circulars</h4>
-						<!-- TODO: Escacs circulars -->
+					<section class="w3-container">
+						<h5 id="EscacsCirculars" class="w3-container w3-pale-yellow w3-center">Escacs
+							circulars: Al-Muddawara</h5>
+						<figure class="tbigright fig200">
+							<img src="../img/Al-Muddawara.png" class="fullwidth"
+								alt="Al-Muddawara (Zaquitrion)">
+							<figcaption class="thumbcaption">Al-Muddawara (Zaquitrion).
+								<div class="thanks">Image: Dogface, CC BY-SA 3.0,
+									via Wikimedia Commons</div>
+							</figcaption>
+						</figure>
+									
+						<!-- TODO (apartat escacs circulars)
+						<p>Tot i ser cert l'interés a Pèrsia per les matemàtiques, la geometria i
+							l'astronomia, els seus interessos també s'enfocaven cap a qüestions
+							més esotèriques, per exemple l'astrologia, que ja tenia tradició a
+							Mesopotàmia des de l'antiguetat. Els <q><i>escacs celestials</i></q>
+							(<i>al-Falakîya Shatranj</i>) probablement són els mateixos que, sense
+							gaires modificacions, aparegueren en el tractat d'Alfons X amb el nom
+							d'<q><i>Escaques</i></q>, i semblen tenir origen en Pèrsia. Malgrat no
+							ser uns escacs, doncs jugaven set persones fent servir daus, podrien
+							haver tingut relació amb la <q>posterior</q> creació dels
+							<q><i>escacs circulars</i></q> (<i>al-Muddawara</i>), també anomenats
+							<q><i>escacs bizantins</i></q> (<i>ar-Rûmîya</i>) <small>la data de la
+							creació dels <i>ar-Rûmîya</i> és desconeguda, i la especulació com a
+							<q>posterior</q> es fonamenta en no existir cap referència fins a dates
+							tardanes.</small>.
+						</p>
+						<p>També en Bizanci l'astrologia era una matèria de gran interés, per la
+							gran tradició que tenia en l'Egipte helenístic. Malgrat les prohibicions
+							de l'esglèsia catòlica ortodoxa foren fortes en l'època de l'arribada
+							del <i>Shatranj</i>, el mateix <i>Shatranj</i> no patia prohibicions
+							religioses en els seus inicis. El tauler circular en el
+							<i>al-Falakîya Shatranj</i> tenia representacions astrològiques;
+							aplicat al <i>Shatranj</i> s'obtenia un joc molt més àgil.
+							<small>Cal deixar clar al lector que el <i>ar-Rûmîya Shatranj</i>
+							consistia en 64 caselles, organitzades en quatre cercles concèntrics
+							amb 16 caselles cadascú, en tant que el <i>al-Falakîya Shatranj</i>
+							distribuia el tauler en set cercles, un per jugador, amb dotze
+							caselles cadascú.</small>
+						</p>
+						-->
 						<p>Hom ha d'entendre els escacs circulars senzillament com a un
-							<a href="#Shatranj" class="cite">Shatranj</a> que es juga en un escaquer
-							circular
-
+							<a href="#Xatranj" class="cite">Xatranj</a> que es juga en un escaquer
+							circular. Els àrabs els anomenaren
+							<q><i>Xatranj ar-Rumiya</i></q> (escacs bizantins), o
+							<q><i>Xatranj al-Muddawara</i></q> (escacs circulars).
+						</p>
+						<p>Els documents a la Biblioteca Britànica i en altres llocs suggereixen que els
+							escacs circulars es van jugar a Pèrsia ja en el segle X EC, i altres referències
+							es troben a l'Índia, i més tard, en Europa. Ha de destacar-se que el
+							<a href="#LlibreDelsJocs" class="cite"><q>Llibre dels escacs, daus i taules</q>
+								d'Alfons X</a>, escrit en el segle XIII, no recull els escacs circulars, i es
+							pot deduir que llavors almenys no tenia rellevància, ni a Europa, ni per als
+							erudits àrabs, que foren la font principal del manuscrit d'<i>Alfons X</i>,
+							i tampoc en fan gaires referències.
+						</p>
+						<p><i>Ibn al-Jatib</i>, poeta, escriptor, historiador, filòsof i polític granadí
+							que visqué en el segle XIV, amb família d'origen iemení que arribà a Al-Andalus
+							en el segle IX, documenta la creació dels escacs circulars, que segons ell es
+							recull a un manuscrit de l'any 618 trobat a Istanbul, en el qual es descriuen
+							uns escacs rodons, circulars, anomenats, <i>Rumi</i>, l'invenció dels quals
+							atribueix a <i>Abu Ali Ibn Rashiq al-Murci</i>.
+							El terme <q>Rūm</q> prové de la paraula que els àrabs empraven per a designar
+							els territoris de l'Imperi Romà, i els escacs rodons sovint es troben esmentats
+							com a <q><i>Xatranj ar-Rumiya</i></q> (escacs bizantins) en les obres àrabs.
 						</p>
 					</section>
 				</section>
@@ -4209,7 +4316,8 @@
 					<div class="w3-container">
 						<h5 id="MiniHexchess" class="w3-container w3-pale-yellow w3-center">Mini Hexchess</h5>
 						<figure class="tbigright"
-							style="clear:none; width: 250px; padding-top: 4px; padding-left: 4px; padding-bottom: 6px; text-align: center">
+							style="clear:none; width: 250px; padding-top: 4px; padding-left: 4px;
+								padding-bottom: 6px; text-align: center">
 							<img src="../img/mini.h-min.png" alt="Mini Hexchess" class="fullwidth" />
 						</figure>
 						<p>Un petit escac en un hexcaquer regular de 37 hexcacs permet un joc curt i relaxat,
