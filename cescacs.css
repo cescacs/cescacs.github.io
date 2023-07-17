@@ -173,7 +173,6 @@ h2.title {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-
 h1 + h2.subtitle,
 h2 + h3.subtitle,
 h3 + h4.subtitle,
@@ -191,6 +190,10 @@ h5.subtitled {
   margin-bottom:0 !important;
   padding-bottom:0 !important;
 }
+
+h4,
+h5,
+h6 { display: flex;}
 
 p:before {
   content: "";
@@ -234,6 +237,22 @@ figure.captionTop {
 figcaption.captionTop {
   display: table-caption;
   caption-side: top;
+}
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 240px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
 }
 
 ul.exemple {
