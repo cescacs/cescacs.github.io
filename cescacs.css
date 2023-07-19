@@ -255,6 +255,86 @@ div.gallery img {
   height: auto;
 }
 
+ul>li, ol>li, dl>dd {
+  padding-bottom:8px;
+}
+
+ul>li.nopadding:last-child, ol>li.nopadding:last-child, dl>dd.nopadding:last-child {
+  padding-bottom:0;
+}
+
+ul.icon, dl.icon {
+  --icon-size: .8em;
+  --gutter: .5em;
+  padding: 0 0 0 var(--icon-size);
+}
+
+ul.icon>li, dl.icon>dd {
+  padding-left: var(--gutter);
+}
+
+ul.icon>li::marker, dl.icon>dd::marker {
+  font-size: var(--icon-size);
+  font-family: FontAwesome;
+}
+
+/* https://astronautweb.co/snippet/font-awesome/ */
+ul.iconGrid>li::marker, dl.iconGrid>dd::marker {
+  content: "\f00a"; /* FontAwesome Unicode */
+}
+
+ul.iconMarkItem>li::marker, dl.iconMarkItem>dd::marker {
+  content: "\f152"; /* FontAwesome Unicode */
+}
+
+ul.iconBullseye>li::marker {
+  content: "\f140"; /* FontAwesome Unicode */
+}
+
+ul.iconSquare>li::marker {
+  content: "\f096"; /* FontAwesome Unicode */
+}
+
+ul.iconSquarePlus>li::marker {
+  content: "\f196"; /* FontAwesome Unicode */
+}
+
+ul.iconCheck>li::marker {
+  content: "\f00c"; /* FontAwesome Unicode */
+}
+
+ul.icon4>li::marker {
+  content: "\f009"; /* FontAwesome Unicode */
+}
+
+ul.iconStar>li::marker {
+  content: "\f006"; /* FontAwesome Unicode */
+}
+
+ul.iconStar2>li::marker {
+  content: "\f005"; /* FontAwesome Unicode */
+}
+
+li.iconMarkItem::marker {
+  content: "\f152"; /* FontAwesome Unicode */
+}
+
+li.iconSquarePlus::marker {
+  content: "\f196"; /* FontAwesome Unicode */
+}
+
+li.iconCheck::marker {
+  content: "\f00c"; /* FontAwesome Unicode */
+}
+
+li.iconHeart::marker {
+  content: "\f08a"; /* FontAwesome Unicode */
+}
+
+li.iconSquare::marker {
+  content: "\f096"; /* FontAwesome Unicode */
+}
+
 ul.exemple {
   padding: 0;
 }
