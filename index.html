@@ -295,9 +295,9 @@
 
         <div class="w3-container">
             <h3 class="w3-container w3-pale-yellow w3-center">Primeres impressions</h3>
-            <ul>
+            <ul class="icon iconBullseye">
 				<li><p>És un gran hexcaquer de 169 hexcacs. En té tres colors, i es requereixen tres alfils.</p>
-					<ul>
+					<ul class="icon iconMarkItem">
 				        <li>
 				            <p>La potència de l'alfil disminueix notòriament respecte dels escacs ortodoxos.</p>
 				        </li>
@@ -314,7 +314,7 @@
 				</li>
                 <li>
                     <p>Augmenta la mobilitat dels peons, però, tot i això, la seva potència disminueix respecte dels escacs ortodoxos.</p>
-					<ul>
+					<ul class="icon iconMarkItem">
 						<li>
 							<p>La pèrdua de potència dels peons és deguda a la ineficàcia de les estructures dels peons
 								en els escacs hexagonals.</p>
@@ -490,7 +490,8 @@
                     <a href="ca/glossary.html#Roc" class="cescacs" target="_blank">Roc (Torre)
                     <img src="img/alfaerie/wrook.png" alt="Torre" class="pieceIcon"></a>
                 </h3>
-                <p>Moviment en les sis direccions <em>ortogonals</em>, per les <em>files</em>.</p>
+                <p>Moviment en les sis direccions <a href="#Fila" class="cite"><em>ortogonals</em></a>,
+                    per les <em>files</em>.</p>
             </li>
             <!-- Alfil -->
             <li class="w3-container w3-card-4 w3-half">
@@ -498,7 +499,8 @@
                     <a href="ca/glossary.html#Alfil" class="cescacs" target="_blank">Alfil
                     <img src="img/alfaerie/wbishop.png" alt="Alfil" class="pieceIcon"></a>
                 </h3>
-                <p>Moviment en les sis direccions <em>diagonals</em>, per les <em>línies</em>.</p>
+                <p>Moviment en les sis direccions <a href="#Linia" class="cite"><em>diagonals</em></a>,
+                    per les <em>línies</em>.</p>
                 <p>Sempre es manté en el seu color; en els escacs hexagonals l'alfil és una peça feble,
                     notablement més feble que el cavall.</p>
             </li>
@@ -510,12 +512,11 @@
                 </h3>
                 <p>Es distingueixen dos moviments:</p>
                 <ul class="w3-ul">
-                    <li><em>Salt de cavall</em>, <a href="#Saltcavall" class="cescacs">com s'ha descrit</a>;
-                        n'hi han dotze
-                        possibles.</li>
-                    <li><em>Cavalcada</em>, <a href="#Cavalcada" class="cescacs">com s'ha descrit</a>:
+                    <li><a href="#Saltcavall" class="cescacs"><em>Salt de cavall</em></a>, com s'ha descrit;
+                        n'hi ha dotze possibles.</li>
+                    <li><a href="#Cavalcada" class="cescacs"><em>Cavalcada</em></a>, com s'ha descrit:
                         <ul class="w3-ul w3-border">
-                            <li>Encadenament de de dos salts de cavall iguals;
+                            <li>Encadenament de de <em>dos</em> salts de cavall <em>iguals</em>;
                                 n'hi han dotze moviments possibles, un per a cada moviment de cavall.</li>
                             <li>L'hexcac intermedi on es fa el primer salt ha de ser lliure.</li>
                             <li>No es permet capturar peces en una cavalcada; l'hexcac final ha de
@@ -537,7 +538,9 @@
                     <a href="ca/glossary.html#Pegas" class="cescacs" target="_blank">Pegàs
                     <img src="img/alfaerie/wpegasus.png" alt="Pegàs" class="pieceIcon"></a>
                 </h3>
-                <p>El cavall alat pot moure en <em>diagonal</em>, per les <em>línies</em>, o fer un <em>salt de cavall</em>.</p>
+                <p>El cavall alat pot moure en <a href="#Linia" class="cite"><em>diagonal</em></a>,
+                    per les <em>línies</em> com un alfil, o fer un
+                    <a href="#Saltcavall" class="cescacs"><em>salt de cavall</em></a>.</p>
                 <p>No pot fer el moviment de cavalcada.</p>
                 <p>Combina els moviments de l'alfil i el cavall (sense incloure-hi la cavalcada).</p>
                 <aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
@@ -554,7 +557,8 @@
                     <a href="ca/glossary.html#Vibria" class="cescacs" target="_blank">Víbria (Drac)
                     <img src="img/alfaerie/wdragon.png" alt="Drac" class="pieceIcon"></a>
                 </h3>
-                <p>El drac pot moure en <em>ortogonal</em>, per les <em>files</em>, o fer un <em>salt de cavall</em>.</p>
+                <p>El drac pot moure en <a href="#Fila" class="cite"><em>ortogonal</em></a>, per les <em>files</em>,
+                    o fer un <a href="#Saltcavall" class="cescacs"><em>salt de cavall</em></a>.</p>
                 <p>No pot fer el moviment de cavalcada.</p>
                 <p>Combina els moviments de la torre i el cavall (sense incloure-hi la cavalcada).</p>
                 <aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
@@ -570,7 +574,8 @@
                     <a href="ca/glossary.html#Dama" class="cescacs" target="_blank">Dama
                     <img src="img/alfaerie/wqueen.png" alt="Dama" class="pieceIcon"></a>
                 </h3>
-                <p>Moviment en les sis direccions <em>ortogonals</em> i en les sis <em>diagonals</em>;
+                <p>Moviment en les sis direccions <a href="#Fila" class="cite"><em>ortogonals</em></a>
+                    i en les sis <a href="#Linia" class="cite"><em>diagonals</em></a>;
                     mou tant per les <em>files</em> com per les <em>línies</em>.</p>
                 <p>Combina els moviments de la torre i l'alfil.</p>
             </li>
@@ -996,7 +1001,7 @@
                 <div class="w3-container w3-card w3-margin-bottom">
                     <h4 class="w3-container w3-text-purple subtitled">
                         <img src="img/alfaerie/wking.png" alt="King" style="display: inline; vertical-align: baseline; height:2.5ex;">
-                        L'<i>Enroc</i>
+                        L'<i>enroc</i>
                     </h4>
                     <h5 class="w3-container w3-text-pink subtitle">Moviment inicial</h5>
                     <p>En C'escacs existeix un moviment d'<i>Enroc</i>, però no és un moviment fonamental per
@@ -1095,7 +1100,7 @@
     <!-- Finals -->
     <h2 class="w3-container w3-pale-green w3-center title">Finals</h2>
     <div class="w3-container w3-card-4 w3-margin-bottom">
-        <ul>
+        <ul class="icon iconBullseye">
             <li><strong>El <i>Rei</i> i un <i>Peó</i></strong> contra un <i>Rei solitari</i> acaba en la
                 <i>coronació del Peó</i>, sempre que el <i>Rei</i> sigui prou a prop per defensar-ho.
             </li>
@@ -1152,7 +1157,7 @@
         </ul>
         <div class="w3-container w3-card-4 w3-margin-bottom">
             <h4 class="w3-container w3-text-purple subtitled">Indicacions addicionals referents als finals</h4>
-            <ul>
+            <ul class="icon iconSquarePlus">
                 <li><strong>El <i>Rei</i> i un <i>Roc</i></strong> (<i>Torre</i>) vencen
                     un <i>Rei</i> i un <i>Alfil</i> o un <i>Rei</i> i un <i>Cavall</i>.
                 </li>

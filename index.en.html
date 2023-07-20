@@ -305,10 +305,10 @@
 
         <div class="w3-container">
             <h3 class="w3-container w3-pale-yellow w3-center">First impressions</h3>
-            <ul>
+            <ul class="icon iconBullseye">
 				<li>
 					<p>It is a large board with 169 hexes. They come in three different colours, and three bishops are required.</p>
-					<ul>
+					<ul class="icon iconMarkItem">
 				        <li>
 				            <p>The power of the bishop decreases markedly compared to orthodox chess.</p>
 				        </li>
@@ -326,7 +326,7 @@
 				</li>
                 <li>
                     <p>It increases the mobility of the pawns, but, even so, their power decreases compared to orthodox chess.</p>
-					<ul>
+					<ul class="icon iconMarkItem">
 						<li>
 							<p>The loss of pawn power is due to the inefficiency of pawn structures in hexagonal chess.</p>
 						</li>
@@ -506,7 +506,8 @@
                     <a href="en/glossary.html#Roc" class="cescacs" target="_blank">Rook
                     <img src="img/alfaerie/wrook.png" alt="Rook" class="pieceIcon"></a>
                 </h3>
-                <p><em>Orthogonal</em> movement: toward six orthogonal direccions, on <em>files</em>.</p>
+                <p><em>Orthogonal</em> movement: toward six <a href="#Fila" class="cite"><em>orthogonal</em></a>
+                    direccions, on <em>files</em>.</p>
             </li>
             <!-- Bishop -->
             <li class="w3-container w3-card-4 w3-half">
@@ -514,7 +515,8 @@
                     <a href="en/glossary.html#Alfil" class="cescacs" target="_blank">Bishop
                     <img src="img/alfaerie/wbishop.png" alt="Bishop" class="pieceIcon"></a>
                 </h3>
-                <p><em>Diagonal</em> movement: toward six diagonal directions, on <em>lines</em>.</p>
+                <p><em>Diagonal</em> movement: toward six <a href="#Linia" class="cite"><em>diagonal</em></a>
+                    directions, on <em>lines</em>.</p>
                 <p>Colour bound; it's a weak piece in hexagonal chess,
                     remarkably weaker than the knight.</p>
             </li>
@@ -526,11 +528,11 @@
                 </h3>
                 <p>There are two different movements:</p>
                 <ul class="w3-ul">
-                    <li><em>Knight jump</em>, <a href="#Saltcavall" class="cescacs">as described</a>;
+                    <li><a href="#Saltcavall" class="cescacs"><em>Knight jump</em></a>, as described;
                         there are twelve possible ones.</li>
-                    <li>Knight <em>ride</em>, <a href="#Cavalcada" class="cescacs">as described</a>:
+                    <li><a href="#Cavalcada" class="cescacs"><em>Knight ride</em></a>, as described:
                         <ul class="w3-ul w3-border">
-                            <li>Two equal knight jumps are chained;
+                            <li><em>Two equal</em> knight jumps are chained;
                                 There are twelve possible ride moves, one for each simple knight move.</li>
                             <li>The intermediate hex, as for the simple jump move, must be free.</li>
                             <li><em>He cannot capture pieces when moving by riding</em>; the final hex has to be empty.
@@ -552,7 +554,9 @@
                     <a href="en/glossary.html#Pegas" class="cescacs" target="_blank">Pegasus
                     <img src="img/alfaerie/wpegasus.png" alt="Pegasus" class="pieceIcon"></a>
                 </h3>
-                <p>The winged horse can move <em>diagonally</em>, along the <em>lines</em>, or make a <em>knight jump</em>.</p>
+                <p>The winged horse can move <a href="#Linia" class="cite"><em>diagonally</em></a>,
+                    along the <em>lines</em> as a bishop, or make a
+                    <a href="#Saltcavall" class="cescacs"><em>knight jump</em></a>.</p>
                 <p>He can't ride, as the knight ride.</p>
                 <p>He combines the movements of the bishop and the knight (without the knight ride).</p>
                 <aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
@@ -569,7 +573,8 @@
                     <a href="en/glossary.html#Vibria" class="cescacs" target="_blank">Wyvern (Dragon)
                     <img src="img/alfaerie/wdragon.png" alt="Dragon" class="pieceIcon"></a>
                 </h3>
-                <p>The dragon can move <em>orthogonally</em>, along the <em>files</em>, or make a <em>knight jump</em>.</p>
+                <p>The dragon can move <a href="#Fila" class="cite"><em>orthogonally</em></a>, along the <em>files</em>,
+                    or make a <a href="#Saltcavall" class="cescacs"><em>knight jump</em></a>.</p>
                 <p>He can't ride, as the knight ride.</p>
                 <p>He combines the movements of the rook and the knight (without the knight ride).</p>
                 <aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
@@ -585,7 +590,8 @@
                     <a href="en/glossary.html#Dama" class="cescacs" target="_blank">Queen
                     <img src="img/alfaerie/wqueen.png" alt="Queen" class="pieceIcon"></a>
                 </h3>
-                <p>Movement in the six <em>orthogonal</em> directions and in the six <em>diagonals</em>;
+                <p>Movement in the six <a href="#Fila" class="cite"><em>orthogonal</em></a> directions
+                    and in the six <a href="#Linia" class="cite"><em>diagonals</em></a>;
                     move through both <em>files</em> and <em>lines</em>.</p>
                 <p>She combines the movements of the rook and the bishop.</p>
             </li>
@@ -829,7 +835,7 @@
                                         </script>
                                         <div class="w3-bar w3-center">
                                             <button class="w3-button w3-khaki" onclick="enpassant0()"> Ini</button>
-                                            <button class="w3-button w3-khaki" onclick="enpassant1()"> Black move</button>
+                                            <button class="w3-button w3-khaki" onclick="enpassant1()"> Black moves</button>
                                             <button class="w3-button w3-khaki" onclick="enpassant2()"> White captures</button>
                                             <button class="w3-button w3-khaki" onclick="enpassant3()"> End</button>
                                         </div>
@@ -915,7 +921,7 @@
                                         </script>
                                         <div class="w3-bar w3-center">
                                             <button class="w3-button w3-khaki" onclick="scornful0()"> Ini</button>
-                                            <button class="w3-button w3-khaki" onclick="scornful1()"> Black move</button>
+                                            <button class="w3-button w3-khaki" onclick="scornful1()"> Black moves</button>
                                             <button class="w3-button w3-khaki" onclick="scornful2()"> White captures</button>
                                             <button class="w3-button w3-khaki" onclick="scornful3()"> End</button>
                                         </div>
@@ -1111,7 +1117,7 @@
     <!-- Endgames -->
     <h2 class="w3-container w3-pale-green w3-center title">Endgames</h2>
     <div class="w3-container w3-card-4 w3-margin-bottom">
-        <ul>
+        <ul class="icon iconBullseye">
             <li><strong>The <i>King</i> and a <i>Pawn</i></strong> against a <i>lone King</i> ends up
                 <i>promoting the Pawn</i>, provided its <i>King</i> is close enough to defend it.
             </li>
@@ -1172,7 +1178,7 @@
         </ul>
         <div class="w3-container w3-card-4 w3-margin-bottom">
             <h4 class="w3-container w3-text-purple subtitled">Additional information on endings</h4>
-            <ul>
+            <ul class="icon iconSquarePlus">
                 <li><strong>A <i>King</i> and a <i>Rook</i></strong> beat a
                     <i>King</i> and a <i>Bishop</i> or a <i>King</i> and a <i>Knight</i>.
                 </li>

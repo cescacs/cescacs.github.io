@@ -255,13 +255,14 @@ div.gallery img {
   height: auto;
 }
 
+/*
 ul>li, ol>li, dl>dd {
   padding-bottom:8px;
 }
-
 ul>li.nopadding:last-child, ol>li.nopadding:last-child, dl>dd.nopadding:last-child {
   padding-bottom:0;
 }
+*/
 
 ul.icon, dl.icon {
   --icon-size: .8em;

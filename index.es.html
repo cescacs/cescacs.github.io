@@ -298,9 +298,9 @@
 
         <div class="w3-container">
             <h3 class="w3-container w3-pale-yellow w3-center">Primeras impresiones</h3>
-            <ul>
+            <ul class="icon iconBullseye">
 				<li><p>Es un gran tablero con 169 hexcaques. Los hay de tres diferentes colores, y se requieren tres alfiles.</p>
-					<ul>
+					<ul class="icon iconMarkItem">
 				        <li>
 				            <p>La potencia del alfil disminuye notoriamente respecto del ajedrez ortodoxo.</p>
 				        </li>
@@ -317,7 +317,7 @@
 				</li>
                 <li>
                     <p>Aumenta la movilidad de los peones, pero, aún así, su potencia disminuye respecto del ajedrez ortodoxo.</p>
-					<ul>
+					<ul class="icon iconMarkItem">
 						<li>
 							<p>La pérdida de potencia de los peones se debe a la ineficacia de las estructuras de peones en el
 								ajedrez hexagonal.</p>
@@ -497,7 +497,8 @@
                     <a href="es/glossary.html#Roc" class="cescacs" target="_blank">Roque (Torre)
                     <img src="img/alfaerie/wrook.png" alt="Torre" class="pieceIcon"></a>
                 </h3>
-                <p>Movimiento por las seis direcciones <em>ortogonales</em>, por las <em>filas</em>.</p>
+                <p>Movimiento por las seis direcciones <a href="#Fila" class="cite"><em>ortogonales</em></a>,
+                    por las <em>filas</em>.</p>
             </li>
             <!-- Alfil -->
             <li class="w3-container w3-card-4 w3-half">
@@ -505,7 +506,8 @@
                     <a href="es/glossary.html#Alfil" class="cescacs" target="_blank">Alfil
                     <img src="img/alfaerie/wbishop.png" alt="Alfil" class="pieceIcon"></a>
                 </h3>
-                <p>Movimento por las seis direcciones <em>diagonales</em>, por las <em>lineas</em>.</p>
+                <p>Movimento por las seis direcciones <a href="#Linia" class="cite"><em>diagonales</em></a>,
+                    por las <em>lineas</em>.</p>
                 <p>Siempre se mantiene en su color; en el ajedrez hexagonal el alfil es una pieza debil,
                     notablemente más debil que el caballo.</p>
             </li>
@@ -517,16 +519,15 @@
                 </h3>
                 <p>Se distinguen dos movimientos:</p>
                 <ul class="w3-ul">
-                    <li><em>Salto de caballo</em>, <a href="#Saltcavall" class="cescacs">como se ha
+                    <li><a href="#Saltcavall" class="cescacs"><em>Salto de caballo</em></a>, como se ha
                             descrito</a>; hay doce posibles.</li>
-                    <li><em>Cabalgada</em>, <a href="#Cavalcada" class="cescacs">como se ha descrito</a>:
+                    <li><a href="#Cavalcada" class="cescacs"><em>Cabalgada</em></a>, como se ha descrito:
                         <ul class="w3-ul w3-border">
-                            <li>Se encadenan dos saltos de caballo iguales;
+                            <li>Se encadenan <em>dos saltos</em> de caballo <em>iguales</em>;
                                 hay doce movimientos posibles, uno pera cada movimiento de caballo.</li>
                             <li>El hexcaque intermedio para el primer salto ha de estar libre.</li>
                             <li><em>No es pueden capturar piezas</em> cuando se mueve cabalgando; el hexcaque final ha
-                                de
-                                estar libre.</li>
+                                de estar libre.</li>
                         </ul>
                     </li>
                 </ul>
@@ -545,8 +546,9 @@
                     <a href="es/glossary.html#Pegas" class="cescacs" target="_blank">Pegaso
                     <img src="img/alfaerie/wpegasus.png" alt="Pegaso" class="pieceIcon"></a>
                 </h3>
-                <p>El caballo alado puede mover en <em>diagonal</em>, por las <em>líneas</em>,
-                    o hacer un <em>salto de caballo</em>.</p>
+                <p>El caballo alado puede mover en <a href="#Linia" class="cite"><em>diagonal</em></a>,
+                    por las <em>líneas</em> como un alfil, o hacer un
+                    <a href="#Saltcavall" class="cescacs"><em>salto de caballo</em></a>.</p>
                 <p>No puede cabalgar (no tiene movimiento de cabalgada).</p>
                 <p>Combina los movimientos del alfil y el caballo (sin incluir la cabalgada).</p>
                 <aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
@@ -563,7 +565,8 @@
                     <a href="es/glossary.html#Vibria" class="cescacs" target="_blank">Guiverno (Dragón)
                     <img src="img/alfaerie/wdragon.png" alt="Dragón" class="pieceIcon"></a>
                 </h3>
-                <p>El dragón puede mover en <em>ortogonal</em>, por las <em>filas</em>, o hacer un <em>salto de caballo</em>.</p>
+                <p>El dragón puede mover en <a href="#Fila" class="cite"><em>ortogonal</em></a>, por las <em>filas</em>,
+                    o hacer un <a href="#Saltcavall" class="cescacs"><em>salto de caballo</em></a>.</p>
                 <p>No puede cabalgar (no tiene movimiento de cabalgada).</p>
                 <p>Combina los movimientos de la torre y el caballo (sin incluir la cabalgada).</p>
                 <aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
@@ -579,7 +582,8 @@
                     <a href="es/glossary.html#Dama" class="cescacs" target="_blank">Dama
                     <img src="img/alfaerie/wqueen.png" alt="Dama" class="pieceIcon"></a>
                 </h3>
-                <p>Movimiento en las seis direcciones <em>ortogonales</em> y en las seis <em>diagonales</em>;
+                <p>Movimiento en las seis direcciones <a href="#Fila" class="cite"><em>ortogonales</em></a>
+                    y en las seis <a href="#Linia" class="cite"><em>diagonales</em></a>;
                     mueve tanto por las <em>filas</em> como por las <em>lineas</em>.</p>
                 <p>Combina los movimientos de la torre y el alfil.</p>
             </li>
@@ -918,8 +922,8 @@
                                         </script>
                                         <div class="w3-bar w3-center">
                                             <button class="w3-button w3-khaki" onclick="scornful0()"> Ini</button>
-                                            <button class="w3-button w3-khaki" onclick="scornful1()"> Black move</button>
-                                            <button class="w3-button w3-khaki" onclick="scornful2()"> White captures</button>
+                                            <button class="w3-button w3-khaki" onclick="scornful1()"> Negro mueve</button>
+                                            <button class="w3-button w3-khaki" onclick="scornful2()"> Blanco captura</button>
                                             <button class="w3-button w3-khaki" onclick="scornful3()"> End</button>
                                         </div>
                                     </div>
@@ -1112,7 +1116,7 @@
     <!-- Finales -->
     <h2 class="w3-container w3-pale-green w3-center title">Finales</h2>
     <div class="w3-container w3-card-4 w3-margin-bottom">
-        <ul>
+        <ul class="icon iconBullseye">
             <li><strong>El <i>Rey</i> y un <i>Peón</i></strong> contra un <i>Rey solitario</i>
                 acaba <i>coronando el Peón</i>, siempre que el <i>Rey</i> esté suficientemente cerca
                 para defenderlo.
@@ -1169,7 +1173,7 @@
         </ul>
         <div class="w3-container w3-card-4 w3-margin-bottom">
             <h4 class="w3-container w3-text-purple subtitled">Indicaciones adicionales referentes a los finales</h4>
-            <ul>
+            <ul class="icon iconSquarePlus">
                 <li><strong>El <i>Rey</i> y un <i>Roque</i></strong> (<i>Torre</i>) vencen a
                     un <i>Rey</i> y un <i>Alfil</i> o un <i>Rey</i> y un <i>Caballo</i>.
                 </li>
