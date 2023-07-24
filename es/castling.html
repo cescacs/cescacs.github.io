@@ -143,7 +143,8 @@
 		</div>
 		<div style="clear:both;"></div>
 	</header>
-	<main>
+
+<main>
 	<div class="w3-container">
 		<p>En <i class="cescacs">C'escacs</i> el Rey puede realizar ciertos movimientos especiales cuando todavía no ha
 			movido, siempre que no se encuentre amenazado (<a href="glossary.html#Escac" class="cescacs">en jaque</a>).
@@ -180,9 +181,10 @@
 			<i>movimiento del enroque</i> se debe <em>prevenir al contrincante</em>.
 		</p>
 	</div>
-	<h2 class="w3-container w3-pale-green w3-center w3-opacity"><i>Salto del Rey</i></h2>
+
 	<!-- Salto del Rey-->
-	<div class="w3-container">
+	<section id="SaltRei" class="w3-container">
+		<h2 class="w3-container w3-pale-green w3-center w3-opacity"><i>Salto del Rey</i></h2>
 		<p>El caso más sencillo es un movimento de <a href="glossary.html#SaltCavall" class="cescacs">Salto de
 				Caballo</a>
 			que el <i>Rey</i> puede hacer como primer movimiento, siempre que no se encuentre en <i>Jaque</i>.
@@ -270,6 +272,8 @@
 							leap_caption3.textContent = "K-D26";
 						}
 					</script>
+					<p class="note">Después del salto se muestran solo los <i>roques</i> con los que
+						se podría haber hecho el enroque con ese salto.</p>
 				</figcaption>
 			</figure>
 		</div>
@@ -301,10 +305,11 @@
 				en su primer movimiento, siempre que no se encuentre en <i>jaque</i>.
 			</p>
 		</div>
-	</div>
+	</section>
+
 	<!-- ENROC   SIMPLE -->
-	<h2 class="w3-container w3-pale-green w3-center w3-opacity">Enroque simple</h2>
-	<div class="w3-container">
+	<section id="EnrocSimple" class="w3-container">
+		<h2 class="w3-container w3-pale-green w3-center w3-opacity">Enroque simple</h2>
 		<div class="w3-container">
 			<p>Hay cinco posiciones resultado del <i>Salto del Rey</i>, posiciones en las que también se
 				definen los <a href="glossary.html#Enroc" class="cescacs">Enroques</a>, el único Movimento
@@ -848,11 +853,11 @@
 				<i>Dama</i>. En total suman <strong>diecinueve</strong> combinaciones diferentes.
 			</p>
 		</div>
-	</div>
+	</section>
 
 	<!-- ENROQUE   DOBLE -->
-	<h2 class="w3-container w3-pale-green w3-center w3-opacity">Enroque doble</h2>
-	<div class="w3-container">
+	<section id="EnrocDoble" class="w3-container">
+		<h2 class="w3-container w3-pale-green w3-center w3-opacity">Enroque doble</h2>
 		<div class="w3-container">
 			<p>Entre las cinco posiciones que pot alcanzar el <i>Rey</i> con su <i>Salto</i>, solo tres tienen
 				hexcaques ortogonalmente adjacentes alcanzables por ambos <i>Roques</i>: <em>H</em>, <em>F</em>
@@ -1060,7 +1065,8 @@
 				<strong>cinco</strong> diferentes movimientos de <i>enroque doble</i> posibles.
 			</p>
 		</div>
-	</div>
+	</section>
+
 	<div class="w3-container">
 		<h2 class="w3-container w3-pale-green w3-center w3-opacity">Recuento de movimientos del <i>Rey</i> en su
 			posición inicial</h2>

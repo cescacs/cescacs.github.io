@@ -193,17 +193,17 @@
 						</tr>
 					</tfoot>
 				</table>
-				<figcaption class="thumbcaption">En la última fila de la tabla se muestran las letras identificativas
-					alternativas que se pueden usar para algunas piezas.
-					<p>Debajo del nombre de cada pieza se muestra,
-					en una fuente grande, el aspecto de los carácteres Unicode específicos.</p>
-					<aside>Se usan los símbolos del <cite>Shogi</cite> para el
+				<figcaption class="thumbcaption">Debajo del nombre de cada pieza se muestra,
+					en una fuente grande, el aspecto de los carácteres Unicode específicos.
+					<span class="note">Se usan los símbolos del <cite>Shogi</cite> para el
 						<i>elefante</i>, dado que no existen carácteres asignados, pero ya resultan adecuados.
-					</aside>
+					</span>
+					En la última fila de la tabla se muestran las letras identificativas
+					alternativas que se pueden usar para algunas piezas.
 				</figcaption>
 			</figure>
 			<section class="w3-container">
-				<h4>Caracteres Unicode de ajedrez</h4>
+				<h4><span>Caracteres Unicode de ajedrez</span></h4>
 				<p>
 					También existen los caracteres Unicode de ajedrez, que se pueden usar en vez de las letras de
 					identificación en la notación que se denomina <a href="glossary.html#CTL-FAN" class="cescacs">CTL-FAN</a>.
@@ -230,7 +230,7 @@
 						</figcaption>
 					</figure>
 				</div>
-				<div class="w3-container half">
+				<div class="w3-container half" style="padding:0;">
 					<p>Un <strong><a href="glossary.html#Hexcaquer" class="cescacs" target="_blank">tablero de ajedrez
 								hexteselado</a></strong> tiene tres colores. El tablero de
 						<i class="cescacs">C'escacs</i> es un tablero de ajedrez hexagonal hexteselado, y los colores
@@ -321,11 +321,13 @@
 			<section class="w3-container">
 				<h3 class="w3-container w3-pale-yellow w3-center">Identificación de un <i>hexcaque</i>: coordenadas CTL
 				</h3>
-				<div class="w3-panel w3-pale-green">
-					<p>Un <i>hexcaque</i> se identifica de manera única por <strong>la <i>columna</i> y la <i>línea
-							transversal</i></strong> a las que pertenece, <strong>una letra y un número</strong> que
-					se escriben uno a continuación del otro, sin separación.</p>
-				</div>
+				<header>
+					<div class="w3-panel w3-pale-green">
+						<p>Un <i>hexcaque</i> se identifica de manera única por <strong>la <i>columna</i> y la <i>línea
+								transversal</i></strong> a las que pertenece, <strong>una letra y un número</strong> que
+						se escriben uno a continuación del otro, sin separación.</p>
+					</div>
+				</header>
 				<p>Esta manera de nombrar los <i>hexcaques</i>
 					de un <i>tablero hexteselado</i> se denomina <strong><a href="glossary.html#CTL" class="cescacs"
 							target="_blank" title="Column and Transversal Line coordinates">coordenadas
@@ -351,147 +353,326 @@
 					facilitar la lectura de la notación algebraica.
 				</p>
 			</section>
-			<section class="w3-container half">
-				<h3 class="w3-container w3-pale-yellow w3-center">Movimiento ortogonal</h3>
-				<ul>
-					<li>El deplazamiento por la columna incrementa/decrementa en dos el número de línea.</li>
-					<li>Los otros cuatro desplazamientos ortogonales se obtienen incrementando/decrementando
-						la columna, y al mismo tiempo incrementando/decrementando en uno la línea.
-					</li>
-				</ul>
-				<p>Ejemplo, desplazamientos desde el <i>hexcaque central</i>, <strong>F14</strong>:</p>
-				<ul class="exemple">
-					<li><code>F12, F16, E13, E15, G13, G15</code></li>
-				</ul>
-				<p>Nos permiten definir los tres movimientos ortogonales que atraviesan el <i>hexcaque</i>
-					<strong>F14</strong>, y se observa una perfecta continuidad:
-				</p>
-				<ul class="exemple">
-					<li><code>F12-<small>F14</small>-F16</code></li>
-					<li><code>E13-<small>F14</small>-G15</code></li>
-					<li><code>G13-<small>F14</small>-E15</code></li>
-				</ul>
-			</section>
-			<section class="w3-container half">
-				<h3 class="w3-container w3-pale-yellow w3-center">Movimiento diagonal</h3>
-				<ul>
-					<li>El desplazamiento por la línea transversal incrementa/decrementa en dos la columna.</li>
-					<li>Los otros cuatro desplazamientos diagonales se obtienen incrementando/decrementando
-						la columna, y al mismo tiempo incrementando/decrementando en tres la línea.
-					</li>
-				</ul>
-				<p>Ejemplo, desplazamientos desde el <i>hexcaque central</i>, <strong>F14</strong>:</p>
-				<ul class="exemple">
-					<li><code>D14, H14, E11, E17, G11, G17</code></li>
-				</ul>
-				<p>Nos permiten definir los tres movimientos diagonalds que atraviesan el <i>hexcaque</i>
-					<strong>F14</strong>, y se observa una perfecta continuidad:
-				</p>
-				<ul class="exemple">
-					<li><code>D14-<small>F14</small>-H14</code> <small>(columnas pares)</small></li>
-					<li><code>E11-<small>F14</small>-G17</code></li>
-					<li><code>G11-<small>F14</small>-E17</code></li>
-				</ul>
-				<ul class="aclariment">
-					<li>Recordemos que en los desplazamientos diagonales se mantiene el color del <i>hexcaque</i>.</li>
-				</ul>
-			</section>
-			<div class="w3-container half">
-				<aside>
-					<h3 class="w3-container w3-pale-yellow w3-center w3-text-grey">Movimiento del caballo</h3>
-					<p>El <i>movimiento de caballo</i> consiste en la combinación de un <i>movimiento diagonal</i> y uno
-						<i>ortogonal</i>: para cada <i>movimiento diagonal</i> hay dos posibles <i>ortogonales</i>; la
-						combinación se tiene que hacer de forma que si el <i>movimiento diagonal</i> incrementa la
-						columna, el <i>movimiento ortogonal</i> debe incrementarla o mantenerla, y lo mismo para la
-						línea; análogamente si se da un decremento, en vez de un incremento. No importa el orden,
-						se haga primero el movimiento diagonal o el ortogonal.
-					<p>
-					<p>Es suficiente sumar los desplazamientos de ambos movimientos para obtener el resultado. Los doce
-						movimientos desde <strong>F14</strong>:
-					</p>
-					<ul class="exemple">
-						<li><code>C13, C15, I13, I15, E9, D10, E19, D18, G9, H10, G19, H18</code></li>
-					</ul>
-					<ul class="aclaració" style="margin-top:1em;">
-						<li>Se pueden calcular partiendo de los <i>movimientos diagonales</i>, y aplicar uno
-							<i>ortogonal</i>; es la manera más frecuente:
-							<table class="w3-table w3-bordered w3-responsive w3-centered">
-								<tr>
-									<td colspan="2"><code>D14</code></td>
-									<td colspan="2"><code>H14</code></td>
-									<td colspan="2"><code>E11</code></td>
-									<td colspan="2"><code>E17</code></td>
-									<td colspan="2"><code>G11</code></td>
-									<td colspan="2"><code>G17</code></td>
-								</tr>
-								<tr>
-									<td><code>C13</code></td>
-									<td><code>C15</code></td>
-									<td><code>I13</code></td>
-									<td><code>I15</code></td>
-									<td><code>E9</code></td>
-									<td><code>D10</code></td>
-									<td><code>E19</code></td>
-									<td><code>D18</code></td>
-									<td><code>G9</code></td>
-									<td><code>H10</code></td>
-									<td><code>G19</code></td>
-									<td><code>H18</code></td>
-								</tr>
-							</table>
+
+			<!-- Movimientos -->
+			<section>
+				<h3 class="w3-container w3-pale-yellow w3-center">Movimientos</h3>
+				<header class="w3-panel w3-pale-green">
+					<a href="../und/coordenates.html" class="w3-tag w3-light-grey w3-border cite"
+						target="_blank">Visualitzación de los movimentos en el <i>tablero hexteselado</i>
+						de <i class="cescacs">C'escacs</i></a>
+				</header>
+
+				<!-- Movimiento ortogonal -->
+				<section class="w3-container half">
+					<h4 class="w3-container w3-pale-yellow w3-center">
+						<span>Movimiento ortogonal</span>
+					</h4>
+					<ul>
+						<li>El deplazamiento por la columna incrementa/decrementa en dos el número de línea.</li>
+						<li>Los otros cuatro desplazamientos ortogonales se obtienen incrementando/decrementando
+							en uno la columna, y al mismo tiempo incrementando/decrementando en uno la línea.
 						</li>
 					</ul>
-					<ul class="aclaració" style="margin-top:1em;">
-						<li>Pero también se pueden calcular partiendo de los <i>movimientos ortogonales</i>, y
-							aplicar uno <i>diagonal</i>; obtenemos el mismo resultado, pero en diferente orden:
-							<table class="w3-table w3-bordered w3-responsive w3-centered">
-								<tr>
-									<td colspan="2"><code>F12</code></td>
-									<td colspan="2"><code>F16</code></td>
-									<td colspan="2"><code>E13</code></td>
-									<td colspan="2"><code>E15</code></td>
-									<td colspan="2"><code>G13</code></td>
-									<td colspan="2"><code>G15</code></td>
-								</tr>
-								<tr>
-									<td><code>E9</code></td>
-									<td><code>G9</code></td>
-									<td><code>E19</code></td>
-									<td><code>G19</code></td>
-									<td><code>C13</code></td>
-									<td><code>D10</code></td>
-									<td><code>C15</code></td>
-									<td><code>D18</code></td>
-									<td><code>H10</code></td>
-									<td><code>I13</code></td>
-									<td><code>H18</code></td>
-									<td><code>I15</code></td>
-								</tr>
-							</table>
+					<p>Ejemplo, desplazamientos desde el <i>hexcaque central</i>, <strong>F14</strong>:</p>
+					<ul class="exemple">
+						<li><code>F12, F16, E13, E15, G13, G15</code></li>
 					</ul>
-				</aside>
-			</div>
-			<div class="w3-container half">
-				<aside>
-					<h3 class="w3-container w3-pale-yellow w3-center w3-text-grey">Cabalgada</h3>
-					<p>En la <i>cabalgada</i>, los doce <i>saltos de caballo</i> partiendo de <strong>F14</strong>:
+					<p>Nos permiten definir los tres movimientos ortogonales que atraviesan el <i>hexcaque</i>
+						<strong>F14</strong>, y se observa una perfecta continuidad:
 					</p>
 					<ul class="exemple">
-						<li><code>C13, C15, I13, I15, E9, D10, E19, D18, G9, H10, G19, H18</code></li>
+						<li><code>F12-<small>F14</small>-F16</code></li>
+						<li><code>E13-<small>F14</small>-G15</code></li>
+						<li><code>G13-<small>F14</small>-E15</code></li>
 					</ul>
-					<p>Dan lugar a doce diferentes cabalgadas, aplicando otro <i>salto de caballo</i> exactamente con el
-						mismo desplazamiento:
+				</section>
+
+				<!-- Movimiento diagonal -->
+				<section class="w3-container half">
+					<h4 class="w3-container w3-pale-yellow w3-center">
+						<span>Movimiento diagonal</span>
+					</h4>
+					<ul>
+						<li>El desplazamiento por la línea transversal incrementa/decrementa en dos la columna.</li>
+						<li>Los otros cuatro desplazamientos diagonales se obtienen incrementando/decrementando
+							en uno la columna, y al mismo tiempo incrementando/decrementando en tres la línea.
+						</li>
+					</ul>
+					<p>Ejemplo, desplazamientos desde el <i>hexcaque central</i>, <strong>F14</strong>:</p>
+					<ul class="exemple">
+						<li><code>D14, H14, E11, E17, G11, G17</code></li>
+					</ul>
+					<p>Nos permiten definir los tres movimientos diagonalds que atraviesan el <i>hexcaque</i>
+						<strong>F14</strong>, y se observa una perfecta continuidad:
 					</p>
 					<ul class="exemple">
-						<li><code>T12, T16, X12, X16, D4, B6, D24, B22, H4, K6, H24, K22</code></li>
+						<li><code>D14-<small>F14</small>-H14</code> <small>(columnas pares)</small></li>
+						<li><code>E11-<small>F14</small>-G17</code></li>
+						<li><code>G11-<small>F14</small>-E17</code></li>
 					</ul>
-				</aside>
-			</div>
-			<footer>
-				<a href="../und/coordenates.html" class="w3-tag w3-light-grey w3-border cite" target="_blank">Visualitzación de los movimentos
-					en
-					el <i>tablero hexteselado</i> de <i class="cescacs">C'escacs</i></a>
-			</footer>
+					<ul class="aclariment">
+						<li>Recordemos que en los desplazamientos diagonales se mantiene el color del <i>hexcaque</i>.</li>
+					</ul>
+				</section>
+
+				<!-- Movimiento del caballo -->
+				<div class="w3-container half">
+					<aside>
+						<h4 class="w3-container w3-pale-yellow w3-center w3-text-grey">
+							<span>Movimiento del caballo</span>
+						</h4>
+						<p>El <i>movimiento de caballo</i> consiste en la combinación de un <i>movimiento diagonal</i> y uno
+							<i>ortogonal</i>: para cada <i>movimiento diagonal</i> hay dos posibles <i>ortogonales</i>; la
+							combinación se tiene que hacer de forma que si el <i>movimiento diagonal</i> incrementa la
+							columna, el <i>movimiento ortogonal</i> debe incrementarla o mantenerla, y lo mismo para la
+							línea; análogamente si se da un decremento, en vez de un incremento. No importa el orden,
+							se haga primero el movimiento diagonal o el ortogonal.
+							Es suficiente sumar el desplazamiento ortogonal y el diagonal para obtener el resultado.
+						<p>
+						<p>Por ejemplo, partiendo de <strong>F14</strong>, los doce movimientos:
+						</p>
+						<ul class="exemple">
+							<li>
+								<table class="w3-table w3-bordered w3-responsive w3-centered w3-small">
+									<tr>
+										<td><code>C13</code></td>
+										<td><code>C15</code></td>
+										<td><code>I13</code></td>
+										<td><code>I15</code></td>
+										<td><code>E9</code></td>
+										<td><code>D10</code></td>
+										<td><code>E19</code></td>
+										<td><code>D18</code></td>
+										<td><code>G9</code></td>
+										<td><code>H10</code></td>
+										<td><code>G19</code></td>
+										<td><code>H18</code></td>
+									</tr>
+								</table>
+							</li>
+						</ul>
+						<ul class="aclaració" style="margin-top:1em;">
+							<li>Se pueden calcular partiendo de los <i>movimientos diagonales</i>, y aplicar uno
+								<i>ortogonal</i>; es la manera más frecuente:
+								<ul class="exemple">
+									<li>
+										<table class="w3-table w3-bordered w3-responsive w3-centered w3-small">
+									<tr><td colspan="12" style="font-weight:bold;">F14</td></tr>
+									<tr>
+										<td colspan="2" class="w3-amber w3-opacity"><code>D14</code></td>
+										<td colspan="2" class="w3-amber w3-opacity"><code>H14</code></td>
+										<td colspan="2" class="w3-amber w3-opacity"><code>E11</code></td>
+										<td colspan="2" class="w3-amber w3-opacity"><code>E17</code></td>
+										<td colspan="2" class="w3-amber w3-opacity"><code>G11</code></td>
+										<td colspan="2" class="w3-amber w3-opacity"><code>G17</code></td>
+									</tr>
+									<tr>
+										<td style="font-weight:bold;"><code>C13</code></td>
+										<td style="font-weight:bold;"><code>C15</code></td>
+										<td style="font-weight:bold;"><code>I13</code></td>
+										<td style="font-weight:bold;"><code>I15</code></td>
+										<td style="font-weight:bold;"><code>E9</code></td>
+										<td style="font-weight:bold;"><code>D10</code></td>
+										<td style="font-weight:bold;"><code>E19</code></td>
+										<td style="font-weight:bold;"><code>D18</code></td>
+										<td style="font-weight:bold;"><code>G9</code></td>
+										<td style="font-weight:bold;"><code>H10</code></td>
+										<td style="font-weight:bold;"><code>G19</code></td>
+										<td style="font-weight:bold;"><code>H18</code></td>
+									</tr>
+										</table>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="aclaració" style="margin-top:1em;">
+							<li>Pero también se pueden calcular partiendo de los <i>movimientos ortogonales</i>, y
+								aplicar uno <i>diagonal</i>; obtenemos el mismo resultado, pero en diferente orden:
+								<ul class="exemple">
+									<li>
+										<table class="w3-table w3-bordered w3-responsive w3-centered w3-small">
+									<tr><td colspan="12" style="font-weight:bold;">F14</td></tr>
+									<tr>
+										<td colspan="2" class="w3-amber w3-opacity"><code>F12</code></td>
+										<td colspan="2" class="w3-amber w3-opacity"><code>F16</code></td>
+										<td colspan="2" class="w3-amber w3-opacity"><code>E13</code></td>
+										<td colspan="2" class="w3-amber w3-opacity"><code>E15</code></td>
+										<td colspan="2" class="w3-amber w3-opacity"><code>G13</code></td>
+										<td colspan="2" class="w3-amber w3-opacity"><code>G15</code></td>
+									</tr>
+									<tr>
+										<td style="font-weight:bold;"><code>E9</code></td>
+										<td style="font-weight:bold;"><code>G9</code></td>
+										<td style="font-weight:bold;"><code>E19</code></td>
+										<td style="font-weight:bold;"><code>G19</code></td>
+										<td style="font-weight:bold;"><code>C13</code></td>
+										<td style="font-weight:bold;"><code>D10</code></td>
+										<td style="font-weight:bold;"><code>C15</code></td>
+										<td style="font-weight:bold;"><code>D18</code></td>
+										<td style="font-weight:bold;"><code>H10</code></td>
+										<td style="font-weight:bold;"><code>I13</code></td>
+										<td style="font-weight:bold;"><code>H18</code></td>
+										<td style="font-weight:bold;"><code>I15</code></td>
+									</tr>
+										</table>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<aside style="border:aquamarine solid 1px">
+							<p class="note">Observar que las posiciones intermedias, marcadas en ambar,
+								se muestran únicamente como parte del cálculo del salto.
+							</p>
+						</aside>
+					</aside>
+				</div>
+
+				<!-- Cabalgada -->
+				<div class="w3-container half">
+					<aside>
+						<h4 class="w3-container w3-pale-yellow w3-center w3-text-grey">
+							<span>Cabalgada</span>
+						</h4>
+						<p>En la <i>cabalgada</i>, los doce <i>saltos de caballo</i> dan lugar a doce diferentes
+							cabalgadas, aplicando otro <i>salto de caballo</i> exactamente con el mismo
+							desplazamiento.
+						</p>
+						<p>Por ejemplo, partiendo de <strong>F14</strong>, los doce movimientos:
+						</p>
+						<ul class="exemple">
+							<li>
+								<table class="w3-table w3-bordered w3-responsive w3-centered w3-small">
+									<tr><td colspan="12" style="font-weight:bold;">F14</td></tr>
+									<tr>
+										<td colspan="2" class="w3-amber w3-opacity"><code>D14</code></td>
+										<td colspan="2" class="w3-amber w3-opacity"><code>H14</code></td>
+										<td colspan="2" class="w3-amber w3-opacity"><code>E11</code></td>
+										<td colspan="2" class="w3-amber w3-opacity"><code>E17</code></td>
+										<td colspan="2" class="w3-amber w3-opacity"><code>G11</code></td>
+										<td colspan="2" class="w3-amber w3-opacity"><code>G17</code></td>
+									</tr>
+									<tr>
+										<td class="w3-text-red"><code>C13</code></td>
+										<td class="w3-text-red"><code>C15</code></td>
+										<td class="w3-text-red"><code>I13</code></td>
+										<td class="w3-text-red"><code>I15</code></td>
+										<td class="w3-text-red"><code>E9</code></td>
+										<td class="w3-text-red"><code>D10</code></td>
+										<td class="w3-text-red"><code>E19</code></td>
+										<td class="w3-text-red"><code>D18</code></td>
+										<td class="w3-text-red"><code>G9</code></td>
+										<td class="w3-text-red"><code>H10</code></td>
+										<td class="w3-text-red"><code>G19</code></td>
+										<td class="w3-text-red"><code>H18</code></td>
+									</tr>
+									<tr>
+										<td class="w3-amber w3-opacity"><code>A13</code></td>
+										<td class="w3-amber w3-opacity"><code>A15</code></td>
+										<td class="w3-amber w3-opacity"><code>L13</code></td>
+										<td class="w3-amber w3-opacity"><code>L15</code></td>
+										<td class="w3-amber w3-opacity"><code>D6</code></td>
+										<td class="w3-amber w3-opacity"><code>C7</code></td>
+										<td class="w3-amber w3-opacity"><code>D22</code></td>
+										<td class="w3-amber w3-opacity"><code>C21</code></td>
+										<td class="w3-amber w3-opacity"><code>H6</code></td>
+										<td class="w3-amber w3-opacity"><code>I7</code></td>
+										<td class="w3-amber w3-opacity"><code>H22</code></td>
+										<td class="w3-amber w3-opacity"><code>I21</code></td>
+									</tr>
+									<tr>
+										<td style="font-weight:bold;"><code>T12</code></td>
+										<td style="font-weight:bold;"><code>T16</code></td>
+										<td style="font-weight:bold;"><code>X12</code></td>
+										<td style="font-weight:bold;"><code>X16</code></td>
+										<td style="font-weight:bold;"><code>D4</code></td>
+										<td style="font-weight:bold;"><code>B6</code></td>
+										<td style="font-weight:bold;"><code>D24</code></td>
+										<td style="font-weight:bold;"><code>B22</code></td>
+										<td style="font-weight:bold;"><code>H4</code></td>
+										<td style="font-weight:bold;"><code>K6</code></td>
+										<td style="font-weight:bold;"><code>H24</code></td>
+										<td style="font-weight:bold;"><code>K22</code></td>
+									</tr>
+								</table>
+							</li>
+						</ul>
+
+						<p>O bien haciendo el cálculo alternativo, sumando primero el
+							movimiento ortogonal y después el diagonal, obtendremos los mismos
+							resultados, aunque en diferente orden.
+						</p>
+						<p>Por ejemplo, de nuevo partiendo de <strong>F14</strong>, obtendremos
+							idéntico resultado al obtenido anteriormente:
+						</p>
+						<ul class="exemple">
+							<li>
+								<table class="w3-table w3-bordered w3-responsive w3-centered w3-small">
+									<tr><td colspan="12" style="font-weight:bold;">F14</td></tr>
+									<tr>
+										<td colspan="2" class="w3-amber w3-opacity"><code>F12</code></td>
+										<td colspan="2" class="w3-amber w3-opacity"><code>F16</code></td>
+										<td colspan="2" class="w3-amber w3-opacity"><code>E13</code></td>
+										<td colspan="2" class="w3-amber w3-opacity"><code>E15</code></td>
+										<td colspan="2" class="w3-amber w3-opacity"><code>G13</code></td>
+										<td colspan="2" class="w3-amber w3-opacity"><code>G15</code></td>
+									</tr>
+									<tr>
+										<td class="w3-text-red"><code>E9</code></td>
+										<td class="w3-text-red"><code>G9</code></td>
+										<td class="w3-text-red"><code>E19</code></td>
+										<td class="w3-text-red"><code>G19</code></td>
+										<td class="w3-text-red"><code>C13</code></td>
+										<td class="w3-text-red"><code>D10</code></td>
+										<td class="w3-text-red"><code>C15</code></td>
+										<td class="w3-text-red"><code>D18</code></td>
+										<td class="w3-text-red"><code>H10</code></td>
+										<td class="w3-text-red"><code>I13</code></td>
+										<td class="w3-text-red"><code>H18</code></td>
+										<td class="w3-text-red"><code>I15</code></td>
+									</tr>
+									<tr>
+										<td class="w3-amber w3-opacity"><code>E7</code></td>
+										<td class="w3-amber w3-opacity"><code>G7</code></td>
+										<td class="w3-amber w3-opacity"><code>E21</code></td>
+										<td class="w3-amber w3-opacity"><code>G21</code></td>
+										<td class="w3-amber w3-opacity"><code>B12</code></td>
+										<td class="w3-amber w3-opacity"><code>C9</code></td>
+										<td class="w3-amber w3-opacity"><code>B16</code></td>
+										<td class="w3-amber w3-opacity"><code>C19</code></td>
+										<td class="w3-amber w3-opacity"><code>I9</code></td>
+										<td class="w3-amber w3-opacity"><code>K12</code></td>
+										<td class="w3-amber w3-opacity"><code>I19</code></td>
+										<td class="w3-amber w3-opacity"><code>K16</code></td>
+									</tr>
+									<tr>
+										<td style="font-weight:bold;"><code>D4</code></td>
+										<td style="font-weight:bold;"><code>H4</code></td>
+										<td style="font-weight:bold;"><code>D24</code></td>
+										<td style="font-weight:bold;"><code>H24</code></td>
+										<td style="font-weight:bold;"><code>T12</code></td>
+										<td style="font-weight:bold;"><code>B6</code></td>
+										<td style="font-weight:bold;"><code>T16</code></td>
+										<td style="font-weight:bold;"><code>B22</code></td>
+										<td style="font-weight:bold;"><code>K6</code></td>
+										<td style="font-weight:bold;"><code>X12</code></td>
+										<td style="font-weight:bold;"><code>K22</code></td>
+										<td style="font-weight:bold;"><code>X16</code></td>
+									</tr>
+								</table>
+							</li>
+						</ul>
+						<aside style="border:aquamarine solid 1px">
+							<p class="note">Observar que las posiciones intermedias, marcadas en ambar,
+								se muestran únicamente como parte del cálculo del salto, pero, para
+								ser posible el movimiento, la posición del salto intermedio debe
+								encontrarse libre, de igual manera que la posición de destino.
+							</p>
+						</aside>
+					</aside>
+				</div>
+
+			</section>
 		</section>
 		<section id="Notacio" class="w3-container">
 			<h2 class="w3-container w3-pale-green w3-center">Notación algebraica: CTL-AN</h2>
@@ -509,7 +690,7 @@
 			</p>
 			<section id="Notacio-Moviment" class="w3-container half">
 				<h3 class="w3-container w3-pale-yellow w3-center">Notación de un movimiento</h3>
-				<ul>
+				<ol>
 					<li>El primer caracter indica el <strong>tipo de pieza</strong> que mueve, la
 						<strong><a href="#LletraIdentificativa" class="cescacs">letra de identificación de la
 								pieza</a></strong>, excepto en el caso de ser un peón, que se omite.
@@ -547,13 +728,26 @@
 							</li>
 						</ul>
 					</li>
-					<li>Si es una <strong>captura</strong>, el <i>hexcaque de destino</i> se prefija con el carácter de
-						la letra identificativa que indica el tipo de <strong>pieza que se captura</strong>, excepto en
+					<li>Nada, si es un movimiento ordinario, pero si se trata de una <strong>captura</strong>, el
+						<i>hexcaque de destino</i> se prefija con el carácter de la letra identificativa que indica
+						el tipo de <strong>pieza que se captura</strong>, excepto en
 						caso de ser un <i>peón</i>, que no se indica la pieza capturada.
 						<ul class="aclariment">
 							<li>La pieza indicada se encuentra en el <i>hexcaque de destino</i>; en la <i>captura al
-									paso</i> no
-								se indica la pieza, porque es un <i>peón</i>.</li>
+									paso</i> no se indica la pieza, ni en la <i>captura del peón esquivo</i>, porque es
+								un <i>peón</i>, excepto en el muy extraño caso de <i>capturar al paso</i> un <i>peón</i>,
+								o capturar un <i>peón esquivo</i>, en su promoción, caso en que se captura la pieza
+								promocionada, y debe ser indicada.</li>
+							<li>Este extraño caso para la <i>captura al paso</i> solo puede suceder en las columnas de
+								los flancos: <q>T</q>, <q>A</q>, <q>L</q> y <q>X</q>.</li>
+							<li>También el caso para la <i>captura del peón esquivo</i> se limita a los flancos:
+								<ul class="w3-ul">
+									<li>La promoción en las columnas <q>T</q> o <q>A</q>, con un <i>movimiento esquivo</i>
+										desde la columna <q>A</q> o <q>B</q> respectivamente.</li>
+									<li>La promoción en las columnas <q>L</q> o <q>X</q>, usando un <i>movimiento esquivo</i>
+										desde la columna <q>K</q> o <q>L</q> respectivamente.</li>
+								</ul>
+							</li>
 						</ul>
 					</li>
 					<li>Las <strong><i>coordenadas CTL</i> del <i>hexcaque de destino</i></strong>.
@@ -574,11 +768,11 @@
 							</li>
 						</ul>
 					</li>
-				</ul>
+				</ol>
 			</section>
 			<section id="Notacio-Excepcions" class="w3-container half">
 				<h3 class="w3-container w3-pale-yellow w3-center">Excepciones en la notación de movimientos</h3>
-				<ol>
+				<ol style="list-style-type:upper-alpha;">
 					<li>
 						La <strong>notación específica para los <a href="glossary.html#Enroc" class="cescacs"
 								target="_blank">enroques</a></strong>, con el prefijo
@@ -595,11 +789,12 @@
 						<aside>Los prefijos <q><i class="cescacs">KRK</i></q>, <q><i class="cescacs">KRD</i></q> y
 							<q><i class="cescacs">KRR</i></q> pueden cambiar en el
 							<a href="#CTL-PGN" class="cescacs">formato de intercambio CTL-PGN</a>, si se usa la etiqueta
-							[Redefine "T@R"], quedando, respectivamente: <q><i class="cescacs">KTK</i></q>,
-							<q><i class="cescacs">KTD</i></q> y <q><i class="cescacs">KTT</i></q>.
+							<cite><code class="exemple">[Redefine "T@R"]</code></cite>, quedando, respectivamente:
+							<q><i class="cescacs">KTK</i></q>, <q><i class="cescacs">KTD</i></q>
+							y <q><i class="cescacs">KTT</i></q>.
 						</aside>
 					</li>
-					<li><strong>Notación específica por la promoción de un <a href="glossary.html#Peoenesperapromocio"
+					<li>La <strong>notación específica para la promoción de un <a href="glossary.html#Peoenesperapromocio"
 								class="cescacs" target="_blank">peón en espera de promoción</a></strong>, un caso
 						específico y muy poco frecuente de <a href="glossary.html#MovimentForçat" class="cescacs"
 							target="_blank">movimiento forzado</a>. La anomalía de este caso es que se escribe empezando
@@ -612,32 +807,44 @@
 				<h3 class="w3-container w3-pale-yellow w3-center">Indicación de jaque</h3>
 				<p>Como <strong>parte de la notación del movimiento</strong>, sin separación, se añade un indicador si
 					se amenaza el <i>Rey</i> del oponente (<i>jaque</i>); también se puede dar en las dos excepciones a
-					las notaciones de los movimientos, pues es posible en <i class="cescacs">C'escacs</i> hacer
-					<i>jaque</i> con un movimiento de enroque:
+					las notaciones de los movimientos, pues es posible hacer <i>jaque</i> con un movimiento de enroque:
 				</p>
-				<ul>
+				<ul class="w3-ul">
 					<li><strong><code style="font-size:larger;">+</code></strong>
-						<small><a href="glossary.html#Escac" class="cescacs" target="_blank"><i>Jaque</i></a>.</small>
+						<small><a href="glossary.html#Escac" class="cescacs"
+							target="_blank"><i>Jaque</i></a>.</small>
 						<ul class="aclariment">
+							<li><strong><code style="font-size:larger;">+∞</code></strong>
+								<small><i>Jaque a distancia</i>, desde un hexcaque no adyacente ortogonal
+									o diagonal a la posición del <i>Rey</i>. El símbolo es opcionalmente
+									alternativo al indicador de jaque para agregar información.</small>
+							</li>
 							<li><strong><code style="font-size:larger;">+^</code></strong>
-								<small><a href="glossary.html#EscacContacte" class="cescacs" target="_blank"><i>Jaque
-										inmediato</i> o <i>con contacto</i></a>, desde un hexcaque adyacente ortogonalmente
-									o diagonalmente, o bien a salto de caballo;
-									El símbolo es opcionalmente alternativo al indicador de <i>jaque</i> para añadir información.
-									Indica que se tiene que mover el <i>Rey</i> o capturar la pieza que amenaza.</small>
+								<small><a href="glossary.html#EscacContigu" class="cescacs"
+										target="_blank"><i>Jaque inmediato</i> o <i>con contacto</i></a>,
+									desde un hexcaque
+									adyacente ortogonalmente o diagonalmente, o bien a salto de caballo.
+									El símbolo es opcionalmente alternativo al indicador de <i>jaque</i>
+									para añadir información. Indica que se tiene que mover el <i>Rey</i>
+									o capturar la pieza que amenaza.</small>
 							</li>
 							<li><strong><code style="font-size:larger;">++</code></strong>
-								<small><a href="glossary.html#EscacDoble" class="cescacs" target="_blank"><i>Jaque
-											doble</i></a>; opcionalmente alternativo al indicador de <i>jaque</i> para
-									agregar información.</small>
+								<small><a href="glossary.html#EscacDoble" class="cescacs"
+										target="_blank"><i>Jaque doble</i></a>. El símbolo es opcionalmente
+									alternativo al indicador de <i>jaque</i> para agregar información.
+									Indica que necesariamente se tiene que mover el Rey</small>
 							</li>
 						</ul>
 						<aside>
-							<small>Los indicadores <strong><code style="font-size:larger;">+^</code></strong> y
-								<strong><code style="font-size:larger;">++</code></strong> son progresivamente peores
-								situaciones de jaque, puesto que en el <i>jaque con contacto</i> o <i>inmediato</i>
-								existe la alternativa de capturar la pieza que amenaza, pero en un <i>jaque doble</i>
-								ya solo queda la alternativa de mover el <i>Rey</i>.</small>
+							<small>Los indicadores <strong><code style="font-size:larger;">+∞</code></strong>,
+								<strong><code style="font-size:larger;">+^</code></strong> y
+								<strong><code style="font-size:larger;">++</code></strong> son progresivamente
+								peores situaciones de jaque, puesto que en el <i>jaque a distancia</i> existe
+								la opción de cubrirse con otra pieza o capturar la pieza que amenaza, en el
+								<i>jaque con contacto</i> o <i>inmediato</i> no hay opción para cubrirse, pero
+								aún existe la alternativa de capturar la pieza que amenaza,
+								pero en un <i>jaque doble</i> ya solo queda la alternativa de mover el
+								<i>Rey</i>.</small>
 						</aside>
 					</li>
 					<li><strong><code style="font-size:larger;">#</code></strong>
@@ -646,79 +853,83 @@
 					</li>
 				</ul>
 			</section>
-			<section id="Valoracio" class="w3-container half">
-				<h3 class="w3-container w3-pale-yellow w3-center">Valoración del movimiento</h3>
-				<p>Después de cada movimiento, separado con un espacio, se puede añadir una <strong>valoración</strong>,
-					excepto detrás un último movimiento que provoca el <i>jaque mate</i>, que se entiende no requiere
-					valoración:
-				</p>
-				<ul>
-					<li><strong><code>?</code></strong> <small>Movimiento malo; equivalente <i>NAG</i>:
-							<strong>$2</strong>.</small>
-					</li>
-					<li><strong><code>??</code></strong> <small>Movimiento muy malo (grave error);
-							equivalente <i>NAG</i>: <strong>$4</strong>.</small>
-					</li>
-					<li><strong><code>?!</code></strong> <small>Movimiento dudoso, cuestionable; equivalente <i>NAG</i>:
-							<strong>$6</strong>.</small>
-					</li>
-					<li><strong><code>!</code></strong> <small>Movimiento bueno; equivalente <i>NAG</i>:
-							<strong>$1</strong>.</small>
-					</li>
-					<li><strong><code>!!</code></strong> <small>Movimiento excepcional; equivalente <i>NAG</i>:
-							<strong>$3</strong>.</small>
-					</li>
-					<li><strong><code>!?</code></strong> <small>Movimiento interesante, sorprendente; equivalente
-							<i>NAG</i>: <strong>$5</strong>.</small>
-					</li>
-					<li><strong><code>◇</code></strong> <small>(U+25C7, White Diamond) Movimiento forzado;
-							única alternativa; equivalente <i>NAG</i>: <strong>$7</strong>.</small>
-					</li>
-				</ul>
-				<aside>Se usa el rombo (◇ diamond) en vez del cuadrado, porque el cuadrado a menudo lo usan los
-					ordenadores para indicar un caracter desconocido.
-				</aside>
-			</section>
-			<section id="Indicadors-Partida" class="w3-container half">
-				<h3 class="w3-container w3-pale-yellow w3-center">Indicador referente a la partida</h3>
-				<p>Finalmente, en un movimiento puede incorporar un indicador en lo referente a la partida. Este
-					indicador se separa del movimiento con un espacio, pero se junta con la valoración, si la hay:
-				</p>
-				<ul>
-					<li><strong><code>(=)</code></strong> <small>El jugador ofrece tablas (solo se puede hacer después
-							de mover).</small>
-					</li>
-					<li><strong><code>:</code></strong> <small>(dos puntos) Último movimiento; final de la
-							partida o punto donde se ha interrumpido.</small>
-						<ul class="aclariment">
-							<li><small>Es <strong>obligatorio</strong>, excepto en la finalización por jaque mate, que
-									se finaliza con <code>#</code></small>.
-							</li>
-						</ul>
-					</li>
-					<li><strong><code>(=):</code></strong> <small>Combina ambos símbolos: el jugador ofrece tablas, y
-							son aceptadas.</small>
-					</li>
-				</ul>
-				<p><strong>Ejemplos</strong>, combinados con valoración del movimiento::
-				</p>
-				<div class="w3-light-grey">
-					<ul class="exemple">
-						<li><strong><code> ?!(=):</code></strong> <small>Combina valoración de movimiento dudoso, y el
-								jugador ofrece tablas, que se aceptan.</small>
+			<div class="w3-container" style="padding:0;">
+				<section id="Valoracio" class="w3-container half">
+					<h3 class="w3-container w3-pale-yellow w3-center">Valoración del movimiento</h3>
+					<p>Después de cada movimiento, separado con un espacio, se puede añadir una <strong>valoración</strong>,
+						excepto detrás un último movimiento que provoca el <i>jaque mate</i>, que se entiende no requiere
+						valoración:
+					</p>
+					<ul class="w3-ul">
+						<li><strong><code>?</code></strong> <small>Movimiento malo; equivalente <i>NAG</i>:
+								<strong>$2</strong>.</small>
 						</li>
-						<li><strong><code> ◇(=):</code></strong> <small>Combina valoración de movimiento forzado, y el
-								jugador ofrece tablas, que se aceptan.</small>
+						<li><strong><code>??</code></strong> <small>Movimiento muy malo (grave error);
+								equivalente <i>NAG</i>: <strong>$4</strong>.</small>
 						</li>
-						<li><strong><code> (=)</code></strong> <small>Ofrece tablas. Si no hay valoración del
-								movimiento, aparece detrás de un espacio; si no lo sigue el carácter de dos puntos
-								(<q><code>:</code></q>), significa que no se han aceptado las tablas y prosiguen los
-								movimientos. También podría acabar en dos puntos pero no aceptarse las tablas,
-								si la partida se interrumpe en este punto; hay que leer el indicador final de resultado.</small>
+						<li><strong><code>?!</code></strong> <small>Movimiento dudoso, cuestionable; equivalente <i>NAG</i>:
+								<strong>$6</strong>.</small>
+						</li>
+						<li><strong><code>!</code></strong> <small>Movimiento bueno; equivalente <i>NAG</i>:
+								<strong>$1</strong>.</small>
+						</li>
+						<li><strong><code>!!</code></strong> <small>Movimiento excepcional; equivalente <i>NAG</i>:
+								<strong>$3</strong>.</small>
+						</li>
+						<li><strong><code>!?</code></strong> <small>Movimiento interesante, sorprendente; equivalente
+								<i>NAG</i>: <strong>$5</strong>.</small>
+						</li>
+						<li><strong><code>◇</code></strong> <small>(U+25C7, White Diamond) Movimiento forzado;
+								única alternativa; equivalente <i>NAG</i>: <strong>$7</strong>.</small>
 						</li>
 					</ul>
-				</div>
-			</section>
+					<aside>Se usa el rombo (◇ diamond) en vez del cuadrado, porque el cuadrado a menudo lo usan los
+						ordenadores para indicar un caracter desconocido.
+					</aside>
+				</section>
+				<section id="Indicadors-Partida" class="w3-container half">
+					<h3 class="w3-container w3-pale-yellow w3-center">Indicador referente a la partida</h3>
+					<p>Finalmente, en un movimiento puede incorporar un indicador en lo referente a la partida. Este
+						indicador se separa del movimiento con un espacio, pero se junta con la valoración, si la hay:
+					</p>
+					<ul class="w3-ul">
+						<li><strong><code>(=)</code></strong> <small>El jugador ofrece tablas (solo se puede hacer
+							después de mover).</small>
+						</li>
+						<li><strong><code>:</code></strong> <small>(dos puntos) Último movimiento; final de la
+								partida o punto donde se ha interrumpido.</small>
+							<ul class="aclariment">
+								<li><small>Es <strong>obligatorio</strong>, excepto en la finalización por jaque mate, que
+										se finaliza con <code>#</code></small>.
+								</li>
+							</ul>
+						</li>
+						<li><strong><code>(=):</code></strong> <small>Combina ambos símbolos: el jugador ofrece tablas, y
+							la partida se interrumpe; debe leerse el indicador de resultado para determinar si se han
+							aceptado las tablas, o si la partida se ha interrumpido y debe continuar.</small>
+						</li>
+					</ul>
+					<p><strong>Ejemplos</strong>, combinados con valoración del movimiento:
+					</p>
+					<div class="w3-light-grey">
+						<ul class="exemple">
+							<li><strong><code> ?!(=):</code></strong> <small>Combina valoración de movimiento dudoso, y el
+									jugador ofrece tablas, y la partida se interrumpe; debe leerse el indicador de resultado
+									para determinar si las tablas han sido aceptadas.</small>
+							</li>
+							<li><strong><code> ◇(=):</code></strong> <small>Combina valoración de movimiento forzado, y el
+									jugador ofrece tablas, y la partida se interrumpe; debe leerse el indicador de resultado
+									para determinar si las tablas han sido aceptadas.</small>
+							</li>
+							<li><strong><code> (=)</code></strong> <small>Ofrece tablas. Si no hay valoración del
+									movimiento, aparece detrás de un espacio; si no lo sigue el carácter de dos puntos
+									(<q><code>:</code></q>), significa que no se han aceptado las tablas y prosiguen los
+									movimientos.</small>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</div>
 			<section id="Jugades" class="w3-container">
 				<h3 class="w3-container w3-pale-green w3-center header2 w3-text-grey">Secuencia de jugadas</h3>
 				<p>Una <a href="glossary.html#Jugada" class="cescacs" target="_blank">jugada</a> es una <strong>pareja
@@ -732,7 +943,9 @@
 					puntos), o bien con el símbolo de jaque mate (<q><strong>#</strong></q> almohadilla).
 				</p>
 				<section class="w3-container half">
-					<h4 class="w3-container w3-pale-yellow w3-center">Indicador final del resultado</h4>
+					<h4 class="w3-container w3-pale-yellow w3-center">
+						<span>Indicador final del resultado</span>
+					</h4>
 					<p>La última línea, después de la última jugada acabada con el <strong>símbolo de
 							finalización</strong>, o con el <strong>símbolo de jaque mate</strong>, es el
 						<strong>indicador final del resultado</strong> de la partida; admite cinco diferentes valores
@@ -796,10 +1009,11 @@
 				l'estat d'una partida que s'interromp, per poder retomar-la, tot i que poden existir moltes altres raons
 				per registrar una posició específica del tauler. El format
 				<strong><i lang="en"><abbr title="Transversal Lines Position Description">TLPD</abbr> (Transversal Lines
-						Position Description)</i></strong> descriu una situació de joc amb totes les seves condicions.
+						Position Description)</i></strong> descriu una situació de joc amb totes les seves condicions
+				<span class="note">tot i que no permet detectar repeticions de les posicions anteriors</span>.
 				Està format per sis components, que se separen amb espais:
 			</p>
-			<ol>
+			<ol class="w3-small">
 				<li class="w3-tag w3-pale-yellow"><a href="#TLPDpieces" class="w3-button">Posicionamiento de las
 						piezas</a></li>
 				<li class="w3-tag w3-pale-yellow"><a href="#TLPDTorn" class="w3-button">Turno</a></li>
@@ -811,12 +1025,10 @@
 				</li>
 				<li class="w3-tag w3-pale-yellow"><a href="#TLPDCounter" class="w3-button">Número de jugada</a></li>
 			</ol>
-			<aside>En realitat queda exclosa la capacitat de detectar repeticions de les posicions anteriors.
-			</aside>
 			<section class="w3-container">
 				<h3 class="w3-container w3-light-grey w3-center w3-text-blue-grey">Ejemplo: posicionamiento inicial de
 					C'escacs, sin redefiniciones de piezas</h3>
-				<div style="white-space:nowrap; height:2.5em; overflow-x:auto;">
+				<div style="white-space:nowrap;height:2.5em;overflow-x:auto;font-size:smaller;">
 					<code>/28:v/27:dk/26:gjg/25:rnnr/24:pejep/23:ppeepp/22:2pjp2/21:3pp3/20:3p3/8:3P3/7:3PP3/6:2PJP2/5:PPEEPP/4:PEJEP/3:RNNR/2:GJG/1:DK/0:V/ w RKRrkr - 0 1</code>
 				</div>
 				<br />
@@ -896,83 +1108,80 @@
 				</ul>
 				<br />
 			</section>
-			<section id="TLPDEnpassant" class="w3-container w3-half">
-				<h3 class="w3-container w3-pale-yellow w3-center">Hexcaque de <i>captura al paso</i> o
-					<i>peón esquivo</i>
-				</h3>
-				<p>La <a href="glossary.html#CapturaAlPas" class="cite" target="_blank"><i>captura al pas</i></a> i la
-					<a href="glossary.html#CapturaPeoEsquiu" class="cite" target="_blank"><i>captura del peó
-							esquiu</i></a> són moviments que només es poden fer en el moviment següent a determinats
-					moviments d'un peó; per tant, cal tenir constància de la seva disponibilitat en el moviment actual,
-					si es desconeix el moviment anterior.
-				</p>
-				<p>Com a màxim, només una de les opcions hi serà disponible, i es fa servir el mateix camp per a
-					registrar ambdós casos:
-				</p>
-				<ul>
-					<li>En el moviment anterior, un peó ha fet un
-						<a href="glossary.html#MovimentDoble" class="cite" target="_blank">moviment doble</a> o
-						<a href="glossary.html#MovimentTriple" class="cite" target="_blank">triple</a>. N'hi ha
-						disponible la captura al pas:
-						<ul>
-							<li><strong>Moviment doble</strong>: Es registra l'<i>hexcac</i> on hi és el peó, i, separat
-								amb el símbol arrova <strong>@</strong>, la línia on pot ser capturat; no s'ha d'indicar
-								la columna del segon <i>hexcac</i>, perquè és la mateixa que ara n'hi ha el peó.
-								<ul class="exemple">
-									<li>G15@13</li>
-								</ul>
-							</li>
-							<li><strong>Moviment triple</strong>: Es registra l'<i>hexcac</i> on hi és el peó, i,
-								separat amb el símbol arrova <strong>@</strong>, les dues línies on pot ser capturat,
-								separades amb un guió <strong>-</strong>.
-								<ul class="exemple">
-									<li>G13@9-11</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li>En el moviment anterior un peó ha fet un
-						<a href="glossary.html#PeoEsquiu" class="cite" target="_blank">moviment esquiu</a>. N'hi ha
-						disponible la seva captura:
-						<ul>
-							<li><strong>Moviment esquiu</strong>: Senzillament es registra la <i>coordenada CTL</i> de
-								l'<i>hexcac</i> on és posicionat el <i>peó esquiu</i>, posició on pot ser capturat.
-								<ul class="exemple">
-									<li>F14</li>
-								</ul>
-								<ul class="aclaracio">
-									<li>L'exemple denota que dos peons de diferent bandol hi eren enfrontats en G13 i
-										G15,
-										o en E13 i E15, i un peó, qui no te el torn, feu un moviment esquiu.
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li>Quan no es dona cap de les dues situacions, es fa servir un guió <q><strong>-</strong></q>.</li>
-				</ul>
+			<div class="w3-container" style="padding:0;">
+				<section id="TLPDEnpassant" class="w3-container w3-half">
+					<h3 class="w3-container w3-pale-yellow w3-center">Hexcaque de <i>captura al paso</i> o
+						<i>peón esquivo</i>
+					</h3>
+					<p>La <a href="glossary.html#CapturaAlPas" class="cite" target="_blank"><i>captura al pas</i></a> i la
+						<a href="glossary.html#CapturaPeoEsquiu" class="cite" target="_blank"><i>captura del peó
+								esquiu</i></a> són moviments que només es poden fer en el moviment següent a determinats
+						moviments d'un peó; per tant, cal tenir constància de la seva disponibilitat en el moviment actual,
+						si es desconeix el moviment anterior.
+					</p>
+					<p>Com a màxim, només una de les opcions hi serà disponible, i es fa servir el mateix camp per a
+						registrar ambdós casos:
+					</p>
+					<ul>
+						<li>En el moviment anterior, un peó ha fet un
+							<a href="glossary.html#MovimentDoble" class="cite" target="_blank">moviment doble</a> o
+							<a href="glossary.html#MovimentTriple" class="cite" target="_blank">triple</a>. N'hi ha
+							disponible la captura al pas:
+							<ul>
+								<li><strong>Moviment doble</strong>: Es registra l'<i>hexcac</i> on hi és el peó, i, separat
+									amb el símbol arrova <strong>@</strong>, la línia on pot ser capturat; no s'ha d'indicar
+									la columna del segon <i>hexcac</i>, perquè és la mateixa que ara n'hi ha el peó.
+									Exemple: <code class="exemple">G15@13</code>
+								</li>
+								<li><strong>Moviment triple</strong>: Es registra l'<i>hexcac</i> on hi és el peó, i,
+									separat amb el símbol arrova <strong>@</strong>, les dues línies on pot ser capturat,
+									separades amb un guió <strong>-</strong>.
+									Exemple: <code class="exemple">G13@9-11</code>
+								</li>
+							</ul>
+						</li>
+						<li>En el moviment anterior un peó ha fet un
+							<a href="glossary.html#PeoEsquiu" class="cite" target="_blank">moviment esquiu</a>. N'hi ha
+							disponible la seva captura:
+							<ul>
+								<li><strong>Moviment esquiu</strong>: Senzillament es registra la <i>coordenada CTL</i> de
+									l'<i>hexcac</i> on és posicionat el <i>peó esquiu</i>, posició on pot ser capturat.
+									Exemple: <code class="exemple">F14</code>
+									<ul class="w3-ul aclaracio w3-small">
+										<li>L'exemple denota que dos peons de diferent bandol hi eren enfrontats en
+											<code class="exemple">G13</code> i <code class="exemple">G15</code>
+											o en <code class="exemple">E13</code> i <code class="exemple">E15</code>,
+											i un peó, del jugador què no te el torn, feu un moviment esquiu.
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>Quan no es dona cap de les dues situacions, es fa servir un guió <q><strong>-</strong></q>.</li>
+					</ul>
+				</section>
 
-			</section>
-			<section id="TLPDMoveCount" class="w3-container w3-half">
-				<h3 class="w3-container w3-pale-yellow w3-center">Contador de movimientos</h3>
-				<p>El comptador de moviments, que anglès també s'anomena <i lang="en">halfmove clock</i>, comença amb el
-					valor zero, i s'incrementa en cada moviment que no sigui un moviment d'un peó ni una captura; quan
-					es fa una captura o es mou un peó, el comptador torna a zero.
-				</p>
-				<p>Aquest comptador permet aplicar les regles d'<a href="glossary.html#EsgotamentMoviments"
-						class="cescacs" target="_blank">esgotament de moviments</a> que fan arribar la partida a taules:
-					la regla de les cinquanta jugades (cent moviments), que ha de reclamar el jugador, i la regla de les
-					setanta-cinc jugades (cent cinquanta moviments), d'aplicació automàtica. En una partida amistosa pot
-					arribar a ser un valor desconegut, i llavors es farà servir el valor <i>zero</i>.
-				</p>
-			</section>
-			<section id="TLPDCounter" class="w3-container w3-half">
-				<h3 class="w3-container w3-pale-yellow w3-center">Número de jugada</h3>
-				<p>L'últim número és el número de la jugada actual. Comença amb el valor <strong>u</strong> i
-					s'incrementa després de cada moviment de les <i>negres</i>. En una partida amistosa pot arribar a
-					ser un valor desconegut, i llavors es farà servir un interrogant (<q><strong>?</strong></q>).
-				</p>
-			</section>
+				<section id="TLPDMoveCount" class="w3-container w3-half">
+					<h3 class="w3-container w3-pale-yellow w3-center">Contador de movimientos</h3>
+					<p>El comptador de moviments, que anglès també s'anomena <i lang="en">halfmove clock</i>, comença amb el
+						valor zero, i s'incrementa en cada moviment que no sigui un moviment d'un peó ni una captura; quan
+						es fa una captura o es mou un peó, el comptador torna a zero.
+					</p>
+					<p>Aquest comptador permet aplicar les regles d'<a href="glossary.html#EsgotamentMoviments"
+							class="cescacs" target="_blank">esgotament de moviments</a> que fan arribar la partida a taules:
+						la regla de les cinquanta jugades (cent moviments), que ha de reclamar el jugador, i la regla de les
+						setanta-cinc jugades (cent cinquanta moviments), d'aplicació automàtica. En una partida amistosa pot
+						arribar a ser un valor desconegut, i llavors es farà servir el valor <i>zero</i>.
+					</p>
+				</section>
+				<section id="TLPDCounter" class="w3-container w3-half">
+					<h3 class="w3-container w3-pale-yellow w3-center">Número de jugada</h3>
+					<p>L'últim número és el número de la jugada actual. Comença amb el valor <strong>u</strong> i
+						s'incrementa després de cada moviment de les <i>negres</i>. En una partida amistosa pot arribar a
+						ser un valor desconegut, i llavors es farà servir un interrogant (<q><strong>?</strong></q>).
+					</p>
+				</section>
+			</div>
 		</section>
 		<section id="CTL-PGN" class="w3-container">
 			<h2 class="w3-container w3-pale-green w3-center">CTL-PGN: Formato de intercambio</h2>
@@ -1250,7 +1459,7 @@
 					</ul>
 				</section>
 				<section class="w3-container">
-					<h4 class="w3-container w3-pale-yellow w3-center">Etiqueta para usar identificadores de pieza
+					<h4 class="w3-container w3-pale-yellow w3-center">Etiqueta par usar identificadores de pieza
 						alternativos</h4>
 					<p><strong>Redefine</strong> <small>Permet fer servir lletres d'identificació alternatives per a
 							alguna peça, sempre entre les predefinides. Si n'hi ha una etiqueta <i>TLPD</i>,
@@ -1281,22 +1490,27 @@
 					<ul class="aclariment">
 						<li><small></small></li>
 					</ul>
-					<h5 class="w3-container w3-light-grey w3-center w3-text-blue-grey">Posició inicial de C'escacs</h5>
+					<h5 class="w3-container w3-light-grey w3-center w3-text-blue-grey">
+						<span>Posición inicial de C'escacs</span>
+					</h5>
 					<div style="white-space:nowrap; height:2.5em; overflow-x:auto;">
 						<code>[TLPD "/28:v/27:dk/26:gjg/25:rnnr/24:pejep/23:ppeepp/22:2pjp2/21:3pp3/20:3p3/8:3P3/7:3PP3/6:2PJP2/5:PPEEPP/4:PEJEP/3:RNNR/2:GJG/1:DK/0:V/ w RKRrkr - 0 1"]</code>
 					</div>
-					<h5 class="w3-container w3-light-grey w3-center w3-text-blue-grey">Posició inicial de C'escacs:
-						[Redefine "A@J, T@R", C@N"]</h5>
+					<h5 class="w3-container w3-light-grey w3-center w3-text-blue-grey">
+						<span>Posición inicial de C'escacs: [Redefine "A@J, T@R", C@N"]</span>
+					</h5>
 					<div style="white-space:nowrap; height:2.5em; overflow-x:auto;">
 						<code>[TLPD "/28:v/27:dk/26:gag/25:tcct/24:peaep/23:ppeepp/22:2pap2/21:3pp3/20:3p3/8:3P3/7:3PP3/6:2PAP2/5:PPEEPP/4:PEAEP/3:TCCT/2:GAG/1:DK/0:V/ w TKTtkt - 0 1"]</code>
 					</div>
-					<h5 class="w3-container w3-light-grey w3-center w3-text-blue-grey">Posició inicial de C'escacs:
-						[Redefine "B@J, W@V", Q@D"]</h5>
+					<h5 class="w3-container w3-light-grey w3-center w3-text-blue-grey">
+						<span>Posición inicial de C'escacs: [Redefine "B@J, W@V", Q@D"]</span>
+					</h5>
 					<div style="white-space:nowrap; height:2.5em; overflow-x:auto;">
 						<code>[TLPD "/28:w/27:qk/26:gbg/25:rnnr/24:pebep/23:ppeepp/22:2pbp2/21:3pp3/20:3p3/8:3P3/7:3PP3/6:2PBP2/5:PPEEPP/4:PEBEP/3:RNNR/2:GBG/1:QK/0:W/ w RKRrkr - 0 1"]</code>
 					</div>
-					<h5 class="w3-container w3-light-grey w3-center w3-text-blue-grey">Posició inicial de C'escacs:
-						[Redefine "FAN"]</h5>
+					<h5 class="w3-container w3-light-grey w3-center w3-text-blue-grey">
+						<span>Posición inicial de C'escacs: [Redefine "FAN"]</span>
+					</h5>
 					<div style="white-space:nowrap; height:2.5em; overflow-x:auto;">
 						<code>[TLPD "/28:🩒/27:♛♚/26:🩓♝🩓/25:♜♞♞♜/24:♟☗♝☗♟/23:♟♟☗☗♟♟/22:2♟♝♟2/21:3♟♟3/20:3♟3/8:3♙3/7:3♙♙3/6:2♙♗♙2/5:♙♙☖☖♙♙/4:♙☖♗☖♙/3:♖♘♘♖/2:🩐♗🩐/1:♕♔/0:🩏/ w ♖♔♖♜♚♜ - 0 1"]</code>
 					</div>

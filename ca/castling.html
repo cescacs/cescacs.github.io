@@ -143,7 +143,8 @@
 		</div>
 		<div style="clear:both;"></div>
 	</header>
-	<main>
+
+<main>
 	<div class="w3-container">
 		<p>En <i class="cescacs">C'escacs</i> el <i>Rei</i> pot fer certs moviments especials quan encara no ha mogut,
 			sempre que no es trobi amenaçat (<a href="glossary.html#Escac" class="cescacs">en escac</a>). Aquests
@@ -179,9 +180,10 @@
 			s'ha de <em>prevenir al contrincant</em> si es vol fer el <i>moviment de l'enroc</i>.
 		</p>
 	</div>
-	<h2 class="w3-container w3-pale-green w3-center w3-opacity"><i>Salt del Rei</i></h2>
+
 	<!-- Salt del Rei-->
-	<div class="w3-container">
+	<section id="SaltRei" class="w3-container">
+		<h2 class="w3-container w3-pale-green w3-center w3-opacity"><i>Salt del Rei</i></h2>
 		<p>El cas més senzill és un moviment <a href="glossary.html#SaltCavall" class="cescacs">Salt de Cavall</a> que
 			el <i>Rei</i> pot fer com a primer moviment, sempre que no hi sigui en <i>Escac</i>.
 			Fins i tot, hi pot fer una captura amb aquest <i>Salt</i>.
@@ -268,6 +270,8 @@
 							leap_caption3.textContent = "K-D26";
 						}
 					</script>
+					<p class="note">Després del salt es mostren només els <i>rocs</i> amb què es
+						podria haver fet l'enroc amb aquell salt.</p>
 				</figcaption>
 			</figure>
 		</div>
@@ -297,10 +301,11 @@
 				en el seu primer moviment, sempre que no hi sigui en <i>escac</i>.
 			</p>
 		</div>
-	</div>
+	</section>
+
 	<!-- ENROC   SIMPLE -->
-	<h2 class="w3-container w3-pale-green w3-center w3-opacity">Enroc simple</h2>
-	<div class="w3-container">
+	<section id="EnrocSimple" class="w3-container">
+		<h2 class="w3-container w3-pale-green w3-center w3-opacity">Enroc simple</h2>
 		<div class="w3-container">
 			<p>N'hi ha cinc posicions resultat del <i>Salt del Rei</i>, posicions on també es
 				defineixen els <a href="glossary.html#Enroc" class="cescacs">Enrocs</a>, l'unic moviment que
@@ -843,11 +848,11 @@
 				<i>Dama</i>. En total sumen <strong>dinou</strong> combinacions diferents.
 			</p>
 		</div>
-	</div>
+	</section>
 
 	<!-- ENROC   DOBLE -->
-	<h2 class="w3-container w3-pale-green w3-center w3-opacity">Enroc doble</h2>
-	<div class="w3-container">
+	<section id="EnrocDoble" class="w3-container">
+		<h2 class="w3-container w3-pale-green w3-center w3-opacity">Enroc doble</h2>
 		<div class="w3-container">
 			<p>Entre les cinc posicions que pot abastar el <i>Rei</i> en el seu <i>Salt</i>, només tres tenen
 				hexcacs ortogonalment adjacents abastables per ambdós <i>Rocs</i>: <em>H</em>, <em>F</em> i
@@ -879,7 +884,7 @@
 				</li>
 				<li>Tampoc pot fer el moviment <em>si l'<i>hexac</i> de la posició final del rei està amenaçat</em>,
 					malgrat que en fer el moviment una torre fes d'aixopluc al rei.</li>
-		</ul>
+			</ul>
 		</div>
 		<!-- Doble columna H -->
 		<div class="w3-container half w3-card-4">
@@ -1050,7 +1055,8 @@
 				sumant un total de <strong>cinc</strong> diferents moviments d'<i>enroc doble</i>.
 			</p>
 		</div>
-	</div>
+	</section>
+
 	<div class="w3-container">
 		<h2 class="w3-container w3-pale-green w3-center w3-opacity">Recompte de moviments del <i>Rei</i>
 			en la seva posició inicial</h2>

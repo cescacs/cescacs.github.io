@@ -336,6 +336,10 @@ li.iconSquare::marker {
   content: "\f096"; /* FontAwesome Unicode */
 }
 
+code.exemple {
+  color: blue;
+}
+
 ul.exemple {
   padding: 0;
 }

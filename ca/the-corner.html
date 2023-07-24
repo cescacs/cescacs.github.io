@@ -220,7 +220,8 @@
 			i sobre les variants d'escacs</h2>
 		<figure style="float:left;">
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/P349BdHUxlc" title="YouTube video player"
-				frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				allowfullscreen style="border: none;">
 			</iframe>
 			<figcaption style="padding-right:0.5em; padding-left:0.5em">Bobby Fischer on Paul Morphy
 				 and how opening theory destroyed chess.
@@ -326,8 +327,8 @@
 					de Gliński i McCooey.</span>
 			</li>
 		</ul>
-		<h4 class="w3-container w3-pale-yellow w3-center">Per a les noves peces incorporades a C'escacs
-			(<i>Drac</i>, <i>Pegàs</i>)
+		<h4 class="w3-container w3-pale-yellow w3-center"><span>Per a les noves peces incorporades
+			a C'escacs (<i>Drac</i>, <i>Pegàs</i>)</span>
 		</h4>
 		<ul class="w3-ul">
 			<li>El <i>Drac</i> i la <i>Dama</i> tenen aproximadament la mateixa potència.
@@ -453,7 +454,7 @@
 			sobre escacs de 1950 <q>Programming a Computer for Playing Chess</q> qui proposà limitar la profunditat de la recerca
 			en l'arbre de possibilitats, determinant llavors el seu valor mitjançant una funció heurística.
 		</p>
-		<h4 class="w3-container w3-pale-yellow w3-center">La funció d'avaluació: heurístic</h4>
+		<h4 class="w3-container w3-pale-yellow w3-center"><span>La funció d'avaluació: heurístic</span></h4>
 		<p>L'algorisme requereix, doncs, l'ús d'un <strong>heurístic</strong>, una funció d'avaluació d'una posició,
 			una vegada s'ha fet l'exploració de les diferents jugades possibles, de manera que es pugui determinar quina
 			és la millor. L'heurístic més evident consisteix en considerar el valor de les fitxes de cada jugador, però
@@ -480,14 +481,14 @@
 			s'aconsegueix fent un anàlisi amb una profunditat més gran, intentant obtenir una valoració més certera.
 		</p>
 		<h4 class="w3-container w3-pale-yellow w3-center"><a href="https://en.wikipedia.org/wiki/Quiescence_search"
-				class="cite" target="_blank">Quiescència</a></h4>
+				class="cite" target="_blank"><span>Quiescència</span></a></h4>
 		<p>A més, aquesta <strong>funció d'avaluació</strong> (<i>heurístic</i>) és difícil de determinar en situacions poc
 			estables, en <i>situacions d'escac</i> o situacions on existeix una amenaça a una peça. Aquest concepte
 			d'estabilitat es denomina <strong><i><a href="https://en.wikipedia.org/wiki/Quiescence_search"
 				class="cite" target="_blank">quiescència</a></i></strong>, i l'algorisme explora en major profunditat fins
 			trobar un estat que compleix la <i>quiescència</i>, per poder avaluar correctament l'heurístic.
 		</p>
-		<h4 class="w3-container w3-pale-yellow w3-center">Extensió de la búsqueda</h4>
+		<h4 class="w3-container w3-pale-yellow w3-center"><span>Extensió de la búsqueda</span></h4>
 		<p>Per a certes jugades <i>interessants</i> es pot extendre la búsqueda en més profunditat; és un concepte una mica
 			diferent de la <i>quiescència</i>, però de vegades la pot remplaçar, doncs la funció de l'extensió per a la
 			<i>quiescència</i> és trobar una posició avaluable, sense amenaces que puguin desvirturar el resultat de
@@ -500,7 +501,7 @@
 			de fer-ho, anàlisi per a  <i>amenaces detectades</i> (generalment amb la tècnica del <i>moviment null</i>,
 			que es detalla més endavant)...
 		</p>
-		<h4 class="w3-container w3-pale-yellow w3-center">Cost de l'algorisme</h4>
+		<h4 class="w3-container w3-pale-yellow w3-center"><span>Cost de l'algorisme</span></h4>
 		<p>El <i>cost</i> de l'algorisme és O(<i>b</i><sup><i>d</i></sup>), sent <i>b</i> el <i>factor de ramificació</i>,
 			quantes jugades diferents possibles es poden fer en promig, i <i>d</i> la profunditat d'exploració, és a dir,
 			quants nivells en davant s'exploren. Es escacs el valor per a <i>b</i> és lleugerament superior a 30, de vegades
@@ -514,7 +515,7 @@
 			d'exploració, comporta el cost d'un nivell i mig addicional comparat amb els escacs ortodoxos; és a dir, que per
 			a explorar 5 nivells es requereix avaluar gairebé 62_000 milions de nodes.
 		</p>
-		<h4 class="w3-container w3-pale-yellow w3-center">Les taules de transposició</h4>
+		<h4 class="w3-container w3-pale-yellow w3-center"><span>Les taules de transposició</span></h4>
 		<p>La gran quantitat de moviments que s'han d'analitzar comporta que es donin <i>repeticions</i> degudes a
 			l'execució de moviments en diferent ordre; aquest fenòmen és en realitat força freqüent
 			<span class="note">només cal que recordem que s'han d'analitzar tots els moviments possibles, i per a cada
@@ -540,7 +541,7 @@
 			<a href="https://www.chessprogramming.org/Zobrist_Hashing" class="cite" target="_blank">Zobrist</a>,
 			què faciliten la seva manipulació amb operacions <cite>xor</cite>.
 		</p>
-		<h4 class="w3-container w3-pale-yellow w3-center">Profundidad iterativa i control del temps</h4>
+		<h4 class="w3-container w3-pale-yellow w3-center"><span>Profundidad iterativa i control del temps</span></h4>
 		<p>El gran problema és que la búsqueda <i>minimax</i> és una búsqueda en profunditat, és a dir, que s'explora una
 			branca fins la profunditat establerta, abans de començar a explorar una altra branca. Aquesta estratègia
 			resulta funesta quan el programa ha de tenir control del temps, doncs és molt difícil estimar el temps que
@@ -579,7 +580,7 @@
 			</li>
 		</ul>
 		<h4 class="w3-container w3-pale-yellow w3-center"><a href="https://en.wikipedia.org/wiki/Negamax" class="cite"
-				target="_blank">Negamax</a></h4>
+				target="_blank"><span>Negamax</span></a></h4>
 		<p>Sovint les referències, en comptes de referir-se a <i>minimax</i>, es refereixen a
 			<a href="https://en.wikipedia.org/wiki/Negamax" class="cite" target="_blank">negamax</a>, que senzillament és
 			una simplificació de <i>minimax</i> considerant que és un joc de suma zero per a dos jugadors; aquest algorisme
@@ -607,7 +608,8 @@
 			en <b>1963</b>. Tot i les aproximacions prèvies, fou <b>Alexander Brudno</b> qui va presentar formalitzada
 			i justificada la idea sencera, que <b>Donald Knuth</b> i <b>Ronald W. Moore</b> varen refinar en 1975.
 		</p>
-		<h4 class="w3-container w3-pale-yellow w3-center">Millora del cost de l'algorisme <cite>minimax</cite></h4>
+		<h4 class="w3-container w3-pale-yellow w3-center"><span>Millora del cost de l'algorisme
+				<cite>minimax</cite></span></h4>
 		<p>L'efectivitat de l'esporgada té una gran <strong>dependència de l'ordre en què s'avaluen les diferents opcions
 			(jugades)</strong>, de manera que si l'ordre és incorrecte pot arribar a donar-se el cas de no tenir cap benefici,
 			però per a un ordre òptim, avaluant la millor jugada primer, el benefici és radical, permetent l'avaluació del doble
@@ -616,7 +618,8 @@
 			quatre nivells només a 3_000 nodes, en comptes de milió i mig, una reducció del 99.8%.
 		</p>
 		<aside>
-			<h5 class="w3-container w3-pale-blue w3-center">La importància d'una ordenació correcta</h5>
+			<h5 class="w3-container w3-pale-blue w3-center">
+				<span>La importància d'una ordenació correcta</span></h5>
 			<p>Cas perfecta ordenació, poda <cite>alfa-beta</cite> màximitzada:</p>
 			<ul>
 				<li>Estimació de la complexitat òptima dels escacs ortodoxos amb poda <cite>alfa-beta</cite>:&nbsp;
@@ -636,7 +639,7 @@
 				</li>
 			</ul>
 		</aside>
-		<h4 class="w3-container w3-pale-yellow w3-center">Heurístics d'ordenació de les jugades</h4>
+		<h4 class="w3-container w3-pale-yellow w3-center"><span>Heurístics d'ordenació de les jugades</span></h4>
 		<p>Per obtenir uns resultats òptims en <strong>l'algorisme <cite>alfa-beta</cite>, es requereix un nou <i>heurístic</i>:
 			l'ordenació de les jugades</strong>, considerant primer les més favorables.
 		</p>
@@ -722,7 +725,7 @@
 				en la qual s'hagi realitzat aquest moviment.
 			</li>
 		</ol>
-		<h4 class="w3-container w3-pale-yellow w3-center">Heurístics de poda en davant</h4>
+		<h4 class="w3-container w3-pale-yellow w3-center"><span>Heurístics de poda en davant</span></h4>
 		<p>La poda <i>alpha-beta</i> estableix que alguns nodes no requereixen ser avaluats, doncs no són opcions a
 			considerar, però sempre, la creença en aquest fet, depèn de l'heurístic d'avaluació. A més, trobar
 			eficientment els nodes que no requereixen avaluació depèn de la correcta ordenació, avaluant primer els

@@ -155,7 +155,8 @@
 		</div>
 		<div style="clear:both;"></div>
 	</header>
-	<main>
+
+<main>
 	<div class="w3-container">
 		<p>In <i class="cescacs">C'escacs</i> the King can make certain special moves when he has not moved yet,
 			as long as he is not threatened (in check). These movements are mostly evasive, but also leave the option
@@ -187,9 +188,10 @@
 		<p>When you play without a clock, and you want to castle, you must warn the opponent.
 		</p>
 	</div>
-	<h2 class="w3-container w3-pale-green w3-center w3-opacity"><i>King's Leap</i></h2>
+
 	<!-- Salt del Rei-->
-	<div class="w3-container">
+	<section id="SaltRei" class="w3-container">
+		<h2 class="w3-container w3-pale-green w3-center w3-opacity"><i>King's Leap</i></h2>
 		<p>The simplest case is a <a href="glossary.html#SaltCavall" class="cescacs">Knight Jump move</a>
 			that the <i>King</i> can make as a first move, as long as he is not in <i>Check</i>.
 			The king can even capture with his <i>King's Leap</i>.
@@ -217,7 +219,7 @@
 				<figcaption class="thumbcaption captionTop" style="text-align: center;">
 					<div class="w3-bar w3-center">
 						<button class="w3-button w3-khaki" onclick="leap0()">Initial</button>
-						<button class="w3-button w3-khaki" onclick="leapI()">I Leap</button>
+						<button class="w3-button w3-khaki" onclick="leapI()"><span translate="no">I</span> Leap</button>
 						<button class="w3-button w3-khaki" onclick="leapH()">H Leap</button>
 						<button class="w3-button w3-khaki" onclick="leapF()">F Leap</button>
 						<button class="w3-button w3-khaki" onclick="leapE()">E Leap</button>
@@ -277,6 +279,10 @@
 							leap_caption3.textContent = "K-D26";
 						}
 					</script>
+					<p class="note">
+						After the leap, only the rooks that could have been castled with that jump
+						are shown.
+					</p>
 				</figcaption>
 			</figure>
 		</div>
@@ -307,10 +313,11 @@
 				move, as long as he is not in <i>check</i>.
 			</p>
 		</div>
-	</div>
+	</section>
+
 	<!-- ENROC   SIMPLE -->
-	<h2 class="w3-container w3-pale-green w3-center w3-opacity">Simple Castling</h2>
-	<div class="w3-container">
+	<section id="EnrocSimple" class="w3-container">
+		<h2 class="w3-container w3-pale-green w3-center w3-opacity">Simple Castling</h2>
 		<div class="w3-container">
 			<p>There are five positions resulting from the <i>King's Leap</i>, positions where the
 				<a href="glossary.html#Enroc" class="cescacs">Castling</a> are also defined,
@@ -341,7 +348,7 @@
 			<!-- I column -->
 			<div class="w3-container half w3-card-4">
 				<h3 class="w3-container w3-pale-yellow w3-center w3-opacity">Castling on the
-					<span class="w3-serif">I</span>-Column <small><i>King</i>'s <i>Rook</i></small>
+					<span class="w3-serif">I</span>-Column <small><i>with the King</i>'s <i>Rook</i></small>
 				</h3>
 				<figure class="captionTop">
 					<img id="castleKRKI_image" src="../img/moves/king/castlingsbasek-min.png" alt=""
@@ -349,7 +356,7 @@
 					<figcaption class="thumbcaption captionTop" style="text-align: center;">
 						<div class="w3-center">
 							<button class="w3-bar-item w3-button w3-khaki" onclick="castleKRI0()">Initial</button>
-							<button class="w3-bar-item w3-button w3-khaki" onclick="castleKRIS()">I Leap</button>
+							<button class="w3-bar-item w3-button w3-khaki" onclick="castleKRIS()"><span translate="no">I</span> Leap</button>
 							<button class="w3-bar-item w3-button w3-khaki" onclick="castleKRII()">KRK-II</button>
 							<button class="w3-bar-item w3-button w3-khaki" onclick="castleKRIK()">KRK-IK</button>
 							<button class="w3-bar-item w3-button w3-khaki" onclick="castleKRIH()">KRK-IH</button>
@@ -408,7 +415,7 @@
 			<!-- D column -->
 			<div class="w3-container half w3-card-4">
 				<h3 class="w3-container w3-pale-yellow w3-center w3-opacity">Castling on the
-					<span class="w3-serif">D</span>-Column <small><i>Queen</i>'s <i>Rook</i></small>
+					<span class="w3-serif">D</span>-Column <small><i>with the Queen</i>'s <i>Rook</i></small>
 				</h3>
 				<figure class="captionTop">
 					<img id="castleKRDD_image" src="../img/moves/king/castlingsbaseq-min.png" alt=""
@@ -469,7 +476,7 @@
 			<!-- H column King -->
 			<div class="w3-container half w3-card-4">
 				<h3 class="w3-container w3-pale-yellow w3-center w3-opacity">Castling on the
-					<span class="w3-serif">H</span>-Column <small><i>King</i>'s <i>Rook</i></small>
+					<span class="w3-serif">H</span>-Column <small>with the <i>King</i>'s <i>Rook</i></small>
 				</h3>
 				<figure class="captionTop">
 					<img id="castleKRKH_image" src="../img/moves/king/castlingsbasek-min.png" alt=""
@@ -551,7 +558,7 @@
 			<!-- H column Queen -->
 			<div class="w3-container half w3-card-4">
 				<h3 class="w3-container w3-pale-yellow w3-center w3-opacity">Castling on the
-					<span class="w3-serif">H</span>-Column <small><i>Queen</i>'s <i>Rook</i></small>
+					<span class="w3-serif">H</span>-Column <small>with the <i>Queen</i>'s <i>Rook</i></small>
 				</h3>
 				<figure class="captionTop">
 					<img id="castleKRDH_image" src="../img/moves/king/castlingsbaseq-min.png" alt=""
@@ -612,7 +619,7 @@
 			<!-- F column King -->
 			<div class="w3-container half w3-card-4">
 				<h3 class="w3-container w3-pale-yellow w3-center w3-opacity">Castling on the
-					<span class="w3-serif">F</span>-Column <small><i>King</i>'s <i>Rook</i></small>
+					<span class="w3-serif">F</span>-Column <small>with the <i>King</i>'s <i>Rook</i></small>
 				</h3>
 				<figure class="captionTop">
 					<img id="castleKRKF_image" src="../img/moves/king/castlingsbasek-min.png" alt=""
@@ -671,7 +678,7 @@
 			<!-- F column Queen -->
 			<div class="w3-container half w3-card-4">
 				<h3 class="w3-container w3-pale-yellow w3-center w3-opacity">Castling on the
-					<span class="w3-serif">F</span>-Column <small><i>Queen</i>'s <i>Rook</i></small>
+					<span class="w3-serif">F</span>-Column <small>with the <i>Queen</i>'s <i>Rook</i></small>
 				</h3>
 				<figure class="captionTop">
 					<img id="castleKRDF_image" src="../img/moves/king/castlingsbaseq-min.png" alt=""
@@ -732,7 +739,7 @@
 			<!-- E column King -->
 			<div class="w3-container half w3-card-4">
 				<h3 class="w3-container w3-pale-yellow w3-center w3-opacity">Castling on the
-					<span class="w3-serif">E</span>-Column <small><i>King</i>'s <i>Rook</i></small>
+					<span class="w3-serif">E</span>-Column <small>with the <i>King</i>'s <i>Rook</i></small>
 				</h3>
 				<figure class="captionTop">
 					<img id="castleKRKE_image" src="../img/moves/king/castlingsbasek-min.png" alt=""
@@ -790,7 +797,7 @@
 			<!-- E column Queen -->
 			<div class="w3-container half w3-card-4">
 				<h3 class="w3-container w3-pale-yellow w3-center w3-opacity">Castling on the
-					<span class="w3-serif">E</span>-Column <small><i>Queen</i>'s <i>Rook</i></small>
+					<span class="w3-serif">E</span>-Column <small>with the <i>Queen</i>'s <i>Rook</i></small>
 				</h3>
 				<figure class="captionTop">
 					<img id="castleKRDE_image" src="../img/moves/king/castlingsbaseq-min.png" alt=""
@@ -855,11 +862,11 @@
 				<strong>nineteen different combinations for <i>Simple Castling</i></strong>.
 			</p>
 		</div>
-	</div>
+	</section>
 
 	<!-- ENROC   DOBLE -->
-	<h2 class="w3-container w3-pale-green w3-center w3-opacity">Double Castling</h2>
-	<div class="w3-container">
+	<section id="EnrocDoble" class="w3-container">
+		<h2 class="w3-container w3-pale-green w3-center w3-opacity">Double Castling</h2>
 		<div class="w3-container">
 			<p>Among the five positions that can be spanned by the <i>King</i> in his <i>Leap</i>, only three have
 				orthogonally adjacent hexes that can be spanned by both <i>Rooks</i>: <em>H</em>, <em>F</em>
@@ -1059,7 +1066,8 @@
 				<strong>five</strong> different possible <i>double castling</i> moves.
 			</p>
 		</div>
-	</div>
+	</section>
+
 	<div class="w3-container">
 		<h2 class="w3-container w3-pale-green w3-center w3-opacity"><i>King</i>'s move count in its initial
 			position</h2>
