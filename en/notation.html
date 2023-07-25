@@ -816,108 +816,126 @@
 					<li><strong><code style="font-size:larger;">+</code></strong>
 						<small><a href="glossary.html#Escac" class="cescacs" target="_blank"><i>Check</i></a>.</small>
 						<ul class="aclariment">
-							<li><strong><code style="font-size:larger;">+∞</code></strong><i>Jaque</i> desde un hexcaque
-								no adyacente ortogonal o diagonal a la posición del <i>Rey</i>.
+							<li><strong><code style="font-size:larger;">+∞</code></strong>
+								<small><a href="glossary.html#EscacDistancia" class="cescacs"
+									target="_blank"><i>Check from afar</i></a>, from a hextille not adjacent
+									orthogonally or diagonally to the <i>King</i>'s position. The symbol is
+									optionally alternative to the <i>check</i> indicator to add information.
+								</small>
 							</li>
 							<li><strong><code style="font-size:larger;">+^</code></strong>
-								<small><a href="glossary.html#EscacContigu" class="cescacs" target="_blank"><i>Check
-										from afar</i></a>, desde un hexcaque adyacente ortogonalmente
-									o diagonalmente, o bien a salto de caballo;
-									El símbolo es opcionalmente alternativo al indicador de <i>jaque</i> para añadir información.
-									Indica que se tiene que mover el <i>Rey</i> o capturar la pieza que amenaza.</small>
+								<small><a href="glossary.html#EscacContigu" class="cescacs"
+										target="_blank"><i>Adjoining check</i></a>, from an orthogonally or
+									diagonally adjacent <i>hextille</i>, or
+									<a href="glossary.html#EscacSaltCavall" class="cescacs"
+										target="_blank"><i>Check on the knight's leap</i></a>. The symbol
+									is optionally alternative to the <i>check</i> indicator to add
+									information. Indicates that the <i>King</i> must be moved or the
+									threatening piece captured.
+								</small>
 							</li>
 							<li><strong><code style="font-size:larger;">++</code></strong>
-								<small><a href="glossary.html#EscacDoble" class="cescacs" target="_blank"><i>Jaque
-											doble</i></a>; opcionalmente alternativo al indicador de <i>jaque</i> para
-									agregar información.</small>
+								<small><a href="glossary.html#EscacDoble" class="cescacs"
+									target="_blank"><i>Double check</i></a>. The symbol is optionally
+									alternative to the <i>check</i> indicator to add information.
+									Indicates that the <i>King</i> must necessarily move.
+								</small>
 							</li>
 						</ul>
 						<aside>
-							<small>Los indicadores <strong><code style="font-size:larger;">+^</code></strong> y
-								<strong><code style="font-size:larger;">++</code></strong> son progresivamente peores
-								situaciones de jaque, puesto que en el <i>jaque con contacto</i> o <i>inmediato</i>
-								existe la alternativa de capturar la pieza que amenaza, pero en un <i>jaque doble</i>
-								ya solo queda la alternativa de mover el <i>Rey</i>.</small>
+							<small>The <strong><code style="font-size:larger;">+∞</code></strong>,
+								<strong><code style="font-size:larger;">+^</code></strong> and
+								<strong><code style="font-size:larger;">++</code></strong> indicators are
+								progressively worse check situations, since in <i>distant check</i> there is
+								the option to cover with another piece or capture the threatening piece, in
+								<i>adjoining check</i> or <i>check on the knight's leap</i> there is no
+								option to cover, but there is still the alternative of capturing the
+								threatening piece, but in <i>double check</i> there is only the alternative
+								of moving the <i>king</i>.
+							</small>
 						</aside>
 					</li>
 					<li><strong><code style="font-size:larger;">#</code></strong>
-						<small><a href="glossary.html#EscacMat" class="cescacs" target="_blank">Jaqe mate</a>. Este
-							indicador también actúa como indicador de final de partida.</small>
+						<small><a href="glossary.html#EscacMat" class="cescacs" target="_blank">Checkmate</a>.
+							This indicator also acts as an end-of-game indicator.
+						</small>
 					</li>
 				</ul>
 			</section>
 			<div class="w3-container" style="padding:0;">
 				<section class="w3-container half">
 					<h3 class="w3-container w3-pale-yellow w3-center">Movement assessment</h3>
-					<p>Después de cada movimiento, separado con un espacio, se puede añadir una <strong>valoración</strong>,
-						excepto detrás un último movimiento que provoca el <i>jaque mate</i>, que se entiende no requiere
-						valoración:
+					<p>After each move, separated by a space, an <strong>rating</strong> can be added,
+						except after a last move that provokes <i>checkmate</i>, which is understood
+						not to require a rating:
 					</p>
 					<ul class="w3-ul">
-						<li><strong><code>?</code></strong> <small>Movimiento malo; equivalente <i>NAG</i>:
-								<strong>$2</strong>.</small>
+						<li><strong><code>?</code></strong> <small>Poor move or mistake;
+							<i>NAG</i> equivalent: <strong>$2</strong>.</small>
 						</li>
-						<li><strong><code>??</code></strong> <small>Movimiento muy malo (grave error);
-								equivalente <i>NAG</i>: <strong>$4</strong>.</small>
+						<li><strong><code>??</code></strong> <small>Very poor move or blunder;
+							<i>NAG</i> equivalent: <strong>$4</strong>.</small>
 						</li>
-						<li><strong><code>?!</code></strong> <small>Movimiento dudoso, cuestionable; equivalente <i>NAG</i>:
-								<strong>$6</strong>.</small>
+						<li><strong><code>?!</code></strong> <small>Questionable or dubious move;
+							<i>NAG</i> equivalent: <strong>$6</strong>.</small>
 						</li>
-						<li><strong><code>!</code></strong> <small>Movimiento bueno; equivalente <i>NAG</i>:
-								<strong>$1</strong>.</small>
+						<li><strong><code>!</code></strong> <small>Good move;
+							<i>NAG</i> equivalent: <strong>$1</strong>.</small>
 						</li>
-						<li><strong><code>!!</code></strong> <small>Movimiento excepcional; equivalente <i>NAG</i>:
-								<strong>$3</strong>.</small>
+						<li><strong><code>!!</code></strong> <small>Very good or brilliant move;
+							<i>NAG</i> equivalent: <strong>$3</strong>.</small>
 						</li>
-						<li><strong><code>!?</code></strong> <small>Movimiento interesante, sorprendente; equivalente
-								<i>NAG</i>: <strong>$5</strong>.</small>
+						<li><strong><code>!?</code></strong> <small>Speculative or interesting move;
+							<i>NAG</i> equivalent: <strong>$5</strong>.</small>
 						</li>
-						<li><strong><code>◇</code></strong> <small>(U+25C7, White Diamond) Movimiento forzado;
-								única alternativa; equivalente <i>NAG</i>: <strong>$7</strong>.</small>
+						<li><strong><code>◇</code></strong> <small>(U+25C7, White Diamond) forced, only move;
+							<i>NAG</i> equivalent: <strong>$7</strong>.</small>
 						</li>
 					</ul>
-					<aside>Se usa el rombo (◇ diamond) en vez del cuadrado, porque el cuadrado a menudo lo usan los
-						ordenadores para indicar un caracter desconocido.
+					<aside>The rhombus (◇ diamond) is used instead of the square, because the square
+						is often used by computers to indicate an unknown character.
 					</aside>
 				</section>
 				<section class="w3-container half">
 					<h3 class="w3-container w3-pale-yellow w3-center">Indicator relating to the game</h3>
-					<p>Finalmente, en un movimiento puede incorporar un indicador en lo referente a la partida. Este
-						indicador se separa del movimiento con un espacio, pero se junta con la valoración, si la hay:
+					<p>Finally, in a move you can incorporate an indicator regarding the game. This
+						indicator is separated from the move with a space, but is joined with the rating,
+						if any:
 					</p>
 					<ul class="w3-ul">
-						<li><strong><code>(=)</code></strong> <small>El jugador ofrece tablas (solo se puede hacer
-							después de mover).</small>
+						<li><strong><code>(=)</code></strong> <small>The player offers a draw
+							(can only be done after moving).</small>
 						</li>
-						<li><strong><code>:</code></strong> <small>(dos puntos) Último movimiento; final de la
-								partida o punto donde se ha interrumpido.</small>
+						<li><strong><code>:</code></strong> <small>(colon) Last move; end of the game
+							or point where it has been interrupted.</small>
 							<ul class="aclariment">
-								<li><small>Es <strong>obligatorio</strong>, excepto en la finalización por jaque mate, que
-										se finaliza con <code>#</code></small>.
+								<li><small>It is <strong>mandatory</strong>, except in checkmate completion,
+									which is ended with <code>#</code></small>.
 								</li>
 							</ul>
 						</li>
-						<li><strong><code>(=):</code></strong> <small>Combina ambos símbolos: el jugador ofrece tablas, y
-								la partida se interrumpe; debe leerse el indicador de resultado para determinar si se han
-								aceptado las tablas, o si la partida se ha interrumpido y debe continuar.</small>
+						<li><strong><code>(=):</code></strong> <small>Combine both symbols: the player offers
+							a draw, and the game is interrupted; the result indicator must be read to determine
+							if the draw has been accepted, or if the game has been interrupted and must be
+							continued.</small>
 						</li>
 					</ul>
-					<p><strong>Ejemplos</strong>, combinados con valoración del movimiento:
+					<p><strong>Examples</strong>, combined with movement assessment:
 					</p>
 					<div class="w3-light-grey">
 						<ul class="exemple">
-							<li><strong><code> ?!(=):</code></strong> <small>Combina valoración de movimiento dudoso, y el
-									jugador ofrece tablas, y la partida se interrumpe; debe leerse el indicador de resultado
-									para determinar si las tablas han sido aceptadas.</small>
+							<li><strong><code> ?!(=):</code></strong> <small>Combine dubious move rating,
+								the player offers a draw, and the game is interrupted; the result indicator
+								must be read to determine if the draw has been accepted.</small>
 							</li>
-							<li><strong><code> ◇(=):</code></strong> <small>Combina valoración de movimiento forzado, y el
-									jugador ofrece tablas, y la partida se interrumpe; debe leerse el indicador de resultado
-									para determinar si las tablas han sido aceptadas.</small>
+							<li><strong><code> ◇(=):</code></strong> <small>Combine forced move rating,
+								the player offers a draw, and the game is interrupted; the result indicator
+								must be read to determine if the draw has been accepted.</small>
 							</li>
-							<li><strong><code> (=)</code></strong> <small>Ofrece tablas. Si no hay valoración del
-									movimiento, aparece detrás de un espacio; si no lo sigue el carácter de dos puntos
-									(<q><code>:</code></q>), significa que no se han aceptado las tablas y prosiguen los
-									movimientos.</small>
+							<li><strong><code> (=)</code></strong> <small>The player offers a draw. If
+								there is no valuation of the move, it appears after a space; if it is
+								not followed by a colon (<q><code>:</code></q>), it means that the draw
+								have not been accepted and the moves continue.</small>
 							</li>
 						</ul>
 					</div>
@@ -926,24 +944,26 @@
 
 			<section class="w3-container">
 				<h3 class="w3-container w3-pale-green w3-center header2 w3-text-grey">Sequence of moves</h3>
-				<p>Una <a href="glossary.html#Jugada" class="cescacs" target="_blank">jugada</a> es una <strong>pareja
-					de movimientos</strong>. Cada jugada se escribe <strong>en una línea</strong>, numeradas
-					empezando por el <strong>número uno</strong>. El <strong>número de la jugada se separa con un punto
-					y un espacio del movimiento de las <i>blancas</i></strong>. A continuación, <strong>separado por
-					una coma y un espacio</strong>, el movimiento de las <i>negras</i>. Solo la última <i>jugada</i>
-					puede tener un único movimiento, cuando el último movimiento de la partida fue un movimiento de las
-					<i>blancas</i>. La última jugada, sea un último movimiento de las <i>blancas</i>, o bien
-					de las las <i>negras</i>, acabará con el símbolo de finalización (<q><strong>:</strong></q> dos
-					puntos), o bien con el símbolo de jaque mate (<q><strong>#</strong></q> almohadilla).
+				<p>A <a href="glossary.html#Jugada" class="cescacs" target="_blank">move</a> is a
+					<strong>pair of White/Black moves</strong>. Each move is written on
+					<trong>a line</trong>, numbered starting with the number one, but also, all
+					the moves can be written to form a single line. The <strong>move number is
+					separated by a dot and a space from <i>White's move</i></strong>. Then,
+					<strong>separated by a comma and a space, <i>Black's move</i></strong>. Only the
+					last <i>move</i> can be a single move, when the last move of the
+					game was a move by <i>White</i>. The last move, whether it is <i>White</i>'s
+					last move or <i>Black</i>'s last move, shall end with the end symbol
+					(<q><strong>:</strong></q> colon) or with the checkmate symbol
+					(<q><strong>#</strong></q> pad).
 				</p>
-				<section class="w3-container half">
+				<section id="ResultatPartida" class="w3-container half">
 					<h4 class="w3-container w3-pale-yellow w3-center">
 						<span>Final result game score</span>
 					</h4>
-					<p>La última línea, después de la última jugada acabada con el <strong>símbolo de
-						finalización</strong>, o con el <strong>símbolo de jaque mate</strong>, es el
-						<strong>indicador final del resultado</strong> de la partida; admite cinco diferentes valores
-						posibles, y uno adicional para las partidas no finalizadas:
+					<p>The last line, after the last move ended with the <strong>completion symbol</strong>,
+						or with the <strong>checkmate symbol</strong>, is the <strong>final indicator of
+							the outcome of the game</strong>; it supports five different possible values,
+						and an additional one for non-completed games:
 					</p>
 					<ul>
 						<li><strong><code>3-0</code></strong> <small><i>White</i> wins.</small>
@@ -961,6 +981,16 @@
 						<li><strong><code>*</code></strong> <small>(asterisk) Unfinished game.</small>
 						</li>
 					</ul>
+					<aside>
+						<p>Usually, a match between two players is made up of two games, exchanging
+							white. When it is necessary to determine a winner, a minimum difference
+							of five points is required, raffling again which player plays white after
+							each pair of games, or ceding white to whoever has fewer points.
+						</p>
+						<p>Matches won can be counted, and a match with a difference of less than
+							five points between players would be unfinished, or a tie by agreement.
+						</p>
+					</aside>
 				</section>
 				<section class="w3-container half">
 					<h4 class="w3-container w3-pale-yellow w3-center">

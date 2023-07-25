@@ -808,41 +808,49 @@
 						<small><a href="glossary.html#Escac" class="cescacs" target="_blank"><i>Escac</i></a>.</small>
 						<ul class="aclariment">
 							<li><strong><code style="font-size:larger;">+∞</code></strong>
-								<small><a href="glossary.html#EscacDistancia" class="cescacs" target="_blank"><i>Escac
-									a distància</i></a>, des d'un <i>hexcac</i> ortogonal o diagonal a la posició del
-									<i>Rei</i>, pero no adjacent. El símbol és opcionalment alternatiu a l'indicador
-									d'escac per a agregar informació.
+								<small><a href="glossary.html#EscacDistancia" class="cescacs"
+										target="_blank"><i>Escac a distància</i></a>, des d'un <i>hexcac</i>
+									ortogonal o diagonal a la posició del <i>Rei</i>, pero no adjacent.
+									El símbol és opcionalment alternatiu a l'indicador d'escac per a agregar
+									informació.
 								</small>
 							</li>								  
 							<li><strong><code style="font-size:larger;">+^</code></strong>
-								<small><a href="glossary.html#EscacContigu" class="cescacs" target="_blank"><i>Escac
-											contigu</i></a>, des d'un <i>hexcac</i> adjacent ortogonalment o diagonalment,
-											o bé <a href="glossary.html#EscacSaltCavall" class="cescacs"
-											target="_blank"><i>escac a salt de cavall</i></a>;
-									El símbol és opcionalment alternatiu a l'indicador d'<i>escac</i> per afegir informació.
-									Indica que s'ha de moure el <i>Rei</i> o capturar la peça que amenaça.</small>
+								<small><a href="glossary.html#EscacContigu" class="cescacs"
+										target="_blank"><i>Escac contigu</i></a>, des d'un <i>hexcac</i>
+									adjacent ortogonalment o diagonalment, o bé
+									<a href="glossary.html#EscacSaltCavall" class="cescacs"
+											target="_blank"><i>escac a salt de cavall</i></a>.
+									El símbol és opcionalment alternatiu a l'indicador d'<i>escac</i>
+									per afegir informació. Indica que s'ha de moure el <i>Rei</i> o
+									capturar la peça que amenaça.
+								</small>
 
 							</li>
 							<li><strong><code style="font-size:larger;">++</code></strong>
-								<small><a href="glossary.html#EscacDoble" class="cescacs" target="_blank"><i>Escac
-											doble</i></a>, símbol opcionalment alternatiu a l'indicador d'<i>escac</i>
-									per afegir informació. Indica que necessàriament s'ha de moure el <i>Rei</i>.</small>
+								<small><a href="glossary.html#EscacDoble" class="cescacs"
+									target="_blank"><i>Escac doble</i></a>, símbol opcionalment alternatiu
+									a l'indicador d'<i>escac</i> per afegir informació. Indica que
+									necessàriament s'ha de moure el <i>Rei</i>.
+								</small>
 							</li>
 						</ul>
 						<aside>
-							<ul class="aclariment">
-								<li><small>Els indicadors <strong><code style="font-size:larger;">+^</code></strong> i
-									<strong><code style="font-size:larger;">++</code></strong> són progressivament pitjors
-									situacions d'escac, doncs a <i>l'escac amb contacte</i> o <i>immediat</i> queda
-									l'alternativa de capturar la peça que amenaça, però en un <i>escac doble</i> ja només
-									queda l'alternativa de moure el <i>Rei</i>.</small>
-								</li>
-							</ul>
+							<small>Els indicadors <strong><code style="font-size:larger;">+∞</code></strong>,
+								<strong><code style="font-size:larger;">+^</code></strong> i 
+								<strong><code style="font-size:larger;">++</code></strong> són progressivament
+								pitjors situacions d'escac, ja que en l'<i>escac a distància</i> existeix l'opció
+								de cobrir-se amb una altra peça o capturar la peça que amenaça, en
+								l'<i>escac contigu</i> o en l'<i>escac a salt de cavall</i> no hi ha opció per a
+								cobrir-se, però encara existeix l'alternativa de capturar la peça que amenaça,
+								però en un <i>escac doble</i> ja només queda l'alternativa de moure el <i>Rei</i>.
+							</small>
 						</aside>
 					</li>
 					<li><strong><code style="font-size:larger;">#</code></strong>
-						<small><a href="glossary.html#EscacMat" class="cescacs" target="_blank">Escac i mat</a>. Aquest
-							indicador també actua com a indicador de final de partida.</small>
+						<small><a href="glossary.html#EscacMat" class="cescacs" target="_blank">Escac i mat</a>.
+							Aquest indicador també actua com a indicador de final de partida.
+						</small>
 					</li>
 				</ul>
 			</section>
@@ -896,25 +904,26 @@
 								</li>
 							</ul>
 						</li>
-						<li><strong><code>(=):</code></strong> <small>Combina ambdós símbols: el jugador ofereix taules, i
-								són acceptades.</small>
+						<li><strong><code>(=):</code></strong> <small>el jugador ofereix taules, i la partida
+							s'interromp; ha de llegir-se l'indicador de resultat per a determinar si s'han
+							acceptat les taules, o si la partida s'ha interromput i ha de continuar.</small>
 						</li>
 					</ul>
 					<p><strong>Exemples</strong>, combinats amb valoració del moviment:
 					</p>
 					<div class="w3-light-grey">
 						<ul class="exemple">
-							<li><strong><code> ?!(=):</code></strong> <small>Combina valoració de moviment dubtós, i el
-									jugador ofereix taules, que s'accepten.</small>
+							<li><strong><code> ?!(=):</code></strong> <small>Combina valoració de moviment dubtós, el
+									jugador ofereix taules i la partida s'interromp; ha de llegir-se l'indicador de
+									resultat per a determinar si s'han acceptat les taules.</small>
 							</li>
-							<li><strong><code> ◇(=):</code></strong> <small>Combina valoració de moviment forçat, i el
-									jugador ofereix taules, que s'accepten.</small>
+							<li><strong><code> ◇(=):</code></strong> <small>Combina valoració de moviment forçat, el
+									jugador ofereix taules i la partida s'interromp; ha de llegir-se l'indicador de
+									resultat per a determinar si s'han acceptat les taules.</small>
 							</li>
 							<li><strong><code> (=)</code></strong> <small>Ofereix taules. Si no n'hi ha valoració del
 									moviment, apareix darrera d'un espai, i si no el segueix el caràcter de dos punts
-									(<q><code>:</code></q>), no s'accepten les taules i segueixen els moviments. També
-									podria acabar en dos punts però no acceptar-se les taules, si la partida s'interromp
-									en aquest punt; cal llegir el indicador final de resultat.
+									(<q><code>:</code></q>), no s'accepten les taules i segueixen els moviments.									
 								</small>
 							</li>
 						</ul>
@@ -934,7 +943,7 @@
 					(<strong>:</strong> dos punts), o bé amb <strong>símbol d'escac i mat</strong> (<strong>#</strong>
 					coixinet o quadradet).
 				</p>
-				<section class="w3-container half">
+				<section id="ResultatPartida" class="w3-container half">
 					<h4 class="w3-container w3-pale-yellow w3-center"><span>Indicador final del resultat</span></h4>
 					<p>L'última línia, després de l'última jugada acabada amb el
 						<strong>símbol de finalització</strong>, o amb el <strong>símbol d'escac i mat</strong>, és
@@ -958,6 +967,17 @@
 						<li><strong><code>*</code></strong> <small>(asterisc) Partida inacabada.</small>
 						</li>
 					</ul>
+					<aside>
+						<p>Generalment, un encontre entre dos jugadors està format per dues partides, intercanviant
+							les blanques. Quan és necessari determinar un guanyador s'exigeix una diferència mínima
+							de cinc punts, sortejant de nou quin jugador juga amb blanques després de cada parella
+							de partides, o cedint les blanques a qui portés menys punts.
+						</p>
+						<p>Es poden comptar els encontres guanyats, i un encontre amb una diferència menor a cinc
+							punts entre tots dos jugadors estarà inacabat, o pot acordar-se acabar l'encontre com
+							un empat.
+						</p>
+					</aside>
 				</section>
 				<section class="w3-container half">
 					<h4 class="w3-container w3-pale-yellow w3-center"><span>Excepció: continuació de partides</span>

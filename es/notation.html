@@ -834,7 +834,7 @@
 								<small><a href="glossary.html#EscacDoble" class="cescacs"
 										target="_blank"><i>Jaque doble</i></a>. El símbolo es opcionalmente
 									alternativo al indicador de <i>jaque</i> para agregar información.
-									Indica que necesariamente se tiene que mover el Rey</small>
+									Indica que necesariamente se tiene que mover el <i>Rey</i></small>
 							</li>
 						</ul>
 						<aside>
@@ -843,15 +843,17 @@
 								<strong><code style="font-size:larger;">++</code></strong> son progresivamente
 								peores situaciones de jaque, puesto que en el <i>jaque a distancia</i> existe
 								la opción de cubrirse con otra pieza o capturar la pieza que amenaza, en el
-								<i>jaque con contacto</i> o <i>inmediato</i> no hay opción para cubrirse, pero
-								aún existe la alternativa de capturar la pieza que amenaza,
+								<i>jaque contiguo</i> o <i>jaque a salto de caballo</i> no hay opción para
+								cubrirse, pero aún existe la alternativa de capturar la pieza que amenaza,
 								pero en un <i>jaque doble</i> ya solo queda la alternativa de mover el
-								<i>Rey</i>.</small>
+								<i>Rey</i>.
+							</small>
 						</aside>
 					</li>
 					<li><strong><code style="font-size:larger;">#</code></strong>
-						<small><a href="glossary.html#EscacMat" class="cescacs" target="_blank">Jaqe mate</a>. Este
-							indicador también actúa como indicador de final de partida.</small>
+						<small><a href="glossary.html#EscacMat" class="cescacs" target="_blank">Jaqe mate</a>.
+							Este indicador también actúa como indicador de final de partida.
+						</small>
 					</li>
 				</ul>
 			</section>
@@ -915,11 +917,11 @@
 					</p>
 					<div class="w3-light-grey">
 						<ul class="exemple">
-							<li><strong><code> ?!(=):</code></strong> <small>Combina valoración de movimiento dudoso, y el
+							<li><strong><code> ?!(=):</code></strong> <small>Combina valoración de movimiento dudoso, el
 									jugador ofrece tablas, y la partida se interrumpe; debe leerse el indicador de resultado
 									para determinar si las tablas han sido aceptadas.</small>
 							</li>
-							<li><strong><code> ◇(=):</code></strong> <small>Combina valoración de movimiento forzado, y el
+							<li><strong><code> ◇(=):</code></strong> <small>Combina valoración de movimiento forzado, el
 									jugador ofrece tablas, y la partida se interrumpe; debe leerse el indicador de resultado
 									para determinar si las tablas han sido aceptadas.</small>
 							</li>
@@ -944,7 +946,7 @@
 					de las las <i>negras</i>, acabará con el símbolo de finalización (<q><strong>:</strong></q> dos
 					puntos), o bien con el símbolo de jaque mate (<q><strong>#</strong></q> almohadilla).
 				</p>
-				<section class="w3-container half">
+				<section id="ResultatPartida" class="w3-container half">
 					<h4 class="w3-container w3-pale-yellow w3-center">
 						<span>Indicador final del resultado</span>
 					</h4>
@@ -969,6 +971,18 @@
 						<li><strong><code>*</code></strong> <small>(asterisco) Partida inacabada.</small>
 						</li>
 					</ul>
+					<aside>
+						<p>Generalmente, un encuentro entre dos jugadores está formado por dos partidas,
+							intercambiando las blancas. Cuando es necesario determinar un ganador se exige
+							una diferencia mínima de cinco puntos, sorteando de nuevo qué jugador juega con
+							blancas después de cada pareja de partidas, o cediendo las blancas a quien
+							llevase menos puntos.
+						</p>
+						<p>Se pueden contar los encuentros ganados, y un encuentro con una diferencia menor
+							a cinco puntos entre ambos jugadores estará inacabado, o puede acordarse acabar
+							el encuentro como un empate.
+						</p>
+					</aside>
 				</section>
 				<section class="w3-container half">
 					<h4 class="w3-container w3-pale-yellow w3-center">Excepción: continuación de partidas</h4>
