@@ -348,6 +348,12 @@ ul.exemple>li {
   list-style-type: none;
 }
 
+ul.twocolumns {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
 ul.aclariment {
   line-height: 1.8ex;
 }
@@ -391,6 +397,11 @@ p.note {
 
 span.note {
   font-size: 84%;
+}
+
+aside.compact {
+  margin-top:4px;
+  margin-bottom:4px;
 }
 
 i.cescacs {

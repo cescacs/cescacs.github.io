@@ -24,6 +24,7 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../w3.css">
+	<link rel="stylesheet" type="text/css" href="../w3-colors-win8.css">
 	<link rel="stylesheet" type="text/css" href="../cescacs.css">
 
 	<link rel="preload" as="image" href="../img/lasaosa.PC310001.png">
@@ -96,10 +97,12 @@
 					<div class="w3-dropdown-hover w3-right" style="position:absolute ;">
 						<button class="w3-button"><img src="../img/uk.png" class="lang" alt="English"></button>
 						<div class="w3-dropdown-content w3-bar-block w3-border" style="right:0;">
-							<a href="../ca/notation.html" class="w3-bar-item w3-button w3-mobile menubar" hreflang="ca"><img src="../img/ca.png"
-								class="lang" alt="Català"> Català</a>
-							<a href="../es/notation.html" class="w3-bar-item w3-button w3-mobile menubar" hreflang="es"><img src="../img/esp.png"
-								class="lang" alt="Español"> Español</a>
+							<a href="../ca/notation.html" class="w3-bar-item w3-button w3-mobile menubar"
+								hreflang="ca"><img src="../img/ca.png" class="lang" alt="Català">
+								<span lang="ca" translate="no">Català</span></a>
+							<a href="../es/notation.html" class="w3-bar-item w3-button w3-mobile menubar"
+								hreflang="es"><img src="../img/esp.png" class="lang" alt="Español">
+								<span lang="es" translate="no">Español</span></a>
 							<div style="width:12em; display:inline-block;">
 								<div style="width:32px; float: left;text-align: right; vertical-align: middle;">
 									<i class='fab fa-google' style='font-size:16px;color:blue'></i>
@@ -132,8 +135,8 @@
 			</p>
 		</div>
 		<!-- Piece identification letters -->
-		<section class="w3-container">
-			<h2 id="LletraIdentificativa" class="w3-container w3-pale-green w3-center">Piece identification letters
+		<section id="LletraIdentificativa" class="w3-container">
+			<h2 class="w3-container w3-pale-green w3-center">Piece identification letters
 			</h2>
 			<p>Each of the chess pieces is identified by a letter. This letter, in <i class="cescacs">C'escacs</i>,
 				and in the algebraic notation <a href="glossary.html#CTL-AN" class="cescacs">CTL-AN</a>, is invariant
@@ -231,7 +234,6 @@
 				</p>
 			</section>
 		</section>
-
 		<!-- C'escacs board -->
 		<section id="hexcaquer" class="w3-container">
 			<h2 class="w3-container w3-pale-green w3-center">C'escacs board</h2>
@@ -429,7 +431,7 @@
 
 				<!-- Knight jump -->
 				<div class="w3-container half">
-					<aside>
+					<aside class="compact">
 						<h4 class="w3-container w3-pale-yellow w3-center w3-text-grey"><span>Movement of the knight</span></h4>
 						<p>The <i>knight movement</i> consists of the combination of a <i>diagonal</i> and an <i>orthogonal</i>
 							 movement: for each <i>diagonal movement</i> there are two possible <i>orthogonals</i>; the
@@ -445,20 +447,20 @@
 								<ul class="exemple">
 									<li>
 										<table class="w3-table w3-bordered w3-responsive w3-centered w3-small">
-									<tr>
-										<td><code>C13</code></td>
-										<td><code>C15</code></td>
-										<td><code>I13</code></td>
-										<td><code>I15</code></td>
-										<td><code>E9</code></td>
-										<td><code>D10</code></td>
-										<td><code>E19</code></td>
-										<td><code>D18</code></td>
-										<td><code>G9</code></td>
-										<td><code>H10</code></td>
-										<td><code>G19</code></td>
-										<td><code>H18</code></td>
-									</tr>
+											<tr>
+												<td style="font-weight:bold;"><code>C13</code></td>
+												<td style="font-weight:bold;"><code>C15</code></td>
+												<td style="font-weight:bold;"><code>D10</code></td>
+												<td style="font-weight:bold;"><code>E9</code></td>
+												<td style="font-weight:bold;"><code>D18</code></td>
+												<td style="font-weight:bold;"><code>E19</code></td>
+												<td style="font-weight:bold;"><code>G9</code></td>
+												<td style="font-weight:bold;"><code>H10</code></td>
+												<td style="font-weight:bold;"><code>G19</code></td>
+												<td style="font-weight:bold;"><code>H18</code></td>
+												<td style="font-weight:bold;"><code>I13</code></td>
+												<td style="font-weight:bold;"><code>I15</code></td>
+											</tr>
 										</table>
 									</li>
 								</ul>
@@ -470,29 +472,29 @@
 								<ul class="exemple">
 									<li>
 										<table class="w3-table w3-bordered w3-responsive w3-centered w3-small">
-									<tr><td colspan="12" style="font-weight:bold;">F14</td></tr>
-									<tr>
-										<td colspan="2" class="w3-amber w3-opacity"><code>D14</code></td>
-										<td colspan="2" class="w3-amber w3-opacity"><code>H14</code></td>
-										<td colspan="2" class="w3-amber w3-opacity"><code>E11</code></td>
-										<td colspan="2" class="w3-amber w3-opacity"><code>E17</code></td>
-										<td colspan="2" class="w3-amber w3-opacity"><code>G11</code></td>
-										<td colspan="2" class="w3-amber w3-opacity"><code>G17</code></td>
-									</tr>
-									<tr>
-										<td style="font-weight:bold;"><code>C13</code></td>
-										<td style="font-weight:bold;"><code>C15</code></td>
-										<td style="font-weight:bold;"><code>I13</code></td>
-										<td style="font-weight:bold;"><code>I15</code></td>
-										<td style="font-weight:bold;"><code>E9</code></td>
-										<td style="font-weight:bold;"><code>D10</code></td>
-										<td style="font-weight:bold;"><code>E19</code></td>
-										<td style="font-weight:bold;"><code>D18</code></td>
-										<td style="font-weight:bold;"><code>G9</code></td>
-										<td style="font-weight:bold;"><code>H10</code></td>
-										<td style="font-weight:bold;"><code>G19</code></td>
-										<td style="font-weight:bold;"><code>H18</code></td>
-									</tr>
+											<tr><td colspan="12" style="font-weight:bold;">F14</td></tr>
+											<tr>
+												<td colspan="2" class="w3-amber w3-opacity"><code>D14</code></td>
+												<td colspan="2" class="w3-amber w3-opacity"><code>E11</code></td>
+												<td colspan="2" class="w3-amber w3-opacity"><code>E17</code></td>
+												<td colspan="2" class="w3-amber w3-opacity"><code>G11</code></td>
+												<td colspan="2" class="w3-amber w3-opacity"><code>G17</code></td>
+												<td colspan="2" class="w3-amber w3-opacity"><code>H14</code></td>
+											</tr>
+											<tr>
+												<td style="font-weight:bold;"><code>C13</code></td>
+												<td style="font-weight:bold;"><code>C15</code></td>
+												<td style="font-weight:bold;"><code>D10</code></td>
+												<td style="font-weight:bold;"><code>E9</code></td>
+												<td style="font-weight:bold;"><code>D18</code></td>
+												<td style="font-weight:bold;"><code>E19</code></td>
+												<td style="font-weight:bold;"><code>G9</code></td>
+												<td style="font-weight:bold;"><code>H10</code></td>
+												<td style="font-weight:bold;"><code>G19</code></td>
+												<td style="font-weight:bold;"><code>H18</code></td>
+												<td style="font-weight:bold;"><code>I13</code></td>
+												<td style="font-weight:bold;"><code>I15</code></td>
+											</tr>
 										</table>
 									</li>
 								</ul>
@@ -505,22 +507,22 @@
 								<table class="w3-table w3-bordered w3-responsive w3-centered w3-small">
 									<tr><td colspan="12" style="font-weight:bold;">F14</td></tr>
 									<tr>
-										<td colspan="2" class="w3-amber w3-opacity"><code>F12</code></td>
-										<td colspan="2" class="w3-amber w3-opacity"><code>F16</code></td>
 										<td colspan="2" class="w3-amber w3-opacity"><code>E13</code></td>
 										<td colspan="2" class="w3-amber w3-opacity"><code>E15</code></td>
+										<td colspan="2" class="w3-amber w3-opacity"><code>F12</code></td>
+										<td colspan="2" class="w3-amber w3-opacity"><code>F16</code></td>
 										<td colspan="2" class="w3-amber w3-opacity"><code>G13</code></td>
 										<td colspan="2" class="w3-amber w3-opacity"><code>G15</code></td>
 									</tr>
 									<tr>
-										<td style="font-weight:bold;"><code>E9</code></td>
-										<td style="font-weight:bold;"><code>G9</code></td>
-										<td style="font-weight:bold;"><code>E19</code></td>
-										<td style="font-weight:bold;"><code>G19</code></td>
 										<td style="font-weight:bold;"><code>C13</code></td>
 										<td style="font-weight:bold;"><code>D10</code></td>
 										<td style="font-weight:bold;"><code>C15</code></td>
 										<td style="font-weight:bold;"><code>D18</code></td>
+										<td style="font-weight:bold;"><code>E9</code></td>
+										<td style="font-weight:bold;"><code>G9</code></td>
+										<td style="font-weight:bold;"><code>E19</code></td>
+										<td style="font-weight:bold;"><code>G19</code></td>
 										<td style="font-weight:bold;"><code>H10</code></td>
 										<td style="font-weight:bold;"><code>I13</code></td>
 										<td style="font-weight:bold;"><code>H18</code></td>
@@ -529,7 +531,7 @@
 								</table>
 							</li>
 						</ul>
-						<aside style="border:aquamarine solid 1px">
+						<aside class="compact" style="border:aquamarine solid 1px">
 							<p class="note"> Note that the intermediate positions, marked in amber,
 								are only shown as part of the jump calculation.
 							</p>
@@ -539,7 +541,7 @@
 
 				<!-- Knight Ride -->
 				<div class="w3-container half">
-					<aside>
+					<aside class="compact">
 						<h4 class="w3-container w3-pale-yellow w3-center w3-text-grey">Knight ride</h4>
 						<p>For the <i>knight ride</i>, the twelve <i>knight jumps</i> give rise to twelve
 							different <i>rides</i>, applying another <i>knight jump</i> with exactly the
@@ -552,53 +554,53 @@
 									<tr><td colspan="12" style="font-weight:bold;">F14</td></tr>
 									<tr>
 										<td colspan="2" class="w3-amber w3-opacity"><code>D14</code></td>
-										<td colspan="2" class="w3-amber w3-opacity"><code>H14</code></td>
 										<td colspan="2" class="w3-amber w3-opacity"><code>E11</code></td>
 										<td colspan="2" class="w3-amber w3-opacity"><code>E17</code></td>
 										<td colspan="2" class="w3-amber w3-opacity"><code>G11</code></td>
 										<td colspan="2" class="w3-amber w3-opacity"><code>G17</code></td>
+										<td colspan="2" class="w3-amber w3-opacity"><code>H14</code></td>
 									</tr>
 									<tr>
 										<td class="w3-text-red"><code>C13</code></td>
 										<td class="w3-text-red"><code>C15</code></td>
-										<td class="w3-text-red"><code>I13</code></td>
-										<td class="w3-text-red"><code>I15</code></td>
-										<td class="w3-text-red"><code>E9</code></td>
 										<td class="w3-text-red"><code>D10</code></td>
-										<td class="w3-text-red"><code>E19</code></td>
+										<td class="w3-text-red"><code>E9</code></td>
 										<td class="w3-text-red"><code>D18</code></td>
+										<td class="w3-text-red"><code>E19</code></td>
 										<td class="w3-text-red"><code>G9</code></td>
 										<td class="w3-text-red"><code>H10</code></td>
 										<td class="w3-text-red"><code>G19</code></td>
 										<td class="w3-text-red"><code>H18</code></td>
+										<td class="w3-text-red"><code>I13</code></td>
+										<td class="w3-text-red"><code>I15</code></td>
 									</tr>
 									<tr>
 										<td class="w3-amber w3-opacity"><code>A13</code></td>
 										<td class="w3-amber w3-opacity"><code>A15</code></td>
-										<td class="w3-amber w3-opacity"><code>L13</code></td>
-										<td class="w3-amber w3-opacity"><code>L15</code></td>
-										<td class="w3-amber w3-opacity"><code>D6</code></td>
 										<td class="w3-amber w3-opacity"><code>C7</code></td>
-										<td class="w3-amber w3-opacity"><code>D22</code></td>
+										<td class="w3-amber w3-opacity"><code>D6</code></td>
 										<td class="w3-amber w3-opacity"><code>C21</code></td>
+										<td class="w3-amber w3-opacity"><code>D22</code></td>
 										<td class="w3-amber w3-opacity"><code>H6</code></td>
 										<td class="w3-amber w3-opacity"><code>I7</code></td>
 										<td class="w3-amber w3-opacity"><code>H22</code></td>
 										<td class="w3-amber w3-opacity"><code>I21</code></td>
+										<td class="w3-amber w3-opacity"><code>L13</code></td>
+										<td class="w3-amber w3-opacity"><code>L15</code></td>
 									</tr>
 									<tr>
 										<td style="font-weight:bold;"><code>T12</code></td>
 										<td style="font-weight:bold;"><code>T16</code></td>
-										<td style="font-weight:bold;"><code>X12</code></td>
-										<td style="font-weight:bold;"><code>X16</code></td>
-										<td style="font-weight:bold;"><code>D4</code></td>
 										<td style="font-weight:bold;"><code>B6</code></td>
-										<td style="font-weight:bold;"><code>D24</code></td>
+										<td style="font-weight:bold;"><code>D4</code></td>
 										<td style="font-weight:bold;"><code>B22</code></td>
+										<td style="font-weight:bold;"><code>D24</code></td>
 										<td style="font-weight:bold;"><code>H4</code></td>
 										<td style="font-weight:bold;"><code>K6</code></td>
 										<td style="font-weight:bold;"><code>H24</code></td>
 										<td style="font-weight:bold;"><code>K22</code></td>
+										<td style="font-weight:bold;"><code>X12</code></td>
+										<td style="font-weight:bold;"><code>X16</code></td>
 									</tr>
 								</table>
 							</li>
@@ -613,50 +615,50 @@
 								<table class="w3-table w3-bordered w3-responsive w3-centered w3-small">
 									<tr><td colspan="12" style="font-weight:bold;">F14</td></tr>
 									<tr>
-										<td colspan="2" class="w3-amber w3-opacity"><code>F12</code></td>
-										<td colspan="2" class="w3-amber w3-opacity"><code>F16</code></td>
 										<td colspan="2" class="w3-amber w3-opacity"><code>E13</code></td>
 										<td colspan="2" class="w3-amber w3-opacity"><code>E15</code></td>
+										<td colspan="2" class="w3-amber w3-opacity"><code>F12</code></td>
+										<td colspan="2" class="w3-amber w3-opacity"><code>F16</code></td>
 										<td colspan="2" class="w3-amber w3-opacity"><code>G13</code></td>
 										<td colspan="2" class="w3-amber w3-opacity"><code>G15</code></td>
 									</tr>
 									<tr>
-										<td class="w3-text-red"><code>E9</code></td>
-										<td class="w3-text-red"><code>G9</code></td>
-										<td class="w3-text-red"><code>E19</code></td>
-										<td class="w3-text-red"><code>G19</code></td>
 										<td class="w3-text-red"><code>C13</code></td>
 										<td class="w3-text-red"><code>D10</code></td>
 										<td class="w3-text-red"><code>C15</code></td>
 										<td class="w3-text-red"><code>D18</code></td>
+										<td class="w3-text-red"><code>E9</code></td>
+										<td class="w3-text-red"><code>G9</code></td>
+										<td class="w3-text-red"><code>E19</code></td>
+										<td class="w3-text-red"><code>G19</code></td>
 										<td class="w3-text-red"><code>H10</code></td>
 										<td class="w3-text-red"><code>I13</code></td>
 										<td class="w3-text-red"><code>H18</code></td>
 										<td class="w3-text-red"><code>I15</code></td>
 									</tr>
 									<tr>
-										<td class="w3-amber w3-opacity"><code>E7</code></td>
-										<td class="w3-amber w3-opacity"><code>G7</code></td>
-										<td class="w3-amber w3-opacity"><code>E21</code></td>
-										<td class="w3-amber w3-opacity"><code>G21</code></td>
 										<td class="w3-amber w3-opacity"><code>B12</code></td>
 										<td class="w3-amber w3-opacity"><code>C9</code></td>
 										<td class="w3-amber w3-opacity"><code>B16</code></td>
 										<td class="w3-amber w3-opacity"><code>C19</code></td>
+										<td class="w3-amber w3-opacity"><code>E7</code></td>
+										<td class="w3-amber w3-opacity"><code>G7</code></td>
+										<td class="w3-amber w3-opacity"><code>E21</code></td>
+										<td class="w3-amber w3-opacity"><code>G21</code></td>
 										<td class="w3-amber w3-opacity"><code>I9</code></td>
 										<td class="w3-amber w3-opacity"><code>K12</code></td>
 										<td class="w3-amber w3-opacity"><code>I19</code></td>
 										<td class="w3-amber w3-opacity"><code>K16</code></td>
 									</tr>
 									<tr>
-										<td style="font-weight:bold;"><code>D4</code></td>
-										<td style="font-weight:bold;"><code>H4</code></td>
-										<td style="font-weight:bold;"><code>D24</code></td>
-										<td style="font-weight:bold;"><code>H24</code></td>
 										<td style="font-weight:bold;"><code>T12</code></td>
 										<td style="font-weight:bold;"><code>B6</code></td>
 										<td style="font-weight:bold;"><code>T16</code></td>
 										<td style="font-weight:bold;"><code>B22</code></td>
+										<td style="font-weight:bold;"><code>D4</code></td>
+										<td style="font-weight:bold;"><code>H4</code></td>
+										<td style="font-weight:bold;"><code>D24</code></td>
+										<td style="font-weight:bold;"><code>H24</code></td>									
 										<td style="font-weight:bold;"><code>K6</code></td>
 										<td style="font-weight:bold;"><code>X12</code></td>
 										<td style="font-weight:bold;"><code>K22</code></td>
@@ -665,7 +667,7 @@
 								</table>
 							</li>
 						</ul>
-						<aside style="border:aquamarine solid 1px">
+						<aside class="compact" style="border:aquamarine solid 1px">
 							<p class="note"> Note that the intermediate positions, marked in amber,
 								are only shown as part of the jump calculation, but for the movement
 								to be possible, the intermediate jump position must be free, as well
@@ -677,15 +679,20 @@
 
 			</section>
 		</section>
-		<section class="w3-container">
+		<!-- CTL-AN Columns and Transversal Lines Algebraic Notation -->
+		<section id="Notacio" class="w3-container">
 			<h2 class="w3-container w3-pale-green w3-center">Algebraic notation: CTL-AN</h2>
-			The algebraic notation uses <i>CTL coordinates</i>, and for this reason it is called
-			<abbr title="Column and Transversal Line Algebraic Notation">CTL-AN</abbr>, an acronym for
-			<q><i>Column and Transversal Line Algebraic Notation</i></q>. A <strong><i>Reversible Algebraic Notation</i></strong>
-			is used, an extension of the <i>Long Algebraic Notation</i> that includes in the captures, the captured piece.
-			Using a <i>long algebraic notation</i> avoids ambiguities, which are much more frequent than in <i>orthodox chess</i>,
-			and the increase in length due to including the captured piece in the captures is negligible,
-			greatly improving the readability.
+			The algebraic notation uses <i>CTL coordinates</i>,
+			and for this reason it is called
+			<span lang="en" translate="no"><abbr title="Columns and Transversal Lines
+				Algebraic Notation">CTL-AN</abbr></span>, an acronym for
+			<q><i lang="en" translate="no">Columns and Transversal Lines Algebraic
+			Notation</i></q>. A <strong><i>Reversible Algebraic Notation</i></strong>
+			is used, an extension of the <i>Long Algebraic Notation</i> that includes
+			in the captures, the captured piece. Using a <i>long algebraic notation</i>
+			avoids ambiguities, which are much more frequent than in <i>orthodox chess</i>,
+			and the increase in length due to including the captured piece in the captures
+			is negligible, greatly improving the readability.
 			<p>The <i>CTL-AN</i> notation is referred to as <a href="glossary.html#CTL-FAN" class="cescacs" target="_blank">CTL-FAN</a>
 				when piece-specific Unicode characters are used instead of identification letters.
 			</p>
@@ -787,12 +794,12 @@
 						indicates the target rank of the <i>King</i> and <i>Rook</i>, three characters in
 						the case of double castling, to indicate the ranks of both <i>rooks</i>.
 
-						<aside>The prefixes <q><i class="cescacs">KRK</i></q>, <q><i class="cescacs">KRD</i></q>
-							and <q><i class="cescacs">KRR</i></q> can be changed if in the <a href="#CTL-PGN"
-								class="cescacs">CTL-PGN exchange format</a> the tag
-							<cite><code class="exemple">[Redefine "T@R"]</code></cite> is used, remaining,
-							respectively: <q><i class="cescacs">KTK</i></q>, <q><i class="cescacs">KTD</i></q>
-							and <q><i class="cescacs">KTT</i></q>.
+						<aside class="compact">The prefixes <q><i class="cescacs">KRK</i></q>,
+							<q><i class="cescacs">KRD</i></q> and <q><i class="cescacs">KRR</i></q>
+							can be changed if in the <a href="#CTL-PGN" class="cescacs">CTL-PGN exchange
+								format</a> the tag <cite><code class="exemple">[Redefine "T@R"]</code></cite>
+							is used, remaining, respectively: <q><i class="cescacs">KTK</i></q>,
+							<q><i class="cescacs">KTD</i></q> and <q><i class="cescacs">KTT</i></q>.
 						</aside>
 					</li>
 					<li>The <strong>specific notation for the promotion of a
@@ -892,8 +899,8 @@
 							<i>NAG</i> equivalent: <strong>$7</strong>.</small>
 						</li>
 					</ul>
-					<aside>The rhombus (◇ diamond) is used instead of the square, because the square
-						is often used by computers to indicate an unknown character.
+					<aside class="compact">The rhombus (◇ diamond) is used instead of the square,
+						because the square is often used by computers to indicate an unknown character.
 					</aside>
 				</section>
 				<section class="w3-container half">
@@ -941,7 +948,6 @@
 					</div>
 				</section>
 			</div>
-
 			<section class="w3-container">
 				<h3 class="w3-container w3-pale-green w3-center header2 w3-text-grey">Sequence of moves</h3>
 				<p>A <a href="glossary.html#Jugada" class="cescacs" target="_blank">move</a> is a
@@ -996,29 +1002,32 @@
 					<h4 class="w3-container w3-pale-yellow w3-center">
 						<span>Exception: continuation of games</span>
 					</h4>
-					<p>No siempre la anotación de una partida empieza en la primera jugada; quizás se ha retomado una
-						partida, o parte de una posición ficticia, o sencillamente no se ha anotado desde el comienzo.
-						Para anotar una posición para retomar posteriormente la partida existe el formato
-						<q><strong><a href="#TLPD" class="cescacs"
-									title="Transversal Lines Position Description">TLPD</a></strong></q>
-						(<i lang="en">Transversal Lines Position Description</i>), pero no es propiamente parte de la
-						notación algebraica <i>CTL-AN</i>, y se detalla más abajo.
+					<p>The annotation of a game does not always start with the first move; perhaps
+						a game has been retaken, or part of a fictitious position, or simply has not
+						been annotated from the start. To annotate a position for later retaking the
+						game there is the <q lang="en" translate="no"><strong><a
+							href="#PDTL" class="cescacs"
+							title="Position Description by Transversal Lines">PDTL</a></strong></q>
+						(<i lang="en" translate="no">Position Description by Transversal Lines</i>) format,
+						but it is not properly part of the <i>CTL-AN</i> algebraic notation, and is
+						detailed below.
 					</p>
 					<ol>
-						<li><strong>La primera jugada puede empezar con un movimiento de las <i>negras</i></strong>. En
-							este caso se sustituirá el <strong>movimiento de las blancas con <i>puntos
-									suspensivos</i></strong> (tres puntos), bien usando el carácter Unicode
-							<q><strong>…</strong></q> (U+2026), o usando tres caracteres punto <q>...</q>; a
-							continuación se escribirá una coma, un espacio y el movimiento de las <i>negras</i>.
+						<li>The <strong>first move may begin with a move by <i>Black</i></strong>. In
+							this case <strong>White's move is replaced with a <i>ellipsis</i></strong>
+							(three dots), either by using the Unicode character <q><strong>…</strong></q>
+							(U+2026), or by using three dot characters "...", followed by a comma, a
+							space and <i>Black</i>'s move.
 						</li>
-						<li><strong>La primera jugada no será la número uno</strong>, y se empezará por otro número.
+						<li>The <strong>first move may not be number one</strong>, and will start with
+							another number.
 							<ul>
-								<li>Si <strong>no es conocido el número de jugada</strong> de inicio; se empezará por la
-									<strong>uno</strong>, pero acabando el número <strong>uno</strong> con un
-									interrogante (<q><strong>?</strong></q>), en vez de un punto; la numeración
-									continuará desde este valor; ejemplo:
+								<li>If the <strong>starting move number is not known</strong>, start with
+									<strong>one</strong>, but end the number one with a question mark
+									(<q><strong>?</strong></q>) instead of a dot; the numbering will
+									continue from this value; example:
 									<div class="caixa-exemple-ctl-pgn">
-										<code>1? VF0-F10, RC25-D26
+										<code>1? …, RC25-D26
 											  2. VF10-H14, RD26-H22
 										</code>
 									</div>
@@ -1029,27 +1038,28 @@
 				</section>
 			</section>
 		</section>
-		<section class="w3-container">
-			<h2 id="TLPD" class="w3-container w3-pale-green w3-center">TLPD: Record board position</h2>
+		<!-- Record board position: Position Description by Transversal Lines -->
+		<section id="PDTL" class="w3-container">
+			<h2 class="w3-container w3-pale-green w3-center">PDTL: Record board position</h2>
 			<p>A més de representar els moviments amb la <i>notació algebraica</i>, existeix la necessitat de registrar
 				l'estat d'una partida que s'interromp, per poder retomar-la, tot i que poden existir moltes altres raons
 				per registrar una posició específica del tauler. El format
-				<strong><i lang="en"><abbr title="Transversal Lines Position Description">TLPD</abbr> (Transversal Lines
-						Position Description)</i></strong> descriu una situació de joc amb totes les seves condicions
+				<strong><i lang="en"><abbr title="Position Description by Transversal Lines">PDTL</abbr>
+				(Position Description by Transversal Lines)</i></strong> descriu una situació de joc amb totes les seves condicions
 				<span class="note">tot i que no permet detectar repeticions de les posicions anteriors</span>.
 				Està format per sis components, que se separen amb espais:
 			</p>
 			<ol class="w3-small">
-				<li class="w3-tag w3-pale-yellow"><a href="#TLPDpieces" class="w3-button">Posicionamiento de las
-						piezas</a></li>
-				<li class="w3-tag w3-pale-yellow"><a href="#TLPDTorn" class="w3-button">Turno</a></li>
-				<li class="w3-tag w3-pale-yellow"><a href="#TLPDCastling" class="w3-button">Estado de enroques y salto
-						del rey</a></li>
-				<li class="w3-tag w3-pale-yellow"><a href="#TLPDEnpassant" class="w3-button">Hexcaque de <i>captura al
-							paso</i> o <i>peón esquivo</i></a></li>
-				<li class="w3-tag w3-pale-yellow"><a href="#TLPDMoveCount" class="w3-button">Contador de movimientos</a>
+				<li class="w3-tag w3-pale-yellow"><a href="#PDTLpieces" class="w3-button">Positioning
+					of the pieces</a></li>
+				<li class="w3-tag w3-pale-yellow"><a href="#PDTLTorn" class="w3-button">Turn</a></li>
+				<li class="w3-tag w3-pale-yellow"><a href="#PDTLCastling" class="w3-button"><i>Castling</i>
+					and <i>king's leap</i> status</a></li>
+				<li class="w3-tag w3-pale-yellow"><a href="#PDTLEnpassant" class="w3-button">Hextille of
+					capture <i>in passant</i> or <i>scornful pawn</i></a></li>
+				<li class="w3-tag w3-pale-yellow"><a href="#PDTLMoveCount" class="w3-button">halfmove clock</a>
 				</li>
-				<li class="w3-tag w3-pale-yellow"><a href="#TLPDCounter" class="w3-button">Número de jugada</a></li>
+				<li class="w3-tag w3-pale-yellow"><a href="#PDTLCounter" class="w3-button">Move number</a></li>
 			</ol>
 			<section class="w3-container">
 				<h3 class="w3-container w3-light-grey w3-center w3-text-blue-grey">Example: C'escacs initial setup,
@@ -1059,7 +1069,7 @@
 				</div>
 				<br />
 			</section>
-			<section id="TLPDpieces" class="w3-container w3-half">
+			<section id="PDTLpieces" class="w3-container w3-half">
 				<h3 class="w3-container w3-pale-yellow w3-center">Positioning of the pieces</h3>
 				<p>La posició en l'<i>hexcaquer</i> de les peces s'indica per les <strong>línes transversals</strong>,
 					en una <strong>cadena escrita entre barres oblíques</strong>, on
@@ -1088,14 +1098,14 @@
 						</ul>
 					</li>
 				</ul>
-				<p>El sistema <i>TLPD</i> és notòriament més llarg per descriure la posició de les peces de
+				<p>El sistema <i>PDTL</i> és notòriament més llarg per descriure la posició de les peces de
 					l'<i>hexcaquer</i>, comparat amb el sistema <i>FEN</i> dels <i>escacs ortodoxos</i>. Es pot pensar
 					que és un tant prolix, però s'ha considerat facilitar l'escriptura manual d'una posició, i repassar
 					amb facilitat que sigui correcta; la forma i la mida de l'<i>hexcaquer</i> fan aquesta tasca una
 					mica complexa.
 				</p>
 			</section>
-			<section id="TLPDTorn" class="w3-container w3-half">
+			<section id="PDTLTorn" class="w3-container w3-half">
 				<h3 class="w3-container w3-pale-yellow w3-center">Turn</h3>
 				<p>El torn s'identifica amb una lletra minúscula: <q><strong><code>w</code></strong></q> si és el torn
 					de les <i>blanques</i> (<i lang="en">white</i>), <q><strong><code>b</code></strong></q> si és el
@@ -1103,8 +1113,8 @@
 					perquè sempre comencen les <i>blanques</i>.
 				</p>
 			</section>
-			<section id="TLPDCastling" class="w3-container w3-half">
-				<h3 class="w3-container w3-pale-yellow w3-center">Castling status and king's leap</h3>
+			<section id="PDTLCastling" class="w3-container w3-half">
+				<h3 class="w3-container w3-pale-yellow w3-center"><i>Castling</i> and <i>king's leap</i> status</h3>
 				<p>L'estat es representa fent servir un màxim de sis caràcters; tres per les blanques, i tres per les
 					negres. Els primers caràcters s'escriuen en majúscules, i representen l'estat de les
 					<i>blanques</i>, i a continuació, sense separació, els caràcters per l'estat de les <i>negres</i>,
@@ -1135,7 +1145,7 @@
 				<br />
 			</section>
 			<div class="w3-container" style="padding:0;">
-				<section id="TLPDEnpassant" class="w3-container w3-half">
+				<section id="PDTLEnpassant" class="w3-container w3-half">
 					<h3 class="w3-container w3-pale-yellow w3-center">Hextille of capture <i>in passant</i>
 						or <i>scornful pawn</i>
 					</h3>
@@ -1187,7 +1197,7 @@
 					</ul>
 
 				</section>
-				<section id="TLPDMoveCount" class="w3-container w3-half">
+				<section id="PDTLMoveCount" class="w3-container w3-half">
 					<h3 class="w3-container w3-pale-yellow w3-center">Movement counter (halfmove clock)</h3>
 					<p>El comptador de moviments, que anglès també s'anomena <i lang="en">halfmove clock</i>, comença amb el
 						valor zero, i s'incrementa en cada moviment que no sigui un moviment d'un peó ni una captura; quan
@@ -1199,7 +1209,7 @@
 						setanta-cinc jugades (cent cinquanta moviments), d'aplicació automàtica.
 					</p>
 				</section>
-				<section id="TLPDCounter" class="w3-container w3-half">
+				<section id="PDTLCounter" class="w3-container w3-half">
 					<h3 class="w3-container w3-pale-yellow w3-center">Move number</h3>
 					<p>L'últim número és el número de la jugada actual. Comença amb el valor <strong>u</strong> i
 						s'incrementa després de cada moviment de les <i>negres</i>.
@@ -1207,6 +1217,7 @@
 				</section>
 			</div>
 		</section>
+		<!-- Columns and Transversal Lines - PGN (Portable Game Notation) -->
 		<section id="CTL-PGN" class="w3-container">
 			<h2 class="w3-container w3-pale-green w3-center">CTL-PGN: Exchange format</h2>
 			<p>El format <a href="glossary.html#CTL-PGN" class="cescacs" target="_blank">CTL-PGN</a> enriqueix la
@@ -1247,17 +1258,29 @@
 					<q><i>text entre cometes</i></q>, que és el <strong>valor de l'etiqueta</strong>.
 					Tot registre <i>CTL-PGN</i> sempre ha de començar amb l'etiqueta <strong>Variant</strong>, fent
 					servir el valor <i class="cescacs">C'escacs</i> per l'etiqueta; és
-					l'<strong>etiqueta inicial</strong>:<br />
-					<strong><code>[Variant "C'escacs"]</code></strong><br />
+					l'<strong>etiqueta inicial</strong>:
 				</p>
+				<div class="w3-container w3-win8-violet w3-opacity">				
+					<strong><code>[Variant "C'escacs"]</code></strong>
+				</div>
+				<div class="w3-container note w3-small">
+					<p>It happens to be the case that in the application that allows you to test
+						<i class="cescacs">C'escacs</i> positions, an option is included that
+						calls <i class="cescacs">Grand C'escacs</i>. For this variant, we would
+						use a different label:
+					</p>
+					<div class="w3-container w3-opacity">
+						<strong><code>[Variant "Grand C'escacs"]</code></strong>
+					</div>
+				</div>
 				<section class="w3-container half">
 					<h4 class="w3-container w3-pale-yellow w3-center">
 						<span>Labels for the registration of the game</span>
 					</h4>
-					<p>Si es vol <strong>registar una partida</strong>, després de l'etiqueta inicial, es requereixen
-						les
-						<strong>set etiquetes obligatòries</strong> <i>PGN</i>, que presenten alguna subtil variació.
-						L'ordre d'aquestes etiquetes ha de ser el que aquí es presenta:
+					<p>Si es vol <strong>registar una partida</strong>, després de l'etiqueta inicial,
+						es requereixen les <strong>set etiquetes obligatòries</strong> <i>PGN</i>, que
+						presenten alguna subtil variació. L'ordre d'aquestes etiquetes ha de ser el que
+						aquí es presenta:
 					</p>
 					<ul>
 						<li><strong>Event</strong> <small>Nom de l'event; si és desconegut <q><strong>?</strong></q>, si
@@ -1291,9 +1314,10 @@
 								<li><code>[Date "2031-??-??"]</code></li>
 								<li><code>[Date "201?-??-??"]</code></li>
 							</ul>
-							<aside>Observar que es fa servir el guió polivalent (U+002D) com a separador
-								en el format de la data, en comptes del punt que fa servir <i>PGN</i>,
-								senzillament per ser un format més acord amb els estàndards de data.
+							<aside class="compact">Observar que es fa servir
+								el guió polivalent (U+002D) com a separador en el format de la data,
+								en comptes del punt que fa servir <i>PGN</i>, senzillament per ser un
+								format més acord amb els estàndards de data.
 							</aside>
 						</li>
 						<li><strong>Round</strong> <small>Per a competicions, però també per identificar diverses
@@ -1302,6 +1326,19 @@
 							<ul class="exemple">
 								<li><code>[Round "‐"]</code></li>
 							</ul>
+							<div class="note" style="margin:4px 2em; padding: 0.5em">
+								<p style="margin-top:0">Quan s'indica l'etiqueta <strong>Round</strong>
+									amb un valor superior a u s'ha d'indicar també l'etiqueta
+									<strong>EventDate</strong> o <strong>MatchDate</strong>.
+								</p>
+								<p>Es pot requerir indicar diversos números, en competicions, o si es disputen
+									diversos encontres entre dos jugadors el mateix dia; llavors els números
+									es separen amb punts:
+								</p>
+								<ul class="exemple">
+									<li><code>[Round "2.1"]</code></li>
+								</ul>
+							</div>
 						</li>
 						<li><strong>White</strong> <small>Jugador amb blanques:</small>
 							<ul>
@@ -1390,29 +1427,77 @@
 							<ul class="exemple">
 								<li><code>[Id "Cescacs-X01"]</code></li>
 							</ul>
-							<ul class="aclariment" style="margin:0;line-height:1.6ex;">
+							<ul class="aclariment twocolumns"
+								style="margin:0;line-height:1.6ex;">
 								<li><small><i>O</i> – Opening sample</small></li>
+								<li><small><i>C</i> – Opening continuation</small></li>
 								<li><small><i>Z</i> – Puzzle</small></li>
-								<li><small><i>X</i> – Counterexample</small></li>
-								<li>...</li>
+								<li><small><i>P</i> – Example</small></li>
+								<li><small><i>E</i> – Ending</small></li>
+								<li><small><i>M</i> – Middlegame</small></li>
+								<li><small><i>X</i> – Refutation (counterexample)</small></li>
+								<li>…</li>
 							</ul>
-
 						</div>
-						<p><small>També es poden incloure-hi sufixos indicant l'idioma dels comentaris, o indicant
-								que és una versió estesa amb variacions.</small>
+						<p><small>També es poden incloure-hi sufixos separant-los amb guions,
+							per a indicar que és una variació, per a indicar l'idioma dels
+							comentaris, o per a ambdós motius, sempre acabant amb el sufix de
+							l'idioma, si hi fos.</small>
 						</p>
 					</div>
+					<p>L'etiqueta identificador <strong>Id</strong> també es pot fer servir en
+						<strong>registres de fragments de partides</strong>, incorporant-lo
+						llavors després de les etiquetes que identifiquen la partida. Els prefixos
+						que es farien servir llavors serien:
+						<ul>
+							<li><q><b>O</b></q>, sent el número l'últim moviment registrat,
+								acabat en <q>w</q> si només registra el moviment de blanques en
+								l'últim moviment.
+							</li>
+							<li><q><b>C</b></q> o <q><b>M</b></q> fent servir dues parelles de
+								números pel primer i l'últim moviment registrats, separats per
+								un guionet <q><strong>‐</strong></q> (U+2010), o un
+								<i>guió polivalent</i> <q>-</q>. Es farà servir un <q>?</q>, en
+								comptes del primer número, si es desconeix el número del primer
+								moviment. S'afegirà al número del primer moviment una <q>b</q>,
+								si el registre comença amb un moviment de negres, i al número de
+								l'últim moviment una <q>w</q> si el registre acaba en un moviment
+								de blanques. Es pot donar llavors també el cas <q>?b</q> per al
+								primer número.	
+							</li>
+							<li><q><b>E</b></q> incorporant com a número el moviment des del qual
+								s'inicia el registre, que pot incorporar al final una <q>b</q>,
+								anàlogament al cas anterior. Quan és desconegut el número de
+								moviment on s'inicia el registre es farà servir <q>?</q> o
+								<q>?b</q>, però llavors s'incorporarà, separat per un guionet
+								<q><strong>‐</strong></q> (U+2010), o un <i>guió polivalent</i>
+								<q>-</q>, el número de la jugada final, és a dir, el número
+								de moviments registrats.
+							</li>
+						</ul>
+					</p>
 				</section>
-				<section class="w3-container half">
+				<section class="w3-container">
 					<h4 class="w3-container w3-pale-yellow w3-center">
 						<span>Other optional labels</span>
 					</h4>
 					<ul>
+						<li><strong>EventDate</strong> <small>Data de l'event. Quan es tracta d'un
+							<i lang="en" translate="no">Casual Game</i> (<i>CG</i>) es refereix a la data
+							de l'encontre; és a dir, es pot fer servir en comptes de
+							<strong>MatchDate</strong> quan [<strong>Event</strong> "<i>CG</i>"].</small>
+						</li>
+						<li><strong>MatchDate</strong> <small>Data de l'encontre. El valor no té sentit
+							si no s'indica un valor per a l'etiqueta <strong>Round</strong>, i és
+							innecessària quan l'etiqueta <strong>Round</strong> té el valor <q>1</q>
+							o una seqüència de números acabats en el número <q>1</q>, doncs el valor
+							llavors serà el mateix de l'etiqueta <strong>Date</strong></small>
+						</li>
 						<li><strong>Termination</strong> <small>Detall de la finalització; admet els valors:
 								<q><i>abandoned</i></q>, <q><i>rules infraction</i></q>, <q><i>time forfeit</i></q>
 								i per a jocs indefinidament ajornats: <q><i>death</i></q> o
 								<q><i>emergency</i></q></small>
-							<aside style="margin-top:1ex; margin-bottom:1.2ex;">
+							<aside class="compact">
 								<small>The values <q>normal</q> and <q>unterminated</q> are not needed, as the
 									label then will be missing. Neither is <q>adjudication</q>, as an unfinished
 									game is not adjudicated; it will be either <q>unterminated</q> or
@@ -1492,9 +1577,9 @@
 						<span>Label for using alternative piece identifiers</span>
 					</h4>
 					<p><strong>Redefine</strong> <small>Permet fer servir lletres d'identificació alternatives per a
-							alguna peça, sempre entre les predefinides. Si n'hi ha una etiqueta <i>TLPD</i>,
+							alguna peça, sempre entre les predefinides. Si n'hi ha una etiqueta <i>PDTL</i>,
 							<i>Redefine</i> ha de ser just l'anterior, doncs s'aplica també al valor de l'etiqueta
-							<i>TLPD</i>; en cas contrari <i>Redefine</i> serà l'última etiqueta.</small>
+							<i>PDTL</i>; en cas contrari <i>Redefine</i> serà l'última etiqueta.</small>
 					</p>
 					<ul class="exemple">
 						<li><code>[Redefine "A@J, T@R, C@N"]</code>
@@ -1513,11 +1598,11 @@
 					<h4 class="w3-container w3-pale-yellow w3-center">
 						<span>Initial setup label</span>
 					</h4>
-					<p><strong>TLPD</strong> <small>Permet indicar l'<strong>estat inicial</strong> de
+					<p><strong>PDTL</strong> <small>Permet indicar l'<strong>estat inicial</strong> de
 							l'<i>hexcaquer</i> per retormar una partida, fent servir com a valor una cadena
-							<a href="#TLPD" class="cescacs"><i>TLPD</i></a>. Ha de ser
+							<a href="#PDTL" class="cescacs"><i>PDTL</i></a>. Ha de ser
 							l'<strong>última etiqueta</strong>; l'etiqueta <i>Redefine</i> s'aplica també a la cadena
-							<i>TLPD</i>.</small>
+							<i>PDTL</i>.</small>
 					</p>
 					<ul class="aclariment">
 						<li><small></small></li>
@@ -1526,25 +1611,25 @@
 						<span>C'escacs initial setup</span>
 					</h5>
 					<div style="white-space:nowrap; height:2.5em; overflow-x:auto;">
-						<code>[TLPD "/28:v/27:dk/26:gjg/25:rnnr/24:pejep/23:ppeepp/22:2pjp2/21:3pp3/20:3p3/8:3P3/7:3PP3/6:2PJP2/5:PPEEPP/4:PEJEP/3:RNNR/2:GJG/1:DK/0:V/ w RKRrkr - 0 1"]</code>
+						<code>[PDTL "/28:v/27:dk/26:gjg/25:rnnr/24:pejep/23:ppeepp/22:2pjp2/21:3pp3/20:3p3/8:3P3/7:3PP3/6:2PJP2/5:PPEEPP/4:PEJEP/3:RNNR/2:GJG/1:DK/0:V/ w RKRrkr - 0 1"]</code>
 					</div>
 					<h5 class="w3-container w3-light-grey w3-center w3-text-blue-grey">
 						<span>C'escacs initial setup: [Redefine "A@J, T@R", C@N"]</span>
 					</h5>
 					<div style="white-space:nowrap; height:2.5em; overflow-x:auto;">
-						<code>[TLPD "/28:v/27:dk/26:gag/25:tcct/24:peaep/23:ppeepp/22:2pap2/21:3pp3/20:3p3/8:3P3/7:3PP3/6:2PAP2/5:PPEEPP/4:PEAEP/3:TCCT/2:GAG/1:DK/0:V/ w TKTtkt - 0 1"]</code>
+						<code>[PDTL "/28:v/27:dk/26:gag/25:tcct/24:peaep/23:ppeepp/22:2pap2/21:3pp3/20:3p3/8:3P3/7:3PP3/6:2PAP2/5:PPEEPP/4:PEAEP/3:TCCT/2:GAG/1:DK/0:V/ w TKTtkt - 0 1"]</code>
 					</div>
 					<h5 class="w3-container w3-light-grey w3-center w3-text-blue-grey">
 						<span>C'escacs initial setup: [Redefine "B@J, W@V", Q@D"]</span>
 					</h5>
 					<div style="white-space:nowrap; height:2.5em; overflow-x:auto;">
-						<code>[TLPD "/28:w/27:qk/26:gbg/25:rnnr/24:pebep/23:ppeepp/22:2pbp2/21:3pp3/20:3p3/8:3P3/7:3PP3/6:2PBP2/5:PPEEPP/4:PEBEP/3:RNNR/2:GBG/1:QK/0:W/ w RKRrkr - 0 1"]</code>
+						<code>[PDTL "/28:w/27:qk/26:gbg/25:rnnr/24:pebep/23:ppeepp/22:2pbp2/21:3pp3/20:3p3/8:3P3/7:3PP3/6:2PBP2/5:PPEEPP/4:PEBEP/3:RNNR/2:GBG/1:QK/0:W/ w RKRrkr - 0 1"]</code>
 					</div>
 					<h5 class="w3-container w3-light-grey w3-center w3-text-blue-grey">
 						<span>C'escacs initial setup: [Redefine "FAN"]</span>
 					</h5>
 					<div style="white-space:nowrap; height:2.5em; overflow-x:auto;">
-						<code>[TLPD "/28:🩒/27:♛♚/26:🩓♝🩓/25:♜♞♞♜/24:♟☗♝☗♟/23:♟♟☗☗♟♟/22:2♟♝♟2/21:3♟♟3/20:3♟3/8:3♙3/7:3♙♙3/6:2♙♗♙2/5:♙♙☖☖♙♙/4:♙☖♗☖♙/3:♖♘♘♖/2:🩐♗🩐/1:♕♔/0:🩏/ w ♖♔♖♜♚♜ - 0 1"]</code>
+						<code>[PDTL "/28:🩒/27:♛♚/26:🩓♝🩓/25:♜♞♞♜/24:♟☗♝☗♟/23:♟♟☗☗♟♟/22:2♟♝♟2/21:3♟♟3/20:3♟3/8:3♙3/7:3♙♙3/6:2♙♗♙2/5:♙♙☖☖♙♙/4:♙☖♗☖♙/3:♖♘♘♖/2:🩐♗🩐/1:♕♔/0:🩏/ w ♖♔♖♜♚♜ - 0 1"]</code>
 					</div>
 				</section>
 			</section>
@@ -1818,7 +1903,7 @@
 			<section class="w3-container">
 				<h3 class="w3-container w3-pale-green w3-center header2 w3-text-grey">Minimal reader, and filters</h3>
 				<p>Un lector mínim es limita a llegir els moviments de l'apartat de <i>CTL-AN</i>, i pot ignorar les
-					etiquetes; serà convenient, però, llegir l'etiqueta <i>TLPD</i>. Un <strong>lector mínim</strong> ha
+					etiquetes; serà convenient, però, llegir l'etiqueta <i>PDTL</i>. Un <strong>lector mínim</strong> ha
 					de ser capaç de llegir un fitxer CTL-PGN <strong>sense variacions, ni comentaris, ni lletres
 						alternatives d'identificació de les peces</strong>, i pot <strong>ignorar les etiquetes</strong>
 					que pugui haver-hi.
