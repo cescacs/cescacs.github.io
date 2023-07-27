@@ -227,7 +227,8 @@
 			<div class="w3-container">
 				<div class="w3-container half">
 					<figure>
-						<img src="../img/cescacs.svg" alt="" class="fullwidth" style="transform:rotate(90deg)">
+						<a href="../board.html" target="_blank"><img src="../img/cescacs.svg"
+							alt="" class="fullwidth" style="transform:rotate(90deg)"></a>
 						<figcaption class="w3-center">Tablero hexteselado de C'escacs.
 						</figcaption>
 					</figure>
@@ -1067,75 +1068,93 @@
 			</section>
 			<section id="PDTLpieces" class="w3-container w3-half">
 				<h3 class="w3-container w3-pale-yellow w3-center">Posicionamiento de las piezas</h3>
-				<p>La posició en l'<i>hexcaquer</i> de les peces s'indica per les <strong>línes transversals</strong>,
-					en una <strong>cadena escrita entre barres oblíques</strong>, on
-					<strong>el valor de cada línia</strong> se separa del següent també amb una
-					<strong>barra oblíqua</strong>; no n'hi ha cap espai en blanc en aquesta seqüència.
+				<p>La posición de las piezas en el <i>tablero hexteselado</i> se indica
+					para las <strong>líneas transversales</strong>, en una <strong>cadena
+					escrita entre barras oblicuas</strong>, donde <strong>el valor de cada
+					línea</strong> se separa del siguiente también con una <strong>barra
+					oblicua</strong>; no hay ningún espacio en blanco en esta secuencia.
 				</p>
 				<ul>
-					<li>El valor de cada línia sempre es troba entre línies oblíques.</li>
-					<li>S'introdueix el valor de les línies començant per la vint-i-vuit, en ordre descendent.</li>
-					<li>El valor d'una línia incorpora al començament el número de línia, acabat en dos punts.
+					<li>El valor de cada línea siempre se encuentra entre líneas oblícuas.</li>
+					<li>Se introduce el valor de las líneas comenzando por la veintiocho,
+						en orden descendente.</li>
+					<li>El valor de una línea incorpora al principio el número de línea,
+						acabado en dos puntos.
 					</li>
-					<li>Les línies sense peces s'ometen.</li>
-					<li>S'escriuen els valors de cada <i>hexcac</i> de la línia per ordre, començant per la primera
-						columna del <i>flanc de Dama</i>. Els <i>hexcacs</i> buits s'indiquen amb un digit, que
-						representa el nombre d'<i>hexcacs</i> buids consecutius, i les peces amb la seva lletra
-						identificativa, amb majúscules per les blanques, i minúscules per les negres.
+					<li>Las líneas sin piezas se omiten.</li>
+					<li>Se escriben los valores de cada <i>hexcaque</i> de la línea por
+						orden, comenzando por la primera columna del <i>flanco de Dama</i>,
+						es decir, las columnas por orden alfabético. Los <i>hexcaques</i>
+						vacíos se indican amb un dígito, que representa el número de
+						<i>hexcaques</i> vacíos consecutivos, y las piezas con su letra
+						identificativa, mayúsculas para las blancas, y minúsculas para
+						las negras.
 						<ul class="aclariment">
-							<li>N'hi ha <i>línies parells</i> i <i>línies senars</i>; les <i>línies parells</i> tenen
-								les columnes: <i>T</i>, <i>B</i>, <i>D</i>, <i>F</i>, <i>H</i>, <i>K</i>, <i>X</i>;
-								les <i>línies senars</i> tenen les columnes: <i>P</i>, <i>A</i>, <i>C</i>, <i>E</i>,
-								<i>G</i>, <i>I</i>, <i>L</i>, <i>Z</i>.
-							</li>
-							<li>
-								A més, no totes les línies tenen la mateixa longitud.
+							<li>Hay <i>línias pares</i> y <i>línias nones</i>, y las columnas
+								de las línias pares son diferentes de las columnas de las
+								línias nones; las <i>línias pares</i> tienen las columnas:
+								<i>T</i>, <i>B</i>, <i>D</i>, <i>F</i>, <i>H</i>, <i>K</i>,
+								<i>X</i>; las <i>línias nones</i> tienen las columnas:
+								<i>P</i>, <i>A</i>, <i>C</i>, <i>E</i>, <i>G</i>, <i>I</i>,
+								<i>L</i>, <i>Z</i>.
 							</li>
 						</ul>
 					</li>
 				</ul>
-				<p>El sistema <i>PDTL</i> és notòriament més llarg per descriure la posició de les peces de
-					l'<i>hexcaquer</i>, comparat amb el sistema <i>FEN</i> dels <i>escacs ortodoxos</i>. Es pot pensar
-					que és un tant prolix, però s'ha considerat facilitar l'escriptura manual d'una posició, i repassar
-					amb facilitat que sigui correcta; la forma i la mida de l'<i>hexcaquer</i> fan aquesta tasca una
-					mica complexa.
+				<p>El sistema <i>PDTL</i> es notoriamente más largo para describir la posición
+					de las piezas del <i>tablero hexteselado</i>, comparado con el sistema
+					<i>FEN</i> del <i>ajedrez ortodoxo</i>. Se puede pensar que es un tanto
+					prolijo, pero se ha considerado facilitar la escritura manual de una posición,
+					y repasar con facilidad que sea correcta; la forma y la medida del
+					<i>tablero hexteselado</i> hacen esta tarea un poco compleja.
 				</p>
 			</section>
 			<section id="PDTLTorn" class="w3-container w3-half">
 				<h3 class="w3-container w3-pale-yellow w3-center">Turno</h3>
-				<p>El torn s'identifica amb una lletra minúscula: <q><strong><code>w</code></strong></q> si és el torn
-					de les <i>blanques</i> (<i lang="en">white</i>), <q><strong><code>b</code></strong></q> si és el
-					torn de les <i>negres</i> (<i lang="en">black</i>). En l'exemple veiem la <q><code>w</code></q>,
-					perquè sempre comencen les <i>blanques</i>.
+				<p>El turno se identifica con una letra minúscula:
+					<q><strong><code>w</code></strong></q> si es el turno
+					de las <i>blancas</i> (<i lang="en" translate="no">white</i>),
+					<q><strong><code>b</code></strong></q> si és el turno
+					de las <i>negras</i> (<i lang="en" translate="no">black</i>).
+					En el ejemplo anterior vemos la <q><code>w</code></q>,
+					porque siempre comienzan las <i>blancas</i>.
 				</p>
 			</section>
 			<section id="PDTLCastling" class="w3-container w3-half">
 				<h3 class="w3-container w3-pale-yellow w3-center">Estado de enroques y salto del rey</h3>
-				<p>L'estat es representa fent servir un màxim de sis caràcters; tres per les blanques, i tres per les
-					negres. Els primers caràcters s'escriuen en majúscules, i representen l'estat de les
-					<i>blanques</i>, i a continuació, sense separació, els caràcters per l'estat de les <i>negres</i>,
-					que s'escriuen en minúscules.
+				<p>El estado se representa usando un máximo de seis caracteres;
+					tres para las <i>blancas</i>, y tres para las <i>negras</i>.
+					Los primeros caracteres se escriben en mayúsculas, y representan
+					el <i>estado de las blancas</i>, y a continuación, sin separación,
+					los caracteres para el <i>estado de las negras</i>, que se escriben
+					en minúsculas.
 				</p>
 				<ul>
-					<li>Si el <i>Rei</i> no ha estat mogut, i tampoc cap dels <i>Rocs</i> obtindrem
-						<strong><code>RKR</code></strong> per les <i>blanques</i>, <strong><code>rkr</code></strong> per
-						les <i>negres</i>.
+					<li>Si el <i>Rey</i> no se ha movido, y tampoco ninguno
+						de los <i>Roques</i> obtendremos <strong><code>RKR</code></strong>
+						para las <i>blancas</i>, <strong><code>rkr</code></strong> para
+						las <i>negras</i>.
 					</li>
-					<li>Si el <i>Roc de dama</i> ha estat mogut, peró no el <i>Rei</i>, ni el <i>Roc de rei</i>
-						obtindrem <strong><code>KR</code></strong> per les <i>blanques</i>,
-						<strong><code>kr</code></strong> per les <i>negres</i>.
+					<li>Si el <i>Roque de dama</i> se ha movido, pero no el
+						<i>Rey</i>, ni el <i>Roque de rey</i> obtendremos
+						<strong><code>KR</code></strong> para las <i>blancas</i>,
+						<strong><code>kr</code></strong> para las <i>negras</i>.
 					</li>
-					<li>Si el <i>Roc de rei</i> ha estat mogut, peró no el <i>Rei</i>, ni el <i>Roc de dama</i>
-						obtindrem <strong><code>RK</code></strong> per les <i>blanques</i>,
-						<strong><code>rk</code></strong> per les <i>negres</i>.
+					<li>Si el <i>Roque de rey</i> se ha movido, peró no el <i>Rey</i>,
+						ni el <i>Roque de dama</i> obtendremos <strong><code>RK</code></strong>
+						para las <i>blancas</i>, <strong><code>rk</code></strong> para las
+						<i>negras</i>.
 					</li>
-					<li>Si ambdós <i>Rocs</i> han estat moguts, peró no el <i>Rei</i>, obtindrem
-						<strong><code>K</code></strong> per les <i>blanques</i>,
-						<strong><code>k</code></strong> per les <i>negres</i>.
+					<li>Si ambos <i>Roques</i> se han movido, pero no el <i>Rey</i>,
+						obtendremos
+						<strong><code>K</code></strong> para las <i>blancas</i>,
+						<strong><code>k</code></strong> para las <i>negras</i>.
 					</li>
-					<li>Si el <i>Rei</i> ha estat mogut tindrem un guió (<strong><code>-</code></strong>), el mateix pel
-						<i>Rei</i> de les <i>blanques</i>, i pel de les <i>negres</i>; si ambdós <i>Reis</i> han estat
-						moguts, obtindrem dos guions (<strong><code>--</code></strong>).
+					<li>Si el <i>Rey</i> se ha movido tendremos un guión
+						(<strong><code>-</code></strong>), lo mismo para el
+						<i>Rey</i> de las <i>blancas</i>, y para el de las <i>negras</i>;
+						si ambos <i>Reyes</i> se han movido, obtendremos dos guiones
+						(<strong><code>--</code></strong>).
 					</li>
 				</ul>
 				<br />
@@ -1145,72 +1164,88 @@
 					<h3 class="w3-container w3-pale-yellow w3-center">Hexcaque de <i>captura al paso</i> o
 						<i>peón esquivo</i>
 					</h3>
-					<p>La <a href="glossary.html#CapturaAlPas" class="cite" target="_blank"><i>captura al pas</i></a> i la
-						<a href="glossary.html#CapturaPeoEsquiu" class="cite" target="_blank"><i>captura del peó
-								esquiu</i></a> són moviments que només es poden fer en el moviment següent a determinats
-						moviments d'un peó; per tant, cal tenir constància de la seva disponibilitat en el moviment actual,
-						si es desconeix el moviment anterior.
+					<p>La <a href="glossary.html#CapturaAlPas" class="cite" target="_blank"><i>captura al paso</i></a> y la
+						<a href="glossary.html#CapturaPeoEsquiu" class="cite" target="_blank"><i>captura del peón
+								esquivo</i></a> son movimientos que solo se pueden hacer en el movimiento siguiente
+						a determinados movimientos de un peón; por lo tanto, hay que tener constancia de su
+						disponibilidad en el movimiento actual, si se desconoce el movimiento anterior.
 					</p>
-					<p>Com a màxim, només una de les opcions hi serà disponible, i es fa servir el mateix camp per a
-						registrar ambdós casos:
+					<p>Como máximo, solo una de las opciones estará disponible,
+						y se usa el mismo campo para registrar ambos casos::
 					</p>
 					<ul>
-						<li>En el moviment anterior, un peó ha fet un
-							<a href="glossary.html#MovimentDoble" class="cite" target="_blank">moviment doble</a> o
-							<a href="glossary.html#MovimentTriple" class="cite" target="_blank">triple</a>. N'hi ha
-							disponible la captura al pas:
+						<li>En el movimiento anterior, un peón ha hecho un
+							<a href="glossary.html#MovimentDoble" class="cite" target="_blank">movimiento doble</a> o
+							<a href="glossary.html#MovimentTriple" class="cite" target="_blank">triple</a>.
+							Está disponible la captura al paso:
 							<ul>
-								<li><strong>Moviment doble</strong>: Es registra l'<i>hexcac</i> on hi és el peó, i, separat
-									amb el símbol arrova <strong>@</strong>, la línia on pot ser capturat; no s'ha d'indicar
-									la columna del segon <i>hexcac</i>, perquè és la mateixa que ara n'hi ha el peó.
-									Exemple: <code class="exemple">G15@13</code>
+								<li><strong>Movimiento doble</strong>: Se registra el <i>hexcaque</i> donde
+									está el peón, y, separado con el símbolo arroba <strong>@</strong>, la
+									línea donde puede ser capturado; no se tiene que indicar la columna del
+									segundo <i>hexcaque</i>, porque es la misma en la que ahora está el peón.
+									Ejemplo: <code class="exemple">G15@13</code>
 								</li>
-								<li><strong>Moviment triple</strong>: Es registra l'<i>hexcac</i> on hi és el peó, i,
-									separat amb el símbol arrova <strong>@</strong>, les dues línies on pot ser capturat,
-									separades amb un guió <strong>-</strong>.
-									Exemple: <code class="exemple">G13@9-11</code>
+								<li><strong>Movimiento triple</strong>: Se registra el <i>hexcaque</i> donde
+									está el peón, y, separado con el símbolo arroba <strong>@</strong>, las
+									dos líneas donde puede ser capturado, separadas con un guion
+									<strong>-</strong>. Ejemplo: <code class="exemple">G13@9-11</code>
 								</li>
 							</ul>
 						</li>
-						<li>En el moviment anterior un peó ha fet un
-							<a href="glossary.html#PeoEsquiu" class="cite" target="_blank">moviment esquiu</a>. N'hi ha
-							disponible la seva captura:
+						<li>En el movimiento anterior, un peón ha hecho un
+							<a href="glossary.html#PeoEsquiu" class="cite" target="_blank">movimento esquivo</a>.
+							Está disponible su captura:
 							<ul>
-								<li><strong>Moviment esquiu</strong>: Senzillament es registra la <i>coordenada CTL</i> de
-									l'<i>hexcac</i> on és posicionat el <i>peó esquiu</i>, posició on pot ser capturat.
-									Exemple: <code class="exemple">F14</code>
+								<li><strong>Movimiento esquivo</strong>: Sencillamente se registra la
+									<i>coordenada CTL</i> del <i>hexcaque</i> donde está posicionado el
+									<i>peón esquivo</i>, posición donde puede ser capturado.
+									Ejemplo: <code class="exemple">F14</code>
+									
 									<ul class="w3-ul aclaracio w3-small">
-										<li>L'exemple denota que dos peons de diferent bandol hi eren enfrontats en
-											<code class="exemple">G13</code> i <code class="exemple">G15</code>
-											o en <code class="exemple">E13</code> i <code class="exemple">E15</code>,
-											i un peó, del jugador què no te el torn, feu un moviment esquiu.
+										<li>El ejemplo denota que dos peones de diferente bando estaban
+											enfrentados en
+											<code class="exemple">G13</code> y <code class="exemple">G15</code>
+											o en
+											<code class="exemple">E13</code> y <code class="exemple">E15</code>,
+											y un peón, del jugador que no tiene el turno, hizo un movimiento
+											esquivo a <code class="exemple">F14</code>.
 										</li>
 									</ul>
 								</li>
 							</ul>
 						</li>
-						<li>Quan no es dona cap de les dues situacions, es fa servir un guió <q><strong>-</strong></q>.</li>
+						<li>Cuando no se da ninguna de las dos situaciones,
+							se usa un guion <q><strong>-</strong></q>.
+						</li>
 					</ul>
 				</section>
 
 				<section id="PDTLMoveCount" class="w3-container w3-half">
 					<h3 class="w3-container w3-pale-yellow w3-center">Contador de movimientos</h3>
-					<p>El comptador de moviments, que anglès també s'anomena <i lang="en">halfmove clock</i>, comença amb el
-						valor zero, i s'incrementa en cada moviment que no sigui un moviment d'un peó ni una captura; quan
-						es fa una captura o es mou un peó, el comptador torna a zero.
+					<p>El contador de movimientos, que inglés también se denomina
+						<i lang="en" translate="no">halfmove clock</i>, empieza con
+						el valor cero, y se incrementa en cada movimiento que no sea
+						un movimiento de un peón ni una captura; cuando se hace una
+						captura o se mueve un peón, el contador vuelve a cero.
 					</p>
-					<p>Aquest comptador permet aplicar les regles d'<a href="glossary.html#EsgotamentMoviments"
-							class="cescacs" target="_blank">esgotament de moviments</a> que fan arribar la partida a taules:
-						la regla de les cinquanta jugades (cent moviments), que ha de reclamar el jugador, i la regla de les
-						setanta-cinc jugades (cent cinquanta moviments), d'aplicació automàtica. En una partida amistosa pot
-						arribar a ser un valor desconegut, i llavors es farà servir el valor <i>zero</i>.
+					<p>Este contador permite aplicar las reglas de
+						<a href="glossary.html#EsgotamentMoviments"
+							class="cescacs" target="_blank">agotamiento de movimientos</a>
+						que hacen que la partida llegue a tablas: la regla de las cincuenta
+						jugadas (cien movimientos), que tiene que reclamar el jugador,
+						y la regla de las setenta y cinco jugadas (ciento cincuenta
+						movimientos), de aplicación automática. En una partida amistosa
+						puede llegar a ser un valor desconocido, y entonces se usará el
+						valor <i>cero</i>.
 					</p>
 				</section>
 				<section id="PDTLCounter" class="w3-container w3-half">
 					<h3 class="w3-container w3-pale-yellow w3-center">Número de jugada</h3>
-					<p>L'últim número és el número de la jugada actual. Comença amb el valor <strong>u</strong> i
-						s'incrementa després de cada moviment de les <i>negres</i>. En una partida amistosa pot arribar a
-						ser un valor desconegut, i llavors es farà servir un interrogant (<q><strong>?</strong></q>).
+					<p>El último número es el número de la jugada actual.
+						Empieza con el valor <strong>uno</strong> y se incrementa después
+						de cada movimiento de las <i>negras</i>. En una partida amistosa
+						puede llegar a ser un valor desconocido, y entonces se usará un
+						interrogante (<q><strong>?</strong></q>).
 					</p>
 				</section>
 			</div>
