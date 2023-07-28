@@ -382,7 +382,9 @@
 
 				<!-- Orthogonal -->
 				<section class="w3-container half">
-					<h4 class="w3-container w3-pale-yellow w3-center"><span>Orthogonal movement</span></h4>
+					<h4 class="w3-container w3-pale-yellow w3-center">
+						<span>Orthogonal movement</span>
+					</h4>
 					<ul>
 						<li>Moving up/down the column increments/decrements the line number by two.</li>
 						<li>The other four orthogonal moves are obtained by incrementing/decreasing the column
@@ -405,7 +407,9 @@
 
 				<!-- Diagonal -->
 				<section class="w3-container half">
-					<h4 class="w3-container w3-pale-yellow w3-center"><span>Diagonal movement</span></h4>
+					<h4 class="w3-container w3-pale-yellow w3-center">
+						<span>Diagonal movement</span>
+					</h4>
 					<ul>
 						<li>The displacement along the transverse line increases/decreases the column by two.</li>
 						<li>The other four diagonal shifts are obtained by incrementing/decreasing the column
@@ -432,7 +436,9 @@
 				<!-- Knight jump -->
 				<div class="w3-container half">
 					<aside class="compact">
-						<h4 class="w3-container w3-pale-yellow w3-center w3-text-grey"><span>Movement of the knight</span></h4>
+						<h4 class="w3-container w3-pale-yellow w3-center w3-text-grey">
+							<span>Movement of the knight</span>
+						</h4>
 						<p>The <i>knight movement</i> consists of the combination of a <i>diagonal</i> and an <i>orthogonal</i>
 							 movement: for each <i>diagonal movement</i> there are two possible <i>orthogonals</i>; the
 							 combination has to be done in such a way that if the <i>diagonal movement</i> increases the column,
@@ -542,7 +548,9 @@
 				<!-- Knight Ride -->
 				<div class="w3-container half">
 					<aside class="compact">
-						<h4 class="w3-container w3-pale-yellow w3-center w3-text-grey">Knight ride</h4>
+						<h4 class="w3-container w3-pale-yellow w3-center w3-text-grey">
+							<span>Knight ride</span>
+						</h4>
 						<p>For the <i>knight ride</i>, the twelve <i>knight jumps</i> give rise to twelve
 							different <i>rides</i>, applying another <i>knight jump</i> with exactly the
 							same displacement.
@@ -1257,45 +1265,52 @@
 		<!-- Columns and Transversal Lines - PGN (Portable Game Notation) -->
 		<section id="CTL-PGN" class="w3-container">
 			<h2 class="w3-container w3-pale-green w3-center">CTL-PGN: Exchange format</h2>
-			<p>El format <a href="glossary.html#CTL-PGN" class="cescacs" target="_blank">CTL-PGN</a> enriqueix la
-				<i>CTL-AN</i>, notació algebraica, incorporant <i>metainformació</i>, informació de la partida, de
-				manera semblant a com el format
+			<p>The <a href="glossary.html#CTL-PGN" class="cescacs" target="_blank">CTL-PGN</a>
+				format enriches the <a href="#Notacio" class="cite"><i>CTL-AN</i>, algebraic notation</a>,
+				by incorporating <i>meta-information</i>, game information, in a similar way as the
 				<a href="https://ia802908.us.archive.org/26/items/pgn-standard-1994-03-12/PGN_standard_1994-03-12.txt"
-					class="cite" target="_blank"><i lang="en"><abbr title="Portable Game Notation">PGN</abbr> (Portable
-						Game Notation)</i></a> enriqueix la
-				<i lang="en"><abbr title="Standard Algebraic Notation">SAN</abbr> (Standard Algebraic Notation)</i>,
-				i seguint un format similar.
+					class="cite" target="_blank"><i lang="en" translate="no"><abbr
+						title="Portable Game Notation">PGN</abbr> (Portable Game Notation)</i></a>
+				format enriches the
+				<i lang="en" translate="no"><abbr title="Standard Algebraic Notation">SAN</abbr>
+					(Standard Algebraic Notation)</i>, and with a similar format.
 			</p>
-
-			<p>La funcionalitat principal del format <i>PGN</i> és establir un format per permetre l'intercanvi
-				d'informació. Ho fa fent servir fitxers de text pla, enriquint la notació algebraica amb
-				<strong>metainformació</strong> de tres maneres diferents:
+			<p>The main functionality of the <i>PGN</i> format is to establish a format
+				to enable the exchange of information. It does this by using plain text
+				formats, linking algebraic notation with <strong>meta-information</strong>
+				in three different ways:
 			</p>
 			<ul>
-				<li>Metadades classificades en etiquetes, prefixant la partida propiament dita. Cada etiqueta té un
-					identificador y un valor en un format específic, fixat d'acord amb el tipus de valor que es
-					representa.
+				<li>Metadata classified in tags, prefixing the item itself. Each tag has
+					an identifier and a value in a specific format, set according to the
+					type of value being represented.
 				</li>
-				<li>Comentaris lliures que s'intercalen en la notació algebraica.
+				<li>Free comments interspersed in the algebraic notation.
 				</li>
-				<li>Variacions, jugades alternatives als moviments de la partida principal, amb finalitat didàctica.
+				<li>Variations, alternative moves to the moves of the main game,
+					for didactic purposes.
 				</li>
 			</ul>
-			<p>Totes tres característiques es troben també incorporades en <i>CTL-PGN</i>, que introdueix alguns canvis
-				subtils respecte al format <i>PGN</i>, principalment per l'adopció de la notació <i>CTL-AN</i>. Ja s'han
-				vist algunes diferències de la notació <i>CTL-AN</i> amb la notació <i>SAN</i>, algunes relatives, en
-				realitat, al format en medis informàtics, com és el cas del símbol <b>×</b>, remplaçable per un
-				asterisc <i>*</i>, però mai per la lletra <i>x</i>. Els fitxers, tots els sistemes de fitxers ja
-				s'admeten extensions de més de tres caràcters, faran servir l'extensió <code>.ctl-pgn</code> en el nom.
+			<p>All three features are also incorporated in <i>CTL-PGN</i>, which introduces some
+				subtle changes with respect to the <i>PGN</i> format, mainly by adopting the
+				<a href="#Notacio" class="cite">notation <i>CTL-AN</i></a>. We have already seen
+				some differences between <i>CTL-AN</i> and <i>SAN</i> notation, some of which
+				relate to the format in computer media, such as the case of the symbol <b>×</b>,
+				which can be replaced by an asterisk <i>*</i>, but never by the letter <i>x</i>;
+				also of note is the date format, adjusted to the standards, which use the hyphen
+				as a separator, and always beginning with the four digits of the year. The files,
+				since all file systems already support extensions of more than three characters,
+				will use the extension <strong><code>.ctl-pgn</code></strong> in the name.
 			</p>
 			<section class="w3-container">
 				<h3 class="w3-container w3-pale-green w3-center header2 w3-text-grey">Labels</h3>
-				<p>Una etiqueta s'escriu en una línia, entre claudàtors <q><em>[</em> ... <em>]</em></q>, i conté una
-					paraula <strong>identificador de l'etiqueta</strong>, seguit d'un
-					<q><i>text entre cometes</i></q>, que és el <strong>valor de l'etiqueta</strong>.
-					Tot registre <i>CTL-PGN</i> sempre ha de començar amb l'etiqueta <strong>Variant</strong>, fent
-					servir el valor <i class="cescacs">C'escacs</i> per l'etiqueta; és
-					l'<strong>etiqueta inicial</strong>:
+				<p>A tag is written on one line, enclosed in square brackets
+					<q><em>[</em> ... <em>]</em></q>, and contains a <strong>tag identifier
+					word</strong>, followed by a <q><i>texto entre comillas</i></q>, which is the
+					<strong>value of the tag</strong>. Every <i>CTL-PGN</i> record must always
+					start with the <strong>Variant</strong> tag, using the value
+					<i class="cescacs">C'escacs</i> for the tag; it is the
+					<strong>initial tag</strong>:
 				</p>
 				<div class="w3-container w3-win8-violet w3-opacity">				
 					<strong><code>[Variant "C'escacs"]</code></strong>

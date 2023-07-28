@@ -205,7 +205,9 @@
 				</figcaption>
 			</figure>
 			<section class="w3-container">
-				<h4><span>Caràcters Unicode d'escacs</span></h4>
+				<h4 class="w3-container w3-pale-yellow w3-center">
+					<span>Caràcters Unicode d'escacs</span>
+				</h4>
 				<p>També existeixen els caràcters Unicode d'escacs, que es poden fer servir en comptes de les lletres
 					d'identificació en la notació que s'anomena
 					<a href="glossary.html#CTL-FAN" class="cescacs">CTL-FAN</a>.
@@ -953,7 +955,9 @@
 					coixinet o quadradet).
 				</p>
 				<section id="ResultatPartida" class="w3-container half">
-					<h4 class="w3-container w3-pale-yellow w3-center"><span>Indicador final del resultat</span></h4>
+					<h4 class="w3-container w3-pale-yellow w3-center">
+						<span>Indicador final del resultat</span>
+					</h4>
 					<p>L'última línia, després de l'última jugada acabada amb el
 						<strong>símbol de finalització</strong>, o amb el <strong>símbol d'escac i mat</strong>, és
 						l'<strong>indicador final del resultat</strong> de la partida; admet cinc diferents valors
@@ -989,7 +993,8 @@
 					</aside>
 				</section>
 				<section class="w3-container half">
-					<h4 class="w3-container w3-pale-yellow w3-center"><span>Excepció: continuació de partides</span>
+					<h4 class="w3-container w3-pale-yellow w3-center">
+						<span>Excepció: continuació de partides</span>
 					</h4>
 					<p>No sempre l'anotació d'una partida comença en la primera jugada; potser s'ha reprès una partida,
 						o parteix d'una posició fictícia, o senzillament no s'ha anotat des del començament. Per anotar
@@ -1231,45 +1236,52 @@
 		<!-- Columns and Transversal Lines - PGN (Portable Game Notation) -->
 		<section id="CTL-PGN" class="w3-container">
 			<h2 class="w3-container w3-pale-green w3-center">CTL-PGN: Format d'intercanvi</h2>
-			<p>El format <a href="glossary.html#CTL-PGN" class="cescacs" target="_blank">CTL-PGN</a> enriqueix la
-				<i>CTL-AN</i>, notació algebraica, incorporant <i>metainformació</i>, informació de la partida, de
-				manera semblant a com el format
+			<p>El format <a href="glossary.html#CTL-PGN" class="cescacs" target="_blank">CTL-PGN</a>
+				enriqueix la <a href="#Notacio" class="cite">CTL-AN</i>, notació algebraica</a>,
+				incorporant <i>metainformació</i>, informació de la partida, de manera semblant
+				a com el format
 				<a href="https://ia802908.us.archive.org/26/items/pgn-standard-1994-03-12/PGN_standard_1994-03-12.txt"
-					class="cite" target="_blank"><i lang="en"><abbr title="Portable Game Notation">PGN</abbr> (Portable
-						Game Notation)</i></a> enriqueix la
-				<i lang="en"><abbr title="Standard Algebraic Notation">SAN</abbr> (Standard Algebraic Notation)</i>,
+					class="cite" target="_blank"><i lang="en" translate="no"><abbr
+						title="Portable Game Notation">PGN</abbr> (Portable Game Notation)</i></a>
+				enriqueix la <i lang="en" translate="no"><abbr
+					title="Standard Algebraic Notation">SAN</abbr> (Standard Algebraic Notation)</i>,
 				i seguint un format similar.
 			</p>
-
-			<p>La funcionalitat principal del format <i>PGN</i> és establir un format per permetre l'intercanvi
-				d'informació. Ho fa fent servir fitxers de text pla, enriquint la notació algebraica amb
-				<strong>metainformació</strong> de tres maneres diferents:
+			<p>La funcionalitat principal del format <i>PGN</i> és establir un format per a
+				permetre l'intercanvi d'informació. Ho fa fent servir fitxers de text pla,
+				enriquint la notació algebraica amb <strong>metainformació</strong> de tres
+				maneres diferents:
 			</p>
 			<ul>
-				<li>Metadades classificades en etiquetes, prefixant la partida propiament dita. Cada etiqueta té un
-					identificador y un valor en un format específic, fixat d'acord amb el tipus de valor que es
-					representa.
+				<li>Metadades classificades en etiquetes, prefixant la partida propiament dita.
+					Cada etiqueta té un identificador i un valor en un format específic, fixat
+					d'acord amb el tipus de valor que es representa.
 				</li>
 				<li>Comentaris lliures que s'intercalen en la notació algebraica.
 				</li>
 				<li>Variacions, jugades alternatives als moviments de la partida principal, amb finalitat didàctica.
 				</li>
 			</ul>
-			<p>Totes tres característiques es troben també incorporades en <i>CTL-PGN</i>, que introdueix alguns canvis
-				subtils respecte al format <i>PGN</i>, principalment per l'adopció de la notació <i>CTL-AN</i>. Ja s'han
-				vist algunes diferències de la notació <i>CTL-AN</i> amb la notació <i>SAN</i>, algunes relatives, en
-				realitat, al format en medis informàtics, com és el cas del símbol <b>×</b>, remplaçable per un
-				asterisc <i>*</i>, però mai per la lletra <i>x</i>. Els fitxers, tots els sistemes de fitxers ja
-				s'admeten extensions de més de tres caràcters, faran servir l'extensió <code>.ctl-pgn</code> en el nom.
+			<p>Totes tres característiques es troben també incorporades en <i>CTL-PGN</i>,
+				que introdueix alguns canvis subtils respecte al format <i>PGN</i>, principalment
+				per l'adopció de la <a href="#Notacio" class="cite">notació <i>CTL-AN</i></a>. Ja
+				s'han vist algunes diferències de la notació <i>CTL-AN</i> amb la notació
+				<i>SAN</i>, algunes relatives, en realitat, al format en medis informàtics, com és
+				el cas del símbol <b>×</b>, remplaçable per un asterisc <i>*</i>, però mai per la
+				lletra <i>x</i>; també és destacable el format de data, ajustat als estàndards, que
+				fan servir el guionet com a separació, i sempre començant amb els quatre digits de
+				l'any. Els fitxers, donat que tots els sistemes de fitxers ja s'admeten extensions
+				de més de tres caràcters, faran servir l'extensió
+				<strong><code>.ctl-pgn</code></strong> en el nom.
 			</p>
 			<section class="w3-container">
 				<h3 class="w3-container w3-pale-green w3-center header2 w3-text-grey">Les etiquetes</h3>
-				<p>Una etiqueta s'escriu en una línia, entre claudàtors <q><em>[</em> ... <em>]</em></q>, i conté una
-					paraula <strong>identificador de l'etiqueta</strong>, seguit d'un
+				<p>Una etiqueta s'escriu en una linia, entre claudàtors <q><em>[</em> ... <em>]</em></q>,
+					i conté una paraula <strong>identificador de l'etiqueta</strong>, seguit d'un
 					<q><i>text entre cometes</i></q>, que és el <strong>valor de l'etiqueta</strong>.
-					Tot registre <i>CTL-PGN</i> sempre ha de començar amb l'etiqueta <strong>Variant</strong>, fent
-					servir el valor <i class="cescacs">C'escacs</i> per l'etiqueta; és
-					l'<strong>etiqueta inicial</strong>:
+					Tot registre <i>CTL-PGN</i> sempre ha de començar amb l'etiqueta
+					<strong>Variant</strong>, fent servir el valor <i class="cescacs">C'escacs</i> per a
+					l'etiqueta; és l'<strong>etiqueta inicial</strong>:
 				</p>
 				<div class="w3-container w3-win8-violet w3-opacity">
 					<strong><code>[Variant "C'escacs"]</code></strong>
@@ -1285,7 +1297,8 @@
 					</div>
 				</div>
 				<section class="w3-container half">
-					<h4 class="w3-container w3-pale-yellow w3-center"><span>Etiquetes per al registre de partida</span>
+					<h4 class="w3-container w3-pale-yellow w3-center">
+						<span>Etiquetes per al registre de partida</span>
 					</h4>
 					<p>Si es vol <strong>registar una partida</strong>, després de l'etiqueta inicial, es requereixen
 						les
@@ -1400,7 +1413,9 @@
 					</ul>
 				</section>
 				<section class="w3-container half">
-					<h4 class="w3-container w3-pale-yellow w3-center"><span>Etiqueta de registre mínim</span></h4>
+					<h4 class="w3-container w3-pale-yellow w3-center">
+						<span>Etiqueta de registre mínim</span>
+					</h4>
 					<p>Si no es registra una partida, sinò que es registren
 						<strong>moviments per a il·lustrar un concepte</strong>, fins i tot una
 						<q>partida típica sobre el paper</q>, com ara el
@@ -1485,7 +1500,9 @@
 					</div>
 				</section>
 				<section class="w3-container">
-					<h4 class="w3-container w3-pale-yellow w3-center"><span>Altres etiquetes opcionals</span></h4>
+					<h4 class="w3-container w3-pale-yellow w3-center">
+						<span>Altres etiquetes opcionals</span>
+					</h4>
 					<ul>
 						<li><strong>EventDate</strong> <small>Data de l'event. Quan es tracta d'un
 							<i lang="en" translate="no">Casual Game</i> (<i>CG</i>) es refereix a la data
@@ -1578,8 +1595,8 @@
 					</ul>
 				</section>
 				<section class="w3-container">
-					<h4 class="w3-container w3-pale-yellow w3-center"><span>Etiqueta per a l'ús d'identificadors
-						de peça alternatius</span>
+					<h4 class="w3-container w3-pale-yellow w3-center">
+						<span>Etiqueta per a l'ús d'identificadors de peça alternatius</span>
 					</h4>
 					<p><strong>Redefine</strong> <small>Permet fer servir lletres d'identificació alternatives per a
 							alguna peça, sempre entre les predefinides. Si n'hi ha una etiqueta <i>PDTL</i>,
@@ -1600,7 +1617,9 @@
 					</ul>
 				</section>
 				<section class="w3-container">
-					<h4 class="w3-container w3-pale-yellow w3-center"><span>Etiqueta de posició inicial</span></h4>
+					<h4 class="w3-container w3-pale-yellow w3-center">
+						<span>Etiqueta de posició inicial</span>
+					</h4>
 					<p><strong>PDTL</strong> <small>Permet indicar l'<strong>estat inicial</strong> de
 							l'<i>hexcaquer</i> per retormar una partida, fent servir com a valor una cadena
 							<a href="#PDTL" class="cescacs"><i>PDTL</i></a>. Ha de ser
@@ -1611,22 +1630,26 @@
 						<li><small></small></li>
 					</ul>
 					<h5 class="w3-container w3-light-grey w3-center w3-text-blue-grey">
-						<span>Posició inicial de C'escacs</span></h5>
+						<span>Posició inicial de C'escacs</span>
+					</h5>
 					<div style="white-space:nowrap; height:2.5em; overflow-x:auto;">
 						<code>[PDTL "/28:v/27:dk/26:gjg/25:rnnr/24:pejep/23:ppeepp/22:2pjp2/21:3pp3/20:3p3/8:3P3/7:3PP3/6:2PJP2/5:PPEEPP/4:PEJEP/3:RNNR/2:GJG/1:DK/0:V/ w RKRrkr - 0 1"]</code>
 					</div>
 					<h5 class="w3-container w3-light-grey w3-center w3-text-blue-grey">
-						<span>Posició inicial de C'escacs: [Redefine "A@J, T@R", C@N"]</span></h5>
+						<span>Posició inicial de C'escacs: [Redefine "A@J, T@R", C@N"]</span>
+					</h5>
 					<div style="white-space:nowrap; height:2.5em; overflow-x:auto;">
 						<code>[PDTL "/28:v/27:dk/26:gag/25:tcct/24:peaep/23:ppeepp/22:2pap2/21:3pp3/20:3p3/8:3P3/7:3PP3/6:2PAP2/5:PPEEPP/4:PEAEP/3:TCCT/2:GAG/1:DK/0:V/ w TKTtkt - 0 1"]</code>
 					</div>
 					<h5 class="w3-container w3-light-grey w3-center w3-text-blue-grey">
-						<span>Posició inicial de C'escacs: [Redefine "B@J, W@V", Q@D"]</span></h5>
+						<span>Posició inicial de C'escacs: [Redefine "B@J, W@V", Q@D"]</span>
+					</h5>
 					<div style="white-space:nowrap; height:2.5em; overflow-x:auto;">
 						<code>[PDTL "/28:w/27:qk/26:gbg/25:rnnr/24:pebep/23:ppeepp/22:2pbp2/21:3pp3/20:3p3/8:3P3/7:3PP3/6:2PBP2/5:PPEEPP/4:PEBEP/3:RNNR/2:GBG/1:QK/0:W/ w RKRrkr - 0 1"]</code>
 					</div>
 					<h5 class="w3-container w3-light-grey w3-center w3-text-blue-grey">
-						<span>Posició inicial de C'escacs: [Redefine "FAN"]</span></h5>
+						<span>Posició inicial de C'escacs: [Redefine "FAN"]</span>
+					</h5>
 					<div style="white-space:nowrap; height:2.5em; overflow-x:auto;">
 						<code>[PDTL "/28:🩒/27:♛♚/26:🩓♝🩓/25:♜♞♞♜/24:♟☗♝☗♟/23:♟♟☗☗♟♟/22:2♟♝♟2/21:3♟♟3/20:3♟3/8:3♙3/7:3♙♙3/6:2♙♗♙2/5:♙♙☖☖♙♙/4:♙☖♗☖♙/3:♖♘♘♖/2:🩐♗🩐/1:♕♔/0:🩏/ w ♖♔♖♜♚♜ - 0 1"]</code>
 					</div>
@@ -1641,14 +1664,16 @@
 					jugada, i la variació acaba amb el parèntesi tancat <q><strong>)</strong></q>.
 				</p>
 				<section class="w3-container">
-					<h4 class="w3-container w3-pale-yellow w3-center"><span>Imbrincació</span></h4>
+					<h4 class="w3-container w3-pale-yellow w3-center">
+						<span>Imbrincació</span>
+					</h4>
 					Dins d'una variació es poden definir variacions de la variació, <i>imbrincant</i> una variació dins
 					d'una altra variació. La sintaxi parentitzada permet aquesta <i>imbricació</i>, obrint un nou
 					parèntesi; finalment s'hauran de tancar tants parèntesi com s'hagin obert.
 				</section>
 				<section class="w3-container w3-half">
-					<h4 class="w3-container w3-pale-yellow w3-center"><span>Final de variació amb
-						moviment de <i>blanques</i></span>
+					<h4 class="w3-container w3-pale-yellow w3-center">
+						<span>Final de variació amb moviment de <i>blanques</i></span>
 					</h4>
 					<p>Si l'últim moviment de la <cite>RAV</cite> és un moviment de les blanques, la última jugada
 						inclourà només un moviment, amb el parèntesi tancat <q><strong>)</strong></q> en comptes de la
@@ -1659,7 +1684,8 @@
 					</p>
 				</section>
 				<section class="w3-container w3-half">
-					<h4 class="w3-container w3-pale-yellow w3-center"><span>Primer moviment de <i>negres</i></span>
+					<h4 class="w3-container w3-pale-yellow w3-center">
+						<span>Primer moviment de <i>negres</i></span>
 					</h4>
 					<p>Quan el primer moviment de la variació és un moviment de les negres, en comptes de copiar el
 						moviment, es pot indicar amb <i>punts suspensius</i>, preferentment amb el caràcter
@@ -1672,7 +1698,9 @@
 					</p>
 				</section>
 				<section class="w3-container w3-half">
-					<h4 class="w3-container w3-pale-yellow w3-center"><span>Moviments</span></h4>
+					<h4 class="w3-container w3-pale-yellow w3-center">
+						<span>Moviments</span>
+					</h4>
 					<p>El primer caràcter de la primera jugada d'una variació és un parèntesi, i el número de jugada
 						repeteix l'anterior, però les següents jugades avancen el número, i això les podria confondre
 						amb les jugades de la línia principal.
@@ -1685,7 +1713,9 @@
 					</p>
 				</section>
 				<section class="w3-container w3-half">
-					<h4 class="w3-container w3-pale-yellow w3-center"><span>Etiqueta de la variació</span></h4>
+					<h4 class="w3-container w3-pale-yellow w3-center">
+						<span>Etiqueta de la variació</span>
+					</h4>
 					<p> Afegir una etiqueta a una variació permet referenciar-la des d'un comentari extern a la
 						variació. L'etiqueta s'escriu tot seguit després del paràntesi, com a un número entre
 						<i>corxets</i> precedit del símbol <i>dolar</i> <q><strong>($[1]</strong></q>. Per a una mateixa
@@ -1709,7 +1739,9 @@
 					perquè les jugades i les etiquetes queden limitades a una per línia.
 				</p>
 				<section class="w3-container w3-half">
-					<h4 class="w3-container w3-pale-yellow w3-center"><span>Comentaris inici de partida</span></h4>
+					<h4 class="w3-container w3-pale-yellow w3-center">
+						<span>Comentaris inici de partida</span>
+					</h4>
 					<p>Els comentaris que s'escriuen abans del primer moviment permeten descriure el
 						<strong>context</strong> en què es disputa la partida. Algunes partides molt assenyalades poden
 						incloure un <strong>títol</strong> per descriure-les, que hauria d'aparèixer com a primer
@@ -1718,7 +1750,9 @@
 					</p>
 				</section>
 				<section class="w3-container w3-half">
-					<h4 class="w3-container w3-pale-yellow w3-center"><span>Comentaris final de partida</span></h4>
+					<h4 class="w3-container w3-pale-yellow w3-center">
+						<span>Comentaris final de partida</span>
+					</h4>
 					<p>Els comentaris finals s'afegeixen després de la línia de l'<i>indicador final del resultat</i>,
 						una vegada acabats les jugades de la partida. Aquest és el lloc adequat per fer descripcions de
 						la partida; també es poden fer servir per explicar circumstàncies de l'acabament, o situacions
@@ -1727,7 +1761,9 @@
 					</p>
 				</section>
 				<section id="ComentariJugada" class="w3-container w3-half">
-					<h4 class="w3-container w3-pale-yellow w3-center"><span>Comentaris del les jugades</span></h4>
+					<h4 class="w3-container w3-pale-yellow w3-center">
+						<span>Comentaris del les jugades</span>
+					</h4>
 					<p>Un comentari s'escriu sempre en una nova línia, després de la línia d'una jugada; tots són
 						comentaris, però es distingueixen de diferent mena, indicada amb un <b>marcador</b>. El
 						<strong>marcador</strong> s'escriu darrera la clau d'obrir el comentari, sense separanció.
@@ -1763,7 +1799,9 @@
 					</ul>
 				</section>
 				<section class="w3-container w3-half">
-					<h4 class="w3-container w3-pale-yellow w3-center"><span>Referències dins dels comentaris</span></h4>
+					<h4 class="w3-container w3-pale-yellow w3-center">
+						<span>Referències dins dels comentaris</span>
+					</h4>
 					<ul>
 						<li><q><strong>@W</strong></q> <small>referència al jugador de <i>blanques</i>.</small></li>
 						<li><q><strong>@B</strong></q> <small>referència al jugador de <i>negres</i>.</small></li>
@@ -1897,7 +1935,9 @@
 					que pugui haver-hi.
 				</p>
 				<section class="w3-container">
-					<h4 class="w3-container w3-pale-yellow w3-center"><span>Simplificació fitxer CTL-PGN</span></h4>
+					<h4 class="w3-container w3-pale-yellow w3-center">
+						<span>Simplificació fitxer CTL-PGN</span>
+					</h4>
 					<p>Simplificar un fitxer CTL-PGN, fent-lo apte per a un <i>lector mínim</i>, és una tasca senzilla
 						fent servir uns <i>filtres</i>; veiem com fer-ho amb l'ordre <cite>sed</cite> de
 						<cite>GNU</cite> (<cite>Linux</cite>).
