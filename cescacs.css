@@ -103,6 +103,16 @@ figure.tbigright {
   }
 }
 
+@media screen and (min-width: 800px) {
+  ul.twocolumnschance {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    column-gap: 2em;
+  }
+}
+
+
 /* Use a media query to add a breakpoint at 800px: */
 @media screen and (max-width: 800px) {
 

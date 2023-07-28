@@ -1306,18 +1306,22 @@
 						L'ordre d'aquestes etiquetes ha de ser el que aquí es presenta:
 					</p>
 					<ul>
-						<li><strong>Event</strong> <small>Nom de l'event; si és desconegut <q><strong>?</strong></q>, si
-								no és un event organitzat <q><strong>CG</strong></q>
-								<small>acrònim de <i>Casual Game</i></small>.</small>
+						<li id="EventTag">
+							<strong>Event</strong> <small>Nom de l'event; si és desconegut
+							<q><strong>?</strong></q>, si no és un event organitzat
+							<q><strong>CG</strong></q> <span class="note">acrònim de
+							<i>Casual Game</i></span>.</small>
 							<ul class="exemple">
 								<li><code>[Event "Barcelona Championship"]</code></li>
 								<li><code>[Event "Moià Championship"]</code></li>
 								<li><code>[Event "CG"]</code></li>
 							</ul>
 						</li>
-						<li><strong>Site</strong> <small>Lloc, en el format <q><i>Ciutat, Regió País</i></q>,
-								on <i>país</i> és un codi ISO de tres lletres; es pot limitar només a la
-								<q><i>Regió País</i></q>, o senzillament el codi de <i>país</i>. Si tota la localització
+						<li id="SiteTag">
+							<strong>Site</strong> <small>Lloc, en el format
+								<q><i>Ciutat, Regió País</i></q>, on <i>país</i> és un codi ISO
+								de tres lletres; es pot limitar només a la <q><i>Regió País</i></q>,
+								o senzillament el codi de <i>país</i>. Si tota la localització
 								és desconeguda <q>?</q>.</small>
 							<ul class="exemple">
 								<li><code>[Site "Barcelona, Catalunya ESP"]</code></li>
@@ -1326,9 +1330,10 @@
 								<li><code>[Site "St. Petersburg RUS"]</code></li>
 							</ul>
 						</li>
-						<li><strong>Date</strong> <small>Data, en format <q>any-mes-dia</q>, amb
-								quatre-dos-dos dígits, fent servir <q>?</q> per a cada digit
-								desconegut</small>
+						<li id="DateTag">
+							<strong>Date</strong> <small>Data, en format <q>any-mes-dia</q>, amb
+							quatre-dos-dos dígits, fent servir <q>?</q> per a cada digit
+							desconegut</small>
 							<ul class="exemple">
 								<li><code>[Date "2020-08-15"]</code></li>
 								<li><code>[Date "2010-07-20"]</code></li>
@@ -1342,16 +1347,19 @@
 								senzillament per ser un format més acord amb els estàndards de data.
 							</aside>
 						</li>
-						<li><strong>Round</strong> <small>Per a competicions, però també per identificar
-							diverses partides d'un mateix encontre; si no és aplicable s'indica amb un
-							guionet <q>‐</q> (U+2010), o bé el caracter polivalent <q>-</q> (U+002D).</small>
+						<li id="RoundTag">
+							<strong>Round</strong> <small>Per a competicions, però també per
+							identificar diverses partides d'un mateix encontre; si no és aplicable
+							s'indica amb un guionet <q>‐</q> (U+2010), o bé el caracter polivalent
+							<q>-</q> (U+002D).</small>
 							<ul class="exemple">
 								<li><code>[Round "‐"]</code></li>
 							</ul>
 							<div class="note" style="margin:4px 2em; padding: 0.5em">
 								<p style="margin-top:0">Quan s'indica l'etiqueta <strong>Round</strong>
-									amb un valor superior a u s'ha d'indicar també l'etiqueta
-									<strong>EventDate</strong> o <strong>MatchDate</strong>.
+									s'ha de considerar indicar també l'etiqueta
+									<strong><a href="#EventDateTag" class="cite">EventDate</a></strong>
+									o <strong><a href="#MatchDateTag" class="cite">MatchDate</a></strong>.
 								</p>
 								<p>Es pot requerir indicar diversos números, en competicions, o si es disputen
 									diversos encontres entre dos jugadors el mateix dia; llavors els números
@@ -1362,7 +1370,8 @@
 								</ul>
 							</div>
 						</li>
-						<li><strong>White</strong> <small>Jugador amb blanques:</small>
+						<li id="WhiteTag">
+							<strong>White</strong> <small>Jugador amb blanques:</small>
 							<ul>
 								<li style="list-style-type: circle;"><small>Primer cognom, i després,
 										separat amb coma i un espai, el nom. Es poden fer servir
@@ -1374,6 +1383,11 @@
 								<li style="list-style-type: circle;"><small>Si és un programa informàtic
 										es fa servir el nom, i a continuació la versió.</small>
 								</li>
+								<li style="list-style-type: circle;"><small>Es pot ometre, si es fa
+									servir l'etiqueta
+									<strong><a href="#WhiteNATag" class="cite">WhiteNA</a></strong>.
+									</small>
+								</li>
 							</ul>
 							<ul class="exemple">
 								<li><code>[White "Ferràs, Jaume"]</code></li>
@@ -1381,15 +1395,24 @@
 								<li><code>[White "Prat, J. A."]</code></li>
 							</ul>
 						</li>
-						<li><strong>Black</strong> <small>Jugador amb negres, indicat de la mateixa
-								manera que el jugador per l'etiqueta <q>White</q>.</small>
+						<li id="BlackTag">
+							<strong>Black</strong> <small>Jugador amb negres, indicat de la mateixa
+							manera que el jugador per l'etiqueta <q>White</q>.</small>
+							<ul>
+								<li style="list-style-type: circle;"><small>Es pot ometre, si es fa
+									servir l'etiqueta
+									<strong><a href="#BlackNATag" class="cite">BlackNA</a></strong>.
+									</small>
+								</li>
+							</ul>
 							<ul class="exemple">
 								<li><code>[Black "Sasal, Cesc"]</code></li>
 								<li><code>[Black "?"]</code></li>
 							</ul>
 						</li>
-						<li><strong>Result</strong> <small>resultat de la partida, amb sis diferents
-								valors acceptables:</small>
+						<li id="ResultTag">
+							<strong>Result</strong> <small>resultat de la partida, amb sis diferents
+							valors acceptables:</small>
 							<ul class="exemple">
 								<li><code>[Result "3-0"]</code> <small>Guanyen les
 										<i>blanques</i>.</small>
@@ -1424,98 +1447,104 @@
 						<strong>Id</strong>, sempre com a <strong>segona etiqueta</strong>.
 					</p>
 					<ul>
-						<li><strong>Id</strong> <small>Com a valor tindrà un identificador format per lletres, números i
-								guions que consistirà en una primera part que identificarà de manera única l'editor (en
-								aquest lloc web es fa servir <q>Cescacs</q>), i separat amb un guió, un identificador
-								únic d'aquest editor.</small>
+						<li id="IdTag">
+							<p><strong>Id</strong> <small>Com a valor tindrà un identificador format per lletres,
+								números i guions que consistirà en una primera part que identificarà de manera
+								única l'editor (en aquest lloc web es fa servir <q>Cescacs</q>), i separat amb
+								un guió, un identificador únic d'aquest editor.</small>
+							</p>
+							<div class="w3-container">
+								<div class="w3-col w3-container caixa-exemple-ctl-pgn" style="width:18em">
+									<code>[Variant "C'escacs"]
+										[Id "Cescacs-X01"]
+										1. H6-H12 ?!, I23-I19 ?!
+										2. JF6-C15 ?!, GH26-Z11 ?!
+										3. L5-L7, NG25-L17 ?!
+										4. EH4-H8 ??, GZ11-L5
+										5. I5-I9 ??, NL17-G9
+										6. K4-K10 ??, GL5-H6#
+										0-3
+									</code>
+								</div>
+								<div class="w3-rest w3-container" style="min-width:14em;">
+									<p><small>Els identificadors d'un editor és convenient que facin servir un
+											número, possiblement combinat amb un prefix de classificació. Per exemple:</small>
+									</p>
+									<ul class="exemple">
+										<li><code>[Id "Cescacs-X01"]</code></li>
+									</ul>
+									<ul class="aclariment twocolumns" style="margin:0;line-height:1.6ex;">
+										<li><small><i>O</i> – Opening sample</small></li>
+										<li><small><i>C</i> – Opening continuation</small></li>
+										<li><small><i>Z</i> – Puzzle</small></li>
+										<li><small><i>P</i> – Example</small></li>
+										<li><small><i>E</i> – Ending</small></li>
+										<li><small><i>M</i> – Middlegame</small></li>
+										<li><small><i>X</i> – Refutation (counterexample)</small></li>
+										<li>…</li>
+									</ul>
+									<p><small>També es poden incloure-hi sufixos separant-los amb guions,
+										per a indicar que és una variació, per a indicar l'idioma dels
+										comentaris, o per a ambdós motius, sempre acabant amb el sufix de
+										l'idioma, si hi fos.</small>
+									</p>
+								</div>
+							</div>
 						</li>
 					</ul>
-					<div class="w3-container">
-						<div class="w3-col w3-container caixa-exemple-ctl-pgn" style="width:18em">
-							<code>[Variant "C'escacs"]
-								[Id "Cescacs-X01"]
-								1. H6-H12 ?!, I23-I19 ?!
-								2. JF6-C15 ?!, GH26-Z11 ?!
-								3. L5-L7, NG25-L17 ?!
-								4. EH4-H8 ??, GZ11-L5
-								5. I5-I9 ??, NL17-G9
-								6. K4-K10 ??, GL5-H6#
-								0-3
-							</code>
-						</div>
-						<div class="w3-rest w3-container" style="min-width:14em;">
-							<p><small>Els identificadors d'un editor és convenient que facin servir un
-									número, possiblement combinat amb un prefix de classificació. Per exemple:</small>
-							</p>
-							<ul class="exemple">
-								<li><code>[Id "Cescacs-X01"]</code></li>
-							</ul>
-							<ul class="aclariment twocolumns" style="margin:0;line-height:1.6ex;">
-								<li><small><i>O</i> – Opening sample</small></li>
-								<li><small><i>C</i> – Opening continuation</small></li>
-								<li><small><i>Z</i> – Puzzle</small></li>
-								<li><small><i>P</i> – Example</small></li>
-								<li><small><i>E</i> – Ending</small></li>
-								<li><small><i>M</i> – Middlegame</small></li>
-								<li><small><i>X</i> – Refutation (counterexample)</small></li>
-								<li>…</li>
-							</ul>
-							<p><small>També es poden incloure-hi sufixos separant-los amb guions,
-								per a indicar que és una variació, per a indicar l'idioma dels
-								comentaris, o per a ambdós motius, sempre acabant amb el sufix de
-								l'idioma, si hi fos.</small>
-							</p>
-						</div>
-						<p>L'etiqueta identificador <strong>Id</strong> també es pot fer servir en
-							<strong>registres de fragments de partides</strong>, incorporant-lo
-							llavors després de les etiquetes que identifiquen la partida. Els prefixos
-							que es farien servir llavors serien:
-							<ul>
-								<li><q><b>O</b></q>, sent el número l'últim moviment registrat,
-									acabat en <q>w</q> si només registra el moviment de blanques en
-									l'últim moviment.
-								</li>
-								<li><q><b>C</b></q> o <q><b>M</b></q> fent servir dues parelles de
-									números pel primer i l'últim moviment registrats, separats per
-									un guionet <q><strong>‐</strong></q> (U+2010), o un
-									<i>guió polivalent</i> <q>-</q>. Es farà servir un <q>?</q>, en
-									comptes del primer número, si es desconeix el número del primer
-									moviment. S'afegirà al número del primer moviment una <q>b</q>,
-									si el registre comença amb un moviment de negres, i al número de
-									l'últim moviment una <q>w</q> si el registre acaba en un moviment
-									de blanques. Es pot donar llavors també el cas <q>?b</q> per al
-									primer número.	
-								</li>
-								<li><q><b>E</b></q> incorporant com a número el moviment des del qual
-									s'inicia el registre, que pot incorporar al final una <q>b</q>,
-									anàlogament al cas anterior. Quan és desconegut el número de
-									moviment on s'inicia el registre es farà servir <q>?</q> o
-									<q>?b</q>, però llavors s'incorporarà, separat per un guionet
-									<q><strong>‐</strong></q> (U+2010), o un <i>guió polivalent</i>
-									<q>-</q>, el número de la jugada final, és a dir, el número
-									de moviments registrats.
-								</li>
-							</ul>
-						</p>
-					</div>
-				</section>
+					<p>L'etiqueta identificador <strong>Id</strong> també es pot fer servir en
+						<strong>registres de fragments de partides</strong>, incorporant-lo
+						llavors després de les etiquetes que identifiquen la partida. Els prefixos
+						que es farien servir llavors serien:
+						<ul>
+							<li><q><b>O</b></q>, sent el número l'últim moviment registrat,
+								acabat en <q>w</q> si només registra el moviment de blanques en
+								l'últim moviment.
+							</li>
+							<li><q><b>C</b></q> o <q><b>M</b></q> fent servir dues parelles de
+								números pel primer i l'últim moviment registrats, separats per
+								un guionet <q><strong>‐</strong></q> (U+2010), o un
+								<i>guió polivalent</i> <q>-</q>. Es farà servir un <q>?</q>, en
+								comptes del primer número, si es desconeix el número del primer
+								moviment. S'afegirà al número del primer moviment una <q>b</q>,
+								si el registre comença amb un moviment de negres, i al número de
+								l'últim moviment una <q>w</q> si el registre acaba en un moviment
+								de blanques. Es pot donar llavors també el cas <q>?b</q> per al
+								primer número.	
+							</li>
+							<li><q><b>E</b></q> incorporant com a número el moviment des del qual
+								s'inicia el registre, que pot incorporar al final una <q>b</q>,
+								anàlogament al cas anterior. Quan és desconegut el número de
+								moviment on s'inicia el registre es farà servir <q>?</q> o
+								<q>?b</q>, però llavors s'incorporarà, separat per un guionet
+								<q><strong>‐</strong></q> (U+2010), o un <i>guió polivalent</i>
+								<q>-</q>, el número de la jugada final, és a dir, el número
+								de moviments registrats.
+							</li>
+						</ul>
+					</p>
+			</section>
 				<section class="w3-container">
 					<h4 class="w3-container w3-pale-yellow w3-center">
 						<span>Altres etiquetes opcionals</span>
 					</h4>
-					<ul>
-						<li><strong>EventDate</strong> <small>Data de l'event. Quan es tracta d'un
-							<i lang="en" translate="no">Casual Game</i> (<i>CG</i>) es refereix a la data
-							de l'encontre; és a dir, es pot fer servir en comptes de
+					<ul class="twocolumnschance">
+						<li id="EventDateTag">
+							<strong>EventDate</strong> <small>Data de l'event. Quan es tracta d'un
+							<i lang="en" translate="no">Casual Game</i> (<i>CG</i>) es refereix a
+							la data de l'encontre; és a dir, es pot fer servir en comptes de
 							<strong>MatchDate</strong> quan [<strong>Event</strong> "<i>CG</i>"].</small>
 						</li>
-						<li><strong>MatchDate</strong> <small>Data de l'encontre. El valor no té sentit
-							si no s'indica un valor per a l'etiqueta <strong>Round</strong>, i és
-							innecessària quan l'etiqueta <strong>Round</strong> té el valor <q>1</q>
-							o una seqüència de números acabats en el número <q>1</q>, doncs el valor
-							llavors serà el mateix de l'etiqueta <strong>Date</strong></small>
+						<li id="MatchDateTag">
+							<strong>MatchDate</strong> <small>Data de l'encontre.
+							El valor no té sentit si no s'indica un valor per a l'etiqueta
+							<strong>Round</strong>, i és innecessària quan el valor és el mateix de
+							l'etiqueta <strong>Date</strong></small>, per exemple, quan l'etiqueta
+							<strong>Round</strong> té el valor <q>1</q> o una seqüència de números
+							acabats en el número <q>1</q>.</small>
 						</li>
-						<li><strong>Termination</strong> <small>Detall de la finalització;
+						<li id="TerminationTag">
+							<strong>Termination</strong> <small>Detall de la finalització;
 							admet els valors: <q><i>abandoned</i></q>, <q><i>rules infraction</i></q>,
 							<q><i>time forfeit</i></q> i per a jocs indefinidament ajornats:
 							<q><i>death</i></q> o <q><i>emergency</i></q></small>
@@ -1526,22 +1555,23 @@
 									some termination reason will be filled.</small>
 							</aside>
 						</li>
-						<li><strong>Lang</strong> <small>Idioma que es fa servir en els comentaris; el valor ha de
-								ser un codi d'idioma <cite>ISO 639</cite>, de dues lletres (<cite>ISO 639-1</cite>
-								alpha-2), o, si es requereix, el codi <cite>ISO 639-3</cite> de tres lletres.</small>
+						<li id="LangTag">
+							<strong>Lang</strong> <small>Idioma que es fa servir en els comentaris;
+							el valor ha de ser un codi d'idioma <cite>ISO 639</cite>, de dues lletres
+							(<cite>ISO 639-1</cite> alpha-2), o, si es requereix, el codi
+							<cite>ISO 639-3</cite> de tres lletres.</small>
 						</li>
-						<li><strong>TimeControl</strong> <small>Values:</small>
+						<li id="TimeControlTag">
+							<strong>TimeControl</strong> <small>Values:</small>
 							<ul class="exemple">
 								<li><code>[TimeControl "?"]</code> <small>unknown</small></li>
 								<li><code>[TimeControl "-"]</code> <small>not used</small></li>
 								<li><code>[TimeControl "<i>number1</i>/<i>number2</i>"]</code> <small><i>number1</i>
-										moves
-										in <i>number2</i> seconds</small></li>
+										moves in <i>number2</i> seconds</small></li>
 								<li><code>[TimeControl "<i>number</i>"]</code> <small>total <i>number</i> of seconds
 										("sudden death")</small></li>
 								<li><code>[Timecontrol <i>number1</i>+<i>number2</i>]</code> <small><i>number1</i>
-										seconds
-										plus <i>number2</i> seconds for each move</small></li>
+										seconds plus <i>number2</i> seconds for each move</small></li>
 								<li>[TimeControl "*<i>number</i>"] <small><i>number</i> seconds per move</small></li>
 								<li style="margin-top: 0.5ex;"><small><strong>Concrete exemples:</strong></small>
 									<ul class="exemple">
@@ -1562,21 +1592,26 @@
 								</li>
 							</ul>
 						</li>
-						<li><strong>WhiteType</strong>, <strong>BlackType</strong> <small>Allows the values
-								<q><i>human</i></q> or <q><i>program</i></q>.</small>
+						<li id="WhiteTypeTag">
+							<strong>WhiteType</strong>, <strong id="BlackTypeTag">BlackType</strong>
+							<small>Allows the values <q><i>human</i></q> or <q><i>program</i></q>.</small>
 						</li>
-						<li><strong>WhiteNA</strong>, <strong>BlackNA</strong> <small><i lang="en">network access</i>,
+						<li id="WhiteNATag">
+							<strong>WhiteNA</strong>, <strong id="BlackNATag">BlackNA</strong>
+							<small><i lang="en">network access</i>,
 								permet recollir l'adreça d'e-mail dels jugadors; en un <strong>joc anònim</strong> poden
 								substituir les etiquetes <strong><i>White</i></strong> i <strong><i>Black</i></strong>,
 								respectivament. Llavors són escrites en la posició corresponent a aquestes, asumint el
 								valor <strong><i>?</i></strong> per a l'etiqueta substituida; l'exportació del joc
 								no sempre informarà d'aquests valors, per confidencialitat de dades digitals.</small>
 						</li>
-						<li><strong>Mode</strong> <small>Allows the values: <q>OTB</q> (over the board),
-								<q><i>ICS</i></q> (Chess Server), <q><i>EM</i></q> (electronic mail), or
-								<q><i>TC</i></q> (telecommunication).</small>
+						<li id="ModeTag">
+							<strong>Mode</strong> <small>Allows the values: <q>OTB</q> (over the board),
+							<q><i>ICS</i></q> (Chess Server), <q><i>EM</i></q> (electronic mail), or
+							<q><i>TC</i></q> (telecommunication).</small>
 						</li>
-						<li><strong>Annotator</strong> <small>Nom de qui ha registrat i comentat la partida, en el
+						<li id="AnnotatorTag">
+							<strong>Annotator</strong> <small>Nom de qui ha registrat i comentat la partida, en el
 							mateix format que el nom dels jugadors; pot haver-hi més d'una etiqueta, una per
 							persona, però totes les etiquetes amb l'identificador <q><i>Annotator</i></q> han de ser
 							consecutives; el primer ha de ser el responsable del registre de la partida, sent
@@ -1594,7 +1629,7 @@
 						</li>
 					</ul>
 				</section>
-				<section class="w3-container">
+				<section id="RedefineTag" class="w3-container">
 					<h4 class="w3-container w3-pale-yellow w3-center">
 						<span>Etiqueta per a l'ús d'identificadors de peça alternatius</span>
 					</h4>
@@ -1616,7 +1651,7 @@
 						</li>
 					</ul>
 				</section>
-				<section class="w3-container">
+				<section id="SetupTag" class="w3-container">
 					<h4 class="w3-container w3-pale-yellow w3-center">
 						<span>Etiqueta de posició inicial</span>
 					</h4>
