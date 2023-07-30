@@ -1,4 +1,4 @@
-#!/usr/bin/sed -f
+﻿#!/usr/bin/sed -f
 
 #Delete single line comments
 /\{.*\}/d;
@@ -57,57 +57,57 @@ s/\bQ([A-IKLPTXZ][0-9][0-9]?)\b/D\1/g;
 #Queen to D (promotion)
 s/\b([A-GJKLNQRSTVW]?[A-IKLPTXZ][0-9][0-9]?=)Q\b/\1D/g;
 
-#White Bishop to J (TLPD)
+#White Bishop to J (PDTL)
 :LWJ;
 s/(\/[0-9][0-9]?\.[0-9a-zCDEGH-KM-Z]*)[ABFL]/\1J/g;
 tLWJ;
 
-#Black Bishop to j (TLPD)
+#Black Bishop to j (PDTL)
 :lbj;
 s/(\/[0-9][0-9]?\.[0-9A-Zcdegh-km-z]*)[abfl]/\1j/g;
 tlbj;
 
-#White Knight to N (TLPD)
+#White Knight to N (PDTL)
 :LWN;
 s/(\/[0-9][0-9]?\.[0-9a-zABD-RT-Z]*)[CS]/\1N/g;
 tLWN;
 
-#Black Knight to n (TLPD)
+#Black Knight to n (PDTL)
 :lbn;
 s/(\/[0-9][0-9]?\.[0-9A-Zabd-rt-z]*)[cs]/\1n/g;
 tlbn;
 
-#White Rook to R (TLPD)
+#White Rook to R (PDTL)
 :LWR;
 s/(\/[0-9][0-9]?\.[0-9a-zA-SU-Z]*)T/\1R/g;
 tLWR;
 
-#Black Rook to r (TLPD)
+#Black Rook to r (PDTL)
 :lbr;
 s/(\/[0-9][0-9]?\.[0-9A-Za-su-z]*)t/\1r/g;
 tlbr;
 
-#White Wyvern to V (TLPD)
+#White Wyvern to V (PDTL)
 :LWV;
 s/(\/[0-9][0-9]?\.[0-9a-zA-VXYZ]*)W/\1V/g;
 tLWV;
 
-#Black Wyvern to v (TLPD)
+#Black Wyvern to v (PDTL)
 :lbv;
 s/(\/[0-9][0-9]?\.[0-9A-Za-vxyz]*)w/\1v/g;
 tlbv;
 
-#White Queen to D (TLPD)
+#White Queen to D (PDTL)
 :LWD;
 s/(\/[0-9][0-9]?\.[0-9a-zABCE-PR-Z]*)Q/\1D/g;
 tLWD;
 
-#Black Queen to d (TLPD)
+#Black Queen to d (PDTL)
 :lbd;
 s/(\/[0-9][0-9]?\.[0-9A-Zabce-pr-z]*)q/\1d/g;
 tlbd;
 
-#Castling indicators (TLPD)
+#Castling indicators (PDTL)
 s/\bT([K-][TR-][tr-][k-][tr-])\b/R\1/g;
 s/\b([TR-][K-])T([tr-][k-][tr-])\b/\1R\2/g;
 s/\b([TR-][K-][TR-])t([k-][tr-])\b/\1r\2/g;

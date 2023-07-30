@@ -805,7 +805,7 @@
 						<aside class="compact">The prefixes <q><i class="cescacs">KRK</i></q>,
 							<q><i class="cescacs">KRD</i></q> and <q><i class="cescacs">KRR</i></q>
 							can be changed if in the <a href="#CTL-PGN" class="cescacs">CTL-PGN exchange
-								format</a> the tag <cite><code class="exemple">[Redefine "T@R"]</code></cite>
+								format</a> the label <cite><code class="exemple">[Redefine "T@R"]</code></cite>
 							is used, remaining, respectively: <q><i class="cescacs">KTK</i></q>,
 							<q><i class="cescacs">KTD</i></q> and <q><i class="cescacs">KTT</i></q>.
 						</aside>
@@ -1281,8 +1281,8 @@
 				in three different ways:
 			</p>
 			<ul>
-				<li>Metadata classified in tags, prefixing the item itself. Each tag has
-					an identifier and a value in a specific format, set according to the
+				<li>Metadata classified in labels, prefixing the item itself. Each label has
+					an identifier and a tag value in a specific format, set according to the
 					type of value being represented.
 				</li>
 				<li>Free comments interspersed in the algebraic notation.
@@ -1304,13 +1304,13 @@
 			</p>
 			<section class="w3-container">
 				<h3 class="w3-container w3-pale-green w3-center header2 w3-text-grey">Labels</h3>
-				<p>A tag is written on one line, enclosed in square brackets
-					<q><em>[</em> ... <em>]</em></q>, and contains a <strong>tag identifier
-					word</strong>, followed by a <q><i>texto entre comillas</i></q>, which is the
+				<p>A label is written on one line, enclosed in square brackets
+					<q><em>[</em> ... <em>]</em></q>, and contains a <strong>label identifier
+					word</strong>, followed by a <q><i>text in quotes</i></q>, which is the
 					<strong>value of the tag</strong>. Every <i>CTL-PGN</i> record must always
-					start with the <strong>Variant</strong> tag, using the value
-					<i class="cescacs">C'escacs</i> for the tag; it is the
-					<strong>initial tag</strong>:
+					start with the <strong>Variant</strong> label, using the tag value
+					<i class="cescacs">C'escacs</i> for that label; it is the
+					<strong>initial label</strong>:
 				</p>
 				<div class="w3-container w3-win8-violet w3-opacity">				
 					<strong><code>[Variant "C'escacs"]</code></strong>
@@ -1335,9 +1335,9 @@
 					</p>
 					<ul>
 						<li id="EventTag">
-							<strong>Event</strong> <small>Nom de l'event; si és desconegut
-							<q><strong>?</strong></q>, si no és un event organitzat
-							<q><strong>CG</strong></q> <span class="note">acrònim de
+							<strong>Event</strong> <small>Name of the event; if unknown
+							<q><strong>?</strong></q>, if not an organised event
+							<q><strong>CG</strong></q> <span class="note">acronym for
 							<i>Casual Game</i></span>.</small>
 							<ul class="exemple">
 								<li><code>[Event "Barcelona Championship"]</code></li>
@@ -1346,11 +1346,11 @@
 							</ul>
 						</li>
 						<li id="SiteTag">
-							<strong>Site</strong> <small>Lloc, en el format
-								<q><i>Ciutat, Regió País</i></q>, on <i>país</i> és un codi ISO
-								de tres lletres; es pot limitar només a la <q><i>Regió País</i></q>,
-								o senzillament el codi de <i>país</i>. Si tota la localització
-								és desconeguda <q>?</q>.</small>
+							<strong>Site</strong> <small>Location, in the format
+								<q><i>City, Region Country</i></q>, where <i>country</i> is a
+								three-letter ISO code; it can be limited to <q><i>Region Country</i></q>
+								only, or simply to the country code. If the entire location is unknown
+								<q>?</q>.</small>
 							<ul class="exemple">
 								<li><code>[Site "Barcelona, Catalunya ESP"]</code></li>
 								<li><code>[Site "Moià (Barcelona), Catalunya ESP"]</code></li>
@@ -1359,9 +1359,8 @@
 							</ul>
 						</li>
 						<li id="DateTag">
-							<strong>Date</strong> <small>Data, en format <q>any-mes-dia</q>, amb
-							quatre-dos-dos dígits, fent servir <q>?</q> per a cada digit
-							desconegut</small>
+							<strong>Date</strong> <small>Date, in the format <q>year-month-day</q>,
+								with four-two-two digits, using <q>?</q> for every unknown digit.</small>
 							<ul class="exemple">
 								<li><code>[Date "2020-08-15"]</code></li>
 								<li><code>[Date "2010-07-20"]</code></li>
@@ -1369,29 +1368,30 @@
 								<li><code>[Date "2031-??-??"]</code></li>
 								<li><code>[Date "201?-??-??"]</code></li>
 							</ul>
-							<aside class="compact">Observar que es fa servir
-								el guió polivalent (U+002D) com a separador
-								en el format de la data, en comptes del punt que fa servir <i>PGN</i>,
-								senzillament per ser un format més acord amb els estàndards de data.
+							<aside class="compact">Note that the multipurpose hyphen (U+002D) is used
+								as a separator in the date format, instead of the dot used by
+								<i>PGN</i>, simply because it is a format more in line with date
+								standards.
 							</aside>
 						</li>
 						<li id="RoundTag">
-							<strong>Round</strong> <small>Per a competicions, però també per
-							identificar diverses partides d'un mateix encontre; si no és aplicable
-							s'indica amb un guionet <q>‐</q> (U+2010), o bé el caracter polivalent
-							<q>-</q> (U+002D).</small>
+							<strong>Round</strong> <small>For competitions, but also to identify
+								different games of the same match; if not applicable it is indicated
+								with a dash <q>‐</q> (U+2010), or with the all-purpose character
+								<q>-</q> (U+002D).</small>
 							<ul class="exemple">
 								<li><code>[Round "‐"]</code></li>
 							</ul>
 							<div class="note" style="margin:4px 2em; padding: 0.5em">
-								<p style="margin-top:0">Quan s'indica l'etiqueta <strong>Round</strong>
-									s'ha de considerar indicar també l'etiqueta
+								<p style="margin-top:0">When indicating the <strong>Round</strong>
+									label, consideration should be given to also indicate the
 									<strong><a href="#EventDateTag" class="cite">EventDate</a></strong>
-									o <strong><a href="#MatchDateTag" class="cite">MatchDate</a></strong>.
+									or <strong><a href="#MatchDateTag" class="cite">MatchDate</a></strong>
+									label.
 								</p>
-								<p>Es pot requerir indicar diversos números, en competicions, o si es disputen
-									diversos encontres entre dos jugadors el mateix dia; llavors els números
-									es separen amb punts:
+								<p>It may be required to indicate different numbers, in competitions,
+									or if different matches are played between two players on the same
+									day; then the numbers are separated by a dot between them:
 								</p>
 								<ul class="exemple">
 									<li><code>[Round "2.1"]</code></li>
@@ -1399,21 +1399,28 @@
 							</div>
 						</li>
 						<li id="WhiteTag">
-							<strong>White</strong> <small>Jugador amb blanques:</small>
+							<strong>White</strong> <small>White player:</small>
 							<ul>
-								<li style="list-style-type: circle;"><small>Primer cognom, i després,
-										separat amb coma i un espai, el nom. Es poden fer servir
-										inicials fent servir la lletra i un punt.</small>
+								<li style="list-style-type: circle;"><small>Surname(s), and then,
+									separated by a comma and a space, the first name. Initials can
+									be used using the letter and a full stop.</small>
+									<aside class="compact"><small>It is important to always register
+										surname and first name in the same way; in Catalonia it is
+										common to separate surnames with an "i", but the identification
+										is ultimately determined by the player, always within the legal
+										identification; the same for abbreviations and variations of the
+										name.</small>
+									</aside>
 								</li>
-								<li style="list-style-type: circle;"><small>Si el jugador és desconegut,
-										es fa servir <q>?</q>.</small>
+								<li style="list-style-type: circle;"><small>If the player is unknown,
+									<q>?</q> is used.</small>
 								</li>
-								<li style="list-style-type: circle;"><small>Si és un programa informàtic
-										es fa servir el nom, i a continuació la versió.</small>
+								<li style="list-style-type: circle;"><small>If it is a software
+									program, the name is used, followed by the version.</small>
 								</li>
-								<li style="list-style-type: circle;"><small>Es pot ometre, si es fa
-									servir l'etiqueta
-									<strong><a href="#WhiteNA" class="cite">WhiteNA</a></strong>.
+								<li style="list-style-type: circle;"><small>It can be omitted, if the
+									<strong><a href="#WhiteNA" class="cite">WhiteNA</a></strong>
+									label is used.
 									</small>
 								</li>
 							</ul>
@@ -1424,12 +1431,12 @@
 							</ul>
 						</li>
 						<li id="BlackTag">
-							<strong>Black</strong> <small>Jugador amb negres, indicat de la mateixa
-								manera que el jugador per l'etiqueta <q>White</q>.</small>
+							<strong>Black</strong> <small>Black player, following the same
+								indications as for the <q>White</q> label.</small>
 							<ul>
-								<li style="list-style-type: circle;"><small>Es pot ometre, si es fa
-									servir l'etiqueta
-									<strong><a href="#BlackNA" class="cite">BlackNA</a></strong>.
+								<li style="list-style-type: circle;"><small>It can be omitted, if the
+									<strong><a href="#BlackNA" class="cite">BlackNA</a></strong>
+									label is used.
 									</small>
 								</li>
 							</ul>
@@ -1439,25 +1446,23 @@
 							</ul>
 						</li>
 						<li id="ResultTag">
-							<strong>Result</strong> <small>resultat de la partida, amb sis diferents
-							valors acceptables:</small>
+							<strong>Result</strong> <small>result of the game, with six different
+								acceptable values:</small>
 							<ul class="exemple">
-								<li><code>[Result "3-0"]</code> <small>Guanyen les
-										<i>blanques</i>.</small>
+								<li><code>[Result "3-0"]</code> <small><i>White</i> wins.</small>
 								</li>
-								<li><code>[Result "0-3"]</code> <small>Guanyen les
-										<i>negres</i>.</small>
+								<li><code>[Result "0-3"]</code> <small><i>Black</i> wins.</small>
 								</li>
-								<li><code>[Result "1-1"]</code> <small><i>Taules</i>.</small>
+								<li><code>[Result "1-1"]</code> <small><i>Draw</i>.</small>
 								</li>
-								<li><code>[Result "2-1"]</code> <small>Les <i>blanques</i>
-										<i>ofeguen</i> el <i>Rei</i> de les <i>negres</i>.</small>
+								<li><code>[Result "2-1"]</code> <small><i>White</i>
+										<i>stalemates</i> the <i>Black</i>'s <i>King</i>.</small>
 								</li>
-								<li><code>[Result "1-2"]</code> <small>Les <i>negres</i>
-										<i>ofeguen</i> el <i>Rei</i> de les <i>blanques</i>.</small>
+								<li><code>[Result "1-2"]</code> <small><i>Black</i>
+										<i>stalemates</i> the <i>White</i>'s <i>King</i>.</small>
 								</li>
-								<li><code>[Result "*"]</code> <small>(asterisc) Partida
-										inacabada.</small>
+								<li><code>[Result "*"]</code> <small>(asterisk) Unfinished
+									game.</small>
 								</li>
 							</ul>
 						</li>
@@ -1467,18 +1472,19 @@
 					<h4 class="w3-container w3-pale-yellow w3-center">
 						<span>Minimum registration label</span>
 					</h4>
-					Si no es registra una partida, sinò que es registren
-					<strong>moviments per a il·lustrar un concepte</strong>, fins i tot una
-					<q>partida típica sobre el paper</q>, com ara el
-					<a href="glossary.html#Matboig" class="cescacs" target="_blank">mat del boig</a>,
-					en comptes de les set etiquetes per al registre de partida, es fa servir l'etiqueta
-					<strong>Id</strong>, sempre com a <strong>segona etiqueta</strong>.
+					If a game is not recorded, but <strong>movements are recorded to illustrate
+					a concept</strong>, even in the case of an <q>exemple</q> or <q>typical game
+					on paper</q>, such as the <a href="glossary.html#Matboig" class="cescacs"
+						target="_blank">fool's mate</a>, instead of the seven labels for the game
+					record, the label <strong>Id</strong> is used, always as the
+					<strong>second label</strong>.
 					<ul>
 						<li id="IdTag">
-							<p><strong>Id</strong> <small>Com a valor tindrà un identificador format per lletres,
-								números i guions que consistirà en una primera part que identificarà de manera
-								única l'editor (en aquest lloc web es fa servir <q>Cescacs</q>), i separat amb
-								un guió, un identificador únic d'aquest editor.</small>
+							<p><strong>Id</strong> <small>As a value it will have an identifier
+								consisting of letters, numbers and hyphens, consisting of a first
+								part that uniquely identifies the publisher (the examples published
+								on this website use the identifier <q>Cescacs</q>), and separated by
+								a hyphen, a unique identifier of this publisher.</small>
 							</p>
 							<div class="w3-container">
 								<div class="w3-col w3-container caixa-exemple-ctl-pgn" style="width:18em">
@@ -1494,8 +1500,8 @@
 									</code>
 								</div>
 								<div class="w3-rest w3-container" style="min-width:14em;">
-									<p><small>Els identificadors d'un editor és convenient que facin servir un
-											número, possiblement combinat amb un prefix de classificació. Per exemple:</small>
+									<p><small>Publisher identifiers should use a number, possibly
+										combined with a sorting prefix. For example:</small>
 									</p>
 									<ul class="exemple">
 										<li><code>[Id "Cescacs-X01"]</code></li>
@@ -1510,44 +1516,40 @@
 										<li><small><i>X</i> – Refutation (counterexample)</small></li>
 										<li>…</li>
 									</ul>
-									<p><small>També es poden incloure-hi sufixos separant-los amb guions,
-										per a indicar que és una variació, per a indicar l'idioma dels
-										comentaris, o per a ambdós motius, sempre acabant amb el sufix de
-										l'idioma, si hi fos.</small>
+									<p><small>Suffixes can also be included by separating them with
+										hyphens, to indicate that it is a variation, to indicate the
+										language of the comments, or for both reasons, always ending
+										with the language suffix, if any.</small>
 									</p>
 								</div>
 							</div>
 						</li>
 					</ul>
-					<p>L'etiqueta identificador <strong>Id</strong> també es pot fer servir en
-						<strong>registres de fragments de partides</strong>, incorporant-lo
-						llavors després de les etiquetes que identifiquen la partida. Els prefixos
-						que es farien servir llavors serien:
+					<p>The <strong>Id</strong> identifier label can also be used in
+						<strong>game fragment records</strong>, by incorporating it after the labels
+						that identify the game. The prefixes that would then be used would be:
 					</p>
 					<ul>
-						<li><q><b>O</b></q>, sent el número l'últim moviment registrat,
-							acabat en <q>w</q> si només registra el moviment de blanques en
-							l'últim moviment.
+						<li><q><b>O</b></q> (<i>Opening</i>), the number being the last recorded move,
+							ending in <q>w</q> if it only records the white move on the last move.
 						</li>
-						<li><q><b>C</b></q> o <q><b>M</b></q> fent servir dues parelles de
-							números pel primer i l'últim moviment registrats, separats per
-							un guionet <q><strong>‐</strong></q> (U+2010), o un
-							<i>guió polivalent</i> <q>-</q>. Es farà servir un <q>?</q>, en
-							comptes del primer número, si es desconeix el número del primer
-							moviment. S'afegirà al número del primer moviment una <q>b</q>,
-							si el registre comença amb un moviment de negres, i al número de
-							l'últim moviment una <q>w</q> si el registre acaba en un moviment
-							de blanques. Es pot donar llavors també el cas <q>?b</q> per al
-							primer número.	
+						<li><q><b>C</b></q> (<i>Continuation</i>) or <q><b>M</b></q> (<i>Middlegame</i>)
+							using a pair of numbers for the first and the last movement recorded,
+							separated by a hyphen <q><strong>‐</strong></q> (U+2010), or a multipurpose
+							hyphen <q>-</q>. If the first movement number is unknown, a <q>?</q> shall
+							be used instead of the first number. A <q>b</q> is added to the number of
+							the first movement if the record begins with a black movement, and a
+							<q>w</q> to the number of the last movement if the record ends with a
+							white movement. The case <q>?b</q> can therefore also occur for the first
+							number.
 						</li>
-						<li><q><b>E</b></q> incorporant com a número el moviment des del qual
-							s'inicia el registre, que pot incorporar al final una <q>b</q>,
-							anàlogament al cas anterior. Quan és desconegut el número de
-							moviment on s'inicia el registre es farà servir <q>?</q> o
-							<q>?b</q>, però llavors s'incorporarà, separat per un guionet
-							<q><strong>‐</strong></q> (U+2010), o un <i>guió polivalent</i>
-							<q>-</q>, el número de la jugada final, és a dir, el número
-							de moviments registrats.
+						<li><q><b>E</b></q> (<i>Ending</i>) "E" (Ending) incorporating as a number the
+							movement from which the record starts, which may incorporate at the end a
+							<q>b</q>, analogously to the previous case. When the number of the move from
+							which the record starts is unknown, a <q>?</q> or <q>?b</q> shall be used,
+							but in this case the number of the final move, i.e. the number of moves
+							recorded, shall be entered, separated by a dash <q><strong>‐</strong></q>
+							(U+2010), or a multi-purpose dash <q>-</q>.
 						</li>
 					</ul>
 				</section>
@@ -1598,7 +1600,7 @@
 								<li><code>[TimeControl "<i>number</i>"]</code> <small>total <i>number</i> of seconds
 										("sudden death")</small></li>
 								<li><code>[Timecontrol <i>number1</i>+<i>number2</i>]</code> <small><i>number1</i>
-										seconds plus <i>number2</i> seconds for each move</small></li>
+										seconds, plus <i>number2</i> seconds for each move</small></li>
 								<li>[TimeControl "*<i>number</i>"] <small><i>number</i> seconds per move</small></li>
 								<li style="margin-top: 0.5ex;"><small><strong>Concrete exemples:</strong></small>
 									<ul class="exemple">
@@ -1625,12 +1627,30 @@
 						</li>
 						<li id="WhiteNATag">
 							<strong>WhiteNA</strong>, <strong class="BlackNATag">BlackNA</strong>
-							<small><i lang="en">network access</i>,
-								permet recollir l'adreça d'e-mail dels jugadors; en un <strong>joc anònim</strong> poden
-								substituir les etiquetes <strong><i>White</i></strong> i <strong><i>Black</i></strong>,
-								respectivament. Llavors són escrites en la posició corresponent a aquestes, asumint el
-								valor <strong><i>?</i></strong> per a l'etiqueta substituida; l'exportació del joc
-								no sempre informarà d'aquests valors, per confidencialitat de dades digitals.</small>
+							<small><i lang="en" translate="no">network access</i>
+								allows to collect the <i>e-mail</i> address of the players; in an anonymous game they
+								can substitute the labels <strong><i>White</i></strong> and <strong><i>Black</i></strong>,
+								respectively. In this case they are written in the position corresponding to these,
+								assuming the value <strong><i>?</i></strong> for the substituted label; the export of
+								the game will not always report these values, for confidentiality of digital data.</small>
+						</li>
+						<li id="WhiteAliasTag">
+							<strong>WhiteAlias</strong>, <strong id="BlackAliasTag">BlackAlias</strong>
+							<small><i>Nickname</i>, used as an identifier for the <i>White</i> and <i>Black</i> player,
+								respectively. It shall be mandatory if the label <q><i>WhiteNA</i></q> is used instead
+								of the label <q><i>White</i></q>, or <q><i>BlackNA</i></q> instead of the label
+								<q><i>Black</i></q>, to avoid making the values <q><i>WhiteNA</i></q> or
+								<q><i>BlackNA</i></q> public. If used, it shall be written after the label
+								<q><i>WhiteNA</i> / <i>BlackNA</i></q>, and failing that, after the label
+								<q><i>White</i> / <i>Black</i></q>.</small>
+								<div class="note" style="margin:4px 2em; padding: 0.5em">
+									<small>The nickname is not identifying, and may not be unique,
+									although it is true that eventually there could also be
+									repeated player names, a case that can be solved in a competition
+									by incorporating the label <q><i>WhiteNA</i> / <i>BlackNA</i></q>,
+									or <q><i>WhiteAlias</i> / <i>BlackAlias</i></q>,
+									to distinguish players with the same name.</small>
+								</div>							
 						</li>
 						<li id="ModeTag">
 							<strong>Mode</strong> <small>Allows the values: <q>OTB</q> (over the board),
@@ -1638,20 +1658,21 @@
 							<q><i>TC</i></q> (telecommunication).</small>
 						</li>
 						<li id="AnnotatorTag">
-							<strong>Annotator</strong> <small>Nom de qui ha registrat i comentat la partida, en el
-							mateix format que el nom dels jugadors; pot haver-hi més d'una etiqueta, una per
-							persona, però totes les etiquetes amb l'identificador <q><i>Annotator</i></q> han de ser
-							consecutives; el primer ha de ser el responsable del registre de la partida, sent
-							col·laboradors i comentadors afegits a continuació. És una excepció, doncs és l'unica
-							etiqueta que es pot repetir.</small>
+							<strong>Annotator</strong> <small>Name of the person who registered and
+								commented on the game, in the same format as the name of the players;
+								there can be more than one label, one per person, but all labels with
+								the identifier <q><i>Annotator</i></q> have to be consecutive; the
+								first one has to be the person responsible for the registration of the
+								game, with contributors and commentators added afterwards. This is an
+								exception, as it is the only label that can be repeated.</small>
 							<ul class="aclariment">
-								<li><small>Si un programa afegeix comentaris automàtics, apareixerà en la primera etiqueta
-									<q><i>Annotator</i></q>.</small>
-								</li>
-								<li><small>En les partides amb [Mode "ICS"] es farà constar el servidor com a primera
-									etiqueta <q><i>Annotator</i></q>; quedarà com a segona, si un altre programa
-									afegeix posteriorment comentaris automàtics.</small>
-								</li>
+								<li><small>If a program adds automatic comments, it will appear in the
+									first label <q><i>Annotator</i></q>.
+								</small></li>
+								<li><small>For <code>[Mode "ICS"]</code> games, the server shall be listed
+									as the first label <q><i>Annotator</i></q>; it shall be listed as the
+									second label, if automatic comments are added later by another program.
+								</small></li>
 							</ul>
 						</li>
 					</ul>
@@ -1725,6 +1746,7 @@
 					<q><strong>(</strong></q>, dins s'escriuen les jugades alternatives, sempre amb el seunúmero de
 					jugada, i la variació acaba amb el parèntesi tancat <q><strong>)</strong></q>.
 				</p>
+			<!-- TODO (translation)
 				<section class="w3-container">
 					<h4 class="w3-container w3-pale-yellow w3-center"><span>Nesting</span></h4>
 					Dins d'una variació es poden definir variacions de la variació, <i>imbrincant</i> una variació dins
@@ -1781,6 +1803,7 @@
 						variacions de la jugada.
 					</p>
 				</section>
+			-->
 			</section>
 			<section id="Comentari" class="w3-container">
 				<h3 class="w3-container w3-pale-green w3-center header2 w3-text-grey">Comments</h3>
@@ -2015,7 +2038,7 @@
 						</h5>
 						<div class="w3-container w3-col" style="width:18em; margin: 0 0.4em;">
 							<a href="../noredefines.sed" target="_blank" class="w3-button w3-pale-yellow"
-								style="width:18em;">Download the file</a>
+								style="width:18em;" download>Download the file</a>
 								<p><small>Cal desar-ho a un fitxer anomenat <code>noredefines.sed</code>
 									que farem servir a la següent ordre;
 									Requereix tenir l'ordre <code>sed</code>, disponible a tots els sistemes

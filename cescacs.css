@@ -378,7 +378,7 @@ div.caixa-exemple-ctl-pgn {
   padding: 0 1em;
   margin: 0.25em;
   white-space: pre-line;
-  line-height: 2ex;
+  line-height: 90%;
   background-color: blanchedalmond;
 }
 
@@ -403,6 +403,12 @@ p.note {
   font-size: 84%;
   margin-left: 3em;
   margin-right: 1.5em;
+}
+
+p.compact {
+  margin-top:4px;
+  margin-bottom:4px;
+  line-height: 90%;
 }
 
 span.note {
