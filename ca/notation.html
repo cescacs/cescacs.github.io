@@ -703,9 +703,10 @@
 					</li>
 					<li>Una separació:
 						<ul>
-							<li>Per als <strong>moviments sense captura</strong>, un guionet <q><strong>‐</strong></q>
-								(U+2010), però també és admisible el caracter de <i>guió polivalent</i> <q>-</q>
-								(U+002D), que sempre hi és disponible en els teclats.
+							<li>Per als <strong>moviments sense captura</strong>, un guionet
+								(<i>hyphen</i>) <q><strong>‐</strong></q> (U+2010), però també és
+								admisible el caracter de <i>guió polivalent</i> (<i>hyphen-minus</i>)
+								<q>-</q> (U+002D), que sempre hi és disponible en els teclats.
 							</li>
 							<li>En les <strong>captures</strong> se separa l'<i>hexcac d'origen</i> de
 								l'<i>hexcac de destí</i> amb el caracter <q><strong>×</strong></q> (U+00D7), el
@@ -785,10 +786,11 @@
 						<a href="glossary.html#TorreDama" class="cescacs" target="_blank">torre de dama</a>, o
 						<q><i class="cescacs">KRR</i></q> per ambdues, en el cas del
 						<a href="glossary.html#EnrocDoble" class="cescacs" target="_blank">doble enroc</a>. Tot seguit
-						s'escriu un guionet <q>‐</q> (U+2010), o bé el caràcter polivalent <q>-</q> (U+002D), que és el
-						generalment disponible en els teclats, i finalment un identificador de dos caràcters indica la
-						fila destí del <i>Rei</i> i la <i>Torre</i>, tres caràcters en cas d'<i>doble enroc</i>, per
-						indicar les files d'ambdues torres.
+						s'escriu un guionet (<i>hyphen</i>) <q>‐</q> (U+2010), o bé el guió polivalent
+						<i>hyphen-minus</i> <q>-</q> (U+002D), que és el generalment disponible en els teclats, i
+						finalment un identificador de dos caràcters indica la fila destí del <i>Rei</i> i la
+						<i>Torre</i>, tres caràcters en cas d'<i>doble enroc</i>, per a indicar les files d'ambdues
+						torres.
 						<aside class="compact">Els prefixos <q><i class="cescacs">KRK</i></q>,
 							<q><i class="cescacs">KRD</i></q> i <q><i class="cescacs">KRR</i></q>
 							poden canviar en el <a href="#CTL-PGN" class="cescacs">format
@@ -1148,10 +1150,10 @@
 						<strong><code>k</code></strong> per a les <i>negres</i>.
 					</li>
 					<li>Si el <i>Rei</i> ha estat mogut tindrem un guió
-						(<strong><code>-</code></strong>), el mateix per al <i>Rei</i>
+						(<strong><code>‐</code></strong>), el mateix per al <i>Rei</i>
 						de les <i>blanques</i>, i per al de les <i>negres</i>; si ambdós
 						<i>Reis</i> han estat moguts, obtindrem dos guions
-						(<strong><code>--</code></strong>).
+						(<strong><code>‐‐</code></strong>).
 					</li>
 				</ul>
 				<br />
@@ -1182,7 +1184,7 @@
 								</li>
 								<li><strong>Moviment triple</strong>: Es registra l'<i>hexcac</i> on hi és el peó, i,
 									separat amb el símbol arrova <strong>@</strong>, les dues línies on pot ser capturat,
-									separades amb un guió <strong>-</strong>.
+									separades amb un guió <strong>‐</strong>.
 									Exemple: <code class="exemple">G13@9-11</code>
 								</li>
 							</ul>
@@ -1205,7 +1207,9 @@
 								</li>
 							</ul>
 						</li>
-						<li>Quan no es dona cap de les dues situacions, es fa servir un guió <q><strong>-</strong></q>.</li>
+						<li>Quan no es dona cap de les dues situacions, es fa servir un guió
+							<q><strong>‐</strong></q>.
+						</li>
 					</ul>
 				</section>
 				<section id="PDTLMoveCount" class="w3-container w3-half">
@@ -1341,18 +1345,20 @@
 								<li><code>[Date "2031-??-??"]</code></li>
 								<li><code>[Date "201?-??-??"]</code></li>
 							</ul>
-							<aside class="compact"><small>Observar que es fa servir
-								el guió polivalent (U+002D) com a separador
+							<aside class="compact"><small>Observar que es fa servir el
+								guionet (<i>hyphen</i>) <q>‐</q> (U+2010), o bé
+								el guió polivalent (<i>hyphen-minus</i> U+002D) com a separador
 								en el format de la data, en comptes del punt que fa servir <i>PGN</i>,
-								senzillament per ser un format més acord amb els estàndards de data.
+								senzillament per ser un format més acord amb els estàndards de format
+								de data.
 								</small>
 							</aside>
 						</li>
 						<li id="RoundTag">
 							<strong>Round</strong> <small>Per a competicions, però també per a
 							identificar diverses partides d'un mateix encontre; si no és aplicable
-							s'indica amb un guionet <q>‐</q> (U+2010), o bé el caracter polivalent
-							<q>-</q> (U+002D).</small>
+							s'indica amb un guionet (<i>hyphen</i>) <q>‐</q> (U+2010), o bé un guió
+							polivalent (<i>hyphen-minus</i>) <q>-</q> (U+002D).</small>
 							<ul class="exemple">
 								<li><code>[Round "‐"]</code></li>
 							</ul>
@@ -1513,10 +1519,10 @@
 						<li><q><b>C</b></q> (<i>Continuation</i>) o <q><b>M</b></q> (<i>Middlegame</i>)
 							fent servir una parella de números per al primer i l'últim
 							moviment registrats, separats per
-							un guionet <q><strong>‐</strong></q> (U+2010), o un
-							<i>guió polivalent</i> <q>-</q>. Es farà servir un <q>?</q>, en
-							comptes del primer número, si es desconeix el número del primer
-							moviment. S'afegirà al número del primer moviment una <q>b</q>,
+							un guionet (<i>hyphen</i>) <q><strong>‐</strong></q> (U+2010), o un
+							<i>guió polivalent</i> (<i>hyphen-minus</i>) <q>-</q>. Es farà servir
+							un <q>?</q>, en comptes del primer número, si es desconeix el número
+							del primer moviment. S'afegirà al número del primer moviment una <q>b</q>,
 							si el registre comença amb un moviment de negres, i al número de
 							l'últim moviment una <q>w</q> si el registre acaba en un moviment
 							de blanques. Es pot donar llavors també el cas <q>?b</q> per al
@@ -1526,10 +1532,10 @@
 							des del qual s'inicia el registre, que pot incorporar al final una <q>b</q>,
 							anàlogament al cas anterior. Quan és desconegut el número de
 							moviment on s'inicia el registre es farà servir <q>?</q> o
-							<q>?b</q>, però llavors s'incorporarà, separat per un guionet
+							<q>?b</q>, però llavors s'incorporarà, separat per un guionet (<i>hyphen</i>)
 							<q><strong>‐</strong></q> (U+2010), o un <i>guió polivalent</i>
-							<q>-</q>, el número de la jugada final, és a dir, el número
-							de moviments registrats.
+							(<i>hyphen-minus</i>) <q>-</q>, el número de la jugada final, és a dir,
+							el número de moviments registrats.
 						</li>
 					</ul>
 				</section>
@@ -1539,8 +1545,8 @@
 					</h4>
 					<ul class="twocolumnschance">
 						<li id="EventDateTag">
-							<strong>EventDate</strong> <small>Data de l'esdeveniment. Quan es tracta
-							d'un <i lang="en" translate="no">Casual Game</i> (<i>CG</i>) es refereix a
+							<strong>EventDate</strong> <small>Data de l'event. Quan es tracta d'un
+							<i lang="en" translate="no">Casual Game</i> (<i>CG</i>) es refereix a
 							la data de l'encontre; és a dir, es pot fer servir en comptes de
 							<strong>MatchDate</strong> quan [<strong>Event</strong> "<i>CG</i>"].</small>
 						</li>
@@ -1586,17 +1592,17 @@
 								<li style="margin-top: 0.5ex;"><small><strong>Exemples concrets:</strong></small>
 									<ul class="exemple">
 										<li><code>[TimeControl "40/9000"]</code>
-											<small>40 moves in 2½ hours (9000 seconds)</small>
+											<small>40 moviments en 2 hores i ½ (9000 seconds)</small>
 										</li>
 										<li><code>[TimeControl "4500"]</code>
-											<small>1¼ hours to <q>sudden death</q> (4500 seconds)</small>
+											<small>1 hora i ¼ màxim <q>sudden death</q> (4500 seconds)</small>
 										</li>
 										<li><code>[TimeControl "4500+60"]</code>
-											<small>1¼ hours and a minute for each move</small>
+											<small>1 hora i ¼, més un minut per cada moviment</small>
 										</li>
 										<li><code>[TimeControl "*180"]</code>
-											<small>three minutes each move; <q>sandclock</q>, <q>hourglass</q>
-												control</small>
+											<small>tres minuts cada moviment; control amb <q>rellotge d'arena</q>
+												(<q>sandclock</q>, <q>hourglass</q>)</small>
 										</li>
 									</ul>
 								</li>
@@ -1670,15 +1676,26 @@
 							<i>PDTL</i>; en cas contrari <i>Redefine</i> serà l'última etiqueta.</small>
 					</p>
 					<ul class="exemple">
-						<li><code>[Redefine "A@J, T@R, C@N"]</code>
+						<li style="list-style-type:circle;"><code>[Redefine "A@J, T@R, C@N"]</code>
 							<small>Defineix la lletra <q>A</q> per a l'<i>Alfil</i>, en comptes de
-								<i>J</i>, i la lletra <q>T</q> per a el <i>Roc</i> (<i>Torre</i>), en
-								comptes de <i>R</i>.</small>
+							<i>J</i>, la lletra <q>T</q> per a el <i>Roc</i> (<i>Torre</i>), en
+							comptes de <i>R</i>, i la <q>C</q> per al <i>Cavall</i>, en comptes
+							de <i>N</i> (Acosta símbols a la tradició del <i>Català</i> i el
+							<i>Castellà</i>).</small>
 						</li>
-						<li><code>[Redefine "FAN"]</code>
+						<li style="list-style-type:circle;"><code>[Redefine "B@J, Q@D", W@V]</code>
+							<small>Defineix la lletra <q>B</q> per a l'<i>Alfil</i>, en comptes de
+								<i>J</i>, la lletra <q>Q</q> per a la <i>Dama</i> (<i>Reina</i>), en
+								comptes de <i>D</i>, i la <q>W</q> per a la <i>Vibria</i>, en comptes
+								de la <i>V</i> (Acosta símbols a la tradició de
+								l'<i>Anglès</i>).</small>
+						</li>
+						<li style="list-style-type:circle;"><code>[Redefine "FAN"]</code>
 							<small>Fa servir caràcters Unicode específics per a les peces d'escac,
 								diferents per a blanques i per a negres, en comptes de les lletres
 								identificatives.</small>
+							<aside class="compact"><small>Observar que fent servir lletres sol ser
+								més llegible.</small></aside>
 						</li>
 					</ul>
 				</section>
@@ -1687,14 +1704,11 @@
 						<span>Etiqueta de posició inicial</span>
 					</h4>
 					<p><strong>PDTL</strong> <small>Permet indicar l'<strong>estat inicial</strong> de
-							l'<i>hexcaquer</i> per retormar una partida, fent servir com a valor una cadena
+							l'<i>hexcaquer</i> per a reprendre una partida, fent servir com a valor una cadena
 							<a href="#PDTL" class="cescacs"><i>PDTL</i></a>. Ha de ser
 							l'<strong>última etiqueta</strong>; l'etiqueta <i>Redefine</i> s'aplica també a la cadena
 							<i>PDTL</i>.</small>
 					</p>
-					<ul class="aclariment">
-						<li><small></small></li>
-					</ul>
 					<h5 class="w3-container w3-light-grey w3-center w3-text-blue-grey">
 						<span>Posició inicial de C'escacs</span>
 					</h5>
@@ -1726,8 +1740,8 @@
 						title="Recursive Annotation Variations">RAV</abbr> (Recursive Annotation Variation)</h3>
 				<p>Les <abbr title="Recursive Annotation Variation">RAV</abbr> (Recursive Annotation Variation)
 					permeten annotar jugades alternatives; cada alternativa comença amb un parèntesi obert
-					<q><strong>(</strong></q>, dins s'escriuen les jugades alternatives, sempre amb el seunúmero de
-					jugada, i la variació acaba amb el parèntesi tancat <q><strong>)</strong></q>.
+					<q><strong>(</strong></q>. Dins, a continuació, s'escriuen les jugades alternatives, sempre
+					amb el seu número de jugada, i la variació acaba amb el parèntesi tancat <q><strong>)</strong></q>.
 				</p>
 				<section class="w3-container">
 					<h4 class="w3-container w3-pale-yellow w3-center">
@@ -1961,7 +1975,7 @@
 				</div>
 				<div class="w3-left caixa-exemple-ctl-pgn" style="width:22em">
 					<code>[Variant "C'escacs"]
-							[Id "Cescacs-X01-ca-V"]
+							[Id "Cescacs-X01-V-ca"]
 							[Lang "ca"]
 							{ Mat del boig }
 							1. H6-H12 ?!, I23-I19 ?!

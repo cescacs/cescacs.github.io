@@ -716,9 +716,9 @@
 					</li>
 					<li>A separation:
 						<ul>
-							<li>For <strong>movements without capture</strong>, a dash <q><strong>‐</strong></q>
-								(U+2010), but the multi-purpose dash character <q><strong>-</strong></q> (U+002D),
-								which is always available on keyboards, is also admissible.
+							<li>For <strong>movements without capture</strong>, a hyphen <q><strong>‐</strong></q>
+								(U+2010), but the multi-purpose hyphen-minus character <q><strong>-</strong></q>
+								(U+002D), which is always available on keyboards, is also admissible.
 							</li>
 							<li>In the <strong>captures</strong>, the <i>source hextille</i> is separated from
 								the <i>destination hextille</i> by the character <q><strong>×</strong></q> (U+00D7),
@@ -797,10 +797,11 @@
 							class="cescacs" target="_blank">queen's rook</a>, or
 						<q><i class="cescacs">KRR</i></q> when using both, in the case of
 						<a href="glossary.html#EnrocDoble" class="cescacs" target="_blank">double castling</a>.
-						This is followed by a dash <q>‐</q> (U+2010), or the all-purpose character <q>-</q>
-						(U+002D), which is generally available on keyboards, and finally a two-character identifier
-						indicates the target rank of the <i>King</i> and <i>Rook</i>, three characters in
-						the case of double castling, to indicate the ranks of both <i>rooks</i>.
+						This is followed by a hyphen <q>‐</q> (U+2010), or the multi-purpose hyphen-minus
+						character <q>-</q> (U+002D), which is generally available on keyboards, and finally
+						a two-character identifier indicates the target rank of the <i>King</i> and <i>Rook</i>,
+						three characters in the case of double castling, to indicate the ranks
+						of both <i>rooks</i>.
 
 						<aside class="compact">The prefixes <q><i class="cescacs">KRK</i></q>,
 							<q><i class="cescacs">KRD</i></q> and <q><i class="cescacs">KRR</i></q>
@@ -1164,11 +1165,11 @@
 						we get <strong><code>K</code></strong> for <i>White</i>,
 						<strong><code>k</code></strong> for <i>Black</i>.
 					</li>
-					<li>If the <i>King</i> has moved we get one dash
-						(<strong><code>-</code></strong>), the same for
+					<li>If the <i>King</i> has moved we get one hyphen
+						(<strong><code>‐</code></strong>), the same for
 						<i>White's King</i>, and for <i>Black's King</i>;
-						if both <i>Kings</i> have moved, we get two dashes
-						(<strong><code>--</code></strong>).
+						if both <i>Kings</i> have moved, we get two hyphens
+						(<strong><code>‐‐</code></strong>).
 					</li>
 				</ul>
 				<br />
@@ -1205,7 +1206,7 @@
 								</li>
 								<li><strong>Triple move</strong>: Record the <i>hetille</i> where the pawn is,
 									and, separated with the at symbol <strong>@</strong>, the two lines where
-									it can be captured, separated with a hyphen <strong>-</strong>. Example:
+									it can be captured, separated with a hyphen <strong>‐</strong>. Example:
 									<code class="exemple">G13@9-11</code>
 								</li>
 							</ul>
@@ -1233,7 +1234,7 @@
 							</ul>
 						</li>
 						<li>When neither of the two situations applies,
-							a dash <q><strong>-</strong></q> is used.
+							a hyphen <q><strong>‐</strong></q> is used.
 						</li>
 					</ul>
 
@@ -1368,16 +1369,17 @@
 								<li><code>[Date "2031-??-??"]</code></li>
 								<li><code>[Date "201?-??-??"]</code></li>
 							</ul>
-							<aside class="compact">Note that the multipurpose hyphen (U+002D) is used
+							<aside class="compact">Note that the hyphen <q>‐</q> (U+2010) or
+								multipurpose hyphen-minus (U+002D) is used
 								as a separator in the date format, instead of the dot used by
 								<i>PGN</i>, simply because it is a format more in line with date
-								standards.
+								format standards.
 							</aside>
 						</li>
 						<li id="RoundTag">
 							<strong>Round</strong> <small>For competitions, but also to identify
 								different games of the same match; if not applicable it is indicated
-								with a dash <q>‐</q> (U+2010), or with the all-purpose character
+								with a hyphen <q>‐</q> (U+2010), or with the multipurpose hyphen-minus
 								<q>-</q> (U+002D).</small>
 							<ul class="exemple">
 								<li><code>[Round "‐"]</code></li>
@@ -1536,9 +1538,9 @@
 						<li><q><b>C</b></q> (<i>Continuation</i>) or <q><b>M</b></q> (<i>Middlegame</i>)
 							using a pair of numbers for the first and the last movement recorded,
 							separated by a hyphen <q><strong>‐</strong></q> (U+2010), or a multipurpose
-							hyphen <q>-</q>. If the first movement number is unknown, a <q>?</q> shall
-							be used instead of the first number. A <q>b</q> is added to the number of
-							the first movement if the record begins with a black movement, and a
+							hyphen-minus <q>-</q>. If the first movement number is unknown, a <q>?</q>
+							shall be used instead of the first number. A <q>b</q> is added to the number
+							of the first movement if the record begins with a black movement, and a
 							<q>w</q> to the number of the last movement if the record ends with a
 							white movement. The case <q>?b</q> can therefore also occur for the first
 							number.
@@ -1548,8 +1550,8 @@
 							<q>b</q>, analogously to the previous case. When the number of the move from
 							which the record starts is unknown, a <q>?</q> or <q>?b</q> shall be used,
 							but in this case the number of the final move, i.e. the number of moves
-							recorded, shall be entered, separated by a dash <q><strong>‐</strong></q>
-							(U+2010), or a multi-purpose dash <q>-</q>.
+							recorded, shall be entered, separated by a hyphen <q><strong>‐</strong></q>
+							(U+2010), or a multi-purpose hyphen-minus <q>-</q>.
 						</li>
 					</ul>
 				</section>
@@ -1559,23 +1561,24 @@
 					</h4>
 					<ul class="twocolumnschance">
 						<li id="EventDateTag">
-							<strong>EventDate</strong> <small>Data de l'event. Quan es tracta d'un
-							<i lang="en" translate="no">Casual Game</i> (<i>CG</i>) es refereix a
-							la data de l'encontre; és a dir, es pot fer servir en comptes de
-							<strong>MatchDate</strong> quan [<strong>Event</strong> "<i>CG</i>"].</small>
+							<strong>EventDate</strong> <small>Date of the event. When it is a 
+							<i lang="en" translate="no">Casual Game</i> (<i>CG</i>) it refers to
+							the date of the match, i.e. it can be used instead of
+							<strong>MatchDate</strong> when [<strong>Event</strong> "<i>CG</i>"].
+							</small>
 						</li>
 						<li id="MatchDateTag">
-							<strong>MatchDate</strong> <small>Data de l'encontre.
-							El valor no té sentit si no s'indica un valor per a l'etiqueta
-							<strong>Round</strong>, i és innecessària quan el valor és el mateix de
-							l'etiqueta <strong>Date</strong>, per exemple, quan l'etiqueta
-							<strong>Round</strong> té el valor <q>1</q> o una seqüència de números
-							acabats en el número <q>1</q>.</small>
+							<strong>MatchDate</strong> <small>Date of the match. The value is
+							meaningless if no value is given for the <strong>Round</strong> tag,
+							and is unnecessary when the value is the same as the value of the
+							<strong>Date</strong> tag, e.g. when the <strong>Round</strong> tag
+							has the value <q>1</q> or a sequence of numbers ending with the number
+							<q>1</q>.</small>
 						</li>
 						<li id="TerminationTag">
-							<strong>Termination</strong> <small>Detall de la finalització;
-							admet els valors: <q><i>abandoned</i></q>, <q><i>rules infraction</i></q>,
-							<q><i>time forfeit</i></q> i per a jocs indefinidament ajornats:
+							<strong>Termination</strong> <small>Termination detail;
+							supports the values: <q><i>abandoned</i></q>, <q><i>rules infraction</i></q>,
+							<q><i>time forfeit</i></q> and for indefinitely postponed games:
 							<q><i>death</i></q> o <q><i>emergency</i></q></small>
 							<aside class="compact">
 								<small>The values <q>normal</q> and <q>unterminated</q> are not needed, as the
@@ -1585,23 +1588,30 @@
 							</aside>
 						</li>
 						<li id="LangTag">
-							<strong>Lang</strong> <small>Idioma que es fa servir en els comentaris;
-							el valor ha de ser un codi d'idioma <cite>ISO 639</cite>, de dues lletres
-							(<cite>ISO 639-1</cite> alpha-2), o, si es requereix, el codi
-							<cite>ISO 639-3</cite> de tres lletres.</small>
+							<strong>Lang</strong> <small>Language to be used in comments; the value has
+							to be a two-letter <cite>ISO 639</cite> language code (<cite>ISO 639-1</cite>
+							alpha-2) or, if required, the three-letter <cite>ISO 639-3</cite> code.</small>
 						</li>
 						<li id="TimeControlTag">
 							<strong>TimeControl</strong> <small>Values:</small>
 							<ul class="exemple">
 								<li><code>[TimeControl "?"]</code> <small>unknown</small></li>
 								<li><code>[TimeControl "-"]</code> <small>not used</small></li>
-								<li><code>[TimeControl "<i>number1</i>/<i>number2</i>"]</code> <small><i>number1</i>
-										moves in <i>number2</i> seconds</small></li>
-								<li><code>[TimeControl "<i>number</i>"]</code> <small>total <i>number</i> of seconds
-										("sudden death")</small></li>
-								<li><code>[Timecontrol <i>number1</i>+<i>number2</i>]</code> <small><i>number1</i>
-										seconds, plus <i>number2</i> seconds for each move</small></li>
-								<li>[TimeControl "*<i>number</i>"] <small><i>number</i> seconds per move</small></li>
+								<li><code>[TimeControl "<i translate="no">number1</i>/<i translate="no">number2</i>"]</code>
+									<small><i translate="no">&nbsp;number1&nbsp;</i> number of movements
+									in <i translate="no">&nbsp;number2&nbsp;</i> seconds</small>
+								</li>
+								<li><code>[TimeControl "<i translate="no">number</i>"]</code>
+									<small>total <i translate="no">&nbsp;number&nbsp;</i> of seconds ("sudden death")</small>
+								</li>
+								<li><code>[Timecontrol <i translate="no">number1</i>+<i translate="no">number2</i>]</code>
+									<small><i translate="no">&nbsp;number1&nbsp;</i> seconds, plus
+										<i translate="no">&nbsp;number2&nbsp;</i> seconds
+										for each move</small>
+								</li>
+								<li>[TimeControl "*<i translate="no">number</i>"]
+									<small><i translate="no">&nbsp;number&nbsp;</i> seconds per move</small>
+								</li>
 								<li style="margin-top: 0.5ex;"><small><strong>Concrete exemples:</strong></small>
 									<ul class="exemple">
 										<li><code>[TimeControl "40/9000"]</code>
@@ -1681,21 +1691,29 @@
 					<h4 class="w3-container w3-pale-yellow w3-center">
 						<span>Label for using alternative piece identifiers</span>
 					</h4>
-					<p><strong>Redefine</strong> <small>Permet fer servir lletres d'identificació alternatives per a
-							alguna peça, sempre entre les predefinides. Si n'hi ha una etiqueta <i>PDTL</i>,
-							<i>Redefine</i> ha de ser just l'anterior, doncs s'aplica també al valor de l'etiqueta
-							<i>PDTL</i>; en cas contrari <i>Redefine</i> serà l'última etiqueta.</small>
+					<p><strong>Redefine</strong> <small>Allows to use alternative identification letters for some
+						pieces, always among the predefined ones. If there is a <i>PDTL</i> label, <i>Redefine</i>
+						has to be just before it, as it applies also to the <i>PDTL</i> label tag value, otherwise
+						<i>Redefine</i> will be the last label.</small>
 					</p>
 					<ul class="exemple">
-						<li><code>[Redefine "A@J, T@R, C@N"]</code>
-							<small>Defineix la lletra <q>A</q> per a l'<i>Alfil</i>, en comptes de
-								<i>J</i>, i la lletra <q>T</q> per a el <i>Roc</i> (<i>Torre</i>), en
-								comptes de <i>R</i>.</small>
+						<li style="list-style-type:circle;"><code>[Redefine "A@J, T@R, C@N"]</code>
+							<small>Defines the letter <q>A</q> for the <i>Bishop</i>, instead of <i>J</i>, the
+							letter <q>T</q> for the Rook, instead of <i>R</i>, and <q>C</q> for the Knight, instead
+							of <i>N</i> (Approaches to <i translate="no">Spanish</i> or
+							<i translate="no">Catalan</i>).</small>
 						</li>
-						<li><code>[Redefine "FAN"]</code>
-							<small>Fa servir caràcters Unicode específics per a les peces d'escac,
-								diferents per a blanques i per a negres, en comptes de les lletres
-								identificatives.</small>
+						<li style="list-style-type:circle;"><code>[Redefine "B@J, Q@D", W@V]</code>
+							<small>Defines the letter <q>B</q> for the <i>Bishop</i>, instead of
+								<i>J</i>, the letter <q>Q</q> for the <i>Queen</i>, instead of
+								<i>D</i>, and <q>W</q> for the <i>Wyvern</i>, instead of
+								<i>V</i> (Approaches to <i>English</i>).</small>
+						</li>
+						<li style="list-style-type:circle;"><code>[Redefine "FAN"]</code>
+							<small>Use specific Unicode characters for the piece symbols, different for
+								white and black, instead of the identifying letters.</small>
+							<aside class="compact"><small>Note that using letters usually makes it
+								more readable.</small></aside>
 						</li>
 					</ul>
 				</section>
@@ -1703,15 +1721,11 @@
 					<h4 class="w3-container w3-pale-yellow w3-center">
 						<span>Initial setup label</span>
 					</h4>
-					<p><strong>PDTL</strong> <small>Permet indicar l'<strong>estat inicial</strong> de
-							l'<i>hexcaquer</i> per retormar una partida, fent servir com a valor una cadena
-							<a href="#PDTL" class="cescacs"><i>PDTL</i></a>. Ha de ser
-							l'<strong>última etiqueta</strong>; l'etiqueta <i>Redefine</i> s'aplica també a la cadena
-							<i>PDTL</i>.</small>
+					<p><strong>PDTL</strong> <small>Label which allows to indicate the initial state of the board
+						to resume a game, using as tag value a <a href="#PDTL" class="cescacs"><i>PDTL</i></a>
+						string. It must be <strong>the last label</strong>; the <i>Redefine</i> label also applies
+						to the <i>PDTL</i> string.</small>
 					</p>
-					<ul class="aclariment">
-						<li><small></small></li>
-					</ul>
 					<h5 class="w3-container w3-light-grey w3-center w3-text-blue-grey">
 						<span>C'escacs initial setup</span>
 					</h5>
@@ -1741,10 +1755,10 @@
 			<section id="RAV" class="w3-container">
 				<h3 class="w3-container w3-pale-green w3-center header2 w3-text-grey"><abbr
 						title="Recursive Annotation Variations">RAV</abbr> (Recursive Annotation Variation)</h3>
-				<p>Les <abbr title="Recursive Annotation Variation">RAV</abbr> (Recursive Annotation Variation)
-					permeten annotar jugades alternatives; cada alternativa comença amb un parèntesi obert
-					<q><strong>(</strong></q>, dins s'escriuen les jugades alternatives, sempre amb el seunúmero de
-					jugada, i la variació acaba amb el parèntesi tancat <q><strong>)</strong></q>.
+				<p><abbr title="Recursive Annotation Variation">RAV</abbr> (Recursive Annotation Variation) allow you
+					to annotate alternative moves; each alternative starts with an open parenthesis
+					<q><strong>(</strong></q>. Inside, the alternative moves are then written, always with their move
+					number, and the variation ends with the closing parenthesis <q><strong>)</strong></q>.
 				</p>
 			<!-- TODO (translation)
 				<section class="w3-container">
@@ -1976,7 +1990,7 @@
 				</div>
 				<div class="w3-left caixa-exemple-ctl-pgn" style="width:22em">
 					<code>[Variant "C'escacs"]
-							[Id "Cescacs-X01-ca-V"]
+							[Id "Cescacs-X01-V-ca"]
 							[Lang "ca"]
 							{ Mat del boig }
 							1. H6-H12 ?!, I23-I19 ?!

@@ -707,9 +707,10 @@
 					</li>
 					<li>Una separación:
 						<ul>
-							<li>Para los <strong>movimientos sin captura</strong>, un guión <q><strong>‐</strong></q>
-								(U+2010), pero también es admisible el caracter de <i>guión polivalente</i> <q>-</q>
-								(U+002D), que siempre está disponible en los teclados.
+							<li>Para los <strong>movimientos sin captura</strong>, un guión (<i>hyphen</i>)
+								<q><strong>‐</strong></q> (U+2010), pero también es admisible el caracter
+								de <i>guión polivalente</i> (<i>hyphen-minus</i>) <q>-</q> (U+002D), que
+								siempre está disponible en los teclados.
 							</li>
 							<li>En las <strong>capturas</strong> se separa el <i>hexcaque de origen</i> del
 								<i>hexcaque de destino</i> con el caracter <q><strong>×</strong></q> (U+00D7), el
@@ -788,11 +789,12 @@
 						<q><i class="cescacs">KRD</i></q> si lo hace con la
 						<a href="glossary.html#TorreDama" class="cescacs" target="_blank">torre de dama</a>,
 						o <q><i class="cescacs">KRR</i></q> cuando usa ambas, en el caso del
-						<a href="glossary.html#EnrocDoble" class="cescacs" target="_blank">doble enroque</a>. A
-						continuación se escribe un guion <q>‐</q> (U+2010), o bien el carácter polivalente <q>-</q>
-						(U+002D), que es lo generalmente disponible en los teclados, y finalmente un identificador de
-						dos caracteres indica la fila destino del <i>Rey</i> y la <i>Torre</i>, tres
-						caracteres en caso de doble enroque, para indicar las filas de ambas torres.
+						<a href="glossary.html#EnrocDoble" class="cescacs" target="_blank">doble enroque</a>.
+						A continuación se escribe un guion <q>‐</q> (U+2010), o bien el guión polivalente 
+						(<i>hyphen-minus</i>) <q>-</q> (U+002D), que es lo generalmente disponible en los
+						teclados, y finalmente un identificador de dos caracteres indica la fila destino del
+						<i>Rey</i> y la <i>Torre</i>, tres caracteres en caso de doble enroque, para indicar
+						las filas de ambas torres.
 						<aside class="compact">Los prefijos <q><i class="cescacs">KRK</i></q>,
 							<q><i class="cescacs">KRD</i></q> y <q><i class="cescacs">KRR</i></q>
 							pueden cambiar en el <a href="#CTL-PGN" class="cescacs">formato de
@@ -1153,10 +1155,10 @@
 						<strong><code>k</code></strong> para las <i>negras</i>.
 					</li>
 					<li>Si el <i>Rey</i> se ha movido tendremos un guión
-						(<strong><code>-</code></strong>), lo mismo para el
+						(<strong><code>‐</code></strong>), lo mismo para el
 						<i>Rey</i> de las <i>blancas</i>, y para el de las <i>negras</i>;
 						si ambos <i>Reyes</i> se han movido, obtendremos dos guiones
-						(<strong><code>--</code></strong>).
+						(<strong><code>‐‐</code></strong>).
 					</li>
 				</ul>
 				<br />
@@ -1361,18 +1363,18 @@
 								<li><code>[Date "2031-??-??"]</code></li>
 								<li><code>[Date "201?-??-??"]</code></li>
 							</ul>
-							<aside class="compact"><small>Observar que se usa
-								el guión polivalente (U+002D) como separador
+							<aside class="compact"><small>Observar que se usa el guión (<i>hyphen</i>),
+								o bien el guión polivalente (<i>hyphen-minus</i> U+002D), como separador
 								en el formato de la fecha, en lugar del punto que usa <i>PGN</i>,
-								sencillamente por ser un formato més acorde amb los estándares de
-								fecha.</small>
+								sencillamente por ser un formato más acorde con los estándares de
+								formato de fecha.</small>
 							</aside>
 						</li>
 						<li id="RoundTag">
 							<strong>Round</strong> <small>Para competiciones, pero también para
 							identificar diversea partidas de un mismo encuentro; si no es aplicable
-							se indica con un guión <q>‐</q> (U+2010), o con el caracter polivalente
-							<q>-</q> (U+002D).</small>
+							se indica con un guión (<i>hyphen</i>) <q>‐</q> (U+2010), o con el guión
+							polivalente (<i>hyphen-minus</i>) <q>-</q> (U+002D).</small>
 							<ul class="exemple">
 								<li><code>[Round "‐"]</code></li>
 							</ul>
@@ -1533,23 +1535,23 @@
 						</li>
 						<li><q><b>C</b></q> (<i>Continuation</i>) o <q><b>M</b></q> (<i>Middlegame</i>)
 							usando una pareja de números para el primero y el último movimiento
-							registrados, separados por un guion
-							<q><strong>‐</strong></q> (Uno+2010), o un <i>guion polivalente</i>
-							<q>-</q>. Si se desconoce el número del primer movimiento, se usará
-							un <q>?</q>, en vez del primer número. Se añadirá al número del
-							primer movimiento una <q>b</q>, si el registro empieza con un movimiento
-							de negras, y al número del último movimiento una <q>w</q> si el
-							registro acaba en un movimiento de blancas. Se puede dar, por tanto,
-							también el caso <q>?b</q> para el primer número.
+							registrados, separados por un guion <q><strong>‐</strong></q> (U+2010),
+							o un <i>guion polivalente</i> (<i>hyphen-minus</i>) <q>-</q>. Si se
+							desconoce el número del primer movimiento, se usará un <q>?</q>, en vez
+							del primer número. Se añadirá al número del primer movimiento una
+							<q>b</q>, si el registro empieza con un movimiento de negras, y al
+							número del último movimiento una <q>w</q> si el registro acaba en un
+							movimiento de blancas. Se puede dar, por tanto, también el caso
+							<q>?b</q> para el primer número.
 						</li>
 						<li><q><b>E</b></q> (<i>Ending</i>) incorporando como número el movimiento
 							desde el cual se inicia el registro, que puede incorporar al final una
 							<q>b</q>, análogamente al caso anterior. Cuando el número de movimiento
 							en el que se inicia el registro es desconocido, se usará un <q>?</q> o
 							bien <q>?b</q>, pero en ese caso se incorporará, separado por un guión
-							<q><strong>‐</strong></q> (U+2010), o un <i>guión polivalente</i>
-							<q>-</q>, el número de la jugada final, es decir, el número
-							de movimientos registrados.
+							(<i>hyphen</i>) <q><strong>‐</strong></q> (U+2010), o un
+							<i>guión polivalente</i> (<i>hyphen-minus</i>) <q>-</q>, el número de
+							la jugada final, es decir, el número de movimientos registrados.
 						</li>
 					</ul>
 				</section>
@@ -1605,17 +1607,17 @@
 								<li style="margin-top: 0.5ex;"><small><strong>Ejemplos concretos:</strong></small>
 									<ul class="exemple">
 										<li><code>[TimeControl "40/9000"]</code>
-											<small>40 moves in 2½ hours (9000 seconds)</small>
+											<small>40 movimientos en 2 horas y ½ (9000 seconds)</small>
 										</li>
 										<li><code>[TimeControl "4500"]</code>
-											<small>1¼ hours to <q>sudden death</q> (4500 seconds)</small>
+											<small>1 hora y ¼ total <q>sudden death</q> (4500 seconds)</small>
 										</li>
 										<li><code>[TimeControl "4500+60"]</code>
-											<small>1¼ hours and a minute for each move</small>
+											<small>1 hora y ¼, más un minuto por cada movimiento</small>
 										</li>
 										<li><code>[TimeControl "*180"]</code>
-											<small>three minutes each move; <q>sandclock</q>, <q>hourglass</q>
-												control</small>
+											<small>tres minutos cada movimiento; control con <q>reloj de arena</q>
+												(<q>sandclock</q>, <q>hourglass</q>)</small>
 										</li>
 									</ul>
 								</li>
@@ -1686,21 +1688,30 @@
 					<h4 class="w3-container w3-pale-yellow w3-center">
 						<span>Etiqueta par usar identificadores de pieza alternativos</span>
 					</h4>
-					<p><strong>Redefine</strong> <small>Permet fer servir lletres d'identificació alternatives per a
-							alguna peça, sempre entre les predefinides. Si n'hi ha una etiqueta <i>PDTL</i>,
-							<i>Redefine</i> ha de ser just l'anterior, doncs s'aplica també al valor de l'etiqueta
-							<i>PDTL</i>; en cas contrari <i>Redefine</i> serà l'última etiqueta.</small>
+					<p><strong>Redefine</strong> <small>Permite usar letras de identificación alternativas para
+							alguna pieza, siempre entre las predefinidas. Si hay una etiqueta <i>PDTL</i>,
+							<i>Redefine</i> ha de estar justo antes, dado que se aplica también al valor de la
+							etiqueta <i>PDTL</i>; en caso contrario <i>Redefine</i> será la última etiqueta.</small>
 					</p>
 					<ul class="exemple">
-						<li><code>[Redefine "A@J, T@R, C@N"]</code>
-							<small>Defineix la lletra <q>A</q> per a l'<i>Alfil</i>, en comptes de
-								<i>J</i>, i la lletra <q>T</q> per a el <i>Roc</i> (<i>Torre</i>), en
-								comptes de <i>R</i>.</small>
+						<li style="list-style-type:circle;"><code>[Redefine "A@J, T@R, C@N"]</code>
+							<small>Define la lletra <q>A</q> para el <i>Alfil</i>, en lugar de
+								<i>J</i>, la letra <q>T</q> para el <i>Roque</i> (<i>Torre</i>), en
+								lugar de <i>R</i>, y la <q>C</q> para el <i>Caballo</i>, en lugar
+								de <i>N</i> (Aproxima símbolos al <i>Español</i> y el <i>Catalán</i>).</small>
 						</li>
-						<li><code>[Redefine "FAN"]</code>
-							<small>Fa servir caràcters Unicode específics per a les peces d'escac,
-								diferents per a blanques i per a negres, en comptes de les lletres
-								identificatives.</small>
+						<li style="list-style-type:circle;"><code>[Redefine "B@J, Q@D", W@V]</code>
+							<small>Define la letra <q>B</q> para el <i>Alfil</i>, en lugar de
+								<i>J</i>, la letra <q>Q</q> para la <i>Dama</i> (<i>Reina</i>), en
+								lugar de <i>D</i>, y la <q>W</q> para el <i>Guiverno</i>, en lugar
+								de la <i>V</i> (Aproxima símbolos al <i>Inglés</i>).</small>
+						</li>
+						<li style="list-style-type:circle;"><code>[Redefine "FAN"]</code>
+							<small>Usa carácteres Unicode específicos para los símbolos de las piezas,
+								diferentes para blancas y para negras, en lugar de las letras
+								identificativas.</small>
+							<aside class="compact"><small>Observar que usando letras suele ser
+								más legible.</small></aside>
 						</li>
 					</ul>
 				</section>
@@ -1708,15 +1719,12 @@
 					<h4 class="w3-container w3-pale-yellow w3-center">
 						<span>Etiqueta de posición inicial</span>
 					</h4>
-					<p><strong>PDTL</strong> <small>Permet indicar l'<strong>estat inicial</strong> de
-							l'<i>hexcaquer</i> per retormar una partida, fent servir com a valor una cadena
+					<p><strong>PDTL</strong> <small>Permite indicar el <strong>estado inicial</strong> del
+							tablero para retomar una partida, usando com a valor de la etiqueta una cadena
 							<a href="#PDTL" class="cescacs"><i>PDTL</i></a>. Ha de ser
-							l'<strong>última etiqueta</strong>; l'etiqueta <i>Redefine</i> s'aplica també a la cadena
-							<i>PDTL</i>.</small>
+							la <strong>última etiqueta</strong>; la etiqueta <i>Redefine</i> se aplica
+							también a la cadena <i>PDTL</i>.</small>
 					</p>
-					<ul class="aclariment">
-						<li><small></small></li>
-					</ul>
 					<h5 class="w3-container w3-light-grey w3-center w3-text-blue-grey">
 						<span>Posición inicial de C'escacs</span>
 					</h5>
@@ -1746,10 +1754,11 @@
 			<section id="RAV" class="w3-container">
 				<h3 class="w3-container w3-pale-green w3-center header2 w3-text-grey"><abbr
 						title="Recursive Annotation Variations">RAV</abbr> (Recursive Annotation Variation)</h3>
-				<p>Les <abbr title="Recursive Annotation Variation">RAV</abbr> (Recursive Annotation Variation)
-					permeten annotar jugades alternatives; cada alternativa comença amb un parèntesi obert
-					<q><strong>(</strong></q>, dins s'escriuen les jugades alternatives, sempre amb el seunúmero de
-					jugada, i la variació acaba amb el parèntesi tancat <q><strong>)</strong></q>.
+				<p>Las <abbr title="Recursive Annotation Variation">RAV</abbr> (Recursive Annotation Variation)
+					permiten anotar jugadas alternativas; cada alternativa comienza con un paréntesis abierto
+					<q><strong>(</strong></q>. Dentro, a continuación, se escriben las jugadas alternativas,
+					siempre con su número de jugada, y la variación acaba cerrando el parétesis
+					<q><strong>)</strong></q>.
 				</p>
 			<!-- TODO (translation)
 				<section class="w3-container">
@@ -1985,7 +1994,7 @@
 				</div>
 				<div class="w3-left caixa-exemple-ctl-pgn" style="width:22em">
 					<code>[Variant "C'escacs"]
-							[Id "Cescacs-X01-ca-V"]
+							[Id "Cescacs-X01-V-ca"]
 							[Lang "ca"]
 							{ Mat del boig }
 							1. H6-H12 ?!, I23-I19 ?!
