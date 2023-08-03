@@ -385,7 +385,7 @@
 					<h4 class="w3-container w3-pale-yellow w3-center">
 						<span>Orthogonal movement</span>
 					</h4>
-					<ul>
+					<ul class="icon iconArrows">
 						<li>Moving up/down the column increments/decrements the line number by two.</li>
 						<li>The other four orthogonal moves are obtained by incrementing/decreasing the column
 							by one, and at the same time incrementing/decreasing the line by one.
@@ -410,7 +410,7 @@
 					<h4 class="w3-container w3-pale-yellow w3-center">
 						<span>Diagonal movement</span>
 					</h4>
-					<ul>
+					<ul class="icon iconArrowsAlt">
 						<li>The displacement along the transverse line increases/decreases the column by two.</li>
 						<li>The other four diagonal shifts are obtained by incrementing/decreasing the column
 							by one, and at the same time incrementing/decreasing the line by three.
@@ -1013,13 +1013,14 @@
 					</h4>
 					<p>The annotation of a game does not always start with the first move; perhaps
 						a game has been retaken, or part of a fictitious position, or simply has not
-						been annotated from the start. To annotate a position for later retaking the
-						game there is the <q lang="en" translate="no"><strong><a
-							href="#PDTL" class="cescacs"
+						been annotated from the start.
+					</p>
+					<p>To annotate a position for later retaking the game there is the
+						<q lang="en" translate="no"><strong><a href="#PDTL" class="cescacs"
 							title="Position Description by Transversal Lines">PDTL</a></strong></q>
 						(<i lang="en" translate="no">Position Description by Transversal Lines</i>) format,
-						but it is not properly part of the <i>CTL-AN</i> algebraic notation, and is
-						detailed below.
+						but it is not properly part of the <i>CTL-AN</i> algebraic notation; it is
+						incorporated as a tag value in a label, and is detailed below.
 					</p>
 					<ol>
 						<li>The <strong>first move may begin with a move by <i>Black</i></strong>. In
@@ -1028,14 +1029,14 @@
 							(U+2026), or by using three dot characters "...", followed by a comma, a
 							space and <i>Black</i>'s move.
 						</li>
-						<li>The <strong>first move may not be number one</strong>, and will start with
-							another number.
+						<li>The <strong>first move may not be number one</strong>, and in that case it
+							will start with another number.
 							<ul>
 								<li>If the <strong>starting move number is not known</strong>, start with
 									<strong>one</strong>, but end the number one with a question mark
 									(<q><strong>?</strong></q>) instead of a dot; the numbering will
 									continue from this value; example:
-									<div class="caixa-exemple-ctl-pgn">
+									<div class="ctl-pgn">
 										<code>1? …, RC25-D26
 											  2. VF10-H14, RD26-H22
 										</code>
@@ -1145,7 +1146,7 @@
 					characters for <i>black's state</i>, which are written in
 					lower case.
 				</p>
-				<ul>
+				<ul style="list-style-type:upper-roman">
 					<li>If the <i>King</i> has not moved, and neither have any of
 						the <i>Rooks</i> we get <strong><code>RKR</code></strong>
 						for <i>White</i>, <strong><code>rkr</code></strong> for
@@ -1191,13 +1192,13 @@
 					<p>At most, only one of the options will be available,
 						and the same field is used to record both cases:
 					</p>
-					<ul>
+					<ol style="list-style-type:decimal;">
 						<li>In the previous move, a pawn has made a
 							En el moviment anterior, un peó ha fet un
 							<a href="glossary.html#MovimentDoble" class="cite" target="_blank">double</a> or
 							<a href="glossary.html#MovimentTriple" class="cite" target="_blank">triple move</a>.
 							The en passant capture is available:
-							<ul>
+							<ul style="list-style-type:lower-alpha;">
 								<li><strong>Double move</strong>: Record the <i>hetille</i> where the pawn is,
 									and, separated with the at symbol <strong>@</strong>, the line where it can
 									be captured; you do not have to indicate the column of the second
@@ -1236,7 +1237,7 @@
 						<li>When neither of the two situations applies,
 							a hyphen <q><strong>‐</strong></q> is used.
 						</li>
-					</ul>
+					</ol>
 
 				</section>
 				<section id="PDTLMoveCount" class="w3-container w3-half">
@@ -1281,14 +1282,14 @@
 				formats, linking algebraic notation with <strong>meta-information</strong>
 				in three different ways:
 			</p>
-			<ul>
-				<li>Metadata classified in labels, prefixing the item itself. Each label has
-					an identifier and a tag value in a specific format, set according to the
-					type of value being represented.
+			<ul class="icon iconBullseye">
+				<li>Metadata classified in <strong>labels</strong>, information about the game event
+					itself. Each label has an identifier and a tag value in a specific format, set
+					according to the type of value being represented.
 				</li>
-				<li>Free comments interspersed in the algebraic notation.
+				<li>Free <strong>comments</strong> interspersed in the algebraic notation.
 				</li>
-				<li>Variations, alternative moves to the moves of the main game,
+				<li>Variations, <strong>alternative moves</strong> to the moves of the main game,
 					for didactic purposes.
 				</li>
 			</ul>
@@ -1334,7 +1335,7 @@
 						the <strong>seven mandatory <i>PGN</i> labels</strong> are required, with
 						some subtle variation. The order of these labels has to be as presented here:
 					</p>
-					<ul>
+					<ol start="2">
 						<li id="EventTag">
 							<strong>Event</strong> <small>Name of the event; if unknown
 							<q><strong>?</strong></q>, if not an organised event
@@ -1403,10 +1404,12 @@
 						<li id="WhiteTag">
 							<strong>White</strong> <small>White player:</small>
 							<ul>
-								<li style="list-style-type: circle;"><small>Surname(s), and then,
+								<li style="list-style-type: circle;">
+									<small>Surname(s), and then,
 									separated by a comma and a space, the first name. Initials can
 									be used using the letter and a full stop.</small>
-									<aside class="compact"><small>It is important to always register
+									<aside class="compact">
+										<small>It is important to always register
 										surname and first name in the same way; in Catalonia it is
 										common to separate surnames with an "i", but the identification
 										is ultimately determined by the player, always within the legal
@@ -1468,7 +1471,7 @@
 								</li>
 							</ul>
 						</li>
-					</ul>
+					</ol>
 				</section>
 				<section class="w3-container half">
 					<h4 class="w3-container w3-pale-yellow w3-center">
@@ -1480,7 +1483,7 @@
 						target="_blank">fool's mate</a>, instead of the seven labels for the game
 					record, the label <strong>Id</strong> is used, always as the
 					<strong>second label</strong>.
-					<ul>
+					<ol start="2">
 						<li id="IdTag">
 							<p><strong>Id</strong> <small>As a value it will have an identifier
 								consisting of letters, numbers and hyphens, consisting of a first
@@ -1489,7 +1492,7 @@
 								a hyphen, a unique identifier of this publisher.</small>
 							</p>
 							<div class="w3-container">
-								<div class="w3-col w3-container caixa-exemple-ctl-pgn" style="width:18em">
+								<div class="w3-col w3-container ctl-pgn" style="width:18em">
 									<code>[Variant "C'escacs"]
 										[Id "Cescacs-X01"]
 										1. H6-H12 ?!, I23-I19 ?!
@@ -1526,7 +1529,7 @@
 								</div>
 							</div>
 						</li>
-					</ul>
+					</ol>
 					<p>The <strong>Id</strong> identifier label can also be used in
 						<strong>game fragment records</strong>, by incorporating it after the labels
 						that identify the game. The prefixes that would then be used would be:
@@ -1591,6 +1594,19 @@
 							<strong>Lang</strong> <small>Language to be used in comments; the value has
 							to be a two-letter <cite>ISO 639</cite> language code (<cite>ISO 639-1</cite>
 							alpha-2) or, if required, the three-letter <cite>ISO 639-3</cite> code.</small>
+						</li>
+						<li id="TitleTag"><strong>Title</strong> <small>Very exceptionally, a game may have
+							a name, and this could also be the case for opening or closing situations. Keep
+							in mind that the name will change with the language of the comments, and is not
+							an identifier. <span class="note">Avoid assigning a name for free, and reserve
+							this label for really exceptional cases.</span>
+							
+							De manera muy excepcional, una
+							partida puede tener un nombre, y también se podría dar el caso para situaciones
+							de apertura o de final. Se tiene que tener presente que el nombre cambiará con
+							el idioma de los comentarios, y no es un identificador. <span class="note">Se
+							tiene que evitar asignar gratuitamente un nombre, y reservar este hashtag para
+							casos realmente excepcionales.</span></small>
 						</li>
 						<li id="TimeControlTag">
 							<strong>TimeControl</strong> <small>Values:</small>
@@ -1821,75 +1837,59 @@
 			</section>
 			<section id="Comentari" class="w3-container">
 				<h3 class="w3-container w3-pale-green w3-center header2 w3-text-grey">Comments</h3>
-				<p>Els comentaris s'escriuen entre claus <q><strong>{</strong> … <strong>}</strong></q>, en línies
-					específiques. El caràcter d'obrir clau <q><strong>{</strong></q> només ha d'aparèixer al començament
-					d'una línia, tot i ser acceptable que sigui precedit per espais en blanc; en aquesta línia comença
-					un comentari, que no poden ser imbrincats, de manera que qualsevol aparició del caràcter de tancar
-					clau <q><strong>}</strong></q> acabarà el comentari. El caràcter de final de comentari
-					<q><strong>}</strong></q> ha de ser l'últim de la línia, tot i ser acceptable que vagi seguit per
-					espais en blanc.
+				<p>Comments are written between braces <q><strong>{</strong> … <strong>}</strong></q>, using lines
+					specifically for this purpose. The opening brace character <q><strong>{</strong></q> need only
+					appear at the beginning of a line, although it is acceptable for it to be preceded by whitespace;
+					on this line a comment begins, which cannot be nested, so any occurrence of the closing brace
+					character <q><strong>}</strong></q> will end the comment. The end-of-comment character
+					<q><strong>}</strong></q> must be the last character on the line, although it is acceptable
+					for it to be followed by whitespace.
 				</p>
-				<p>Un comentari pot obrir-se i tancar-se en una mateixa línia, però sovint els comentaris s'estendran
-					per múltiples línies; només els comentaris i les variacions es poden estendre per múltiples línies,
-					perquè les jugades i les etiquetes queden limitades a una per línia.
+				<p>A comment can be opened and closed on a single line, but often comments will span multiple lines;
+					only comments (and variations) can span multiple lines, because moves and labels are limited to
+					one per line.
 				</p>
-				<section class="w3-container w3-half">
-					<h4 class="w3-container w3-pale-yellow w3-center">
-						<span>Comments at the start of the game</span>
-					</h4>
-					<p>Els comentaris que s'escriuen abans del primer moviment permeten descriure el
-						<strong>context</strong> en què es disputa la partida. Algunes partides molt assenyalades poden
-						incloure un <strong>títol</strong> per descriure-les, que hauria d'aparèixer com a primer
-						comentari, en una única línia, sense cap altre contingut; el context, si es requereix, s'afegirà
-						tot seguit en altres comentaris.
-					</p>
-				</section>
-				<section class="w3-container w3-half">
-					<h4 class="w3-container w3-pale-yellow w3-center">
-						<span>Final comments on the game</span>
-					</h4>
-					<p>Els comentaris finals s'afegeixen després de la línia de l'<i>indicador final del resultat</i>,
-						una vegada acabats les jugades de la partida. Aquest és el lloc adequat per fer descripcions de
-						la partida; també es poden fer servir per explicar circumstàncies de l'acabament, o situacions
-						que s'han donat durant el joc, lliberant els comentaris de les jugades de qualsevol tipus
-						d'anècdota referent al desenvolupament del joc.
-					</p>
-				</section>
+				<div class="w3-container w3-half">
+					<!-- Comments at the start of the game -->
+					<section>
+						<h4 class="w3-container w3-pale-yellow w3-center">
+							<span>Comments at the start of the game</span>
+						</h4>
+						<p>The comments written before the first move describe the <strong>context</strong> in which
+							the game is played.
+						</p>
+					</section>
+					<!-- Final comments on the game -->
+					<section>
+						<h4 class="w3-container w3-pale-yellow w3-center">
+							<span>Final comments on the game</span>
+						</h4>
+						<p>Final comments are added after the <i>final result indicator</i> line,
+							after the moves of the game have been completed.
+						</p>
+						<p>This place is suitable for descriptions of the game; they can also be
+							used to explain circumstances of the ending, or situations that have
+							occurred during the game, freeing the move comments from any kind of
+							anecdotes concerning the development of the game.
+						</p>
+					</section>
+				</div>
 				<section id="ComentariJugada" class="w3-container w3-half">
 					<h4 class="w3-container w3-pale-yellow w3-center">
 						<span>Comments on the moves</span>
 					</h4>
-					<p>Un comentari s'escriu sempre en una nova línia, després de la línia d'una jugada; tots són
-						comentaris, però es distingueixen de diferent mena, indicada amb un <b>marcador</b>. El
-						<strong>marcador</strong> s'escriu darrera la clau d'obrir el comentari, sense separanció.
+					<p>The comment for a move is always written on a new line, following the line
+						of the move. There may be a maximum of one comment for each move, unless there
+						is also a comment automatically generated by a program.
 					</p>
 					<ul class="aclariment">
-						<li>Els marcadors no canvien amb l'idioma.</li>
-						<li>Poden facilitar futures característiques en programes informàtics.</li>
-					</ul>
-					<ul>
-						<li><strong><q>{@W:</q></strong> <small>Inici de comentari referent al moviment de les
-								<i>blanques</i>.</small>
+						<li><span class="note">The comment line will refer to both <i>white</i> and
+							<i>black</i> moves, using appropriate references to differentiate between
+							them.</span>
 						</li>
-						<li><strong><q>{@B:</q></strong> <small>Inici de comentari referent al moviment de les
-								<i>negres</i>.</small>
-						</li>
-						<li><strong><q>{:</q></strong> <small>Inici de comentari, referent a la posició de les peces en
-								l'<i>hexcaquer</i> o de la seqüència de moviments que ha portat a aquesta
-								situació.</small>
-						</li>
-						<li><strong><q>{#:</q></strong> <small>Inici d'un comentari generat automàticament; generalment
-								començarà amb una etiqueta entre corxets, identificant el programa.</small>
-							<ul>
-								<li>
-									<strong><q>{#W:</q></strong> <small>Inici d'un comentari generat automàticament,
-										referent al moviment de les <i>blanques</i>.</small>
-								</li>
-								<li>
-									<strong><q>{#B:</q></strong> <small>Inici d'un comentari generat automàticament,
-										referent al moviment de les <i>negres</i>.</small>
-								</li>
-							</ul>
+						<li><span class="note">Automatically generated comments shall begin with the
+							colon symbol at the start of the comment, written immediately after the
+							open brace.</span>
 						</li>
 					</ul>
 				</section>

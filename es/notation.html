@@ -371,7 +371,7 @@
 					<h4 class="w3-container w3-pale-yellow w3-center">
 						<span>Movimiento ortogonal</span>
 					</h4>
-					<ul>
+					<ul class="icon iconArrows">
 						<li>El deplazamiento por la columna incrementa/decrementa en dos el número de línea.</li>
 						<li>Los otros cuatro desplazamientos ortogonales se obtienen incrementando/decrementando
 							en uno la columna, y al mismo tiempo incrementando/decrementando en uno la línea.
@@ -396,7 +396,7 @@
 					<h4 class="w3-container w3-pale-yellow w3-center">
 						<span>Movimiento diagonal</span>
 					</h4>
-					<ul>
+					<ul class="icon iconArrowsAlt">
 						<li>El desplazamiento por la línea transversal incrementa/decrementa en dos la columna.</li>
 						<li>Los otros cuatro desplazamientos diagonales se obtienen incrementando/decrementando
 							en uno la columna, y al mismo tiempo incrementando/decrementando en tres la línea.
@@ -1001,13 +1001,14 @@
 					</h4>
 					<p>No siempre la anotación de una partida empieza en la primera jugada; quizás se ha retomado una
 						partida, o parte de una posición ficticia, o sencillamente no se ha anotado desde el comienzo.
-						Para anotar una posición para retomar posteriormente la partida existe el formato
+					</p>
+					<p>Para anotar una posición para retomar posteriormente la partida existe el formato
 						<q lang="en" translate="no"><strong><a href="#PDTL" class="cescacs"
 							title="Position Description by Transversal Lines">PDTL</a></strong></q>
 						(<i lang="en">Position Description by Transversal Lines</i>,
 						<i>descripción de la posición mediante líneas transversales</i>),
-						pero no es propiamente parte de la notación algebraica <i>CTL-AN</i>,
-						y se detalla más abajo.
+						pero no es propiamente parte de la notación algebraica <i>CTL-AN</i>; se incorpora
+						compo valor en una etiqueta, y se detalla más abajo.
 					</p>
 					<ol>
 						<li><strong>La primera jugada puede empezar con un movimiento de las <i>negras</i></strong>. En
@@ -1016,13 +1017,14 @@
 							<q><strong>…</strong></q> (U+2026), o usando tres caracteres punto <q>...</q>; a
 							continuación se escribirá una coma, un espacio y el movimiento de las <i>negras</i>.
 						</li>
-						<li><strong>La primera jugada no será la número uno</strong>, y se empezará por otro número.
+						<li><strong>La primera jugada no es la número uno</strong>, y en ese caso se empezará por
+							otro número.
 							<ul>
 								<li>Si <strong>no es conocido el número de jugada</strong> de inicio; se empezará por la
 									<strong>uno</strong>, pero acabando el número <strong>uno</strong> con un
 									interrogante (<q><strong>?</strong></q>), en vez de un punto; la numeración
 									continuará desde este valor; ejemplo:
-									<div class="caixa-exemple-ctl-pgn">
+									<div class="ctl-pgn">
 										<code>1? …, RC25-D26
 											  2. VF10-H14, RD26-H22
 										</code>
@@ -1133,7 +1135,7 @@
 					los caracteres para el <i>estado de las negras</i>, que se escriben
 					en minúsculas.
 				</p>
-				<ul>
+				<ul style="list-style-type:upper-roman">
 					<li>Si el <i>Rey</i> no se ha movido, y tampoco ninguno
 						de los <i>Roques</i> obtendremos <strong><code>RKR</code></strong>
 						para las <i>blancas</i>, <strong><code>rkr</code></strong> para
@@ -1177,12 +1179,12 @@
 					<p>Como máximo, solo una de las opciones estará disponible,
 						y se usa el mismo campo para registrar ambos casos::
 					</p>
-					<ul>
+					<ol style="list-style-type:decimal;">
 						<li>En el movimiento anterior, un peón ha hecho un
 							<a href="glossary.html#MovimentDoble" class="cite" target="_blank">movimiento doble</a> o
 							<a href="glossary.html#MovimentTriple" class="cite" target="_blank">triple</a>.
 							Está disponible la captura al paso:
-							<ul>
+							<ul style="list-style-type:lower-alpha;">
 								<li><strong>Movimiento doble</strong>: Se registra el <i>hexcaque</i> donde
 									está el peón, y, separado con el símbolo arroba <strong>@</strong>, la
 									línea donde puede ser capturado; no se tiene que indicar la columna del
@@ -1221,7 +1223,7 @@
 						<li>Cuando no se da ninguna de las dos situaciones,
 							se usa un guion <q><strong>-</strong></q>.
 						</li>
-					</ul>
+					</ol>
 				</section>
 
 				<section id="PDTLMoveCount" class="w3-container w3-half">
@@ -1273,15 +1275,16 @@
 				plano, enrequiciendo la notación algebraica con <strong>metainformación</strong>
 				de tres maneres diferentes:
 			</p>
-			<ul>
-				<li>Metadatos clasificados en etiquetas, prefixando la partida propiamente dicha.
-					Cada etiqueta tiene un identificador y un valor en un formato específic,
-					fijado de acuerdo con el tipo de valor que se representa.
+			<ul class="icon iconBullseye">
+				<li>Metadatos clasificados en <strong>etiquetas</strong>, información referente
+					a la partida propiamente dicha. Cada etiqueta tiene un identificador y un
+					valor en un formato específico, fijado de acuerdo con el tipo de valor que
+					se representa.
 				</li>
-				<li>Comentarios libres que se intercalan en la notación algebraica.
+				<li><strong>Comentarios</strong> libres que se intercalan en la notación algebraica.
 				</li>
-				<li>Variaciones, jugadas alternativas a los movimientos de la partida principal,
-					con finalidad didáctica.
+				<li>Variaciones, <strong>jugadas alternativas</strong> a los movimientos de la
+					partida principal, con finalidad didáctica.
 				</li>
 			</ul>
 			<p>Las tres características se encuentran también incorporadas en <i>CTL-PGN</i>,
@@ -1327,7 +1330,7 @@
 						presentan alguna sutil variación. El orden de estas etiquetas tiene que ser el que
 						aquí se presenta:
 					</p>
-					<ul>
+					<ol start="2">
 						<li id="EventTag">
 							<strong>Event</strong> <small>Nombre del evento; si es desconocido
 							<q><strong>?</strong></q>, si no és un evento organizado
@@ -1395,25 +1398,27 @@
 						</li>
 						<li id="WhiteTag">
 							<strong>White</strong> <small>Jugador con blancas:</small>
-							<ul>
-								<li style="list-style-type: circle;"><small>Apellido(s), y después,
-										separado con coma y un espacio, el nombre. Es poden usar
-										iniciales usando la lletra y un punto.</small>
-										<aside class="compact"><small>Es importante registrar apellido
-											y nombre siempre del mismo modo; en Cataluña es habitual
-											separar los apellidos con una letra "y", pero la
-											identificación, en último término, la determina el jugador,
-											siempre dentro de la identificación legal; lo mismo para
-											abreviaturas y variaciones del nombre.</small>
-										</aside>
+							<ul style="list-style-type: circle;">
+								<li>
+									<small>Apellido(s), y después, separado con coma y un espacio,
+									el nombre. Es poden usar iniciales usando la lletra
+									y un punto.</small>
+									<aside class="compact">
+										<small>Es importante registrar apellido
+										y nombre siempre del mismo modo; en Cataluña es habitual
+										separar los apellidos con una letra "y", pero la
+										identificación, en último término, la determina el jugador,
+										siempre dentro de la identificación legal; lo mismo para
+										abreviaturas y variaciones del nombre.</small>
+									</aside>
 								</li>
-								<li style="list-style-type: circle;"><small>Si el jugador es desconocido,
+								<li><small>Si el jugador es desconocido,
 										se usa <q>?</q>.</small>
 								</li>
-								<li style="list-style-type: circle;"><small>Si es un programa informático
+								<li><small>Si es un programa informático
 									se usa el nombre, y a continuación la versión.</small>
 								</li>
-								<li style="list-style-type: circle;"><small>Se puede omitir, si se usa
+								<li><small>Se puede omitir, si se usa
 									la etiqueta
 									<strong><a href="#WhiteNATag" class="cite">WhiteNA</a></strong>.
 									</small>
@@ -1463,7 +1468,7 @@
 								</li>
 							</ul>
 						</li>
-					</ul>
+					</ol>
 				</section>
 				<section class="w3-container half">
 					<h4 class="w3-container w3-pale-yellow w3-center">
@@ -1475,7 +1480,7 @@
 					<a href="glossary.html#Matboig" class="cescacs" target="_blank">mate del loco</a>,
 					en lugar de las siete etiquetas para al registro de la partida, se usa la etiqueta
 					<strong>Id</strong>, siempre como <strong>segunda etiqueta</strong>.
-					<ul>
+					<ol start="2">
 						<li id="IdTag">
 							<p><strong>Id</strong> <small>Como valor tendrà un identificador formado
 								por letras, números y guiones, que consistirá en una primera parte que
@@ -1484,7 +1489,7 @@
 								un guión, un identificador único de este editor.</small>
 							</p>
 							<div class="w3-container">
-								<div class="w3-col w3-container caixa-exemple-ctl-pgn" style="width:18em">
+								<div class="w3-col w3-container ctl-pgn" style="width:18em">
 									<code>[Variant "C'escacs"]
 										[Id "Cescacs-X01"]
 										1. H6-H12 ?!, I23-I19 ?!
@@ -1522,7 +1527,7 @@
 								</div>
 							</div>
 						</li>
-					</ul>
+					</ol>
 					<p>La etiqueta identificador <strong>Id</strong> también se puede usar en
 						<strong>registros de fragmentos de partidas</strong>, incorporándolo
 						entonces después de las etiquetas que identifican la partida. Los prefijos
@@ -1591,6 +1596,13 @@
 							el valor ha de ser un código de idioma <cite>ISO 639</cite>, de dos letras
 							(<cite>ISO 639-1</cite> alpha-2), o, si se requiere, el código
 							<cite>ISO 639-3</cite> de tres letras.</small>
+						</li>
+						<li id="TitleTag"><strong>Title</strong> <small>De manera muy excepcional, una
+							partida puede tener un nombre, y también se podría dar el caso para situaciones
+							de apertura o de final. Se tiene que tener presente que el nombre cambiará con
+							el idioma de los comentarios, y no es un identificador. <span class="note">Se
+							tiene que evitar asignar gratuitamente un nombre, y reservar esta etiqueta para
+							casos realmente excepcionales.</span></small>
 						</li>
 						<li id="TimeControlTag">
 							<strong>TimeControl</strong> <small>Valores:</small>
@@ -1825,90 +1837,91 @@
 			</section>
 			<section id="Comentari" class="w3-container">
 				<h3 class="w3-container w3-pale-green w3-center header2 w3-text-grey">Los comentarios</h3>
-				<p>Els comentaris s'escriuen entre claus <q><strong>{</strong> … <strong>}</strong></q>, en línies
-					específiques. El caràcter d'obrir clau <q><strong>{</strong></q> només ha d'aparèixer al començament
-					d'una línia, tot i ser acceptable que sigui precedit per espais en blanc; en aquesta línia comença
-					un comentari, que no poden ser imbrincats, de manera que qualsevol aparició del caràcter de tancar
-					clau <q><strong>}</strong></q> acabarà el comentari. El caràcter de final de comentari
-					<q><strong>}</strong></q> ha de ser l'últim de la línia, tot i ser acceptable que vagi seguit per
-					espais en blanc.
+				<p>Los comentarios se escriben entre llaves <q><strong>{</strong> … <strong>}</strong></q>,
+					usando líneas específicamente para ello. El carácter de abrir llave
+					<q><strong>{</strong></q> solo tiene que aparecer a principio de una línea, a pesar
+					de ser aceptable que esté precedido por espacios en blanco; en esta línea empieza un
+					comentario, que no pueden ser anidados, de manera que cualquier aparición del carácter
+					de llave de cierre <q><strong>}</strong></q> acabará el comentario. El carácter de
+					final de comentario <q><strong>}</strong></q> tiene que ser el último de la línea, a
+					pesar de ser aceptable que vaya seguido por espacios en blanco.
 				</p>
-				<p>Un comentari pot obrir-se i tancar-se en una mateixa línia, però sovint els comentaris s'estendran
-					per múltiples línies; només els comentaris i les variacions es poden estendre per múltiples línies,
-					perquè les jugades i les etiquetes queden limitades a una per línia.
+				<p>Un comentario puede abrirse y cerrarse en una misma línea, pero a menudo los comentarios
+					se extenderán por múltiples líneas; solo los comentarios (y las variaciones) se pueden
+					extender por múltiples líneas, porque las jugadas y las etiquetas quedan limitadas a una
+					por línea.
 				</p>
-				<section class="w3-container w3-half">
-					<h4 class="w3-container w3-pale-yellow w3-center">
-						<span>Comentarios de inicio de partida</span>
-					</h4>
-					<p>Els comentaris que s'escriuen abans del primer moviment permeten descriure el
-						<strong>context</strong> en què es disputa la partida. Algunes partides molt assenyalades poden
-						incloure un <strong>títol</strong> per descriure-les, que hauria d'aparèixer com a primer
-						comentari, en una única línia, sense cap altre contingut; el context, si es requereix, s'afegirà
-						tot seguit en altres comentaris.
-					</p>
-				</section>
-				<section class="w3-container w3-half">
-					<h4 class="w3-container w3-pale-yellow w3-center">
-						<span>Comentarios finales de partida</span>
-					</h4>
-					<p>Els comentaris finals s'afegeixen després de la línia de l'<i>indicador final del resultat</i>,
-						una vegada acabats les jugades de la partida. Aquest és el lloc adequat per fer descripcions de
-						la partida; també es poden fer servir per explicar circumstàncies de l'acabament, o situacions
-						que s'han donat durant el joc, lliberant els comentaris de les jugades de qualsevol tipus
-						d'anècdota referent al desenvolupament del joc.
-					</p>
-				</section>
+				<div class="w3-container w3-half">
+					<!-- Comentarios de inicio de partida -->
+					<section>
+						<h4 class="w3-container w3-pale-yellow w3-center">
+							<span>Comentarios de inicio de partida</span>
+						</h4>
+						<p>Los comentarios que se escriben antes del primer movimiento permiten describir el
+							<strong>contexto</strong> en que se disputa la partida.
+						</p>
+					</section>
+					<!-- Comentarios finales de partida -->
+					<section>
+						<h4 class="w3-container w3-pale-yellow w3-center">
+							<span>Comentarios finales de partida</span>
+						</h4>
+						<p>Los comentarios finales se agregan después de la linea del <i>indicador final de resultado</i>,
+							una vez finalizadas las jugadas de la partida.
+						</p>
+						<p>Este lugar es el adecuado para hacer descripciones de la partida; también se pueden usar
+							para explicar circunstancias de la finalización, o situaciones que se han dado durante el
+							juego, liberando los comentarios de las jugadas de cualquier tipo de anécdota referente
+							al desarrollo de la partida.
+						</p>
+					</section>
+				</div>
+				<!-- Comentarios de las jugadas -->
 				<section id="ComentariJugada" class="w3-container w3-half">
 					<h4 class="w3-container w3-pale-yellow w3-center">
-						<span>Comentarios de las jugades</span>
+						<span>Comentarios de las jugadas</span>
 					</h4>
-					<p>Un comentari s'escriu sempre en una nova línia, després de la línia d'una jugada; tots són
-						comentaris, però es distingueixen de diferent mena, indicada amb un <b>marcador</b>. El
-						<strong>marcador</strong> s'escriu darrera la clau d'obrir el comentari, sense separanció.
+					<p>El comentario de una jugada se escribe siempre en una nueva línea, a continuación
+						de la línea de la jugada. Como máximo puede haber un comentario para cada jugada,
+						excepto que además exista un comentario generado automáticamente por un programa.
 					</p>
 					<ul class="aclariment">
-						<li>Els marcadors no canvien amb l'idioma.</li>
-						<li>Poden facilitar futures característiques en programes informàtics.</li>
-					</ul>
-					<ul>
-						<li><strong><q>{@W:</q></strong> <small>Inici de comentari referent al moviment de les
-								<i>blanques</i>.</small>
+						<li><span class="note">La linea de comentario se referirá a ambos movimientos, el
+							de las <i>blancas</i> y el de las <i>negras</i>, usando las adecuadas
+							referencias para diferenciarlos.</span>
 						</li>
-						<li><strong><q>{@B:</q></strong> <small>Inici de comentari referent al moviment de les
-								<i>negres</i>.</small>
-						</li>
-						<li><strong><q>{:</q></strong> <small>Inici de comentari, referent a la posició de les peces en
-								l'<i>hexcaquer</i> o de la seqüència de moviments que ha portat a aquesta
-								situació.</small>
-						</li>
-						<li><strong><q>{#:</q></strong> <small>Inici d'un comentari generat automàticament; generalment
-								començarà amb una etiqueta entre corxets, identificant el programa.</small>
-							<ul>
-								<li>
-									<strong><q>{#W:</q></strong> <small>Inici d'un comentari generat automàticament,
-										referent al moviment de les <i>blanques</i>.</small>
-								</li>
-								<li>
-									<strong><q>{#B:</q></strong> <small>Inici d'un comentari generat automàticament,
-										referent al moviment de les <i>negres</i>.</small>
-								</li>
-							</ul>
+						<li><span class="note">Los comentarios generados automáticamente comenzarán con el
+							símbolo de dos puntos, escrito a continuación de la llave de inicio de
+							comentario.</span>
 						</li>
 					</ul>
 				</section>
-				<section class="w3-container w3-half">
+				<!-- Referencias dentro de los comentarios -->
+				<section class="w3-container">
 					<h4 class="w3-container w3-pale-yellow w3-center">
 						<span>Referencias dentro de los comentarios</span>
 					</h4>
-					<ul>
-						<li><q><strong>@W</strong></q> <small>referència al jugador de <i>blanques</i>.</small></li>
-						<li><q><strong>@B</strong></q> <small>referència al jugador de <i>negres</i>.</small></li>
-						<li><strong>Referència a una jugada</strong> <small>Fent servir el símbol
-								<q><strong>#</strong></q> i el número; exemple: <q><strong>#14</strong></q> es refereix
+					<ul class="twocolumnschance">
+						<li><small>Las piezas se referencian usando las
+							<strong><a href="glossary.html#Lletraidentificativa" class="cescacs" target="_blank">letras
+							identificativas</a></strong>, prefijades con una <i>tilde</i>
+							(<strong><code>~</code></strong>).</small>
+							<p class="compact"><small>Si queremos referirnos a una pieza en una posición, se escribirá,
+								la coordenada CTL de la posición a continuación de la letra de la pieza y sin
+								separación.</small></p>
+						</li>
+						<li><small>Un <i>hexcaque</i> se referencia usando su
+							<strong><a href="glossary.html#CTL" class="cescacs" target="_blank">coordenada
+									CTL</a></strong>, prefijada con <i>tilde</i>
+							(<strong><code>~</code></strong>).</small>
+						</li>
+						<li><q><strong>@W</strong></q> <small>referencia al jugador de <i>blancas</i>.</small></li>
+						<li><q><strong>@B</strong></q> <small>referencia al jugador de <i>negras</i>.</small></li>
+						<li><strong>Referencia a una jugada</strong> <small>Usando el símbolo
+								<q><strong>#</strong></q> y el número; ejemplo: <q><strong>#14</strong></q> se refiere
 								a la jugada <i>14</i>.</small></li>
-						<li><strong>Referència a un moviment del jugador</strong> <small>Exemple:
-								<q><strong>#14@N</strong></q> es refereix al moviment de les <i>negres</i> en la jugada
+						<li><strong>Referencia a un movimento del jugador</strong> <small>Ejemplo:
+								<q><strong>#14@N</strong></q> se refiere al movimiento de las <i>negras</i> en la jugada
 								<i>14</i>; no s'han de referenciar jugades posteriors, sinò postergar el comentari.
 							</small>
 							<ul class="aclariment">
@@ -1939,18 +1952,12 @@
 								automàticament. Exemple: <i>$24</i> <span class="w3-text-blue-grey">&mdash; White has a
 									slight space advantage</span>.</small>
 						</li>
-						<li>Naturalment les peces es referèncien fent servir les
-							<strong><a href="glossary.html#Lletraidentificativa" class="cescacs" target="_blank">lletres
-									identificatives</a></strong>, i un <i>hexcac</i> fent servir les
-							<strong><a href="glossary.html#CTL" class="cescacs" target="_blank">coordenades
-									CTL</a></strong>.
-						</li>
 					</ul>
 				</section>
 			</section>
 			<section class="w3-container">
 				<h3 class="w3-container w3-light-grey w3-center header2 w3-text-blue-grey">Ejemplos</h3>
-				<div class="w3-left caixa-exemple-ctl-pgn" style="width:22em">
+				<div class="w3-left caixa-exemple-ctl-pgn" style="width:22.5em">
 					<code>[Variant "C'escacs"]
 							[Event "CG"]
 							[Site "Barcelona, Catalunya ESP"]
@@ -1970,29 +1977,88 @@
 							{ inacabada }
 						</code>
 				</div>
-				<div class="w3-left caixa-exemple-ctl-pgn" style="width:22em">
+				<div class="w3-left ctl-pgn" style="width:22.5em">
 					<code>[Variant "C'escacs"]
-							[Id "Cescacs-X01-ca"]
-							[Lang "ca"]
-							{ Mat del boig }
-							1. H6-H12 ?!, I23-I19 ?!
-							{ @W: curiós peó per obrir }
-							2. JF6-C15 ?!, GH26-Z11 ?!
-							{ @W: alfil per cobrir 15 però descuida defensa K }
-							3. L5-L7, NG25-L17 ?!
-							4. EH4-H8 ??, GZ11-L5
-							{ @W: Retirar E de H4 deixa K desatès }
-							5. I5-I9 ??, NL17-G9
-							{ @W: Moviment irrellevant ?? }
-							{ @B: Posiciona N }
-							6. K4-K10 ??, GL5-H6#
-							{ @W: Moviment irrellevant ?? }
-							0-3
-							{ @N Ha de descuidar JF6 i EH4 }
-							{ @W Ataca K a salt de cavall }
-					</code>
+					[Id "Cescacs-O01-X-ca"]
+					[Lang "ca"]
+					</code><p class="note compact">
+						{! Mat del boig }
+					</p><code>
+					1. H6-H12 ?!, I23-I19 ?!
+					</code><p class="note compact">
+						{ @W: curiós peó per obrir, @B: li segueix el joc  }
+					</p><code>
+					2. JF6-C15 ?!, GH26-Z11 ?!
+					</code><p class="note compact">
+						{ @W: J per cobrir línia 15 però descuida defensa del K.
+						@B: el moviment prematur de G a Z11 és molt poc ortodox }
+					</p><code>
+					3. L5-L7, NG25-L17 ?!
+					</code><p class="note compact">
+						{ @B: Moviment inicial de cavall també al flanc }
+					</p><code>
+					4. EH4-H8 ??, GZ11-L5
+					</code><p class="note compact">
+						{ @W: Retirar E de H4 deixa K desatès }
+					</p><code>
+					5. I5-I9 ??, NL17-G9
+					</code><p class="note compact">
+						{ @W: Moviment irrellevant; la resposta
+						al moviment @B de G hauria d'haver estat la defensa de la línia 6,
+						posicionant-se en F6 }
+					</p><code>
+					6. K4-K10 ??, GL5-H6#
+					</code><p class="note compact">
+						{ @W: Segona oportunitat de reacció desperdiciada }
+					</p><code>
+					0-3
+					</code><p class="note compact">
+						{ @B Ha de descuidar JF6 i EH4 }						
+					</p><p class="note compact">
+						{ @W Ataca amb G i a salt de cavall }
+					</p>
 				</div>
-				<div class="w3-left caixa-exemple-ctl-pgn" style="width:22em">
+				<!--
+				<div class="w3-left caixa-exemple-ctl-pgn" style="width:22.5em">
+					<code>[Variant "C'escacs"]
+					[Id "Cescacs-O01-X-ca"]
+					[Lang "ca"]
+					</code><p class="note compact">{! Mat del boig }						
+					</p><code>
+					1. H6-H12 ?!, I23-I19 ?!
+					</code><p class="note compact">{@W: curiós peó per obrir,
+						@B: li segueix el joc  }
+					</p><code>
+					2. JF6-C15 ?!, GH26-Z11 ?!
+					</code><p class="note compact">{@W: J per cobrir línia 15
+						però descuida defensa del K.
+						@B: el moviment prematur de G
+						a Z11 és molt poc ortodox }
+					</p><code>
+					3. L5-L7, NG25-L17 ?!
+					</code><p class="note compact">{@B: Moviment inicial de cavall
+						també al flanc }
+					</p><code>
+					4. EH4-H8 ??, GZ11-L5
+					</code><p class="note compact">{ @W: Retirar E de H4 deixa K
+						desatès }
+					</p><code>
+					5. I5-I9 ??, NL17-G9
+					</code><p class="note compact">{@W: Moviment irrellevant; la resposta
+						al moviment @B de G hauria d'haver
+						estat la defensa de la línia 6,
+						posicionant-se en F6 }
+					</p><code>
+					6. K4-K10 ??, GL5-H6#
+					</code><p class="note compact">{@W: Segona oportunitat de reacció desperdiciada }
+					</p><code>
+					0-3
+					</code><p class="note compact">{ @B Ha de descuidar JF6 i EH4 }
+						{ @W Ataca amb G i a salt de cavall }
+					</p>
+				</div>
+				-->
+				<div class="w3-left caixa-exemple-ctl-pgn" style="width:22.5em">
 					<code>[Variant "C'escacs"]
 							[Id "Cescacs-X01-V-ca"]
 							[Lang "ca"]

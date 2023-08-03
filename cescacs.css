@@ -326,6 +326,19 @@ ul.iconStar2>li::marker {
   content: "\f005"; /* FontAwesome Unicode */
 }
 
+ul.iconArrows>li::marker {
+  content: "\f047"; /* FontAwesome Unicode */
+}
+
+ul.iconArrowsAlt>li::marker {
+  content: "\f0b2"; /* FontAwesome Unicode */
+}
+
+
+ul.iconSlack>li::marker {
+  content: "\f198"; /* FontAwesome Unicode */
+}
+
 li.iconMarkItem::marker {
   content: "\f152"; /* FontAwesome Unicode */
 }
@@ -374,12 +387,33 @@ ul.aclariment>li {
   margin-bottom: 1ex;
 }
 
+/*
 div.caixa-exemple-ctl-pgn {
   padding: 0 1em;
   margin: 0.25em;
   white-space: pre-line;
-  line-height: 90%;
+  line-height: 110%;
   background-color: blanchedalmond;
+}
+*/
+
+div.ctl-pgn {
+  padding: 1em 1em 0.5em;
+  margin: 0.25em;
+  line-height: 110%;
+  background-color: blanchedalmond;
+}
+
+div.ctl-pgn>code {
+  white-space:pre-line;
+}
+div.ctl-pgn>p {
+  font-size: 84%;
+  line-height: 90%;
+  margin-top:4px;
+  margin-bottom:4px;
+  margin-left: 3em;
+  margin-right: 1.5em;
 }
 
 div.glossary-box {
@@ -405,19 +439,20 @@ p.note {
   margin-right: 1.5em;
 }
 
+div.compact,
 p.compact {
   margin-top:4px;
   margin-bottom:4px;
   line-height: 90%;
 }
 
-span.note {
-  font-size: 84%;
-}
-
 aside.compact {
   margin-top:4px;
   margin-bottom:4px;
+}
+
+span.note {
+  font-size: 84%;
 }
 
 i.cescacs {
