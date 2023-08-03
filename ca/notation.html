@@ -1496,11 +1496,10 @@
 					</p>
 					<ol start="2" class="compact">
 						<li id="IdTag">
-							<p><strong>Id</strong> <small>Com a valor tindrà un identificador format per lletres,
+							<strong>Id</strong> <small>Com a valor tindrà un identificador format per lletres,
 								números i guions que consistirà en una primera part que identificarà de manera
 								única l'editor (en aquest lloc web es fa servir <q>Cescacs</q>), i separat amb
 								un guió, un identificador únic d'aquest editor.</small>
-							</p>
 							<ul class="icon iconSlack">
 								<li><small>Els identificadors d'un editor és convenient que facin servir un
 										número, combinat amb un prefix de classificació:</small>
@@ -1538,20 +1537,44 @@
 						<span>Etiqueta identificador opcional</span>
 					</h4>
 					<ol start="9" class="compact">
-						<li><small>L'etiqueta identificador <strong>Id</strong> també es pot fer servir
-							en <strong>registres de fragments de partides</strong>, i també per a
-							<strong>exportar partides anònimament</strong>, preservant la identitat dels
-							jugadors. En aquests casos se incorpora després de les etiquetes que identifiquen
-							la partida; serà llavors la <strong>novena etiqueta</strong>.</small>
+						<li><strong>Id</strong> <small>L'etiqueta identificador <strong>Id</strong>
+							també es pot fer servir per a <strong>exportar partides anònimament</strong>,
+							preservant la identitat dels jugadors, i permet
+							<strong>registres de fragments de partides</strong>.
+							En aquest cas se incorpora després de les etiquetes que identifiquen
+							la partida, sent llavors la <strong>novena etiqueta</strong>.</small>
 							<aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
 								<p>Quan es fan servir les etiquetes <i>WhiteAlias</i>, o bé
 									<i>BlackAlias</i>, associades amb la identitat principal d'un jugador,
-									resultarà sent l'etiqueta <b>dècima</b>, o bé <b>onceava</b>,
+									resultarà sent l'etiqueta <b>dècima</b>, o bé <b>onzena</b>,
 									en cas de fer servir ambdues.
 								</p>
 							</aside>
 							<ul class="icon iconSlack">
-								<li><small>Els prefixos que es farien servir llavors serien només:</small>
+								<li>
+									<small>Es fa servir un identificador únic compartit per
+									totes les partides d'un encontre: un identificador
+									de l'editor, i separat per un guionet (<i>hyphen</i>)
+									<q><strong>‐</strong></q> (U+2010), o un <i>guió polivalent</i>
+									(<i>hyphen-minus</i>) <q>-</q>, un número identificador, que
+									l'editor ha de garantir com a únic.</small>
+									<aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+										Aquest cas és molt similar a les partides editades únicament
+										amb un identificador, però la diferència és que són partides
+										reals entre dos jugadors, on els jugadors són anònims.</small>
+									</aside>
+									<aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+										<p>És convenient que l'editor incorpori sempre aquesta
+											etiqueta, també quan els noms dels jugadors són públics.</p>
+									</aside>
+								</li>
+								<li>
+									<p><small>Per a un fragment de partida, a continuació de
+										l'identificador únic, separat per un guionet (<i>hyphen</i>),
+										o un <i>guió polivalent</i>, incorporem un prefix i uns altres
+										números, definint el fragment. Els prefixos que es farien
+										servir en aquests casos serien només:</small>
+									</p>
 									<ul class="aclariment">
 										<li><q><b>O</b></q> <small>(<i>Opening</i>), sent el número l'últim moviment
 											registrat.</small>
@@ -1562,8 +1585,8 @@
 											(<i>hyphen</i>) <q><strong>‐</strong></q> (U+2010), o un
 											<i>guió polivalent</i> (<i>hyphen-minus</i>) <q>-</q>.</small>
 										</li>
-										<li><q><b>E</b></q> <small>(<i>Ending</i>) incorporant com a número el moviment
-											des del qual s'inicia el registre.</small>
+										<li><q><b>E</b></q> <small>(<i>Ending</i>) incorporant com a número
+											el moviment des del qual s'inicia el registre.</small>
 										</li>
 									</ul>
 								</li>

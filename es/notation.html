@@ -1500,13 +1500,14 @@
 					<h4 class="w3-container w3-pale-yellow w3-center">
 						<span>Etiqueta de registro mínimo</span>
 					</h4>
-					Si no se registra una partida, sino que se registran
-					<strong>movimientos para ilustrar un concepto</strong>, incluso el caso de una
-					<q>partida típica sobre el papel</q>, como el
-					<a href="glossary.html#Matboig" class="cescacs" target="_blank">mate del loco</a>,
-					en lugar de las siete etiquetas para al registro de la partida, se usa la etiqueta
-					<strong>Id</strong>, siempre como <strong>segunda etiqueta</strong>.
-					<ol start="2">
+					<p>Si no se registra una partida, sino que se registran
+						<strong>movimientos para ilustrar un concepto</strong>, incluso el caso de una
+						<q>partida típica sobre el papel</q>, como el
+						<a href="glossary.html#Matboig" class="cescacs" target="_blank">mate del loco</a>,
+						en lugar de las siete etiquetas para al registro de la partida, se usa la etiqueta
+						<strong>Id</strong>, siempre como <strong>segunda etiqueta</strong>.
+					</p>
+					<ol start="2" class="compact">
 						<li id="IdTag">
 							<p><strong>Id</strong> <small>Como valor tendrà un identificador formado
 								por letras, números y guiones, que consistirá en una primera parte que
@@ -1514,27 +1515,9 @@
 								este sitio web usan el identificador <q>Cescacs</q>), y separado con
 								un guión, un identificador único de este editor.</small>
 							</p>
-							<div class="w3-container">
-								<div class="w3-col w3-container ctl-pgn" style="width:18em">
-									<code>[Variant "C'escacs"]
-										[Id "Cescacs-X01"]
-										1. H6-H12 ?!, I23-I19 ?!
-										2. JF6-C15 ?!, GH26-Z11 ?!
-										3. L5-L7, NG25-L17 ?!
-										4. EH4-H8 ??, GZ11-L5
-										5. I5-I9 ??, NL17-G9
-										6. K4-K10 ??, GL5-H6#
-										0-3
-									</code>
-								</div>
-								<div class="w3-rest w3-container" style="min-width:14em;">
-									<p><small>Los identificadores de un editor es conveniente que usen un
-											número, posiblemente combinado con un prefijo de clasificación.
-											Por ejemplo:</small>
-									</p>
-									<ul class="exemple">
-										<li><code>[Id "Cescacs-X01"]</code></li>
-									</ul>
+							<ul class="icon iconSlack">
+								<li><small>Los identificadores de un editor es conveniente que usen un
+										número, combinado con un prefijo de clasificación:</small>
 									<ul class="aclariment twocolumns" style="margin:0;line-height:1.6ex;">
 										<li><small><i>O</i> – Opening sample</small></li>
 										<li><small><i>C</i> – Opening continuation</small></li>
@@ -1545,46 +1528,104 @@
 										<li><small><i>X</i> – Refutation (counterexample)</small></li>
 										<li>…</li>
 									</ul>
-									<p><small>También se pueden incluir sufijos separándolos con guiones,
-										para indicar que es una variación, para indicar el idioma de los
-										comentarios, o para ambos motivos, siempre acabando con el sufijo
-										del idioma, si hubiese.</small>
-									</p>
-								</div>
+								</li>
+								<li>
+									<small>También se pueden incluir sufijos separándolos con guiones,
+									para indicar que es una variación, para indicar el idioma de los
+									comentarios, o para ambos motivos, siempre acabando con el sufijo
+									del idioma, si hubiese.</small>
+								</li>
+							</ul>
+							<p>Ejemplo: <a href="#Cescacs-X01-V-ca" class="cite">Cescacs-X01-V-ca</a>.
+							</p>
+							<ul class="exemple">
+								<li><code>[Id "Cescacs-X01"]</code></li>
+								<li><code>[Id "Cescacs-X01-ca"]</code></li>
+								<li><code>[Id "Cescacs-X01-V"]</code></li>
+								<li><code>[Id "Cescacs-X01-V-ca"]</code></li>
+							</ul>
+						</li>
+					</ol>
+				</section>
+				<section class="w3-container half">
+					<h4 class="w3-container w3-pale-yellow w3-center">
+						<span>Etiqueta identificador opcional</span>
+					</h4>
+					<ol start="9" class="compact">
+						<li><strong>Id</strong> <small>La etiqueta identificador <strong>Id</strong>
+							también se puede usar para <strong>exportar partidas anónimamente</strong>,
+							preservando la identidad de los jugadores, y permite
+							<strong>registros de fragmentos de partidas</strong>.
+							En este caso se incorpora después de las etiquetas que identifican la
+							partida, y entonces serà la <strong>novena etiqueta</strong>.</small>
+							<aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+								<p>Cuando se usan las etiquetas <i>WhiteAlias</i>, o <i>BlackAlias</i>,
+									asociadas con la identidad principal de un jugador,  resultará como
+									etiqueta <b>décima</b>, o bien, si se usan ambas <b>onceava</b>.
+								</p>
+							</aside>
+							<ul class="icon iconSlack">
+								<li>
+									<small>Se usa un identificador único compartido por
+									todas las partidas de un encuentro: un identificador
+									del editor, y separado por un guión (<i>hyphen</i>)
+									<q><strong>‐</strong></q> (U+2010), o un <i>guión polivalente</i>
+									(<i>hyphen-minus</i>) <q>-</q>, un número identificador, que
+									el editor debe garantizar que sea único.</small>
+									<aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+										Este caso es muy similar a las partidas editadas únicamente
+										con un identificador, pero la diferencia es que son partidas
+										reales entre dos jugadores, en las que los jugadores son
+										anónimos.</small>
+									</aside>
+									<aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+										<p>És convenient que el editor incorpore siempre aquesta
+											etiqueta, también cuando los nombres de los jugadores
+											son públicos.</p>
+									</aside>
+								</li>
+								<li>
+									<small>Para un fragmento de partida, a continuación del
+										identificador único, separado por un guion (hyphen), o un
+										guion polivalente, incorporamos un prefijo y otros números
+										que definen el fragmento. Los prefijos que se usarían
+										en estos casos únicamente serían:</small>
+									<ul class="aclariment">
+										<li><q><b>O</b></q> <small>(<i>Opening</i>), siendo el número el
+											último movimiento registrado.</small>
+										</li>
+										<li><q><b>C</b></q> <small>(<i>Continuation</i>)
+											o <q><b>M</b></q> (<i>Middlegame</i>) usando una pareja de números
+											para el primero y el último movimiento registrados, separados por
+											un guion <q><strong>‐</strong></q> (U+2010), o un
+											<i>guion polivalente</i> (<i>hyphen-minus</i>) <q>-</q>.</small>
+										</li>
+										<li><q><b>E</b></q> <small>(<i>Ending</i>) incorporando como número
+											el movimiento desde el cual se inicia el registro.</small>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<div class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+								<p>Se usará un <q>?</q> en lugar del número de movimiento inicial,
+									si se desconoce el número del primer movimiento, pero entonces
+									siempre se requiere indicar, a continuación, separado por un
+									guión (<i>hyphen</i>) <q><strong>‐</strong></q> (U+2010), o un
+									<i>guión polivalente</i> (<i>hyphen-minus</i>) <q>-</q>, el
+									número de movimientos registrados.
+								</p>
+								<p>Se agregará al número del primer movimiento una <q>b</q>, cuando el
+									registro comienza con un movimiento de las negras. Se puede dar
+									entonces el caso <q><code>?b</code></q> para referirse a un inicio
+									de las negras en un número de movimiento desconocido.
+								</p>
+								<p>Se agregará al número del último movimiento una <q>w</q> cuando el
+									registro acaba en un movimiento de las blancas que no sea el
+									final de la partida.
+								</p>
 							</div>
 						</li>
 					</ol>
-					<p>La etiqueta identificador <strong>Id</strong> también se puede usar en
-						<strong>registros de fragmentos de partidas</strong>, incorporándolo
-						entonces después de las etiquetas que identifican la partida. Los prefijos
-						que se usarían entonces serían:
-					</p>
-					<ul>
-						<li><q><b>O</b></q> (<i>Opening</i>), siendo el número el último movimiento
-							registrado, acabado en <q>w</q> si solo registra el movimiento de blancas
-							en el último movimiento.
-						</li>
-						<li><q><b>C</b></q> (<i>Continuation</i>) o <q><b>M</b></q> (<i>Middlegame</i>)
-							usando una pareja de números para el primero y el último movimiento
-							registrados, separados por un guion <q><strong>‐</strong></q> (U+2010),
-							o un <i>guion polivalente</i> (<i>hyphen-minus</i>) <q>-</q>. Si se
-							desconoce el número del primer movimiento, se usará un <q>?</q>, en vez
-							del primer número. Se añadirá al número del primer movimiento una
-							<q>b</q>, si el registro empieza con un movimiento de negras, y al
-							número del último movimiento una <q>w</q> si el registro acaba en un
-							movimiento de blancas. Se puede dar, por tanto, también el caso
-							<q>?b</q> para el primer número.
-						</li>
-						<li><q><b>E</b></q> (<i>Ending</i>) incorporando como número el movimiento
-							desde el cual se inicia el registro, que puede incorporar al final una
-							<q>b</q>, análogamente al caso anterior. Cuando el número de movimiento
-							en el que se inicia el registro es desconocido, se usará un <q>?</q> o
-							bien <q>?b</q>, pero en ese caso se incorporará, separado por un guión
-							(<i>hyphen</i>) <q><strong>‐</strong></q> (U+2010), o un
-							<i>guión polivalente</i> (<i>hyphen-minus</i>) <q>-</q>, el número de
-							la jugada final, es decir, el número de movimientos registrados.
-						</li>
-					</ul>
 				</section>
 				<section class="w3-container">
 					<h4 class="w3-container w3-pale-yellow w3-center">

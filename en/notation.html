@@ -1504,13 +1504,14 @@
 					<h4 class="w3-container w3-pale-yellow w3-center">
 						<span>Minimum registration label</span>
 					</h4>
-					If a game is not recorded, but <strong>movements are recorded to illustrate
-					a concept</strong>, even in the case of an <q>exemple</q> or <q>typical game
-					on paper</q>, such as the <a href="glossary.html#Matboig" class="cescacs"
-						target="_blank">fool's mate</a>, instead of the seven labels for the game
-					record, the label <strong>Id</strong> is used, always as the
-					<strong>second label</strong>.
-					<ol start="2">
+					<p>If a game is not recorded, but <strong>movements are recorded to illustrate
+						a concept</strong>, even in the case of an <q>exemple</q> or <q>typical game
+						on paper</q>, such as the <a href="glossary.html#Matboig" class="cescacs"
+							target="_blank">fool's mate</a>, instead of the seven labels for the game
+						record, the label <strong>Id</strong> is used, always as the
+						<strong>second label</strong>.
+					</p>
+					<ol start="2" class="compact">
 						<li id="IdTag">
 							<p><strong>Id</strong> <small>As a value it will have an identifier
 								consisting of letters, numbers and hyphens, consisting of a first
@@ -1518,26 +1519,10 @@
 								on this website use the identifier <q>Cescacs</q>), and separated by
 								a hyphen, a unique identifier of this publisher.</small>
 							</p>
-							<div class="w3-container">
-								<div class="w3-col w3-container ctl-pgn" style="width:18em">
-									<code>[Variant "C'escacs"]
-										[Id "Cescacs-X01"]
-										1. H6-H12 ?!, I23-I19 ?!
-										2. JF6-C15 ?!, GH26-Z11 ?!
-										3. L5-L7, NG25-L17 ?!
-										4. EH4-H8 ??, GZ11-L5
-										5. I5-I9 ??, NL17-G9
-										6. K4-K10 ??, GL5-H6#
-										0-3
-									</code>
-								</div>
-								<div class="w3-rest w3-container" style="min-width:14em;">
-									<p><small>Publisher identifiers should use a number, possibly
-										combined with a sorting prefix. For example:</small>
-									</p>
-									<ul class="exemple">
-										<li><code>[Id "Cescacs-X01"]</code></li>
-									</ul>
+							<ul class="icon iconSlack">
+								<li>
+									<small>Publisher identifiers should use a number, combined with
+									a sorting prefix:</small>
 									<ul class="aclariment twocolumns" style="margin:0;line-height:1.6ex;">
 										<li><small><i>O</i> – Opening sample</small></li>
 										<li><small><i>C</i> – Opening continuation</small></li>
@@ -1548,42 +1533,82 @@
 										<li><small><i>X</i> – Refutation (counterexample)</small></li>
 										<li>…</li>
 									</ul>
-									<p><small>Suffixes can also be included by separating them with
-										hyphens, to indicate that it is a variation, to indicate the
-										language of the comments, or for both reasons, always ending
-										with the language suffix, if any.</small>
-									</p>
-								</div>
+								</li>
+								<li>
+									<small>Suffixes can also be included by separating them with
+									hyphens, to indicate that it is a variation, to indicate the
+									language of the comments, or for both reasons, always ending
+									with the language suffix, if any.</small>
+								</li>
+							</ul>
+							<p>Example: <a href="#Cescacs-X01-V-ca" class="cite">Cescacs-X01-V-ca</a>.
+							</p>
+							<ul class="exemple">
+								<li><code>[Id "Cescacs-X01"]</code></li>
+								<li><code>[Id "Cescacs-X01-ca"]</code></li>
+								<li><code>[Id "Cescacs-X01-V"]</code></li>
+								<li><code>[Id "Cescacs-X01-V-ca"]</code></li>
+							</ul>
+						</li>
+					</ol>
+				</section>
+				<section class="w3-container half">
+					<h4 class="w3-container w3-pale-yellow w3-center">
+						<span>Optional identifier label</span>
+					</h4>
+					<ol start="9" class="compact">
+						<li>The <strong>Id</strong> identifier label can also be used to
+							<strong>export games anonymously</strong>, preserving the identity
+							of the players, and also allows <strong>game fragment records</strong>.
+							In this case it is incorporated after the labels that identify
+							the game. 
+							<aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+								<p>When using the labels <i>WhiteAlias</i>, or <i>BlackAlias</i>,
+									associated with a player's primary identity, it will result
+									as the <b>tenth</b> label, or, if both are used, the
+									<b>eleventh</b> label.
+								</p>
+							</aside>
+							<ul class="icon iconSlack">
+								<!-- TODO: Translation -->
+								<li><small></small>
+								</li>
+								<li><small>The prefixes that would then be used would be:</small>
+									<ul class="aclariment">
+										<li><q><b>O</b></q> <small>(<i>Opening</i>), the number being
+											the last recorded move.</small>
+										</li>
+										<li><q><b>C</b></q> <small>(<i>Continuation</i>) or
+											<q><b>M</b></q> (<i>Middlegame</i>) using a pair of numbers
+											for the first and the last movement recorded, separated by
+											a hyphen <q><strong>‐</strong></q> (U+2010), or a
+											multipurpose hyphen-minus <q>-</q>.</small>
+										</li>
+										<li><q><b>E</b></q> <small>(<i>Ending</i>) "E" (Ending)
+											incorporating as a number the movement from which the record
+											starts.</small>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<div class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+								<p>A <q>?</q> shall be used instead of the initial movement number,
+									if the number of the first movement is unknown, but then it is
+									always required to indicate the number of movements recorded,
+									separated by a hyphen <q><strong>‐</strong></q> (U+2010), or
+									a hyphen-minus <q>-</q>.
+								</p>
+								<p>A <q>b</q> will be added to the first movement number, when the
+									record starts with a quarter note movement. The case
+									<q><code>?b</code></q> can then be given to refer to the beginning
+									of the black on an unknown movement number.
+								</p>
+								<p>A <q>w</q> shall be added to the number of the last move when the
+									record ends in a move by White that is not the end of the game.
+								</p>
 							</div>
 						</li>
 					</ol>
-					<p>The <strong>Id</strong> identifier label can also be used in
-						<strong>game fragment records</strong>, by incorporating it after the labels
-						that identify the game. The prefixes that would then be used would be:
-					</p>
-					<ul>
-						<li><q><b>O</b></q> (<i>Opening</i>), the number being the last recorded move,
-							ending in <q>w</q> if it only records the white move on the last move.
-						</li>
-						<li><q><b>C</b></q> (<i>Continuation</i>) or <q><b>M</b></q> (<i>Middlegame</i>)
-							using a pair of numbers for the first and the last movement recorded,
-							separated by a hyphen <q><strong>‐</strong></q> (U+2010), or a multipurpose
-							hyphen-minus <q>-</q>. If the first movement number is unknown, a <q>?</q>
-							shall be used instead of the first number. A <q>b</q> is added to the number
-							of the first movement if the record begins with a black movement, and a
-							<q>w</q> to the number of the last movement if the record ends with a
-							white movement. The case <q>?b</q> can therefore also occur for the first
-							number.
-						</li>
-						<li><q><b>E</b></q> (<i>Ending</i>) "E" (Ending) incorporating as a number the
-							movement from which the record starts, which may incorporate at the end a
-							<q>b</q>, analogously to the previous case. When the number of the move from
-							which the record starts is unknown, a <q>?</q> or <q>?b</q> shall be used,
-							but in this case the number of the final move, i.e. the number of moves
-							recorded, shall be entered, separated by a hyphen <q><strong>‐</strong></q>
-							(U+2010), or a multi-purpose hyphen-minus <q>-</q>.
-						</li>
-					</ul>
 				</section>
 				<section class="w3-container">
 					<h4 class="w3-container w3-pale-yellow w3-center">
