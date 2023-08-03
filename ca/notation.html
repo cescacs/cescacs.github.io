@@ -1295,7 +1295,7 @@
 				<div class="w3-container w3-win8-violet w3-opacity">
 					<strong><code>[Variant "C'escacs"]</code></strong>
 				</div>
-				<div class="w3-container note w3-small">
+				<div class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
 					<p>Es dona el cas que en l'aplicació que permet provar posicions de
 						<i class="cescacs">C'escacs</i> s'inclou una opció que denomina
 						<i class="cescacs">Grand C'escacs</i>. Per a aquesta <i>variant</i>,
@@ -1314,7 +1314,7 @@
 						<strong>set etiquetes obligatòries</strong> <i>PGN</i>, que presenten alguna subtil variació.
 						L'ordre d'aquestes etiquetes ha de ser el que aquí es presenta:
 					</p>
-					<ol start="2">
+					<ol start="2" class="compact">
 						<li id="EventTag">
 							<strong>Event</strong> <small>Nom de l'esdeveniment; si és desconegut
 							<q><strong>?</strong></q>, si no és un esdeveniment organitzat
@@ -1340,9 +1340,9 @@
 							</ul>
 						</li>
 						<li id="DateTag">
-							<strong>Date</strong> <small>Data, en format <q>any-mes-dia</q>, amb
-							quatre-dos-dos dígits, fent servir <q>?</q> per a cada digit
-							desconegut.</small>
+							<strong>Date</strong> <small>Data, en format
+								<q>any-mes-dia</q>, amb quatre-dos-dos dígits, fent servir
+								<q>?</q> per a cada digit desconegut.</small>
 							<ul class="exemple">
 								<li><code>[Date "2020-08-15"]</code></li>
 								<li><code>[Date "2010-07-20"]</code></li>
@@ -1350,14 +1350,12 @@
 								<li><code>[Date "2031-??-??"]</code></li>
 								<li><code>[Date "201?-??-??"]</code></li>
 							</ul>
-							<aside class="compact">
-								<small>Observar que es fa servir el
-								guionet (<i>hyphen</i>) <q>‐</q> (U+2010), o bé
-								el guió polivalent (<i>hyphen-minus</i> U+002D) com a separador
+							<aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+								Observar que es fa servir el guionet (<i>hyphen</i>) <q>‐</q> (U+2010),
+								o bé el guió polivalent (<i>hyphen-minus</i> U+002D) com a separador
 								en el format de la data, en comptes del punt que fa servir <i>PGN</i>,
 								senzillament per ser un format més acord amb els estàndards de format
 								de data.
-								</small>
 							</aside>
 						</li>
 						<li id="RoundTag">
@@ -1375,16 +1373,15 @@
 									<strong><a href="#EventDateTag" class="cite">EventDate</a></strong>
 									o <strong><a href="#MatchDateTag" class="cite">MatchDate</a></strong></small>.
 								</li>
-								<li>Es pot requerir indicar diversos números, en competicions, o si es disputen
-									diversos encontres entre dos jugadors el mateix dia; llavors els números
-									es separen amb punts:
+								<li><small>Es pot requerir indicar diversos números, en competicions, o si
+									es disputen diversos encontres entre dos jugadors el mateix dia; llavors
+									els números es separen amb punts:</small>
 									<ul class="exemple">
 										<li><code>[Round "2.1"]</code></li>
 									</ul>
 								</li>
 							</ul>
 						</li>
-					<!-- TODO: translation -->
 						<li id="WhiteTag">
 							<strong>White</strong> <small>Jugador amb blanques:</small>
 							<ul class="icon iconSlack">
@@ -1392,13 +1389,13 @@
 									<small>Cognom(s), i després,
 									separat amb coma i un espai, el nom. Es poden fer servir
 									inicials fent servir la lletra i un punt.</small>
-									<aside class="note compact">
-										<small>És important registrar cognom i nom
+									<aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+										És important registrar cognom i nom
 										sempre de la mateixa manera; en Catalunya és habitual separar
 										els cognoms amb una lletra <q><i>i</i></q>, però la identificació,
 										en últim terme, la determina el jugador, sempre dins de la
 										identificació legal; el mateix per a abreviatures i variacions
-										del nom.</small>
+										del nom.
 									</aside>
 								</li>
 								<li>
@@ -1427,14 +1424,13 @@
 								<li><code>[White "Prat, J. A."]</code></li>
 							</ul>
 						</li>
-					<!-- TODO: translation -->
 						<li id="BlackTag">
 							<strong>Black</strong> <small>Jugador amb negres, indicat de la mateixa
 							manera que el jugador per l'etiqueta <q>White</q>.</small>
 							<ul class="icon iconSlack">
 								<li>
-									<small>Serà la vuitena etiqueta, si es fa servir l'etiqueta
-									<i>WhiteAlias</i>.</small>
+									<small>Si es fa servir l'etiqueta <i>WhiteAlias</i>,
+										serà la vuitena etiqueta.</small>
 								</li>
 								<li>
 									<small>Opcionalment pot anar seguida de l'etiqueta
@@ -1454,17 +1450,9 @@
 								<li><code>[Black "?"]</code></li>
 							</ul>
 						</li>
-					<!-- TODO: translation -->
 						<li id="ResultTag">
 							<strong>Result</strong> <small>resultat de la partida, amb sis diferents
 							valors acceptables:</small>
-							<ul class="icon iconSlack">
-								<li>
-									<small>Serà la novena etiqueta, si es fa servir l'etiqueta
-									<i>WhiteAlias</i> o la <i>BlackAlias</i>, la dècima si es fan
-									servir ambdues.</small>
-								</li>
-							</ul>
 							<ul class="exemple">
 								<li><code>[Result "3-0"]</code> <small>Guanyen les
 										<i>blanques</i>.</small>
@@ -1484,6 +1472,13 @@
 										inacabada.</small>
 								</li>
 							</ul>
+							<ul class="icon iconSlack">
+								<li>
+									<small>Serà la novena etiqueta, si es fa servir l'etiqueta
+									<i>WhiteAlias</i> o la <i>BlackAlias</i>, la dècima si es fan
+									servir ambdues.</small>
+								</li>
+							</ul>
 						</li>
 					</ol>
 				</section>
@@ -1499,83 +1494,42 @@
 						en comptes de les set etiquetes per al registre de partida, es fa servir l'etiqueta
 						<strong>Id</strong>, sempre com a <strong>segona etiqueta</strong>.
 					</p>
-					<ol start="2">
+					<ol start="2" class="compact">
 						<li id="IdTag">
 							<p><strong>Id</strong> <small>Com a valor tindrà un identificador format per lletres,
 								números i guions que consistirà en una primera part que identificarà de manera
 								única l'editor (en aquest lloc web es fa servir <q>Cescacs</q>), i separat amb
 								un guió, un identificador únic d'aquest editor.</small>
 							</p>
-							<div class="w3-container">
-								<div class="w3-left ctl-pgn" style="width:22.5em">
-									<code>[Variant "C'escacs"]
-									[Id "Cescacs-X01-ca"]
-									[Lang "ca"]
-									[Title "Mat del boig"]
-									1. H6-H12 ?!, I23-I19 ?!
-									</code><p>
-										{ @W: curiós peó per obrir, @B: li segueix el joc  }
-									</p><code>
-									2. JF6-C15 ?!, GH26-Z11 ?!
-									</code><p>
-										{ @W: ~J per cobrir línia 15 però descuida defensa del ~K.
-										@B: el moviment prematur de ~G a ~Z11 és molt poc ortodox }
-									</p><code>
-									3. L5-L7, NG25-L17 ?!
-									</code><p class="note compact">
-										{ @B: Moviment inicial de ~N també al flanc }
-									</p><code>
-									4. EH4-H8 ??, GZ11-L5
-									</code><p class="note compact">
-										{ @W: Retirar ~EH4 deixa ~K desatès }
-									</p><code>
-									5. I5-I9 ??, NL17-G9
-									</code><p class="note compact">
-										{ @W: Moviment irrellevant; la resposta
-										al moviment @B de ~G hauria d'haver estat la defensa de la línia 6,
-										posicionant-se en ~F6 }
-									</p><code>
-									6. K4-K10 ??, GL5-H6#
-									</code><p class="note compact">
-										{ @W: Segona oportunitat de reacció desperdiciada }
-									</p><code>
-									0-3
-									</code><p class="note compact">
-										{ @B Ha de descuidar ~JF6 i ~EH4 }						
-									</p><p class="note compact">
-										{ @W Ataca amb ~G i ~N }
-									</p>
-								</div>
-								<div class="w3-rest w3-container" style="min-width:14em;">
-									<ul class="icon iconSlack">
-										<li><small>Els identificadors d'un editor és convenient que facin servir un
-												número, possiblement combinat amb un prefix de classificació. Per exemple:</small>
-											<ul class="aclariment twocolumns" style="margin:0;line-height:1.6ex;">
-												<li><small><i>O</i> – Opening sample</small></li>
-												<li><small><i>C</i> – Opening continuation</small></li>
-												<li><small><i>Z</i> – Puzzle</small></li>
-												<li><small><i>P</i> – Example</small></li>
-												<li><small><i>E</i> – Ending</small></li>
-												<li><small><i>M</i> – Middlegame</small></li>
-												<li><small><i>X</i> – Refutation (counterexample)</small></li>
-												<li>…</li>
-											</ul>
-										</li>
-										<li>
-											<small>També es poden incloure-hi sufixos separant-los amb guions,
-											per a indicar que és una variació, per a indicar l'idioma dels
-											comentaris, o per a ambdós motius, sempre acabant amb el sufix de
-											l'idioma, si hi fos.</small>
-										</li>
+							<ul class="icon iconSlack">
+								<li><small>Els identificadors d'un editor és convenient que facin servir un
+										número, combinat amb un prefix de classificació:</small>
+									<ul class="aclariment compact twocolumns" style="margin:0;line-height:1.6ex;">
+										<li><small><i>O</i> – Opening sample</small></li>
+										<li><small><i>C</i> – Opening continuation</small></li>
+										<li><small><i>Z</i> – Puzzle</small></li>
+										<li><small><i>P</i> – Example</small></li>
+										<li><small><i>E</i> – Ending</small></li>
+										<li><small><i>M</i> – Middlegame</small></li>
+										<li><small><i>X</i> – Refutation (counterexample)</small></li>
+										<li>…</li>
 									</ul>
-									<ul class="exemple">
-										<li><code>[Id "Cescacs-X01"]</code></li>
-										<li><code>[Id "Cescacs-X01-ca"]</code></li>
-										<li><code>[Id "Cescacs-X01-V"]</code></li>
-										<li><code>[Id "Cescacs-X01-V-ca"]</code></li>
-									</ul>
-								</div>
-							</div>
+								</li>
+								<li>
+									<small>També es poden incloure-hi sufixos separant-los amb guions,
+									per a indicar que és una variació, per a indicar l'idioma dels
+									comentaris, o per a ambdós motius, sempre acabant amb el sufix de
+									l'idioma, si hi fos.</small>
+								</li>
+							</ul>
+							<p>Exemple: <a href="#Cescacs-X01-V-ca" class="cite">Cescacs-X01-V-ca</a>.
+							</p>
+							<ul class="exemple">
+								<li><code>[Id "Cescacs-X01"]</code></li>
+								<li><code>[Id "Cescacs-X01-ca"]</code></li>
+								<li><code>[Id "Cescacs-X01-V"]</code></li>
+								<li><code>[Id "Cescacs-X01-V-ca"]</code></li>
+							</ul>
 						</li>
 					</ol>
 				</section>
@@ -1583,19 +1537,19 @@
 					<h4 class="w3-container w3-pale-yellow w3-center">
 						<span>Etiqueta identificador opcional</span>
 					</h4>
-					<ol start="9">
+					<ol start="9" class="compact">
 						<li><small>L'etiqueta identificador <strong>Id</strong> també es pot fer servir
 							en <strong>registres de fragments de partides</strong>, i també per a
 							<strong>exportar partides anònimament</strong>, preservant la identitat dels
 							jugadors. En aquests casos se incorpora després de les etiquetes que identifiquen
 							la partida; serà llavors la <strong>novena etiqueta</strong>.</small>
-							<div class="note compact">
-								<p><small>Quan es fan servir les etiquetes <i>WhiteAlias</i>, o bé
+							<aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+								<p>Quan es fan servir les etiquetes <i>WhiteAlias</i>, o bé
 									<i>BlackAlias</i>, associades amb la identitat principal d'un jugador,
 									resultarà sent l'etiqueta <b>dècima</b>, o bé <b>onceava</b>,
-									en cas de fer servir ambdues.</small>
+									en cas de fer servir ambdues.
 								</p>
-							</div>
+							</aside>
 							<ul class="icon iconSlack">
 								<li><small>Els prefixos que es farien servir llavors serien només:</small>
 									<ul class="aclariment">
@@ -1614,22 +1568,22 @@
 									</ul>
 								</li>
 							</ul>
-							<div class="note compact">
-								<p><small>Es farà servir un <q>?</q>, en comptes del número d'inici,
+							<div class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+								<p>Es farà servir un <q>?</q>, en comptes del número d'inici,
 									si es desconeix el número del primer moviment, però llavors sempre
 									es requereix indicar a continuació el número de moviments
 									registrats, separat per un guionet (<i>hyphen</i>)
 									<q><strong>‐</strong></q> (U+2010), o un <i>guió polivalent</i>
-									(<i>hyphen-minus</i>) <q>-</q>.</small>
+									(<i>hyphen-minus</i>) <q>-</q>.
 								</p>
-								<p><small>S'afegirà al número del primer moviment una <q>b</q>, si el
+								<p>S'afegirà al número del primer moviment una <q>b</q>, si el
 									registre comença amb un moviment de negres. Es pot donar llavors
 									el cas <q><code>?b</code></q> per al registre del número del
-									primer moviment.</small>
+									primer moviment.
 								</p>
-								<p><small>S'afegirà al número de l'últim moviment una <q>w</q> si el
+								<p>S'afegirà al número de l'últim moviment una <q>w</q> si el
 									registre acaba en un moviment de blanques que no es el final de
-									la partida.</small>
+									la partida.
 								</p>
 							</div>
 						</li>						
@@ -2030,7 +1984,7 @@
 			</section>
 			<section class="w3-container">
 				<h3 class="w3-container w3-light-grey w3-center header2 w3-text-blue-grey">Exemples</h3>
-				<div class="w3-left ctl-pgn" style="width:22em">
+				<div class="w3-left ctl-pgn" style="width:20rem">
 					<code>[Variant "C'escacs"]
 							[Event "CG"]
 							[Site "Barcelona, Catalunya ESP"]
@@ -2050,9 +2004,9 @@
 							{ inacabada }
 						</code>
 				</div>
-				<div class="w3-left ctl-pgn" style="width:22.5em">
+				<div id="Cescacs-X01-ca" class="w3-left ctl-pgn" style="width:20rem">
 					<code>[Variant "C'escacs"]
-					[Id "Cescacs-O01-X-ca"]
+					[Id "Cescacs-X01-ca"]
 					[Lang "ca"]
 					[Title "Mat del boig"]
 					1. H6-H12 ?!, I23-I19 ?!
@@ -2089,7 +2043,7 @@
 						{ @W Ataca amb ~G i ~N }
 					</p>
 				</div>
-				<div class="w3-left ctl-pgn" style="width:22em">
+				<div id="Cescacs-X01-V-ca" class="w3-left ctl-pgn" style="width:20rem">
 					<code>[Variant "C'escacs"]
 							[Id "Cescacs-X01-V-ca"]
 							[Lang "ca"]

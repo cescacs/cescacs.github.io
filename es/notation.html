@@ -1311,7 +1311,7 @@
 				<div class="w3-container w3-win8-violet w3-opacity">
 					<strong><code>[Variant "C'escacs"]</code></strong>
 				</div>
-				<div class="w3-container note w3-small">
+				<div class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
 					<p>Se da el caso que en la aplicación que permite probar posiciones de
 						<i class="cescacs">C'escacs</i> se incluye una opción que denomina
 						<i class="cescacs">Grand C'escacs</i>. Para esta <i>variante</i>,
@@ -1366,11 +1366,12 @@
 								<li><code>[Date "2031-??-??"]</code></li>
 								<li><code>[Date "201?-??-??"]</code></li>
 							</ul>
-							<aside class="compact"><small>Observar que se usa el guión (<i>hyphen</i>),
+							<aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+								Observar que se usa el guión (<i>hyphen</i>),
 								o bien el guión polivalente (<i>hyphen-minus</i> U+002D), como separador
 								en el formato de la fecha, en lugar del punto que usa <i>PGN</i>,
 								sencillamente por ser un formato más acorde con los estándares de
-								formato de fecha.</small>
+								formato de fecha.
 							</aside>
 						</li>
 						<li id="RoundTag">
@@ -1381,47 +1382,57 @@
 							<ul class="exemple">
 								<li><code>[Round "‐"]</code></li>
 							</ul>
-							<div class="note" style="margin:4px 2em; padding: 0.5em">
-								<p style="margin-top:0">Cuando se indica la etiqueta <strong>Round</strong>
+							<ul class="icon iconSlack">
+								<li style="margin-top:0">
+									<small>Cuando se indica la etiqueta <strong>Round</strong>
 									se debe considerar indicar también la etiqueta
-									<strong><a href="#EventDateTag" class="cite">EventDate</a></strong>
-									o <strong><a href="#MatchDateTag" class="cite">MatchDate</a></strong>.
-								</p>
-								<p>Se puede requerir indicar diversos números, en competiciones, o si
+									<strong><a href="#EventDateTag"
+										class="cite">EventDate</a></strong> o
+									<strong><a href="#MatchDateTag"
+										class="cite">MatchDate</a></strong></small>.
+								</li>
+								<li><small>Se puede requerir indicar diversos números, en competiciones, o si
 									se disputan diversos encuentros entre dos jugadors el mismo día;
-									entonces los números se separan con un punto entre ellos:
-								</p>
-								<ul class="exemple">
-									<li><code>[Round "2.1"]</code></li>
-								</ul>
-							</div>
+									entonces los números se separan con un punto entre ellos:</small>
+									<ul class="exemple">
+										<li><code>[Round "2.1"]</code></li>
+									</ul>
+								</li>
+							</ul>
 						</li>
 						<li id="WhiteTag">
 							<strong>White</strong> <small>Jugador con blancas:</small>
-							<ul style="list-style-type: circle;">
+							<ul class="icon iconSlack">
 								<li>
 									<small>Apellido(s), y después, separado con coma y un espacio,
 									el nombre. Es poden usar iniciales usando la lletra
 									y un punto.</small>
-									<aside class="compact">
-										<small>Es importante registrar apellido
-										y nombre siempre del mismo modo; en Cataluña es habitual
-										separar los apellidos con una letra "y", pero la
-										identificación, en último término, la determina el jugador,
-										siempre dentro de la identificación legal; lo mismo para
-										abreviaturas y variaciones del nombre.</small>
+									<aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+										Es importante registrar apellido y nombre siempre del
+										mismo modo; en Cataluña es habitual separar los apellidos
+										con una letra "i", pero la identificación, en último término,
+										la determina el jugador, siempre dentro de la identificación
+										legal; lo mismo para abreviaturas y variaciones del nombre.
 									</aside>
 								</li>
-								<li><small>Si el jugador es desconocido,
-										se usa <q>?</q>.</small>
+								<li>
+									<small>Si el jugador es desconocido, se usa <q>?</q>.</small>
 								</li>
-								<li><small>Si es un programa informático
-									se usa el nombre, y a continuación la versión.</small>
+								<li>
+									<small>Si es un programa informático se usa el nombre,
+										y a continuación la versión.</small>
 								</li>
-								<li><small>Se puede omitir, si se usa
-									la etiqueta
-									<strong><a href="#WhiteNATag" class="cite">WhiteNA</a></strong>.
-									</small>
+								<li>
+									<small>Opcionalmente puede ir seguida de la etiqueta
+									<strong><a href="#WhiteAliasTag"
+										class="cite">WhiteAlias</a></strong>.</small>
+								</li>
+								<li>
+									<small>Se puede omitir, si se usa la etiqueta
+									<strong><a href="#WhiteNATag" class="cite">WhiteNA</a></strong>
+									en su lugar; entonces la etiqueta
+									<strong><a href="#WhiteAliasTag" class="cite">WhiteAlias</a></strong>
+									será obligatoria para hacer público el registro.</small>
 								</li>
 							</ul>
 							<ul class="exemple">
@@ -1433,9 +1444,18 @@
 						<li id="BlackTag">
 							<strong>Black</strong> <small>Jugador con negras, siguiendo las mismas
 								indicaciones que las enunciadas para la etiqueta <q>White</q>.</small>
-							<ul>
-								<li style="list-style-type: circle;"><small>Se puede omitir, si se usa
-									la etiqueta
+							<ul class="icon iconSlack">
+								<li>
+									<small>Si se usa la etiqueta <i>WhiteAlias</i>,
+										será la octava etiqueta.</small>
+								</li>
+								<li>
+									<small>Opcionalmente puede ir seguida de la etiqueta
+									<strong><a href="#BlackAliasTag"
+										class="cite">BlackAlias</a></strong>.</small>
+								</li>
+								<li>
+									<small>Se puede omitir, si se usa la etiqueta
 									<strong><a href="#BlackNATag" class="cite">BlackNA</a></strong>.
 									</small>
 								</li>
@@ -1465,6 +1485,12 @@
 								</li>
 								<li><code>[Result "*"]</code> <small>(asterisco) Partida
 										inacabada.</small>
+								</li>
+							</ul>
+							<ul class="icon iconSlack">
+								<li>
+									<small>Si se usa la etiqueta <i>WhiteAlias</i> o <i>BlackAlias</i>,
+									será la novena etiqueta, si se usan ambas será la dècima.</small>
 								</li>
 							</ul>
 						</li>

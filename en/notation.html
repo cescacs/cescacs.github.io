@@ -1317,7 +1317,7 @@
 				<div class="w3-container w3-win8-violet w3-opacity">				
 					<strong><code>[Variant "C'escacs"]</code></strong>
 				</div>
-				<div class="w3-container note w3-small">
+				<div class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
 					<p>It happens to be the case that in the application that allows you to test
 						<i class="cescacs">C'escacs</i> positions, an option is included that
 						calls <i class="cescacs">Grand C'escacs</i>. For this variant, we would
@@ -1370,7 +1370,8 @@
 								<li><code>[Date "2031-??-??"]</code></li>
 								<li><code>[Date "201?-??-??"]</code></li>
 							</ul>
-							<aside class="compact">Note that the hyphen <q>‐</q> (U+2010) or
+							<aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+								Note that the hyphen <q>‐</q> (U+2010) or
 								multipurpose hyphen-minus (U+002D) is used
 								as a separator in the date format, instead of the dot used by
 								<i>PGN</i>, simply because it is a format more in line with date
@@ -1385,48 +1386,58 @@
 							<ul class="exemple">
 								<li><code>[Round "‐"]</code></li>
 							</ul>
-							<div class="note" style="margin:4px 2em; padding: 0.5em">
-								<p style="margin-top:0">When indicating the <strong>Round</strong>
+							<ul class="icon iconSlack">
+								<li style="margin-top:0">
+									<small>When indicating the <strong>Round</strong>
 									label, consideration should be given to also indicate the
-									<strong><a href="#EventDateTag" class="cite">EventDate</a></strong>
-									or <strong><a href="#MatchDateTag" class="cite">MatchDate</a></strong>
-									label.
-								</p>
-								<p>It may be required to indicate different numbers, in competitions,
-									or if different matches are played between two players on the same
-									day; then the numbers are separated by a dot between them:
-								</p>
-								<ul class="exemple">
-									<li><code>[Round "2.1"]</code></li>
-								</ul>
-							</div>
+									<strong><a href="#EventDateTag"
+										class="cite">EventDate</a></strong>
+									or <strong><a href="#MatchDateTag"
+										class="cite">MatchDate</a></strong> label</small>.
+								</li>
+								<li><small>It may be required to indicate different numbers, in
+									competitions, or if different matches are played between two
+									players on the same day; then the numbers are separated by a dot
+									between them:</small>
+									<ul class="exemple">
+										<li><code>[Round "2.1"]</code></li>
+									</ul>
+								</li>
+							</ul>
 						</li>
 						<li id="WhiteTag">
 							<strong>White</strong> <small>White player:</small>
-							<ul>
-								<li style="list-style-type: circle;">
+							<ul class="icon iconSlack">
+								<li>
 									<small>Surname(s), and then,
 									separated by a comma and a space, the first name. Initials can
 									be used using the letter and a full stop.</small>
-									<aside class="compact">
-										<small>It is important to always register
-										surname and first name in the same way; in Catalonia it is
-										common to separate surnames with an "i", but the identification
-										is ultimately determined by the player, always within the legal
-										identification; the same for abbreviations and variations of the
-										name.</small>
+									<aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+										It is important to always register surname and first name in
+										the same way; in Catalonia it is common to separate surnames
+										with an "i", but the identification is ultimately determined
+										by the player, always within the legal identification; the same
+										for abbreviations and variations of the name.
 									</aside>
 								</li>
-								<li style="list-style-type: circle;"><small>If the player is unknown,
-									<q>?</q> is used.</small>
+								<li>
+									<small>If the player is unknown, <q>?</q> is used.</small>
 								</li>
-								<li style="list-style-type: circle;"><small>If it is a software
-									program, the name is used, followed by the version.</small>
+								<li>
+									<small>If it is a software program,
+										the name is used, followed by the version.</small>
 								</li>
-								<li style="list-style-type: circle;"><small>It can be omitted, if the
+								<li>
+									<small>It may optionally be followed by the label
+										<strong><a href="#WhiteAliasTag"
+											class="cite">WhiteAlias</a></strong>.</small>
+								</li>
+								<li>
+									<small>It can be omitted, if the
 									<strong><a href="#WhiteNA" class="cite">WhiteNA</a></strong>
-									label is used.
-									</small>
+									label is used instead; then the
+									<strong><a href="#WhiteAliasTag" class="cite">WhiteAlias</a></strong>
+									tag will be mandatory to make the registration public.</small>
 								</li>
 							</ul>
 							<ul class="exemple">
@@ -1438,11 +1449,20 @@
 						<li id="BlackTag">
 							<strong>Black</strong> <small>Black player, following the same
 								indications as for the <q>White</q> label.</small>
-							<ul>
-								<li style="list-style-type: circle;"><small>It can be omitted, if the
+							<ul class="icon iconSlack">
+								<li>
+									<small>If the <i>WhiteAlias</i>, label is used,
+										it will be the eighth label.</small>
+								</li>
+								<li>
+									<small>It may optionally be followed by the.
+									<strong><a href="#BlackAliasTag"
+										class="cite">BlackAlias</a></strong> tag.</small>
+								</li>
+								<li>
+									<small>It can be omitted, if the
 									<strong><a href="#BlackNA" class="cite">BlackNA</a></strong>
-									label is used.
-									</small>
+									label is used.</small>
 								</li>
 							</ul>
 							<ul class="exemple">
@@ -1468,6 +1488,13 @@
 								</li>
 								<li><code>[Result "*"]</code> <small>(asterisk) Unfinished
 									game.</small>
+								</li>
+							</ul>
+							<ul class="icon iconSlack">
+								<li>
+									<small>If either the <i>WhiteAlias</i> or <i>BlackAlias</i> label
+									is used, it will be the ninth label, if both are used it will be
+									the tenth tag.</small>
 								</li>
 							</ul>
 						</li>
