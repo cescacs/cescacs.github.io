@@ -337,7 +337,7 @@
 			</section>
 
 			<!-- Hex identification: CTL coordinates -->
-			<section class="w3-container">
+			<section id="CTL" class="w3-container">
 				<h3 class="w3-container w3-pale-yellow w3-center">
 					<i>Hex</i> identification: CTL coordinates
 				</h3>
@@ -802,7 +802,10 @@
 						a two-character identifier indicates the target rank of the <i>King</i> and <i>Rook</i>,
 						three characters in the case of double castling, to indicate the ranks
 						of both <i>rooks</i>.
-
+						<p>See the specific details in the section on <a href="castling.html#EnrocSimple"
+							class="cescacs" target="_blank">simple castling</a> and in the section on
+							<a href="castling.html#EnrocDoble" class="cescacs" target="_blank">double castling</a>.
+						</p>
 						<aside class="compact">The prefixes <q><i class="cescacs">KRK</i></q>,
 							<q><i class="cescacs">KRD</i></q> and <q><i class="cescacs">KRR</i></q>
 							can be changed if in the <a href="#CTL-PGN" class="cescacs">CTL-PGN exchange
@@ -1337,7 +1340,7 @@
 					</p>
 					<ol start="2">
 						<li id="EventTag">
-							<strong>Event</strong> <small>Name of the event; if unknown
+							<strong><code>Event</code></strong> <small>Name of the event; if unknown
 							<q><strong>?</strong></q>, if not an organised event
 							<q><strong>CG</strong></q> <span class="note">acronym for
 							<i>Casual Game</i></span>.</small>
@@ -1348,7 +1351,7 @@
 							</ul>
 						</li>
 						<li id="SiteTag">
-							<strong>Site</strong> <small>Location, in the format
+							<strong><code>Site</code></strong> <small>Location, in the format
 								<q><i>City, Region Country</i></q>, where <i>country</i> is a
 								three-letter ISO code; it can be limited to <q><i>Region Country</i></q>
 								only, or simply to the country code. If the entire location is unknown
@@ -1361,7 +1364,7 @@
 							</ul>
 						</li>
 						<li id="DateTag">
-							<strong>Date</strong> <small>Date, in the format <q>year-month-day</q>,
+							<strong><code>Date</code></strong> <small>Date, in the format <q>year-month-day</q>,
 								with four-two-two digits, using <q>?</q> for every unknown digit.</small>
 							<ul class="exemple">
 								<li><code>[Date "2020-08-15"]</code></li>
@@ -1379,16 +1382,16 @@
 							</aside>
 						</li>
 						<li id="RoundTag">
-							<strong>Round</strong> <small>For competitions, but also to identify
-								different games of the same match; if not applicable it is indicated
-								with a hyphen <q>‐</q> (U+2010), or with the multipurpose hyphen-minus
-								<q>-</q> (U+002D).</small>
+							<strong><code>Round</code></strong> <small>For competitions, but also to
+								identify different games of the same match; if not applicable it is
+								indicated with a hyphen <q>‐</q> (U+2010), or with the multipurpose
+								hyphen-minus <q>-</q> (U+002D).</small>
 							<ul class="exemple">
 								<li><code>[Round "‐"]</code></li>
 							</ul>
 							<ul class="icon iconSlack">
 								<li style="margin-top:0">
-									<small>When indicating the <strong>Round</strong>
+									<small>When indicating the <strong><code>Round</code></strong>&nbsp;
 									label, consideration should be given to also indicate the
 									<strong><a href="#EventDateTag"
 										class="cite">EventDate</a></strong>
@@ -1406,7 +1409,7 @@
 							</ul>
 						</li>
 						<li id="WhiteTag">
-							<strong>White</strong> <small>White player:</small>
+							<strong><code>White</code></strong> <small>White player:</small>
 							<ul class="icon iconSlack">
 								<li>
 									<small>Surname(s), and then,
@@ -1436,7 +1439,7 @@
 									<small>It can be omitted, if the
 									<strong><a href="#WhiteNA" class="cite">WhiteNA</a></strong>
 									label is used instead; then the
-									<strong><a href="#WhiteAliasTag" class="cite">WhiteAlias</a></strong>
+									<strong><a href="#WhiteAliasTag" class="cite">WhiteAlias</a></strong>&nbsp;
 									tag will be mandatory to make the registration public.</small>
 								</li>
 							</ul>
@@ -1447,7 +1450,7 @@
 							</ul>
 						</li>
 						<li id="BlackTag">
-							<strong>Black</strong> <small>Black player, following the same
+							<strong><code>Black</code></strong> <small>Black player, following the same
 								indications as for the <q>White</q> label.</small>
 							<ul class="icon iconSlack">
 								<li>
@@ -1471,8 +1474,8 @@
 							</ul>
 						</li>
 						<li id="ResultTag">
-							<strong>Result</strong> <small>result of the game, with six different
-								acceptable values:</small>
+							<strong><code>Result</code></strong> <small>result of the game, with six
+								different acceptable values:</small>
 							<ul class="exemple">
 								<li><code>[Result "3-0"]</code> <small><i>White</i> wins.</small>
 								</li>
@@ -1513,24 +1516,24 @@
 					</p>
 					<ol start="2" class="compact">
 						<li id="IdTag">
-							<p><strong>Id</strong> <small>As a value it will have an identifier
-								consisting of letters, numbers and hyphens, consisting of a first
-								part that uniquely identifies the publisher (the examples published
-								on this website use the identifier <q>Cescacs</q>), and separated by
-								a hyphen, a unique identifier of this publisher.</small>
+							<p><strong><code>Id</code></strong> <small>As a value it will have an
+								identifier consisting of letters, numbers and hyphens, consisting of
+								a first part that uniquely identifies the publisher (the examples
+								published on this website use the identifier <q>Cescacs</q>), and
+								separated by a hyphen, a unique identifier of this publisher.</small>
 							</p>
 							<ul class="icon iconSlack">
 								<li>
 									<small>Publisher identifiers should use a number, combined with
 									a sorting prefix:</small>
-									<ul class="aclariment twocolumns" style="margin:0;line-height:1.6ex;">
-										<li><small><i>O</i> – Opening sample</small></li>
-										<li><small><i>C</i> – Opening continuation</small></li>
-										<li><small><i>Z</i> – Puzzle</small></li>
-										<li><small><i>P</i> – Example</small></li>
-										<li><small><i>E</i> – Ending</small></li>
-										<li><small><i>M</i> – Middlegame</small></li>
-										<li><small><i>X</i> – Refutation (counterexample)</small></li>
+									<ul class="aclariment twocolumns" style="margin:0;line-height:1.6ex;" translate="no">
+										<li><small><i><code>O</code></i> – Opening sample</small></li>
+										<li><small><i><code>C</code></i> – Opening continuation</small></li>
+										<li><small><i><code>Z</code></i> – Puzzle</small></li>
+										<li><small><i><code>P</code></i> – Example</small></li>
+										<li><small><i><code>E</code></i> – Ending</small></li>
+										<li><small><i><code>M</code></i> – Middlegame</small></li>
+										<li><small><i><code>X</code></i> – Refutation (counterexample)</small></li>
 										<li>…</li>
 									</ul>
 								</li>
@@ -1539,15 +1542,36 @@
 									hyphens, to indicate that it is a variation, to indicate the
 									language of the comments, or for both reasons, always ending
 									with the language suffix, if any.</small>
+									<ul class="aclariment compact w3-small">
+										<li><small>A publisher should only incorporate a version with
+											variations, but may add new alternatives or modify existing
+											ones, identifying the new version with Roman numerals, separated
+											by a hyphen after the letter <q>V</q>, which indicates the
+											presence of variations. This mechanism never allows the alteration
+											of the main line represented.</small>
+										</li>
+										<li><small>A particular variation may be represented linearly, e.g.
+											for readers without the ability to interpret variations. It shall
+											then be indicated by an <q>S</q> after the letter <q>V</q> and
+											any version indication in Roman numerals, followed by a sequence
+											of numbers separated by a colon to indicate the variation being
+											represented. It is not permitted a sequence of zeros, which would
+											be equivalent to not indicating variations, corresponding to the
+											identifier without the letter <q>V</q>.</small>
+										</li>
+									</ul>
 								</li>
 							</ul>
-							<p>Example: <a href="#Cescacs-X01-V-ca" class="cite">Cescacs-X01-V-ca</a>.
+							<p>Example: <a href="#Cescacs-X01-V-en" class="cite">Cescacs-X01-V-en</a>.
 							</p>
 							<ul class="exemple">
 								<li><code>[Id "Cescacs-X01"]</code></li>
 								<li><code>[Id "Cescacs-X01-ca"]</code></li>
 								<li><code>[Id "Cescacs-X01-V"]</code></li>
+								<li><code>[Id "Cescacs-X01-V-II"]</code></li>
 								<li><code>[Id "Cescacs-X01-V-ca"]</code></li>
+								<li><code>[Id "Cescacs-X01-V-II-ca"]</code></li>
+								<li><code>[Id "Cescacs-X01-V-S:0:1:1-ca"]</code></li>
 							</ul>
 						</li>
 					</ol>
@@ -1557,11 +1581,12 @@
 						<span>Optional identifier label</span>
 					</h4>
 					<ol start="9" class="compact">
-						<li>The <strong>Id</strong> identifier label can also be used to
-							<strong>export games anonymously</strong>, preserving the identity
-							of the players, and also allows <strong>game fragment records</strong>.
-							In this case it is incorporated after the labels that identify
-							the game. 
+						<li><strong><code>Id</code></strong>
+							<small>The <strong><code>Id</code></strong>&nbsp; identifier label can also
+							be used to <strong>export games anonymously</strong>, preserving the
+							identity of the players, and also allows <strong>game fragment
+							records</strong>. In this case it is incorporated after the labels that
+							identify the game.</small>
 							<aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
 								<p>When using the labels <i>WhiteAlias</i>, or <i>BlackAlias</i>,
 									associated with a player's primary identity, it will result
@@ -1570,36 +1595,62 @@
 								</p>
 							</aside>
 							<ul class="icon iconSlack">
-								<!-- TODO: Translation -->
-								<li><small></small>
+								<li>
+									<small>A unique identifier shared by all items in an encounter
+									is used: a publisher's identifier, and separated by a hyphen
+									<q><strong>‐</strong></q> (U+2010), or a hyphen-minus <q>-</q>,
+									an identifier number, which the publisher must ensure is
+									unique.</small>
+									<aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+										This case is very similar to the games published only with
+										an identifier, but the difference is that they are real games
+										between two players, where the players can be anonymous.
+									</aside>
+									<aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+										<p>It is desirable that the editor always incorporates
+											this tag, also when the players' names are public.
+										</p>
+									</aside>
 								</li>
-								<li><small>The prefixes that would then be used would be:</small>
+								<li><small>For a game fragment, after the unique identifier, separated
+									by a hyphen, or a hyphen-minus, we add a prefix and other numbers
+									defining the fragment. The prefixes that would then be used would
+									be:</small>
 									<ul class="aclariment">
-										<li><q><b>O</b></q> <small>(<i>Opening</i>), the number being
-											the last recorded move.</small>
+										<li><q><b><code>O</code></b></q>
+											<small>(<i lang="en" translate="no">Opening</i>),
+											the number being the last recorded move.</small>
 										</li>
-										<li><q><b>C</b></q> <small>(<i>Continuation</i>) or
-											<q><b>M</b></q> (<i>Middlegame</i>) using a pair of numbers
-											for the first and the last movement recorded, separated by
-											a hyphen <q><strong>‐</strong></q> (U+2010), or a
-											multipurpose hyphen-minus <q>-</q>.</small>
+										<li><q><b><code>C</code></b></q>											
+											<small>(<i lang="en" translate="no">Continuation</i>)
+											using a pair of numbers for the first and the last movement
+											recorded, separated by a hyphen <q><strong>‐</strong></q>
+											(U+2010), or a multipurpose hyphen-minus <q>-</q>.
+											It will usually refer to an opening using the label
+											<code>Model</code>.</small>
 										</li>
-										<li><q><b>E</b></q> <small>(<i>Ending</i>) "E" (Ending)
-											incorporating as a number the movement from which the record
-											starts.</small>
+										<li><q><b><code>M</code></b></q>
+											<small>(<i lang="en" translate="no">Middlegame</i>) Although
+											it will not usually reference an opening, in practice it is
+											equivalent to &nbsp;<q><b><code>C</code></b></small>
+
+										</li>
+										<li><q><b><code>E</code></b></q>
+											<small>(<i lang="en" translate="no">Ending</i>) incorporating
+											as a number the movement from which the record starts.</small>
 										</li>
 									</ul>
 								</li>
 							</ul>
 							<div class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
-								<p>A <q>?</q> shall be used instead of the initial movement number,
+								<p>A question mark (?) shall be used instead of the initial movement number,
 									if the number of the first movement is unknown, but then it is
 									always required to indicate the number of movements recorded,
 									separated by a hyphen <q><strong>‐</strong></q> (U+2010), or
 									a hyphen-minus <q>-</q>.
 								</p>
-								<p>A <q>b</q> will be added to the first movement number, when the
-									record starts with a quarter note movement. The case
+								<p>A letter <q>b</q> will be added to the first movement number, when the
+									record starts with a move by Black. The case
 									<q><code>?b</code></q> can then be given to refer to the beginning
 									of the black on an unknown movement number.
 								</p>
@@ -1616,52 +1667,90 @@
 					</h4>
 					<ul class="twocolumnschance">
 						<li id="EventDateTag">
-							<strong>EventDate</strong> <small>Date of the event. When it is a 
+							<strong><code>EventDate</code></strong> <small>Date of the event. When it is a 
 							<i lang="en" translate="no">Casual Game</i> (<i>CG</i>) it refers to
 							the date of the match, i.e. it can be used instead of
-							<strong>MatchDate</strong> when [<strong>Event</strong> "<i>CG</i>"].
-							</small>
+							<strong>MatchDate</strong> when
+							<code>[<strong>Event</strong> "<i>CG</i>"]</code>&nbsp;</small>
 						</li>
 						<li id="MatchDateTag">
-							<strong>MatchDate</strong> <small>Date of the match. The value is
-							meaningless if no value is given for the <strong>Round</strong> tag,
-							and is unnecessary when the value is the same as the value of the
-							<strong>Date</strong> tag, e.g. when the <strong>Round</strong> tag
-							has the value <q>1</q> or a sequence of numbers ending with the number
-							<q>1</q>.</small>
+							<strong><code>MatchDate</code></strong> <small>Start date of the match. The value
+							is meaningless if no value is given for the
+							<strong><cite translate="no">Round</cite></strong>&nbsp; tag, and is unnecessary
+							when the value is the same as the value of the
+							<strong><cite translate="no">Date</cite></strong>&nbsp; tag,
+							e.g. when the &nbsp;<strong><cite translate="no">Round</cite></strong>&nbsp; tag
+							has the value <q>1</q> (or a sequence of numbers ending with the number
+							<q>1</q>).</small>
 						</li>
 						<li id="TerminationTag">
-							<strong>Termination</strong> <small>Termination detail;
-							supports the values: <q><i>abandoned</i></q>, <q><i>rules infraction</i></q>,
-							<q><i>time forfeit</i></q> and for indefinitely postponed games:
-							<q><i>death</i></q> o <q><i>emergency</i></q></small>
-							<aside class="compact">
-								<small>The values <q>normal</q> and <q>unterminated</q> are not needed, as the
-									label then will be missing. Neither is <q>adjudication</q>, as an unfinished
-									game is not adjudicated; it will be either <q>unterminated</q> or
-									some termination reason will be filled.</small>
+							<strong><code>Termination</code></strong> <small>Termination detail;
+							supports the values: &nbsp;<q><i translate="no">abandoned</i></q>,
+							<q><i translate="no">rules infraction</i></q>,
+							<q><i translate="no">time forfeit</i></q>&nbsp; and for indefinitely
+							postponed games: &nbsp;<q><i translate="no">death</i></q>&nbsp; or
+							&nbsp;<q><i translate="no">emergency</i></q>&nbsp;</small>
+							<aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+								The values <q>normal</q> and <q>unterminated</q> are not needed, as the
+								label then will be missing. Neither is <q>adjudication</q>, as an unfinished
+								game is not adjudicated; it will be either <q>unterminated</q> or
+								some termination reason will be filled.
 							</aside>
 						</li>
 						<li id="LangTag">
-							<strong>Lang</strong> <small>Language to be used in comments; the value has
-							to be a two-letter <cite>ISO 639</cite> language code (<cite>ISO 639-1</cite>
+							<strong><code>Lang</code></strong> <small>Language to be used in comments; the
+							value has to be a two-letter <cite>ISO 639</cite> language code (<cite>ISO 639-1</cite>
 							alpha-2) or, if required, the three-letter <cite>ISO 639-3</cite> code.</small>
 						</li>
-						<li id="TitleTag"><strong>Title</strong> <small>Very exceptionally, a game may have
+						<li id="TitleTag">
+							<strong><code>Title</code></strong> <small>Very exceptionally, a game may have
 							a name, and this could also be the case for opening or closing situations. Keep
 							in mind that the name will change with the language of the comments, and is not
 							an identifier. <span class="note">Avoid assigning a name for free, and reserve
-							this label for really exceptional cases.</span>
-							
-							De manera muy excepcional, una
-							partida puede tener un nombre, y también se podría dar el caso para situaciones
-							de apertura o de final. Se tiene que tener presente que el nombre cambiará con
-							el idioma de los comentarios, y no es un identificador. <span class="note">Se
-							tiene que evitar asignar gratuitamente un nombre, y reservar este hashtag para
-							casos realmente excepcionales.</span></small>
+							this label for really exceptional cases.</span> In any case it will appear after
+							the <strong><a href="#LangTag" class="cite">Lang</a></strong> label.</small>
+						</li>
+						<li id="RevisitedTag">
+							<strong><code>Revisited</code></strong> <small>Only for model games,
+							without players. The value shall be the identifier of a game, also a model
+							game, without players. Possible functions of this tag are:</small>
+							<ol>
+								<li><small>When the identifier is from the same publisher: It leaves the main
+									referenced line as <q>obsolete</q>.</small>
+								</li>
+								<li><small>When the identifier is from another publisher: Publishing a game
+									from another publisher with the new publisher's own modifications or
+									variations; this involves acknowledgement of authorship.</small>
+								</li>
+							</ol>
+						</li>
+						<li id="ModelTag">
+							<strong><code>Model</code></strong> <small>Only in real games, with players.
+							The value shall be the identifier of a model opening item.</small>
+						</li>
+						<li id="EndingTag"><strong><code>Ending</code></strong> <small>Only in real games,
+							with players. The value shall be the identifier of a model end item.</small>
+						</li>
+
+						<li id="ModeTag">
+							<strong><code>Mode</code></strong> <small>Only in real games, with players.
+							Allows the values:
+							<q>OTB</q> (<span lang="en" translate="no">over the board</span>)
+							<q><i>ICS</i></q> (<span lang="en" translate="no">Chess Server</span>),
+							<q><i>EM</i></q> (<span lang="en" translate="no">electronic mail</span>), or
+							<q><i>TC</i></q> (<span lang="en" translate="no">telecommunication</span>).</small>
+						</li>
+						<li id="WhiteTypeTag">
+							<strong><code>WhiteType</code></strong>,
+							<strong class="BlackTypeTag"><code>BlackType</code></strong>
+							<p class="compact"><small>Only in real games, with players.
+								Both labels allow the values:
+								&nbsp;<q><i lang="en" translate="no">human</i></q>&nbsp; and
+								&nbsp;<q><i lang="en" translate="no">program</i></q></small>
+							</p>
 						</li>
 						<li id="TimeControlTag">
-							<strong>TimeControl</strong> <small>Values:</small>
+							<strong>TimeControl</strong> <small>Only in real games, with players. Values:</small>
 							<ul class="exemple">
 								<li><code>[TimeControl "?"]</code> <small>unknown</small></li>
 								<li><code>[TimeControl "-"]</code> <small>not used</small></li>
@@ -1692,66 +1781,84 @@
 											<small>1¼ hours and a minute for each move</small>
 										</li>
 										<li><code>[TimeControl "*180"]</code>
-											<small>three minutes each move; <q>sandclock</q>, <q>hourglass</q>
-												control</small>
+											<small>three minutes each move; <span lang="en" translate="no">
+												<q>sandclock</q>, <q>hourglass</q> control</span>.</small>
 										</li>
 									</ul>
 								</li>
 							</ul>
 						</li>
-						<li id="WhiteTypeTag">
-							<strong>WhiteType</strong>, <strong class="BlackTypeTag">BlackType</strong>
-							<small>Allows the values <q><i>human</i></q> or <q><i>program</i></q>.</small>
-						</li>
 						<li id="WhiteNATag">
-							<strong>WhiteNA</strong>, <strong class="BlackNATag">BlackNA</strong>
-							<small><i lang="en" translate="no">network access</i>
+							<strong><code>WhiteNA</code></strong>,
+							<strong class="BlackNATag"><code>BlackNA</code></strong>
+							<p class="compact">
+								<small><i lang="en" translate="no">network access</i>
 								allows to collect the <i>e-mail</i> address of the players; in an anonymous game they
-								can substitute the labels <strong><i>White</i></strong> and <strong><i>Black</i></strong>,
+								can substitute the labels &nbsp;<strong><i lang="en" translate="no">White</i></strong>&nbsp;
+								and &nbsp;<strong><i lang="en" translate="no">Black</i></strong>,
 								respectively. In this case they are written in the position corresponding to these,
 								assuming the value <strong><i>?</i></strong> for the substituted label; the export of
 								the game will not always report these values, for confidentiality of digital data.</small>
+							</p>
 						</li>
 						<li id="WhiteAliasTag">
-							<strong>WhiteAlias</strong>, <strong id="BlackAliasTag">BlackAlias</strong>
-							<small><i>Nickname</i>, used as an identifier for the <i>White</i> and <i>Black</i> player,
-								respectively. It shall be mandatory if the label <q><i>WhiteNA</i></q> is used instead
-								of the label <q><i>White</i></q>, or <q><i>BlackNA</i></q> instead of the label
-								<q><i>Black</i></q>, to avoid making the values <q><i>WhiteNA</i></q> or
-								<q><i>BlackNA</i></q> public. If used, it shall be written after the label
-								<q><i>WhiteNA</i> / <i>BlackNA</i></q>, and failing that, after the label
-								<q><i>White</i> / <i>Black</i></q>.</small>
-								<div class="note" style="margin:4px 2em; padding: 0.5em">
-									<small>The nickname is not identifying, and may not be unique,
-									although it is true that eventually there could also be
-									repeated player names, a case that can be solved in a competition
-									by incorporating the label <q><i>WhiteNA</i> / <i>BlackNA</i></q>,
-									or <q><i>WhiteAlias</i> / <i>BlackAlias</i></q>,
-									to distinguish players with the same name.</small>
-								</div>							
-						</li>
-						<li id="ModeTag">
-							<strong>Mode</strong> <small>Allows the values: <q>OTB</q> (over the board),
-							<q><i>ICS</i></q> (Chess Server), <q><i>EM</i></q> (electronic mail), or
-							<q><i>TC</i></q> (telecommunication).</small>
+							<strong><code>WhiteAlias</code></strong>,
+							<strong id="BlackAliasTag"><code>BlackAlias</code></strong>
+							<p class="compact">
+								<small><i lang="en" translate="no">Nickname</i>, used as an identifier for the
+								<i>White</i> and <i>Black</i> player,
+								respectively. It shall be mandatory if the label
+								&nbsp;<q lang="en" translate="no"><i>WhiteNA</i></q>&nbsp; is used instead
+								of the label &nbsp;<q lang="en" translate="no"><i>White</i></q>,
+								or &nbsp;<q lang="en" translate="no"><i>BlackNA</i></q>&nbsp; instead of the label
+								&nbsp;<q lang="en" translate="no"><i>Black</i></q>, to avoid making the values
+								&nbsp;<q lang="en" translate="no"><i>WhiteNA</i></q>&nbsp; or
+								&nbsp;<q lang="en" translate="no"><i>BlackNA</i></q>&nbsp; public. If used,
+								it shall be written after the label
+								&nbsp;<q lang="en" translate="no"><i>WhiteNA</i> / <i>BlackNA</i></q>,
+								and failing that, after the label
+								&nbsp;<q lang="en" translate="no"><i>White</i> / <i>Black</i></q>.</small>
+							</p>
+							<div class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+								The nickname is not identifying, and may not be unique,
+								although it is true that eventually there could also be
+								repeated player names, a case that can be solved in a competition
+								by incorporating the label
+								&nbsp;<q lang="en" translate="no"><i>WhiteNA</i> / <i>BlackNA</i></q>,
+								or &nbsp;<q lang="en" translate="no"><i>WhiteAlias</i> / <i>BlackAlias</i></q>,
+								to distinguish players with the same name.
+							</div>							
 						</li>
 						<li id="AnnotatorTag">
-							<strong>Annotator</strong> <small>Name of the person who registered and
-								commented on the game, in the same format as the name of the players;
-								there can be more than one label, one per person, but all labels with
-								the identifier <q><i>Annotator</i></q> have to be consecutive; the
-								first one has to be the person responsible for the registration of the
-								game, with contributors and commentators added afterwards. This is an
-								exception, as it is the only label that can be repeated.</small>
-							<ul class="aclariment">
-								<li><small>If a program adds automatic comments, it will appear in the
-									first label <q><i>Annotator</i></q>.
-								</small></li>
-								<li><small>For <code>[Mode "ICS"]</code> games, the server shall be listed
-									as the first label <q><i>Annotator</i></q>; it shall be listed as the
-									second label, if automatic comments are added later by another program.
-								</small></li>
-							</ul>
+							<strong><code>Annotator</code></strong> <small>Name of the person who
+							registered and commented on the game, in the same format as the name of the
+							players; there can be more than one label, one per person, but all labels with
+							the identifier &nbsp;<q lang="en" translate="no"><i>Annotator</i></q>&nbsp;
+							have to be consecutive; the first one has to be the person responsible for the
+							registration of the game, with contributors and commentators added afterwards.
+							This is an exception, since together with the
+							&nbsp;<i lang="en" translate="no">Example</i>&nbsp; label, these are the only
+							label identifiers that can be repeated.</small>
+							<div class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+								<ul class="w3-ul">
+									<li>If a program adds automatic comments, it will appear in the
+										first label &nbsp;<q lang="en" translate="no"><i>Annotator</i></q>.
+									</li>
+									<li>For &nbsp;<code>[Mode "ICS"]</code>&nbsp; games, the server shall be listed
+										as the first label &nbsp;<q lang="en" translate="no"><i>Annotator</i></q>;
+										it shall be listed as the second label, if automatic comments are added
+										later by another program.
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li id="ExampleTag"><strong><code>Example</code></strong> <small>Only for model games,
+							without players. The value will be the identifier of a real game, with players. This
+							identifier can be repeated to reference a set of games that follow the same model,
+							always consecutive. The usual thing will be the reference with the
+							&nbsp;<b lang="en" translate="no">Model</b>&nbsp; label, while referencing with
+							the &nbsp;<b lang="en" translate="no">Example</b>&nbsp; label is reserved for
+							exceptional cases, which have given rise to the model.</small>
 						</li>
 					</ul>
 				</section>
@@ -1759,17 +1866,19 @@
 					<h4 class="w3-container w3-pale-yellow w3-center">
 						<span>Label for using alternative piece identifiers</span>
 					</h4>
-					<p><strong>Redefine</strong> <small>Allows to use alternative identification letters for some
-						pieces, always among the predefined ones. If there is a <i>PDTL</i> label, <i>Redefine</i>
-						has to be just before it, as it applies also to the <i>PDTL</i> label tag value, otherwise
-						<i>Redefine</i> will be the last label.</small>
+					<p><strong><code>Redefine</code></strong> <small>Allows to use alternative identification
+						letters for some pieces, always among the predefined ones. If there is a
+						&nbsp;<code><i>PDTL</i></code>&nbsp; label, &nbsp;<code><i>Redefine</i></code>&nbsp;
+						has to be just before it, as it applies also to the &nbsp;<code><i>PDTL</i></code>&nbsp;
+						label tag value, otherwise &nbsp;<code><i>Redefine</i></code>&nbsp; will be the last
+						label.</small>
 					</p>
 					<ul class="exemple">
 						<li style="list-style-type:circle;"><code>[Redefine "A@J, T@R, C@N"]</code>
 							<small>Defines the letter <q>A</q> for the <i>Bishop</i>, instead of <i>J</i>, the
 							letter <q>T</q> for the Rook, instead of <i>R</i>, and <q>C</q> for the Knight, instead
-							of <i>N</i> (Approaches to <i translate="no">Spanish</i> or
-							<i translate="no">Catalan</i>).</small>
+							of <i>N</i> (Approaches to &nbsp;<i translate="no">Español</i>&nbsp; or
+							&nbsp;<i translate="no">Català</i>).</small>
 						</li>
 						<li style="list-style-type:circle;"><code>[Redefine "B@J, Q@D", W@V]</code>
 							<small>Defines the letter <q>B</q> for the <i>Bishop</i>, instead of
@@ -1780,8 +1889,9 @@
 						<li style="list-style-type:circle;"><code>[Redefine "FAN"]</code>
 							<small>Use specific Unicode characters for the piece symbols, different for
 								white and black, instead of the identifying letters.</small>
-							<aside class="compact"><small>Note that using letters usually makes it
-								more readable.</small></aside>
+							<aside class="compact"><small>It's not advisable. There are often problems with the
+								extended characters 🩐 🩓 and 🩏 🩒, also note that using letters is usually more
+								readable.</small></aside>
 						</li>
 					</ul>
 				</section>
@@ -1789,9 +1899,11 @@
 					<h4 class="w3-container w3-pale-yellow w3-center">
 						<span>Initial setup label</span>
 					</h4>
-					<p><strong>PDTL</strong> <small>Label which allows to indicate the initial state of the board
-						to resume a game, using as tag value a <a href="#PDTL" class="cescacs"><i>PDTL</i></a>
-						string. It must be <strong>the last label</strong>; the <i>Redefine</i> label also applies
+					<p><strong><code>PDTL</code></strong> <small>Label which allows to indicate
+						the initial state of the board to resume a game, using as tag value a
+						<a href="#PDTL" class="cescacs"><i>PDTL</i></a> string. It must be
+						<strong>the last label</strong>; the
+						&nbsp;<i lang="en" translate="no">Redefine</i>&nbsp; label also applies
 						to the <i>PDTL</i> string.</small>
 					</p>
 					<h5 class="w3-container w3-light-grey w3-center w3-text-blue-grey">
@@ -1801,19 +1913,19 @@
 						<code>[PDTL "/28:v/27:dk/26:gjg/25:rnnr/24:pejep/23:ppeepp/22:2pjp2/21:3pp3/20:3p3/8:3P3/7:3PP3/6:2PJP2/5:PPEEPP/4:PEJEP/3:RNNR/2:GJG/1:DK/0:V/ w RKRrkr - 0 1"]</code>
 					</div>
 					<h5 class="w3-container w3-light-grey w3-center w3-text-blue-grey">
-						<span>C'escacs initial setup: [Redefine "A@J, T@R", C@N"]</span>
+						<span>C'escacs initial setup: <code>[Redefine "A@J, T@R", C@N"]</code></span>
 					</h5>
 					<div style="white-space:nowrap; height:2.5em; overflow-x:auto;">
 						<code>[PDTL "/28:v/27:dk/26:gag/25:tcct/24:peaep/23:ppeepp/22:2pap2/21:3pp3/20:3p3/8:3P3/7:3PP3/6:2PAP2/5:PPEEPP/4:PEAEP/3:TCCT/2:GAG/1:DK/0:V/ w TKTtkt - 0 1"]</code>
 					</div>
 					<h5 class="w3-container w3-light-grey w3-center w3-text-blue-grey">
-						<span>C'escacs initial setup: [Redefine "B@J, W@V", Q@D"]</span>
+						<span>C'escacs initial setup: <code>[Redefine "B@J, W@V", Q@D"]</code></span>
 					</h5>
 					<div style="white-space:nowrap; height:2.5em; overflow-x:auto;">
 						<code>[PDTL "/28:w/27:qk/26:gbg/25:rnnr/24:pebep/23:ppeepp/22:2pbp2/21:3pp3/20:3p3/8:3P3/7:3PP3/6:2PBP2/5:PPEEPP/4:PEBEP/3:RNNR/2:GBG/1:QK/0:W/ w RKRrkr - 0 1"]</code>
 					</div>
 					<h5 class="w3-container w3-light-grey w3-center w3-text-blue-grey">
-						<span>C'escacs initial setup: [Redefine "FAN"]</span>
+						<span>C'escacs initial setup: <code>[Redefine "FAN"]</code></span>
 					</h5>
 					<div style="white-space:nowrap; height:2.5em; overflow-x:auto;">
 						<code>[PDTL "/28:🩒/27:♛♚/26:🩓♝🩓/25:♜♞♞♜/24:♟☗♝☗♟/23:♟♟☗☗♟♟/22:2♟♝♟2/21:3♟♟3/20:3♟3/8:3♙3/7:3♙♙3/6:2♙♗♙2/5:♙♙☖☖♙♙/4:♙☖♗☖♙/3:♖♘♘♖/2:🩐♗🩐/1:♕♔/0:🩏/ w ♖♔♖♜♚♜ - 0 1"]</code>
@@ -1861,31 +1973,32 @@
 						<i>coma</i> <q><strong>… ,</strong></q>, generalment separats amb un espai.
 					</p>
 				</section>
-				<section class="w3-container w3-half">
-					<h4 class="w3-container w3-pale-yellow w3-center"><span>Variation moves</span></h4>
-					<p>El primer caràcter de la primera jugada d'una variació és un parèntesi, i el número de jugada
-						repeteix l'anterior, però les següents jugades avancen el número, i això les podria confondre
-						amb les jugades de la línia principal.
-					</p>
-					<p>Precedint el número de jugada, o precedint el parèntesi, quan s'inicia una nova variació, es
-						poden incloure qualsevol número de punts, que seran ignorats, de la mateixa manera que els
-						espais; els punts permeten senyalar el nivell d'imbricació, sent els punts més explícits que una
-						senzilla indentació amb espais; en qualsevol cas, ambdues tècniques fan molt més sencilla la
-						lectura de les jugades annotades.
-					</p>
-				</section>
-				<section class="w3-container w3-half">
-					<h4 class="w3-container w3-pale-yellow w3-center">
-						<span>Variation label</span>
-					</h4>
-					<p> Afegir una etiqueta a una variació permet referenciar-la des d'un comentari extern a la
-						variació. L'etiqueta s'escriu tot seguit després del paràntesi, com a un número entre
-						<i>corxets</i> precedit del símbol <i>dolar</i> <q><strong>($[1]</strong></q>. Per a una mateixa
-						jugada poden existir diferents variacions, i les etiquetes assignen un número a cadascuna de les
-						variacions de la jugada.
-					</p>
-				</section>
 			-->
+			<section class="w3-container w3-half">
+				<h4 class="w3-container w3-pale-yellow w3-center">
+					<span>Variation moves</span>
+				</h4>
+				<p>The first character of the first move of a variation is a parenthesis, and the move number
+					repeats the previous one, but the following moves advance the number, and this could confuse
+					them with the moves of the main line.
+				</p>
+				<p>Preceding the move number, or preceding the parenthesis when starting a new imbricated variation,
+					any number of dots can be included, which will be ignored, in the same way as the spaces; the
+					dots allow the level of imbrication to be indicated, the dots being more explicit than a simple
+					indentation with spaces; either way, both techniques make it much easier to read the annotated
+					moves.
+				</p>
+			</section>
+			<section class="w3-container w3-half">
+				<h4 class="w3-container w3-pale-yellow w3-center">
+					<span>Variation label</span>
+				</h4>
+				<p>Adding a label to a variation allows you to reference it from a comment external to the variation.
+					The label is written after the parenthesis, consisting of a number in <i>square brackets</i>
+					preceded by the <i>dollar</i> sign <q><strong>($[1]</strong></q>. Different variations can exist
+					for the same move, and the labels assign a number to each variation of the move.
+				</p>
+			</section>
 			</section>
 			<section id="Comentari" class="w3-container">
 				<h3 class="w3-container w3-pale-green w3-center header2 w3-text-grey">Comments</h3>
@@ -1945,203 +2058,358 @@
 						</li>
 					</ul>
 				</section>
-				<section class="w3-container w3-half">
+				<section class="w3-container">
 					<h4 class="w3-container w3-pale-yellow w3-center">
 						<span>References within comments</span>
 					</h4>
-					<ul>
-						<li><q><strong>@W</strong></q> <small>referència al jugador de <i>blanques</i>.</small></li>
-						<li><q><strong>@B</strong></q> <small>referència al jugador de <i>negres</i>.</small></li>
-						<li><strong>Referència a una jugada</strong> <small>Fent servir el símbol
-								<q><strong>#</strong></q> i el número; exemple: <q><strong>#14</strong></q> es refereix
-								a la jugada <i>14</i>.</small></li>
-						<li><strong>Referència a un moviment del jugador</strong> <small>Exemple:
-								<q><strong>#14@N</strong></q> es refereix al moviment de les <i>negres</i> en la jugada
-								<i>14</i>; no s'han de referenciar jugades posteriors, sinò postergar el comentari.
-							</small>
-							<ul class="aclariment">
-								<li><strong>Referència a una jugada d'una variant</strong> <small>El número es prefixa
-										amb tants punts com imbricacions té la variant; només es poden referenciar
-										jugades anteriors de la mateixa línia; és a dir, no es poden fer referències a
-										una variant des de fora de la variant, si no tenen etiqueta. <i>Exemple</i>:
-										<q><strong>#.16</strong></q> es refereix a la jugada <i>16</i> del primer nivell
-										d'imbricació de la variant en què es troba el comentari. <i>Exemple</i>:
-										<q><strong>#.16@N</strong></q> es refereix al moviment de les <i>negres</i> en
-										la mateixa jugada de l'exemple anterior.
-									</small>
+					<ul class="twocolumnschance icon iconGrid">
+						<li><q><strong>@W</strong></q> <small>reference to the <i>white</i> player.</small></li>
+						<li><q><strong>@B</strong></q> <small>reference to the <i>black</i> player.</small></li>
+						<li><small>A <i>hextille</i> is referenced using its
+							<strong><a href="#CTL" class="cite">CTL coordinate</a></strong>, prefixed with a
+							<i>tilde</i> (<strong><code>~</code></strong>).</small>
+						</li>
+						<li><small>Pieces are referenced using the <strong><a href="glossary.html#Lletraidentificativa"
+								class="cescacs" target="_blank">identifying letters</a></strong> , prefixed with a
+							<i>tilde</i> (<strong><code>~</code></strong>). Capital letters are used for white and
+							lower case for black.</small>
+							<p class="compact"><small>Some pieces are unique in <i>C'escacs</i>, due to the
+								promotion policy; for White: ~K, ~D, ~V. Bishops can also be referred to uniquely
+								by indicating their colour in square brackets: <q>d</q>
+								(<i lang="en" translate="no">dark</i>), <q>l</q> (<i lang="en" translate="no">light</i>)
+								and <q>c</q> (<i lang="en" translate="no">colour</i>);
+								for White: ~J[d], ~J[l], ~J[c].</small></p>
+							<p class="compact"><small>If we want to refer to a piece in a position, the
+								<a href="#CTL" class="cite">CTL coordinate</a> of the position shall be written
+								after the letter of the piece, without separation.</small></p>
+						</li>
+						<li><strong>Reference to moves</strong> <small>You may never reference a later move;
+							the commentary must be postponed. Nor may you reference variants other than the
+							current line, except for labelled variants.</small>
+							<ul class="icon iconBullseye">
+								<li><strong>Reference to a move</strong> <small>Using the symbol
+									<q><strong>#</strong></q> and the number; example:
+									<q><strong>#14</strong></q> refers to move <i>14</i>. The move number always
+									refers to the line or variant in which the comment appears.</small>
 								</li>
-								<li><strong>Referència a una variant etiquetada</strong> <small>Les etiquetes de les
-										variants permeten referir-les des de fora de la mateixa variant. Exemple:
-										<strong>#14[2]</strong> es refereix a la variant per la jugada <i>#14</i>
-										etiquetada <i>$[2]</i>. Anàlogament, <strong>#.16$[1]</strong> es refereix a una
-										variant amb l'etiqueta <i>$[1]</i>, de la jugada <i>16</i> de la variant actual,
-										és a dir, un segon nivell d'imbricació; <strong>#.16$[1]@W</strong> referència
-										el moviment de les <i>blanques</i> en aquesta jugada.
-									</small>
+								<li><strong>Reference to a player's move</strong> <small>Example:
+									<q><strong>#14@B</strong></q> refers to <i>Black</i>'s move on move
+									<i>14</i>.</small>
+								</li>
+								<li><strong>Reference to a labelled variant</strong> <small>Variant labels allow
+									you to refer to variants from outside the variant itself, always at a later
+									point in time. Example: <strong>#14[#12.2]</strong> refers to move <i>#14</i>
+									of the variant defined from move <i>#12</i> labelled <i>$[2]</i>, while
+									<strong>#14[#12.2]@W</strong> refers explicitly to its White's move,
+									<strong>#12.2</strong> refers generically to all the moves of the variant,
+									and <strong>#12[#12.2]</strong> refers explicitly to the alternative move #12
+									of the variant [2] that is defined in move #12.</small>
+									<p><small>Also, when nesting exists, we can traverse the variations, as long
+										as there are labels all the way through. Example:
+										<strong>#16[#14.1#12.2]</strong> indicates move <i>#16</i> in the variant
+										defined from move <i>#14</i> labelled <i>$[1]</i>, which is inside the
+										variant defined from move <i>#12</i> labelled <i>$[2]</i> (note the reverse
+										order).</small>
+									</p>
 								</li>
 							</ul>
 						</li>
-						<li><strong>Un <a href="glossary.html#NAG" class="cescacs" target="_blank">codi <cite>NAG</cite>
-									(Numeric Annotation Glyphs)</a>, numèric prefixat amb
-								<strong><i>$</i></strong></strong> <small>particularment en comentaris generats
-								automàticament. Exemple: <i>$24</i> <span class="w3-text-blue-grey">&mdash; White has a
-									slight space advantage</span>.</small>
-						</li>
-						<li>Naturalment les peces es referèncien fent servir les
-							<strong><a href="glossary.html#Lletraidentificativa" class="cescacs" target="_blank">lletres
-									identificatives</a></strong>, i un <i>hexcac</i> fent servir les
-							<strong><a href="glossary.html#CTL" class="cescacs" target="_blank">coordenades
-									CTL</a></strong>.
+						<li><strong>A <a href="glossary.html#NAG" class="cescacs" target="_blank"><cite>NAG</cite>
+									(<span lang="en" translate="no">Numeric Annotation Glyphs</span>) code</a>,
+								numeric prefixed with <strong><i>$</i></strong></strong> <small>particularly in
+								automatically generated comments. Example: &nbsp;<code><i>$24</i></code>
+								<span class="w3-text-blue-grey" lang="en" translate="no">&mdash; White has a
+								slight space advantage</span>.</small>
 						</li>
 					</ul>
 				</section>
 			</section>
 			<section class="w3-container">
-				<h3 class="w3-container w3-light-grey w3-center header2 w3-text-blue-grey">Examples</h3>
-				<div class="w3-left caixa-exemple-ctl-pgn" style="width:22em">
+				<h3 class="w3-container w3-light-grey w3-center header2 w3-text-blue-grey">Exemples</h3>
+				<div class="w3-left ctl-pgn" style="width:20rem">
 					<code>[Variant "C'escacs"]
-							[Event "CG"]
-							[Site "Barcelona, Catalunya ESP"]
-							[Date "2021-06-04"]
-							[Round "‐"]
-							[White "Mestre, Rut"]
-							[Black "Sasal, Cesc"]
-							[Result "*"]
-							[Lang "ca"]
-							{ Introducció a C'escacs }
-							1. E7‐E13, E21‐E15
-							2. EE5-E11, G21‐G15
-							{ @W: E defença PE13 }
-							{ @N: obre columna G }
-							3. G7-E13:
-							*
-							{ inacabada }
-						</code>
-				</div>
-				<div class="w3-left caixa-exemple-ctl-pgn" style="width:22em">
-					<code>[Variant "C'escacs"]
-							[Id "Cescacs-X01-ca"]
-							[Lang "ca"]
-							{ Mat del boig }
-							1. H6-H12 ?!, I23-I19 ?!
-							{ @W: curiós peó per obrir }
-							2. JF6-C15 ?!, GH26-Z11 ?!
-							{ @W: alfil per cobrir 15 però descuida defensa K }
-							3. L5-L7, NG25-L17 ?!
-							4. EH4-H8 ??, GZ11-L5
-							{ @W: Retirar E de H4 deixa K desatès }
-							5. I5-I9 ??, NL17-G9
-							{ @W: Moviment irrellevant ?? }
-							{ @B: Posiciona N }
-							6. K4-K10 ??, GL5-H6#
-							{ @W: Moviment irrellevant ?? }
-							0-3
-							{ @N Ha de descuidar JF6 i EH4 }
-							{ @W Ataca K a salt de cavall }
+						[Event "CG"]
+						[Site "Barcelona, Catalunya ESP"]
+						[Date "2021-06-04"]
+						[Round "‐"]
+						[White "Mestre, Rut"]
+						[Black "Sasal, Cesc"]
+						[Result "*"]
+						[Lang "en"]
+					</code><p>
+						{ Introduction to C'escacs }
+					</p><code>
+						1. E7‐E13, E21‐E15
+						2. EE5-E11, G21‐G15
+					</code><p>
+						{ @W: ~E defends ~PE13. @B: opens column G }
+					</p><code>
+						3. G7-E13:
+						*
+					</code><p>
+						{ unfinished }
 					</code>
 				</div>
-				<div class="w3-left caixa-exemple-ctl-pgn" style="width:22em">
+				<div class="w3-left ctl-pgn" style="width:20rem">
 					<code>[Variant "C'escacs"]
-							[Id "Cescacs-X01-V-ca"]
-							[Lang "ca"]
-							{ Mat del boig }
-							1. H6-H12 ?!, I23-I19 ?!
-							{ @W: curiós peó per obrir }
-							2. JF6-C15 ?!, GH26-Z11 ?!
-							{ @W: alfil per cobrir 15 però descuida defensa K }
-							3. L5-L7, NG25-L17 ?!
-							4. EH4-H8 ??, GZ11-L5
-							{ @W: Retirar E de H4 deixa K desatès }
-							(4. G7-G13)
-							(4. GD2-F6)
-							5. I5-I9 ??, NL17-G9
-							{ @W: Moviment irrellevant ?? }
-							{ @B: Posiciona N }
-							(5. K4-K10, GL5-H6+
-							.{ @W: Desplaçant P amenaça GL5 amb RI3 }
-							.{ @B: L'escac sense reforç no prosperarà }
-							.6. KG1-H4, GH6-I11
-							.(6. …, GH6xRI3)
-							.(6. …, GH6-K12))
-							6. K4-K10 ??, GL5-H6#
-							{ @W: Moviment irrellevant ?? }
-							(6. GH2-K6)
-							(6. GD2-F6)
-							0-3
-							{ @N Ha de descuidar JF6 i EH4 }
-							{ @W Ataca K a salt de cavall }
+						[Event "CG"]
+						[Site "Barcelona, Catalunya ESP"]
+						[Date "2022-08-14"]
+						[White "Ros, Xus"]
+						[Black "Sasal, Cesc"]
+						[Result "0-3"]
+						1. E7-E13, E21-E15
+						2. EE5-E9, EE23-E19
+						3. D6-D12, E15×D12
+						4. EE9×D12, EE19-E17
+						5. E13-E15, C23-C17
+						6. C5-C11, C17-C15
+						7. ED12-D14, EE17×ED14
+						8. C11×ED14, D22-D16
+						9. E15@D18, JF24×D18
+						10. A5-A9, B24-B18
+						11. B4-B10, B18-B14
+						12. A9-A11, B14×A11
+						13. GD2×A11, JF26×GA11
+						14. B10-C11, ED24-D20
+						15. JF4-A19, JF22-B22
+						16. JA19-B16, DE27-B18
+						17. JB16-D10, JB22-D16
+						18. NE3-C7, JA11-P17
+						19. GH2-I7, RC25-E23
+						20. ED4-E7, GD26-T14
+						21. NG3-A5, GT14-B8
+						22. RC3-B4, GB8-C5
+						23. DE1-C3, GC5×JD10
+						24. NA5-C9, GD10-F14
+						25. RB4×DB18, JD18×RB18
+						26. NC9-B14, GH26-K22
+						27. EE7-E11, GK22-E7+
+						28. KG1-E1, GE7×DC3
+						29. JF6-E3, GC3-E7
+						30. VF0-E5, JD16-C13
+						31. EE11×GF14, GE7-G1^+
+						32. RI3×GG1, JC13×RG1^+
+						33. VE5×JG1, ED20-D16
+						34. NC7-G15, C15-C13
+						35. GI7-F16, NE25-A17
+						36. GF16-D20, RE23-E21
+						37. GD20-C17, RE21-C23
+						38. GC17-D20, RC23-D22
+						39. GD20-E15, VF28-E23
+						40. GE15-H16, I23-I19
+						41. GH16-X16, KRK-II
+						42. NG15-I25, RI21-X18
+						43. GX16-Z13, RX18-X6
+						44. VG1-E5, RX6-E13
+						45. VE5-C3, RE13×JE3^+
+						46. KE1-G1, VE23-E9
+						47. GZ13-L9, VE9-B6
+						48. GL9-C9, RE3×JF2^+
+						49. VC3×RF2, VB6-D10
+						50. GC9-D6, VD10-E5#						
 					</code>
+				</div>
+				<div id="Cescacs-X01-en" class="w3-left ctl-pgn" style="width:20rem">
+					<code>[Variant "C'escacs"]
+					[Id "Cescacs-X01-en"]
+					[Lang "en"]
+					[Title "Fool's mate"]
+					1. H6-H12 ?!, I23-I19 ?!
+					</code><p>
+						{ @W: curious pawn to open, @B: plays along with it }
+					</p><code>
+					2. JF6-C15 ?!, GH26-Z11 ?!
+					</code><p>
+						{ @W: ~J to cover line 15 but neglects defence of ~K.
+							B: ~G's premature move to ~Z11 is very unorthodox. }
+					</p><code>
+					3. L5-L7, NG25-L17 ?!
+					</code><p>
+						{ @B: Initial movement of ~N also to the flank }
+					</p><code>
+					4. EH4-H8 ??, GZ11-L5
+					</code><p>
+						{ @W: Removing ~EH4 leaves ~K unattended }
+					</p><code>
+					5. I5-I9 ??, NL17-G9
+					</code><p>
+						{ @W: Has ignored threats and @B: Positions ~N }
+					</p><code>
+					6. K4-K10 ??, GL5-H6#
+					</code><p>
+						{ @W: Last chance for a reaction wasted }
+					</p><code>
+					0-3
+					</code><p>
+						{ @B Must neglect ~JF6 and ~EH4 }
+					</p><p>
+						{ @W Attack ~K to knight's leap with ~G i ~N }
+					</p>
+				</div>
+				<div id="Cescacs-X01-V-en" class="w3-left ctl-pgn" style="width:20rem">
+					<code>[Variant "C'escacs"]
+						[Id "Cescacs-X01-V-en"]
+						[Lang "en"]
+						[Title "Fool's mate"]
+						1. H6-H12 ?!, I23-I19 ?!
+					</code><p>
+						{ @W: curious pawn to open, @B: plays along with it }
+					</p><code>
+						2. JF6-C15 ?!, GH26-Z11 ?!
+					</code><p>
+						{ @W: ~J to cover line 15 but neglects defence of ~K.
+							B: ~G's premature move to ~Z11 is very unorthodox. }
+						</p><code>
+						3. L5-L7, NG25-L17 ?!
+					</code><p>
+						{ @B: Initial movement of ~N also to the flank }
+					</p><code>
+						4. EH4-H8 ??, GZ11-L5
+					</code><p>
+						{ @W: Removing ~EH4 leaves ~K unattended }
+					</p><code>
+						(4. GD2-F6
+					</code><p>
+						.{ @W would avoid ~GL5-H6+ }
+					</p><code>)
+						5. I5-I9 ??, NL17-G9
+					</code><p>
+						{ @W: Has ignored threats and @B: Positions ~N }
+					</p><code>
+						(5. GD2-F6
+					</code><p>
+						.{ @W is still in time to avoid ~GL5-H6+ }
+					</p><code>)
+						(5. K4-K10 ??, GL5-H6+
+					</code><p>
+						.{ @W: Displacing P threatens ~GL5 with ~RI3.
+							@B: Check without reinforcement will not succeed, but will capture ~RI3 }
+					</p><code>
+						.6. KG1-H4, GH6×RI3
+						.(6. …, GH6-K12)
+						.7. KH4×GI3)
+						6. K4-K10 ??, GL5-H6#
+					</code><p>
+						{ @W: Last chance for a reaction wasted }
+					</p><code>
+						(6. GD2-F6
+					</code><p>
+						.{ @W there was still time to avoid ~GL5-H6+ }
+					</p><code>)
+						(6. RI3-I7
+					</code><p>
+						.{ @W another alternative to avoid ~GL5-H6+ }
+					</p><code>)
+						0-3
+					</code><p>
+						{ @B Must neglect ~JF6 and ~EH4 }
+					</p><p>
+						{ @W Attack ~K to knight's leap with ~G i ~N }
+					</p>
 				</div>
 			</section>
 			<section class="w3-container">
 				<h3 class="w3-container w3-pale-green w3-center header2 w3-text-grey">Minimal reader, and filters</h3>
-				<p>Un lector mínim es limita a llegir els moviments de l'apartat de <i>CTL-AN</i>, i pot ignorar les
-					etiquetes; serà convenient, però, llegir l'etiqueta <i>PDTL</i>. Un <strong>lector mínim</strong> ha
-					de ser capaç de llegir un fitxer CTL-PGN <strong>sense variacions, ni comentaris, ni lletres
-						alternatives d'identificació de les peces</strong>, i pot <strong>ignorar les etiquetes</strong>
-					que pugui haver-hi.
+				<p>A <strong>minimum reader</strong> is limited to reading the moves in the <i>CTL-AN</i> section,
+					which must be algebraically correct; that is, the <i>CTL coordinates</i> must be correct, each
+					move must represent an existing piece at the origin, and the destination must be a free
+					<i>hextille</i>, or in the case of a capture, the captured piece must also exist, just as the
+					captured pawn must exist in the en passant or scornful pawn capture. Promotion requires a pawn
+					in the position of promotion, and in castling the final places for the pieces must be available.
+					On the other hand, the <strong>rules of the game will not be checked</strong>, accepting what
+					is indicated algebraically: neither the movements of the pieces, nor the checks, nor any other
+					rule, only algebraic coherence, but the reader must generate an error if this algebraic
+					coherence is not satisfied.
 				</p>
-				<section class="w3-container">
-					<h4 class="w3-container w3-pale-yellow w3-center">
-						<span>Simplification of a CTL-PGN file</span>
-					</h4>
-					<p>Simplificar un fitxer CTL-PGN, fent-lo apte per a un <i>lector mínim</i>, és una tasca senzilla
-						fent servir uns <i>filtres</i>; veiem com fer-ho amb l'ordre <cite>sed</cite> de
-						<cite>GNU</cite> (<cite>Linux</cite>).
-					</p>
-					<p>El petit programa primer elimina tots els comentaris; això permet simplificar algunes situacions,
-						com ara el cas d'aparicions de parèntesis dins dels comentaris. Elimina els espais i els punts
-						a l'inici de les línies, elimina línies buides, treu l'etiqueta [Redefine " … "], i a
-						continuació
-						converteix totes les referències alternatives a peces pels noms estandaritzats. El resultat és
-						un fitxer <i>CTL-PGN</i> mínim, que només pot tenir variacions; donada la característica
-						recursiva
-						de les variacions, s'eliminen en una segona fase.
-					</p>
+				<p>Labels incorporate <i>meta-information</i> useful for the storage and classification of items,
+					comments and variations add additional information. Only the
+					&nbsp;<code><i>Redefine</i></code>&nbsp; label and the &nbsp;<code><i>PDTL</i></code>&nbsp;
+					label affect the content.
+				</p>
+				<p>A minimum reader will check the initial label and can ignore the rest of the labels; although
+					<strong>it will be convenient to read the &nbsp;<code><i>PDTL</i></code>&nbsp; label</strong>,
+					generating an error if it is not able to process it, and similarly for the
+					&nbsp;<code><i>Redefine</i></code>&nbsp; labels. A <strong>minimum reader</strong> must be
+					able to read a CTL-PGN file with <strong>no variations, no comments, no alternative piece
+					identification letters</strong>, i.e. no &nbsp;<code><i>Redefine</i></code>&nbsp; labels,
+					and can ignore any labels except the required initial label.
+				</p>
+				<p>&nbsp;<code><i>Redefine</i></code>&nbsp; labels modify the content, and removing them
+					requires a prior conversion. A pre-filter can remove them by transforming the file,
+					removing also comments, variations and even ratings, leaving a clean input, with only
+					the rest of the labels, which the minimal reader should be able to ignore.
+				</p>
+				<p>The &nbsp;<code><strong><i>PDTL</i></strong></code>&nbsp; label incorporates a necessary
+					context to represent a game already started, and, if the reader is not able to interpret
+					it, verifying its presence allows early detection of algebraic incoherence. The initial
+					label &nbsp;<code><strong><i>[Variant "C'escacs"]</i></strong></code>&nbsp; guarantees
+					the type of content, and will always be a requirement.
+				</p>
+				<aside>
 					<section class="w3-container">
-						<h5 class="w3-container w3-light-grey w3-center w3-text-blue-grey">
-							<span>Simplification program</span>
-						</h5>
-						<div class="w3-container w3-col" style="width:18em; margin: 0 0.4em;">
-							<a href="../noredefines.sed" target="_blank" class="w3-button w3-pale-yellow"
-								style="width:18em;" download>Download the file</a>
-								<p><small>Cal desar-ho a un fitxer anomenat <code>noredefines.sed</code>
-									que farem servir a la següent ordre;
-									Requereix tenir l'ordre <code>sed</code>, disponible a tots els sistemes
-									<i>Linux</i> i similars.</small>
+						<h4 class="w3-container w3-pale-yellow w3-center">
+							<span>Annex: Simplification of a CTL-PGN file</span>
+						</h4>
+						<p>Simplifying a CTL-PGN file, making it suitable for a <i>minimal reader</i>, is
+							a simple task using some filters; let's see how to do it with the <cite>GNU</cite>
+							(<cite>Linux</cite>) <cite translate="no">sed</cite> command.
+						</p>
+						<p>The small program first removes all comments; this allows to simplify some situations,
+							such as the occurrence of parentheses inside comments. It removes spaces and full stops
+							at the beginning of lines, removes empty lines, removes [Redefine " ... "] labels, and
+							then converts all alternative piece references to standardised names. The result is a
+							minimal <i>CTL-PGN</i> file, which can only have variations; given the recursive nature
+							of variations, they are removed in a second phase.
+						</p>
+						<section class="w3-container">
+							<h5 class="w3-container w3-light-grey w3-center w3-text-blue-grey">
+								<span>Simplification program</span>
+							</h5>
+							<div class="w3-container w3-col" style="width:18em; margin: 0 0.4em;">
+								<a href="../noredefines.sed" target="_blank" class="w3-button w3-pale-yellow"
+									style="width:18em;" translate="no" download>Download the file</a>
+								<p><small>It must be stored in a file called <i>noredefines.sed</i>
+									which we will use in the following command; it requires the
+									<cite>sed</cite> command, available on all
+									<i>GNU</i> <i>Linux</i> and similar systems.</small>
 								</p>
 							</div>
-						<div class="w3-container w3-rest" style="min-width:18em; margin: 0 0.4em;">
-							<p><small>Executant-lo amb <i>sed</i> per a un fitxer <i>file.ctl-pgn</i> obtenim un CTL-PGN quasi
-								mínim, però encara inclourà variacions.</small>
-							</p>
-							<p><small>Podem canviar el nom <i>file.ctl-pgn</i> pel nom del fitxer que volguem tractar:</small>
-							</p>
-							<div id="noredefines" onclick="fnSelect(this.id)"
-								style="white-space:nowrap; height:2.5em; overflow-x:auto;">
-								<code>sed -Ef noredefines.sed file.ctl-pgn</code>
+							<div class="w3-container w3-rest" style="min-width:18em; margin: 0 0.4em;">
+								<p><small>Running it with <cite>sed</cite> for a
+									<i>file.ctl-pgn</i> file gives an almost minimal CTL-PGN,
+									but will still include variations.</small>
+								</p>
+								<p><small>We can change the name <i>file.ctl-pgn</i> to the
+									name of the file we want to handle:</small>
+								</p>
+								<div id="noredefines" onclick="fnSelect(this.id)" translate="no"
+									style="white-space:nowrap; height:2.5em; overflow-x:auto;">
+									<code>sed -Ef noredefines.sed file.ctl-pgn</code>
+								</div>
 							</div>
-						</div>
-						<div class="w3-container">
-							<p><small>Podem encadenar l'execució amb l'execució d'una altra ordre per eliminar tots els
-									continguts entre parèntesis, ni que siguin imbrincats; el caràcter
-									<q><strong>|</strong></q> permet canalitzar la sortida del primer programa per
-									fer-la servir com a entrada del segon:</small>
-							</p>
-							<div id="To-CTL-PGN-simple" onclick="fnSelect(this.id)"
-								style="white-space:nowrap; height:2.5em; overflow-x:auto;">
-								<code>sed -Ef noredefines.sed file.ctl-pgn  |  sed ':again;$!N;$!b again; :b; s/[(][^()]*[)]//g; tb; :m;s/\n\n/\n/g; tm;' </code>
+							<div class="w3-container">
+								<p><small>We can chain the execution with the execution of another command
+									to eliminate all the contents between parentheses (variations), even
+									if they are nested; the vertical bar (<q><strong>|</strong></q>)
+									character allows us to channel the output of the first program to use
+									it as input for the second:</small>
+								</p>
+								<div id="To-CTL-PGN-simple" onclick="fnSelect(this.id)" translate="no"
+									style="white-space:nowrap; height:2.5em; overflow-x:auto;">
+									<code>sed -Ef noredefines.sed file.ctl-pgn  |  sed ':again;$!N;$!b again; :b; s/[(][^()]*[)]//g; tb; :m;s/\n\n/\n/g; tm;' </code>
+								</div>
+								<p><small>We can send the result to a file, for example
+									<i>file-simple.ctl-pgn</i>; click on the line, and copy:</small>
+								</p>
+								<div id="To-CTL-PGN-simple-file" onclick="fnSelect(this.id)" translate="no"
+									style="white-space:nowrap; height:2.5em; overflow-x:auto;">
+									<code>sed -Ef noredefines.sed file.ctl-pgn  |  sed ':again;$!N;$!b again; :b; s/[(][^()]*[)]//g; tb; :m;s/\n\n/\n/g; tm;' > file-simple.ctl-pgn </code>
+								</div>
 							</div>
-							<p><small>Podem enviar la sortida a un fitxer, per exemple <i>file-simple.ctl-pgn</i>; feu
-									clic en la línia, i copieu:</small>
-							</p>
-							<div id="To-CTL-PGN-simple-file" onclick="fnSelect(this.id)"
-								style="white-space:nowrap; height:2.5em; overflow-x:auto;">
-								<code>sed -Ef noredefines.sed file.ctl-pgn  |  sed ':again;$!N;$!b again; :b; s/[(][^()]*[)]//g; tb; :m;s/\n\n/\n/g; tm;' > file-simple.ctl-pgn </code>
-							</div>
-						</div>
+						</section>
 					</section>
-				</section>
+				</aside>
 			</section>
 		</section>
 	</main>

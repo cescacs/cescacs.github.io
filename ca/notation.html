@@ -322,7 +322,7 @@
 					<a href="glossary.html#Centre" class="cescacs" target="_blank">centre de l'<i>hexcaquer</i></a>.
 				</p>
 			</section>
-			<section class="w3-container">
+			<section id="CTL" class="w3-container">
 				<h3 class="w3-container w3-pale-yellow w3-center">Identificació d'un <i>hexcac</i>: coordenades CTL</h3>
 				<div class="w3-panel w3-pale-green">
 					<p>Un <i>hexcac</i> s'identifica de manera única per <strong>la <i>columna</i> i la <i>línia
@@ -791,6 +791,10 @@
 						finalment un identificador de dos caràcters indica la fila destí del <i>Rei</i> i la
 						<i>Torre</i>, tres caràcters en cas d'<i>doble enroc</i>, per a indicar les files d'ambdues
 						torres.
+						<p>Consultar els detalls específics en l'<a href="castling.html#EnrocSimple" class="cescacs"
+							target="_blank">apartat de l'enroc simple</a> i en l'<a href="castling.html#EnrocDoble"
+							class="cescacs" target="_blank">apartat de l'enroc doble</a>.
+						</p>
 						<aside class="compact">Els prefixos <q><i class="cescacs">KRK</i></q>,
 							<q><i class="cescacs">KRD</i></q> i <q><i class="cescacs">KRR</i></q>
 							poden canviar en el <a href="#CTL-PGN" class="cescacs">format
@@ -1486,7 +1490,6 @@
 					<h4 class="w3-container w3-pale-yellow w3-center">
 						<span>Etiqueta de registre mínim</span>
 					</h4>
-					<!-- TODO: translation -->
 					<p>Si no es registra una partida, sinò que es registren
 						<strong>moviments per a il·lustrar un concepte</strong>, fins i tot en el cas
 						d'una <q>partida típica sobre el paper</q>, com ara el
@@ -1516,9 +1519,29 @@
 								</li>
 								<li>
 									<small>També es poden incloure-hi sufixos separant-los amb guions,
-									per a indicar que és una variació, per a indicar l'idioma dels
+									per a indicar que inclou variacions, per a indicar l'idioma dels
 									comentaris, o per a ambdós motius, sempre acabant amb el sufix de
 									l'idioma, si hi fos.</small>
+									<ul class="aclariment compact w3-small">
+										<li><small>Un editor només hauria d'incorporar una versió amb
+											variacions, però potser n'hi afegeix noves alternatives o
+											modifica alguna de les existents, identificant la nova
+											versió amb números romans, separats amb un guió a continuació
+											de la lletra <q>V</q>, que indica la presència de variacions.
+											Aquest mecanisme mai permet l'alteració de la línia principal
+											representada.</small>
+										</li>
+										<li><small>Una variació concreta es pot representar linialment,
+											per exemple, per a lectors sense capacitat d'interpretar
+											variacions. Llavors s'indicarà amb una <q>S</q> a continuació
+											de la lletra <q>V</q> i de qualsevol indicació de versió en
+											números romans, seguida d'una seqüència de números separats amb
+											dos punts per a indicar la variació que es representa. No és
+											permesa una seqüència de zeros, que seria equivalent a no
+											indicar variacions, que correspon a l'identificador sense la
+											lletra <q>V</q>.</small>
+										</li>
+									</ul>
 								</li>
 							</ul>
 							<p>Exemple: <a href="#Cescacs-X01-V-ca" class="cite">Cescacs-X01-V-ca</a>.
@@ -1527,7 +1550,10 @@
 								<li><code>[Id "Cescacs-X01"]</code></li>
 								<li><code>[Id "Cescacs-X01-ca"]</code></li>
 								<li><code>[Id "Cescacs-X01-V"]</code></li>
+								<li><code>[Id "Cescacs-X01-V-II"]</code></li>
 								<li><code>[Id "Cescacs-X01-V-ca"]</code></li>
+								<li><code>[Id "Cescacs-X01-V-II-ca"]</code></li>
+								<li><code>[Id "Cescacs-X01-V-S:0:1:1-ca"]</code></li>
 							</ul>
 						</li>
 					</ol>
@@ -1559,9 +1585,9 @@
 									(<i>hyphen-minus</i>) <q>-</q>, un número identificador, que
 									l'editor ha de garantir com a únic.</small>
 									<aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
-										Aquest cas és molt similar a les partides editades únicament
+										Aquest cas és molt similar a les partides publicades únicament
 										amb un identificador, però la diferència és que són partides
-										reals entre dos jugadors, on els jugadors són anònims.</small>
+										reals entre dos jugadors, on els jugadors poden ser anònims.
 									</aside>
 									<aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
 										<p>És convenient que l'editor incorpori sempre aquesta
@@ -1579,11 +1605,16 @@
 										<li><q><b>O</b></q> <small>(<i>Opening</i>), sent el número l'últim moviment
 											registrat.</small>
 										</li>
-										<li><q><b>C</b></q> <small>(<i>Continuation</i>) o <q><b>M</b></q>
-											(<i>Middlegame</i>) fent servir una parella de números per al
-											primer i l'últim moviment registrats, separats per un guionet
-											(<i>hyphen</i>) <q><strong>‐</strong></q> (U+2010), o un
-											<i>guió polivalent</i> (<i>hyphen-minus</i>) <q>-</q>.</small>
+										<li><q><b>C</b></q> <small>(<i>Continuation</i>) fent servir una parella
+											de números per al primer i l'últim moviment registrats, separats per
+											un guionet (<i>hyphen</i>) <q><strong>‐</strong></q> (U+2010), o un
+											<i>guió polivalent</i> (<i>hyphen-minus</i>) <q>-</q>.
+											Usualment farà referència a una obertura amb l'etiqueta
+											<code>Model</code>.</small>
+										</li>
+										<li><q><b>M</b></q> <small>(<i>Middlegame</i>) Tot i que generalment no
+											referenciarà una obertura, en la pràctica és equivalent a
+											<q><b>C</b></q></small>
 										</li>
 										<li><q><b>E</b></q> <small>(<i>Ending</i>) incorporant com a número
 											el moviment des del qual s'inicia el registre.</small>
@@ -1624,31 +1655,32 @@
 							<strong>MatchDate</strong> quan [<strong>Event</strong> "<i>CG</i>"].</small>
 						</li>
 						<li id="MatchDateTag">
-							<strong>MatchDate</strong> <small>Data de l'encontre.
+							<strong>MatchDate</strong> <small>Data d'inici de l'encontre.
 							El valor no té sentit si no s'indica un valor per a l'etiqueta
 							<strong>Round</strong>, i és innecessària quan el valor és el mateix de
 							l'etiqueta <strong>Date</strong>, per exemple, quan l'etiqueta
-							<strong>Round</strong> té el valor <q>1</q> o una seqüència de números
-							acabats en el número <q>1</q>.</small>
+							<strong>Round</strong> té el valor <q>1</q> (o una seqüència de números
+							acabats en el número <q>1</q>).</small>
 						</li>
 						<li id="TerminationTag">
 							<strong>Termination</strong> <small>Detall de la finalització;
 							admet els valors: <q><i>abandoned</i></q>, <q><i>rules infraction</i></q>,
 							<q><i>time forfeit</i></q> i per a jocs indefinidament ajornats:
 							<q><i>death</i></q> o <q><i>emergency</i></q></small>
-							<aside class="compact">
-								<small>Els valors <q>normal</q> i <q>unterminated</q> no són necessaris,
-									ja que en aquests casos no s'usarà l'etiqueta. Tampoc és necessària
-									una etiqueta d'<q>adjudicació</q>, ja que una partida no finalitzada
-									no s'adjudica; l'etiqueta s'emplenarà amb algun motiu de finalització,
-									o d'ajornament indefinit.</small>
+							<aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+								Els valors <q>normal</q> i <q>unterminated</q> no són necessaris,
+								ja que en aquests casos no s'usarà l'etiqueta. Tampoc és necessària
+								una etiqueta d'<q>adjudicació</q>, ja que una partida no finalitzada
+								no s'adjudica; l'etiqueta s'emplenarà amb algun motiu de finalització,
+								o d'ajornament indefinit.
 							</aside>
 						</li>
 						<li id="LangTag">
 							<strong>Lang</strong> <small>Idioma que es fa servir en els comentaris;
 							el valor ha de ser un codi d'idioma <cite>ISO 639</cite>, de dues lletres
 							(<cite>ISO 639-1</cite> alpha-2), o, si es requereix, el codi
-							<cite>ISO 639-3</cite> de tres lletres.</small>
+							<cite>ISO 639-3</cite> de tres lletres. Ha de coincidir amb el sufix de
+							l'identificador de l'editor, si hi fos.</small>
 						</li>
 						<li id="TitleTag"><strong>Title</strong> <small>De manera molt excepcional,
 							una partida pot tenir un nom, i també es podria donar el cas per a situacions
@@ -1658,8 +1690,40 @@
 							excepcionals.</span> En tot cas apareixerà després de l'etiqueta
 							<strong><a href="#LangTag" class="cite">Lang</a></strong>.</small>
 						</li>
+						<li id="RevisitedTag"><strong>Revisited</strong> <small>Només en partides model,
+							sense jugadors. El valor indicat serà el identificador d'una partida, també
+							una partida model, sense jugadors. Les possibles funcions d'aquesta etiqueta
+							són:</small>
+							<ol>
+								<li><small>Quan l'identificador és del mateix editor: Deixar com a <q>obsoleta</q>
+									la línia principal referenciada.</small>
+								</li>
+								<li><small>Quan l'identificador és de diferent editor: Publicar una partida
+									d'un altre editor amb modificacions o variacions pròpies del nou editor;
+									comporta reconeixement d'autoria.</small>
+								</li>
+							</ol>
+						</li>
+						<li id="ModelTag"><strong>Model</strong> <small>Només en partides reals, amb jugadors.
+							El valor indicat serà l'identificador d'una partida model d'obertura.</small>
+						</li>
+						<li id="EndingTag"><strong>Ending</strong> <small>Només en partides reals, amb jugadors.
+							El valor indicat serà l'identificador d'una partida model de final.</small>
+						</li>
+						<li id="ModeTag">
+							<strong>Mode</strong> <small>Només en partides reals, amb jugadors. Admet els
+							valors: <q>OTB</q> (over the board),
+							<q><i>ICS</i></q> (Chess Server), <q><i>EM</i></q> (electronic mail), or
+							<q><i>TC</i></q> (telecommunication).</small>
+						</li>
+						<li id="WhiteTypeTag">
+							<strong>WhiteType</strong>, <strong id="BlackTypeTag">BlackType</strong>
+							<small>Només en partides reals, amb jugadors. Admet els valors <q><i>human</i></q>
+							o <q><i>program</i></q>.</small>
+						</li>
 						<li id="TimeControlTag">
-							<strong>TimeControl</strong> <small>Valors:</small>
+							<strong>TimeControl</strong> <small>Només en partides reals, amb jugadors.
+							Valors:</small>
 							<ul class="exemple">
 								<li><code>[TimeControl "?"]</code> <small>desconegut</small></li>
 								<li><code>[TimeControl "-"]</code> <small>no es fa servir</small></li>
@@ -1669,7 +1733,9 @@
 										(<q>sudden death</q>)</small></li>
 								<li><code>[Timecontrol <i>number1</i>+<i>number2</i>]</code> <small><i>number1</i>
 										segons, més <i>number2</i> segons per cada moviment</small></li>
-								<li>[TimeControl "*<i>number</i>"] <small><i>number</i> segons per moviment</small></li>
+								<li>[TimeControl "*<i>number</i>"] <small><i>number</i> segons per moviment; control
+									amb <q>rellotge d'arena</q> (<q>sandclock</q>, <q>hourglass</q>)</small>
+								</li>
 								<li style="margin-top: 0.5ex;"><small><strong>Exemples concrets:</strong></small>
 									<ul class="exemple">
 										<li><code>[TimeControl "40/9000"]</code>
@@ -1682,16 +1748,11 @@
 											<small>1 hora i ¼, més un minut per cada moviment</small>
 										</li>
 										<li><code>[TimeControl "*180"]</code>
-											<small>tres minuts cada moviment; control amb <q>rellotge d'arena</q>
-												(<q>sandclock</q>, <q>hourglass</q>)</small>
+											<small>tres minuts cada moviment</small>
 										</li>
 									</ul>
 								</li>
 							</ul>
-						</li>
-						<li id="WhiteTypeTag">
-							<strong>WhiteType</strong>, <strong id="BlackTypeTag">BlackType</strong>
-							<small>Admet els valors <q><i>human</i></q> or <q><i>program</i></q>.</small>
 						</li>
 						<li id="WhiteNATag">
 							<strong>WhiteNA</strong>, <strong id="BlackNATag">BlackNA</strong>
@@ -1716,36 +1777,40 @@
 							<i>WhiteNA</i> / <i>BlackNA</i>. Si es fa servir, s'escriurà a continuació
 							de l'etiqueta <q><i>White</i> / <i>Black</i></q>, i en el seu defecte,
 							a continuació de l'etiqueta <q><i>WhiteNA</i> / <i>BlackNA</i></q>.</small>
-							<div class="note" style="margin:4px 2em; padding: 0.5em">
-								<small>El <i>sobrenom</i> no és identificatiu, i podria no ser únic,
+							<div class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+								El <i>sobrenom</i> no és identificatiu, i podria no ser únic,
 								tot i que és cert que eventualment també podrien existir noms de jugador repetits,
 								cas que es pot resoldre en una competició incorporant l'etiqueta
 								<q><i>WhiteNA</i> / <i>BlackNA</i></q>,
 								o bé <q><i>WhiteAlias</i> / <i>BlackAlias</i></q>, per distingir jugadors
-								amb el mateix nom.</small>
+								amb el mateix nom.
 							</div>
-						</li>
-						<li id="ModeTag">
-							<strong>Mode</strong> <small>Admet els valors: <q>OTB</q> (over the board),
-							<q><i>ICS</i></q> (Chess Server), <q><i>EM</i></q> (electronic mail), or
-							<q><i>TC</i></q> (telecommunication).</small>
 						</li>
 						<li id="AnnotatorTag">
 							<strong>Annotator</strong> <small>Nom de qui ha registrat i comentat la partida, en el
 							mateix format que el nom dels jugadors; pot haver-hi més d'una etiqueta, una per
 							persona, però totes les etiquetes amb l'identificador <q><i>Annotator</i></q> han de ser
 							consecutives; el primer ha de ser el responsable del registre de la partida, sent
-							col·laboradors i comentadors afegits a continuació. És una excepció, doncs és l'única
-							etiqueta que es pot repetir.</small>
-							<ul class="aclariment">
-								<li><small>Si un programa afegeix comentaris automàtics, apareixerà en la primera etiqueta
-									<q><i>Annotator</i></q>.
-								</small></li>
-								<li><small>En les partides amb <code>[Mode "ICS"]</code> es farà constar el
-									servidor com a primera etiqueta <q><i>Annotator</i></q>; quedarà com a
-									segona, si un altre programa afegeix posteriorment comentaris automàtics.
-								</small></li>
-							</ul>
+							col·laboradors i comentadors afegits a continuació. És una excepció, doncs juntament amb
+							l'etiqueta <i>Example</i> són les úniques etiquetes que es poden repetir.</small>
+							<div class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+								<ul class="w3-ul">
+									<li>Si un programa afegeix comentaris automàtics, apareixerà en la primera etiqueta
+										<q><i>Annotator</i></q>.
+									</li>
+									<li>En les partides amb <code>[Mode "ICS"]</code> es farà constar el
+										servidor com a primera etiqueta <q><i>Annotator</i></q>; quedarà com a
+										segona, si un altre programa afegeix posteriorment comentaris automàtics.
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li id="ExampleTag"><strong>Example</strong> <small>Només en partides model, sense
+							jugadors. El valor indicat serà el identificador d'una partida real, amb jugadors.
+							Aquest identificador es pot repetir per a referenciar un conjunt de partides que
+							segueixen un mateix model, sempre consecutives. L'habitual serà la referència amb
+							l'etiqueta <b>Model</b>, en tant que referenciar amb l'etiqueta <b>Example</b> es
+							reserva per als casos excepcionals, que han donat lloc al model.</small>
 						</li>
 					</ul>
 				</section>
@@ -1777,8 +1842,9 @@
 							<small>Fa servir caràcters Unicode específics per a les peces d'escac,
 								diferents per a blanques i per a negres, en comptes de les lletres
 								identificatives.</small>
-							<aside class="compact"><small>Observar que fent servir lletres sol ser
-								més llegible.</small></aside>
+							<aside class="compact"><small>No és aconsellable. Sovint es donen problemes
+								amb els caràcters estesos 🩐 🩓 i 🩏 🩒, a més, observar que fent servir
+								lletres sol ser més llegible.</small></aside>
 						</li>
 					</ul>
 				</section>
@@ -1868,11 +1934,11 @@
 						repeteix l'anterior, però les següents jugades avancen el número, i això les podria confondre
 						amb les jugades de la línia principal.
 					</p>
-					<p>Precedint el número de jugada, o precedint el parèntesi, quan s'inicia una nova variació, es
-						poden incloure qualsevol número de punts, que seran ignorats, de la mateixa manera que els
-						espais; els punts permeten senyalar el nivell d'imbricació, sent els punts més explícits que una
-						senzilla indentació amb espais; en qualsevol cas, ambdues tècniques fan molt més sencilla la
-						lectura de les jugades annotades.
+					<p>Precedint el número de jugada, o precedint el parèntesi quan s'inicia una nova variació, es
+						poden incloure qualsevol nombre de punts, que seran ignorats, de la mateixa manera que els
+						espais; els punts permeten assenyalar el nivell d'imbricació, sent els punts més explícits
+						que una senzilla indentació amb espais; en qualsevol cas, ambdues tècniques fan molt més
+						senzilla la lectura de les jugades anotades.
 					</p>
 				</section>
 				<section class="w3-container w3-half">
@@ -1880,7 +1946,7 @@
 						<span>Etiqueta de la variació</span>
 					</h4>
 					<p> Afegir una etiqueta a una variació permet referenciar-la des d'un comentari extern a la
-						variació. L'etiqueta s'escriu tot seguit després del paràntesi, com a un número entre
+						variació. L'etiqueta s'escriu tot seguit després del parèntesi, formada per un número entre
 						<i>corxets</i> precedit del símbol <i>dolar</i> <q><strong>($[1]</strong></q>. Per a una mateixa
 						jugada poden existir diferents variacions, i les etiquetes assignen un número a cadascuna de les
 						variacions de la jugada.
@@ -1951,47 +2017,54 @@
 					<h4 class="w3-container w3-pale-yellow w3-center">
 						<span>Referències dins dels comentaris</span>
 					</h4>
-					<ul class="twocolumnschance icon iconBullseye">
-						<li><small>Les peces es referèncien fent servir les
-							<strong><a href="glossary.html#Lletraidentificativa" class="cescacs" target="_blank">lletres
-							identificatives</a></strong>, prefixades amb <i>tilde</i> (<strong><code>~</code></strong>).</small>
-							<p class="compact"><small>Si ens volem referir a una peça en una posició, s'escriurà
-								la coordenada CTL de la posició a continuació de la lletra de la peça i sense
-								separació.</small></p>
-						</li>
-						<li><small>Un <i>hexcac</i> es referència fent servir la seva
-							<strong><a href="glossary.html#CTL" class="cescacs" target="_blank">coordenada
-									CTL</a></strong>, prefixada amb <i>tilde</i>
-							(<strong><code>~</code></strong>).</small>
-						</li>
+					<ul class="twocolumnschance icon iconGrid">
 						<li><q><strong>@W</strong></q> <small>referència al jugador de <i>blanques</i>.</small></li>
 						<li><q><strong>@B</strong></q> <small>referència al jugador de <i>negres</i>.</small></li>
-						<li><strong>Referència a una jugada</strong> <small>Mai es pot referenciar una jugada posterior,
-							sinò postergar el comentari. Es fa servir el símbol <q><strong>#</strong></q> i el número de
-							jugada; exemple: <q><strong>#14</strong></q> es refereix a la jugada <i>14</i>.</small>
-							<ul class="icon iconGrid">
+						<li><small>Un <i>hexcac</i> es referència fent servir la seva
+							<strong><a href="#CTL" class="cite">coordenada CTL</a></strong>, prefixada amb
+							una <i>titlla</i> (<strong><code>~</code></strong>).</small>
+						</li>
+						<li><small>Les peces es referèncien fent servir les
+							<strong><a href="glossary.html#Lletraidentificativa" class="cescacs" target="_blank">lletres
+							identificatives</a></strong>, prefixades amb <i>tilde</i> (<strong><code>~</code></strong>).
+							Es fan servir majúscules per a les blanques i minúscules per a les negres.</small>
+							<p class="compact"><small>Algunes peces són úniques en <i>C'escacs</i>, donada la política
+								de promoció; per a les blanques: ~K, ~D, ~V. Ens podem referir també de manera única
+								als alfils indicant el seu color entre corxets: <q>d</q>
+								(<i lang="en" translate="no">dark</i>), <q>l</q> (<i lang="en" translate="no">light</i>)
+								i <q>c</q> (<i lang="en" translate="no">colour</i>); per a les blanques:
+								~J[d], ~J[l], ~J[c].</small></p>
+							<p class="compact"><small>Si ens volem referir a una peça en una posició, a continuació
+								de la lletra de la peça, i sense separació, s'escriurà la
+								<a href="#CTL" class="cite">coordenada CTL</a> de la posició.</small></p>
+						</li>
+						<li><strong>Referència a jugadas</strong> <small>Mai es pot referenciar una jugada posterior;
+							s'ha de postergar el comentari. Tampoc es poden referenciar altres variants diferents de
+							la línia actual, excepte per a variants etiquetades.</small>
+							<ul class="icon iconBullseye">
+								<li><strong>Referència a una jugada</strong> <small>Es fa servir el símbol
+									<q><strong>#</strong></q> i el número de jugada; exemple: <q><strong>#14</strong></q>
+									es refereix a la jugada <i>14</i>. El número de jugada sempre es refereix a la línia
+									o variant en què apareix el comentari.</small>
+								</li>
 								<li><strong>Referència a un moviment del jugador</strong> <small>Exemple:
-									<q><strong>#14@N</strong></q> es refereix al moviment de les <i>negres</i> en la jugada
+									<q><strong>#14@B</strong></q> es refereix al moviment de les <i>negres</i> en la jugada
 									<i>14</i>.</small>
 								</li>
-								<li><strong>Referència a una jugada d'una variant</strong> <small>No es poden referenciar
-									jugades posteriors, ni tampoc altres variants diferents de la variant actual, excepte
-									per a variants etiquetades.</small>
-									<p class="compact"><small>Per tant, el número de jugada sempre es refereix a la variant
-										en què apareix el comentari.
-									</small>
-								</li>
 								<li><strong>Referència a una variant etiquetada</strong> <small>Les etiquetes de les
-									variants permeten referir-les des de fora de la mateixa variant, des de la línia
-									principal on es bifurca, i sempre posteriorment. Exemple: <strong>#14[#12.2]</strong>
-									es refereix a la variant per la jugada <i>#14</i> en la variant definida des del
-									moviment <i>#12</i> etiquetada <i>$[2]</i>.</small>
-									<p><small>També, quan existeixen imbricacions, podem reseguir les variacions,
+									variants permeten referir-les des de fora de la mateixa variant, sempre
+									posteriorment. Exemple: <strong>#14[#12.2]</strong> es refereix a la jugada
+									<i>#14</i> de la variant definida des del moviment <i>#12</i> etiquetada
+									<i>$[2]</i>, en tant que <strong>#14[#12.2]@W</strong> es refereix explícitament
+									al moviment de les blanques, <strong>#12.2</strong> es refereix de manera genèrica
+									a tots els moviments de la variant, i <strong>#12[#12.2]</strong> es refereix al
+									moviment alternatiu #12 de la variant [2] que es defineix en el moviment #12.</small>
+									<p><small>També, quan existeixen imbricacions, podem resseguir les variacions,
 										sempre que existeixin etiquetes per a tot el camí. Exemple:
-										<strong>#16[#12.2#14.1]</strong> indica el moviment <i>#16</i> dins de la
+										<strong>#16[#14.1#12.2]</strong> indica el moviment <i>#16</i> dins de la
 										variant definida des del moviment <i>#14</i> etiquetada <i>$[1]</i>, que es
 										troba dins de la variant definida des del moviment <i>#12</i> etiquetada
-										<i>$[2]</i>.</small>
+										<i>$[2]</i> (observar l'ordre invers).</small>
 									</p>
 								</li>
 							</ul>
@@ -2009,23 +2082,87 @@
 				<h3 class="w3-container w3-light-grey w3-center header2 w3-text-blue-grey">Exemples</h3>
 				<div class="w3-left ctl-pgn" style="width:20rem">
 					<code>[Variant "C'escacs"]
-							[Event "CG"]
-							[Site "Barcelona, Catalunya ESP"]
-							[Date "2021-06-04"]
-							[Round "‐"]
-							[White "Mestre, Rut"]
-							[Black "Sasal, Cesc"]
-							[Result "*"]
-							[Lang "ca"]
-							{ Introducció a C'escacs }
-							1. E7‐E13, E21‐E15
-							2. EE5-E11, G21‐G15
-							{ @W: E defença PE13 }
-							{ @N: obre columna G }
-							3. G7-E13:
-							*
-							{ inacabada }
-						</code>
+						[Event "CG"]
+						[Site "Barcelona, Catalunya ESP"]
+						[Date "2021-06-04"]
+						[Round "‐"]
+						[White "Mestre, Rut"]
+						[Black "Sasal, Cesc"]
+						[Result "*"]
+						[Lang "ca"]
+					</code><p>
+						{ Introducció a C'escacs }
+					</p><code>
+						1. E7‐E13, E21‐E15
+						2. EE5-E11, G21‐G15
+					</code><p>
+						{ @W: ~E defensa ~PE13. @B: obre columna G }
+					</p><code>
+						3. G7-E13:
+						*
+					</code><p>
+						{ inacabada }
+					</code>
+				</div>
+				<div class="w3-left ctl-pgn" style="width:20rem">
+					<code>[Variant "C'escacs"]
+						[Event "CG"]
+						[Site "Barcelona, Catalunya ESP"]
+						[Date "2022-08-14"]
+						[White "Ros, Xus"]
+						[Black "Sasal, Cesc"]
+						[Result "0-3"]
+						1. E7-E13, E21-E15
+						2. EE5-E9, EE23-E19
+						3. D6-D12, E15×D12
+						4. EE9×D12, EE19-E17
+						5. E13-E15, C23-C17
+						6. C5-C11, C17-C15
+						7. ED12-D14, EE17×ED14
+						8. C11×ED14, D22-D16
+						9. E15@D18, JF24×D18
+						10. A5-A9, B24-B18
+						11. B4-B10, B18-B14
+						12. A9-A11, B14×A11
+						13. GD2×A11, JF26×GA11
+						14. B10-C11, ED24-D20
+						15. JF4-A19, JF22-B22
+						16. JA19-B16, DE27-B18
+						17. JB16-D10, JB22-D16
+						18. NE3-C7, JA11-P17
+						19. GH2-I7, RC25-E23
+						20. ED4-E7, GD26-T14
+						21. NG3-A5, GT14-B8
+						22. RC3-B4, GB8-C5
+						23. DE1-C3, GC5×JD10
+						24. NA5-C9, GD10-F14
+						25. RB4×DB18, JD18×RB18
+						26. NC9-B14, GH26-K22
+						27. EE7-E11, GK22-E7+
+						28. KG1-E1, GE7×DC3
+						29. JF6-E3, GC3-E7
+						30. VF0-E5, JD16-C13
+						31. EE11×GF14, GE7-G1^+
+						32. RI3×GG1, JC13×RG1^+
+						33. VE5×JG1, ED20-D16
+						34. NC7-G15, C15-C13
+						35. GI7-F16, NE25-A17
+						36. GF16-D20, RE23-E21
+						37. GD20-C17, RE21-C23
+						38. GC17-D20, RC23-D22
+						39. GD20-E15, VF28-E23
+						40. GE15-H16, I23-I19
+						41. GH16-X16, KRK-II
+						42. NG15-I25, RI21-X18
+						43. GX16-Z13, RX18-X6
+						44. VG1-E5, RX6-E13
+						45. VE5-C3, RE13×JE3^+
+						46. KE1-G1, VE23-E9
+						47. GZ13-L9, VE9-B6
+						48. GL9-C9, RE3×JF2^+
+						49. VC3×RF2, VB6-D10
+						50. GC9-D6, VD10-E5#						
+					</code>
 				</div>
 				<div id="Cescacs-X01-ca" class="w3-left ctl-pgn" style="width:20rem">
 					<code>[Variant "C'escacs"]
@@ -2038,136 +2175,191 @@
 					</p><code>
 					2. JF6-C15 ?!, GH26-Z11 ?!
 					</code><p>
-						{ @W: ~J per cobrir línia 15 però descuida defensa del ~K.
+						{ @W: ~J per a cobrir línia 15 però descuida defensa del ~K.
 						@B: el moviment prematur de ~G a ~Z11 és molt poc ortodox }
 					</p><code>
 					3. L5-L7, NG25-L17 ?!
-					</code><p class="note compact">
+					</code><p>
 						{ @B: Moviment inicial de ~N també al flanc }
 					</p><code>
 					4. EH4-H8 ??, GZ11-L5
-					</code><p class="note compact">
+					</code><p>
 						{ @W: Retirar ~EH4 deixa ~K desatès }
 					</p><code>
 					5. I5-I9 ??, NL17-G9
-					</code><p class="note compact">
-						{ @W: Moviment irrellevant; la resposta
-						al moviment @B de ~G hauria d'haver estat la defensa de la línia 6,
-						posicionant-se en ~F6 }
+					</code><p>
+						{ @W: Ha ignorat les amenaces i @B: Posiciona ~N }
 					</p><code>
 					6. K4-K10 ??, GL5-H6#
-					</code><p class="note compact">
-						{ @W: Segona oportunitat de reacció desperdiciada }
+					</code><p>
+						{ @W: Última oportunitat de reacció desperdiciada }
 					</p><code>
 					0-3
-					</code><p class="note compact">
-						{ @B Ha de descuidar ~JF6 i ~EH4 }						
-					</p><p class="note compact">
-						{ @W Ataca amb ~G i ~N }
+					</code><p>
+						{ @W Ha de descuidar ~JF6 i ~EH4 }
+					</p><p>
+						{ @B Ataca ~K a salt de cavall amb ~G i ~N }
 					</p>
 				</div>
 				<div id="Cescacs-X01-V-ca" class="w3-left ctl-pgn" style="width:20rem">
 					<code>[Variant "C'escacs"]
-							[Id "Cescacs-X01-V-ca"]
-							[Lang "ca"]
-							{ Mat del boig }
-							1. H6-H12 ?!, I23-I19 ?!
-							{ @W: curiós peó per obrir }
-							2. JF6-C15 ?!, GH26-Z11 ?!
-							{ @W: alfil per cobrir 15 però descuida defensa K }
-							3. L5-L7, NG25-L17 ?!
-							4. EH4-H8 ??, GZ11-L5
-							{ @W: Retirar E de H4 deixa K desatès }
-							(4. G7-G13)
-							(4. GD2-F6)
-							5. I5-I9 ??, NL17-G9
-							{ @W: Moviment irrellevant ?? }
-							{ @B: Posiciona N }
-							(5. K4-K10, GL5-H6+
-							.{ @W: Desplaçant P amenaça GL5 amb RI3 }
-							.{ @B: L'escac sense reforç no prosperarà }
-							.6. KG1-H4, GH6-I11
-							.(6. …, GH6xRI3)
-							.(6. …, GH6-K12))
-							6. K4-K10 ??, GL5-H6#
-							{ @W: Moviment irrellevant ?? }
-							(6. GH2-K6)
-							(6. GD2-F6)
-							0-3
-							{ @N Ha de descuidar JF6 i EH4 }
-							{ @W Ataca K a salt de cavall }
-					</code>
+						[Id "Cescacs-X01-V-ca"]
+						[Lang "ca"]
+						[Title "Mat del boig"]
+						1. H6-H12 ?!, I23-I19 ?!
+					</code><p>
+						{ @W: curiós peó per obrir, @B: li segueix el joc  }
+					</p><code>
+						2. JF6-C15 ?!, GH26-Z11 ?!
+					</code><p>
+						{ @W: ~J per a cobrir línia 15 però descuida defensa del ~K.
+							@B: el moviment prematur de ~G a ~Z11 és molt poc ortodox }
+						</p><code>
+						3. L5-L7, NG25-L17 ?!
+					</code><p>
+						{ @B: Moviment inicial de ~N també al flanc }
+					</p><code>
+						4. EH4-H8 ??, GZ11-L5
+					</code><p>
+						{ @W: Retirar ~EH4 deixa ~K desatès }
+					</p><code>
+						(4. GD2-F6
+					</code><p>
+						.{ @W evitaria ~GL5-H6+ }
+					</p><code>)
+						5. I5-I9 ??, NL17-G9
+					</code><p>
+						{ @W: Ha ignorat les amenaces i @B: Posiciona ~N }
+					</p><code>
+						(5. GD2-F6
+					</code><p>
+						.{ @W encara està a temps d'evitar ~GL5-H6+ }
+					</p><code>)
+						(5. K4-K10 ??, GL5-H6+
+					</code><p>
+						.{ @W: Desplaçant P amenaça ~GL5 amb ~RI3.
+							@B: L'escac sense reforç no prosperarà, però guanyarà ~RI3 }
+					</p><code>
+						.6. KG1-H4, GH6×RI3
+						.(6. …, GH6-K12)
+						.7. KH4×GI3)
+						6. K4-K10 ??, GL5-H6#
+					</code><p>
+						{ @W: Última oportunitat de reacció desperdiciada }
+					</p><code>
+						(6. GD2-F6
+					</code><p>
+						.{ @W encara estava a temps d'evitar ~GL5-H6+ }
+					</p><code>)
+						(6. RI3-I7
+					</code><p>
+						.{ @W una altra alternativa per a evitar ~GL5-H6+ }
+					</p><code>)
+						0-3
+					</code><p>
+						{ @W Ha de descuidar ~JF6 i ~EH4 }
+					</p><p>
+						{ @B Ataca ~K a salt de cavall amb ~G i ~N }
+					</p>
 				</div>
 			</section>
 			<section class="w3-container">
 				<h3 class="w3-container w3-pale-green w3-center header2 w3-text-grey">Lector mínim, i filtres</h3>
-				<p>Un lector mínim es limita a llegir els moviments de l'apartat de <i>CTL-AN</i>, i pot ignorar les
-					etiquetes; serà convenient, però, llegir l'etiqueta <i>PDTL</i>. Un <strong>lector mínim</strong> ha
-					de ser capaç de llegir un fitxer CTL-PGN <strong>sense variacions, ni comentaris, ni lletres
-						alternatives d'identificació de les peces</strong>, i pot <strong>ignorar les etiquetes</strong>
-					que pugui haver-hi.
+				<p>Un <strong>lector mínim</strong> es limita a llegir els moviments de l'apartat de <i>CTL-AN</i>,
+					que han de ser <i>algebraicament correctes</i>; és a dir, les <i>coordenades CTL</i> han de ser
+					correctes, cada moviment ha de representar una peça existent en l'origen i el destí ha de ser un
+					<i>hexcac</i> lliure, o en cas de captura la peça capturada també ha d'existir, de la mateixa
+					manera que ha d'existir el peó capturat en la captura al pas o del peó esquiu. La promoció
+					requereix un peó en posició de promoció, i els enrocs els llocs finals de les peces disponibles.
+					En canvi, <strong>no es verificaran les regles del joc</strong>, acceptant l'indicat
+					algebraicament: ni els moviments de les peces, ni els escacs, ni cap altra regla, únicament
+					coherència algebraica, però el lector ha de generar error si no es detecta aquesta coherència
+					algebraica.
 				</p>
-				<section class="w3-container">
-					<h4 class="w3-container w3-pale-yellow w3-center">
-						<span>Simplificació fitxer CTL-PGN</span>
-					</h4>
-					<p>Simplificar un fitxer CTL-PGN, fent-lo apte per a un <i>lector mínim</i>, és una tasca senzilla
-						fent servir uns <i>filtres</i>; veiem com fer-ho amb l'ordre <cite>sed</cite> de
-						<cite>GNU</cite> (<cite>Linux</cite>).
-					</p>
-					<p>El petit programa primer elimina tots els comentaris; això permet simplificar algunes situacions,
-						com ara el cas d'aparicions de parèntesis dins dels comentaris. Elimina els espais i els punts
-						a l'inici de les línies, elimina línies buides, treu l'etiqueta [Redefine " … "], i a
-						continuació
-						converteix totes les referències alternatives a peces pels noms estandaritzats. El resultat és
-						un fitxer <i>CTL-PGN</i> mínim, que només pot tenir variacions; donada la característica
-						recursiva
-						de les variacions, s'eliminen en una segona fase.
-					</p>
+				<p>Les etiquetes incorporen <i>metainformació</i> útil per a l'emmagatzematge i classificació de
+					les partides, els comentaris i les variacions afegeixen informació addicional. Únicament
+					afecten al contingut l'etiqueta <i>Redefine</i> i l'etiqueta <i>PDTL</i>.
+				</p>
+				<p>Un lector mínim verificarà l'etiqueta inicial i pot ignorar la resta d'etiquetes;
+					<strong>serà convenient, però, llegir l'etiqueta <i>PDTL</i></strong>, generant un error si no
+					és capaç de processar-la, i anàlogament per a les etiquetes <i>Redefine</i>. Un
+					<strong>lector mínim</strong> ha de ser capaç de llegir un fitxer CTL-PGN <strong>sense variacions,
+					ni comentaris, ni lletres alternatives d'identificació de les peces</strong>, és a dir, sense
+					etiquetes <i>Redefine</i>, i pot <strong>ignorar les etiquetes</strong> que pugui haver-hi,
+					excepte l'etiqueta inicial necessària.
+				</p>
+				<p>Les etiquetes <i>Redefine</i> modifiquen el contingut, i eliminar-les requereix una conversió prèvia.
+					Un filtre previ pot eliminar-les transformant el fitxer, eliminant també comentaris, variacions i
+					fins i tot valoracions, deixant una entrada neta, només amb la resta d'etiquetes, que el lector
+					mínim ha de ser capaç d'ignorar.
+				</p>
+				<p>L'etiqueta <strong><i>PDTL</i></strong> incorpora un context necessari per a representar
+					una partida ja iniciada, i, si el lector no és capaç d'interpretar-la, verificar la seva presència
+					permet detectar aviat la incoherència algebraica. L'etiqueta inicial
+					<strong><i>[Variant "C'escacs"]</i></strong> garanteix el tipus de contingut i serà sempre
+					un requisit.
+				</p>
+				<aside>
 					<section class="w3-container">
-						<h5 class="w3-container w3-light-grey w3-center w3-text-blue-grey">
-							<span>Programa de simplificació</span>
-						</h5>
-						<div class="w3-container w3-col" style="width:18em; margin: 0 0.4em;">
-							<a href="../noredefines.sed" target="_blank" class="w3-button w3-pale-yellow"
-								style="width:18em;" download>Download the file</a>
-								<p><small>Cal desar-ho a un fitxer anomenat <code>noredefines.sed</code>
-									que farem servir a la següent ordre;
-									Requereix tenir l'ordre <code>sed</code>, disponible a tots els sistemes
-									<i>Linux</i> i similars.</small>
+						<h4 class="w3-container w3-pale-yellow w3-center">
+							<span>Annex: Simplificació fitxer CTL-PGN</span>
+						</h4>
+						<p>Simplificar un fitxer CTL-PGN, fent-lo apte per a un <i>lector mínim</i>, és una tasca senzilla
+							fent servir uns <i>filtres</i>; veiem com fer-ho amb l'ordre <cite>sed</cite> de
+							<cite>GNU</cite> (<cite>Linux</cite>).
+						</p>
+						<p>El petit programa primer elimina tots els comentaris; això permet simplificar algunes situacions,
+							com ara el cas d'aparicions de parèntesis dins dels comentaris. Elimina els espais i els punts
+							a l'inici de les línies, elimina línies buides, treu les etiquetes [Redefine " … "], i a
+							continuació converteix totes les referències alternatives a peces pels noms estandaritzats.
+							El resultat és un fitxer <i>CTL-PGN</i> mínim, que només pot tenir variacions; donada la
+							característica recursiva de les variacions, s'eliminen en una segona fase.
+						</p>
+						<section class="w3-container">
+							<h5 class="w3-container w3-light-grey w3-center w3-text-blue-grey">
+								<span>Programa de simplificació</span>
+							</h5>
+							<div class="w3-container w3-col" style="width:18em; margin: 0 0.4em;">
+								<a href="../noredefines.sed" target="_blank" class="w3-button w3-pale-yellow"
+									style="width:18em;" download>Download the file</a>
+									<p><small>Cal desar-ho a un fitxer anomenat <code>noredefines.sed</code>
+										que farem servir a la següent ordre;
+										Requereix tenir l'ordre <code>sed</code>, disponible a tots els sistemes
+										<i>Linux</i> i similars.</small>
+									</p>
+								</div>
+							<div class="w3-container w3-rest" style="min-width:18em; margin: 0 0.4em;">
+								<p><small>Executant-lo amb <i>sed</i> per a un fitxer <i>file.ctl-pgn</i> obtenim un CTL-PGN quasi
+									mínim, però encara inclourà variacions.</small>
 								</p>
+								<p><small>Podem canviar el nom <i>file.ctl-pgn</i> pel nom del fitxer que volguem tractar:</small>
+								</p>
+								<div id="noredefines" onclick="fnSelect(this.id)"
+									style="white-space:nowrap; height:2.5em; overflow-x:auto;">
+									<code>sed -Ef noredefines.sed file.ctl-pgn</code>
+								</div>
 							</div>
-						<div class="w3-container w3-rest" style="min-width:18em; margin: 0 0.4em;">
-							<p><small>Executant-lo amb <i>sed</i> per a un fitxer <i>file.ctl-pgn</i> obtenim un CTL-PGN quasi
-								mínim, però encara inclourà variacions.</small>
-							</p>
-							<p><small>Podem canviar el nom <i>file.ctl-pgn</i> pel nom del fitxer que volguem tractar:</small>
-							</p>
-							<div id="noredefines" onclick="fnSelect(this.id)"
-								style="white-space:nowrap; height:2.5em; overflow-x:auto;">
-								<code>sed -Ef noredefines.sed file.ctl-pgn</code>
+							<div class="w3-container">
+								<p><small>Podem encadenar l'execució amb l'execució d'una altra ordre per a eliminar tots els
+										continguts entre parèntesis, ni que siguin imbrincats; el caràcter
+										<q><strong>|</strong></q> permet canalitzar la sortida del primer programa per a
+										fer-la servir com a entrada del segon:</small>
+								</p>
+								<div id="To-CTL-PGN-simple" onclick="fnSelect(this.id)"
+									style="white-space:nowrap; height:2.5em; overflow-x:auto;">
+									<code>sed -Ef noredefines.sed file.ctl-pgn  |  sed ':again;$!N;$!b again; :b; s/[(][^()]*[)]//g; tb; :m;s/\n\n/\n/g; tm;' </code>
+								</div>
+								<p><small>Podem enviar la sortida a un fitxer, per exemple <i>file-simple.ctl-pgn</i>; feu
+										clic en la línia, i copieu:</small>
+								</p>
+								<div id="To-CTL-PGN-simple-file" onclick="fnSelect(this.id)"
+									style="white-space:nowrap; height:2.5em; overflow-x:auto;">
+									<code>sed -Ef noredefines.sed file.ctl-pgn  |  sed ':again;$!N;$!b again; :b; s/[(][^()]*[)]//g; tb; :m;s/\n\n/\n/g; tm;' > file-simple.ctl-pgn </code>
+								</div>
 							</div>
-						</div>
-						<div class="w3-container">
-							<p><small>Podem encadenar l'execució amb l'execució d'una altra ordre per eliminar tots els
-									continguts entre parèntesis, ni que siguin imbrincats; el caràcter
-									<q><strong>|</strong></q> permet canalitzar la sortida del primer programa per
-									fer-la servir com a entrada del segon:</small>
-							</p>
-							<div id="To-CTL-PGN-simple" onclick="fnSelect(this.id)"
-								style="white-space:nowrap; height:2.5em; overflow-x:auto;">
-								<code>sed -Ef noredefines.sed file.ctl-pgn  |  sed ':again;$!N;$!b again; :b; s/[(][^()]*[)]//g; tb; :m;s/\n\n/\n/g; tm;' </code>
-							</div>
-							<p><small>Podem enviar la sortida a un fitxer, per exemple <i>file-simple.ctl-pgn</i>; feu
-									clic en la línia, i copieu:</small>
-							</p>
-							<div id="To-CTL-PGN-simple-file" onclick="fnSelect(this.id)"
-								style="white-space:nowrap; height:2.5em; overflow-x:auto;">
-								<code>sed -Ef noredefines.sed file.ctl-pgn  |  sed ':again;$!N;$!b again; :b; s/[(][^()]*[)]//g; tb; :m;s/\n\n/\n/g; tm;' > file-simple.ctl-pgn </code>
-							</div>
-						</div>
+						</section>
 					</section>
-				</section>
+				</aside>
 			</section>
 		</section>
 	</main>
