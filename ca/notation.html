@@ -704,14 +704,15 @@
 					<li>Una separació:
 						<ul>
 							<li>Per als <strong>moviments sense captura</strong>, un guionet
-								(<i>hyphen</i>) <q><strong>‐</strong></q> (U+2010), però també és
+								(<i>hyphen</i>) <q><strong>&#x2010;</strong></q> (U+2010), però també és
 								admisible el caracter de <i>guió polivalent</i> (<i>hyphen-minus</i>)
 								<q>-</q> (U+002D), que sempre hi és disponible en els teclats.
 							</li>
 							<li>En les <strong>captures</strong> se separa l'<i>hexcac d'origen</i> de
-								l'<i>hexcac de destí</i> amb el caracter <q><strong>×</strong></q> (U+00D7), el
-								<strong>símbol de <i>multiplicació</i></strong>, però amb l'ordinador es pot fer servir
-								el símbol <i>asterisc</i> <q><strong>*</strong></q>, més accessible amb el teclat.
+								l'<i>hexcac de destí</i> amb el caracter <q><strong>&times;</strong></q>
+								(U+00D7), el <strong>símbol de <i>multiplicació</i></strong>, però amb
+								l'ordinador es pot fer servir el símbol <i>asterisc</i>
+								<q><strong>*</strong></q>, més accessible amb el teclat.
 								<strong>Mai s'ha de fer servir la lletra <q>x</q>.</strong>
 								<ul>
 									<li>Per la <strong><a href="glossary.html#CapturaAlPas" class="cescacs"
@@ -719,7 +720,7 @@
 										<strong><a href="glossary.html#CapturaPeoEsquiu" class="cescacs"
 												target="_blank">captura del peó esquiu</a></strong> es fa servir el
 										caracter <q><strong>@</strong></q> (arrova), en comptes del caracter de
-										multiplicació <q>×</q>.
+										multiplicació <q>&times;</q>.
 									</li>
 									<li>Quan es <strong><a href="glossary.html#CapturaAlPas" class="cescacs"
 										target="_blank">captura al pas</a></strong> un peó que fa un
@@ -786,7 +787,7 @@
 						<a href="glossary.html#TorreDama" class="cescacs" target="_blank">torre de dama</a>, o
 						<q><i class="cescacs">KRR</i></q> per ambdues, en el cas del
 						<a href="glossary.html#EnrocDoble" class="cescacs" target="_blank">doble enroc</a>. Tot seguit
-						s'escriu un guionet (<i>hyphen</i>) <q>‐</q> (U+2010), o bé el guió polivalent
+						s'escriu un guionet (<i>hyphen</i>) <q>&#x2010;</q> (U+2010), o bé el guió polivalent
 						<i>hyphen-minus</i> <q>-</q> (U+002D), que és el generalment disponible en els teclats, i
 						finalment un identificador de dos caràcters indica la fila destí del <i>Rei</i> i la
 						<i>Torre</i>, tres caràcters en cas d'<i>doble enroc</i>, per a indicar les files d'ambdues
@@ -1158,10 +1159,10 @@
 						<strong><code>k</code></strong> per a les <i>negres</i>.
 					</li>
 					<li>Si el <i>Rei</i> ha estat mogut tindrem un guió
-						(<strong><code>‐</code></strong>), el mateix per al <i>Rei</i>
+						(<strong><code>&#x2010;</code></strong>), el mateix per al <i>Rei</i>
 						de les <i>blanques</i>, i per al de les <i>negres</i>; si ambdós
 						<i>Reis</i> han estat moguts, obtindrem dos guions
-						(<strong><code>‐‐</code></strong>).
+						(<strong><code>&#x2010;&#x2010;</code></strong>).
 					</li>
 				</ul>
 				<br />
@@ -1192,7 +1193,7 @@
 								</li>
 								<li><strong>Moviment triple</strong>: Es registra l'<i>hexcac</i> on hi és el peó, i,
 									separat amb el símbol arrova <strong>@</strong>, les dues línies on pot ser capturat,
-									separades amb un guió <strong>‐</strong>.
+									separades amb un guió <strong>&#x2010;</strong>.
 									Exemple: <code class="exemple">G13@9-11</code>
 								</li>
 							</ol>
@@ -1216,7 +1217,7 @@
 							</ul>
 						</li>
 						<li>Quan no es dona cap de les dues situacions, es fa servir un guió
-							<q><strong>‐</strong></q>.
+							<q><strong>&#x2010;</strong></q>.
 						</li>
 					</ol>
 				</section>
@@ -1280,7 +1281,7 @@
 				per l'adopció de la <a href="#Notacio" class="cite">notació <i>CTL-AN</i></a>. Ja
 				s'han vist algunes diferències de la notació <i>CTL-AN</i> amb la notació
 				<i>SAN</i>, algunes relatives, en realitat, al format en medis informàtics, com és
-				el cas del símbol <b>×</b>, remplaçable per un asterisc <i>*</i>, però mai per la
+				el cas del símbol <b>&times;</b>, remplaçable per un asterisc <i>*</i>, però mai per la
 				lletra <i>x</i>; també és destacable el format de data, ajustat als estàndards, que
 				fan servir el guionet com a separació, i sempre començant amb els quatre digits de
 				l'any. Els fitxers, donat que tots els sistemes de fitxers ja s'admeten extensions
@@ -1355,7 +1356,8 @@
 								<li><code>[Date "201?-??-??"]</code></li>
 							</ul>
 							<aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
-								Observar que es fa servir el guionet (<i>hyphen</i>) <q>‐</q> (U+2010),
+								Observar que es fa servir el guionet (<i>hyphen</i>) <q>&#x2010;</q>
+								(U+2010),
 								o bé el guió polivalent (<i>hyphen-minus</i> U+002D) com a separador
 								en el format de la data, en comptes del punt que fa servir <i>PGN</i>,
 								senzillament per ser un format més acord amb els estàndards de format
@@ -1365,10 +1367,10 @@
 						<li id="RoundTag">
 							<strong>Round</strong> <small>Per a competicions, però també per a
 							identificar diverses partides d'un mateix encontre; si no és aplicable
-							s'indica amb un guionet (<i>hyphen</i>) <q>‐</q> (U+2010), o bé un guió
+							s'indica amb un guionet (<i>hyphen</i>) <q>&#x2010;</q> (U+2010), o bé un guió
 							polivalent (<i>hyphen-minus</i>) <q>-</q> (U+002D).</small>
 							<ul class="exemple">
-								<li><code>[Round "‐"]</code></li>
+								<li><code>[Round "&#x2010;"]</code></li>
 							</ul>
 							<ul class="icon iconSlack">
 								<li style="margin-top:0">
@@ -1581,7 +1583,7 @@
 									<small>Es fa servir un identificador únic compartit per
 									totes les partides d'un encontre: un identificador
 									de l'editor, i separat per un guionet (<i>hyphen</i>)
-									<q><strong>‐</strong></q> (U+2010), o un <i>guió polivalent</i>
+									<q><strong>&#x2010;</strong></q> (U+2010), o un <i>guió polivalent</i>
 									(<i>hyphen-minus</i>) <q>-</q>, un número identificador, que
 									l'editor ha de garantir com a únic.</small>
 									<aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
@@ -1607,7 +1609,7 @@
 										</li>
 										<li><q><b>C</b></q> <small>(<i>Continuation</i>) fent servir una parella
 											de números per al primer i l'últim moviment registrats, separats per
-											un guionet (<i>hyphen</i>) <q><strong>‐</strong></q> (U+2010), o un
+											un guionet (<i>hyphen</i>) <q><strong>&#x2010;</strong></q> (U+2010), o un
 											<i>guió polivalent</i> (<i>hyphen-minus</i>) <q>-</q>.
 											Usualment farà referència a una obertura amb l'etiqueta
 											<code>Model</code>.</small>
@@ -1627,7 +1629,7 @@
 									si es desconeix el número del primer moviment, però llavors sempre
 									es requereix indicar a continuació el número de moviments
 									registrats, separat per un guionet (<i>hyphen</i>)
-									<q><strong>‐</strong></q> (U+2010), o un <i>guió polivalent</i>
+									<q><strong>&#x2010;</strong></q> (U+2010), o un <i>guió polivalent</i>
 									(<i>hyphen-minus</i>) <q>-</q>.
 								</p>
 								<p>S'afegirà al número del primer moviment una <q>b</q>, si el
@@ -2091,7 +2093,7 @@
 						[Event "CG"]
 						[Site "Barcelona, Catalunya ESP"]
 						[Date "2021-06-04"]
-						[Round "‐"]
+						[Round "&#x2010;"]
 						[White "Mestre, Rut"]
 						[Black "Sasal, Cesc"]
 						[Result "*"]
@@ -2099,8 +2101,8 @@
 					</code><p>
 						{ Introducció a C'escacs }
 					</p><code>
-						1. E7‐E13, E21‐E15
-						2. EE5-E11, G21‐G15
+						1. E7&#x2010;E13, E21&#x2010;E15
+						2. EE5-E11, G21&#x2010;G15
 					</code><p>
 						{ @W: ~E defensa ~PE13. @B: obre columna G }
 					</p><code>
@@ -2120,17 +2122,17 @@
 						[Result "0-3"]
 						1. E7-E13, E21-E15
 						2. EE5-E9, EE23-E19
-						3. D6-D12, E15×D12
-						4. EE9×D12, EE19-E17
+						3. D6-D12, E15&times;D12
+						4. EE9&times;D12, EE19-E17
 						5. E13-E15, C23-C17
 						6. C5-C11, C17-C15
-						7. ED12-D14, EE17×ED14
-						8. C11×ED14, D22-D16
-						9. E15@D18, JF24×D18
+						7. ED12-D14, EE17&times;ED14
+						8. C11&times;ED14, D22-D16
+						9. E15@D18, JF24&times;D18
 						10. A5-A9, B24-B18
 						11. B4-B10, B18-B14
-						12. A9-A11, B14×A11
-						13. GD2×A11, JF26×GA11
+						12. A9-A11, B14&times;A11
+						13. GD2&times;A11, JF26&times;GA11
 						14. B10-C11, ED24-D20
 						15. JF4-A19, JF22-B22
 						16. JA19-B16, DE27-B18
@@ -2140,17 +2142,17 @@
 						20. ED4-E7, GD26-T14
 						21. NG3-A5, GT14-B8
 						22. RC3-B4, GB8-C5
-						23. DE1-C3, GC5×JD10
+						23. DE1-C3, GC5&times;JD10
 						24. NA5-C9, GD10-F14
-						25. RB4×DB18, JD18×RB18
+						25. RB4&times;DB18, JD18&times;RB18
 						26. NC9-B14, GH26-K22
 						27. EE7-E11, GK22-E7+
-						28. KG1-E1, GE7×DC3
+						28. KG1-E1, GE7&times;DC3
 						29. JF6-E3, GC3-E7
 						30. VF0-E5, JD16-C13
-						31. EE11×GF14, GE7-G1^+
-						32. RI3×GG1, JC13×RG1^+
-						33. VE5×JG1, ED20-D16
+						31. EE11&times;GF14, GE7-G1^+
+						32. RI3&times;GG1, JC13&times;RG1^+
+						33. VE5&times;JG1, ED20-D16
 						34. NC7-G15, C15-C13
 						35. GI7-F16, NE25-A17
 						36. GF16-D20, RE23-E21
@@ -2162,11 +2164,11 @@
 						42. NG15-I25, RI21-X18
 						43. GX16-Z13, RX18-X6
 						44. VG1-E5, RX6-E13
-						45. VE5-C3, RE13×JE3^+
+						45. VE5-C3, RE13&times;JE3^+
 						46. KE1-G1, VE23-E9
 						47. GZ13-L9, VE9-B6
-						48. GL9-C9, RE3×JF2^+
-						49. VC3×RF2, VB6-D10
+						48. GL9-C9, RE3&times;JF2^+
+						49. VC3&times;RF2, VB6-D10
 						50. GC9-D6, VD10-E5#						
 					</code>
 				</div>
@@ -2246,9 +2248,9 @@
 						.{ @W: Desplaçant P amenaça ~GL5 amb ~RI3.
 							@B: L'escac sense reforç no prosperarà, però guanyarà ~RI3 }
 					</p><code>
-						.6. KG1-H4, GH6×RI3
+						.6. KG1-H4, GH6&times;RI3
 						.(6. …, GH6-K12)
-						.7. KH4×GI3)
+						.7. KH4&times;GI3)
 						6. K4-K10 ??, GL5-H6#
 					</code><p>
 						{ @W: Última oportunitat de reacció desperdiciada }

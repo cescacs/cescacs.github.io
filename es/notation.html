@@ -708,12 +708,12 @@
 					<li>Una separación:
 						<ul>
 							<li>Para los <strong>movimientos sin captura</strong>, un guión (<i>hyphen</i>)
-								<q><strong>‐</strong></q> (U+2010), pero también es admisible el caracter
+								<q><strong>&#x2010;</strong></q> (U+2010), pero también es admisible el caracter
 								de <i>guión polivalente</i> (<i>hyphen-minus</i>) <q>-</q> (U+002D), que
 								siempre está disponible en los teclados.
 							</li>
 							<li>En las <strong>capturas</strong> se separa el <i>hexcaque de origen</i> del
-								<i>hexcaque de destino</i> con el caracter <q><strong>×</strong></q> (U+00D7), el
+								<i>hexcaque de destino</i> con el caracter <q><strong>&times;</strong></q> (U+00D7), el
 								<strong>símbolo de <i>multiplicación</i></strong>, pero con el ordenador se puede usar
 								el símbolo <i>asterisco</i> <q><strong>*</strong></q>, más accessible con el teclado.
 								<strong>Nunca se ha de usar la letra <q>x</q>.</strong>
@@ -723,7 +723,7 @@
 										<strong><a href="glossary.html#CapturaPeoEsquiu" class="cescacs"
 												target="_blank">captura del peón esquivo</a></strong> se usa el
 										caracter <q><strong>@</strong></q> (arroba), en lugar del caracter de
-										multiplicación <q>×</q>.
+										multiplicación <q>&times;</q>.
 									</li>
 									<li>Cuando se <strong><a href="glossary.html#CapturaAlPas" class="cescacs"
 										target="_blank">captura al paso</a></strong> un peón que hace un movimiento triple
@@ -790,7 +790,7 @@
 						<a href="glossary.html#TorreDama" class="cescacs" target="_blank">torre de dama</a>,
 						o <q><i class="cescacs">KRR</i></q> cuando usa ambas, en el caso del
 						<a href="glossary.html#EnrocDoble" class="cescacs" target="_blank">doble enroque</a>.
-						A continuación se escribe un guion <q>‐</q> (U+2010), o bien el guión polivalente 
+						A continuación se escribe un guion <q>&#x2010;</q> (U+2010), o bien el guión polivalente 
 						(<i>hyphen-minus</i>) <q>-</q> (U+002D), que es lo generalmente disponible en los
 						teclados, y finalmente un identificador de dos caracteres indica la fila destino del
 						<i>Rey</i> y la <i>Torre</i>, tres caracteres en caso de doble enroque, para indicar
@@ -1162,10 +1162,10 @@
 						<strong><code>k</code></strong> para las <i>negras</i>.
 					</li>
 					<li>Si el <i>Rey</i> se ha movido tendremos un guión
-						(<strong><code>‐</code></strong>), lo mismo para el
+						(<strong><code>&#x2010;</code></strong>), lo mismo para el
 						<i>Rey</i> de las <i>blancas</i>, y para el de las <i>negras</i>;
 						si ambos <i>Reyes</i> se han movido, obtendremos dos guiones
-						(<strong><code>‐‐</code></strong>).
+						(<strong><code>&#x2010;&#x2010;</code></strong>).
 					</li>
 				</ul>
 				<br />
@@ -1199,7 +1199,7 @@
 								<li><strong>Movimiento triple</strong>: Se registra el <i>hexcaque</i> donde
 									está el peón, y, separado con el símbolo arroba <strong>@</strong>, las
 									dos líneas donde puede ser capturado, separadas con un guion
-									<strong>-</strong>. Ejemplo: <code class="exemple">G13@9-11</code>
+									<strong>&#x2010;</strong>. Ejemplo: <code class="exemple">G13@9-11</code>
 								</li>
 							</ul>
 						</li>
@@ -1226,7 +1226,7 @@
 							</ul>
 						</li>
 						<li>Cuando no se da ninguna de las dos situaciones,
-							se usa un guion <q><strong>-</strong></q>.
+							se usa un guion <q><strong>&#x2010;</strong></q>.
 						</li>
 					</ol>
 				</section>
@@ -1297,7 +1297,7 @@
 				por la adopción de la <a href="#Notacio" class="cite">notación <i>CTL-AN</i></a>. Ya
 				se han visto algunas diferencias de la notación <i>CTL-AN</i> con la notación
 				<i>SAN</i>, algunas relativas, en realidad, al formato en medios informáticos,
-				como el caso del símbolo <b>×</b>, remplazable por un asterisco <i>*</i>, però
+				como el caso del símbolo <b>&times;</b>, remplazable por un asterisco <i>*</i>, però
 				nunca por la letra <i>x</i>; también es destacable el formato de fecha, ajustado
 				a los estándares, que utilizan el guión como separación, y siempre comenzando con
 				los cuatro dígitos del año. Los ficheros, puesto que todos los sistemas de ficheros
@@ -1372,7 +1372,7 @@
 								<li><code>[Date "201?-??-??"]</code></li>
 							</ul>
 							<aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
-								Observar que se usa el guión (<i>hyphen</i>),
+								Observar que se usa el guión (<i>hyphen</i>) <q>&#x2010;</q> (U+2010),
 								o bien el guión polivalente (<i>hyphen-minus</i> U+002D), como separador
 								en el formato de la fecha, en lugar del punto que usa <i>PGN</i>,
 								sencillamente por ser un formato más acorde con los estándares de
@@ -1382,10 +1382,10 @@
 						<li id="RoundTag">
 							<strong>Round</strong> <small>Para competiciones, pero también para
 							identificar diversea partidas de un mismo encuentro; si no es aplicable
-							se indica con un guión (<i>hyphen</i>) <q>‐</q> (U+2010), o con el guión
+							se indica con un guión (<i>hyphen</i>) <q>&#x2010;</q> (U+2010), o con el guión
 							polivalente (<i>hyphen-minus</i>) <q>-</q> (U+002D).</small>
 							<ul class="exemple">
-								<li><code>[Round "‐"]</code></li>
+								<li><code>[Round "&#x2010;"]</code></li>
 							</ul>
 							<ul class="icon iconSlack">
 								<li style="margin-top:0">
@@ -1597,7 +1597,7 @@
 									<small>Se usa un identificador único compartido por
 									todas las partidas de un encuentro: un identificador
 									del editor, y separado por un guión (<i>hyphen</i>)
-									<q><strong>‐</strong></q> (U+2010), o un <i>guión polivalente</i>
+									<q><strong>&#x2010;</strong></q> (U+2010), o un <i>guión polivalente</i>
 									(<i>hyphen-minus</i>) <q>-</q>, un número identificador, que
 									el editor debe garantizar que sea único.</small>
 									<aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
@@ -1624,7 +1624,7 @@
 										</li>
 										<li><q><b>C</b></q> <small>(<i>Continuation</i>) usando una pareja
 											de números para el primero y el último movimiento registrados,
-											separados por un guion <q><strong>‐</strong></q> (U+2010), o un
+											separados por un guion <q><strong>&#x2010;</strong></q> (U+2010), o un
 											<i>guion polivalente</i> (<i>hyphen-minus</i>) <q>-</q>.
 											Usualmente hará referencia a una apertura con la etiqueta
 											<code>Model</code>.</small>
@@ -1643,7 +1643,7 @@
 								<p>Se usará un <q>?</q> en lugar del número de movimiento inicial,
 									si se desconoce el número del primer movimiento, pero entonces
 									siempre se requiere indicar, a continuación, separado por un
-									guión (<i>hyphen</i>) <q><strong>‐</strong></q> (U+2010), o un
+									guión (<i>hyphen</i>) <q><strong>&#x2010;</strong></q> (U+2010), o un
 									<i>guión polivalente</i> (<i>hyphen-minus</i>) <q>-</q>, el
 									número de movimientos registrados.
 								</p>
@@ -2111,7 +2111,7 @@
 						[Event "CG"]
 						[Site "Barcelona, Catalunya ESP"]
 						[Date "2021-06-04"]
-						[Round "‐"]
+						[Round "&#x2010;"]
 						[White "Mestre, Rut"]
 						[Black "Sasal, Cesc"]
 						[Result "*"]
@@ -2119,8 +2119,8 @@
 					</code><p>
 						{ Introducción a C'escacs }
 					</p><code>
-						1. E7‐E13, E21‐E15
-						2. EE5-E11, G21‐G15
+						1. E7&#x2010;E13, E21&#x2010;E15
+						2. EE5-E11, G21&#x2010;G15
 					</code><p>
 						{ @W: ~E defiende ~PE13. @B: abre columna G }
 					</p><code>
@@ -2140,17 +2140,17 @@
 						[Result "0-3"]
 						1. E7-E13, E21-E15
 						2. EE5-E9, EE23-E19
-						3. D6-D12, E15×D12
-						4. EE9×D12, EE19-E17
+						3. D6-D12, E15&times;D12
+						4. EE9&times;D12, EE19-E17
 						5. E13-E15, C23-C17
 						6. C5-C11, C17-C15
-						7. ED12-D14, EE17×ED14
-						8. C11×ED14, D22-D16
-						9. E15@D18, JF24×D18
+						7. ED12-D14, EE17&times;ED14
+						8. C11&times;ED14, D22-D16
+						9. E15@D18, JF24&times;D18
 						10. A5-A9, B24-B18
 						11. B4-B10, B18-B14
-						12. A9-A11, B14×A11
-						13. GD2×A11, JF26×GA11
+						12. A9-A11, B14&times;A11
+						13. GD2&times;A11, JF26&times;GA11
 						14. B10-C11, ED24-D20
 						15. JF4-A19, JF22-B22
 						16. JA19-B16, DE27-B18
@@ -2160,17 +2160,17 @@
 						20. ED4-E7, GD26-T14
 						21. NG3-A5, GT14-B8
 						22. RC3-B4, GB8-C5
-						23. DE1-C3, GC5×JD10
+						23. DE1-C3, GC5&times;JD10
 						24. NA5-C9, GD10-F14
-						25. RB4×DB18, JD18×RB18
+						25. RB4&times;DB18, JD18&times;RB18
 						26. NC9-B14, GH26-K22
 						27. EE7-E11, GK22-E7+
-						28. KG1-E1, GE7×DC3
+						28. KG1-E1, GE7&times;DC3
 						29. JF6-E3, GC3-E7
 						30. VF0-E5, JD16-C13
-						31. EE11×GF14, GE7-G1^+
-						32. RI3×GG1, JC13×RG1^+
-						33. VE5×JG1, ED20-D16
+						31. EE11&times;GF14, GE7-G1^+
+						32. RI3&times;GG1, JC13&times;RG1^+
+						33. VE5&times;JG1, ED20-D16
 						34. NC7-G15, C15-C13
 						35. GI7-F16, NE25-A17
 						36. GF16-D20, RE23-E21
@@ -2182,11 +2182,11 @@
 						42. NG15-I25, RI21-X18
 						43. GX16-Z13, RX18-X6
 						44. VG1-E5, RX6-E13
-						45. VE5-C3, RE13×JE3^+
+						45. VE5-C3, RE13&times;JE3^+
 						46. KE1-G1, VE23-E9
 						47. GZ13-L9, VE9-B6
-						48. GL9-C9, RE3×JF2^+
-						49. VC3×RF2, VB6-D10
+						48. GL9-C9, RE3&times;JF2^+
+						49. VC3&times;RF2, VB6-D10
 						50. GC9-D6, VD10-E5#						
 					</code>
 				</div>
@@ -2266,9 +2266,9 @@
 						.{ @W: Desplazando P amenaza ~GL5 con ~RI3.
 							@B: El jaque sin refuerzo no prosperará, pero ganará ~RI3 }
 					</p><code>
-						.6. KG1-H4, GH6×RI3
+						.6. KG1-H4, GH6&times;RI3
 						.(6. …, GH6-K12)
-						.7. KH4×GI3)
+						.7. KH4&times;GI3)
 						6. K4-K10 ??, GL5-H6#
 					</code><p>
 						{ @W: Última oportunidad de reacción desperdiciada }
