@@ -424,7 +424,8 @@ div.glossary-box {
 }
 
 aside,
-div.note {
+div.note,
+section.note {
   border: 1px solid WhiteSmoke;
   background-color: rgba(200, 200, 255, 0.1);
   font-size: 84%;
