@@ -217,7 +217,20 @@ figure.fig200 {
   padding-left: 6px;
   text-align: center;
 }
-
+figure.fig250 {
+  width: 250px;
+  padding-left: 6px;
+  padding-top: 6px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+figure.fig300 {
+  width: 300px;
+  padding-left: 6px;
+  padding-top: 6px;
+  padding-bottom: 10px;
+  text-align: center;
+}
 figure.fig400 {
   width: 400px;
   padding-left: 6px;
