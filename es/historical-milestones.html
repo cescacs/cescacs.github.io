@@ -4340,7 +4340,7 @@
 						soviéticos, dirigida por el futuro campeón del mundo <i>Mikhaïl Botvínnik</i>,
 						empezaron a obtener una serie de victorias sobre competidores internacionales
 						que sorprendió el mundo. Los jugadores soviéticos dominaron el ajedrez desde
-						1948 hasta 2006, con la única excepción de <i>Boby Fisher</i> entre 1972 y
+						1948 hasta 2006, con la única excepción de <i>Boby Fischer</i> entre 1972 y
 						1975.
 					</p>
 					<p>Este largo periodo de dominación soviética a menudo se denomina la
@@ -4361,7 +4361,7 @@
 					</p>
 					<p>A menudo la <i>Escuela Soviética de Ajedrez</i> se considera únicamente desde
 						1948 hasta 1972, momento de la derrota de los soviéticos por
-						<i>Boby Fisher</i>.
+						<i>Boby Fischer</i>.
 					</p>
 					<p>Se pueden ver algunos ejemplos de partidas y problemas de la <i>Escuela Soviética</i>
 						en el <a href="https://www.chess.com/es/article/view/la-escuela-sovietica-de-ajedrez"
@@ -4856,10 +4856,10 @@
 								como <i>una victoria de nuestra cultura socialista</i>.
 							</p>
 						</section>
-						<!-- El paréntesis de Bobby Fisher -->
+						<!-- El paréntesis de Bobby Fischer -->
 						<section>
 							<h5 class="w3-container w3-pale-yellow header5 w3-opacity">
-								<span>El paréntesis de Bobby Fisher</span>
+								<span>El paréntesis de Bobby Fischer</span>
 							</h5>
 							<p>En la clasificación para el Campeonato del mundo de 1972
 								<strong><i>Bobby Fischer</i></strong>, desués de totalizar en un cierto
@@ -7100,6 +7100,101 @@
 					se perseguía, definiendo finalmente los <i>elefantes</i>.
 				</p>
 			</section>
+			<!-- Ajedrez aleatório de Fischer -->
+			<section id="Fischer" class="w3-container">
+				<h3 class="w3-container w3-pale-green w3-center w3-text-grey">
+					Ajedrez aleatório de Fischer
+				</h3>
+				<figure class="tbigright fig250">
+					<img src="../img/Chess960_example_init_position.webp" class="fullwidth"
+							alt="Exemple de posició dels escacs aleatoris de Fischer">
+					<figcaption class="thumbcaption">Exemple de posició
+						dels escacs aleatoris de Fischer.
+						<div class="thanks">
+							picture: Ihardlythinkso, CC0, via Wikimedia Commons
+						</div>
+					</figcaption>
+				</figure>
+				<p>Els <i>escacs aleatoris de Fischer</i>, també anomenats <strong><i>escacs 960</i></strong>,
+					pel nombre de combinacions de la posició d'inici possibles, són l'única variant
+					que la mateixa <i>FIDE</i> ha promocionat, organitzant torneigs internacionals.
+				</p>
+				<p>Les obertures dels escacs clàssics han estat molt estudiades, i els primers
+					moviments d'una partida generalment són moviments <i>dins del llibre</i>, és
+					a dir, moviments ja estudiats com els més convenients per a una determinada
+					obertura, i que els jugadors senzillament <i>memoritzen</i>. <i>Bobby Fischer</i>,
+					qui no hi era còmode amb aquesta situació (veure
+					<a href="./the-corner.html#FischerInterview" class="cite"
+						target="_blank">entrevista</a>) va inventar aquesta variant en 1996, de
+					manera que <strong>les peces es posicionen aleatòriament</strong>; habitualment
+					es fan <strong>dues partides amb la mateixa disposició, canviant blanques i
+					negres</strong> entre els jugadors.
+				</p>
+				<p>Existeixen <strong>960 diferents combinacions</strong>, i això, junt amb la
+					elevada combinatòria dels mateixos escacs, pràcticament elimina l'opció de
+					les obertures <i>memoritzades</i> pels jugadors. Una d'aquestes
+					combinacions és <strong>la combinació clàssica dels escacs</strong>, però
+					<strong>quan surt per atzar aquesta combinació, es descarta</strong> i es tria
+					una altra; la combinació clàssica, però <strong>permutant les posicions
+					del <i>Rei</i> i la <i>Dama</i> també es descarta</strong> (en realitat, és la
+					posició clàssica per a les negres); encara queden 958 combinacions.
+				</p>
+				<p>Tots els <i>peons</i> fan servir les seves posicions habituals, i les peces
+					negres en mirall de la posició de les blanques. Per posicionar les peces
+					s'ha de complir que un dels <i>alfils</i> es posiciona en blanc, i l'altre en
+					negre; a més, el <i>Rei</i> es trobarà posicionat entre les dues <i>Torres</i>,
+					doncs aquesta disposició permet l'enroc.
+				</p>
+				<section>
+					<h4 class="w3-pale-yellow w3-text-grey"><span>Posició inicial</span></h4>
+					<p>Per complir els requeriments, habitualment es comença posicionant les peces
+						blanques, primer els <i>alfils</i>, i es deixen els tres últims llocs per
+						al <i>Rei</i> i les dues <i>Torres</i>; per exemple, la proposta de
+						<i>Hans L. Bodlaender</i>:
+					</p>
+					<ol>
+						<li>Un dau entre 1 i 4 per posicionar l'<i>Alfil negre</i>.</li>
+						<li>Un dau entre 1 i 4 per posicionar l'<i>Alfil blanc</i>.</li>
+						<li>Un dau per posicionar la <i>Dama</i>.</li>
+						<li>Un dau entre 1 i 5 per posicional un <i>cavall</i>.</li>
+						<li>Un dau entre 1 i 4 per posicional l'altre <i>cavall</i>.</li>
+						<li>En les tres posicions restants, el <i>Rei</i> i les dues <i>Torres</i>,
+							posicionant en mig el <i>Rei</i>.
+						</li>
+					</ol>
+					<p class="w3-small">Les caselles es conten d'esquerra a dreta; quan surt un
+						número més gran que el nombre de caselles buides, es torna a tirar el dau.
+					</p>
+					<p>Combinacions: 4 * 4 * 6 * 5 * 4 = 1920, però els dos <i>cavalls</i> són
+						indistingibles, així que les combinacions són la meitat, 1920 / 2 = 960.
+					</p>
+				</section>
+				<section>
+					<h4 class="w3-pale-yellow w3-text-grey">Enroc</h4>
+					<p>De la mateixa manera que en els escacs clàssics, es defineixen dos moviments
+						d'enroc:
+					</p>
+					<ol>
+						<li>Enroc cap a la fila <i>a</i> (esquerra en el blanc, dreta en el negre).
+							Seria l'enroc llarg en els escacs clàssics: 0-0-0.
+						</li>
+						<li>Enroc cap a la fila <i>h</i> (dreta en el blanc, esquerra en el negre).
+							Seria l'enroc curt en els escacs clàssics: 0-0.
+						</li>
+					</ol>
+					<p><strong>Les posicions finals, després de l'enroc, són les mateixes posicions
+						finals dels escacs clàssics</strong>, indiferentment de les posicions inicials
+						del <i>Rei</i> i la <i>Torre</i>. Ha d'anar-se amb compte, perquè les caselles
+						entravessades pel <i>Rei</i> no poden estar amenaçades.
+					</p>
+				</section>
+				<p>Recordem que la <i>FIDE</i> organitza campionats. Podem llegir alguna anèctoda i
+					veure alguna partida en 
+					<a href="https://www.chess.com/es/article/view/ajedrez-fischer-random-historias"
+						class="cite" target="_blank">l'article de <i>Luis Fernández Siles</i>
+						en https://www.chess.com</a>
+				</p>
+			</section>
 			<!-- Ajedrez de Alícia -->
 			<section id="Alicia" class="w3-container">
 				<h3 class="w3-container w3-pale-green w3-center w3-text-grey">
@@ -7112,7 +7207,7 @@
 						portada del llibre.
 					</figcaption>
 				</figure>
-				<p>El <strong><i>ajedrez de Alicia</i></strong>, inventado por
+				<p>El <strong><i>ajedrez de Alicia</i></strong> es una creación de
 					<a href="https://en.wikipedia.org/wiki/V._R._Parton" class="cite"
 						target="_blank"><b>Vernon Rylands Parton</b></a>, inventor de múltiples
 					variantes del ajedrez, muchas de ellas muy interesantes, y a menudo inspiradas en las
