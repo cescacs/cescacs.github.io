@@ -1,3 +1,4 @@
 not-used/
-cescacs.typescript/dist/
+cescacs.typescript/dist/src/
+cescacs.typescript/dist/test/
 cescacs.typescript/ts/src/alpha-beta.ts
