@@ -69,7 +69,7 @@ then
   echo "  $(pwd)/cescacs.typescript"
   exit exit_abnormal
 fi
-source ./makejs.sh -o
+source ./makejs.sh -mo
 if [ $? -ne 0 ] 
 then
   exit $?
