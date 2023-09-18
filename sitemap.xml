@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<!-- MAIN PAGES -->
+<url>
+  <loc>http://cescacs.orgfree.com/</loc>
+  <lastmod>2023-09-11T01:55:38+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://cescacs.orgfree.com/index.es.html</loc>
+  <lastmod>2023-09-11T01:55:38+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://cescacs.orgfree.com/index.en.html</loc>
+  <lastmod>2023-09-11T01:55:38+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<!-- MORE RULES -->
+<url>
+  <loc>http://cescacs.orgfree.com/ca/castling.html</loc>
+  <lastmod>2023-09-11T01:55:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://cescacs.orgfree.com/ca/notation.html</loc>
+  <lastmod>2023-09-18T11:25:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://cescacs.orgfree.com/es/castling.html</loc>
+  <lastmod>2023-09-11T01:55:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://cescacs.orgfree.com/es/notation.html</loc>
+  <lastmod>2023-09-18T11:26:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://cescacs.orgfree.com/en/castling.html</loc>
+  <lastmod>2023-09-11T01:55:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://cescacs.orgfree.com/en/notation.html</loc>
+  <lastmod>2023-09-18T11:26:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<!-- JAVASCRIPT GAME -->
+<url>
+  <loc>http://cescacs.orgfree.com/cescacs.typescript/cescacs.game.html</loc>
+  <lastmod>2023-09-18T11:25:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://cescacs.orgfree.com/board.html</loc>
+  <lastmod>2023-09-11T01:55:37+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://cescacs.orgfree.com/und/coordenates.html</loc>
+  <lastmod>2023-09-11T01:55:38+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<!-- ADDITIONAL CONTENT -->
+<url>
+  <loc>http://cescacs.orgfree.com/ca/historical-milestones.html</loc>
+  <lastmod>2023-09-11T13:55:15+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://cescacs.orgfree.com/es/historical-milestones.html</loc>
+  <lastmod>2023-09-11T13:56:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://cescacs.orgfree.com/en/historical-milestones.html</loc>
+  <lastmod>2023-09-11T13:56:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://cescacs.orgfree.com/ca/glossary.html</loc>
+  <lastmod>2023-09-18T11:25:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://cescacs.orgfree.com/es/glossary.html</loc>
+  <lastmod>2023-09-18T11:26:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://cescacs.orgfree.com/en/glossary.html</loc>
+  <lastmod>2023-09-18T11:26:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<!-- anecdotic content -->
+<url>
+  <loc>http://cescacs.orgfree.com/ca/the-corner.html</loc>
+  <lastmod>2023-09-11T01:55:37+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://cescacs.orgfree.com/es/the-corner.html</loc>
+  <lastmod>2023-09-11T01:55:37+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://cescacs.orgfree.com/en/the-corner.html</loc>
+  <lastmod>2023-09-11T01:55:37+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://cescacs.orgfree.com/other/minihexchess.pdf</loc>
+  <lastmod>2023-09-11T01:55:37+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://cescacs.orgfree.com/es/Antonio.Gude.H.Ajedrez.html</loc>
+  <lastmod>2023-09-11T01:55:37+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<!-- ABOUT -->
+<url>
+  <loc>http://cescacs.orgfree.com/ca/about.html</loc>
+  <lastmod>2023-09-11T01:55:37+00:00</lastmod>
+  <priority>0.34</priority>
+</url>
+<url>
+  <loc>http://cescacs.orgfree.com/es/about.html</loc>
+  <lastmod>2023-09-11T01:55:37+00:00</lastmod>
+  <priority>0.34</priority>
+</url>
+<url>
+  <loc>http://cescacs.orgfree.com/en/about.html</loc>
+  <lastmod>2023-09-11T01:55:37+00:00</lastmod>
+  <priority>0.34</priority>
+</url>
+<!-- NOT RELATED CONTENT -->
+<url>
+  <loc>http://cescacs.orgfree.com/ca/historical-context.html</loc>
+  <lastmod>2023-09-11T01:55:37+00:00</lastmod>
+  <priority>0.34</priority>
+</url>
+<url>
+  <loc>http://cescacs.orgfree.com/es/historical-context.html</loc>
+  <lastmod>2023-09-11T01:55:37+00:00</lastmod>
+  <priority>0.34</priority>
+</url>
+<url>
+  <loc>http://cescacs.orgfree.com/en/historical-context.html</loc>
+  <lastmod>2023-09-11T01:55:37+00:00</lastmod>
+  <priority>0.34</priority>
+</url>
+<url>
+  <loc>http://cescacs.orgfree.com/working.html</loc>
+  <lastmod>2023-09-11T01:55:37+00:00</lastmod>
+  <priority>0.01</priority>
+</url>
+</urlset>
