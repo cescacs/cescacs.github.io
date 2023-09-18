@@ -1631,79 +1631,136 @@
 					</p>
 					<div class="w3-container">
 						<h3 class="w3-container w3-light-grey w3-center header2 w3-text-blue-grey">Ejemplos</h3>
-						<div class="w3-left caixa-exemple-ctl-pgn" style="width:22em">
+						<!-- Rut -->
+						<div class="w3-left ctl-pgn ctl-pgn-box">
 							<code>[Variant "C'escacs"]
 								[Event "CG"]
 								[Site "Barcelona, Catalunya ESP"]
 								[Date "2021-06-04"]
-								[Round "‐"]
+								[Round "&#x2010;"]
 								[White "Mestre, Rut"]
 								[Black "Sasal, Cesc"]
 								[Result "*"]
+								[Annotator "Cescacs"]
+								[Annotator "Sasal, Cesc"]
 								[Lang "es"]
+							</code><p>
 								{ Introducción a C'escacs }
-								1. E7‐E13, E21‐E15
-								2. EE5-E11, G21‐G15
-								{ @W: E defiende PE13 }
-								{ @N: abre columna G }
+							</p><code>
+								1. E7&#x2010;E13, E21&#x2010;E15
+								2. EE5-E11, G21&#x2010;G15
+							</code><p>
+								{ @W: ~E defiende ~PE13. @B: abre columna G }
+							</p><code>
 								3. G7-E13:
 								*
+							</code><p>
 								{ inacabada }
+							</p>
+						</div>
+						<!-- 2020-07-20 -->
+						<div class="w3-left ctl-pgn ctl-pgn-box">
+							<code>[Variant "C'escacs"]
+								[Id "Cescacs-A0001-24"]
+								[Annotator "Cescacs"]
+								[AnnotatorId "0001"]
+								[Date "2020-07-20"]
+								[Result "0-3"]
+								1. E7-E13, E21-E15
+								2. F8-F12, F20-F16
+								3. E13×F16, E15×F12
+								4. EG5-F8, EG23-F20
+								5. G7-G13, F12@@G9
+								6. JF6×G9, EF20×F16
+								7. JF4-D10, NE25-C15
+								8. EE5-E7, NC15-F14
+								9. EF8-F12, EE23-E19
+								10. EF12×NF14, EF16×EF14
+								11. JF2-D8, EE19-E17
+								12. EE7-E11, EF14×EE11
+								13. JD8×EE11, EE17-E13
+								14. JD10×EE13, DE27×JE13
+								15. GH2-F8, DE13-B10
+								16. NE3-C7, DB10-D10+∞
+								17. NG3-E7, GD26×L5
+								18. GD2-E5, DD10-K10
+								19. I5-I7, DK10-K6
+								20. RI3-H2, GL5×GE5+^
+								21. DE1×GE5, KRD-DE
+								22. JE11×A23, GH26-G23
+								23. DE5-A17, JF26-E23
+								24. NE7-C17, D22-D20
+								25. NC17-T18, JF22-C13+∞
+								26. KG1-E1, DK6-E21+∞
+								27. VF0-E5, DE21-K16+∞
+								28. KE1-D2, JE23-K8
+								29. NT18-B22+^, KD26-C25
+								30. JA23×C23, GG23×JC23
+								31. GF8-B20+^, GC23×GB20
+								32. DA17×GB20, RE27×VE5
+								33. DB20-C19+∞, ED24-C21
+								34. RH2×RE5, DK16-F20
+								35. DC19-E25#
 							</code>
 						</div>
-						<div class="w3-left caixa-exemple-ctl-pgn" style="width:22em">
+						<!-- 2023-09-08 -->
+						<div class="w3-left ctl-pgn ctl-pgn-box">
 							<code>[Variant "C'escacs"]
-								[Id "Cescacs-X01-es"]
-								[Lang "es"]
-								{ Mate del loco }
-								1. H6-H12 ?!, I23-I19 ?!
-								{ @W: curioso peón de apertura }
-								2. JF6-C15 ?!, GH26-Z11 ?!
-								{ @W: alfil para cubrir 15 pero descuida defensa K }
-								3. L5-L7, NG25-L17 ?!
-								4. EH4-H8 ??, GZ11-L5
-								{ @W: Retirar E de H4 deja K desatendido }
-								5. I5-I9 ??, NL17-G9
-								{ @W: Movimiento irrelevante ?? }
-								{ @B: Posiciona N }
-								6. K4-K10 ??, GL5-H6#
-								{ @W: Movimiento irrelevante ?? }
-								0-3
-								{ @N Ha de descuidar JF6 y EH4 }
-								{ @W Ataca K con salto de caballo }
-						</code>
-						</div>
-						<div class="w3-left caixa-exemple-ctl-pgn" style="width:22em">
-							<code>[Variant "C'escacs"]
-								[Id "Cescacs-X01-es-V"]
-								[Lang "es"]
-								{ Mate del loco }
-								1. H6-H12 ?!, I23-I19 ?!
-								{ @W: curioso peón de apertura }
-								2. JF6-C15 ?!, GH26-Z11 ?!
-								{ @W: alfil para cubrir 15 pero descuida defensa K }
-								3. L5-L7, NG25-L17 ?!
-								4. EH4-H8 ??, GZ11-L5
-								{ @W: Retirar E de H4 deja K desatendido }
-								(4. G7-G13)
-								(4. GD2-F6)
-								5. I5-I9 ??, NL17-G9
-								{ @W: Movimiento irrelevante ?? }
-								{ @B: Posiciona N }
-								(5. K4-K10, GL5-H6+
-								.{ @W: Desplazando P amenaza GL5 amb RI3 }
-								.{ @B: El jaque sin refuerzo no prosperará }
-								.6. KG1-H4, GH6-I11
-								.(6. …, GH6xRI3)
-								.(6. …, GH6-K12))
-								6. K4-K10 ??, GL5-H6#
-								{ @W: Movimiento irrelevante ?? }
-								(6. GH2-K6)
-								(6. GD2-F6)
-								0-3
-								{ @N Ha de descuidar JF6 y EH4 }
-								{ @W Ataca K con salto de caballo }
-						</code>
+								[Event "CG"]
+								[Site "Barcelona, Catalunya ESP"]
+								[Date "2023-09-08"]
+								[Round "&#x2010;"]
+								[White "Sasal, Cesc"]
+								[Black "Sasal, Cesc"]
+								[Result "0-3"]
+								[Id "Cescacs-A0001-91"]
+								[Annotator "Cescacs"]
+								[Annotator "Sasal, Cesc"]
+								[AnnotatorId "0001"]
+								1. H6-H12, H22-H16
+								2. H12-H14, EH24-H20
+								3. I5-I11, I23-I17
+								4. I11-I15, L23-L21
+								5. G7-G11, K24-K18
+								6. EG5-H8, G21-G15
+								7. EH8-I11, G15-G13
+								8. JF4-L19, RI25-I21
+								9. JL19-K16, NE25-G21
+								10. GH2-L11, GH26-K20
+								11. VF0-G5, RI21-I25
+								12. GL11-X16, RI25-H26
+								13. GX16×L21, JF24-H24
+								14. VG5-K8, C23-C17
+								15. C5-C11, GD26-B22
+								16. B4-B10, GB22-T16
+								17. ED4-C7, ED24-C21
+								18. NG3-L11, D22-D16
+								19. D6-D10, C17-C13
+								20. NL11-X16, GK20-G19
+								21. VK8-Z11, C13×D10
+								22. E7×D10, D16-D12
+								23. C11@D14, EC21-D18
+								24. B10-C11, VF28-D24
+								25. JF6-B18, RC25×C11
+								26. JB18×VD24, DE27×JD24
+								27. EE5-D8, RC11-C9
+								28. NE3-B4, RC9-A11
+								29. NB4-T8, DD24-B18
+								30. F8-E9, ED18×D14
+								31. GD2-F8, E21-E15
+								32. RI3-I9, E15-E13
+								33. RI9-Z13, E13-D12
+								34. RZ13-Z21, D12×E9
+								35. GF8-G3, DB18-C21
+								36. RZ21×RH26+^, JF26×RH26
+								37. RC3-B4, DC21-F12
+								38. DE1-E3, ED14-D12
+								39. EC7-C9, ED12×EC9
+								40. DE3×EC9, RA11-F16
+								41. DC9-C23+∞, EG23-F26
+								42. RB4-E7, EE23-D26
+								43. DC23-D24, DF12×JF2#
+							</code>
 						</div>
 					</div>
 				</dd>
@@ -1716,6 +1773,7 @@
 							<a href="#CTL-AN" class="w3-button cescacs">CTL-AN</a>
 							<a href="https://ia802908.us.archive.org/26/items/pgn-standard-1994-03-12/PGN_standard_1994-03-12.txt"
 								class="w3-button cite" target="_blank"><small>Especificación</small> <i>PGN</i></a>
+							<a href="#Matboig" class="w3-button cescacs">Mate del loco (más ejemplos)</a>
 						</nav>
 					</div>
 					<h4><span>Traducciones</span></h4>
@@ -3870,38 +3928,6 @@
 			<div class="w3-container glossary-box">
 				<dt id="Matboig">Mate del loco</dt>
 				<dd>
-					<div class="w3-right caixa-exemple-ctl-pgn" style="width:22em">
-						<code>[Variant "C'escacs"]
-							[Id "Cescacs-X01-es-V"]
-							[Lang "ca"]
-							{ Mate del loco }
-							1. H6-H12 ?!, I23-I19 ?!
-							{ @W: curioso peón de apertura }
-							2. JF6-C15 ?!, GH26-Z11 ?!
-							{ @W: alfil para cubrir 15 pero descuida defensa K }
-							3. L5-L7, NG25-L17 ?!
-							4. EH4-H8 ??, GZ11-L5
-							{ @W: Retirar E de H4 deja K desatendido }
-							(4. G7-G13)
-							(4. GD2-F6)
-							5. I5-I9 ??, NL17-G9
-							{ @W: Movimiento irrelevante ?? }
-							{ @B: Posiciona N }
-							(5. K4-K10, GL5-H6+
-							.{ @W: Desplazando P amenaza GL5 con RI3 }
-							.{ @B: El jaque sin refuerzo no prosperará }
-							.6. KG1-H4, GH6-I11
-							.(6. …, GH6xRI3)
-							.(6. …, GH6-K12))
-							6. K4-K10 ??, GL5-H6#
-							{ @W: Movimiento irrelevante ?? }
-							(6. GH2-K6)
-							(6. GD2-F6)
-							0-3
-							{ @N Ha de descuidar JF6 y EH4 }
-							{ @W Ataca K a salto de caballo }
-						</code>
-					</div>
 					<p>El mate del loco es el <i>jaque mate</i> más rápido posible, que solo puede pasar si el jugador
 						de <i>blancas</i> juega extraordinariamente mal. En <i class="cescacs">C'escacs</i> se da en
 						seis jugadas, tres muy mal jugadas de las <i>blancas</i>, y unos movimientos un poco
@@ -3910,6 +3936,111 @@
 						movimientos erróneos de las blancas; solo una de estas rectificaciones es suficiente para evitar
 						el <i>mate</i>.
 					</p>
+					<div class="w3-container">
+						<h3 class="w3-container w3-light-grey w3-center header2 w3-text-blue-grey">
+							Transcripción PGN
+						</h3>
+						<div id="Cescacs-X01-es" class="w3-left ctl-pgn ctl-pgn-box">
+							<code>[Variant "C'escacs"]
+							[Id "Cescacs-X01-es"]
+							[Lang "es"]
+							[Title "Mate del loco"]
+							1. H6-H12 ?!, I23-I19 ?!
+							</code><p>
+								{ @W: curioso peón para abrir }<br>
+								{ @B: le sigue el juego  }
+							</p><code>
+							2. JF6-C15 ?!, GH26-Z11 ?!
+							</code><p>
+								{ @W: ~J para cubrir linea 15 pero descuida defensa del ~K }<br>
+								{ @B: el movimiento prematuro de ~g a ~Z11 es muy poco ortodoxo }
+							</p><code>
+							3. L5-L7, NG25-L17 ?!
+							</code><p>
+								{ @B: Movimiento inicial de ~n también al flanco }
+							</p><code>
+							4. EH4-H8 ??, GZ11-L5
+							</code><p>
+								{ @W: Retirar ~EH4 deja ~K desatendido }
+							</p><code>
+							5. I5-I9 ??, NL17-G9
+							</code><p>
+								{ @W: Ha ignorado las amenazas }<br>
+								{ @B: Posiciona ~n }
+							</p><code>
+							6. K4-K10 ??, GL5-H6#
+							</code><p>
+								{ @W: Última oportunidad de reacción desperdiciada }
+							</p><code>
+							0-3
+							</code><p>
+								{ @W Ha de descuidar ~JF6 y ~EH4 }<br>
+								{ @B Ataca ~K a salto de caballo con ~g i ~n }
+							</p>
+						</div>
+						<div id="Cescacs-X01-V-es" class="w3-left ctl-pgn ctl-pgn-box">
+							<code>[Variant "C'escacs"]
+								[Id "Cescacs-X01-V-es"]
+								[Lang "es"]
+								[Title "Mate del loco"]
+								1. H6-H12 ?!, I23-I19 ?!
+							</code><p>
+								{ @W: curioso peón para abrir }<br>
+								{ @B: le sigue el juego  }
+							</p><code>
+								2. JF6-C15 ?!, GH26-Z11 ?!
+							</code><p>
+								{ @W: ~J para cubrir linea 15 pero descuida defensa del ~K }<br>
+								{ @B: el movimiento prematuro de ~g a ~Z11 es muy poco ortodoxo }
+							</p><code>
+								3. L5-L7, NG25-L17 ?!
+							</code><p>
+								{ @B: Movimiento inicial de ~n también al flanco }
+							</p><code>
+								4. EH4-H8 ??, GZ11-L5
+							</code><p>
+								{ @W: Retirar ~EH4 deja ~K desatendido }
+							</p><code>
+								(4. GD2-F6
+							</code><p>
+								.{ @W evitaría ~gL5-H6+^ }
+							</p><code>)
+								5. I5-I9 ??, NL17-G9
+							</code><p>
+								{ @W: Ha ignorado las amenazas }<br>
+								{ @B: Posiciona ~n }
+							</p><code>
+								(5. GD2-F6
+							</code><p>
+								.{ @W todavía está a tiempo de evitar ~gL5-H6+^ }
+							</p><code>)
+								(5. K4-K10 ??, GL5-H6+^
+							</code><p>
+								.{ @W: Desplazando P amenaza ~gL5 con ~RI3 }<br>
+								.{ @B: El jaque sin refuerzo no prosperará, pero ganará ~RI3 }
+							</p><code>
+								.6. KG1-H4, GH6&times;RI3
+								.(6. …, GH6-K12)
+								.7. KH4&times;GI3)
+								6. K4-K10 ??, GL5-H6#
+							</code><p>
+								{ @W: Última oportunidad de reacción desperdiciada }
+							</p><code>
+								(6. GD2-F6
+							</code><p>
+								.{ @W todavía estaba a tiempo de evitar ~gL5-H6+^ }
+							</p><code>)
+								(6. RI3-I7
+							</code><p>
+								.{ @W otra alternativa para evitar ~gL5-H6+^ }
+							</p><code>)
+								0-3
+							</code><p>
+								{ @W Ha de descuidar ~JF6 i ~EH4 }<br>
+								{ @B Ataca ~K a salto de caballo con ~g i ~n }
+							</p>
+						</div>
+					</div>
 				</dd>
 				<dd>
 					<h4><span>Ver también</span></h4>

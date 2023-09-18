@@ -281,7 +281,7 @@
 			</a>
 			<a href="#ComentariJugada" class="cite">
 				<h4 class="w3-container">
-					<span>&nbsp;&nbsp;&nbsp;&nbsp; Comments on a move</span>
+					<span>&nbsp;&nbsp;&nbsp;&nbsp; Comments on the moves</span>
 				</h4>
 			</a>
 			<a href="#ComantariReferencies" class="cite">
@@ -1246,56 +1246,46 @@
 			</section>
 			<section id="PDTLpieces" class="w3-container w3-half">
 				<h3 class="w3-container w3-pale-yellow w3-center">Positioning of the pieces</h3>
-				<p>La posición de las piezas en el <i>tablero hexteselado</i> se indica
-					para las <strong>líneas transversales</strong>, en una <strong>cadena
-					escrita entre barras oblicuas</strong>, donde <strong>el valor de cada
-					línea</strong> se separa del siguiente también con una <strong>barra
-					oblicua</strong>; no hay ningún espacio en blanco en esta secuencia.
+				<p>The position of the pieces on the <i>hextilled chequerboard</i> is indicated
+					for each of the <strong>transversal lines</strong>, in a <strong>string
+					written between slashes</strong>, where <strong>the value of each line</strong>
+					is <strong>separated from the next one also with a slash</strong>; there is
+					no blank space in this sequence.
 				</p>
 				<ul>
-					<li>El valor de cada línea siempre se encuentra entre líneas oblícuas.</li>
-					<li>Se introduce el valor de las líneas comenzando por la veintiocho,
-						en orden descendente.</li>
-					<li>El valor de una línea incorpora al principio el número de línea,
-						acabado en dos puntos.
+					<li>The value of each line is always between slashes.</li>
+					<li>The value of the lines is entered starting with 28,
+						in descending order.</li>
+					<li>The value of a line incorporates the line number at the beginning,
+						ending in a colon.
 					</li>
-					<li>Las líneas sin piezas se omiten.</li>
-					<li>Se escriben los valores de cada <i>hexcaque</i> de la línea por
-						orden, comenzando por la primera columna del <i>flanco de Dama</i>,
-						es decir, las columnas por orden alfabético. Los <i>hexcaques</i>
-						vacíos se indican amb un dígito, que representa el número de
-						<i>hexcaques</i> vacíos consecutivos, y las piezas con su letra
-						identificativa, mayúsculas para las blancas, y minúsculas para
-						las negras.
+					<li>Lines without pieces are omitted.</li>
+					<li>The values of each <i>hex</i> of the line are written in order,
+						starting with the first column of the queenside, i.e. the columns
+						in alphabetical order. The empty <i>hexchecks</i> are indicated by
+						a digit, which represents the number of consecutive empty
+						<i>hexchecks</i>, and the pieces by their identifying letter,
+						<strong>capital letters for white and small letters for black</strong>.
 						<ul class="aclariment">
-							<li>Hay <i>línias pares</i> y <i>línias nones</i>, y las columnas
-								de las línias pares son diferentes de las columnas de las
-								línias nones; las <i>línias pares</i> tienen las columnas:
+							<li>There are <i>even</i> and <i>odd</i> lines, and the columns
+								of the <i>even lines</i> are different from the columns of
+								the <i>odd lines</i>; the <i>even lines</i> have the columns:
 								<i>T</i>, <i>B</i>, <i>D</i>, <i>F</i>, <i>H</i>, <i>K</i>,
-								<i>X</i>; las <i>línias nones</i> tienen las columnas:
+								<i>X</i>; the <i>odd lines</i> have the columns:
 								<i>P</i>, <i>A</i>, <i>C</i>, <i>E</i>, <i>G</i>, <i>I</i>,
 								<i>L</i>, <i>Z</i>.
 							</li>
 						</ul>
 					</li>
 				</ul>
-				<p>El sistema <i>PDTL</i> es notoriamente más largo para describir la posición
-					de las piezas del <i>tablero hexteselado</i>, comparado con el sistema
-					<i>FEN</i> del <i>ajedrez ortodoxo</i>. Se puede pensar que es un tanto
-					prolijo, pero se ha considerado facilitar la escritura manual de una posición,
-					y repasar con facilidad que sea correcta; la forma y la medida del
-					<i>tablero hexteselado</i> hacen esta tarea un poco compleja.
-				</p>
 			</section>
 			<section id="PDTLTorn" class="w3-container w3-half">
 				<h3 class="w3-container w3-pale-yellow w3-center">Turn</h3>
-				<p>El turno se identifica con una letra minúscula:
-					<q><strong><code>w</code></strong></q> si es el turno
-					de las <i>blancas</i> (<i lang="en" translate="no">white</i>),
-					<q><strong><code>b</code></strong></q> si és el turno
-					de las <i>negras</i> (<i lang="en" translate="no">black</i>).
-					En el ejemplo anterior vemos la <q><code>w</code></q>,
-					porque siempre comienzan las <i>blancas</i>.
+				<p>The turn is identified by a lower case letter:
+					<q><strong><code>w</code></strong></q> if it is white's turn,
+					<q><strong><code>b</code></strong></q> if it is black's turn.
+					In the example above we see the <q><strong><code>w</code></strong></q>,
+					because white always starts the game.
 				</p>
 			</section>
 			<section id="PDTLCastling" class="w3-container w3-half">
@@ -2314,17 +2304,19 @@
 				</div>
 				<section id="ComentariJugada" class="w3-container w3-half">
 					<h4 class="w3-container w3-pale-yellow w3-center">
-						<span>Comments on a move</span>
+						<span>Comments on the moves</span>
 					</h4>
 					<p>The comment for a move is always written on a new line, following the line
-						of the move. There may be a maximum of one comment for each move, unless there
-						is also a comment automatically generated by a program.
+						of the move. There may be a maximum of one comment for each player move,
+						unless there is also a comment automatically generated by a program.
+					</p>
+					<p>A player move comment will start with a reference to the player, either
+						<q>@W</q> or <q>@B</q>, and a colon.
+					</p>
+					<p>The <q>@W</q> move comment, if present, will precede the <q>@B</q> move
+						comment.
 					</p>
 					<ul class="aclariment">
-						<li><span class="note">The comment line will refer to both <i>white</i> and
-							<i>black</i> moves, using appropriate references to differentiate between
-							them.</span>
-						</li>
 						<li><span class="note">Automatically generated comments shall begin with the
 							colon symbol at the start of the comment, written immediately after the
 							open brace.</span>
@@ -2338,14 +2330,18 @@
 					<ul class="twocolumnschance icon iconGrid">
 						<li><q><strong>@W</strong></q> <small>reference to the <i>white</i> player.</small></li>
 						<li><q><strong>@B</strong></q> <small>reference to the <i>black</i> player.</small></li>
-						<li><small>A <i>hextile</i> is referenced using its
+						<li>
+							<small>A <i>hextile</i> is referenced using its
 							<strong><a href="#CTL" class="cite">CTL coordinate</a></strong>, prefixed with a
 							<i>tilde</i> (<strong><code>~</code></strong>).</small>
 						</li>
-						<li><small>Pieces are referenced using the <strong><a href="glossary.html#Lletraidentificativa"
-								class="cescacs" target="_blank">identifying letters</a></strong> , prefixed with a
-							<i>tilde</i> (<strong><code>~</code></strong>). Capital letters are used for white and
-							lower case for black.</small>
+						<li>
+							<small><strong>Pieces</strong> are referenced using the
+							<strong><a href="glossary.html#Lletraidentificativa"
+								class="cescacs" target="_blank">identifying letters</a></strong>,
+								prefixed with a <i>tilde</i> (<strong><code>~</code></strong>).
+								<strong>Capital letters are used for white and lower case for black</strong>.
+							</small>
 							<p class="compact"><small>Some pieces are unique in <i>C'escacs</i>, due to the
 								promotion policy; for White: ~K, ~D, ~V. Bishops can also be referred to uniquely
 								by indicating their colour in square brackets: <q>d</q>
@@ -2356,7 +2352,8 @@
 								<a href="#CTL" class="cite">CTL coordinate</a> of the position shall be written
 								after the letter of the piece, without separation.</small></p>
 						</li>
-						<li><strong>Reference to moves</strong> <small>You may never reference a later move;
+						<li>
+							<strong>Reference to moves</strong> <small>You may never reference a later move;
 							the commentary must be postponed. Nor may you reference variants other than the
 							current line, except for labelled variants.</small>
 							<ul class="icon iconBullseye">
@@ -2387,7 +2384,8 @@
 								</li>
 							</ul>
 						</li>
-						<li><strong>A <a href="glossary.html#NAG" class="cescacs" target="_blank"><cite>NAG</cite>
+						<li>
+							<strong>A <a href="glossary.html#NAG" class="cescacs" target="_blank"><cite>NAG</cite>
 									(<span lang="en" translate="no">Numeric Annotation Glyphs</span>) code</a>,
 								numeric prefixed with <strong><i>$</i></strong></strong> <small>particularly in
 								automatically generated comments. Example: &nbsp;<code><i>$24</i></code>
@@ -2433,16 +2431,17 @@
 					[Title "Fool's mate"]
 					1. H6-H12 ?!, I23-I19 ?!
 					</code><p>
-						{ @W: curious pawn to open, @B: plays along with it }
+						{ @W: curious pawn to open }<br>
+						{ @B: plays along with it }
 					</p><code>
 					2. JF6-C15 ?!, GH26-Z11 ?!
 					</code><p>
-						{ @W: ~J to cover line 15 but neglects defence of ~K.
-							B: ~G's premature move to ~Z11 is very unorthodox. }
+						{ @W: ~J to cover line 15 but neglects defence of ~K }<br>
+						{ @B: ~g's premature move to ~Z11 is very unorthodox }
 					</p><code>
 					3. L5-L7, NG25-L17 ?!
 					</code><p>
-						{ @B: Initial movement of ~N also to the flank }
+						{ @B: Initial movement of ~n also to the flank }
 					</p><code>
 					4. EH4-H8 ??, GZ11-L5
 					</code><p>
@@ -2450,7 +2449,8 @@
 					</p><code>
 					5. I5-I9 ??, NL17-G9
 					</code><p>
-						{ @W: Has ignored threats and @B: Positions ~N }
+						{ @W: Has ignored threats }<br>
+						{ @B: Positions ~n }
 					</p><code>
 					6. K4-K10 ??, GL5-H6#
 					</code><p>
@@ -2458,9 +2458,8 @@
 					</p><code>
 					0-3
 					</code><p>
-						{ @B Must neglect ~JF6 and ~EH4 }
-					</p><p>
-						{ @W Attack ~K to knight's leap with ~G i ~N }
+						{ @B Must neglect ~JF6 and ~EH4 }<br>
+						{ @W Attack ~K to knight's leap with ~g i ~n }
 					</p>
 				</div>
 				<div id="Cescacs-X01-V-en" class="w3-left ctl-pgn ctl-pgn-box">
@@ -2470,16 +2469,17 @@
 						[Title "Fool's mate"]
 						1. H6-H12 ?!, I23-I19 ?!
 					</code><p>
-						{ @W: curious pawn to open, @B: plays along with it }
+						{ @W: curious pawn to open }<br>
+						{ @B: plays along with it }
 					</p><code>
 						2. JF6-C15 ?!, GH26-Z11 ?!
 					</code><p>
-						{ @W: ~J to cover line 15 but neglects defence of ~K.
-							B: ~G's premature move to ~Z11 is very unorthodox. }
+						{ @W: ~J to cover line 15 but neglects defence of ~K }<br>
+						{ @B: ~g's premature move to ~Z11 is very unorthodox }
 						</p><code>
 						3. L5-L7, NG25-L17 ?!
 					</code><p>
-						{ @B: Initial movement of ~N also to the flank }
+						{ @B: Initial movement of ~n also to the flank }
 					</p><code>
 						4. EH4-H8 ??, GZ11-L5
 					</code><p>
@@ -2487,20 +2487,21 @@
 					</p><code>
 						(4. GD2-F6
 					</code><p>
-						.{ @W would avoid ~GL5-H6+ }
+						.{ @W would avoid ~gL5-H6+^ }
 					</p><code>)
 						5. I5-I9 ??, NL17-G9
 					</code><p>
-						{ @W: Has ignored threats and @B: Positions ~N }
+						{ @W: Has ignored threats }<br>
+						{ @B: Positions ~n }
 					</p><code>
 						(5. GD2-F6
 					</code><p>
-						.{ @W is still in time to avoid ~GL5-H6+ }
+						.{ @W is still in time to avoid ~gL5-H6+^ }
 					</p><code>)
-						(5. K4-K10 ??, GL5-H6+
+						(5. K4-K10 ??, GL5-H6+^
 					</code><p>
-						.{ @W: Displacing P threatens ~GL5 with ~RI3.
-							@B: Check without reinforcement will not succeed, but will capture ~RI3 }
+						.{ @W: Displacing P threatens ~gL5 with ~RI3 }<br>
+						.{ @B: Check without reinforcement will not succeed, but will capture ~RI3 }
 					</p><code>
 						.6. KG1-H4, GH6&times;RI3
 						.(6. …, GH6-K12)
@@ -2511,17 +2512,16 @@
 					</p><code>
 						(6. GD2-F6
 					</code><p>
-						.{ @W there was still time to avoid ~GL5-H6+ }
+						.{ @W there was still time to avoid ~gL5-H6+^ }
 					</p><code>)
 						(6. RI3-I7
 					</code><p>
-						.{ @W another alternative to avoid ~GL5-H6+ }
+						.{ @W another alternative to avoid ~gL5-H6+^ }
 					</p><code>)
 						0-3
 					</code><p>
-						{ @B Must neglect ~JF6 and ~EH4 }
-					</p><p>
-						{ @W Attack ~K to knight's leap with ~G i ~N }
+						{ @B Must neglect ~JF6 and ~EH4 }<br>
+						{ @W Attack ~K to knight's leap with ~g i ~n }
 					</p>
 				</div>
 				<!-- 2023-09-08 -->
@@ -2577,12 +2577,12 @@
 						33. RI9-Z13, E13-D12
 						34. RZ13-Z21, D12×E9
 						35. GF8-G3, DB18-C21
-						36. RZ21×RH26^+, JF26×RH26
+						36. RZ21×RH26+^, JF26×RH26
 						37. RC3-B4, DC21-F12
 						38. DE1-E3, ED14-D12
 						39. EC7-C9, ED12×EC9
 						40. DE3×EC9, RA11-F16
-						41. DC9-C23+, EG23-F26
+						41. DC9-C23+∞, EG23-F26
 						42. RB4-E7, EE23-D26
 						43. DC23-D24, DF12×JF2#
 					</code>
@@ -2590,7 +2590,6 @@
 				<!-- 2020-07-20 -->
 				<div class="w3-left ctl-pgn ctl-pgn-box">
 					<code>[Variant "C'escacs"]
-						[Event "CG"]
 						[Id "Cescacs-A0001-24"]
 						[Annotator "Cescacs"]
 						[AnnotatorId "0001"]
@@ -2611,24 +2610,24 @@
 						13. JD8×EE11, EE17-E13
 						14. JD10×EE13, DE27×JE13
 						15. GH2-F8, DE13-B10
-						16. NE3-C7, DB10-D10+
+						16. NE3-C7, DB10-D10+∞
 						17. NG3-E7, GD26×L5
 						18. GD2-E5, DD10-K10
 						19. I5-I7, DK10-K6
-						20. RI3-H2, GL5×GE5^+
+						20. RI3-H2, GL5×GE5+^
 						21. DE1×GE5, KRD-DE
 						22. JE11×A23, GH26-G23
 						23. DE5-A17, JF26-E23
 						24. NE7-C17, D22-D20
-						25. NC17-T18, JF22-C13+
-						26. KG1-E1, DK6-E21+
-						27. VF0-E5, DE21-K16+
+						25. NC17-T18, JF22-C13+∞
+						26. KG1-E1, DK6-E21+∞
+						27. VF0-E5, DE21-K16+∞
 						28. KE1-D2, JE23-K8
-						29. NT18-B22^+, KD26-C25
+						29. NT18-B22+^, KD26-C25
 						30. JA23×C23, GG23×JC23
-						31. GF8-B20^+, GC23×GB20
+						31. GF8-B20+^, GC23×GB20
 						32. DA17×GB20, RE27×VE5
-						33. DB20-C19+, ED24-C21
+						33. DB20-C19+∞, ED24-C21
 						34. RH2×RE5, DK16-F20
 						35. DC19-E25#
 					</code>
@@ -2654,7 +2653,7 @@
 						13. JD8×EE11, EE17-E13
 						14. JD10×EE13, DE27×JE13
 						15. GH2-F8, DE13-B10
-						16. NE3-C7, DB10-D10+
+						16. NE3-C7, DB10-D10+∞
 						17. NG3-E7, GD26×L5
 						18. GD2-E5, DD10-K10
 						19. I5-I7, DK10-K6
@@ -2675,20 +2674,20 @@
 					<p>
 						{ Don't remember move was the 20th; DPTL without movement number }
 					</p><code>
-						1? …, GL5×GE5^+
+						1? …, GL5×GE5+^
 						2. DE1×GE5, KRD-DE
 						3. JE11×A23, GH26-G23
 						4. DE5-A17, JF26-E23
 						5. NE7-C17, D22-D20
-						6. NC17-T18, JF22-C13+
-						7. KG1-E1, DK6-E21+
-						8. VF0-E5, DE21-K16+
+						6. NC17-T18, JF22-C13+∞
+						7. KG1-E1, DK6-E21+∞
+						8. VF0-E5, DE21-K16+∞
 						9. KE1-D2, JE23-K8
-						10. NT18-B22^+, KD26-C25
+						10. NT18-B22+^, KD26-C25
 						11. JA23×C23, GG23×JC23
-						12. GF8-B20^+, GC23×GB20
+						12. GF8-B20+^, GC23×GB20
 						13. DA17×GB20, RE27×VE5
-						14. DB20-C19+, ED24-C21
+						14. DB20-C19+∞, ED24-C21
 						15. RH2×RE5, DK16-F20
 						16. DC19-E25#
 					</code>
@@ -2733,12 +2732,12 @@
 						24. NA5-C9, GD10-F14
 						25. RB4&times;DB18, JD18&times;RB18
 						26. NC9-B14, GH26-K22
-						27. EE7-E11, GK22-E7+
+						27. EE7-E11, GK22-E7+∞
 						28. KG1-E1, GE7&times;DC3
 						29. JF6-E3, GC3-E7
 						30. VF0-E5, JD16-C13
-						31. EE11&times;GF14, GE7-G1^+
-						32. RI3&times;GG1, JC13&times;RG1^+
+						31. EE11&times;GF14, GE7-G1+^
+						32. RI3&times;GG1, JC13&times;RG1+^
 						33. VE5&times;JG1, ED20-D16
 						34. NC7-G15, C15-C13
 						35. GI7-F16, NE25-A17
@@ -2751,10 +2750,10 @@
 						42. NG15-I25, RI21-X18
 						43. GX16-Z13, RX18-X6
 						44. VG1-E5, RX6-E13
-						45. VE5-C3, RE13&times;JE3^+
+						45. VE5-C3, RE13&times;JE3+^
 						46. KE1-G1, VE23-E9
 						47. GZ13-L9, VE9-B6
-						48. GL9-C9, RE3&times;JF2^+
+						48. GL9-C9, RE3&times;JF2+^
 						49. VC3&times;RF2, VB6-D10
 						50. GC9-D6, VD10-E5#						
 					</code>
@@ -2788,24 +2787,24 @@
 						13. JD8×EE11, EE17-E13
 						14. JD10×EE13, DE27×JE13
 						15. GH2-F8, DE13-B10
-						16. NE3-C7, DB10-D10+
+						16. NE3-C7, DB10-D10+∞
 						17. NG3-E7, GD26×L5
 						18. GD2-E5, DD10-K10
 						19. I5-I7, DK10-K6
-						20. RI3-H2, GL5×GE5^+
+						20. RI3-H2, GL5×GE5+^
 						21. DE1×GE5, KRD-DE
 						22. JE11×A23, GH26-G23
 						23. DE5-A17, JF26-E23
 						24. NE7-C17, D22-D20
-						25. NC17-T18, JF22-C13+
-						26. KG1-E1, DK6-E21+
-						27. VF0-E5, DE21-K16+
+						25. NC17-T18, JF22-C13+∞
+						26. KG1-E1, DK6-E21+∞
+						27. VF0-E5, DE21-K16+∞
 						28. KE1-D2, JE23-K8
-						29. NT18-B22^+, KD26-C25
+						29. NT18-B22+^, KD26-C25
 						30. JA23×C23, GG23×JC23
-						31. GF8-B20^+, GC23×GB20
+						31. GF8-B20+^, GC23×GB20
 						32. DA17×GB20, RE27×VE5
-						33. DB20-C19+, ED24-C21
+						33. DB20-C19+∞, ED24-C21
 						34. RH2×RE5, DK16-F20
 						35. DC19-E25#
 					</code>
