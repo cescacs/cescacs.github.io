@@ -182,15 +182,15 @@
             Foren molt populars en les dècades de 1970 i 1980 en el Regne Unit i en Polònia.</p>
     </div>
     <!-- hexcaquer -->
-    <h2 class="w3-container w3-pale-green w3-center title">Posició inicial de les peces</h2>
-    <div class="w3-container">
+    <section class="w3-container">
+        <h2 class="w3-container w3-pale-green w3-center title">Posició inicial de les peces</h2>
         <p>L'<em>hexcaquer</em> forma un hexàgon regular amb vuit hexcacs en cada costat, i en té tres colors diferents:
             <em>blanc</em>, <em>negre</em> i <em>color</em>, amb l'hexcac central de color.</p>
         <p><em>Rei i Dama blancs</em> es posicionen en <em>hexcacs blancs</em>, i <em>Rei i Dama negres</em> prenen posicions
 				en <em>hexcacs negres</em>. Els reis es posicionen enfrontats, en la columna <i>G</i>:
 				el <em>Rei blanc en la seva dreta</em>, i el <em>Rei negre en la seva esquerra</em>.</p>
 
-        <div class="w3-container left">
+        <section class="w3-container left">
             <h3 class="w3-container w3-pale-yellow w3-center">Les peces</h3>
             <ul class="w3-ul w3-border">
 				<li>27 peces per jugador:</li>
@@ -218,14 +218,14 @@
 				<a href="ca/glossary.html#Alabarder" class="cescacs" target="_blank"><i class="cescacs">Alabarder</i></a>
                 per denominar la peça de l'<i class="cescacs">Elefant</i> de <i class="cescacs">C'escacs</i>.
 			</div>
-        </div>
+        </section>
 
         <div class="w3-container main">
             <img src="img/moves/ini.svg" alt="posició inicial de les peces"
                 style="width:100%; min-width:250px; max-width:800px;">
         </div>
 
-        <div class="w3-container right">
+        <section class="w3-container right">
 
             <h3 class="w3-container w3-pale-yellow w3-center">Valoració de les peces</h3>
             <table class="w3-table w3-border w3-bordered">
@@ -287,9 +287,9 @@
 					del joc, cada jugador compta amb <em>104 punts</em>: 51 de peces majors, 16 de les peces mitjanes,
 					18 de les peces menors i 19 de la tropa.
 			</div>
-        </div>
+        </section>
 
-        <div class="w3-container">
+        <section class="w3-container">
             <h3 class="w3-container w3-pale-yellow w3-center">Primeres impressions</h3>
             <ul class="icon iconBullseye">
 				<li><p>És un gran hexcaquer de 169 hexcacs. En té tres colors, i es requereixen tres alfils.</p>
@@ -332,14 +332,13 @@
                     <p>Inicialment les peces es troben protegides, excepte els dos <i>peons</i> dels flancs i els dos <i>Rocs</i>.</p>
                 </li>
             </ul>
-        </div>
-    </div>
+        </section>
+    </section>
     <!-- Moviments -->
-    <h2 class="w3-container w3-pale-green w3-center title">Moviments: ortogonals, diagonals i de cavall</h2>
-    <!-- Fila i Línia -->
-    <div class="w3-container">
+    <section class="w3-container">
+        <h2 class="w3-container w3-pale-green w3-center title">Moviments: ortogonals, diagonals i de cavall</h2>
         <!-- Fila -->
-        <div class="w3-container half">
+        <section class="w3-container half">
             <h3 id="Fila" class="w3-container w3-pale-yellow w3-center"><a href="ca/glossary.html#Fila"
                 class="cescacs" target="_blank"><em>Fila</em>: direcció ortogonal</a>
                 <img src="img/alfaerie/wrook.png" alt="Torre" class="pieceIcon"></h3>
@@ -378,9 +377,9 @@
 				En total n'hi ha <em>sis</em> <i>direccions ortogonals</i> diferents, dues direccions per a cada fila.
            </p>
             <p>Les direccions ortogonals corresponen a les <em>direccions del moviment de les torres</em>.</p>
-        </div>
+        </section>
         <!-- Línia -->
-        <div class="w3-container half">
+        <section class="w3-container half">
             <h3 id="Linia" class="w3-container w3-pale-yellow w3-center"><a href="ca/glossary.html#Linia"
                 class="cescacs" target="_blank"><em>Línia</em>: direcció diagonal</a>
                 <img src="img/alfaerie/wbishop.png" alt="Alfil" class="pieceIcon"></h3>
@@ -424,164 +423,176 @@
 			</aside>
             <p>Les direccions diagonals corresponen a les <em>direccions del moviment dels alfils</em>;
                 n'hi ha tres colors diferents, i se'n fan servir tres alfils, un per a cada color.</p>
+        </section>
+        <!-- Moviments cavall -->
+        <div>
+            <!-- Simple: Salt de cavall -->
+            <section class="w3-container half">
+                <h3 id="Saltcavall" class="w3-container w3-pale-yellow w3-center"><a
+                    href="ca/glossary.html#SaltCavall" class="cescacs" target="_blank">Salt de cavall
+                    <img src="img/alfaerie/wknight.png" alt="Cavall" class="pieceIcon">
+                    <img src="img/alfaerie/wpegasus.png" alt="Cavall" class="pieceIcon">
+                    <img src="img/alfaerie/wdragon.png" alt="Cavall" class="pieceIcon"></a>
+                </h3>
+                <figure class="w3-center">
+                    <img src="img/moves/knightmove.svg" alt="moviments del cavall" class="fullwidth">
+                    <figcaption class="thumbcaption">Salts de cavall
+                    </figcaption>
+                </figure>
+                <ul class="w3-ul w3-border">
+                    <li>El salt del cavall consisteix en la combinació d'un moviment d'una casella en diagonal i una en
+                        ortogonal;
+                        cada direcció triada en diagonal admet dos direccions alternatives en ortogonal; en total existeixen
+                        dotze moviments possibles.</li>
+                    <li>El moviment de cavall no pot impedir-se situant una peça entremig; es diu que <q>salta</q>.</li>
+                    <li>Sempre canvia el color de l'hexcac destí respecte el color de l'hexcac d'origen.</li>
+                    <li>El salt de cavall el poden fer les peces: <a href="#Cavall" class="cescacs">Cavall</a>,
+                        <a href="#Pegas" class="cescacs">Pegàs</a> i la <a href="#Vibria" class="cescacs">Víbria (Drac)</a>.
+                    </li>
+                </ul>
+            </section>
+            <!-- Cavalcada -->
+            <section class="w3-container half">
+                <h3 id="Cavalcada" class="w3-container w3-pale-yellow w3-center">Cavalcada <img
+                        src="img/alfaerie/wknight.png" alt="Cavall" class="pieceIcon"></h3>
+                <figure class="w3-center">
+                    <img src="img/moves/ridemove.svg" alt="moviments de cavalcada" class="fullwidth">
+                    <figcaption class="thumbcaption">El moviment del cavall repetit s'anomena cavalcada.
+                        Es mostren els hexcacs intermedis que han de ser lliures per fer el moviment.
+                    </figcaption>
+                </figure>
+                <ul class="w3-ul w3-border">
+                    <li>La cavalcada és el moviment de doble salt de cavall (només dos salts), sense captura.</li>
+                    <li>El segón salt és anàlog al primer, en la mateixa direcció diagonal i la mateixa
+                        direcció ortogonal, quedant determinat pel salt inicial:
+                        per a cada salt de cavall només n'hi ha una cavalcada possible.</li>
+                    <li>L'hexcac de destí ha de ser lliure, doncs no es poden fer captures amb aquest moviment.</li>
+                    <li>També l'hexcac intermedi, el salt de cavall inicial, ha de ser lliure.</li>
+                    <li>Sempre canvia el color de l'hexcac destí respecte el color de l'hexcac d'origen.</li>
+                    <li>Només el <a href="#Cavall" class="cescacs">Cavall</a> pot fer el moviment de <i>Cavalcada</i>.</li>
+                </ul>
+            </section>
         </div>
-    </div>
-    <!-- Moviments cavall -->
-    <div class="w3-container">
-        <!-- Simple: Salt de cavall -->
-        <div class="w3-container half">
-            <h3 id="Saltcavall" class="w3-container w3-pale-yellow w3-center"><a
-                href="ca/glossary.html#SaltCavall" class="cescacs" target="_blank">Salt de cavall
-                <img src="img/alfaerie/wknight.png" alt="Cavall" class="pieceIcon">
-                <img src="img/alfaerie/wpegasus.png" alt="Cavall" class="pieceIcon">
-                <img src="img/alfaerie/wdragon.png" alt="Cavall" class="pieceIcon"></a>
-            </h3>
-            <figure class="w3-center">
-                <img src="img/moves/knightmove.svg" alt="moviments del cavall" class="fullwidth">
-                <figcaption class="thumbcaption">Salts de cavall
-                </figcaption>
-            </figure>
-            <ul class="w3-ul w3-border">
-                <li>El salt del cavall consisteix en la combinació d'un moviment d'una casella en diagonal i una en
-                    ortogonal;
-                    cada direcció triada en diagonal admet dos direccions alternatives en ortogonal; en total existeixen
-                    dotze moviments possibles.</li>
-                <li>El moviment de cavall no pot impedir-se situant una peça entremig; es diu que <q>salta</q>.</li>
-                <li>Sempre canvia el color de l'hexcac destí respecte el color de l'hexcac d'origen.</li>
-                <li>El salt de cavall el poden fer les peces: <a href="#Cavall" class="cescacs">Cavall</a>,
-                    <a href="#Pegas" class="cescacs">Pegàs</a> i la <a href="#Vibria" class="cescacs">Víbria (Drac)</a>.
-                </li>
-            </ul>
-        </div>
-        <!-- Cavalcada -->
-        <div class="w3-container half">
-            <h3 id="Cavalcada" class="w3-container w3-pale-yellow w3-center">Cavalcada <img
-                    src="img/alfaerie/wknight.png" alt="Cavall" class="pieceIcon"></h3>
-            <figure class="w3-center">
-                <img src="img/moves/ridemove.svg" alt="moviments de cavalcada" class="fullwidth">
-                <figcaption class="thumbcaption">El moviment del cavall repetit s'anomena cavalcada.
-                    Es mostren els hexcacs intermedis que han de ser lliures per fer el moviment.
-                </figcaption>
-            </figure>
-            <ul class="w3-ul w3-border">
-                <li>La cavalcada és el moviment de doble salt de cavall (només dos salts), sense captura.</li>
-                <li>El segón salt és anàlog al primer, en la mateixa direcció diagonal i la mateixa
-					direcció ortogonal, quedant determinat pel salt inicial:
-					per a cada salt de cavall només n'hi ha una cavalcada possible.</li>
-				<li>L'hexcac de destí ha de ser lliure, doncs no es poden fer captures amb aquest moviment.</li>
-                <li>També l'hexcac intermedi, el salt de cavall inicial, ha de ser lliure.</li>
-                <li>Sempre canvia el color de l'hexcac destí respecte el color de l'hexcac d'origen.</li>
-                <li>Només el <a href="#Cavall" class="cescacs">Cavall</a> pot fer el moviment de <i>Cavalcada</i>.</li>
-            </ul>
-        </div>
-    </div>
+    </section>
     <br>
     <!-- Moviment de les peces -->
-    <h2 class="w3-container w3-pale-green w3-center title">Moviment de les peces</h2>
-    <div class="w3-container">
+    <section class="w3-container">
+        <h2 class="w3-container w3-pale-green w3-center title">Moviment de les peces</h2>
         <ul class="w3-ul">
             <!-- Torre -->
             <li class="w3-container w3-card-4 w3-half">
-                <h3 id="Roc" class="w3-container">
-                    <a href="ca/glossary.html#Roc" class="cescacs" target="_blank">Roc (Torre)
-                    <img src="img/alfaerie/wrook.png" alt="Torre" class="pieceIcon"></a>
-                </h3>
-                <p>Moviment en les sis direccions <a href="#Fila" class="cite"><em>ortogonals</em></a>,
-                    per les <em>files</em>.</p>
+                <section>
+                    <h3 id="Roc" class="w3-container">
+                        <a href="ca/glossary.html#Roc" class="cescacs" target="_blank">Roc (Torre)
+                        <img src="img/alfaerie/wrook.png" alt="Torre" class="pieceIcon"></a>
+                    </h3>
+                    <p>Moviment en les sis direccions <a href="#Fila" class="cite"><em>ortogonals</em></a>,
+                        per les <em>files</em>.</p>
+                </section>
             </li>
             <!-- Alfil -->
             <li class="w3-container w3-card-4 w3-half">
-                <h3 id="Alfil" class="w3-container">
-                    <a href="ca/glossary.html#Alfil" class="cescacs" target="_blank">Alfil
-                    <img src="img/alfaerie/wbishop.png" alt="Alfil" class="pieceIcon"></a>
-                </h3>
-                <p>Moviment en les sis direccions <a href="#Linia" class="cite"><em>diagonals</em></a>,
-                    per les <em>línies</em>.</p>
-                <p>Sempre es manté en el seu color; en els escacs hexagonals l'alfil és una peça feble,
-                    notablement més feble que el cavall.</p>
+                <section>
+                    <h3 id="Alfil" class="w3-container">
+                        <a href="ca/glossary.html#Alfil" class="cescacs" target="_blank">Alfil
+                        <img src="img/alfaerie/wbishop.png" alt="Alfil" class="pieceIcon"></a>
+                    </h3>
+                    <p>Moviment en les sis direccions <a href="#Linia" class="cite"><em>diagonals</em></a>,
+                        per les <em>línies</em>.</p>
+                    <p>Sempre es manté en el seu color; en els escacs hexagonals l'alfil és una peça feble,
+                        notablement més feble que el cavall.</p>
+                </section>
             </li>
             <!-- Cavall -->
             <li class="w3-container w3-card-4 w3-half">
-                <h3 id="Cavall" class="w3-container">
-                    <a href="ca/glossary.html#Cavall" class="cescacs" target="_blank">Cavall
-                    <img src="img/alfaerie/wknight.png" alt="Cavall" class="pieceIcon"></a>
-                </h3>
-                <p>Es distingueixen dos moviments:</p>
-                <ul class="w3-ul">
-                    <li><a href="#Saltcavall" class="cescacs"><em>Salt de cavall</em></a>, com s'ha descrit;
-                        n'hi ha dotze possibles.</li>
-                    <li><a href="#Cavalcada" class="cescacs"><em>Cavalcada</em></a>, com s'ha descrit:
-                        <ul class="w3-ul w3-border">
-                            <li>Encadenament de de <em>dos</em> salts de cavall <em>iguals</em>;
-                                n'hi han dotze moviments possibles, un per a cada moviment de cavall.</li>
-                            <li>L'hexcac intermedi on es fa el primer salt ha de ser lliure.</li>
-                            <li>No es permet capturar peces en una cavalcada; l'hexcac final ha de
-                                ser lliure.</li>
-                        </ul>
-                    </li>
-                </ul>
-                <p>En total en té vint-i-quatre moviments possibles, però només en els dotze moviments de cavall simples
-                    hi pot capturar. Sempre canvia el color de l'hexcac destí respecte el color de l'hexcac d'origen,
-                    tant en els moviments senzills, com en el moviment doble de cavalcada.</p>
-                <aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
-                    <p>El moviment de cavalcada s'ha incorporat perquè el cavall, en un hexcaquer tant gran,
-                        perdia efectivitat, degut a la seva perdua de velocitat.</p>
-                </aside>
+                <section>
+                    <h3 id="Cavall" class="w3-container">
+                        <a href="ca/glossary.html#Cavall" class="cescacs" target="_blank">Cavall
+                        <img src="img/alfaerie/wknight.png" alt="Cavall" class="pieceIcon"></a>
+                    </h3>
+                    <p>Es distingueixen dos moviments:</p>
+                    <ul class="w3-ul">
+                        <li><a href="#Saltcavall" class="cescacs"><em>Salt de cavall</em></a>, com s'ha descrit;
+                            n'hi ha dotze possibles.</li>
+                        <li><a href="#Cavalcada" class="cescacs"><em>Cavalcada</em></a>, com s'ha descrit:
+                            <ul class="w3-ul w3-border">
+                                <li>Encadenament de de <em>dos</em> salts de cavall <em>iguals</em>;
+                                    n'hi han dotze moviments possibles, un per a cada moviment de cavall.</li>
+                                <li>L'hexcac intermedi on es fa el primer salt ha de ser lliure.</li>
+                                <li>No es permet capturar peces en una cavalcada; l'hexcac final ha de
+                                    ser lliure.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>En total en té vint-i-quatre moviments possibles, però només en els dotze moviments de cavall simples
+                        hi pot capturar. Sempre canvia el color de l'hexcac destí respecte el color de l'hexcac d'origen,
+                        tant en els moviments senzills, com en el moviment doble de cavalcada.</p>
+                    <aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+                        <p>El moviment de cavalcada s'ha incorporat perquè el cavall, en un hexcaquer tant gran,
+                            perdia efectivitat, degut a la seva perdua de velocitat.</p>
+                    </aside>
+                </section>
             </li>
             <!-- Pegàs -->
             <li class="w3-container w3-card-4 w3-half">
-                <h3 id="Pegas" class="w3-container">
-                    <a href="ca/glossary.html#Pegas" class="cescacs" target="_blank">Pegàs
-                    <img src="img/alfaerie/wpegasus.png" alt="Pegàs" class="pieceIcon"></a>
-                </h3>
-                <p>El cavall alat pot moure en <a href="#Linia" class="cite"><em>diagonal</em></a>,
-                    per les <em>línies</em> com un alfil, o fer un
-                    <a href="#Saltcavall" class="cescacs"><em>salt de cavall</em></a>.</p>
-                <p>No pot fer el moviment de cavalcada.</p>
-                <p>Combina els moviments de l'alfil i el cavall (sense incloure-hi la cavalcada).</p>
-                <aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
-                    <p>En els <a href="ca/historical-milestones.html#EscacsCapablanca" class="cescacs"
-                        target="_blank"><i>escacs de Capablanca</i></a> es denomina <i>Arquebisbe</i>
-                        <img src="img/alfaerie/wcardinal.png" style="display: inline; height:6ex;" alt="arquebisbe"></p>
-                </aside>
-                <p>En els escacs hexagonals la seva potència és menor a una torre, i es considera una <i>peça mijana</i>,
-					superior a les <i>peces menors</i>, però sense arribar a la potència d'una <i>peça major</i>.</p>
+                <section>
+                    <h3 id="Pegas" class="w3-container">
+                        <a href="ca/glossary.html#Pegas" class="cescacs" target="_blank">Pegàs
+                        <img src="img/alfaerie/wpegasus.png" alt="Pegàs" class="pieceIcon"></a>
+                    </h3>
+                    <p>El cavall alat pot moure en <a href="#Linia" class="cite"><em>diagonal</em></a>,
+                        per les <em>línies</em> com un alfil, o fer un
+                        <a href="#Saltcavall" class="cescacs"><em>salt de cavall</em></a>.</p>
+                    <p>No pot fer el moviment de cavalcada.</p>
+                    <p>Combina els moviments de l'alfil i el cavall (sense incloure-hi la cavalcada).</p>
+                    <aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+                        <p>En els <a href="ca/historical-milestones.html#EscacsCapablanca" class="cescacs"
+                            target="_blank"><i>escacs de Capablanca</i></a> es denomina <i>Arquebisbe</i>
+                            <img src="img/alfaerie/wcardinal.png" style="display: inline; height:6ex;" alt="arquebisbe"></p>
+                    </aside>
+                    <p>En els escacs hexagonals la seva potència és menor a una torre, i es considera una <i>peça mijana</i>,
+                        superior a les <i>peces menors</i>, però sense arribar a la potència d'una <i>peça major</i>.</p>
+                </section>
             </li>
             <!-- Víbria - Drac -->
             <li class="w3-container w3-card-4 w3-half">
-                <h3 id="Vibria" class="w3-container">
-                    <a href="ca/glossary.html#Vibria" class="cescacs" target="_blank">Víbria (Drac)
-                    <img src="img/alfaerie/wdragon.png" alt="Drac" class="pieceIcon"></a>
-                </h3>
-                <p>El drac pot moure en <a href="#Fila" class="cite"><em>ortogonal</em></a>, per les <em>files</em>,
-                    o fer un <a href="#Saltcavall" class="cescacs"><em>salt de cavall</em></a>.</p>
-                <p>No pot fer el moviment de cavalcada.</p>
-                <p>Combina els moviments de la torre i el cavall (sense incloure-hi la cavalcada).</p>
-                <aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
-                    <p>En els <a href="ca/historical-milestones.html#EscacsCapablanca" class="cescacs"
-                        target="_blank"><i>escacs de Capablanca</i></a> es denomina <i>Canceller</i>
-                        <img src="img/alfaerie/wchancellor.png" style="display: inline; height:6ex;" alt="canceller"></p>
-                </aside>
-                <p>La seva potència es similar a la dama.</p>
+                <section>
+                    <h3 id="Vibria" class="w3-container">
+                        <a href="ca/glossary.html#Vibria" class="cescacs" target="_blank">Víbria (Drac)
+                        <img src="img/alfaerie/wdragon.png" alt="Drac" class="pieceIcon"></a>
+                    </h3>
+                    <p>El drac pot moure en <a href="#Fila" class="cite"><em>ortogonal</em></a>, per les <em>files</em>,
+                        o fer un <a href="#Saltcavall" class="cescacs"><em>salt de cavall</em></a>.</p>
+                    <p>No pot fer el moviment de cavalcada.</p>
+                    <p>Combina els moviments de la torre i el cavall (sense incloure-hi la cavalcada).</p>
+                    <aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+                        <p>En els <a href="ca/historical-milestones.html#EscacsCapablanca" class="cescacs"
+                            target="_blank"><i>escacs de Capablanca</i></a> es denomina <i>Canceller</i>
+                            <img src="img/alfaerie/wchancellor.png" style="display: inline; height:6ex;" alt="canceller"></p>
+                    </aside>
+                    <p>La seva potència es similar a la dama.</p>
+                </section>
             </li>
             <!-- Dama -->
             <li class="w3-container w3-card-4">
-                <h3 id="Dama" class="w3-container">
-                    <a href="ca/glossary.html#Dama" class="cescacs" target="_blank">Dama
-                    <img src="img/alfaerie/wqueen.png" alt="Dama" class="pieceIcon"></a>
-                </h3>
-                <p>Moviment en les sis direccions <a href="#Fila" class="cite"><em>ortogonals</em></a>
-                    i en les sis <a href="#Linia" class="cite"><em>diagonals</em></a>;
-                    mou tant per les <em>files</em> com per les <em>línies</em>.</p>
-                <p>Combina els moviments de la torre i l'alfil.</p>
+                <section>
+                    <h3 id="Dama" class="w3-container">
+                        <a href="ca/glossary.html#Dama" class="cescacs" target="_blank">Dama
+                        <img src="img/alfaerie/wqueen.png" alt="Dama" class="pieceIcon"></a>
+                    </h3>
+                    <p>Moviment en les sis direccions <a href="#Fila" class="cite"><em>ortogonals</em></a>
+                        i en les sis <a href="#Linia" class="cite"><em>diagonals</em></a>;
+                        mou tant per les <em>files</em> com per les <em>línies</em>.</p>
+                    <p>Combina els moviments de la torre i l'alfil.</p>
+                </section>
             </li>
             <!-- Elefant -->
             <li class="w3-container w3-card-4">
-                <h3 id="Elefant" class="w3-container">
-                    <a href="ca/glossary.html#Elefant" class="cescacs" target="_blank">Elefant
-                    <img src="img/alfaerie/welephant.png" alt="Elefant" class="pieceIcon"></a>
-                </h3>
-                <div>
+                <section>
+                    <h3 id="Elefant" class="w3-container">
+                        <a href="ca/glossary.html#Elefant" class="cescacs" target="_blank">Elefant
+                        <img src="img/alfaerie/welephant.png" alt="Elefant" class="pieceIcon"></a>
+                    </h3>
                     <div class="w3-container twothirds">
 						<div class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
 							<p>En alguns idiomes, l'<i class="cescacs">Elefant</i> és el nom que es fa servir per a l'alfil;
@@ -617,430 +628,463 @@
                             </figcaption>
                         </figure>
                     </div>
-                </div>
+                </section>
             </li>
             <!-- Peó -->
             <li class="w3-container w3-card-4">
-                <h3 id="Peo" class="w3-container">
-                    <a href="ca/glossary.html#Peo" class="cescacs" target="_blank">Peó
-                    <img src="img/alfaerie/wpawn.png" alt="Peó" class="pieceIcon"></a>
-                </h3>
-                <p>Els moviments del peó són diferents si captura o si fa un moviment a un hexcac buid;
-                    a més, existeixen moviments especifics per a algunes situacions.</p>
-                <!-- Moviments i captures; moviments especials -->
-                <div class="w3-container w3-center third-rest">
-                    <figure>
-                        <img src="img/moves/pawnmove.svg" alt="moviments del peó" class="fullwidth">
-                        <figcaption class="thumbcaption">Moviments del peó
-                        </figcaption>
-                    </figure>
-                </div>
-                <!-- Moviments -->
-                <div class="w3-container w3-card twothirds w3-margin-bottom">
-                    <h4 class="w3-container w3-text-purple"><img src="img/alfaerie/wpawn.png"
-                        alt="Peó" style="display: inline; vertical-align: baseline; height:2.5ex;">
-                        <span>Moviments sense captura</span></h4>
-                    <ul class="w3-ul w3-border w3-margin-bottom">
-                        <li>El peó pot moure <em>en davant</em> un o dos hexcacs (<i>moviment doble</i>).
-                            El <em><i>moviment doble</i></em> es pot fer en qualsevol posició de l'hexcaquer.
-                        </li>
-                        <li>El peó també pot moure un hexcac <em>ortogonalment oblic</em>, a qualsevol dels
-                            <em>dos hexcacs adjacents oblics en davant</em> en 60º.
-                        </li>
-                        <li>En total té un màxim de <em>quatre moviments</em> sense captura,
-                            sense comptar el possible moviment inicial addicional.
-                        </li>
-                    </ul>
-                </div>
-                <!-- Captures -->
-                <div class="w3-container w3-card twothirds w3-margin-bottom">
-                    <h4 class="w3-container w3-text-purple"><img src="img/alfaerie/wpawn.png"
-                        alt="Peó" style="display: inline; vertical-align: baseline; height:2.5ex;">
-                        <span>Moviments de captura</span>
-                    </h4>
-                    <ul class="w3-ul w3-border w3-margin-bottom">
-                        <li><p>Per <em>capturar</em> el peó mou <em>obliquament en davant en diagonal</em>,
-                            a qualsevol dels dos hexcacs de davant seguint les línies de 30º.
-                            És a dir, en els <em>dos hexcacs davant seu</em> del <em>mateix color</em> que l'hexcac
-                            on es troba posicionat.</p>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Moviments especials -->
-                <div class="w3-container" style="padding:0;">
-                    <!-- Moviment inicial -->
-                    <div class="w3-container half w3-card w3-margin-bottom">
-                        <h4 class="w3-container w3-text-purple subtitled"><img src="img/alfaerie/wpawn.png"
-                            alt="Peó" style="display: inline; vertical-align: baseline; height:2.5ex;">
-                            <span>Moviments especials</span>
-                        </h4>
-                        <h5 class="w3-container w3-text-pink subtitle">Moviment inicial</h5>
-                        <ul class="w3-ul w3-border w3-margin-bottom">
-                            <li><p>Des de les <em>posicions inicials</em> els peons poden fer un <em>moviment triple</em>
-                                en davant per la columna, amb l'<em>excepció</em> de la posició en la <em>columna central</em>
-                                (columna '<em>F</em>') i les de les <em>columnes dels flancs</em> (columna '<em>A</em>'
-                                i columna '<em>L</em>').</p>
-                                <aside class="note w3-panel w3-leftbar w3-sand w3-serif w3-small">
-                                    <p>Aquests tres peons es troben en posicions, bé avantatjoses,
-                                        en el cas de la columna central, bé adelantades, en el cas dels peons dels flancs.
-                                    </p>
-                                </aside>
-                            </li>
-                            <li><p>Un peó pot haver avançat fins a un d'aquests <em>vuit hexcacs inicials</em>, donada
-                                la seva capacitat de moviment ortogonal;
-                                en mantindrà la capacitat de fer el moviment triple mentre es trobi en un dels
-                                <em>vuit hexcacs inicials</em> que l'hi permeten, tot i haver estat mogut.</p>
-                                <aside class="note w3-panel w3-leftbar w3-sand w3-serif w3-small">
-                                    <p>D'aquesta manera no cal recordar si un peó ha estat mogut.</p>
-                                </aside>
-                                <p>És a dir: per a cada jugador n'hi ha <em>vuit posicions</em> des de les
-                                    que un peó pot fer un <em>moviment triple</em>, i tres peons que mai podran
-                                    fer un moviment triple.
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Promoció -->
-                    <div class="w3-container half w3-card w3-margin-bottom">
-                        <h4 class="w3-container w3-text-purple subtitled"><img src="img/alfaerie/wpawn.png"
-                            alt="Peó" style="display: inline; vertical-align: baseline; height:2.5ex;">
-                            <span>Moviments especials</span>
-                        </h4>
-                        <h5 class="w3-container w3-text-pink subtitle">Promoció</h5>
-                        <ul class="w3-ul w3-border w3-margin-bottom">
-                            <li><p>Quan un peó arriba a un dels quinze hexcacs de la banda de l'oponent promocionarà de
-                                manera obligatòria, però <em>la peça a què promociona ha de ser una
-                                <strong><a href="ca/glossary.html#Peçarecuperable" target="_blank" class="cescacs">peça
-                                    recuperable</a> ja capturada</strong></em>.</p>
-                                <aside class="note w3-panel w3-leftbar w3-sand w3-serif w3-small">
-                                    <p>Cal considerar que la promoció és relativament més senzilla en C'escacs que en els escacs
-                                        ortodoxos, i és per això que s'estableix una petita limitació.</p>
-                                </aside>
-                            </li>
-                            <li>
-                                <p>Són <em><a href="ca/glossary.html#Peçarecuperable" target="_blank" class="cescacs">peces
-                                    recuperables</a></em>: <i>Dama</i>, <i>Víbria</i> (<i>Drac</i>), <i>Rocs</i> (<i>Torres</i>),
-                                    <i>Pegassos</i>, <i>Cavalls</i> i <i>Alfils</i>, però
-                                    s'ha de considerar el <em>color de l'Alfil</em>, doncs no es poden tenir en joc dos
-                                    <i>Alfils</i> del mateix color; només és recuperable un <em><i>Alfil</i> del mateix color</em>
-                                    que ha estat capturat.
-                                </p>
-                                <p> No són recuperables els <i>Elefants</i>.</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Promoció forçada -->
-                    <div class="w3-container w3-card w3-margin-bottom">
-                        <h4 class="w3-container w3-text-purple subtitled"><img src="img/alfaerie/wpawn.png"
-                            alt="Peó" style="display: inline; vertical-align: baseline; height:2.5ex;">
-                            <span>Moviments especials</span>
-                        </h4>
-                        <h5 class="w3-container w3-text-pink subtitle subtitled">Promoció forçada</h5>
-                        <h6 class="w3-container subtitle"><span><a href="ca/glossary.html#Peoenesperapromocio"
-                            target="_blank" class="cescacs">Peó <i>en espera de promoció</i></a></span></h6>
-                        <ul class="w3-ul w3-border w3-margin-bottom">
-                            <li><p>Sembla poc probable que no n'hi hagi cap
-                                <a href="ca/glossary.html#Peçarecuperable" target="_blank" class="cescacs">peça
-                                    recuperable</a> capturada diponible per promocionar un peó,
-                                però si arribés el cas, el peó quedaria sense promoció, amb els moviments limitats
-                                per la seva situació en l'hexcaquer, fins que l'oponent capturi una peça vàlida per
-                                a la promoció, o bé el mateix peó sigui caprturat. Es diu que el <i>peó</i> queda
-                                <i><a href="ca/glossary.html#Peoenesperapromocio"
-                                    target="_blank" class="cescacs">en espera de promoció</a></i>.
-                                </p>
-                                <p>En el torn d'un jugador amb un <i><a href="ca/glossary.html#Peoenesperapromocio"
-                                    target="_blank" class="cescacs">peó en espera de promoció</a></i>, immediatament
-                                    després d'haver estat capturada d'una de les seves peces <i>recuperables</i>
-                                    vàlida per a la promoció, i si no es troba en
-                                    <a href="ca/glossary.html#Escac" class="cescacs" target="_blank">escac</a>,
-                                    la jugada <em>obligatòriament</em> consistirà en <em>promocionar</em>
-                                    el peó que havia quedat <i><a href="ca/glossary.html#Peoenesperapromocio"
-                                        target="_blank" class="cescacs">en espera de promoció</a></i>,
-                                        <em>sense fer cap altre moviment</em>.
-                                </p>
-                                <p>En el cas de trobar-se en situació d'<a
-                                        href="ca/glossary.html#Escac" class="cescacs" target="_blank">escac</a>,
-                                    el moviment de <i>promoció</i> s'haurà de fer en la primera jugada en què el
-                                    jugador no es trobi en situació d'<a
-                                    href="ca/glossary.html#Escac" class="cescacs" target="_blank">escac</a>,
-                                    sempre sense fer cap altre moviment a més de la promoció.
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Captures especials -->
-                <div class="w3-container" style="padding:0;">
-                    <!-- En passant -->
-                    <div class="w3-container half w3-card w3-margin-bottom">
-                        <h4 class="w3-container w3-text-purple subtitled"><img src="img/alfaerie/wpawn.png"
-                            alt="Peó" style="display: inline; vertical-align: baseline; height:2.5ex;">
-                            <span>Captures especials</span>
-                        </h4>
-                        <h5 class="w3-container w3-text-pink subtitle">
-                            <a href="ca/glossary.html#CapturaAlPas" class="cescacs" target="_blank">Captura
-                                al pas</a>
-                        </h5>
-                        <div style="display: flex; flex-wrap: wrap;">
-                            <figure>
-                                <div style="width:50%; max-width: 300px; float:left; border: 1px solid black; padding: 5px;">
-                                    <img src="img/moves/enpassant1.png" class="fullwidth"
-                                        alt="Captura al pas per l'esquerra"
-                                        title="Captura al pas per l'esquerra">
-                                </div>
-                                <div style="width:50%; max-width: 300px; float:left; border: 1px solid black; padding: 5px;">
-                                    <img src="img/moves/enpassant2.png" class="fullwidth"
-                                        alt="Captura al pas per la dreta"
-                                        title="Captura al pas per la dreta">
-                                </div>
-                                <figcaption class="thumbcaption" style="clear:both; text-align: center">Captura al pas
-                                </figcaption>
-                            </figure>
-                            <figure>
-                                <img id="pawnenpassant" src="img/moves/pawnenpassant0.svg" class="fullwidth"
-                                    alt=" El peón blanco lo captura ortogonalmente.">
-                                <figcaption class="thumbcaption" style="text-align: center">
-                                    <span id="pawnenpassant_caption">Posició inicial</span>
-                                    <div>
-                                        <script>
-                                            var enpassant_image = document.getElementById('pawnenpassant');
-                                            var enpassant_caption = document.getElementById('pawnenpassant_caption');
-                                            function enpassant0() {
-                                                enpassant_image.setAttribute('src', 'img/moves/pawnenpassant0.svg');
-                                                enpassant_image.setAttribute('title', "Posició inicial");
-                                                enpassant_caption.textContent = "Posició inicial";
-                                            }
-                                            function enpassant1() {
-                                                enpassant_image.setAttribute('src', 'img/moves/pawnenpassant1.svg');
-                                                enpassant_image.setAttribute('title', "Peó negre mou doble");
-                                                enpassant_caption.textContent = "Peó negre mou doble";
-                                            }
-                                            function enpassant2() {
-                                                enpassant_image.setAttribute('src', 'img/moves/pawnenpassant2.svg');
-                                                enpassant_image.setAttribute('title', "Peó blanc el pot capturar");
-                                                enpassant_caption.textContent = "Peó blanc el pot capturar";
-                                            }
-                                            function enpassant3() {
-                                                enpassant_image.setAttribute('src', 'img/moves/pawnenpassant3.svg');
-                                                enpassant_image.setAttribute('title', "Capturat al pas");
-                                                enpassant_caption.textContent = "Capturat al pas";
-                                            }
-                                        </script>
-                                        <div class="w3-bar w3-center">
-                                            <button class="w3-button w3-khaki" onclick="enpassant0()"> Inici</button>
-                                            <button class="w3-button w3-khaki" onclick="enpassant1()"> Negre mou</button>
-                                            <button class="w3-button w3-khaki" onclick="enpassant2()"> Blanc captura</button>
-                                            <button class="w3-button w3-khaki" onclick="enpassant3()"> Final</button>
-                                        </div>
-                                    </div>
-                                </figcaption>
-                            </figure>
-                        </div>
-
-                        <div class="w3-container">
-                            <ul class="w3-ul w3-border w3-margin-bottom">
-                                <li>Quan un peó que realitza un moviment <em>doble o triple</em> travessant un hexcac
-                                    on podia haver estat capturat per un peó de l'oponent, pot ser igualment capturat.
-                                    <aside class="note w3-panel w3-leftbar w3-sand w3-serif w3-small">
-                                        <p>El moviment triple només es pot fer des d'alguns hexcacs inicials,
-                                            però el moviment doble es pot fer en qualsevol posició, i la captura al pas s'hi aplica.
-                                        </p>
-                                    </aside>
-                                </li>
-                                <li>La captura al pas s'ha de fer inmediatament després del moviment doble o triple.
-                                </li>
-                                <li>El peó que realitza la captura queda posicionat en l'hexcac on hauria fet una
-                                    captura normal, i el peó de l'oponent es retirat del joc, ignorant la posició
-                                    a què havia avançat (un o dos hexcacs més endavant).
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="w3-container half w3-card w3-margin-bottom">
-                        <h4 class="w3-container w3-text-purple subtitled"><img src="img/alfaerie/wpawn.png"
-                            alt="Peó" style="display: inline; vertical-align: baseline; height:2.5ex;">
-                            <span>Captures especials</span>
-                        </h4>
-                        <h5 id="CapturaPeoEsquiu" class="w3-container w3-text-pink subtitle">
-                            <a href="ca/glossary.html#CapturaPeoEsquiu" class="cescacs" target="_blank">Captura
-                                del peó esquíu
-                            </a>
-                        </h5>
-                        <div style="display: flex; flex-wrap: wrap;">
-                            <figure style="margin-bottom:20px; padding-bottom:20px">
-                                <div style="width:50%; max-width: 300px; float:left; border: 1px solid black; padding: 5px;">
-                                    <img src="img/moves/scornfp1.png" class="fullwidth"
-                                        alt="Captura del peó esquíu per l'esquerra'"
-                                        title="Captura del peó esquíu per l'esquerra">
-                                </div>
-                                <div style="width:50%; max-width: 300px; float: left; border: 1px solid black; padding: 5px;">
-                                    <img src="img/moves/scornfp2.png" class="fullwidth"
-                                        alt="Captura del peó esquíu per la dreta"
-                                        title="Captura del peó esquíu per la dreta">
-                                </div>
-                                <figcaption class="thumbcaption" style="clear:both; text-align: center">Captura del peó esquíu
-                                </figcaption>
-                            </figure>
-                            <figure>
-                                <img id="pawnscornful" src="img/moves/pawnscornful0.svg" class="fullwidth"
-                                    alt=" El peón blanco lo captura ortogonalmente.">
-                                <figcaption class="thumbcaption" style="text-align: center"><span id="pawnscornful_caption">Posició inicial</span>
-                                    <div>
-                                        <script>
-                                            var scornful_image = document.getElementById('pawnscornful');
-                                            var scornful_caption = document.getElementById('pawnscornful_caption');
-                                            function scornful0() {
-                                                scornful_image.setAttribute('src', 'img/moves/pawnscornful0.svg');
-                                                scornful_image.setAttribute('title', "Posició inicial");
-                                                scornful_caption.textContent = "Posició inicial";
-                                            }
-                                            function scornful1() {
-                                                scornful_image.setAttribute('src', 'img/moves/pawnscornful1.svg');
-                                                scornful_image.setAttribute('title', "El peó negre esquiva el bloqueig");
-                                                scornful_caption.textContent = "El peó negre esquiva el bloqueig";
-                                            }
-                                            function scornful2() {
-                                                scornful_image.setAttribute('src', 'img/moves/pawnscornful2.svg');
-                                                scornful_image.setAttribute('title', "El peó blanc el pot capturar");
-                                                scornful_caption.textContent = "El peó blanc el pot capturar";
-                                            }
-                                            function scornful3() {
-                                                scornful_image.setAttribute('src', 'img/moves/pawnscornful3.svg');
-                                                scornful_image.setAttribute('title', "Captura en ortogonal");
-                                                scornful_caption.textContent = "Captura en ortogonal";
-                                            }
-                                        </script>
-                                        <div class="w3-bar w3-center">
-                                            <button class="w3-button w3-khaki" onclick="scornful0()"> Inici</button>
-                                            <button class="w3-button w3-khaki" onclick="scornful1()"> Negre mou</button>
-                                            <button class="w3-button w3-khaki" onclick="scornful2()"> Blanc captura</button>
-                                            <button class="w3-button w3-khaki" onclick="scornful3()"> Final</button>
-                                        </div>
-                                    </div>
-                                </figcaption>
-                            </figure>
-                        </div>
-
-                        <div class="w3-container">
-                            <p>Quan dos peons de diferent bàndol queden enfrontats, no queden retinguts, perquè en
-                                <i>C'escacs</i> els peons poden moure oblíquament. Però si un peó enfrontat
-                                amb un altre de l'oponent fa un moviment oblic per esquivar-lo, pot ser
-                                <em>capturat ortogonalment</em> pel peó de l'oponent que ha esquivat.
-                            </p>
-                            <ol class="w3-ul w3-border w3-margin-bottom">
-                                <li>Quan un <em>peó enfrontat amb un peó de l'oponent</em>, en la mateixa columna
-                                    i hexcacs consecutius, fa un <em>moviment oblic esquivant el peó
-                                    de l'oponent</em>, pot ser capturat amb un moviment ortogonal.
-                                </li>
-                                <li>El moviment de <em>captura s'ha de fer inmediatament després</em> del
-                                    <a href="ca/glossary.html#PeoEsquiu" class="cescacs" target="_blank">moviment
-                                        esquiu del peó</a>.
-                                </li>
-                                <li>La captura es fa ortogonalment, movent a la posició on es troba el peó de l'oponent.
-                                    És l'única captura de moviment ortogonal que fan els peons.
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-                    <p>Es pot arribar a donar el cas d'un <i>peó</i> que promociona fent un <i>moviment esquiu</i>
-                        evitant el <i>peó</i> de l'oponent amb qui estava enfrontat. Aquest cas només es pot donar
-                        en les columnes <i>T</i>, <i>A</i>, <i>L</i>, <i>X</i>, després de fer un moviment esquiu
-                        respectivament des de les columnes <i>A</i>, <i>B</i>, <i>K</i>, <i>L</i>.
-                        La <i>captura del peó esquiu</i> també aplica en aquest cas,
-                        i es capturarà la peça a què hagi promocionat el peó.
-                    </p>
-                </div>
-            </li>
-            <!-- Rei -->
-            <li class="w3-container w3-card-4">
-                <h3 id="Rei" class="w3-container">
-                    <a href="ca/glossary.html#Rei" class="cescacs" target="_blank">Rei
-                    <img src="img/alfaerie/wking.png" alt="Rei" class="pieceIcon"></a>
-                </h3>
-                <p>Pot moure un únic hexcac ortogonalment o diagonalment; en total dotze moviments possibles.</p>
-                <ul class="w3-ul w3-border">
-                    <li>No es pot fer un moviment que deixi el rei amenaçat (en escac)</li>
-                    <li>Quan es troba amenaçat (en escac) s'ha de moure o moure una altra peça per evitar la amenaça.
-                    </li>
-                    <li>Si no existeix un moviment per evitar l'amenaça, és escac i mat, i s'ha perdut la partida.</li>
-                </ul>
-                <!-- Salt del Rei -->
-                <div class="w3-container w3-card w3-margin-bottom">
-                    <h4 class="w3-container w3-text-purple subtitled">
-                        <img src="img/alfaerie/wking.png" alt="King" style="display: inline; vertical-align: baseline; height:2.5ex;">
-                        <span><i>Salt del Rei</i></span>
-                    </h4>
-                    <h5 class="w3-container w3-text-pink subtitle">Moviment inicial</h5>
-                    <div class="w3-container w3-center half">
+                <section>
+                    <h3 id="Peo" class="w3-container">
+                        <a href="ca/glossary.html#Peo" class="cescacs" target="_blank">Peó
+                        <img src="img/alfaerie/wpawn.png" alt="Peó" class="pieceIcon"></a>
+                    </h3>
+                    <p>Els moviments del peó són diferents si captura o si fa un moviment a un hexcac buid;
+                        a més, existeixen moviments especifics per a algunes situacions.</p>
+                    <!-- Moviments i captures; moviments especials -->
+                    <div class="w3-container w3-center third-rest">
                         <figure>
-                            <img src="img/moves/kingsleap.png" alt="Salt del rei" title="Salt del rei"
-                                class="fullwidth">
-                            <figcaption class="thumbcaption">
-                                Els cinc hexcacs destí del <i>Salt del Rei</i> possibles.
+                            <img src="img/moves/pawnmove.svg" alt="moviments del peó" class="fullwidth">
+                            <figcaption class="thumbcaption">Moviments del peó
                             </figcaption>
                         </figure>
                     </div>
-                    <div class="w3-container half">
-                        <p>El rei pot fer <em>un únic moviment de cavall</em>:</p>
-                        <ul class="w3-ul w3-border">
-                            <li>Si el <i>Rei</i> no ha estat mogut en tota la partida.</li>
-                            <li>Si el <i>Rei</i> no es troba amenaçat (en escac).</li>
-                            <li>Li està permès capturar una peça en aquest moviment.
-                                <ul>
-                                    <li>La regla anterior li impedeix capturar una peça que li amenaça.</li>
-                                </ul>
+                    <!-- Moviments -->
+                    <section class="w3-container w3-card twothirds w3-margin-bottom">
+                        <h4 class="w3-container w3-text-purple"><img src="img/alfaerie/wpawn.png"
+                            alt="Peó" style="display: inline; vertical-align: baseline; height:2.5ex;">
+                            <span>Moviments sense captura</span></h4>
+                        <ul class="w3-ul w3-border w3-margin-bottom">
+                            <li>El peó pot moure <em>en davant</em> un o dos hexcacs (<i>moviment doble</i>).
+                                El <em><i>moviment doble</i></em> es pot fer en qualsevol posició de l'hexcaquer.
+                            </li>
+                            <li>El peó també pot moure un hexcac <em>ortogonalment oblic</em>, a qualsevol dels
+                                <em>dos hexcacs adjacents oblics en davant</em> en 60º.
+                            </li>
+                            <li>En total té un màxim de <em>quatre moviments</em> sense captura,
+                                sense comptar el possible moviment inicial addicional.
                             </li>
                         </ul>
-                        <p class="note">
-                            Es poden veure les regles del <i>Salt del Rei</i> més detalladament
-                            en un apartat específic disponible en <a href="ca/castling.html#SaltRei"
-                                class="cescacs" target="_blank">una altra pàgina d'aquest
-                                mateix lloc web</a>.
+                    </section>
+                    <!-- Captures -->
+                    <section class="w3-container w3-card twothirds w3-margin-bottom">
+                        <h4 class="w3-container w3-text-purple"><img src="img/alfaerie/wpawn.png"
+                            alt="Peó" style="display: inline; vertical-align: baseline; height:2.5ex;">
+                            <span>Moviments de captura</span>
+                        </h4>
+                        <ul class="w3-ul w3-border w3-margin-bottom">
+                            <li><p>Per <em>capturar</em> el peó mou <em>obliquament en davant en diagonal</em>,
+                                a qualsevol dels dos hexcacs de davant seguint les línies de 30º.
+                                És a dir, en els <em>dos hexcacs davant seu</em> del <em>mateix color</em> que l'hexcac
+                                on es troba posicionat.</p>
+                            </li>
+                        </ul>
+                    </section>
+                    <!-- Moviments especials -->
+                    <section class="w3-container" style="padding:0;">
+                        <h4 style="display:none;">Moviments especials</h4>
+                        <!-- Moviment inicial -->
+                        <section class="w3-container half w3-card w3-margin-bottom">
+                            <header>
+                                <div class="w3-container w3-text-purple h4 subtitled"><img src="img/alfaerie/wpawn.png"
+                                    alt="Peó" style="display:inline;vertical-align:sub;height:2.5ex;">
+                                    <span>Moviments especials</span>
+                                </div>
+                                <h5 class="w3-container w3-text-pink subtitle">Moviment inicial</h5>
+                            </header>
+                            <ul class="w3-ul w3-border w3-margin-bottom">
+                                <li><p>Des de les <em>posicions inicials</em> els peons poden fer un <em>moviment triple</em>
+                                    en davant per la columna, amb l'<em>excepció</em> de la posició en la <em>columna central</em>
+                                    (columna '<em>F</em>') i les de les <em>columnes dels flancs</em> (columna '<em>A</em>'
+                                    i columna '<em>L</em>').</p>
+                                    <aside class="note w3-panel w3-leftbar w3-sand w3-serif w3-small">
+                                        <p>Aquests tres peons es troben en posicions, bé avantatjoses,
+                                            en el cas de la columna central, bé adelantades, en el cas dels peons dels flancs.
+                                        </p>
+                                    </aside>
+                                </li>
+                                <li><p>Un peó pot haver avançat fins a un d'aquests <em>vuit hexcacs inicials</em>, donada
+                                    la seva capacitat de moviment ortogonal;
+                                    en mantindrà la capacitat de fer el moviment triple mentre es trobi en un dels
+                                    <em>vuit hexcacs inicials</em> que l'hi permeten, tot i haver estat mogut.</p>
+                                    <aside class="note w3-panel w3-leftbar w3-sand w3-serif w3-small">
+                                        <p>D'aquesta manera no cal recordar si un peó ha estat mogut.</p>
+                                    </aside>
+                                    <p>És a dir: per a cada jugador n'hi ha <em>vuit posicions</em> des de les
+                                        que un peó pot fer un <em>moviment triple</em>, i tres peons que mai podran
+                                        fer un moviment triple.
+                                    </p>
+                                </li>
+                            </ul>
+                        </section>
+                        <!-- Promoció -->
+                        <section class="w3-container half w3-card w3-margin-bottom">
+                            <header>
+                                <div class="w3-container w3-text-purple h4 subtitled"><img src="img/alfaerie/wpawn.png"
+                                    alt="Peó" style="display:inline;vertical-align:sub;height:2.5ex;">
+                                    <span>Moviments especials</span>
+                                </div>
+                                <h5 class="w3-container w3-text-pink subtitle">Promoció</h5>
+                            </header>
+                            <ul class="w3-ul w3-border w3-margin-bottom">
+                                <li><p>Quan un peó arriba a un dels quinze hexcacs de la banda de l'oponent promocionarà de
+                                    manera obligatòria, però <em>la peça a què promociona ha de ser una
+                                    <strong><a href="ca/glossary.html#Peçarecuperable" target="_blank" class="cescacs">peça
+                                        recuperable</a> ja capturada</strong></em>.</p>
+                                    <aside class="note w3-panel w3-leftbar w3-sand w3-serif w3-small">
+                                        <p>Cal considerar que la promoció és relativament més senzilla en C'escacs que en els escacs
+                                            ortodoxos, i és per això que s'estableix una petita limitació.</p>
+                                    </aside>
+                                </li>
+                                <li>
+                                    <p>Són <em><a href="ca/glossary.html#Peçarecuperable" target="_blank" class="cescacs">peces
+                                        recuperables</a></em>: <i>Dama</i>, <i>Víbria</i> (<i>Drac</i>), <i>Rocs</i> (<i>Torres</i>),
+                                        <i>Pegassos</i>, <i>Cavalls</i> i <i>Alfils</i>, però
+                                        s'ha de considerar el <em>color de l'Alfil</em>, doncs no es poden tenir en joc dos
+                                        <i>Alfils</i> del mateix color; només és recuperable un <em><i>Alfil</i> del mateix color</em>
+                                        que ha estat capturat.
+                                    </p>
+                                    <p> No són recuperables els <i>Elefants</i>.</p>
+                                </li>
+                            </ul>
+                        </section>
+                        <!-- Promoció forçada -->
+                        <section class="w3-container w3-card w3-margin-bottom">
+                            <header>
+                                <div class="w3-container w3-text-purple h4 subtitled"><img src="img/alfaerie/wpawn.png"
+                                    alt="Peó" style="display:inline;vertical-align:sub;height:2.5ex;">
+                                    <span>Moviments especials</span>
+                                </div>
+                                <h5 class="w3-container w3-text-pink subtitle">Promoció forçada</h5>
+                            </header>
+                            <section class="w3-border w3-margin-bottom">
+                                <h6 class="w3-container" style="margin-bottom:0;"><span><a href="ca/glossary.html#Peoenesperapromocio"
+                                    target="_blank" class="cescacs">Peó <i>en espera de promoció</i></a></span></h6>
+                                <ul class="w3-ul">
+                                    <li><p>Sembla poc probable que no n'hi hagi cap
+                                        <a href="ca/glossary.html#Peçarecuperable" target="_blank" class="cescacs">peça
+                                            recuperable</a> capturada diponible per promocionar un peó,
+                                        però si arribés el cas, el peó quedaria sense promoció, amb els moviments limitats
+                                        per la seva situació en l'hexcaquer, fins que l'oponent capturi una peça vàlida per
+                                        a la promoció, o bé el mateix peó sigui caprturat. Es diu que el <i>peó</i> queda
+                                        <i><a href="ca/glossary.html#Peoenesperapromocio"
+                                            target="_blank" class="cescacs">en espera de promoció</a></i>.
+                                        </p>
+                                        <p>En el torn d'un jugador amb un <i><a href="ca/glossary.html#Peoenesperapromocio"
+                                            target="_blank" class="cescacs">peó en espera de promoció</a></i>, immediatament
+                                            després d'haver estat capturada d'una de les seves peces <i>recuperables</i>
+                                            vàlida per a la promoció, i si no es troba en
+                                            <a href="ca/glossary.html#Escac" class="cescacs" target="_blank">escac</a>,
+                                            la jugada <em>obligatòriament</em> consistirà en <em>promocionar</em>
+                                            el peó que havia quedat <i><a href="ca/glossary.html#Peoenesperapromocio"
+                                                target="_blank" class="cescacs">en espera de promoció</a></i>,
+                                                <em>sense fer cap altre moviment</em>.
+                                        </p>
+                                        <p>En el cas de trobar-se en situació d'<a
+                                                href="ca/glossary.html#Escac" class="cescacs" target="_blank">escac</a>,
+                                            el moviment de <i>promoció</i> s'haurà de fer en la primera jugada en què el
+                                            jugador no es trobi en situació d'<a
+                                            href="ca/glossary.html#Escac" class="cescacs" target="_blank">escac</a>,
+                                            sempre sense fer cap altre moviment a més de la promoció.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </section>
+                        </section>
+                    </section>
+                    <!-- Captures especials -->
+                    <section class="w3-container" style="padding:0;">
+                        <!-- En passant -->
+                        <section class="w3-container half w3-card w3-margin-bottom">
+                            <header>
+                                <div class="w3-container w3-text-purple h4 subtitled"><img src="img/alfaerie/wpawn.png"
+                                    alt="Peó" style="display:inline;vertical-align:sub;height:2.5ex;">
+                                    <span>Captures especials</span>
+                                </div>
+                                <h5 class="w3-container w3-text-pink subtitle">
+                                    <a href="ca/glossary.html#CapturaAlPas" class="cescacs" target="_blank">Captura
+                                        al pas</a>
+                                </h5>
+                            </header>
+                            <div style="display: flex; flex-wrap: wrap;">
+                                <figure>
+                                    <div style="width:50%; max-width: 300px; float:left; border: 1px solid black; padding: 5px;">
+                                        <img src="img/moves/enpassant1.png" class="fullwidth"
+                                            alt="Captura al pas per l'esquerra"
+                                            title="Captura al pas per l'esquerra">
+                                    </div>
+                                    <div style="width:50%; max-width: 300px; float:left; border: 1px solid black; padding: 5px;">
+                                        <img src="img/moves/enpassant2.png" class="fullwidth"
+                                            alt="Captura al pas per la dreta"
+                                            title="Captura al pas per la dreta">
+                                    </div>
+                                    <figcaption class="thumbcaption" style="clear:both; text-align: center">Captura al pas
+                                    </figcaption>
+                                </figure>
+                                <figure>
+                                    <img id="pawnenpassant" src="img/moves/pawnenpassant0.svg" class="fullwidth"
+                                        alt=" El peón blanco lo captura ortogonalmente.">
+                                    <figcaption class="thumbcaption" style="text-align: center">
+                                        <span id="pawnenpassant_caption">Posició inicial</span>
+                                        <div>
+                                            <script>
+                                                var enpassant_image = document.getElementById('pawnenpassant');
+                                                var enpassant_caption = document.getElementById('pawnenpassant_caption');
+                                                function enpassant0() {
+                                                    enpassant_image.setAttribute('src', 'img/moves/pawnenpassant0.svg');
+                                                    enpassant_image.setAttribute('title', "Posició inicial");
+                                                    enpassant_caption.textContent = "Posició inicial";
+                                                }
+                                                function enpassant1() {
+                                                    enpassant_image.setAttribute('src', 'img/moves/pawnenpassant1.svg');
+                                                    enpassant_image.setAttribute('title', "Peó negre mou doble");
+                                                    enpassant_caption.textContent = "Peó negre mou doble";
+                                                }
+                                                function enpassant2() {
+                                                    enpassant_image.setAttribute('src', 'img/moves/pawnenpassant2.svg');
+                                                    enpassant_image.setAttribute('title', "Peó blanc el pot capturar");
+                                                    enpassant_caption.textContent = "Peó blanc el pot capturar";
+                                                }
+                                                function enpassant3() {
+                                                    enpassant_image.setAttribute('src', 'img/moves/pawnenpassant3.svg');
+                                                    enpassant_image.setAttribute('title', "Capturat al pas");
+                                                    enpassant_caption.textContent = "Capturat al pas";
+                                                }
+                                            </script>
+                                            <div class="w3-bar w3-center">
+                                                <button class="w3-button w3-khaki" onclick="enpassant0()"> Inici</button>
+                                                <button class="w3-button w3-khaki" onclick="enpassant1()"> Negre mou</button>
+                                                <button class="w3-button w3-khaki" onclick="enpassant2()"> Blanc captura</button>
+                                                <button class="w3-button w3-khaki" onclick="enpassant3()"> Final</button>
+                                            </div>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="w3-container">
+                                <ul class="w3-ul w3-border w3-margin-bottom">
+                                    <li>Quan un peó que realitza un moviment <em>doble o triple</em> travessant un hexcac
+                                        on podia haver estat capturat per un peó de l'oponent, pot ser igualment capturat.
+                                        <aside class="note w3-panel w3-leftbar w3-sand w3-serif w3-small">
+                                            <p>El moviment triple només es pot fer des d'alguns hexcacs inicials,
+                                                però el moviment doble es pot fer en qualsevol posició, i la captura al pas s'hi aplica.
+                                            </p>
+                                        </aside>
+                                    </li>
+                                    <li>La captura al pas s'ha de fer inmediatament després del moviment doble o triple.
+                                    </li>
+                                    <li>El peó que realitza la captura queda posicionat en l'hexcac on hauria fet una
+                                        captura normal, i el peó de l'oponent es retirat del joc, ignorant la posició
+                                        a què havia avançat (un o dos hexcacs més endavant).
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <!-- peó esquíu -->
+                        <section class="w3-container half w3-card w3-margin-bottom">
+                            <header>
+                                <div class="w3-container w3-text-purple h4 subtitled"><img src="img/alfaerie/wpawn.png"
+                                    alt="Peó" style="display:inline;vertical-align:sub;height:2.5ex;">
+                                    <span>Captures especials</span>
+                                </div>
+                                <h5 id="CapturaPeoEsquiu" class="w3-container w3-text-pink subtitle">
+                                    <a href="ca/glossary.html#CapturaPeoEsquiu" class="cescacs" target="_blank">Captura
+                                        del peó esquíu
+                                    </a>
+                                </h5>
+                            </header>
+                            <div style="display: flex; flex-wrap: wrap;">
+                                <figure style="margin-bottom:20px; padding-bottom:20px">
+                                    <div style="width:50%; max-width: 300px; float:left; border: 1px solid black; padding: 5px;">
+                                        <img src="img/moves/scornfp1.png" class="fullwidth"
+                                            alt="Captura del peó esquíu per l'esquerra'"
+                                            title="Captura del peó esquíu per l'esquerra">
+                                    </div>
+                                    <div style="width:50%; max-width: 300px; float: left; border: 1px solid black; padding: 5px;">
+                                        <img src="img/moves/scornfp2.png" class="fullwidth"
+                                            alt="Captura del peó esquíu per la dreta"
+                                            title="Captura del peó esquíu per la dreta">
+                                    </div>
+                                    <figcaption class="thumbcaption" style="clear:both; text-align: center">Captura del peó esquíu
+                                    </figcaption>
+                                </figure>
+                                <figure>
+                                    <img id="pawnscornful" src="img/moves/pawnscornful0.svg" class="fullwidth"
+                                        alt=" El peón blanco lo captura ortogonalmente.">
+                                    <figcaption class="thumbcaption" style="text-align: center"><span id="pawnscornful_caption">Posició inicial</span>
+                                        <div>
+                                            <script>
+                                                var scornful_image = document.getElementById('pawnscornful');
+                                                var scornful_caption = document.getElementById('pawnscornful_caption');
+                                                function scornful0() {
+                                                    scornful_image.setAttribute('src', 'img/moves/pawnscornful0.svg');
+                                                    scornful_image.setAttribute('title', "Posició inicial");
+                                                    scornful_caption.textContent = "Posició inicial";
+                                                }
+                                                function scornful1() {
+                                                    scornful_image.setAttribute('src', 'img/moves/pawnscornful1.svg');
+                                                    scornful_image.setAttribute('title', "El peó negre esquiva el bloqueig");
+                                                    scornful_caption.textContent = "El peó negre esquiva el bloqueig";
+                                                }
+                                                function scornful2() {
+                                                    scornful_image.setAttribute('src', 'img/moves/pawnscornful2.svg');
+                                                    scornful_image.setAttribute('title', "El peó blanc el pot capturar");
+                                                    scornful_caption.textContent = "El peó blanc el pot capturar";
+                                                }
+                                                function scornful3() {
+                                                    scornful_image.setAttribute('src', 'img/moves/pawnscornful3.svg');
+                                                    scornful_image.setAttribute('title', "Captura en ortogonal");
+                                                    scornful_caption.textContent = "Captura en ortogonal";
+                                                }
+                                            </script>
+                                            <div class="w3-bar w3-center">
+                                                <button class="w3-button w3-khaki" onclick="scornful0()"> Inici</button>
+                                                <button class="w3-button w3-khaki" onclick="scornful1()"> Negre mou</button>
+                                                <button class="w3-button w3-khaki" onclick="scornful2()"> Blanc captura</button>
+                                                <button class="w3-button w3-khaki" onclick="scornful3()"> Final</button>
+                                            </div>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="w3-container">
+                                <p>Quan dos peons de diferent bàndol queden enfrontats, no queden retinguts, perquè en
+                                    <i>C'escacs</i> els peons poden moure oblíquament. Però si un peó enfrontat
+                                    amb un altre de l'oponent fa un moviment oblic per esquivar-lo, pot ser
+                                    <em>capturat ortogonalment</em> pel peó de l'oponent que ha esquivat.
+                                </p>
+                                <ol class="w3-ul w3-border w3-margin-bottom">
+                                    <li>Quan un <em>peó enfrontat amb un peó de l'oponent</em>, en la mateixa columna
+                                        i hexcacs consecutius, fa un <em>moviment oblic esquivant el peó
+                                        de l'oponent</em>, pot ser capturat amb un moviment ortogonal.
+                                    </li>
+                                    <li>El moviment de <em>captura s'ha de fer inmediatament després</em> del
+                                        <a href="ca/glossary.html#PeoEsquiu" class="cescacs" target="_blank">moviment
+                                            esquiu del peó</a>.
+                                    </li>
+                                    <li>La captura es fa ortogonalment, movent a la posició on es troba el peó de l'oponent.
+                                        És l'única captura de moviment ortogonal que fan els peons.
+                                    </li>
+                                </ol>
+                            </div>
+                        </section>
+                        <div class="w3-small">
+                            <p>Es pot arribar a donar el cas d'un <i>peó</i> que promociona fent un <i>moviment esquiu</i>
+                                evitant un <i>peó</i> de l'oponent amb qui estava enfrontat. Aquest cas només es pot donar
+                                en les columnes <i>T</i>, <i>A</i>, <i>L</i>, <i>X</i>, després de fer un moviment esquiu
+                                respectivament des de les columnes <i>A</i>, <i>B</i>, <i>K</i>, <i>L</i>.
+                                La <i>captura del peó esquiu</i> també aplica en aquest cas,
+                                i es capturarà la peça a què hagi promocionat el peó.
+                            </p>
+                            <p>També en les columnes <i>T</i>, <i>A</i>, <i>L</i>, <i>X</i> es pot donar una
+                                <i>captura al pas</i> en el moment de la promoció; no en les altres columnes, doncs no poden
+                                tenir peons tan endarrerits. També en aquest cas es capturarà la peça a què hagi promocionat
+                                el peó.
+                            </p>
+                        </div>
+                    </section>
+                </section>
+            </li>
+            <!-- Rei -->
+            <li class="w3-container w3-card-4">
+                <section>
+                    <h3 id="Rei" class="w3-container">
+                        <a href="ca/glossary.html#Rei" class="cescacs" target="_blank">Rei
+                        <img src="img/alfaerie/wking.png" alt="Rei" class="pieceIcon"></a>
+                    </h3>
+                    <p>Pot moure un únic hexcac ortogonalment o diagonalment; en total dotze moviments possibles.</p>
+                    <ul class="w3-ul w3-border">
+                        <li>No es pot fer un moviment que deixi el rei amenaçat (en escac)</li>
+                        <li>Quan es troba amenaçat (en escac) s'ha de moure o moure una altra peça per evitar la amenaça.
+                        </li>
+                        <li>Si no existeix un moviment per evitar l'amenaça, és escac i mat, i s'ha perdut la partida.</li>
+                    </ul>
+                    <!-- Salt del Rei -->
+                    <section class="w3-container w3-card w3-margin-bottom">
+                        <header>
+                            <h4 class="w3-container w3-text-purple subtitled">
+                                <img src="img/alfaerie/wking.png" alt="King"
+                                    style="display:inline;vertical-align:sub;height:2.5ex;">
+                                <span><i>Salt del Rei</i></span>
+                            </h4>
+                            <div class="w3-container w3-text-pink h5 subtitle">Moviment inicial</div>
+                        </header>
+                        <div class="w3-container w3-center half">
+                            <figure>
+                                <img src="img/moves/kingsleap.png" alt="Salt del rei" title="Salt del rei"
+                                    class="fullwidth">
+                                <figcaption class="thumbcaption">
+                                    Els cinc hexcacs destí del <i>Salt del Rei</i> possibles.
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="w3-container half">
+                            <p>El rei pot fer <em>un únic moviment de cavall</em>:</p>
+                            <ul class="w3-ul w3-border">
+                                <li>Si el <i>Rei</i> no ha estat mogut en tota la partida.</li>
+                                <li>Si el <i>Rei</i> no es troba amenaçat (en escac).</li>
+                                <li>Li està permès capturar una peça en aquest moviment.
+                                    <ul>
+                                        <li>La regla anterior li impedeix capturar una peça que li amenaça.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <p class="note">
+                                Es poden veure les regles del <i>Salt del Rei</i> més detalladament
+                                en un apartat específic disponible en <a href="ca/castling.html#SaltRei"
+                                    class="cescacs" target="_blank">una altra pàgina d'aquest
+                                    mateix lloc web</a>.
+                            </p>
+                        </div>
+                    </section>
+                    <!-- Enroc -->
+                    <section class="w3-container w3-card w3-margin-bottom">
+                        <header>
+                            <h4 class="w3-container w3-text-purple subtitled">
+                                <img src="img/alfaerie/wking.png" alt="King"
+                                    style="display:inline;vertical-align:sub;height:2.5ex;">
+                                <span>L'<i>enroc</i></span>
+                            </h4>
+                            <div class="w3-container w3-text-pink h5 subtitle">Moviment inicial</div>
+                        </header>
+                        <p>En C'escacs existeix un moviment d'<i>Enroc</i>, però no és un moviment fonamental per
+                            desenvolupar l'estratègia, i és convenient fer les primeres partides obviant aquesta regla,
+                            com es detalla més avall. En apartat de l'<i>Enroc</i> d'aquest lloc web, separat en una
+                            altra pàgina, es detallen les dues variants:
+                            l'<a href="ca/castling.html#EnrocSimple" class="cescacs" target="_blank"><i>enroc simple</i>,
+                                amb un <i>Roc</i></a>, i
+                            l'<a href="ca/castling.html#EnrocDoble" class="cescacs" target="_blank"><i>enroc doble</i>,
+                                fent servir ambdós <i>Rocs</i></a>.
                         </p>
-                    </div>
-                </div>
-                <!-- Enroc -->
-                <div class="w3-container w3-card w3-margin-bottom">
-                    <h4 class="w3-container w3-text-purple subtitled">
-                        <img src="img/alfaerie/wking.png" alt="King" style="display: inline; vertical-align: baseline; height:2.5ex;">
-                        <span>L'<i>enroc</i></span>
-                    </h4>
-                    <h5 class="w3-container w3-text-pink subtitle">Moviment inicial</h5>
-                    <p>En C'escacs existeix un moviment d'<i>Enroc</i>, però no és un moviment fonamental per
-                        desenvolupar l'estratègia, i és convenient fer les primeres partides obviant aquesta regla,
-                        com es detalla més avall. En apartat de l'<i>Enroc</i> d'aquest lloc web, separat en una
-                        altra pàgina, es detallen les dues variants:
-                        l'<a href="ca/castling.html#EnrocSimple" class="cescacs" target="_blank"><i>enroc simple</i>,
-                            amb un <i>Roc</i></a>, i
-                        l'<a href="ca/castling.html#EnrocDoble" class="cescacs" target="_blank"><i>enroc doble</i>,
-                            fent servir ambdós <i>Rocs</i></a>.
-                    </p>
-                    <ul>
-                        <li style="border:0; padding:0">No s'ha de confondre amb el <i>Salt del Rei</i>.</li>
-                        <li style="border:0; padding:0">L'enroc també és un moviment principalment evasiu,
-                            però permet incorporar defensa amb la <i>Torre</i>.
-                        </li>
-                    </ul>
-                    <h5 class="w3-container w3-text-pink subtitled">Jugar sense <i>Enroc</i></h5>
-                    <h6 class="w3-container w3-text-teal subtitle"><span>Recomanació
-                        per a les primeres partides</span></h6>
-                    <ul style="font-size:smaller">
-                        <li style="border:0; padding:0">Es recomana jugar sense <i>Enroc</i> per iniciar-se en el joc.</li>
-                        <li style="border:0; padding:0">S'ha d'acordar a l'inici de la partida.</li>
-                        <li style="border:0; padding:0">Si es juga sense <i>Enroc</i>, el <i>Salt del Rei</i> es mantindrà,
-                            però sense permetre al <i>Rei</i> fer captures amb aquest moviment.
-                        </li>
-                    </ul>
-                    <br>
-                </div>
+                        <ul>
+                            <li style="border:0; padding:0">No s'ha de confondre amb el <i>Salt del Rei</i>.</li>
+                            <li style="border:0; padding:0">L'enroc també és un moviment principalment evasiu,
+                                però permet incorporar defensa amb la <i>Torre</i>.
+                            </li>
+                        </ul>
+                        <section>
+                            <header>
+                                <h5 class="w3-container w3-text-pink subtitled">Jugar sense <i>Enroc</i></h5>
+                                <div class="w3-container w3-text-teal h6 subtitle"><span>Recomanació
+                                    per a les primeres partides</span></div>
+                            </header>
+                            <ul style="font-size:smaller">
+                                <li style="border:0; padding:0">Es recomana jugar sense <i>Enroc</i> per iniciar-se en el joc.</li>
+                                <li style="border:0; padding:0">S'ha d'acordar a l'inici de la partida.</li>
+                                <li style="border:0; padding:0">Si es juga sense <i>Enroc</i>, el <i>Salt del Rei</i> es mantindrà,
+                                    però sense permetre al <i>Rei</i> fer captures amb aquest moviment.
+                                </li>
+                            </ul>
+                        </section>
+                        <br>
+                    </section>
+                </section>
             </li>
         </ul>
-    </div>
+    </section>
     <!-- Regles -->
-    <h2 class="w3-container w3-pale-green w3-center title">Regles</h2>
-    <div class="w3-container">
+    <section class="w3-container">
+        <h2 class="w3-container w3-pale-green w3-center title">Regles</h2>
         <!-- Taules -->
-        <div class="w3-container w3-card-4 half w3-margin-bottom">
+        <section class="w3-container w3-card-4 half w3-margin-bottom">
             <h3 class="w3-container w3-pale-yellow w3-center"><i>Taules</i></h3>
             <p>Les <em><a href="ca/glossary.html#Taules" class="cescacs" target="_blank">taules</a></em>,
                 o empat entre tots dos contendents, en un torneig representa 1 punt per a cada jugador,
@@ -1072,9 +1116,9 @@
                     consecutives sense cap captura ni moviment de peó.</p>
 				</li>
             </ul>
-        </div>
+        </section>
         <!-- Ofegat i punts competició -->
-        <div class="w3-container w3-card-4 half w3-margin-bottom">
+        <section class="w3-container w3-card-4 half w3-margin-bottom">
             <h3 class="w3-container w3-pale-yellow w3-center">Les taules i la victoria per ofegat</h3>
             <p>En <i>C'escacs</i> l'ofegat és una <i>victòria per la mínima</i>. Per això,
                 <a href="ca/notation.html#ResultatPartida" class="cescacs" target="_blank">si
@@ -1087,9 +1131,9 @@
                     i el jugador amb el <em>rei ofegat 1 punt</em>.</li>
             </ul>
             <p>Tot i això, és força extrany trobar un cas d'ofegat en <i>C'escacs</i>.</p>
-        </div>
+        </section>
         <!-- Regles generals -->
-        <div class="w3-container w3-card-4 half w3-margin-bottom">
+        <section class="w3-container w3-card-4 half w3-margin-bottom">
             <h3 class="w3-container w3-pale-yellow w3-center">Regles generals</h3>
             <dl>
                 <dt><q>Peça tocada, peça moguda</q></dt>
@@ -1105,11 +1149,11 @@
                 <dd>Quan no compleix un requeriment legal de l'oponent.</dd>
                 <dd>Si es nega a complir les regles.</dd>
             </dl>
-        </div>
-    </div>
+        </section>
+    </section>
     <!-- Finals -->
-    <h2 class="w3-container w3-pale-green w3-center title">Finals</h2>
-    <div class="w3-container w3-card-4 w3-margin-bottom">
+    <section class="w3-container w3-card-4 w3-margin-bottom">
+        <h2 class="w3-container w3-pale-green w3-center title">Finals</h2>
         <ul class="icon iconBullseye">
             <li><strong>El <i>Rei</i> i un <i>Peó</i></strong> contra un <i>Rei solitari</i> acaba en la
                 <i>coronació del Peó</i>, sempre que el <i>Rei</i> sigui prou a prop per defensar-ho.
@@ -1165,7 +1209,7 @@
                 </ol>
             </li>
         </ul>
-        <div class="w3-container w3-card-4 w3-margin-bottom">
+        <section class="w3-container w3-card-4 w3-margin-bottom">
             <h4 class="w3-container w3-text-purple subtitled">
                 <span>Indicacions addicionals referents als finals</span></h4>
             <ul class="icon iconSquarePlus">
@@ -1182,19 +1226,19 @@
                     un <i>Rei</i> amb un <i>Roc</i> (<i>Torre</i>).
                 </li>
             </ul>
-        </div>
+        </section>
         <aside class="note">
             <p>La informació dels finals és <a href="ca/the-corner.html" class="cite" target="_blank">cortesia
                 de <b>Dave McCooey</b></a>.</p>
         </aside>
-    </div>
+    </section>
 </main>
 <footer class="w3-container w3-purple w3-opacity">
     <!-- Joc on-line -->
-    <h2 class="w3-container w3-pale-green w3-center title">
-        <a href="cescacs.typescript/cescacs.game.html" target="_blank" class="cescacs">Provar el joc</a>
-    </h2>
-    <div class="w3-container" style="font-weight:300">
+    <section class="w3-container" style="font-weight:300">
+        <h2 class="w3-container w3-pale-green w3-center title">
+            <a href="cescacs.typescript/cescacs.game.html" target="_blank" class="cescacs">Provar el joc</a>
+        </h2>
         <p>En <a href="cescacs.typescript/cescacs.game.html" target="_blank" class="cescacs w3-text-yellow">aquest enllaç</a> n'hi ha un tauler
             amb les fitxes movibles que únicament accepta els moviments correctes. Permet desar partides, recuperar partides
             desades o carregar posicions concretes; una eina pensada per provar el joc.
@@ -1203,12 +1247,12 @@
             la màquina ofereix el moviment que avalua com <i>el millor</i>, sempre limitat a l'execució pel navegador
             (execució sense servidor).
         </p>
-    </div>
-    <!-- Excaquer per imprimir -->
-    <h2 class="w3-container w3-pale-green w3-center title">
-        <a href="img/cescacs.svg" target="_blank" class="cescacs">Hexcaquer per imprimir</a>
-    </h2>
-    <div class="w3-container" style="font-weight:300">
+    </section>
+    <!-- Excaquer per a imprimir -->
+    <section class="w3-container" style="font-weight:300">
+        <h2 class="w3-container w3-pale-green w3-center title">
+            <a href="img/cescacs.svg" target="_blank" class="cescacs">Hexcaquer per imprimir</a>
+        </h2>
         <p>En <a href="img/cescacs.svg" target="_blank" class="cescacs w3-text-yellow">aquest enllaç</a> n'hi ha un hexcaquer
             en format <i>.SVG</i> per a imprimir-lo.
 			Es recomana el format <i>DINA-1</i>, que pot fer-se imprimint-lo en quatre parts <i>DINA-3</i>,
@@ -1219,11 +1263,11 @@
         <p>Una altra opció és imprimir-ho en cuatro <i>DINA-4</i>, obtenim un hexcaquer per a peces més petites,
             amb una mida d'hexcac d'uns 2.4 cm.
         </p>
-    </div>
+    </section>
     <!-- Email -->
-    <h2 class="w3-container w3-pale-green w3-center title">
-        <img src="img/cescacs-email-image.gif" alt="cescacs" style="height:1em; display: inline-block;" >
-    </h2>
+    <div class="w3-container w3-pale-green w3-center h2 title" style="margin:20px 10px">
+        <img src="img/cescacs-email-image.gif" alt="cescacs" style="height:1em;" >
+    </div>
 </footer>
 </body>
 

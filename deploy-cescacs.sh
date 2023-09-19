@@ -135,14 +135,14 @@ then
 	cp w3.css $DEST
 	cp w3-colors-win8.css $DEST
 	cp cescacs.min.css $DEST"cescacs.css"
-	cp noredefines.sed $DEST"noredefines.sed"
+	cp noredefines.sed $DEST
+	cp sitemap.xml $DEST
 	cp *.png $DEST
 	cp *.ico $DEST
 	cp site.webmanifest $DEST
 	cp -r other/ $DEST"other"
 	cp -r js/ $DEST"js"
 	cp -r img/ $DEST"img"
-	
 	
 
 	shopt -u nullglob

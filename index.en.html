@@ -195,8 +195,8 @@
         </p>
     </div>
     <!-- board -->
-    <h2 class="w3-container w3-pale-green w3-center title">Initial setup</h2>
-    <div class="w3-container">
+    <section class="w3-container">
+        <h2 class="w3-container w3-pale-green w3-center title">Initial setup</h2>
         <p>The board forms a regular hexagon with eight hexes on each side, and has three different colours:
             <em>white</em>, <em>black</em> and <em>coloured</em>, with the central hex coloured.</p>
         <p>The <em>white king and queen</em> take positions in <em>white hexes</em>, and the <em>black king and queen</em> take positions in
@@ -204,7 +204,7 @@
 				the <em>white king on his right</em>, and the <em>black king on his left</em>.
 		</p>
 
-        <div class="w3-container left">
+        <section class="w3-container left">
             <h3 class="w3-container w3-pale-yellow w3-center">The pieces</h3>
             <ul class="w3-ul w3-border">
 				<li>Each player has 27 chessman:</li>
@@ -232,13 +232,13 @@
                 <a href="en/glossary.html#Alabarder" class="cescacs" target="_blank"><i class="cescacs">Halberdier</i></a>
                 is used to name the <i class="cescacs">C'escacs</i>'s <i class="cescacs">Elephant</i> piece. 
 			</div>
-        </div>
+        </section>
 
         <div class="w3-container main">
             <img src="img/moves/ini.svg" alt="initial array" style="width:100%; min-width:250px; max-width:800px;">
         </div>
 
-        <div class="w3-container right">
+        <section class="w3-container right">
 
             <h3 class="w3-container w3-pale-yellow w3-center">Relative Value</h3>
             <table class="w3-table w3-border w3-bordered">
@@ -300,9 +300,9 @@
 				In total, at the start of the game, each player has 104 points:
 				51 from major pieces, 16 from medium pieces, 18 from minor pieces and 19 from the troop.
 			</div>
-        </div>
+        </section>
 
-        <div class="w3-container">
+        <section class="w3-container">
             <h3 class="w3-container w3-pale-yellow w3-center">First impressions</h3>
             <ul class="icon iconBullseye">
 				<li>
@@ -346,13 +346,13 @@
                     <p>Initially the pieces are protected, with the exception of the two <i>rooks</i> and the two flank <i>pawns</i>.</p>
                 </li>
             </ul>
-        </div>
-    </div>
+        </section>
+    </section>
     <!-- Movements -->
-    <h2 class="w3-container w3-pale-green w3-center title">Movements: orthogonal, diagonal and knight moves</h2>
-    <div class="w3-container">
+    <section class="w3-container">
+        <h2 class="w3-container w3-pale-green w3-center title">Movements: orthogonal, diagonal and knight moves</h2>
         <!-- Files -->
-        <div class="w3-container half">
+        <section class="w3-container half">
             <h3 id="Fila" class="w3-container w3-pale-yellow w3-center"><a href="en/glossary.html#Fila"
                 class="cescacs" target="_blank"><em>File</em>: orthogonal direction</a>
                 <img src="img/alfaerie/wrook.png" alt="Rook" class="pieceIcon"></h3>
@@ -391,9 +391,9 @@
                 There are <em>six</em> different <i>orthogonal directions</i>, two on each file.
             </p>
             <p>The orthogonal directions are the <em>directions of the rook moves</em>.</p>
-        </div>
+        </section>
         <!-- Lines -->
-        <div class="w3-container half">
+        <section class="w3-container half">
             <h3 id="Linia" class="w3-container w3-pale-yellow w3-center"><a href="en/glossary.html#Linia"
                 class="cescacs" target="_blank"><em>Line</em>: diagonal direction</a>
                 <img src="img/alfaerie/wbishop.png" alt="Bishop" class="pieceIcon"></h3>
@@ -439,168 +439,180 @@
 			</aside>
             <p>Diagonal directions are the <em>directions of the bishop moves</em>;
                 there are three different colors, so, there are three bishops, one for each color.</p>
+        </section>
+        <!-- Knight movements -->
+        <div>
+            <!-- Simple jump -->
+            <section class="w3-container half">
+                <h3 id="Saltcavall" class="w3-container w3-pale-yellow w3-center"><a
+                    href="en/glossary.html#SaltCavall" class="cescacs" target="_blank">Knight jump
+                    <img src="img/alfaerie/wknight.png" alt="Knight" class="pieceIcon">
+                    <img src="img/alfaerie/wpegasus.png" alt="Cavall" class="pieceIcon">
+                    <img src="img/alfaerie/wdragon.png" alt="Cavall" class="pieceIcon"></a>
+                </h3>
+                <figure class="w3-center">
+                    <img src="img/moves/knightmove.svg" alt="Knight moves" class="fullwidth">
+                    <figcaption class="thumbcaption">Knight jumps
+                    </figcaption>
+                </figure>
+                <ul class="w3-ul w3-border">
+                    <li>Knight jump is the combination of one diagonal hex move and one orthogonal hex move;
+                        each diagonal direction allows two orthogonal diferent final positions; there are a total of twelve
+                        legal moves.
+                    </li>
+                    <li>A knight jump can't be prevented positioning a piece in the path of the knight; it is said that
+                        knight <q>jumps</q>.</li>
+                    <li>The color of the destination hex always is different from color of the hex where the move is
+                        originated.
+                    </li>
+                    <li>The knight jump can be made by the following pieces: <a href="#Cavall" class="cescacs">Knight</a>,
+                        <a href="#Pegas" class="cescacs">Pegasus</a> and the <a href="#Vibria" class="cescacs">Wivern (Dragon)</a>.
+                    </li>
+                </ul>
+            </section>
+            <!-- Ride -->
+            <section class="w3-container half">
+                <h3 id="Cavalcada" class="w3-container w3-pale-yellow w3-center">Ride <img src="img/alfaerie/wknight.png"
+                        alt="Knight" class="pieceIcon"></h3>
+                <figure class="w3-center">
+                    <img src="img/moves/ridemove.svg" alt="Ride moves" class="fullwidth">
+                    <figcaption class="thumbcaption">A ride is the repetition of the knight move.
+                        <p>The intermediate hexes, which must be empty to move, are shown.</p>
+                    </figcaption>
+                </figure>
+                <ul class="w3-ul w3-border">
+                    <li>C'escacs ride move is a <strong>doble knight jump</strong> (only twice), without capture.</li>
+                    <li>The second jump must be done just the same way as the first one:
+                        same diagonal direction and same orthogonal direction. So, it is defined by the initial
+                        jump; there is only one possible ride for each knight move.</li>
+                    <li>The destination hex must be free, as it this move doesn't allow capturing opponent pieces.</li>
+                    <li>The intermediate hex chaining both jumps must also be free.</li>
+                    <li>The color of the destination hex always is different from color of the hex where the move is
+                        originated.</li>
+                    <li>The <i>Ride</i> move can only be done by the <a href="#Cavall" class="cescacs">Knight</a>.</li>
+                </ul>
+            </section>
         </div>
-    </div>
-    <!-- Knight movements -->
-    <div class="w3-container">
-        <!-- Simple jump -->
-        <div class="w3-container half">
-            <h3 id="Saltcavall" class="w3-container w3-pale-yellow w3-center"><a
-                href="en/glossary.html#SaltCavall" class="cescacs" target="_blank">Knight jump
-                <img src="img/alfaerie/wknight.png" alt="Knight" class="pieceIcon">
-                <img src="img/alfaerie/wpegasus.png" alt="Cavall" class="pieceIcon">
-                <img src="img/alfaerie/wdragon.png" alt="Cavall" class="pieceIcon"></a>
-            </h3>
-            <figure class="w3-center">
-                <img src="img/moves/knightmove.svg" alt="Knight moves" class="fullwidth">
-                <figcaption class="thumbcaption">Knight jumps
-                </figcaption>
-            </figure>
-            <ul class="w3-ul w3-border">
-                <li>Knight jump is the combination of one diagonal hex move and one orthogonal hex move;
-                    each diagonal direction allows two orthogonal diferent final positions; there are a total of twelve
-                    legal moves.
-                </li>
-                <li>A knight jump can't be prevented positioning a piece in the path of the knight; it is said that
-                    knight <q>jumps</q>.</li>
-                <li>The color of the destination hex always is different from color of the hex where the move is
-                    originated.
-                </li>
-                <li>The knight jump can be made by the following pieces: <a href="#Cavall" class="cescacs">Knight</a>,
-                    <a href="#Pegas" class="cescacs">Pegasus</a> and the <a href="#Vibria" class="cescacs">Wivern (Dragon)</a>.
-                </li>
-            </ul>
-        </div>
-        <!-- Ride -->
-        <div class="w3-container half">
-            <h3 id="Cavalcada" class="w3-container w3-pale-yellow w3-center">Ride <img src="img/alfaerie/wknight.png"
-                    alt="Knight" class="pieceIcon"></h3>
-            <figure class="w3-center">
-                <img src="img/moves/ridemove.svg" alt="Ride moves" class="fullwidth">
-                <figcaption class="thumbcaption">A ride is the repetition of the knight move.
-                    <p>The intermediate hexes, which must be empty to move, are shown.</p>
-                </figcaption>
-            </figure>
-            <ul class="w3-ul w3-border">
-                <li>C'escacs ride move is a <strong>doble knight jump</strong> (only twice), without capture.</li>
-                <li>The second jump must be done just the same way as the first one:
-					same diagonal direction and same orthogonal direction. So, it is defined by the initial
-                    jump; there is only one possible ride for each knight move.</li>
-				<li>The destination hex must be free, as it this move doesn't allow capturing opponent pieces.</li>
-                <li>The intermediate hex chaining both jumps must also be free.</li>
-                <li>The color of the destination hex always is different from color of the hex where the move is
-                    originated.</li>
-                <li>The <i>Ride</i> move can only be done by the <a href="#Cavall" class="cescacs">Knight</a>.</li>
-            </ul>
-        </div>
-    </div>
+    </section>
     <br>
     <!-- Pice movements -->
-    <h2 class="w3-container w3-pale-green w3-center title">Piece movements</h2>
-    <div class="w3-container">
+    <section class="w3-container">
+        <h2 class="w3-container w3-pale-green w3-center title">Piece movements</h2>
         <ul class="w3-ul">
             <!-- Rook -->
             <li class="w3-container w3-card-4 w3-half">
-                <h3 id="Roc" class="w3-container">
-                    <a href="en/glossary.html#Roc" class="cescacs" target="_blank">Rook
-                    <img src="img/alfaerie/wrook.png" alt="Rook" class="pieceIcon"></a>
-                </h3>
-                <p><em>Orthogonal</em> movement: toward six <a href="#Fila" class="cite"><em>orthogonal</em></a>
-                    direccions, on <em>files</em>.</p>
+                <section>
+                    <h3 id="Roc" class="w3-container">
+                        <a href="en/glossary.html#Roc" class="cescacs" target="_blank">Rook
+                        <img src="img/alfaerie/wrook.png" alt="Rook" class="pieceIcon"></a>
+                    </h3>
+                    <p><em>Orthogonal</em> movement: toward six <a href="#Fila" class="cite"><em>orthogonal</em></a>
+                        direccions, on <em>files</em>.</p>
+                </section>
             </li>
             <!-- Bishop -->
             <li class="w3-container w3-card-4 w3-half">
-                <h3 id="Alfil" class="w3-container">
-                    <a href="en/glossary.html#Alfil" class="cescacs" target="_blank">Bishop
-                    <img src="img/alfaerie/wbishop.png" alt="Bishop" class="pieceIcon"></a>
-                </h3>
-                <p><em>Diagonal</em> movement: toward six <a href="#Linia" class="cite"><em>diagonal</em></a>
-                    directions, on <em>lines</em>.</p>
-                <p>Colour bound; it's a weak piece in hexagonal chess,
-                    remarkably weaker than the knight.</p>
+                <section>
+                    <h3 id="Alfil" class="w3-container">
+                        <a href="en/glossary.html#Alfil" class="cescacs" target="_blank">Bishop
+                        <img src="img/alfaerie/wbishop.png" alt="Bishop" class="pieceIcon"></a>
+                    </h3>
+                    <p><em>Diagonal</em> movement: toward six <a href="#Linia" class="cite"><em>diagonal</em></a>
+                        directions, on <em>lines</em>.</p>
+                    <p>Colour bound; it's a weak piece in hexagonal chess,
+                        remarkably weaker than the knight.</p>
+                </section>
             </li>
             <!-- Knight -->
             <li class="w3-container w3-card-4 w3-half">
-                <h3 id="Cavall" class="w3-container">
-                    <a href="en/glossary.html#Cavall" class="cescacs" target="_blank">Knight
-                    <img src="img/alfaerie/wknight.png" alt="Knight" class="pieceIcon"></a>
-                </h3>
-                <p>There are two different movements:</p>
-                <ul class="w3-ul">
-                    <li><a href="#Saltcavall" class="cescacs"><em>Knight jump</em></a>, as described;
-                        there are twelve possible ones.</li>
-                    <li><a href="#Cavalcada" class="cescacs"><em>Knight ride</em></a>, as described:
-                        <ul class="w3-ul w3-border">
-                            <li><em>Two equal</em> knight jumps are chained;
-                                There are twelve possible ride moves, one for each simple knight move.</li>
-                            <li>The intermediate hex, as for the simple jump move, must be free.</li>
-                            <li><em>He cannot capture pieces when moving by riding</em>; the final hex has to be empty.
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <p>There are twenty four total possible moves, but only the twelve simple knight moves allow a capture.
-                    The color of the destination hex always changes with respect to the color of the source hex,
-                    both in single movements and in double movements while riding.</p>
-                <aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
-                    <p>The ride move has been incorporated because the knight, in such a large chess,
-                        loses effectiveness, due to its loss of speed.</p>
-                </aside>
+                <section>
+                    <h3 id="Cavall" class="w3-container">
+                        <a href="en/glossary.html#Cavall" class="cescacs" target="_blank">Knight
+                        <img src="img/alfaerie/wknight.png" alt="Knight" class="pieceIcon"></a>
+                    </h3>
+                    <p>There are two different movements:</p>
+                    <ul class="w3-ul">
+                        <li><a href="#Saltcavall" class="cescacs"><em>Knight jump</em></a>, as described;
+                            there are twelve possible ones.</li>
+                        <li><a href="#Cavalcada" class="cescacs"><em>Knight ride</em></a>, as described:
+                            <ul class="w3-ul w3-border">
+                                <li><em>Two equal</em> knight jumps are chained;
+                                    There are twelve possible ride moves, one for each simple knight move.</li>
+                                <li>The intermediate hex, as for the simple jump move, must be free.</li>
+                                <li><em>He cannot capture pieces when moving by riding</em>; the final hex has to be empty.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>There are twenty four total possible moves, but only the twelve simple knight moves allow a capture.
+                        The color of the destination hex always changes with respect to the color of the source hex,
+                        both in single movements and in double movements while riding.</p>
+                    <aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+                        <p>The ride move has been incorporated because the knight, in such a large chess,
+                            loses effectiveness, due to its loss of speed.</p>
+                    </aside>
+                </section>
             </li>
             <!-- Pegasus -->
             <li class="w3-container w3-card-4 w3-half">
-                <h3 id="Pegas" class="w3-container">
-                    <a href="en/glossary.html#Pegas" class="cescacs" target="_blank">Pegasus
-                    <img src="img/alfaerie/wpegasus.png" alt="Pegasus" class="pieceIcon"></a>
-                </h3>
-                <p>The winged horse can move <a href="#Linia" class="cite"><em>diagonally</em></a>,
-                    along the <em>lines</em> as a bishop, or make a
-                    <a href="#Saltcavall" class="cescacs"><em>knight jump</em></a>.</p>
-                <p>He can't ride, as the knight ride.</p>
-                <p>He combines the movements of the bishop and the knight (without the knight ride).</p>
-                <aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
-                    <p>In <a href="en/historical-milestones.html#EscacsCapablanca" class="cescacs"
-                        target="_blank"><i>Capablanca's chess</i></a> it is called <i>Archbishop</i>
-                    <img src="img/alfaerie/wcardinal.png" style="display: inline; height:6ex;" alt="arzobispo"></p>
-                </aside>
-                <p>In hexagonal chess its power is less than a rook, and it is considered a <i>median piece</i>,
-					superior to the <i>minor pieces</i>, but without reaching the power of the <i>major pieces</i>.</p>
+                <section>
+                    <h3 id="Pegas" class="w3-container">
+                        <a href="en/glossary.html#Pegas" class="cescacs" target="_blank">Pegasus
+                        <img src="img/alfaerie/wpegasus.png" alt="Pegasus" class="pieceIcon"></a>
+                    </h3>
+                    <p>The winged horse can move <a href="#Linia" class="cite"><em>diagonally</em></a>,
+                        along the <em>lines</em> as a bishop, or make a
+                        <a href="#Saltcavall" class="cescacs"><em>knight jump</em></a>.</p>
+                    <p>He can't ride, as the knight ride.</p>
+                    <p>He combines the movements of the bishop and the knight (without the knight ride).</p>
+                    <aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+                        <p>In <a href="en/historical-milestones.html#EscacsCapablanca" class="cescacs"
+                            target="_blank"><i>Capablanca's chess</i></a> it is called <i>Archbishop</i>
+                        <img src="img/alfaerie/wcardinal.png" style="display: inline; height:6ex;" alt="arzobispo"></p>
+                    </aside>
+                    <p>In hexagonal chess its power is less than a rook, and it is considered a <i>median piece</i>,
+                        superior to the <i>minor pieces</i>, but without reaching the power of the <i>major pieces</i>.</p>
+                </section>
             </li>
             <!-- Wyvern - Dragon -->
             <li class="w3-container w3-card-4 w3-half">
-                <h3 id="Vibria" class="w3-container">
-                    <a href="en/glossary.html#Vibria" class="cescacs" target="_blank">Wyvern (Dragon)
-                    <img src="img/alfaerie/wdragon.png" alt="Dragon" class="pieceIcon"></a>
-                </h3>
-                <p>The dragon can move <a href="#Fila" class="cite"><em>orthogonally</em></a>, along the <em>files</em>,
-                    or make a <a href="#Saltcavall" class="cescacs"><em>knight jump</em></a>.</p>
-                <p>He can't ride, as the knight ride.</p>
-                <p>He combines the movements of the rook and the knight (without the knight ride).</p>
-                <aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
-                    <p>In <a href="en/historical-milestones.html#EscacsCapablanca" class="cescacs"
-                        target="_blank"><i>Capablanca's chess</i></a> it is called <i>Chancellor</i>
-                    <img src="img/alfaerie/wchancellor.png" style="display: inline; height:6ex;" alt="canceller"></p>
-                </aside>
-                <p>It's power is similar to that of the queen.</p>
+                <section>
+                    <h3 id="Vibria" class="w3-container">
+                        <a href="en/glossary.html#Vibria" class="cescacs" target="_blank">Wyvern (Dragon)
+                        <img src="img/alfaerie/wdragon.png" alt="Dragon" class="pieceIcon"></a>
+                    </h3>
+                    <p>The dragon can move <a href="#Fila" class="cite"><em>orthogonally</em></a>, along the <em>files</em>,
+                        or make a <a href="#Saltcavall" class="cescacs"><em>knight jump</em></a>.</p>
+                    <p>He can't ride, as the knight ride.</p>
+                    <p>He combines the movements of the rook and the knight (without the knight ride).</p>
+                    <aside class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
+                        <p>In <a href="en/historical-milestones.html#EscacsCapablanca" class="cescacs"
+                            target="_blank"><i>Capablanca's chess</i></a> it is called <i>Chancellor</i>
+                        <img src="img/alfaerie/wchancellor.png" style="display: inline; height:6ex;" alt="canceller"></p>
+                    </aside>
+                    <p>It's power is similar to that of the queen.</p>
+                </section>
             </li>
             <!-- Queen -->
             <li class="w3-container w3-card-4">
-                <h3 id="Dama" class="w3-container">
-                    <a href="en/glossary.html#Dama" class="cescacs" target="_blank">Queen
-                    <img src="img/alfaerie/wqueen.png" alt="Queen" class="pieceIcon"></a>
-                </h3>
-                <p>Movement in the six <a href="#Fila" class="cite"><em>orthogonal</em></a> directions
-                    and in the six <a href="#Linia" class="cite"><em>diagonals</em></a>;
-                    move through both <em>files</em> and <em>lines</em>.</p>
-                <p>She combines the movements of the rook and the bishop.</p>
+                <section>
+                    <h3 id="Dama" class="w3-container">
+                        <a href="en/glossary.html#Dama" class="cescacs" target="_blank">Queen
+                        <img src="img/alfaerie/wqueen.png" alt="Queen" class="pieceIcon"></a>
+                    </h3>
+                    <p>Movement in the six <a href="#Fila" class="cite"><em>orthogonal</em></a> directions
+                        and in the six <a href="#Linia" class="cite"><em>diagonals</em></a>;
+                        move through both <em>files</em> and <em>lines</em>.</p>
+                    <p>She combines the movements of the rook and the bishop.</p>
+                </section>
             </li>
             <!-- Elephant -->
             <li class="w3-container w3-card-4">
-                <h3 id="Elefant" class="w3-container">
-                    <a href="en/glossary.html#Elefant" class="cescacs" target="_blank">Elephant
-                    <img src="img/alfaerie/welephant.png" alt="Elephant" class="pieceIcon"></a>
-                </h3>
-                <div>
+                <section>
+                    <h3 id="Elefant" class="w3-container">
+                        <a href="en/glossary.html#Elefant" class="cescacs" target="_blank">Elephant
+                        <img src="img/alfaerie/welephant.png" alt="Elephant" class="pieceIcon"></a>
+                    </h3>
                     <div class="w3-container twothirds">
 						<div class="w3-panel w3-leftbar w3-sand w3-serif w3-small">
 							<p>In some languages, <i class="cescacs">Elephant</i> is the name given to the Bishop;
@@ -635,425 +647,457 @@
                             </figcaption>
                         </figure>
                     </div>
-                </div>
+                </section>
             </li>
             <!-- Pawn -->
             <li class="w3-container w3-card-4">
-                <h3 id="Peo" class="w3-container">
-                    <a href="en/glossary.html#Peo" class="cescacs" target="_blank">Pawn
-                    <img src="img/alfaerie/wpawn.png" alt="Pawn" class="pieceIcon"></a>
-                </h3>
-                <p>The pawn's moves are different if it captures or makes a move to an empty hex;
-                    In addition, there are specific movements for some situations.</p>
-                <!-- Moves & Captures; Special moves -->
-                <div class="w3-container w3-center third-rest">
-                    <figure>
-                        <img src="img/moves/pawnmove.svg" alt="Pawn moves" class="fullwidth">
-                        <figcaption class="thumbcaption">Pawn moves
-                        </figcaption>
-                    </figure>
-                </div>
-                <!-- Moves-->
-                <div class="w3-container w3-card twothirds w3-margin-bottom">
-                    <h4 class="w3-container w3-text-purple"><img src="img/alfaerie/wpawn.png"
-                        alt="Peó" style="display: inline; vertical-align: baseline; height:2.5ex;">
-                        <span>Moves without capture</span>
-                    </h4>
-                    <ul class="w3-ul w3-border w3-margin-bottom">
-                        <li>The pawn may move <em>forward one or two hexes</em>; double step is allowed anywhere.</li>
-                        <li>The pawn may also move one hex orthogonally oblique,
-                            to <em>either of the two adjacent oblique forward hexes</em> by 60º.
-                        </li>
-                        <li>In total it has a maximum of <em>four non-capture moves</em>,
-                            not counting the possible additional initial move.
-                        </li>
-                    </ul>
-                </div>
-                <!-- Captures -->
-                <div class="w3-container w3-card twothirds w3-margin-bottom">
-                    <h4 class="w3-container w3-text-purple"><img src="img/alfaerie/wpawn.png"
-                        alt="Peó" style="display: inline; vertical-align: baseline; height:2.5ex;">
-                        <span>Capture moves</span>
-                    </h4>
-                    <ul class="w3-ul w3-border w3-margin-bottom">
-                        <li>To <em>capture</em> the pawn moves diagonally towards either of the
-                            <em>two diagonally forward hexes</em>, following the two lines at 30º,
-                            that is, in the two front hexes of the <em>same color</em> as the hex it is in.</li>
-                    </ul>
-                </div>
-                <!-- Special moves -->
-                <div class="w3-container" style="padding:0;">
-                    <!-- Initial move -->
-                    <div class="w3-container half w3-card w3-margin-bottom">
-                        <h4 class="w3-container w3-text-purple subtitled"><img src="img/alfaerie/wpawn.png"
-                            alt="Peó" style="display: inline; vertical-align: baseline; height:2.5ex;">
-                            <span>Special moves</span>
-                        </h4>
-                        <h5 class="w3-container w3-text-pink subtitle"><span>Initial move</span></h5>
-                        <ul class="w3-ul w3-border w3-margin-bottom">
-                            <li><p>In the <em>initial positions</em>, the pawns can make a <em>triple forward movement</em>
-                                along the column, with the <em>exception</em> of the <em>central column</em>
-                                (on the '<em>F</em>' column) and both <em>columns on the flanks</em>
-                                (the '<em>A</em>' column and the '<em>L</em>' column).</p>
-                            </li>
-                            <li><p>A pawn may have been moved, but remain in one of these
-                                <em>initial eight hexes</em>.
-                                In this case, it will keep the ability to do the triple move.</p>
-                                <aside class="note w3-panel w3-leftbar w3-sand w3-serif w3-small">
-                                    <p>This way you don't have to remember if a pawn has been moved.</p>
-                                </aside>
-                                <p>That is to say: for each player there are <em>eight positions</em>
-                                    from which a pawn can make a <em>triple move</em>,
-                                    and three pawns that can never make a triple move.
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Promotion -->
-                    <div class="w3-container half w3-card w3-margin-bottom">
-                        <h4 class="w3-container w3-text-purple subtitled"><img src="img/alfaerie/wpawn.png"
-                            alt="Peó" style="display: inline; vertical-align: baseline; height:2.5ex;">
-                            <span>Special moves</span>
-                        </h4>
-                        <h5 class="w3-container w3-text-pink subtitle"><span>Promotion</span></h5>
-                        <ul class="w3-ul w3-border w3-margin-bottom">
-                            <li><p>When a pawn reaches one of the fifteen hexcaques on the opponent's side, it will
-                                necessarily promote, but <em>the piece he promotes must be a
-                                <a href="en/glossary.html#Peçarecuperable" target="_blank" class="cescacs">regainable
-                                    piece</a> previously captured</em>.</p>
-                                <aside class="note w3-panel w3-leftbar w3-sand w3-serif w3-small">
-                                    <p>It has to be considered that the promotion is relatively simpler in C'escacs
-                                        than in orthodox chess, and therefore a small limitation is established.</p>
-                                </aside>
-                            </li>
-                            <li>
-                                <p><em><a href="en/glossary.html#Peçarecuperable" target="_blank" class="cescacs">Regainable
-                                    pieces</a></em> are: <i>Queen</i>, <i>Wyvern</i> (<i>Dragon</i>), <i>Rooks</i>,
-                                    <i>Pegasus</i>, <i>Knights</i> and <i>Bishops</i>, but the <em>colour of the Bishop</em>
-                                    must be taken into account, as you cannot have two <i>Bishops</i> of the same colour in play;
-                                    only a <em><i>Bishop</i> of the same colour</em> that has been captured is regainable.
-                                </p>
-                                <p><i>Elephants</i> are not regainable.</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Promoció forçada -->
-                    <div class="w3-container w3-card w3-margin-bottom">
-                        <h4 class="w3-container w3-text-purple subtitled"><img src="img/alfaerie/wpawn.png"
-                            alt="Peó" style="display: inline; vertical-align: baseline; height:2.5ex;">
-                            <span>Special moves</span>
-                        </h4>
-                        <h5 class="w3-container w3-text-pink subtitle subtitled"><span>Forced promotion</span></h5>
-                        <h6 class="w3-container subtitle"><span><a href="en/glossary.html#Peoenesperapromocio"
-                            target="_blank" class="cescacs">Pawn <i>awaiting promotion</i></a></span></h6>
-                        <ul class="w3-ul w3-border w3-margin-bottom">
-                            <li><p>It seems unlikely that there are no captured <a href="en/glossary.html#Peçarecuperable"
-                                target="_blank" class="cescacs">regainable pieces</a> available to promote a pawn,
-                                but if this were the case, the pawn would remain unpromoted, with its moves limited
-                                by its board position, until either the opponent captures a valid piece for promotion,
-                                or the pawn itself is captured. It is called a <i>pawn
-                                <a href="en/glossary.html#Peoenesperapromocio" target="_blank"
-                                class="cescacs">awaiting promotion</a></i>.
-                                </p>
-                                <p>On the turn of the player with a <i><a href="en/glossary.html#Peoenesperapromocio"
-                                    target="_blank" class="cescacs">pawn awaiting promotion</a></i>, immediately 
-                                    after being captured one of his <i>regainable pieces</i> valid for the promotion,
-                                    and if he is not in
-                                    <a href="en/glossary.html#Escac" class="cescacs" target="_blank">check</a>,
-                                    the move will <em>necessarily</em> consist of <em>promoting the pawn</em>
-                                    that had been <i><a href="en/glossary.html#Peoenesperapromocio"
-                                        target="_blank" class="cescacs">awaiting promotion</a></i>,
-                                    <em>without making any other move</em>.
-                                </p>
-                                <p>If the player is in
-                                    <a href="en/glossary.html#Escac" class="cescacs" target="_blank">check</a>,
-                                    the <i>promotion</i> move must be made on the first move in which the player is
-                                    not in <a href="en/glossary.html#Escac" class="cescacs" target="_blank">check</a>,
-                                    without making any other move.
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Special captures -->
-                <div class="w3-container" style="padding:0;">
-                    <!-- En passant -->
-                    <div class="w3-container half w3-card w3-margin-bottom">
-                        <h4 class="w3-container w3-text-purple"><img src="img/alfaerie/wpawn.png"
-                            alt="Peó" style="display: inline; vertical-align: baseline; height:2.5ex;">
-                            <span>Special captures</span>
-                        </h4>
-                        <h5 class="w3-container w3-text-pink subtitle"><span>
-                            <a href="en/glossary.html#CapturaAlPas" class="cescacs" target="_blank">En
-                                passant capture</a></span>
-                        </h5>
-                        <div style="display: flex; flex-wrap: wrap;">
-                            <figure>
-                                <div style="width:50%; max-width: 300px; float:left; border: 1px solid black; padding: 5px;">
-                                    <img src="img/moves/enpassant1.png" class="fullwidth"
-                                        alt="En passant capture to the left"
-                                        title="En passant capture to the left">
-                                </div>
-                                <div style="width:50%; max-width: 300px; float:left; border: 1px solid black; padding: 5px;">
-                                    <img src="img/moves/enpassant2.png" class="fullwidth"
-                                        alt="En passant capture to the right"
-                                        title="En passant capture to the right">
-                                </div>
-                                <figcaption class="thumbcaption" style="clear:both; text-align: center">En passant capture
-                                </figcaption>
-                            </figure>
-                            <figure>
-                                <img id="pawnenpassant" src="img/moves/pawnenpassant0.svg" class="fullwidth"
-                                    alt=" El peón blanco lo captura ortogonalmente.">
-                                <figcaption class="thumbcaption" style="text-align: center">
-                                    <span id="pawnenpassant_caption">Initial position</span>
-                                    <div>
-                                        <script>
-                                            var enpassant_image = document.getElementById('pawnenpassant');
-                                            var enpassant_caption = document.getElementById('pawnenpassant_caption');
-                                            function enpassant0() {
-                                                enpassant_image.setAttribute('src', 'img/moves/pawnenpassant0.svg');
-                                                enpassant_image.setAttribute('title', "Initial position");
-                                                enpassant_caption.textContent = "Initial position";
-                                            }
-                                            function enpassant1() {
-                                                enpassant_image.setAttribute('src', 'img/moves/pawnenpassant1.svg');
-                                                enpassant_image.setAttribute('title', "The black pawn makes a double move");
-                                                enpassant_caption.textContent = "The black pawn makes a double move";
-                                            }
-                                            function enpassant2() {
-                                                enpassant_image.setAttribute('src', 'img/moves/pawnenpassant2.svg');
-                                                enpassant_image.setAttribute('title', "The white pawn ");
-                                                enpassant_caption.textContent = "The white pawn ";
-                                            }
-                                            function enpassant3() {
-                                                enpassant_image.setAttribute('src', 'img/moves/pawnenpassant3.svg');
-                                                enpassant_image.setAttribute('title', "En passant captured");
-                                                enpassant_caption.textContent = "En passant captured";
-                                            }
-                                        </script>
-                                        <div class="w3-bar w3-center">
-                                            <button class="w3-button w3-khaki" onclick="enpassant0()"> Ini</button>
-                                            <button class="w3-button w3-khaki" onclick="enpassant1()"> Black moves</button>
-                                            <button class="w3-button w3-khaki" onclick="enpassant2()"> White captures</button>
-                                            <button class="w3-button w3-khaki" onclick="enpassant3()"> End</button>
-                                        </div>
-                                    </div>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="w3-container">
-                            <ul class="w3-ul w3-border">
-                                <li>A pawn that makes a <em>double or triple</em> move and passes through a hex
-                                    in which it could have been captured by an opponent's pawn, it can also be captured.
-                                    <aside class="note w3-panel w3-leftbar w3-sand w3-serif w3-small">
-                                        <p>The triple move can only be made from some initial hexes,
-                                            but the double move can be performed in any position,
-                                            and en passant is applied.
-                                        </p>
-                                    </aside>
-                                </li>
-                                <li>The en passant capture must be done immediately after the double or triple movement.
-                                </li>
-                                <li>The pawn that makes the capture is positioned in the hex where it would have made a
-                                    normal capture,
-                                    and the opponent's pawn removed from the game, ignoring the position it has advanced
-                                    to (one or two hexes ahead).
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Scornful -->
-                    <div class="w3-container half w3-card w3-margin-bottom">
-                        <h4 class="w3-container w3-text-purple"><img src="img/alfaerie/wpawn.png"
-                            alt="Peó" style="display: inline; vertical-align: baseline; height:2.5ex;">
-                            <span>Special captures</span>
-                        </h4>
-                        <h5 id="CapturaPeoEsquiu" class="w3-container w3-text-pink subtitle"><span>
-                            <a href="en/glossary.html#CapturaPeoEsquiu" class="cescacs" target="_blank">Capture
-                                of the scornful pawn
-                            </a></span>
-                        </h5>
-                        <div style="display: flex; flex-wrap: wrap;">
-                            <figure >
-                                <div style="width:50%; max-width: 300px; float:left; border: 1px solid black; padding: 5px;">
-                                    <img src="img/moves/scornfp1.png" class="fullwidth"
-                                        alt="Left capture of scornful pawn"
-                                        title="Left capture of scornful pawn">
-                                </div>
-                                <div style="width:50%; max-width: 300px; float: left; border: 1px solid black; padding: 5px;">
-                                    <img src="img/moves/scornfp2.png" class="fullwidth"
-                                        alt="Right capture of scornful pawn"
-                                        title="Right capture of scornful pawn">
-                                </div>
-                                <figcaption class="thumbcaption" style="clear:both; text-align: center">Capture of the scornful pawn
-                                </figcaption>
-                            </figure>
-                            <figure>
-                                <img id="pawnscornful" src="img/moves/pawnscornful0.svg" class="fullwidth"
-                                    alt=" White pawn orthogonally captures it.">
-                                <figcaption class="thumbcaption" style="text-align: center"><span id="pawnscornful_caption">Initial position</span>
-                                    <div>
-                                        <script>
-                                            var scornful_image = document.getElementById('pawnscornful');
-                                            var scornful_caption = document.getElementById('pawnscornful_caption');
-                                            function scornful0() {
-                                                scornful_image.setAttribute('src', 'img/moves/pawnscornful0.svg');
-                                                scornful_image.setAttribute('title', "Initial position");
-                                                scornful_caption.textContent = "Initial position";
-                                            }
-                                            function scornful1() {
-                                                scornful_image.setAttribute('src', 'img/moves/pawnscornful1.svg');
-                                                scornful_image.setAttribute('title', "The black pawn dodges the blockade");
-                                                scornful_caption.textContent = "The black pawn dodges the blockade";
-                                            }
-                                            function scornful2() {
-                                                scornful_image.setAttribute('src', 'img/moves/pawnscornful2.svg');
-                                                scornful_image.setAttribute('title', "The white pawn can capture it");
-                                                scornful_caption.textContent = "The white pawn can capture it";
-                                            }
-                                            function scornful3() {
-                                                scornful_image.setAttribute('src', 'img/moves/pawnscornful3.svg');
-                                                scornful_image.setAttribute('title', "Ortogonal capture");
-                                                scornful_caption.textContent = "Ortogonal capture";
-                                            }
-                                        </script>
-                                        <div class="w3-bar w3-center">
-                                            <button class="w3-button w3-khaki" onclick="scornful0()"> Ini</button>
-                                            <button class="w3-button w3-khaki" onclick="scornful1()"> Black moves</button>
-                                            <button class="w3-button w3-khaki" onclick="scornful2()"> White captures</button>
-                                            <button class="w3-button w3-khaki" onclick="scornful3()"> End</button>
-                                        </div>
-                                    </div>
-                                </figcaption>
-                            </figure>
-                        </div>
-
-                        <div class="w3-container">
-                            <p>When two pawns from opposite sides are facing each other, they do not hold,
-                                because in <i>C'escacs</i> the pawns can move obliquely.</p>
-                            <p>But if a pawn facing another opponent despises the position and makes
-                                a sideways move to dodge it, it can be <em>orthogonally captured</em>
-                                by the opponent's pawn that it scorned and tried to dodge.
-                            </p>
-                            <ol class="w3-ul w3-border w3-margin-bottom">
-                                <li>When a <em>pawn faced with an opponent's pawn</em>, in the same column
-                                    and consecutive hexes, <em>makes an oblique movement avoiding
-                                        the opponent's pawn</em>, it can be orthogonally captured.
-                                </li>
-                                <li>The <em>capture move must be made immediately after</em> the
-                                    <a href="en/glossary.html#PeoEsquiu" class="cescacs" target="_blank">pawn's
-                                        scornful move</a>.
-                                </li>
-                                <li>The capture is made orthogonally, moving to the position where
-                                    the opponent's pawn is.
-                                    It is the only capture with an orthogonal move that a pawn can make.
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-                    <p>A case can arise when a pawn is promoted by making a scornful move avoiding
-                        the opponent's pawn which it was facing. This case can only occur on
-                        the T, A, L, X columns, after making a scornful move respectively from
-                        the A, B, K, L columns. The <i>capture of the scornful pawn</i> also applies in this case,
-                        and the piece to which the pawn has promoted will be captured.</p>
-                </div>
-            </li>
-            <!-- King -->
-            <li class="w3-container w3-card-4">
-                <!-- King -->
-                <h3 id="Rei" class="w3-container">
-                    <a href="en/glossary.html#Rei" class="cescacs" target="_blank">King
-                    <img src="img/alfaerie/wking.png" alt="King" class="pieceIcon"></a>
-                </h3>
-                <p>He can move a single hex orthogonally or diagonally; in total twelve possible movements.</p>
-                <ul class="w3-ul w3-border">
-                    <li>You cannot make a move that leaves the king threatened (in check)</li>
-                    <li>When he is threatened (in check) he has to be moved, or you have to move another piece which
-                        avoids the check.
-                    </li>
-                    <li>If there is no move to avoid the check, it is checkmate, and the game is lost.</li>
-                </ul>
-                <!-- Salt del Rei -->
-                <div class="w3-container w3-card w3-margin-bottom">
-                    <h4 class="w3-container w3-text-purple subtitled">
-                        <img src="img/alfaerie/wking.png" alt="King" style="display: inline; vertical-align: baseline; height:2.5ex;">
-                        <span><i>King's leap</i></span>
-                    </h4>
-                    <h5 class="w3-container w3-text-pink subtitle"><span>Initial move</span></h5>
-                    <div class="w3-container w3-center half">
+                <section>
+                    <h3 id="Peo" class="w3-container">
+                        <a href="en/glossary.html#Peo" class="cescacs" target="_blank">Pawn
+                        <img src="img/alfaerie/wpawn.png" alt="Pawn" class="pieceIcon"></a>
+                    </h3>
+                    <p>The pawn's moves are different if it captures or makes a move to an empty hex;
+                        In addition, there are specific movements for some situations.</p>
+                    <!-- Moves & Captures; Special moves -->
+                    <div class="w3-container w3-center third-rest">
                         <figure>
-                            <img src="img/moves/kingsleap.png" alt="King's leap" title="King's leap"
-                                class="fullwidth">
-                            <figcaption class="thumbcaption">
-                                The five diferent <i>hexes</i> for the <i>King</i> as a result of such leap.
+                            <img src="img/moves/pawnmove.svg" alt="Pawn moves" class="fullwidth">
+                            <figcaption class="thumbcaption">Pawn moves
                             </figcaption>
                         </figure>
                     </div>
-                    <div class="w3-container half">
-                        <p>The <i>King</i> can make <em>a <i>leap</i> on its first move</em>, a <i>knight jump</i>:</p>
-                        <ul class="w3-ul w3-border">
-                            <li>When the <i>King</i> has not yet been moved.</li>
-                            <li>When the <i>King</i> is not threatened (in check).</li>
-                            <li>A capture can be done on this move.
-                                <ul>
-                                    <li>
-                                        As it stands on the last rule, it can't be used
-                                        to capture a piece which is theatening him (check).
-                                    </li>
-                                </ul>
+                    <!-- Moves-->
+                    <section class="w3-container w3-card twothirds w3-margin-bottom">
+                        <h4 class="w3-container w3-text-purple"><img src="img/alfaerie/wpawn.png"
+                            alt="Peó" style="display: inline; vertical-align: baseline; height:2.5ex;">
+                            <span>Moves without capture</span>
+                        </h4>
+                        <ul class="w3-ul w3-border w3-margin-bottom">
+                            <li>The pawn may move <em>forward one or two hexes</em>; double step is allowed anywhere.</li>
+                            <li>The pawn may also move one hex orthogonally oblique,
+                                to <em>either of the two adjacent oblique forward hexes</em> by 60º.
+                            </li>
+                            <li>In total it has a maximum of <em>four non-capture moves</em>,
+                                not counting the possible additional initial move.
                             </li>
                         </ul>
-                        <p class="note">
-                            You can see the rules of the <i>King's Leap</i> in more detail in a
-                            specific section available on <a href="en/castling.html#SaltRei"
-                                class="cescacs" target="_blank"> another page of this website</a>.
+                    </section>
+                    <!-- Captures -->
+                    <section class="w3-container w3-card twothirds w3-margin-bottom">
+                        <h4 class="w3-container w3-text-purple"><img src="img/alfaerie/wpawn.png"
+                            alt="Peó" style="display: inline; vertical-align: baseline; height:2.5ex;">
+                            <span>Capture moves</span>
+                        </h4>
+                        <ul class="w3-ul w3-border w3-margin-bottom">
+                            <li>To <em>capture</em> the pawn moves diagonally towards either of the
+                                <em>two diagonally forward hexes</em>, following the two lines at 30º,
+                                that is, in the two front hexes of the <em>same color</em> as the hex it is in.</li>
+                        </ul>
+                    </section>
+                    <!-- Special moves -->
+                    <section class="w3-container" style="padding:0;">
+                        <!-- Initial move -->
+                        <section class="w3-container half w3-card w3-margin-bottom">
+                            <header>
+                                <div class="w3-container w3-text-purple h4 subtitled"><img src="img/alfaerie/wpawn.png"
+                                    alt="Peó" style="display:inline;vertical-align:sub;height:2.5ex;">
+                                    <span>Special moves</span>
+                                </div>
+                                <h5 class="w3-container w3-text-pink subtitle"><span>Initial move</span></h5>
+                            </header>
+                            <ul class="w3-ul w3-border w3-margin-bottom">
+                                <li><p>In the <em>initial positions</em>, the pawns can make a <em>triple forward movement</em>
+                                    along the column, with the <em>exception</em> of the <em>central column</em>
+                                    (on the '<em>F</em>' column) and both <em>columns on the flanks</em>
+                                    (the '<em>A</em>' column and the '<em>L</em>' column).</p>
+                                </li>
+                                <li><p>A pawn may have been moved, but remain in one of these
+                                    <em>initial eight hexes</em>.
+                                    In this case, it will keep the ability to do the triple move.</p>
+                                    <aside class="note w3-panel w3-leftbar w3-sand w3-serif w3-small">
+                                        <p>This way you don't have to remember if a pawn has been moved.</p>
+                                    </aside>
+                                    <p>That is to say: for each player there are <em>eight positions</em>
+                                        from which a pawn can make a <em>triple move</em>,
+                                        and three pawns that can never make a triple move.
+                                    </p>
+                                </li>
+                            </ul>
+                        </section>
+                        <!-- Promotion -->
+                        <section class="w3-container half w3-card w3-margin-bottom">
+                            <header>
+                                <div class="w3-container w3-text-purple h4 subtitled"><img src="img/alfaerie/wpawn.png"
+                                    alt="Peó" style="display:inline;vertical-align:sub;height:2.5ex;">
+                                    <span>Special moves</span>
+                                </div>
+                                <h5 class="w3-container w3-text-pink subtitle"><span>Promotion</span></h5>
+                            </header>
+                            <ul class="w3-ul w3-border w3-margin-bottom">
+                                <li><p>When a pawn reaches one of the fifteen hexcaques on the opponent's side, it will
+                                    necessarily promote, but <em>the piece he promotes must be a
+                                    <a href="en/glossary.html#Peçarecuperable" target="_blank" class="cescacs">regainable
+                                        piece</a> previously captured</em>.</p>
+                                    <aside class="note w3-panel w3-leftbar w3-sand w3-serif w3-small">
+                                        <p>It has to be considered that the promotion is relatively simpler in C'escacs
+                                            than in orthodox chess, and therefore a small limitation is established.</p>
+                                    </aside>
+                                </li>
+                                <li>
+                                    <p><em><a href="en/glossary.html#Peçarecuperable" target="_blank" class="cescacs">Regainable
+                                        pieces</a></em> are: <i>Queen</i>, <i>Wyvern</i> (<i>Dragon</i>), <i>Rooks</i>,
+                                        <i>Pegasus</i>, <i>Knights</i> and <i>Bishops</i>, but the <em>colour of the Bishop</em>
+                                        must be taken into account, as you cannot have two <i>Bishops</i> of the same colour in play;
+                                        only a <em><i>Bishop</i> of the same colour</em> that has been captured is regainable.
+                                    </p>
+                                    <p><i>Elephants</i> are not regainable.</p>
+                                </li>
+                            </ul>
+                        </section>
+                        <!-- Promoció forçada -->
+                        <section class="w3-container w3-card w3-margin-bottom">
+                            <header>
+                                <div class="w3-container w3-text-purple h4 subtitled"><img src="img/alfaerie/wpawn.png"
+                                    alt="Peó" style="display:inline;vertical-align:sub;height:2.5ex;">
+                                    <span>Special moves</span>
+                                </div>
+                                <h5 class="w3-container w3-text-pink subtitle"><span>Forced promotion</span></h5>
+                            </header>
+                            <section class="w3-border w3-margin-bottom">
+                                <h6 class="w3-container" style="margin-bottom:0;"><span><a href="en/glossary.html#Peoenesperapromocio"
+                                    target="_blank" class="cescacs">Pawn <i>awaiting promotion</i></a></span></h6>
+                                <ul class="w3-ul">
+                                    <li><p>It seems unlikely that there are no captured <a href="en/glossary.html#Peçarecuperable"
+                                        target="_blank" class="cescacs">regainable pieces</a> available to promote a pawn,
+                                        but if this were the case, the pawn would remain unpromoted, with its moves limited
+                                        by its board position, until either the opponent captures a valid piece for promotion,
+                                        or the pawn itself is captured. It is called a <i>pawn
+                                        <a href="en/glossary.html#Peoenesperapromocio" target="_blank"
+                                        class="cescacs">awaiting promotion</a></i>.
+                                        </p>
+                                        <p>On the turn of the player with a <i><a href="en/glossary.html#Peoenesperapromocio"
+                                            target="_blank" class="cescacs">pawn awaiting promotion</a></i>, immediately 
+                                            after being captured one of his <i>regainable pieces</i> valid for the promotion,
+                                            and if he is not in
+                                            <a href="en/glossary.html#Escac" class="cescacs" target="_blank">check</a>,
+                                            the move will <em>necessarily</em> consist of <em>promoting the pawn</em>
+                                            that had been <i><a href="en/glossary.html#Peoenesperapromocio"
+                                                target="_blank" class="cescacs">awaiting promotion</a></i>,
+                                            <em>without making any other move</em>.
+                                        </p>
+                                        <p>If the player is in
+                                            <a href="en/glossary.html#Escac" class="cescacs" target="_blank">check</a>,
+                                            the <i>promotion</i> move must be made on the first move in which the player is
+                                            not in <a href="en/glossary.html#Escac" class="cescacs" target="_blank">check</a>,
+                                            without making any other move.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </section>
+                        </section>
+                    </section>
+                    <!-- Special captures -->
+                    <section class="w3-container" style="padding:0;">
+                        <!-- En passant -->
+                        <section class="w3-container half w3-card w3-margin-bottom">
+                            <header>
+                                <div class="w3-container w3-text-purple h4 subtitled"><img src="img/alfaerie/wpawn.png"
+                                    alt="Peó" style="display:inline;vertical-align:sub;height:2.5ex;">
+                                    <span>Special captures</span>
+                                </div>
+                                <h5 class="w3-container w3-text-pink subtitle"><span>
+                                    <a href="en/glossary.html#CapturaAlPas" class="cescacs" target="_blank">En
+                                        passant capture</a></span>
+                                </h5>
+                            </header>
+                            <div style="display: flex; flex-wrap: wrap;">
+                                <figure>
+                                    <div style="width:50%; max-width: 300px; float:left; border: 1px solid black; padding: 5px;">
+                                        <img src="img/moves/enpassant1.png" class="fullwidth"
+                                            alt="En passant capture to the left"
+                                            title="En passant capture to the left">
+                                    </div>
+                                    <div style="width:50%; max-width: 300px; float:left; border: 1px solid black; padding: 5px;">
+                                        <img src="img/moves/enpassant2.png" class="fullwidth"
+                                            alt="En passant capture to the right"
+                                            title="En passant capture to the right">
+                                    </div>
+                                    <figcaption class="thumbcaption" style="clear:both; text-align: center">En passant capture
+                                    </figcaption>
+                                </figure>
+                                <figure>
+                                    <img id="pawnenpassant" src="img/moves/pawnenpassant0.svg" class="fullwidth"
+                                        alt=" El peón blanco lo captura ortogonalmente.">
+                                    <figcaption class="thumbcaption" style="text-align: center">
+                                        <span id="pawnenpassant_caption">Initial position</span>
+                                        <div>
+                                            <script>
+                                                var enpassant_image = document.getElementById('pawnenpassant');
+                                                var enpassant_caption = document.getElementById('pawnenpassant_caption');
+                                                function enpassant0() {
+                                                    enpassant_image.setAttribute('src', 'img/moves/pawnenpassant0.svg');
+                                                    enpassant_image.setAttribute('title', "Initial position");
+                                                    enpassant_caption.textContent = "Initial position";
+                                                }
+                                                function enpassant1() {
+                                                    enpassant_image.setAttribute('src', 'img/moves/pawnenpassant1.svg');
+                                                    enpassant_image.setAttribute('title', "The black pawn makes a double move");
+                                                    enpassant_caption.textContent = "The black pawn makes a double move";
+                                                }
+                                                function enpassant2() {
+                                                    enpassant_image.setAttribute('src', 'img/moves/pawnenpassant2.svg');
+                                                    enpassant_image.setAttribute('title', "The white pawn ");
+                                                    enpassant_caption.textContent = "The white pawn ";
+                                                }
+                                                function enpassant3() {
+                                                    enpassant_image.setAttribute('src', 'img/moves/pawnenpassant3.svg');
+                                                    enpassant_image.setAttribute('title', "En passant captured");
+                                                    enpassant_caption.textContent = "En passant captured";
+                                                }
+                                            </script>
+                                            <div class="w3-bar w3-center">
+                                                <button class="w3-button w3-khaki" onclick="enpassant0()"> Ini</button>
+                                                <button class="w3-button w3-khaki" onclick="enpassant1()"> Black moves</button>
+                                                <button class="w3-button w3-khaki" onclick="enpassant2()"> White captures</button>
+                                                <button class="w3-button w3-khaki" onclick="enpassant3()"> End</button>
+                                            </div>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="w3-container">
+                                <ul class="w3-ul w3-border">
+                                    <li>A pawn that makes a <em>double or triple</em> move and passes through a hex
+                                        in which it could have been captured by an opponent's pawn, it can also be captured.
+                                        <aside class="note w3-panel w3-leftbar w3-sand w3-serif w3-small">
+                                            <p>The triple move can only be made from some initial hexes,
+                                                but the double move can be performed in any position,
+                                                and en passant is applied.
+                                            </p>
+                                        </aside>
+                                    </li>
+                                    <li>The en passant capture must be done immediately after the double or triple movement.
+                                    </li>
+                                    <li>The pawn that makes the capture is positioned in the hex where it would have made a
+                                        normal capture,
+                                        and the opponent's pawn removed from the game, ignoring the position it has advanced
+                                        to (one or two hexes ahead).
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <!-- Scornful -->
+                        <section class="w3-container half w3-card w3-margin-bottom">
+                            <header>
+                                <div class="w3-container w3-text-purple h4 subtitled"><img src="img/alfaerie/wpawn.png"
+                                    alt="Peó" style="display:inline;vertical-align:sub;height:2.5ex;">
+                                    <span>Special captures</span>
+                                </div>
+                                <h5 id="CapturaPeoEsquiu" class="w3-container w3-text-pink subtitle"><span>
+                                    <a href="en/glossary.html#CapturaPeoEsquiu" class="cescacs" target="_blank">Capture
+                                        of the scornful pawn
+                                    </a></span>
+                                </h5>
+                            </header>
+                            <div style="display: flex; flex-wrap: wrap;">
+                                <figure >
+                                    <div style="width:50%; max-width: 300px; float:left; border: 1px solid black; padding: 5px;">
+                                        <img src="img/moves/scornfp1.png" class="fullwidth"
+                                            alt="Left capture of scornful pawn"
+                                            title="Left capture of scornful pawn">
+                                    </div>
+                                    <div style="width:50%; max-width: 300px; float: left; border: 1px solid black; padding: 5px;">
+                                        <img src="img/moves/scornfp2.png" class="fullwidth"
+                                            alt="Right capture of scornful pawn"
+                                            title="Right capture of scornful pawn">
+                                    </div>
+                                    <figcaption class="thumbcaption" style="clear:both; text-align: center">Capture of the scornful pawn
+                                    </figcaption>
+                                </figure>
+                                <figure>
+                                    <img id="pawnscornful" src="img/moves/pawnscornful0.svg" class="fullwidth"
+                                        alt=" White pawn orthogonally captures it.">
+                                    <figcaption class="thumbcaption" style="text-align: center"><span id="pawnscornful_caption">Initial position</span>
+                                        <div>
+                                            <script>
+                                                var scornful_image = document.getElementById('pawnscornful');
+                                                var scornful_caption = document.getElementById('pawnscornful_caption');
+                                                function scornful0() {
+                                                    scornful_image.setAttribute('src', 'img/moves/pawnscornful0.svg');
+                                                    scornful_image.setAttribute('title', "Initial position");
+                                                    scornful_caption.textContent = "Initial position";
+                                                }
+                                                function scornful1() {
+                                                    scornful_image.setAttribute('src', 'img/moves/pawnscornful1.svg');
+                                                    scornful_image.setAttribute('title', "The black pawn dodges the blockade");
+                                                    scornful_caption.textContent = "The black pawn dodges the blockade";
+                                                }
+                                                function scornful2() {
+                                                    scornful_image.setAttribute('src', 'img/moves/pawnscornful2.svg');
+                                                    scornful_image.setAttribute('title', "The white pawn can capture it");
+                                                    scornful_caption.textContent = "The white pawn can capture it";
+                                                }
+                                                function scornful3() {
+                                                    scornful_image.setAttribute('src', 'img/moves/pawnscornful3.svg');
+                                                    scornful_image.setAttribute('title', "Ortogonal capture");
+                                                    scornful_caption.textContent = "Ortogonal capture";
+                                                }
+                                            </script>
+                                            <div class="w3-bar w3-center">
+                                                <button class="w3-button w3-khaki" onclick="scornful0()"> Ini</button>
+                                                <button class="w3-button w3-khaki" onclick="scornful1()"> Black moves</button>
+                                                <button class="w3-button w3-khaki" onclick="scornful2()"> White captures</button>
+                                                <button class="w3-button w3-khaki" onclick="scornful3()"> End</button>
+                                            </div>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="w3-container">
+                                <p>When two pawns from opposite sides are facing each other, they do not hold,
+                                    because in <i>C'escacs</i> the pawns can move obliquely.</p>
+                                <p>But if a pawn facing another opponent despises the position and makes
+                                    a sideways move to dodge it, it can be <em>orthogonally captured</em>
+                                    by the opponent's pawn that it scorned and tried to dodge.
+                                </p>
+                                <ol class="w3-ul w3-border w3-margin-bottom">
+                                    <li>When a <em>pawn faced with an opponent's pawn</em>, in the same column
+                                        and consecutive hexes, <em>makes an oblique movement avoiding
+                                            the opponent's pawn</em>, it can be orthogonally captured.
+                                    </li>
+                                    <li>The <em>capture move must be made immediately after</em> the
+                                        <a href="en/glossary.html#PeoEsquiu" class="cescacs" target="_blank">pawn's
+                                            scornful move</a>.
+                                    </li>
+                                    <li>The capture is made orthogonally, moving to the position where
+                                        the opponent's pawn is.
+                                        It is the only capture with an orthogonal move that a pawn can make.
+                                    </li>
+                                </ol>
+                            </div>
+                        </section>
+                        <div class="w3-small">
+                            <p>A case can arise when a <i>pawn</i> is promoted by making a <i>scornful move</i> avoiding
+                                the opponent's pawn which it was facing. This case can only occur on the
+                                <i>T</i>, <i>A</i>, <i>L</i>, <i>X</i> columns, after making a scornful move respectively
+                                from the <i>A</i>, <i>B</i>, <i>K</i>, <i>L</i> columns. The <i>capture of the scornful pawn</i>
+                                also applies in this case, and the piece to which the pawn has promoted will be captured.
+                            </p>
+                            <p>Also on the <i>T</i>, <i>A</i>, <i>L</i>, <i>X</i> columns an <i>en passant</i> capture can be
+                                given at the moment of promotion; not on the other columns, as they cannot have pawns so far
+                                behind. In this case, too, the piece to which the pawn has been promoted is captured.
+                            </p>
+                        </div>
+                    </section>
+                </section>
+            </li>
+            <!-- King -->
+            <li class="w3-container w3-card-4">
+                <section>
+                    <!-- King -->
+                    <h3 id="Rei" class="w3-container">
+                        <a href="en/glossary.html#Rei" class="cescacs" target="_blank">King
+                        <img src="img/alfaerie/wking.png" alt="King" class="pieceIcon"></a>
+                    </h3>
+                    <p>He can move a single hex orthogonally or diagonally; in total twelve possible movements.</p>
+                    <ul class="w3-ul w3-border">
+                        <li>You cannot make a move that leaves the king threatened (in check)</li>
+                        <li>When he is threatened (in check) he has to be moved, or you have to move another piece which
+                            avoids the check.
+                        </li>
+                        <li>If there is no move to avoid the check, it is checkmate, and the game is lost.</li>
+                    </ul>
+                    <!-- Salt del Rei -->
+                    <section class="w3-container w3-card w3-margin-bottom">
+                        <header>
+                            <h4 class="w3-container w3-text-purple subtitled">
+                                <img src="img/alfaerie/wking.png" alt="King"
+                                    style="display:inline;vertical-align:sub;height:2.5ex;">
+                                <span><i>King's leap</i></span>
+                            </h4>
+                            <div class="w3-container w3-text-pink h5 subtitle"><span>Initial move</span></div>
+                        </header>
+                        <div class="w3-container w3-center half">
+                            <figure>
+                                <img src="img/moves/kingsleap.png" alt="King's leap" title="King's leap"
+                                    class="fullwidth">
+                                <figcaption class="thumbcaption">
+                                    The five diferent <i>hexes</i> for the <i>King</i> as a result of such leap.
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="w3-container half">
+                            <p>The <i>King</i> can make <em>a <i>leap</i> on its first move</em>, a <i>knight jump</i>:</p>
+                            <ul class="w3-ul w3-border">
+                                <li>When the <i>King</i> has not yet been moved.</li>
+                                <li>When the <i>King</i> is not threatened (in check).</li>
+                                <li>A capture can be done on this move.
+                                    <ul>
+                                        <li>
+                                            As it stands on the last rule, it can't be used
+                                            to capture a piece which is theatening him (check).
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <p class="note">
+                                You can see the rules of the <i>King's Leap</i> in more detail in a
+                                specific section available on <a href="en/castling.html#SaltRei"
+                                    class="cescacs" target="_blank"> another page of this website</a>.
+                            </p>
+                        </div>
+                    </section>
+                    <!-- Enroc -->
+                    <section class="w3-container w3-card w3-margin-bottom">
+                        <header>
+                            <h4 class="w3-container w3-text-purple subtitled">
+                                <img src="img/alfaerie/wking.png" alt="King"
+                                    style="display:inline;vertical-align:sub;height:2.5ex;">
+                                <span><i>Castling</i></span>
+                            </h4>
+                            <div class="w3-container w3-text-pink h5 subtitle"><span>Initial move</span></div>
+                        </header>
+                        <p>Castling exists in C'escacs, but it is not a fundamental move to develop the strategy,
+                            and it is convenient to play the first games obviating this rule, as detailed below.
+                            In the <i>Castling</i> section of this website, separate on another page, the two
+                            variants are detailed: the <a href="en/castling.html#EnrocSimple" class="cescacs"
+                                target="_blank"><i>single castling</i>, with one <i>Rook</i></a>, and the
+                            <a href="en/castling.html#EnrocDoble" class="cescacs" target="_blank"><i>double castling</i>,
+                                using both of them</a>.
                         </p>
-                    </div>
-                </div>
-                <!-- Enroc -->
-                <div class="w3-container w3-card w3-margin-bottom">
-                    <h4 class="w3-container w3-text-purple subtitled">
-                        <img src="img/alfaerie/wking.png" alt="King" style="display: inline; vertical-align: baseline; height:2.5ex;">
-                        <span><i>Castling</i></span>
-                    </h4>
-                    <h5 class="w3-container w3-text-pink subtitle"><span>Initial move</span></h5>
-                    <p>Castling exists in C'escacs, but it is not a fundamental move to develop the strategy,
-                        and it is convenient to play the first games obviating this rule, as detailed below.
-                        In the <i>Castling</i> section of this website, separate on another page, the two
-                        variants are detailed: the <a href="en/castling.html#EnrocSimple" class="cescacs"
-                            target="_blank"><i>single castling</i>, with one <i>Rook</i></a>, and the
-                        <a href="en/castling.html#EnrocDoble" class="cescacs" target="_blank"><i>double castling</i>,
-                            using both of them</a>.
-                    </p>
-                    <ul>
-                        <li style="border:0; padding:0">Not to be confused with the <i>King's leap</i>.</li>
-                        <li style="border:0; padding:0">It is also an evasive move, but allows you to incorporate
-                            defense with the <i>Rook</i>.
-                        </li>
-                    </ul>
-                    <h5 class="w3-container w3-text-pink subtitled"><span>Play without <i>Castling</i></span></h5>
-                    <h6 class="w3-container w3-text-teal subtitle"><span>Recommendation for first games</span></h6>
-                    <ul style="font-size:smaller">
-                        <li style="border:0; padding:0">It is recommended to play without <i>Castling</i> to get started
-                            in
-                            the game.
-                        </li>
-                        <li style="border:0; padding:0">Must be agreed at the beginning of the game.</li>
-                        <li style="border:0; padding:0">If played without <i>Castling</i>, the <i>King's Leap</i> will
-                            remain, but without allowing the <i>King</i> to capture with this move.
-                        </li>
-                    </ul>
-                    <br>
-                </div>
+                        <ul>
+                            <li style="border:0; padding:0">Not to be confused with the <i>King's leap</i>.</li>
+                            <li style="border:0; padding:0">It is also an evasive move, but allows you to incorporate
+                                defense with the <i>Rook</i>.
+                            </li>
+                        </ul>
+                        <section>
+                            <header>
+                                <h5 class="w3-container w3-text-pink subtitled"><span>Play without <i>Castling</i></span></h5>
+                                <div class="w3-container w3-text-teal h6 subtitle"><span>Recommendation for first games</span></div>
+                            </header>
+                            <ul style="font-size:smaller">
+                                <li style="border:0; padding:0">It is recommended to play without <i>Castling</i> to get started
+                                    in
+                                    the game.
+                                </li>
+                                <li style="border:0; padding:0">Must be agreed at the beginning of the game.</li>
+                                <li style="border:0; padding:0">If played without <i>Castling</i>, the <i>King's Leap</i> will
+                                    remain, but without allowing the <i>King</i> to capture with this move.
+                                </li>
+                            </ul>
+                        </section>
+                        <br>
+                    </section>
+                </section>
             </li>
         </ul>
-    </div>
+    </section>
     <!-- Rules -->
-    <h2 class="w3-container w3-pale-green w3-center title">Rules</h2>
-    <div class="w3-container">
+    <section class="w3-container">
+        <h2 class="w3-container w3-pale-green w3-center title">Rules</h2>
         <!-- Draw -->
-        <div class="w3-container w3-card-4 half w3-margin-bottom">
+        <section class="w3-container w3-card-4 half w3-margin-bottom">
             <h3 class="w3-container w3-pale-yellow w3-center"><i>Draw</i></h3>
             <p>A <em><a href="en/glossary.html#Taules" class="cescacs">draw</a></em>,
                 or a tie between the two contestants, in a tournament represents 1 point for each player,
@@ -1088,9 +1132,9 @@
                     </p>
                 </li>
             </ul>
-        </div>
+        </section>
         <!-- Stalemate and competition points -->
-        <div class="w3-container w3-card-4 half w3-margin-bottom">
+        <section class="w3-container w3-card-4 half w3-margin-bottom">
             <h3 class="w3-container w3-pale-yellow w3-center">Draw and the stalemate win</h3>
             <p>Stalemate is not draw in <i>C'escacs</i>, but a <i>win by the slightest</i>. So,
                 <a href="en/notation.html#ResultatPartida" class="cescacs" target="_blank">in
@@ -1103,9 +1147,9 @@
                     and the <em>player left without legal moves, 1 point</em>.</li>
             </ul>
             <p>However, stalemate is a very strange case in <i>C'escacs</i>.</p>
-        </div>
+        </section>
         <!-- General Rules -->
-        <div class="w3-container w3-card-4 half w3-margin-bottom">
+        <section class="w3-container w3-card-4 half w3-margin-bottom">
             <h3 class="w3-container w3-pale-yellow w3-center">General rules</h3>
             <dl>
                 <dt><q>Touch-move</q></dt>
@@ -1122,11 +1166,11 @@
                 <dd>When it fails to comply with a legal requirement of the opponent.</dd>
                 <dd>Refuses to abide by the rules.</dd>
             </dl>
-        </div>
-    </div>
+        </section>
+    </section>
     <!-- Endgames -->
-    <h2 class="w3-container w3-pale-green w3-center title">Endgames</h2>
-    <div class="w3-container w3-card-4 w3-margin-bottom">
+    <section class="w3-container w3-card-4 w3-margin-bottom">
+        <h2 class="w3-container w3-pale-green w3-center title">Endgames</h2>
         <ul class="icon iconBullseye">
             <li><strong>The <i>King</i> and a <i>Pawn</i></strong> against a <i>lone King</i> ends up
                 <i>promoting the Pawn</i>, provided its <i>King</i> is close enough to defend it.
@@ -1186,7 +1230,7 @@
                 </ol>
             </li>
         </ul>
-        <div class="w3-container w3-card-4 w3-margin-bottom">
+        <section class="w3-container w3-card-4 w3-margin-bottom">
             <h4 class="w3-container w3-text-purple subtitled">
                 <span>Additional information on endings</span></h4>
             <ul class="icon iconSquarePlus">
@@ -1202,19 +1246,19 @@
                 <li>The <i>King</i> and a <i>Queen</i> <em>do not</em> beat a <i>King</i> with a <i>Rook</i>.
                 </li>
             </ul>
-        </div>
+        </section>
         <aside class="note">
             <p>Information on endings <a href="es/the-corner.html" class="cite" target="_blank">courtesy
                     of <b>Dave McCooey</b></a>.</p>
         </aside>
-    </div>
+    </section>
 </main>
 <footer class="w3-container w3-purple w3-opacity">
     <!-- play on-line -->
-    <h2 class="w3-container w3-pale-green w3-center title">
-        <a href="cescacs.typescript/cescacs.game.html" target="_blank" class="cescacs">Try out the game</a>
-    </h2>
-    <div class="w3-container" style="font-weight:300">
+    <section class="w3-container" style="font-weight:300">
+        <h2 class="w3-container w3-pale-green w3-center title">
+            <a href="cescacs.typescript/cescacs.game.html" target="_blank" class="cescacs">Try out the game</a>
+        </h2>
         <p>In <a href="cescacs.typescript/cescacs.game.html" target="_blank" class="cescacs w3-text-yellow">this link</a>
             there is a board with movable pieces that only accepts correct moves. It allows you to save games,
             retrieve saved games or load specific positions; a tool designed to test the game.
@@ -1223,12 +1267,12 @@
             where the machine offers the move it evaluates as the best, always limited to execution by the browser,
             using the client machine (serverless).
         </p>
-    </div>
+    </section>
     <!-- Board to print -->
-    <h2 class="w3-container w3-pale-green w3-center title">
-        <a href="img/cescacs.svg" target="_blank" class="cescacs">Board to print</a>
-    </h2>
-    <div class="w3-container" style="font-weight:300">
+    <section class="w3-container" style="font-weight:300">
+        <h2 class="w3-container w3-pale-green w3-center title">
+            <a href="img/cescacs.svg" target="_blank" class="cescacs">Board to print</a>
+        </h2>
         <p>On <a href="img/cescacs.svg" target="_blank" class="cescacs w3-text-yellow">this link</a> there is a <i>.SVG</i> board to
             print. It is recommended to print it in <i> DINA-1 </i> format, which can be done by dividing it into four
             <i>DINA-3</i> parts to be able to fold it.
@@ -1238,12 +1282,11 @@
         <p>Printing in half, using four <i>DINA-4</i>, we obtain a board for miniature pieces,
             with a hex measurement of about 2.4 cm.
         </p>
-    </div>
+    </section>
     <!-- Email -->
-    <h2 class="w3-container w3-pale-green w3-center title">
-        <img src="img/cescacs-email-image.gif" alt="cescacs" style="height:1em; display: inline-block;" >
-    </h2>
+    <div class="w3-container w3-pale-green w3-center h2 title" style="margin:20px 10px">
+        <img src="img/cescacs-email-image.gif" alt="cescacs" style="height:1em;" >
+    </div>
 </footer>
 </body>
-
 </html>

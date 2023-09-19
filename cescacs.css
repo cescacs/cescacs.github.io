@@ -193,27 +193,43 @@ h2.title {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-h1 + h2.subtitle,
-h2 + h3.subtitle,
-h3 + h4.subtitle,
-h4 + h5.subtitle,
-h5 + h6.subtitle {
-  margin-top:0 !important;
-  padding-top:0 !important;
+div.subtitle,
+div.subtitled {
+  font-family:"Segoe UI",Arial,sans-serif;
+  font-weight:400;
 }
 
+div.h1 + h2.subtitle,
+div.h2 + h3.subtitle,
+div.h3 + h4.subtitle,
+div.h4 + h5.subtitle,
+div.h5 + h6.subtitle {
+  margin-top:0 !important;
+  margin-bottom:10px;
+}
+div.subtitle {
+  margin-top:0px !important;
+  margin-bottom:10px;
+}
 h1.subtitled,
 h2.subtitled,
 h3.subtitled,
 h4.subtitled,
-h5.subtitled {
+h5.subtitled,
+div.subtitled {
+  margin-top:10px;
   margin-bottom:0 !important;
-  padding-bottom:0 !important;
 }
+div.h1 { font-size:36px; }
+div.h2 { font-size:30px; }
+div.h3 { font-size:24px; }
+div.h4 { font-size:20px; display: flex; }
+div.h5 { font-size:18px; display: flex; }
+div.h6 { font-size:16px; display: flex; }
 
 h4,
 h5,
-h6 { display: flex;}
+h6 { display: flex; }
 
 p:before {
   content: "";
@@ -577,6 +593,7 @@ a.cescacs:visited:active {
 
 .pieceIcon {
   display: inline;
+  vertical-align: sub;
   height: 3ex;
 }
 
