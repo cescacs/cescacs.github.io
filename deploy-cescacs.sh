@@ -136,6 +136,7 @@ then
 	cp w3-colors-win8.css $DEST
 	cp cescacs.min.css $DEST"cescacs.css"
 	cp noredefines.sed $DEST
+	cp robots.txt $DEST
 	cp sitemap.xml $DEST
 	cp *.png $DEST
 	cp *.ico $DEST

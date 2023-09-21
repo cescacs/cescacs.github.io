@@ -114,176 +114,178 @@
 		<div style="clear:both;"></div>
 	</header>
 	<main class="w3-container">
-		<div class="w3-container">
-			<p>A diferencia del <i>ajedrez hexagonal de Gliński</i>, que se adapta a la notación algebraica del
-				<i>ajedrez ortodoxo</i>, pareció conveniente una notación algebraica propia, que facilitase la
-				lectura en un tablero grande, sacrificando la compatibilidad.
-			</p>
-		</div>
-		<!-- ÍNDEX -->
-		<section id="index" class="w3-container w3-card-4">
-			<h2>Index</h2>
-			<a href="#LletraIdentificativa" class="cite">
-				<h2 class="w3-container">Letras identificativas de las piezas</h2>
-			</a>
-			<a href="#hexcaquer" class="cite">
-				<h2 class="w3-container">Tablero de C'escacs</h2>
-			</a>
-			<a href="#Columnes" class="cite">
-				<h3 class="w3-container">&nbsp;&nbsp; Columnas</h3>
-			</a>
-			<a href="#LiniesTransversals" class="cite">
-				<h3 class="w3-container">&nbsp;&nbsp; Líneas transversales</h3>
-			</a>
-			<a href="#CTL" class="cite">
-				<h3 class="w3-container">&nbsp;&nbsp; Identificación de un <i>hexcaque</i>: coordenadas CTL</h3>
-			</a>
-			<a href="#Moviments" class="cite">
-				<h3 class="w3-container">&nbsp;&nbsp; Movimientos</h3>
-			</a>
-			<a href="#MovimentOrtogonal" class="cite">
-				<h4 class="w3-container">&nbsp;&nbsp;&nbsp;&nbsp; Movimiento ortogonal</h4>
-			</a>
-			<a href="#MovimentDiagonal" class="cite">
-				<h4 class="w3-container">&nbsp;&nbsp;&nbsp;&nbsp; Movimiento diagonal</h4>
-			</a>
-			<a href="#MovimentCavall" class="cite">
-				<h4 class="w3-container w3-opacity">&nbsp;&nbsp;&nbsp;&nbsp; Movimiento del caballo</h4>
-			</a>
-			<a href="#MovimentCavalcada" class="cite">
-				<h4 class="w3-container w3-opacity">&nbsp;&nbsp;&nbsp;&nbsp; Cabalgada</h4>
-			</a>
-			<a href="#Notacio" class="cite">
-				<h2 class="w3-container">Notación</h2>
-			</a>
-			<a href="#Notacio-Moviment" class="cite">
-				<h3 class="w3-container">&nbsp;&nbsp; Notación de un movimiento</h3>
-			</a>
-			<a href="#Notacio-Excepcions" class="cite">
-				<h3 class="w3-container">&nbsp;&nbsp; Excepciones en la notación de movimientos</h3>
-			</a>
-			<a href="#Escac" class="cite">
-				<h3 class="w3-container">&nbsp;&nbsp; Indicación de jaque</h3>
-			</a>
-			<a href="#Valoracio" class="cite">
-				<h3 class="w3-container">&nbsp;&nbsp; Valoración del movimiento</h3>
-			</a>
-			<a href="#Indicadors-Partida" class="cite">
-				<h3 class="w3-container">&nbsp;&nbsp; Indicador referente a la partida</h3>
-			</a>
-			<a href="#Jugades" class="cite">
-				<h3 class="w3-container">&nbsp;&nbsp; Secuencia de jugadas</h3>
-			</a>
-			<a href="#ResultatPartida" class="cite">
-				<h4 class="w3-container">
-					<span>&nbsp;&nbsp;&nbsp;&nbsp; Indicador final del resultado</span>
-				</h4>
-			</a>
-			<a href="#Continuacio" class="cite">
-				<h4 class="w3-container">
-					<span>&nbsp;&nbsp;&nbsp;&nbsp; Excepción: continuación de partidas</span>
-				</h4>
-			</a>
-			<a href="#PDTL" class="cite">
-				<h2 class="w3-container">PDTL: Registrar posición del tablero</h2>
-			</a>
-			<a href="#PDTLpieces" class="cite">
-				<h3 class="w3-container">&nbsp;&nbsp; Posicionamiento de las piezas</h3>
-			</a>
-			<a href="#PDTLTorn" class="cite">
-				<h3 class="w3-container">&nbsp;&nbsp; Turno</h3>
-			</a>
-			<a href="#PDTLCastling" class="cite">
-				<h3 class="w3-container">&nbsp;&nbsp; Estado de enroques y salto del rey</h3>
-			</a>
-			<a href="#PDTLEnpassant" class="cite">
-				<h3 class="w3-container">&nbsp;&nbsp; Hexcaque de <i>captura al paso</i> o
-					<i>peón esquivo</i>
-				</h3>
-			</a>
-			<a href="#PDTLMoveCount" class="cite">
-				<h3 class="w3-container">&nbsp;&nbsp; Contador de movimientos</h3>
-			</a>
-			<a href="#PDTLCounter" class="cite">
-				<h3 class="w3-container">&nbsp;&nbsp; Número de jugada</h3>
-			</a>
-			<a href="#CTL-PGN" class="cite">
-				<h2 class="w3-container">CTL-PGN: Formato de intercambio</h2>
-			</a>
-			<a href="#Etiquetes" class="cite">
-				<h3 class="w3-container">&nbsp;&nbsp; Las etiquetas</h3>
-			</a>
-			<a href="#VariantLabel" class="cite">
-				<h4 class="w3-container">
-					<span>&nbsp;&nbsp;&nbsp;&nbsp; Etiqueta inicial de la variante</span>
-				</h4>
-			</a>
-			<a href="#BasicLabels" class="cite">
-				<h4 class="w3-container">
-					<span>&nbsp;&nbsp;&nbsp;&nbsp; Etiquetas para el registro de una partida</span>
-				</h4>
-			</a>
-			<a href="#MinimalistLabels" class="cite">
-				<h4 class="w3-container">
-					<span>&nbsp;&nbsp;&nbsp;&nbsp; Etiquetas de registro mínimalista</span>
-				</h4>
-			</a>
-			<a href="#OptionalIdTag" class="cite">
-				<h4 class="w3-container">
-					<span>&nbsp;&nbsp;&nbsp;&nbsp; Etiqueta identificador opcional</span>
-				</h4>
-			</a>
-			<a href="#OptionalLabels" class="cite">
-				<h4 class="w3-container">
-					<span>&nbsp;&nbsp;&nbsp;&nbsp; Otras etiquetas opcionales</span>
-				</h4>
-			</a>
-			<a href="#RedefineTag" class="cite">
-				<h4 class="w3-container">
-					<span>&nbsp;&nbsp;&nbsp;&nbsp; Etiqueta par usar identificadores de pieza alternativos</span>
-				</h4>
-			</a>
-			<a href="#SetupTag" class="cite">
-				<h4 class="w3-container">
-					<span>&nbsp;&nbsp;&nbsp;&nbsp; Etiqueta de posición inicial</span>
-				</h4>
-			</a>
-			<a href="#RAV" class="cite">
-				<h3 class="w3-container">&nbsp;&nbsp; <abbr title="Recursive Annotation Variations">RAV</abbr>
-					(Recursive Annotation Variation)
-				</h3>
-			</a>
-			<a href="#Comentari" class="cite">
-				<h3 class="w3-container">&nbsp;&nbsp; Los comentarios</h3>
-			</a>
-			<a href="#ComentariInici" class="cite">
-				<h4 class="w3-container">
-					<span>&nbsp;&nbsp;&nbsp;&nbsp; Comentarios de inicio de partida</span>
-				</h4>
-			</a>
-			<a href="#ComentariFin" class="cite">
-				<h4 class="w3-container">
-					<span>&nbsp;&nbsp;&nbsp;&nbsp; Comentarios finales de partida</span>
-				</h4>
-			</a>
-			<a href="#ComentariJugada" class="cite">
-				<h4 class="w3-container">
-					<span>&nbsp;&nbsp;&nbsp;&nbsp; Comentarios de las jugadas</span>
-				</h4>
-			</a>
-			<a href="#ComantariReferencies" class="cite">
-				<h4 class="w3-container">
-					<span>&nbsp;&nbsp;&nbsp;&nbsp; Referencias dentro de los comentarios</span>
-				</h4>
-			</a>
-			<a href="#Exemples" class="cite">
-				<h3 class="w3-container">&nbsp;&nbsp; Ejemplos</h3>
-			</a>
-			<a href="#MinimalReader" class="cite">
-				<h3 class="w3-container">&nbsp;&nbsp; Lector mínimo, y filtros</h3>
-			</a>
-			<br>
-		</section>
+		<header>
+			<div class="w3-container">
+				<p>A diferencia del <i>ajedrez hexagonal de Gliński</i>, que se adapta a la notación algebraica del
+					<i>ajedrez ortodoxo</i>, pareció conveniente una notación algebraica propia, que facilitase la
+					lectura en un tablero grande, sacrificando la compatibilidad.
+				</p>
+			</div>
+			<!-- ÍNDEX -->
+			<nav id="index" class="w3-container w3-card-4">
+				<h2>Index</h2>
+				<a href="#LletraIdentificativa" class="cite">
+					<h2 class="w3-container">Letras identificativas de las piezas</h2>
+				</a>
+				<a href="#hexcaquer" class="cite">
+					<h2 class="w3-container">Tablero de C'escacs</h2>
+				</a>
+				<a href="#Columnes" class="cite">
+					<h3 class="w3-container">&nbsp;&nbsp; Columnas</h3>
+				</a>
+				<a href="#LiniesTransversals" class="cite">
+					<h3 class="w3-container">&nbsp;&nbsp; Líneas transversales</h3>
+				</a>
+				<a href="#CTL" class="cite">
+					<h3 class="w3-container">&nbsp;&nbsp; Identificación de un <i>hexcaque</i>: coordenadas CTL</h3>
+				</a>
+				<a href="#Moviments" class="cite">
+					<h3 class="w3-container">&nbsp;&nbsp; Movimientos</h3>
+				</a>
+				<a href="#MovimentOrtogonal" class="cite">
+					<h4 class="w3-container">&nbsp;&nbsp;&nbsp;&nbsp; Movimiento ortogonal</h4>
+				</a>
+				<a href="#MovimentDiagonal" class="cite">
+					<h4 class="w3-container">&nbsp;&nbsp;&nbsp;&nbsp; Movimiento diagonal</h4>
+				</a>
+				<a href="#MovimentCavall" class="cite">
+					<h4 class="w3-container w3-opacity">&nbsp;&nbsp;&nbsp;&nbsp; Movimiento del caballo</h4>
+				</a>
+				<a href="#MovimentCavalcada" class="cite">
+					<h4 class="w3-container w3-opacity">&nbsp;&nbsp;&nbsp;&nbsp; Cabalgada</h4>
+				</a>
+				<a href="#Notacio" class="cite">
+					<h2 class="w3-container">Notación</h2>
+				</a>
+				<a href="#Notacio-Moviment" class="cite">
+					<h3 class="w3-container">&nbsp;&nbsp; Notación de un movimiento</h3>
+				</a>
+				<a href="#Notacio-Excepcions" class="cite">
+					<h3 class="w3-container">&nbsp;&nbsp; Excepciones en la notación de movimientos</h3>
+				</a>
+				<a href="#Escac" class="cite">
+					<h3 class="w3-container">&nbsp;&nbsp; Indicación de jaque</h3>
+				</a>
+				<a href="#Valoracio" class="cite">
+					<h3 class="w3-container">&nbsp;&nbsp; Valoración del movimiento</h3>
+				</a>
+				<a href="#Indicadors-Partida" class="cite">
+					<h3 class="w3-container">&nbsp;&nbsp; Indicador referente a la partida</h3>
+				</a>
+				<a href="#Jugades" class="cite">
+					<h3 class="w3-container">&nbsp;&nbsp; Secuencia de jugadas</h3>
+				</a>
+				<a href="#ResultatPartida" class="cite">
+					<h4 class="w3-container">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp; Indicador final del resultado</span>
+					</h4>
+				</a>
+				<a href="#Continuacio" class="cite">
+					<h4 class="w3-container">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp; Excepción: continuación de partidas</span>
+					</h4>
+				</a>
+				<a href="#PDTL" class="cite">
+					<h2 class="w3-container">PDTL: Registrar posición del tablero</h2>
+				</a>
+				<a href="#PDTLpieces" class="cite">
+					<h3 class="w3-container">&nbsp;&nbsp; Posicionamiento de las piezas</h3>
+				</a>
+				<a href="#PDTLTorn" class="cite">
+					<h3 class="w3-container">&nbsp;&nbsp; Turno</h3>
+				</a>
+				<a href="#PDTLCastling" class="cite">
+					<h3 class="w3-container">&nbsp;&nbsp; Estado de enroques y salto del rey</h3>
+				</a>
+				<a href="#PDTLEnpassant" class="cite">
+					<h3 class="w3-container">&nbsp;&nbsp; Hexcaque de <i>captura al paso</i> o
+						<i>peón esquivo</i>
+					</h3>
+				</a>
+				<a href="#PDTLMoveCount" class="cite">
+					<h3 class="w3-container">&nbsp;&nbsp; Contador de movimientos</h3>
+				</a>
+				<a href="#PDTLCounter" class="cite">
+					<h3 class="w3-container">&nbsp;&nbsp; Número de jugada</h3>
+				</a>
+				<a href="#CTL-PGN" class="cite">
+					<h2 class="w3-container">CTL-PGN: Formato de intercambio</h2>
+				</a>
+				<a href="#Etiquetes" class="cite">
+					<h3 class="w3-container">&nbsp;&nbsp; Las etiquetas</h3>
+				</a>
+				<a href="#VariantLabel" class="cite">
+					<h4 class="w3-container">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp; Etiqueta inicial de la variante</span>
+					</h4>
+				</a>
+				<a href="#BasicLabels" class="cite">
+					<h4 class="w3-container">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp; Etiquetas para el registro de una partida</span>
+					</h4>
+				</a>
+				<a href="#MinimalistLabels" class="cite">
+					<h4 class="w3-container">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp; Etiquetas de registro mínimalista</span>
+					</h4>
+				</a>
+				<a href="#OptionalIdTag" class="cite">
+					<h4 class="w3-container">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp; Etiqueta identificador opcional</span>
+					</h4>
+				</a>
+				<a href="#OptionalLabels" class="cite">
+					<h4 class="w3-container">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp; Otras etiquetas opcionales</span>
+					</h4>
+				</a>
+				<a href="#RedefineTag" class="cite">
+					<h4 class="w3-container">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp; Etiqueta par usar identificadores de pieza alternativos</span>
+					</h4>
+				</a>
+				<a href="#SetupTag" class="cite">
+					<h4 class="w3-container">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp; Etiqueta de posición inicial</span>
+					</h4>
+				</a>
+				<a href="#RAV" class="cite">
+					<h3 class="w3-container">&nbsp;&nbsp; <abbr title="Recursive Annotation Variations">RAV</abbr>
+						(Recursive Annotation Variation)
+					</h3>
+				</a>
+				<a href="#Comentari" class="cite">
+					<h3 class="w3-container">&nbsp;&nbsp; Los comentarios</h3>
+				</a>
+				<a href="#ComentariInici" class="cite">
+					<h4 class="w3-container">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp; Comentarios de inicio de partida</span>
+					</h4>
+				</a>
+				<a href="#ComentariFin" class="cite">
+					<h4 class="w3-container">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp; Comentarios finales de partida</span>
+					</h4>
+				</a>
+				<a href="#ComentariJugada" class="cite">
+					<h4 class="w3-container">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp; Comentarios de las jugadas</span>
+					</h4>
+				</a>
+				<a href="#ComantariReferencies" class="cite">
+					<h4 class="w3-container">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp; Referencias dentro de los comentarios</span>
+					</h4>
+				</a>
+				<a href="#Exemples" class="cite">
+					<h3 class="w3-container">&nbsp;&nbsp; Ejemplos</h3>
+				</a>
+				<a href="#MinimalReader" class="cite">
+					<h3 class="w3-container">&nbsp;&nbsp; Lector mínimo, y filtros</h3>
+				</a>
+				<br>
+			</nav>
+		</header>
 		<br>
 		<!-- Letra identificativa de las piezas -->
 		<section id="LletraIdentificativa" class="w3-container">
