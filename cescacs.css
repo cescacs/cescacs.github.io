@@ -151,6 +151,7 @@ clipped1::before {
 
 #toc {
   padding: 0;
+  margin-bottom: 2rem;
   font-family: "Literata";
   font-size: 22px;
   background-color: antiquewhite;
