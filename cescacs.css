@@ -104,7 +104,8 @@ figure.tbigright {
 }
 
 @media screen and (min-width: 800px) {
-  ul.twocolumnschance {
+  ul.twocolumnschance,
+  ol.twocolumnschance {
     columns: 2;
     -webkit-columns: 2;
     -moz-columns: 2;
@@ -147,6 +148,28 @@ clipped1::before {
   clip-path: inset(50% 0% 0% 0%);
   pointer-events: none;
 }
+
+#toc {
+  padding: 0;
+  font-family: "Literata";
+  font-size: 22px;
+  background-color: antiquewhite;
+}
+#toc>h2:first-child {
+	font-variant:small-caps;
+}
+#toc h2.toc-font-size,
+#toc h3.toc-font-size,
+#toc h4.toc-font-size {
+  font-size: 16px !important;
+}
+#toc, #toc ol, #toc ul {
+  list-style-type: none;
+}
+
+#toc ol, #toc ul {
+  padding-inline-start: 2rem;
+}		
 
 section.index.h2 {
   font-size: 24px;
@@ -416,6 +439,7 @@ ul.exemple>li {
   list-style-type: none;
 }
 
+ol.twocolumns,
 ul.twocolumns {
   columns: 2;
   -webkit-columns: 2;

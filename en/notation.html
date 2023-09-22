@@ -121,7 +121,7 @@
 		</div>
 		<div class="w3-container w3-opacity">
 			<!--  font-effect-shadow-multiple font-family: 'Bungee Spice', cursive; -->
-			<h1 class="w3-jumbo" style="font-family: 'Bungee Spice', cursive; color:#FFD700; margin-top:0;">
+			<h1 class="w3-container w3-jumbo" style="font-family: 'Bungee Spice', cursive; color:#FFD700; margin-top:0;">
 				Algebraic notation
 			</h1>
 		</div>
@@ -136,167 +136,257 @@
 				</p>
 			</div>
 			<!-- ÍNDEX -->
-			<nav id="index" class="w3-container w3-card-4">
-				<h2>Index</h2>
-				<a href="#LletraIdentificativa" class="cite">
-					<h2 class="w3-container">Piece identification letters</h2>
-				</a>
-				<a href="#hexcaquer" class="cite">
-					<h2 class="w3-container">C'escacs board</h2>
-				</a>
-				<a href="#Columnes" class="cite">
-					<h3 class="w3-container">&nbsp;&nbsp; Columns</h3>
-				</a>
-				<a href="#LiniesTransversals" class="cite">
-					<h3 class="w3-container">&nbsp;&nbsp; Cross-lines</h3>
-				</a>
-				<a href="#CTL" class="cite">
-					<h3 class="w3-container">&nbsp;&nbsp; <i>Hex</i> identification: CTL coordinates</h3>
-				</a>
-				<a href="#Moviments" class="cite">
-					<h3 class="w3-container">&nbsp;&nbsp; Movements</h3>
-				</a>
-				<a href="#MovimentOrtogonal" class="cite">
-					<h4 class="w3-container">&nbsp;&nbsp;&nbsp;&nbsp; Orthogonal movement</h4>
-				</a>
-				<a href="#MovimentDiagonal" class="cite">
-					<h4 class="w3-container">&nbsp;&nbsp;&nbsp;&nbsp; Diagonal movement</h4>
-				</a>
-				<a href="#MovimentCavall" class="cite">
-					<h4 class="w3-container w3-opacity">&nbsp;&nbsp;&nbsp;&nbsp; Movement of the knight</h4>
-				</a>
-				<a href="#MovimentCavalcada" class="cite">
-					<h4 class="w3-container w3-opacity">&nbsp;&nbsp;&nbsp;&nbsp; Knight ride</h4>
-				</a>
-				<a href="#Notacio" class="cite">
-					<h2 class="w3-container">Algebraic notation: CTL-AN</h2>
-				</a>
-				<a href="#Notacio-Moviment" class="cite">
-					<h3 class="w3-container">&nbsp;&nbsp; Notation of a movement</h3>
-				</a>
-				<a href="#Notacio-Excepcions" class="cite">
-					<h3 class="w3-container">&nbsp;&nbsp; Exceptions in movement notation</h3>
-				</a>
-				<a href="#Escac" class="cite">
-					<h3 class="w3-container">&nbsp;&nbsp; Check indication</h3>
-				</a>
-				<a href="#Valoracio" class="cite">
-					<h3 class="w3-container">&nbsp;&nbsp; Movement assessment</h3>
-				</a>
-				<a href="#Indicadors-Partida" class="cite">
-					<h3 class="w3-container">&nbsp;&nbsp; Indicator relating to the game</h3>
-				</a>
-				<a href="#Jugades" class="cite">
-					<h3 class="w3-container">&nbsp;&nbsp; Sequence of moves</h3>
-				</a>
-				<a href="#ResultatPartida" class="cite">
-					<h4 class="w3-container">
-						<span>&nbsp;&nbsp;&nbsp;&nbsp; Final result game score</span>
-					</h4>
-				</a>
-				<a href="#Continuacio" class="cite">
-					<h4 class="w3-container">
-						<span>&nbsp;&nbsp;&nbsp;&nbsp; Exception: continuation of games</span>
-					</h4>
-				</a>
-				<a href="#PDTL" class="cite">
-					<h2 class="w3-container">PDTL: PDTL: Record board position</h2>
-				</a>
-				<a href="#PDTLpieces" class="cite">
-					<h3 class="w3-container">&nbsp;&nbsp; Positioning of the pieces</h3>
-				</a>
-				<a href="#PDTLTorn" class="cite">
-					<h3 class="w3-container">&nbsp;&nbsp; Turn</h3>
-				</a>
-				<a href="#PDTLCastling" class="cite">
-					<h3 class="w3-container">&nbsp;&nbsp; <i>Castling</i> and <i>king's leap</i> status</h3>
-				</a>
-				<a href="#PDTLEnpassant" class="cite">
-					<h3 class="w3-container">&nbsp;&nbsp; Hextile of capture <i>in passant</i>
-						or <i>scornful pawn</i>
-					</h3>
-				</a>
-				<a href="#PDTLMoveCount" class="cite">
-					<h3 class="w3-container">&nbsp;&nbsp; Halfmove counter (halfmove clock)</h3>
-				</a>
-				<a href="#PDTLCounter" class="cite">
-					<h3 class="w3-container">&nbsp;&nbsp; Movement number</h3>
-				</a>
-				<a href="#CTL-PGN" class="cite">
-					<h2 class="w3-container">CTL-PGN: Exchange format</h2>
-				</a>
-				<a href="#Etiquetes" class="cite">
-					<h3 class="w3-container">&nbsp;&nbsp; Labels</h3>
-				</a>
-				<a href="#VariantLabel" class="cite">
-					<h4 class="w3-container">
-						<span>&nbsp;&nbsp;&nbsp;&nbsp; Initial variant label</span>
-					</h4>
-				</a>
-				<a href="#BasicLabels" class="cite">
-					<h4 class="w3-container">
-						<span>&nbsp;&nbsp;&nbsp;&nbsp; Labels for the registration of a game</span>
-					</h4>
-				</a>
-				<a href="#MinimalistLabels" class="cite">
-					<h4 class="w3-container">
-						<span>&nbsp;&nbsp;&nbsp;&nbsp; Minimalist registration labels</span>
-					</h4>
-				</a>
-				<a href="#OptionalIdTag" class="cite">
-					<h4 class="w3-container">
-						<span>&nbsp;&nbsp;&nbsp;&nbsp; Optional identifier label</span>
-					</h4>
-				</a>
-				<a href="#OptionalLabels" class="cite">
-					<h4 class="w3-container">
-						<span>&nbsp;&nbsp;&nbsp;&nbsp; Other optional labels</span>
-					</h4>
-				</a>
-				<a href="#RedefineTag" class="cite">
-					<h4 class="w3-container">
-						<span>&nbsp;&nbsp;&nbsp;&nbsp; Label for using alternative piece identifiers</span>
-					</h4>
-				</a>
-				<a href="#SetupTag" class="cite">
-					<h4 class="w3-container">
-						<span>&nbsp;&nbsp;&nbsp;&nbsp; Initial setup label</span>
-					</h4>
-				</a>
-				<a href="#RAV" class="cite">
-					<h3 class="w3-container">&nbsp;&nbsp; <abbr title="Recursive Annotation Variations">RAV</abbr>
-						(Recursive Annotation Variation)
-					</h3>
-				</a>
-				<a href="#Comentari" class="cite">
-					<h3 class="w3-container">&nbsp;&nbsp; Comments</h3>
-				</a>
-				<a href="#ComentariInici" class="cite">
-					<h4 class="w3-container">
-						<span>&nbsp;&nbsp;&nbsp;&nbsp; Comments at the start of the game</span>
-					</h4>
-				</a>
-				<a href="#ComentariFin" class="cite">
-					<h4 class="w3-container">
-						<span>&nbsp;&nbsp;&nbsp;&nbsp; Final comments on the game</span>
-					</h4>
-				</a>
-				<a href="#ComentariJugada" class="cite">
-					<h4 class="w3-container">
-						<span>&nbsp;&nbsp;&nbsp;&nbsp; Comments on the moves</span>
-					</h4>
-				</a>
-				<a href="#ComantariReferencies" class="cite">
-					<h4 class="w3-container">
-						<span>&nbsp;&nbsp;&nbsp;&nbsp; References within comments</span>
-					</h4>
-				</a>
-				<a href="#Exemples" class="cite">
-					<h3 class="w3-container">&nbsp;&nbsp; Examples</h3>
-				</a>
-				<a href="#MinimalReader" class="cite">
-					<h3 class="w3-container">&nbsp;&nbsp; Minimal reader, and filters</h3>
-				</a>
+			<nav id="toc" class="w3-container w3-card-4">
+				<h2 class="w3-center w3-xxlarge w3-opacity text-shadow" style="color:#c646e6;">
+					<i>contents</i>
+				</h2>
+				<ol class="twocolumnschance">
+					<li>
+						<a href="#LletraIdentificativa" class="cite">
+							<h2 class="w3-container toc-font-size">Piece identification letters</h2>
+						</a>
+					</li>
+					<li>
+						<a href="#hexcaquer" class="cite">
+							<h2 class="w3-container toc-font-size">C'escacs board</h2>
+						</a>
+					</li>
+					<li>
+						<a href="#Columnes" class="cite">
+							<h3 class="w3-container toc-font-size">&nbsp;&nbsp; Columns</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#LiniesTransversals" class="cite">
+							<h3 class="w3-container toc-font-size">&nbsp;&nbsp; Cross-lines</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#CTL" class="cite">
+							<h3 class="w3-container toc-font-size">&nbsp;&nbsp; <i>Hex</i> identification: CTL coordinates</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#Moviments" class="cite">
+							<h3 class="w3-container toc-font-size">&nbsp;&nbsp; Movements</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#MovimentOrtogonal" class="cite">
+							<h4 class="w3-container toc-font-size">&nbsp;&nbsp;&nbsp;&nbsp; Orthogonal movement</h4>
+						</a>
+					</li>
+					<li>
+						<a href="#MovimentDiagonal" class="cite">
+							<h4 class="w3-container toc-font-size">&nbsp;&nbsp;&nbsp;&nbsp; Diagonal movement</h4>
+						</a>
+					</li>
+					<li>
+						<a href="#MovimentCavall" class="cite">
+							<h4 class="w3-container toc-font-size w3-opacity">&nbsp;&nbsp;&nbsp;&nbsp; Movement of the knight</h4>
+						</a>
+					</li>
+					<li>
+						<a href="#MovimentCavalcada" class="cite">
+							<h4 class="w3-container toc-font-size w3-opacity">&nbsp;&nbsp;&nbsp;&nbsp; Knight ride</h4>
+						</a>
+					</li>
+					<li>
+						<a href="#Notacio" class="cite">
+							<h2 class="w3-container toc-font-size">Algebraic notation: CTL-AN</h2>
+						</a>
+					</li>
+					<li>
+						<a href="#Notacio-Moviment" class="cite">
+							<h3 class="w3-container toc-font-size">&nbsp;&nbsp; Notation of a movement</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#Notacio-Excepcions" class="cite">
+							<h3 class="w3-container toc-font-size">&nbsp;&nbsp; Exceptions in movement notation</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#Escac" class="cite">
+							<h3 class="w3-container toc-font-size">&nbsp;&nbsp; Check indication</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#Valoracio" class="cite">
+							<h3 class="w3-container toc-font-size">&nbsp;&nbsp; Movement assessment</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#Indicadors-Partida" class="cite">
+							<h3 class="w3-container toc-font-size">&nbsp;&nbsp; Indicator relating to the game</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#Jugades" class="cite">
+							<h3 class="w3-container toc-font-size">&nbsp;&nbsp; Sequence of moves</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#ResultatPartida" class="cite">
+							<h4 class="w3-container toc-font-size">
+								<span>&nbsp;&nbsp;&nbsp;&nbsp; Final result game score</span>
+							</h4>
+						</a>
+					</li>
+					<li>
+						<a href="#Continuacio" class="cite">
+							<h4 class="w3-container toc-font-size">
+								<span>&nbsp;&nbsp;&nbsp;&nbsp; Exception: continuation of games</span>
+							</h4>
+						</a>
+					</li>
+					<li>
+						<a href="#PDTL" class="cite">
+							<h2 class="w3-container toc-font-size">PDTL: PDTL: Record board position</h2>
+						</a>
+					</li>
+					<li>
+						<a href="#PDTLpieces" class="cite">
+							<h3 class="w3-container toc-font-size">&nbsp;&nbsp; Positioning of the pieces</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#PDTLTorn" class="cite">
+							<h3 class="w3-container toc-font-size">&nbsp;&nbsp; Turn</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#PDTLCastling" class="cite">
+							<h3 class="w3-container toc-font-size">&nbsp;&nbsp; <i>Castling</i> and <i>king's leap</i> status</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#PDTLEnpassant" class="cite">
+							<h3 class="w3-container toc-font-size">&nbsp;&nbsp; Hextile of capture <i>in passant</i>
+								or <i>scornful pawn</i>
+							</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#PDTLMoveCount" class="cite">
+							<h3 class="w3-container toc-font-size">&nbsp;&nbsp; Halfmove counter (halfmove clock)</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#PDTLCounter" class="cite">
+							<h3 class="w3-container toc-font-size">&nbsp;&nbsp; Movement number</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#CTL-PGN" class="cite">
+							<h2 class="w3-container toc-font-size">CTL-PGN: Exchange format</h2>
+						</a>
+					</li>
+					<li>
+						<a href="#Etiquetes" class="cite">
+							<h3 class="w3-container toc-font-size">&nbsp;&nbsp; Labels</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#VariantLabel" class="cite">
+							<h4 class="w3-container toc-font-size">
+								<span>&nbsp;&nbsp;&nbsp;&nbsp; Initial variant label</span>
+							</h4>
+						</a>
+					</li>
+					<li>
+						<a href="#BasicLabels" class="cite">
+							<h4 class="w3-container toc-font-size">
+								<span>&nbsp;&nbsp;&nbsp;&nbsp; Labels for the registration of a game</span>
+							</h4>
+						</a>
+					</li>
+					<li>
+						<a href="#MinimalistLabels" class="cite">
+							<h4 class="w3-container toc-font-size">
+								<span>&nbsp;&nbsp;&nbsp;&nbsp; Minimalist registration labels</span>
+							</h4>
+						</a>
+					</li>
+					<li>
+						<a href="#OptionalIdTag" class="cite">
+							<h4 class="w3-container toc-font-size">
+								<span>&nbsp;&nbsp;&nbsp;&nbsp; Optional identifier label</span>
+							</h4>
+						</a>
+					</li>
+					<li>
+						<a href="#OptionalLabels" class="cite">
+							<h4 class="w3-container toc-font-size">
+								<span>&nbsp;&nbsp;&nbsp;&nbsp; Other optional labels</span>
+							</h4>
+						</a>
+					</li>
+					<li>
+						<a href="#RedefineTag" class="cite">
+							<h4 class="w3-container toc-font-size">
+								<span>&nbsp;&nbsp;&nbsp;&nbsp; Label for using alternative piece identifiers</span>
+							</h4>
+						</a>
+					</li>
+					<li>
+						<a href="#SetupTag" class="cite">
+							<h4 class="w3-container toc-font-size">
+								<span>&nbsp;&nbsp;&nbsp;&nbsp; Initial setup label</span>
+							</h4>
+						</a>
+					</li>
+					<li>
+						<a href="#RAV" class="cite">
+							<h3 class="w3-container toc-font-size">&nbsp;&nbsp; <abbr title="Recursive Annotation Variations">RAV</abbr>
+								(Recursive Annotation Variation)
+							</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#Comentari" class="cite">
+							<h3 class="w3-container toc-font-size">&nbsp;&nbsp; Comments</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#ComentariInici" class="cite">
+							<h4 class="w3-container toc-font-size">
+								<span>&nbsp;&nbsp;&nbsp;&nbsp; Comments at the start of the game</span>
+							</h4>
+						</a>
+					</li>
+					<li>
+						<a href="#ComentariFin" class="cite">
+							<h4 class="w3-container toc-font-size">
+								<span>&nbsp;&nbsp;&nbsp;&nbsp; Final comments on the game</span>
+							</h4>
+						</a>
+					</li>
+					<li>
+						<a href="#ComentariJugada" class="cite">
+							<h4 class="w3-container toc-font-size">
+								<span>&nbsp;&nbsp;&nbsp;&nbsp; Comments on the moves</span>
+							</h4>
+						</a>
+					</li>
+					<li>
+						<a href="#ComantariReferencies" class="cite">
+							<h4 class="w3-container toc-font-size">
+								<span>&nbsp;&nbsp;&nbsp;&nbsp; References within comments</span>
+							</h4>
+						</a>
+					</li>
+					<li>
+						<a href="#Exemples" class="cite">
+							<h3 class="w3-container toc-font-size">&nbsp;&nbsp; Examples</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#MinimalReader" class="cite">
+							<h3 class="w3-container toc-font-size">&nbsp;&nbsp; Minimal reader, and filters</h3>
+						</a>
+					</li>
+				</ol>
 				<br>
 			</nav>
 		</header>
