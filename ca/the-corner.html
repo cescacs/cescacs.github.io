@@ -15,13 +15,13 @@
     <link rel="manifest" href="/site.webmanifest">
 
 	<!-- description -->
+	<title>C&apos;escacs: El Racó</title>
+	<meta name="description" property="og:description"
+		content="Altres continguts relacionats amb C&apos;escacs i els escacs hexagonals.">
 	<meta name="twitter:card" content="summary_large_image">
-	<title>C'escacs: El Racó</title>
-	<meta property="og:title" content="C'escacs: El Racó">
+	<meta property="og:title" content="C&apos;escacs: El Racó">
 	<meta property="og:type" content="website" >
 	<meta property="og:locale" content="ca-ES">
-	<meta name="description" property="og:description"
-		content="Altres continguts relacionats amb C'escacs i els escacs hexagonals.">
 	<!-- public imgbb image -->
 	<!-- https://ibb.co/jHTDkqc -->
 	<!-- https://i.ibb.co/BwtB2vX/logo-rich.png -->
@@ -29,7 +29,7 @@
 	<meta name="twitter:image" content="https://i.ibb.co/BwtB2vX/logo-rich.png">
 	<meta name="author" content="Cesc Sasal i Lasaosa">
 	<!-- end description -->
-	<meta name="keywords" content="C'escacs, Cescacs, Escacs hexagonals, El racó de C'escacs">
+	<meta name="keywords" content="C&apos;escacs, Cescacs, Escacs hexagonals, El racó de C&apos;escacs">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../w3.css">
@@ -50,14 +50,25 @@
 	<script src="https://kit.fontawesome.com/1efd89dd3e.js" crossorigin="anonymous"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHKYWCYH3N"></script>
     <script>
+        // GOOGLE: Define dataLayer and the gtag function.
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-CHKYWCYH3N');
+        function gtag(){dataLayer.push(arguments);}
+        // Default ad_storage and analytics_storage to 'denied'
+        gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied'
+        });
+        // Microsoft Clarity
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "ixp5avtgzb");
     </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHKYWCYH3N"></script>
+    <!-- end gtag (end cookie config inside cookies.js) -->
+    <script src="../cookies.js"></script>
 </head>
 
 <body>
@@ -112,6 +123,12 @@
             </h1>
 			<p class="header2" style="text-align:center;">Recull de continguts diversos</p>
 		</div>
+		<div style="clear:both;"></div>
+        <div id="cookies-eu-banner" class="w3-small hidden">
+            Aquest lloc fa servir galetes de Google Analytics i Microsoft Clarity
+            per a analitzar el seu us:
+            <button class="w3-button w3-round-xxlarge w3-small">Acceptar</button>
+        </div>
 	</header>
 	<main>
 	<!-- Repositori Github -->

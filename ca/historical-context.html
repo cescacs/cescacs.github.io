@@ -13,14 +13,13 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 	<link rel="manifest" href="/site.webmanifest">
 	<!-- description -->
-	<meta name="twitter:card" content="summary_large_image">
-	<title>C'escacs: Context històric</title>
-	<link rel="shortcut icon" href="favicon.png" type="image/png" />
-	<meta property="og:title" content="C'escacs: Context històric">
-	<meta property="og:type" content="website">
-	<meta property="og:locale" content="ca-ES">
+	<title>C&apos;escacs: Context històric</title>
 	<meta name="description" property="og:description"
 		content="Breu context històric de l'aparició dels escacs occidentals.">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta property="og:title" content="C&apos;escacs: Context històric">
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="ca-ES">
 	<!-- public imgbb image -->
 	<!-- https://ibb.co/jHTDkqc -->
 	<!-- https://i.ibb.co/BwtB2vX/logo-rich.png -->
@@ -53,15 +52,26 @@
 	<!-- Icons -->
 	<script src="https://kit.fontawesome.com/1efd89dd3e.js" crossorigin="anonymous"></script>
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-CHKYWCYH3N"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-
-		gtag('config', 'G-CHKYWCYH3N');
-	</script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script>
+        // GOOGLE: Define dataLayer and the gtag function.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        // Default ad_storage and analytics_storage to 'denied'
+        gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied'
+        });
+        // Microsoft Clarity
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "ixp5avtgzb");
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHKYWCYH3N"></script>
+    <!-- end gtag (end cookie config inside cookies.js) -->
+    <script src="../cookies.js"></script>
 </head>
 
 <body>
@@ -117,6 +127,12 @@
 			<h2 class="w3-xxxlarge" style="font-family: 'Bungee Spice', cursive; color:#FFD700; margin-top:0;">Context
 				històric</h2>
 		</div>
+		<div style="clear:both;"></div>
+        <div id="cookies-eu-banner" class="w3-small hidden">
+            Aquest lloc fa servir galetes de Google Analytics i Microsoft Clarity
+            per a analitzar el seu us:
+            <button class="w3-button w3-round-xxlarge w3-small">Acceptar</button>
+        </div>
 	</header>
 
     <!-- Context històric -->

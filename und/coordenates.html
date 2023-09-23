@@ -1,16 +1,17 @@
 <!DOCTYPE HTML>
-<html lang="ca">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <link rel="canonical" href="https://cescacs.orgfree.com/und/coordenates.html">
-    <meta name="description" content="C'escacs: Provar coordenades">
-    <meta name="keywords" content="C'escacs, Cescacs, escacs hexagonals, hexcaquer, hexcac, fila, línia, coordenades">
+    <title>C&apos;escacs: Try out coordenate system</title>
+    <meta name="description" content="C&apos;escacs: Try out coordenate system">
+    <meta name="keywords" content="C&apos;escacs, Cescacs, hexagonal chess, board, hextilled board,
+        hextille, column, file, lengthwise file, line, cross-line, coordenates, hexagonal coordenates">
     <meta name="author" content="Cesc Sasal i Lasaosa">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../w3.css">
     <link rel="stylesheet" type="text/css" href="../cescacs.css">
-    <title>C'escacs: Provar coordenades</title>
     <script>
         'use strict';
         var svgDocument;
@@ -293,9 +294,35 @@
     </script>
     <script src="../js/hexcac.js">
     </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script>
+        // GOOGLE: Define dataLayer and the gtag function.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        // Default ad_storage and analytics_storage to 'denied'
+        gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied'
+        });
+        // Microsoft Clarity
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "ixp5avtgzb");
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHKYWCYH3N"></script>
+    <!-- end gtag (end cookie config inside cookies.js) -->
+    <script src="../cookies.js"></script>
 </head>
 
 <body>
+    <h1 class="hidden">C'escacs: try out the coordenate system</h1>
+    <div id="cookies-eu-banner" class="w3-small hidden">
+        This site uses cookies from Google Analytics and Microsoft Clarity
+        to analyse its use:
+        <button class="w3-button w3-round-xxlarge w3-small">Accept</button>
+    </div>
     <div class="w3-container w3-center half">
         <figure>
             <object id="objboard" type="image/svg+xml" data="../img/cescacs_empty.svg" style="width:100%">

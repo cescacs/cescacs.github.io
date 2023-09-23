@@ -5,11 +5,12 @@ gtag('js', new Date());
 gtag('config', 'G-'+cookieId, {
 cookie_flags: 'secure;samesite=none'
 });
-// GOOGLE cookie consent function
+// GOOGLE cookie consent AND Microsoft Clarity cookie consent function
 function consentGranted() {
         gtag('consent', 'update', {
         'analytics_storage': 'granted'
         });
+        window.clarity('consent');
     }
 // GENERAL COOKIE FUNCTIONS
 const getCookie = (name) => {

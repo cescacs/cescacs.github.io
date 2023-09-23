@@ -12,14 +12,13 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 	<link rel="manifest" href="/site.webmanifest">
 	<!-- description -->
+	<title>C&apos;escacs: Historical Milestones</title>
+	<meta name="description" property="og:description"
+		content="A brief history of western chess, in which we find references that have been involved in the design of C&apos;escacs.">
 	<meta name="twitter:card" content="summary_large_image">
-	<title>C'escacs: Historical Milestones</title>
-	<link rel="shortcut icon" href="favicon.png" type="image/png" />
-	<meta property="og:title" content="C'escacs: Historical Milestones">
+	<meta property="og:title" content="C&apos;escacs: Historical Milestones">
 	<meta property="og:type" content="website">
 	<meta property="og:locale" content="es-ES">
-	<meta name="description" property="og:description"
-		content="A brief history of western chess, in which we find references that have been involved in the design of C'escacs.">
 	<!-- public imgbb image -->
 	<!-- https://ibb.co/jHTDkqc -->
 	<!-- https://i.ibb.co/BwtB2vX/logo-rich.png -->
@@ -64,15 +63,26 @@
 	</script>
 	<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-CHKYWCYH3N"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-
-		gtag('config', 'G-CHKYWCYH3N');
-	</script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script>
+        // GOOGLE: Define dataLayer and the gtag function.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        // Default ad_storage and analytics_storage to 'denied'
+        gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied'
+        });
+        // Microsoft Clarity
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "ixp5avtgzb");
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHKYWCYH3N"></script>
+    <!-- end gtag (end cookie config inside cookies.js) -->
+    <script src="./cookies.js"></script>
 </head>
 
 <body>
@@ -136,6 +146,11 @@
 				href="https://commons.wikimedia.org/wiki/File:Elephant.png"><img src="../img/Elephant.webp"
 					alt="A drawing of an elephant" class="mainlogo" /></a>
 			<p class="w3-small">Drawing: Shirley, via Wikimedia Commons</p>
+		</div>
+		<div id="cookies-eu-banner" class="w3-small hidden">
+			This site uses cookies from Google Analytics and Microsoft Clarity
+			to analyse its use:
+			<button class="w3-button w3-round-xxlarge w3-small">Accept</button>
 		</div>
 	</header>
 
