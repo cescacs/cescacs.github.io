@@ -41,11 +41,16 @@ then
 	exit_abnormal
 fi
 
-if [ $(stat -c %Y cescacs.css) -gt $(stat -c %Y cescacs.min.css) ]
+if [ ! -f cescacs.min.css ]
+then
+	echo 'CSS cescacs.css must be minified into cecscacs.min.css'
+	exit_abnormal
+elif [ $(stat -c %Y cescacs.css) -gt $(stat -c %Y cescacs.min.css) ]
 then
 	echo 'CSS cescacs.css must be minified again into cecscacs.min.css'
 	exit_abnormal
 fi
+
 
 # ENSURE GIT MIRROR ACTUALIZED
 pushd $MIRRORSYNC > /dev/null 2>&1
@@ -132,6 +137,7 @@ then
 	cp * $DEST"cescacs.typescript/dist"
 	cd ../..
 
+	uglifyjs cookies.js -c -m -o $DEST"cookies.js"
 	cp w3.css $DEST
 	cp w3-colors-win8.css $DEST
 	cp cescacs.min.css $DEST"cescacs.css"
