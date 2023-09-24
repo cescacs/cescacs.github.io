@@ -12,10 +12,16 @@ function consentGranted() {
         });
         window.clarity('consent');
     }
+function consentDenied() {
+        gtag('consent', 'update', {
+        'analytics_storage': 'denied'
+        });
+        window.clarity('stop');
+    }
 // GENERAL COOKIE FUNCTIONS
 const getCookie = (name) => {
     let value = " " + decodeURIComponent(document.cookie);
-    console.log("value", `==${value}==`);
+    console.log("cookies value", `==${value}==`);
     const parts = value.split(" " + name + "=");
     return parts.length < 2 ? undefined : parts.pop().split(";").shift();
 };
@@ -33,19 +39,43 @@ const setCookie = function (name, value, expiryDays, domain, path, secure, sameS
         (domain ? ";domain=" + domain : "") +
         (secure ? ";secure" : "");
 };
+const deleteCookie = function (name, domain, path) {
+    document.cookie =
+        name + "=" +
+        ";max-age=" + "-1" +
+        ";path=" + (path || "/") +
+        (domain ? ";domain=" + domain : "");
+
+}
 // COOKIE consent; requires id='cookies-eu-banner' element
 document.addEventListener("DOMContentLoaded", (event) => {
-    const GcookieId = "_ga_" + cookieId;
+    const cookieGranted = "cookieGranted";
+    const Gcookie = "_ga";
+    const GcookieId = Gcookie + "_" + cookieId;
+    const ClarityCookie1 = "_clck";
+    const ClarityCookie2 = "_clsk";
     const $cookiesBanner = document.getElementById("cookies-eu-banner");
-    const $cookiesBannerButton = $cookiesBanner.querySelector("button");
-    const hasCookie = getCookie(GcookieId);
-    console.log("cookie Id:", GcookieId, "hasCookie:", hasCookie);
+    const $cookiesBannerButtons = $cookiesBanner.querySelectorAll("button");
+    const hasCookie = getCookie(cookieGranted);
     if (!hasCookie) {
         $cookiesBanner.classList.remove("hidden");
     }
-    $cookiesBannerButton.addEventListener("click", () => {
-        consentGranted();
-        setCookie("cookieGranted","closed",730);
-        $cookiesBanner.remove();
+    $cookiesBannerButtons.forEach(element => {
+        element.addEventListener("click", (evt) => {
+            const targetid = evt.currentTarget.id;
+            if (targetid == 'cookies-yes') {
+                consentGranted();
+                setCookie("cookieGranted","closed",90);
+            } else if (targetid == 'cookies-no') {
+                consentDenied();
+                deleteCookie(Gcookie);
+                deleteCookie(GcookieId);
+                deleteCookie(ClarityCookie1);
+                deleteCookie(ClarityCookie2);
+                setCookie("cookieGranted","Not granted",30);
+            }
+            $cookiesBanner.remove();
+        });
     });
+
 });

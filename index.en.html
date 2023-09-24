@@ -64,7 +64,15 @@
     <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!--  -->
     <script>
+    </script>
+    <script>
+        // Solve web host FreeWha image problem: it laies over the consent banner
+        document.addEventListener("DOMContentLoaded", (event) => {
+			const lastDiv = document.querySelector('body > div:last-of-type');
+			if(lastDiv) lastDiv.style.width = '';
+        });
         // GOOGLE: Define dataLayer and the gtag function.
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -194,9 +202,12 @@
     <div style="clear:both;"></div>
     <div id="cookies-eu-banner" class="w3-small hidden">
         This site uses cookies from Google Analytics and Microsoft Clarity
-        to analyse its use:
-        <button class="w3-button w3-round-xxlarge w3-small">Accept</button>
-      </div>
+        to analyse its use:&nbsp;
+        <button id="cookies-yes"
+            class="w3-button w3-round-xxlarge w3-small">Accept</button>
+        <button id="cookies-no"
+            class="w3-button w3-round-xxlarge w3-small">Reject</button>
+    </div>
   </header>
 
 <main>

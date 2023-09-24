@@ -54,6 +54,11 @@
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script>
+        // Solve web host FreeWha image problem: it laies over the consent banner
+        document.addEventListener("DOMContentLoaded", (event) => {
+			const lastDiv = document.querySelector('body > div:last-of-type');
+			if(lastDiv) lastDiv.style.width = '';
+        });
         // GOOGLE: Define dataLayer and the gtag function.
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -130,14 +135,15 @@
 		<div style="clear:both;"></div>
         <div id="cookies-eu-banner" class="w3-small hidden">
             Aquest lloc fa servir galetes de Google Analytics i Microsoft Clarity
-            per a analitzar el seu us:
-            <button class="w3-button w3-round-xxlarge w3-small">Acceptar</button>
+            per a analitzar el seu us:&nbsp;
+            <button id="cookies-yes"
+                class="w3-button w3-round-xxlarge w3-small">Acceptar</button>
+            <button id="cookies-no"
+                class="w3-button w3-round-xxlarge w3-small">Rebutjar</button>
         </div>
 	</header>
-
     <!-- Context històric -->
     <main style="background-color: #ddd; padding:1em;">
-
         <p>La introducció del joc coincidí amb la
             <q><b><i>plena edat mitjana</i></b></q>, l'inici de la baixa edat mitjana
             i etapa prèvia a la crisi del segle XIV. Llavors es varen donar els últims

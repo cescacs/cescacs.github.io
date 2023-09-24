@@ -63,6 +63,11 @@
 	</script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script>
+        // Solve web host FreeWha image problem: it laies over the consent banner
+        document.addEventListener("DOMContentLoaded", (event) => {
+			const lastDiv = document.querySelector('body > div:last-of-type');
+			if(lastDiv) lastDiv.style.width = '';
+        });
         // GOOGLE: Define dataLayer and the gtag function.
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -80,7 +85,7 @@
     </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHKYWCYH3N"></script>
     <!-- end gtag (end cookie config inside cookies.js) -->
-    <script src="./cookies.js"></script>
+    <script src="../cookies.js"></script>
 </head>
 
 <body>
@@ -419,8 +424,11 @@
 			<div style="clear:both;"></div>
 			<div id="cookies-eu-banner" class="w3-small hidden">
 				This site uses cookies from Google Analytics and Microsoft Clarity
-				to analyse its use:
-				<button class="w3-button w3-round-xxlarge w3-small">Accept</button>
+				to analyse its use:&nbsp;
+				<button id="cookies-yes"
+					class="w3-button w3-round-xxlarge w3-small">Accept</button>
+				<button id="cookies-no"
+					class="w3-button w3-round-xxlarge w3-small">Reject</button>
 			</div>
 		</header>
 		<!-- Piece identification letters -->

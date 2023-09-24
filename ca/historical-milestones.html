@@ -52,8 +52,12 @@
 	<script src="https://kit.fontawesome.com/1efd89dd3e.js" crossorigin="anonymous"></script>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script>
+        // Solve web host FreeWha image problem: it laies over the consent banner
+        document.addEventListener("DOMContentLoaded", (event) => {
+			const lastDiv = document.querySelector('body > div:last-of-type');
+			if(lastDiv) lastDiv.style.width = '';
+        });
         // GOOGLE: Define dataLayer and the gtag function.
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -135,11 +139,13 @@
 		</div>
         <div id="cookies-eu-banner" class="w3-small hidden">
             Aquest lloc fa servir galetes de Google Analytics i Microsoft Clarity
-            per a analitzar el seu us:
-            <button class="w3-button w3-round-xxlarge w3-small">Acceptar</button>
+            per a analitzar el seu us:&nbsp;
+            <button id="cookies-yes"
+                class="w3-button w3-round-xxlarge w3-small">Acceptar</button>
+            <button id="cookies-no"
+                class="w3-button w3-round-xxlarge w3-small">Rebutjar</button>
         </div>
 	</header>
-
 	<main>
 		<div class="w3-container">
 			<p>Aquest apartat no vol ser, ni de lluny, un relat de la història dels escacs, quedant fora, per exemple,
