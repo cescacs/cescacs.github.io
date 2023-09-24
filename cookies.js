@@ -48,6 +48,7 @@ const deleteCookie = function (name, domain, path) {
 
 }
 // COOKIE consent; requires id='cookies-eu-banner' element
+// COOKIE BANNER code and CSS from github: monsterlessonsacademy/main.css
 document.addEventListener("DOMContentLoaded", (event) => {
     const cookieGranted = "cookieGranted";
     const Gcookie = "_ga";
